@@ -12,15 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Checkout submodules
-        shell: bash
-        run: |
-          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-          git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
+      - name: Checkout Theme
+        uses: actions/checkout@v2
+        with:
+          repository: coderdojonijmegen/hugo_coderdojo_template
+          path: themes/hugo_coderdojo_template
+
+      - uses: chabad360/hugo-gh-pages@master
       - name: Publish Site
-        uses: chabad360/hugo-gh-pages@master
         with:
           githubToken: ${{ secrets.PAT }}
           hugoVersion: extended_0.64.0
