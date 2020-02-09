@@ -1,0 +1,3 @@
+[submodule "themes/hugo_coderdojo_template"]
+	path = themes/hugo_coderdojo_template
+	url = git@github.com:coderdojonijmegen/hugo_coderdojo_template.git

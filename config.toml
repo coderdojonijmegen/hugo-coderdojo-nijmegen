@@ -1,7 +1,7 @@
 baseURL = "https://coderdojo-nijmegen.nl"
 languageCode = "nl-nl"
 title = "CoderDojo Nijmegen"
-theme = "coderdojo"
+theme = "hugo_coderdojo_template"
 
 [menu]
 
