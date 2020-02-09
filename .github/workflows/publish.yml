@@ -11,16 +11,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Checkout Repo
+        name: Checkout Repo
 
       - uses: actions/checkout@v2
-      - name: Checkout Theme
+        name: Checkout Theme
         with:
           repository: coderdojonijmegen/hugo_coderdojo_template
           path: themes/hugo_coderdojo_template
 
       - uses: chabad360/hugo-gh-pages@master
-      - name: Publish Site
+        name: Publish Site
         with:
           githubToken: ${{ secrets.PAT }}
           hugoVersion: extended_0.64.0
