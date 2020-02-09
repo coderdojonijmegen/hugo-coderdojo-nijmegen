@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Checkout Repo
 
+      - uses: actions/checkout@v2
       - name: Checkout Theme
-        uses: actions/checkout@v2
         with:
           repository: coderdojonijmegen/hugo_coderdojo_template
           path: themes/hugo_coderdojo_template
