@@ -1,0 +1,31 @@
+baseURL = "https://coderdojo-nijmegen.nl"
+languageCode = "nl-nl"
+title = "CoderDojo Nijmegen"
+theme = "coderdojo"
+
+[menu]
+
+  [[menu.main]]
+    name = "dojos"
+    url = "/dojos/"
+    weight = -110
+
+  [[menu.main]]
+    name = "instructies"
+    url = "/instructies/"
+    weight = -100
+
+  [[menu.main]]
+    name = "team"
+    url = "/team/"
+    weight = -90
+
+  [[menu.main]]
+    name = "meehelpen"
+    url = "/meehelpen/"
+    weight = -90
+
+  [[menu.main]]
+    name = "stichting"
+    url = "/stichting/"
+    weight = -80
