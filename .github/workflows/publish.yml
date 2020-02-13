@@ -23,5 +23,5 @@ jobs:
         name: Publish Site
         with:
           githubToken: ${{ secrets.PAT }}
-          hugoVersion: extended_0.64.0
+          hugoVersion: extended_0.64.1
           args: --gc --minify --cleanDestinationDir
