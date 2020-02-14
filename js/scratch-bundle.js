@@ -37,7 +37,9 @@ var translationsAll=function(){'use strict';function e(e){return e&&e["default"]
     svg = docView.render()
 
     // Scratch 3 is zoomed out by default, so you probably want to do the same
-    svg.style.transform = 'scale(0.75)';
+    svg.style.transform = 'scale(0.5)';
+    svg.style.width = 'auto';
+    svg.style.height = 'auto';
 
     // Add that SVG to your page, etc
     svg.style.transformOrigin = '0 0';
