@@ -47,4 +47,4 @@ Onze meest enthousiaste mentoren hebben zelf ook iets aan hun hulp bij CoderDojo
 
 Tot slot proberen we een zo veilig mogelijke omgeving te bieden aan onze bezoekers. Een onderdeel daarvan is dat we voor al onze mentoren een Verklaring Omtrend Gedrag aanvragen.
 
-Op onze [instructie pagina](/instructies) kun je voorbeelden zien van onderwerpen die we behandelen.
+Op onze [instructie pagina]({{< ref "instructies" >}}) kun je voorbeelden zien van onderwerpen die we behandelen.

@@ -13,5 +13,8 @@ Naast het leren programmeren, ontmoeten deelnemers gelijkgestemde mensen, delen 
 
 CoderDojo maakt leren programmeren een leuke en sociale ervaring. 
 
-CoderDojo heeft slechts één regel: **“Boven Alles: Wees Cool!”**,  
+CoderDojo heeft slechts één regel:
+
+**Boven Alles: Wees Cool!**
+  
 Pesten, liegen en mensen hun tijd verdoen is niet cool.
