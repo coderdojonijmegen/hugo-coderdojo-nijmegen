@@ -19,7 +19,7 @@ jobs:
           repository: coderdojonijmegen/hugo_coderdojo_template
           path: themes/hugo_coderdojo_template
 
-      - uses: chabad360/hugo-gh-pages@master
+      - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
         with:
           githubToken: ${{ secrets.PAT }}
