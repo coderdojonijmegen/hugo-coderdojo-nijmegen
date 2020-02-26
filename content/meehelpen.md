@@ -1,13 +1,12 @@
 ---
-title: "Meehelpen"
+title: "Wil je vrijwilliger worden?"
 headercolor: "purple-background"
 date: 2020-02-06T21:26:04+01:00
 draft: false
 ---
 
-# Wil je vrijwilliger worden?
 Er komt veel kijken bij de organisatie van een CoderDojo. We draaien op de inzet van vrijwilligers die graag hun kennis delen of hun tijd willen inzetten om kinderen verder te helpen.
-Wij jij ons ook graag helpen? Dat kan absoluut! Ook als je niet direct technisch onderlegd bent kun je veel voor ons doen.
+Wij jij ons ook graag helpen? Dat kan absoluut! Ook als je niet direct technisch onderlegd bent, kun je veel voor ons doen.
 
 ## Workshops maken / begeleiden
  * Scratch

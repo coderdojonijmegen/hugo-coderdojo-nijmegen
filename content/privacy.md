@@ -1,11 +1,10 @@
 ---
-title: "Privacy"
+title: "Privacy beleid"
 headercolor: "purple-background"
 date: 2020-02-08T00:42:37+01:00
 draft: false
 ---
 
-# Privacy statement
 Via de website coderdojo-nijmegen.nl worden privacygevoelige gegevens oftewel persoonsgegevens verwerkt.St. Coderdojo Nijmegen acht een zorgvuldige omgang met persoonsgegevens van groot belang. Persoonlijke gegevens worden door ons dan ook zorgvuldig verwerkt en beveiligd.
 
 Bij onze verwerking houden wij ons aan de eisen die de Algemene Verordening Gegevensbescherming (AVG) stelt. Dat betekent onder andere dat wij:

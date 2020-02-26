@@ -5,7 +5,6 @@ date: 2020-02-09T17:31:05+01:00
 draft: false
 ---
 
-# Team
 ## Wie zijn we?
 
 ### Pieter Buur | Champion
@@ -24,4 +23,5 @@ Hij leert zelf nog altijd graag en vind het ook leuk om zijn enthousiasme en kun
 ### Kevin van den Broek | Mentor
 ### Tjeerd van der Zee | Mentor
 
-CoderDojo Nijmegen is altijd op zoek naar vrijwilligers.
+## Ook lid worden van het team?
+CoderDojo Nijmegen is altijd op zoek naar vrijwilligers. Kijk ook op pagina [meehelpen]({{< ref "meehelpen" >}}).
