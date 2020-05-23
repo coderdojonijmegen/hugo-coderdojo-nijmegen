@@ -25,3 +25,4 @@ jobs:
           githubToken: ${{ secrets.PAT }}
           hugoVersion: extended_0.64.1
           args: --gc --minify --cleanDestinationDir
+          cname: coderdojonijmegen.familiehopman.net
