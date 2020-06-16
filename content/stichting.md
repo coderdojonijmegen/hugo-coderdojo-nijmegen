@@ -19,6 +19,13 @@ CoderDojo Nijmegen organiseert maandelijks gratis IT workshops (Dojo’s) voor k
 
 Bovenstaande is iets wat elk van de, ongeveer 1000, CoderDojo’s in de wereld probeert te doen. Daarnaast worden er internationale evenementen georganiseerd: bij EUDojo laten kinderen aan europarlementariërs zien hoe (belangrijk het is dat) zij leren programmeren. Vanuit CoderDojo Nijmegen is Xavi – één van onze ninja’s – afgelopen jaar bij EUDojo geweest, waarvan hij een geweldig verslag heeft geschreven. Bij The Coolest Projects awards komen kinderen van over de hele wereld samen om elkaar te tonen ze wat ze bedacht en gebouwd hebben met hun IT kennis.
 
+## Het bestuur
+| ![Esther van Popta](/imgs/bestuur/esther.png) | ![Leo Willems](/imgs/bestuur/leo.png) | ![Bas Hopman](/imgs/bestuur/bas.png) | ![Daan Willems](/imgs/bestuur/daan.png) | ![Rianne Kooi](/imgs/bestuur/rianne.jpg) |
+|:------:|:------:|:------:|:------:|:------:|
+| Esther van Popta | Leo Willems | Bas Hopman | Daan Willems | Rianne Kooi |
+| _voorzitter_ | _penningmeester_ | _secretaris_ | _algemeen bestuurslid_ | _algemeen bestuurslid_ |
+| [![LinkedIn](/imgs/linkedin-grey.png)](https://nl.linkedin.com/in/esthervanpopta) |[![LinkedIn](/imgs/linkedin-grey.png)](http://leowillems.nl) |[![LinkedIn](/imgs/linkedin-grey.png)](https://bas.familiehopman.net) |[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/daan-willems-48665712b/) |[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/rianne-kooi//) |
+
 ### Contactgegevens
 Stichting CoderDojo Nijmegen  
 Waalbandijk 16 | Unit 40  
