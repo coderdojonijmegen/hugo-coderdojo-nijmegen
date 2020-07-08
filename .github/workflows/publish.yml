@@ -14,10 +14,10 @@ jobs:
         name: Checkout Repo
 
       - uses: actions/checkout@v2
-        name: Checkout Theme
+        name: Checkout python-boot-race
         with:
-          repository: coderdojonijmegen/hugo_coderdojo_template
-          path: themes/hugo_coderdojo_template
+          repository: coderdojonijmegen/python-boot-race
+          path: content/instructies/python-boot-race
 
       - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
