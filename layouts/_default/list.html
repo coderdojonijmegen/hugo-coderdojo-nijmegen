@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+
+{{ .Content }}
+
+<ul class="pages">
+{{ if eq .Section "dojos" }}
+    {{ partial "dojo-list" . }}
+{{ else if eq .Section "instructies" }}
+    {{ partial "instruction-list" . }}
+{{ else }}
+    {{ range .Pages.ByTitle }}
+        {{ partial "page-list-item-summary" . }}
+    {{ end }}
+{{ end}}
+</ul>
+
+{{ partial "footer" . }}

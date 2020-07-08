@@ -1,0 +1,5 @@
+{{ $scratchBlocks := resources.Get "js/scratchblocks-v3.4-min.js" }}
+{{ $scratchBlocksTranslations := resources.Get "js/translations-all-v3.4.js" }}
+{{ $scratch := resources.Get "js/scratch.js" }}
+{{ $scratchBundle := slice $scratchBlocks $scratchBlocksTranslations $scratch | resources.Concat "js/scratch-bundle.js" }}
+<script src="{{ $scratchBundle.RelPermalink }}"></script>

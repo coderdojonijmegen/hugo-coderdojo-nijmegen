@@ -1,0 +1,11 @@
+{{ range where $.Site.RegularPages.ByTitle "Section" "instructies" }}
+<li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <p>{{ .Summary | plainify }}
+        {{ if .Truncated }}
+        <br>
+        <a href="{{ .RelPermalink }}">meer…</a>
+        {{ end }}
+    </p>
+</li>
+{{ end }}

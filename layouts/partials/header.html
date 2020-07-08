@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    {{ $style := resources.Get "scss/coderdojo.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link rel="icon" href="{{ "/imgs/icon-512x512.png" | relURL }}" />
+</head>
+<body>
+<header class="{{ .Params.headercolor }}">
+    <menu>
+        <span class="menu-toggle" id="js-menu-toggle">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+        <logo>
+            <a href="{{ "/" | relURL }}">
+                <img src="{{ "/imgs/logo_coderdojo_nijmegen.png" | relURL }}" alt="logo CoderDojo"/>
+            </a>
+        </logo>
+        <ul id="js-menu" class="menu">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </menu>
+    {{ $script := resources.Get "js/menu-toggle.js" }}
+    <script src="{{ $script.RelPermalink }}"></script>
+</header>
+<main>

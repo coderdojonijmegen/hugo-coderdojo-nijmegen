@@ -1,0 +1,16 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+
+{{ if eq .Section "dojos" }}
+
+    {{ partial "dojo" . }}
+
+{{ else }}
+
+    <h1>{{ .Params.title }}</h1>
+    <article>
+    {{ .Content }}
+    {{ partial "scratch" . }}
+    </article>
+{{ end}}
+{{ partial "footer" . }}

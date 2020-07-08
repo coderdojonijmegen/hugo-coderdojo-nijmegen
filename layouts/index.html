@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+
+<h1>{{ .Title }}</h1>
+
+<article>
+    {{ .Content }}
+</article>
+
+<article>
+    <h1>Dojo's</h1>
+    Hier een overzicht van de laatste 5 dojo's:
+    <ul class="pages">
+    {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "dojos") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+</article>
+{{ partial "footer" . }}
