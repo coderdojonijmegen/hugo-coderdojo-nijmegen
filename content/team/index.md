@@ -8,14 +8,14 @@ draft: false
 ## Wie zijn we?
 
 ### Pieter Buur | Champion
-{{< mentor src="/imgs/mentoren/pieter.png" title="Pieter Buur" >}}
+{{< mentor src="pieter.png" title="Pieter Buur" >}}
 
 Na meer dan tien jaar onderzoek naar de hersenen gedaan te hebben met MRI, werkt Pieter tegenwoordig als data scientist en ontwikkelt bijvoorbeeld chatbots en manieren om interessante informatie uit teksten (zoals nieuwsberichten) te halen.
 
 In zijn vrije tijd vindt Pieter het leuk – ook samen met zijn dochters en soms op school – bezig te zijn met allerlei soorten electronica zoals robots, micro:bit en Arduino.
 {{< /mentor >}}
 ### Bas Hopman | Mentor
-{{< mentor src="/imgs/mentoren/bas.png" title="Bas Hopman" >}}
+{{< mentor src="bas.png" title="Bas Hopman" >}}
 
 Bas is een all-round software ontwikkelaar bij Signify (voormalig Philips Lighting) in Eindhoven. Van origine een elektrotechnicus, maar al 20 jaar bezig met software in werk en hobby. Hij heeft software gemaakt voor lampen elektronica, Linux mini computers, websites, systeem testen en diverse scriptjes. Gebruikte programmeertalen zijn o.a. ANSI-C, Java, Python, SQL, HTML, JavaScript en PHP.
 

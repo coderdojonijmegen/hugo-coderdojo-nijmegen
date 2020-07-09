@@ -16,4 +16,4 @@ eventbrite:
 Aan de slag met microcontrollers: Arduino en micro:bit. Op allebei kun je van allerlei sensoren aansluiten en je eigen creatie met licht, geluid en beweging maken die ook nog op jou reageert. Je kunt programmeren in Scratch (of met een Scratch-achtige taal), Python en C/C++.
  <!--more-->
 # Voorbereiding
-Om snel aan de gang te kunnen is het handig om een aantal programma's vooraf op een laptop te installeren, zoals mBlock 5, de micro:bit offlne app en de Arduino IDE.
+Om snel aan de gang te kunnen is het handig om een aantal programma's vooraf op je laptop te installeren, zoals mBlock 5, de micro:bit offlne app en de Arduino IDE.

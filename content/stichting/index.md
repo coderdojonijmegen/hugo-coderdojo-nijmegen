@@ -22,7 +22,7 @@ Bovenstaande is iets wat elk van de, ongeveer 1000, CoderDojo’s in de wereld p
 ## Het bestuur
 {{< responsive_table >}}
 
-| ![Esther van Popta](/imgs/bestuur/esther.png) | ![Leo Willems](/imgs/bestuur/leo.png) | ![Bas Hopman](/imgs/bestuur/bas.png) | ![Daan Willems](/imgs/bestuur/daan.png) | ![Rianne Kooi](/imgs/bestuur/rianne.jpg) |
+| ![Esther van Popta](esther.png) | ![Leo Willems](leo.png) | ![Bas Hopman](bas.png) | ![Daan Willems](daan.png) | ![Rianne Kooi](rianne.jpg) |
 |:------:|:------:|:------:|:------:|:------:|
 | Esther van Popta | Leo Willems | Bas Hopman | Daan Willems | Rianne Kooi |
 | _voorzitter_ | _penningmeester_ | _secretaris_ | _algemeen bestuurslid_ | _algemeen bestuurslid_ |
@@ -39,8 +39,8 @@ RSIN: 857425948
 Bank: NL38 RABO 0317 6808 70  
 
 ### Downloads
-[Beleidsplan](/BeleidsplanCoderDojoNijmegen20172018.pdf)  
-[Jaarverslag 2018](/CoderDojo-Jaarverslag-2018.pdf)  
-[Statuten](/2017-2-statuten.pdf)  
-[Huishoudelijk Reglement](/Huishoudelijk-reglement.pdf)  
-[Protocol Veiligheid](/Protocol_Veiligheid.pdf)
+[Beleidsplan](BeleidsplanCoderDojoNijmegen20172018.pdf)  
+[Jaarverslag 2018](CoderDojo-Jaarverslag-2018.pdf)  
+[Statuten](2017-2-statuten.pdf)  
+[Huishoudelijk Reglement](Huishoudelijk-reglement.pdf)  
+[Protocol Veiligheid](Protocol_Veiligheid.pdf)

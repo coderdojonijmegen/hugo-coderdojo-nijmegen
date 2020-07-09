@@ -7,12 +7,30 @@
 </article>
 
 <article>
-    <h1>Dojo's</h1>
-    Hier een overzicht van de laatste 5 dojo's:
-    <ul class="pages">
-    {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "dojos") }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-    </ul>
+    <h1>Dojo</h1>
+
+    <p>
+        {{ $maanden := .Site.Data.dagenenmaanden.maanden }}
+        {{ $dagen := .Site.Data.dagenenmaanden.dagen }}
+        {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "dojos") }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params }}
+            <span>{{ index $dagen (dateFormat "Monday" .wanneer.van) }}
+                {{ dateFormat "2" .wanneer.van }}
+                {{ index $maanden (dateFormat "1" .wanneer.van) }}
+                {{ dateFormat "2006" .wanneer.van }}</span>
+            {{ end }}
+            <p>{{ .Summary | plainify }}
+                {{ if .Truncated }}
+                <br>
+                <a href="{{ .RelPermalink }}">meer…</a>
+                {{ end }}
+            </p>
+        {{ end }}
+    </p>
+
+    <p>
+        meer<a href="{{(printf "%s" .Site.BaseURL)}}dojos">dojos</a>
+    </p>
 </article>
 {{ partial "footer" . }}

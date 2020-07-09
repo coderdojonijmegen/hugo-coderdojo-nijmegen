@@ -6,4 +6,5 @@ draft: false
 ---
 
 # Dojos
-    
+
+We organiseren iedere eerse zaterdag van de maand een dojo. Hieronder vind je een overzicht van de 5 laatste dojo's:
