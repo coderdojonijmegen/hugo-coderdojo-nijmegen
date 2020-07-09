@@ -1,14 +1,19 @@
 <breadcrumbs>
-    {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+    {{ $url := "" }}
+    {{ if eq (printf "%s" .Site.BaseURL) "/" }}
+        {{ $url = substr .Permalink 1 }}
+    {{ else }}
+        {{ $url = replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+    {{ end }}
     {{ $.Scratch.Add "path" .Site.BaseURL }}
     <ul>
         <li><a href="{{ "/" | relURL }}">home</a></li>
         {{ range $index, $element := split $url "/" }}
-        {{ $.Scratch.Add "path" $element }}
-        {{ if ne $element "" }}
-        <li>/ <a href='{{ $.Scratch.Get "path" }}'>{{ humanize . }}</a></li>
-        {{ $.Scratch.Add "path" "/" }}
-        {{ end }}
+            {{ $.Scratch.Add "path" $element }}
+            {{ if ne $element "" }}
+                <li>/ <a href='{{ $.Scratch.Get "path" }}'>{{ humanize . }}</a></li>
+                {{ $.Scratch.Add "path" "/" }}
+            {{ end }}
         {{ end }}
     </ul>
 </breadcrumbs>
