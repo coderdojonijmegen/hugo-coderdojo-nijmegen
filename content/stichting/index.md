@@ -36,7 +36,9 @@ Waalbandijk 16 | Unit 40
 6541 AJ Nijmegen  
 
 RSIN: 857425948  
-Bank: NL38 RABO 0317 6808 70  
+Bank: NL38 RABO 0317 6808 70
+
+Email: 𝗌𝗍𝗂𝖼𝗁𝗍𝗂𝗇𝗀@𝖼𝗈𝖽𝖾𝗋𝖽𝗈𝗃𝗈-𝗇𝗂𝗃𝗆𝖾𝗀𝖾𝗇.𝗇𝗅
 
 ### Downloads
 [Beleidsplan](BeleidsplanCoderDojoNijmegen20172018.pdf)  
