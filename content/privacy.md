@@ -30,8 +30,6 @@ Door het gebruiken van onze dienst laat u bepaalde gegevens bij ons achter. Dat 
 
 # Verstrekking aan derden
 
-We kunnen uw e-mailadres voor een nieuwsbrief gebruiken. Dat doen we met behulp van Mailchimp (www.mailchimp.com). Elke email bevat een link om u af te melden.
-
 Wanneer u bij ons een reservering doet, maken wij voor de afhandeling daarvan gebruik van Eventbrite (www.eventbrite.com). Zij registreren persoonsgegevens ten behoeve van het maken van de reservering (email-adres en financiële gegeven in het geval van donaties).
 
 # Beveiliging
