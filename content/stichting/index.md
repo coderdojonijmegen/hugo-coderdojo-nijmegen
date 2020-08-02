@@ -42,7 +42,7 @@ Email: 𝗌𝗍𝗂𝖼𝗁𝗍𝗂𝗇𝗀@𝖼𝗈𝖽𝖾𝗋𝖽𝗈𝗃𝗈
 
 ### Downloads
 [Beleidsplan](BeleidsplanCoderDojoNijmegen20172018.pdf)  
-[Jaarverslag 2018](CoderDojo-Jaarverslag-2018.pdf)  
+[Jaarverslag 2019](CoderDojo-Jaarverslag-2019.pdf)  
 [Statuten](2017-2-statuten.pdf)  
 [Huishoudelijk Reglement](Huishoudelijk-reglement.pdf)  
 [Protocol Veiligheid](Protocol_Veiligheid.pdf)
