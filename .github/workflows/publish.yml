@@ -13,16 +13,16 @@ jobs:
       - uses: actions/checkout@v2
         name: Checkout Repo
 
-      - uses: actions/checkout@v2
-        name: Checkout python-boot-race
-        with:
-          repository: coderdojonijmegen/python-boot-race
-          path: content/instructies/python-boot-race
+#      - uses: actions/checkout@v2
+#        name: Checkout python-boot-race
+#        with:
+#          repository: coderdojonijmegen/python-boot-race
+#          path: content/instructies/python-boot-race
 
       - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
         with:
           githubToken: ${{ secrets.PAT }}
-          hugoVersion: extended_0.64.1
+          hugoVersion: extended_0.74.3
           args: --gc --minify --cleanDestinationDir
           cname: coderdojo-nijmegen.nl
