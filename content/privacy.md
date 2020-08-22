@@ -12,7 +12,7 @@ Bij onze verwerking houden wij ons aan de eisen die de Algemene Verordening Gege
  * duidelijk vermelden met welke doeleinden wij uw persoonsgegevens verwerken. Dat doen wij via deze privacyverklaring;
  * met derden een verwerkersovereenkomst aangaan waarin afspraken gemaakt worden over de persoonsgegevens die wij een hen doorgeven.
 
-Voor beide geldt dat :
+Voor beide geldt dat:
 
  * de verzameling van persoonsgegevens zich beperkt zich tot alleen de persoonsgegevens die nodig zijn voor legitieme doeleinden;
  * wij u eerst vragen om uitdrukkelijke toestemming om uw persoonsgegevens te verwerken in gevallen waarin uw toestemming is vereist;

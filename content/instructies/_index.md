@@ -6,4 +6,5 @@ draft: false
 ---
 
 # Instructies
-We hebben allerlei instructies. Hieronder vind je er een lijst van:
+We hebben allerlei instructies. 
+Deze vind je hier: https://coderdojonijmegen.github.io/

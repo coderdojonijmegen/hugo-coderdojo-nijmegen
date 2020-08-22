@@ -6,10 +6,10 @@ headercolor: "orange-background"
 wanneer: 
   van: 2020-08-15T12:00:00.0Z
   tot: 2020-08-15T14:30:00.0Z
-waar: "Rootnet, Kerkenbos 1059, 6546 BB Nijmegen"
+waar: "De Smeltkroes, Waalbandijk 16, 6541 AJ Nijmegen"
 eventbrite:
-  inschrijventot: 2020-08-15T00:00:00.0Z
-  url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-67-unplugged-113195219950"
+  inschrijventot: 2020-08-01T00:00:00.0Z
+  url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-62-93475366337"
 ---
 ![Unplugged!](https://cdn.evbuc.com/images/65758637/187233351803/1/original.20190715-200448?timestamp=1594306515673)
 ## Wat gaan we doen?
