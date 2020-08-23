@@ -29,6 +29,10 @@ body {
     line-height: 1.5em;
 }
 
+svg {
+    height: fit-content !important;
+}
+
 .purple-background {
     background-color: $purple;
 }
@@ -62,6 +66,24 @@ body {
         width: 100px;
         font-weight: normal;
     }
+}
+
+.toggle .toggle_header {
+    display: block;
+    clear: both;
+    cursor: pointer;
+    margin: 10px;
+}
+.toggle .toggle_header p {
+    display: inline;
+}
+
+.toggle .toggle_header:after {
+    content: " ▶";
+}
+
+.toggle .toggle_header.open:after {
+    content: " ▼";
 }
 
 header {

@@ -39,5 +39,12 @@
         <a href="https://github.com/coderdojonijmegen" target="_blank" rel="noopener noreferrer"><img src="{{ "/imgs/github.png" | relURL }}" alt="GitHub" /></a>
     </div>
 </footer>
+{{ $menu_toggle := resources.Get "js/menu-toggle.js" }}
+{{ $voorbeeld_toggle := resources.Get "js/voorbeeld-toggle.js" }}
+{{ $scratchBlocks := resources.Get "js/scratchblocks-v3.4-min.js" }}
+{{ $scratchBlocksTranslations := resources.Get "js/translations-all-v3.4.js" }}
+{{ $scratch := resources.Get "js/scratch.js" }}
+{{ $script := slice $menu_toggle $voorbeeld_toggle $scratchBlocks $scratchBlocksTranslations $scratch | resources.Concat "js/bundle.js" }}
+<script src="{{ $script.RelPermalink }}"></script>
 </body>
 </html>
