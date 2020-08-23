@@ -19,6 +19,12 @@ jobs:
           repository: coderdojonijmegen/love2d-snake
           path: content/instructies/love2d-snake
 
+      - uses: actions/checkout@v2
+        name: Checkout Snake Scratch
+        with:
+          repository: coderdojonijmegen/scratch-snake
+          path: content/instructies/scratch-snake
+
       - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
         with:
