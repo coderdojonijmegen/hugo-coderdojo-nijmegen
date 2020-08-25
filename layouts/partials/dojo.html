@@ -3,7 +3,7 @@
 {{ with .Params }}
 <h1>{{ .title }}</h1>
 <ul class="plaats-en-tijd">
-    <li><span>waar:</span>{{ .waar }}</li>
+    <li><span>waar:</span><a href="https://maps.google.com/?q={{ .waar }}">{{ .waar }}</a></li>
     <li><span>wanneer:</span>{{ index $dagen (dateFormat "Monday" .wanneer.van) }}
         {{ dateFormat "2" .wanneer.van }}
         {{ index $maanden (dateFormat "1" .wanneer.van) }}
