@@ -135,14 +135,16 @@ header {
 }
 
 main {
-    * {
-        padding: 5px;
-    }
+    line-height: 1.6em;
     li {
         padding: 1px;
     }
     p {
         text-align: justify;
+        margin-bottom: 10px;
+    }
+    img {
+        max-width: 100%;
     }
     .mentor {
         margin-bottom: 40px;
@@ -209,6 +211,15 @@ main {
             text-decoration: none;
             box-shadow: black 1px 1px 2px 0px;
         }
+    }
+    .dojo {
+        border-bottom: solid 1px $orange;
+    }
+    .dojo-kop {
+        font-size: larger;
+        border-top: solid 2px $orange;
+        padding-top: 10px;
+        margin-top: 30px;
     }
 }
 
