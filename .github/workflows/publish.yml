@@ -25,6 +25,12 @@ jobs:
           repository: coderdojonijmegen/scratch-snake
           path: content/instructies/scratch-snake
 
+      - uses: actions/checkout@v2
+        name: Checkout Python Turtle
+        with:
+          repository: coderdojonijmegen/py-turtle
+          path: content/instructies/python-turtle
+
       - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
         with:
