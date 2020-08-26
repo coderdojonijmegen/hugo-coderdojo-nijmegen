@@ -1,5 +1,5 @@
 ---
-title: "#67 unplugged"
+title: "#67 Unplugged"
 date: 2020-07-09T0:0:0+01:00
 draft: false
 headercolor: "orange-background"

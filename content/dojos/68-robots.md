@@ -1,6 +1,6 @@
 ---
-title: "#68 robots"
-date: 2020-09-05T0:0:0+01:00
+title: "#68 Robots"
+date: 2020-08-24T0:0:0+01:00
 draft: false
 headercolor: "orange-background"
 wanneer: 
@@ -19,3 +19,7 @@ Deze maand mogen de robots hun kunsten weer vertonen. We gaan in ieder geval aan
 
 ## Voorbereiding
 Neem een laptop mee, en installeer om snel aan de slag te kunnen de [micro:bit offline app](https://makecode.microbit.org/offline-app) en het [mBlock programma](https://mblock.makeblock.com/en-us/download/) op.
+
+## Corona
+We zijn natuurlijk blij dat we weer bij elkaar kunnen komen, wel zijn er de nodige richtlijnen om rekening mee te houden. 
+Onze collega's in Alphen a/d Rijn hebben een [duidelijk overzicht](https://coderdojo-alphenaandenrijn.nl/corona/) gemaakt, kijk hier vooral even naar!
