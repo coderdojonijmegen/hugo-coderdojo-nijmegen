@@ -33,6 +33,10 @@ svg {
     height: fit-content !important;
 }
 
+ol {
+    margin-left: 15px;
+}
+
 .purple-background {
     background-color: $purple;
 }
@@ -221,6 +225,9 @@ main {
         padding-top: 10px;
         margin-top: 30px;
     }
+    .toc {
+        margin-bottom: 50px;
+    }
 }
 
 footer {
@@ -305,8 +312,18 @@ footer {
         margin-bottom: 60px;
         width: 100%;
         max-width: $contentWidth;
-    }
 
+        .toc {
+            float: right;
+            padding: 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #eee;
+            ul {
+                list-style-type: none;
+            }
+        }
+    }
     footer {
         height: $footerHeight;
         div#colofon {
