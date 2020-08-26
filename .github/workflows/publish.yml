@@ -33,6 +33,12 @@ jobs:
           repository: coderdojonijmegen/py-turtle
           path: content/instructies/python-turtle
 
+      - uses: actions/checkout@v2
+        name: Checkout Löve2D shooter
+        with:
+          repository: coderdojonijmegen/love2d-shooter
+          path: content/instructies/love2d-shooter
+
       - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
         with:
