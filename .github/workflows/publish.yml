@@ -39,6 +39,12 @@ jobs:
           repository: coderdojonijmegen/love2d-shooter
           path: content/instructies/love2d-shooter
 
+      - uses: actions/checkout@v2
+        name: Checkout Micro:Bit
+        with:
+          repository: coderdojonijmegen/microbit
+          path: content/instructies/microbit
+
       - uses: bashopman/hugo-gh-pages@master
         name: Publish Site
         with:
