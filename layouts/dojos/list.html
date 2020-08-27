@@ -1,0 +1,30 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+
+{{ .Content }}
+
+<ul class="pages">
+    {{ $maanden := .Site.Data.dagenenmaanden.maanden }}
+    {{ $dagen := .Site.Data.dagenenmaanden.dagen }}
+    {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "dojos") }}
+    <li class="dojo">
+        <div class="dojo-kop">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params }}
+            <span>{{ index $dagen (dateFormat "Monday" .wanneer.van) }}
+        {{ dateFormat "2" .wanneer.van }}
+        {{ index $maanden (dateFormat "1" .wanneer.van) }}
+        {{ dateFormat "2006" .wanneer.van }}</span>
+            {{ end }}
+        </div>
+        <p>{{ .Summary }}
+            {{ if .Truncated }}
+            <br>
+            <a href="{{ .RelPermalink }}">meer…</a>
+            {{ end }}
+        </p>
+    </li>
+    {{ end }}
+</ul>
+
+{{ partial "footer" . }}

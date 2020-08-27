@@ -1,23 +1,9 @@
 {{ partial "header" . }}
 {{ partial "breadcrumbs" . }}
 
-{{ if eq .Section "dojos" }}
-
-    {{ partial "dojo" . }}
-
-{{ else }}
-
     <h1>{{ .Params.title }}</h1>
     <article class="instructie">
-        {{ if and (gt .WordCount 100 ) (.Params.toc) }}
-        <aside class="toc">
-            <header>
-                <h2>Inhoud</h2>
-            </header>
-            {{.TableOfContents}}
-        </aside>
-        {{ end }}
     {{ .Content }}
     </article>
-{{ end}}
+
 {{ partial "footer" . }}
