@@ -1,4 +1,4 @@
-{{ range where $.Site.RegularPages.ByTitle "Section" "instructies" }}
+{{ range .Pages.ByTitle }}
 <li>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     <p>{{ .Summary | plainify }}

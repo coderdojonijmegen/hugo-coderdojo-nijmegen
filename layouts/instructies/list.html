@@ -1,0 +1,11 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+<h1>{{ .Title }}</h1>
+<article class="instructie">
+    {{ partial "toc" . }}
+    {{ .Content }}
+    {{ if not (and (gt .WordCount 100 ) (.Params.toc)) }}
+        {{ partial "instruction-list" . }}
+    {{ end }}
+</article>
+{{ partial "footer" . }}

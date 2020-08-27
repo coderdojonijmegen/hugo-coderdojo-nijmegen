@@ -1,0 +1,10 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+
+<h1>{{ .Params.title }}</h1>
+<article class="instructie">
+    {{ partial "toc" . }}
+    {{ .Content }}
+</article>
+
+{{ partial "footer" . }}

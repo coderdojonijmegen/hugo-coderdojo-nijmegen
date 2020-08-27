@@ -3,7 +3,11 @@
         {{ .Get "kop" }}
     </div>
     <div style="display: none;">
-        {{ .Inner }}
+        {{ if .Get "md" }}
+            {{ .Inner | markdownify }}
+        {{ else }}
+            {{ .Inner }}
+        {{ end }}
     </div>
 </div>
 
