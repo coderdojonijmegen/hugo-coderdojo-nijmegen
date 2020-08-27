@@ -234,11 +234,25 @@ main {
         ul {
             list-style-type: none;
         }
-   }
+    }
     .verdieping {
         border: 1px solid #ddd;
         background-color: #eee;
         padding: 15px;
+    }
+    ul.instructie-lijst {
+        list-style-type: none;
+        li {
+            margin-bottom: 0.6em;
+            margin-left: -13px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .instructie-titel {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
     }
 }
 
