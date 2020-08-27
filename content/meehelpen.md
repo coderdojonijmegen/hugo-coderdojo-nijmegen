@@ -10,16 +10,11 @@ Wij jij ons ook graag helpen? Dat kan absoluut! Ook als je niet direct technisch
 
 ## Workshops maken / begeleiden
  * Scratch
- * Bomberbot / CodeCombat
- * Minecraft
  * HTML / CSS
  * Javascript
- * PHP / MySQL
- * Java (Android)
- * Objective-C / Swift (iPhone / iPad)
- * Arduino / Raspberry-PI
- * Lego Mindstorms
- * 3D
+ * Python
+ * Processing
+ * Löve/Lua
 
 ## Algemeen
  * Gastsprekers

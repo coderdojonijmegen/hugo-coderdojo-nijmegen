@@ -17,7 +17,7 @@ CoderDojo brengt kinderen in aanraking met IT. We laten jonge mensen zien hoe ze
 
 CoderDojo Nijmegen organiseert maandelijks gratis IT workshops (Dojo’s) voor kinderen tussen 7 en 17 jaar. Tijdens die workshops bouwen de kinderen games, apps, websites en meer. De stichting is opgericht om naast de organisatie van workshops ook andere activiteiten te kunnen ontplooien. Zo maakt CoderDojo Nijmegen lesmateriaal dat ook bij andere CoderDojo’s kan worden gebruikt. Ook schaft CoderDojo Nijmegen materiaal (robots, computers, electronica) aan voor gebruik tijdens Dojo’s. Daarnaast kan de stichting andere Dojo’s ondersteunen met kennis en materiaal, zodat  meer kinderen in aanraking kunnen komen met IT.
 
-Bovenstaande is iets wat elk van de, ongeveer 1000, CoderDojo’s in de wereld probeert te doen. Daarnaast worden er internationale evenementen georganiseerd: bij EUDojo laten kinderen aan europarlementariërs zien hoe (belangrijk het is dat) zij leren programmeren. Vanuit CoderDojo Nijmegen is Xavi – één van onze ninja’s – afgelopen jaar bij EUDojo geweest, waarvan hij een geweldig verslag heeft geschreven. Bij The Coolest Projects awards komen kinderen van over de hele wereld samen om elkaar te tonen ze wat ze bedacht en gebouwd hebben met hun IT kennis.
+Bovenstaande is iets wat elk van de, ongeveer 1000, CoderDojo’s in de wereld probeert te doen. Daarnaast worden er internationale evenementen georganiseerd: bij EUDojo laten kinderen aan europarlementariërs zien hoe (belangrijk het is dat) zij leren programmeren.
 
 ## Het bestuur
 {{< responsive_table >}}
