@@ -1,0 +1,24 @@
+turtle_begin:
+  - interpreter
+  - tekenen
+  - draaien
+  - kleur
+
+python:
+  - variabelen
+  - herhaling
+
+turtle_gevorderd:
+  - vorm/stempel
+  - verplaatsen
+  - vullen
+  - schrijven
+
+scripting:
+  - debugger
+  - condities
+  - functies
+
+turtle_expert:
+  - meer turtles
+  - events
