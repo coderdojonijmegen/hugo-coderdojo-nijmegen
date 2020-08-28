@@ -42,9 +42,6 @@ git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 echo "machine github.com login ${GITHUB_ACTOR} password ${INPUT_GITHUBTOKEN}" > ~/.netrc
 
-git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/gh-pages
-rm -rf /tmp/gh-pages/*
-
 echo -e "\n${BOLD}Checking out instructions${PLAIN}"
 while IFS=" " read -r p || [ -n "$p" ]
 do
@@ -55,6 +52,9 @@ done < instructies.txt
 
 
 echo -e "\n${BOLD}Generating Public Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
+git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/gh-pages
+rm -rf /tmp/gh-pages/*
+
 hugo ${INPUT_ARGS} -d /tmp/gh-pages/
 
 echo -e "\n${BOLD}Commiting${PLAIN}"
@@ -73,6 +73,9 @@ echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed to ${I
 
 
 echo -e "\n${BOLD}Generating MCS Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
+git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/mcs
+rm -rf /tmp/mcs/*
+
 hugo ${INPUT_ARGS} --config config-mcs.toml -d /tmp/mcs/
 
 echo -e "\n${BOLD}Commiting${PLAIN}"
