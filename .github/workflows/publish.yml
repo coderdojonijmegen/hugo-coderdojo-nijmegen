@@ -15,37 +15,7 @@ jobs:
       - uses: actions/checkout@v2
         name: Checkout Repo
 
-      - uses: actions/checkout@v2
-        name: Checkout Snake Löve2D
-        with:
-          repository: coderdojonijmegen/love2d-snake
-          path: content/instructies/love2d-snake
-
-      - uses: actions/checkout@v2
-        name: Checkout Snake Scratch
-        with:
-          repository: coderdojonijmegen/scratch-snake
-          path: content/instructies/scratch-snake
-
-      - uses: actions/checkout@v2
-        name: Checkout Python Turtle
-        with:
-          repository: coderdojonijmegen/py-turtle
-          path: content/instructies/python-turtle
-
-      - uses: actions/checkout@v2
-        name: Checkout Löve2D shooter
-        with:
-          repository: coderdojonijmegen/love2d-shooter
-          path: content/instructies/love2d-shooter
-
-      - uses: actions/checkout@v2
-        name: Checkout Micro:Bit
-        with:
-          repository: coderdojonijmegen/microbit
-          path: content/instructies/microbit
-
-      - uses: bashopman/hugo-gh-pages@master
+      - uses: bashopman/dojo-site-deployer-action@master
         name: Publish Site
         with:
           githubToken: ${{ secrets.PAT }}
