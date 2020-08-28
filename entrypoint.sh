@@ -60,7 +60,7 @@ git add -A && git commit --allow-empty -am "Publishing Site ${NAME} at ${GITHUB_
 
 
 echo -e "\n${BOLD}Pushing${PLAIN}"
-#git push --force
+git push --force
 
 
 echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed!${PLAIN}"
