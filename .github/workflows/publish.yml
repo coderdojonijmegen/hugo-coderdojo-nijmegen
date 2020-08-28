@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         name: Checkout Repo
 
-      - uses: bashopman/dojo-site-deployer-action@master
+      - uses: coderdojonijmegen/dojo-site-deployer-action@master
         name: Publish Site
         with:
           githubToken: ${{ secrets.PAT }}
