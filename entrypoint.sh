@@ -73,7 +73,7 @@ echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed to ${I
 
 
 echo -e "\n${BOLD}Generating MCS Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
-git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/mcs
+git clone --depth=1 --single-branch --branch "mcs" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/mcs
 rm -rf /tmp/mcs/*
 
 hugo ${INPUT_ARGS} --config config-mcs.toml -d /tmp/mcs/
