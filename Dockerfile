@@ -10,4 +10,4 @@ ENV INPUT_HUGOVERSION extended_0.74.0
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-#ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
