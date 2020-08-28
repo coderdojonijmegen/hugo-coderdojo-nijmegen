@@ -45,6 +45,13 @@ echo "machine github.com login ${GITHUB_ACTOR} password ${INPUT_GITHUBTOKEN}" > 
 git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/gh-pages
 rm -rf /tmp/gh-pages/*
 
+echo -e "\n{$BOLD}Checking out instructions${PLAIN}"
+while IFS=" " read -r p || [ -n "$p" ]
+do
+  INSTRUCTIE_REPO="${p% *}"
+  INSTRUCTIE_PATH="${p#* }"
+  git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/$INSTRUCTIE_REPO.git $INSTRUCTIE_PATH
+done < instructies.txt
 
 echo -e "\n${BOLD}Generating Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
 hugo ${INPUT_ARGS} -d /tmp/gh-pages/
