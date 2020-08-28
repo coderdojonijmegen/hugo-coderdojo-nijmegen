@@ -1,5 +1,9 @@
 {{ partial "header" . }}
 
+{{ if .Site.Params.mcs }}
+    {{ partial "mcs-index" . }}
+{{ else }}
+
 <h1>{{ .Title }}</h1>
 
 <article>
@@ -37,4 +41,5 @@
         meer <a href="{{(printf "%s" .Site.BaseURL)}}dojos">dojos</a>
     </p>
 </article>
+{{ end }}
 {{ partial "footer" . }}

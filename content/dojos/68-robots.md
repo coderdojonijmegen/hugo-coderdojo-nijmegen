@@ -10,6 +10,9 @@ waar: "De Smeltkroes, Waalbandijk 16, 6541 AJ Nijmegen"
 eventbrite:
   inschrijventot: 2020-09-05T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-68-robots-118057602467"
+instructies:
+  - /instructies/microbit
+
 ---
 ![Robots](https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F109404475%2F187233351803%2F1%2Foriginal.20200824-202316?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=4924dfd07b2c9f175a6c2803892a4e69)
 ## Wat gaan we doen?

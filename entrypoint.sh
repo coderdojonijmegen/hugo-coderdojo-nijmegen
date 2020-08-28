@@ -53,9 +53,9 @@ do
   git clone --depth=1 --single-branch --branch "master" https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/$INSTRUCTIE_REPO.git $INSTRUCTIE_PATH
 done < instructies.txt
 
-echo -e "\n${BOLD}Generating Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
-hugo ${INPUT_ARGS} -d /tmp/gh-pages/
 
+echo -e "\n${BOLD}Generating Public Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
+hugo ${INPUT_ARGS} -d /tmp/gh-pages/
 
 echo -e "\n${BOLD}Commiting${PLAIN}"
 cd /tmp/gh-pages
@@ -65,9 +65,22 @@ cd /tmp/gh-pages
 
 git add -A && git commit --allow-empty -am "Publishing Site ${NAME} at ${GITHUB_SHA} on $(date -u)"
 
+echo -e "\n${BOLD}Pushing${PLAIN}"
+git push --force
+
+echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed to ${INPUT_CNAME}!${PLAIN}"
+
+
+
+echo -e "\n${BOLD}Generating MCS Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
+hugo ${INPUT_ARGS} --config config-mcs.toml -d /tmp/mcs/
+
+echo -e "\n${BOLD}Commiting${PLAIN}"
+cd /tmp/mcs
+
+git add -A && git commit --allow-empty -am "Publishing Site ${NAME} at ${GITHUB_SHA} on $(date -u)"
 
 echo -e "\n${BOLD}Pushing${PLAIN}"
 git push --force
 
-
-echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed!${PLAIN}"
+echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed MCS branch!${PLAIN}"
