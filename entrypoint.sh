@@ -58,7 +58,7 @@ echo -e "\n${BOLD}Generating Public Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}
 hugo ${INPUT_ARGS} -d /tmp/gh-pages/
 
 echo -e "\n${BOLD}Commiting${PLAIN}"
-cd /tmp/gh-pages
+pushd /tmp/gh-pages
 
 [ -n "${INPUT_CNAME}" ] && \
   echo "${INPUT_CNAME}" > CNAME
@@ -67,7 +67,7 @@ git add -A && git commit --allow-empty -am "Publishing Site ${NAME} at ${GITHUB_
 
 echo -e "\n${BOLD}Pushing${PLAIN}"
 git push --force
-
+popd
 echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed to ${INPUT_CNAME}!${PLAIN}"
 
 
@@ -76,11 +76,11 @@ echo -e "\n${BOLD}Generating MCS Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
 hugo ${INPUT_ARGS} --config config-mcs.toml -d /tmp/mcs/
 
 echo -e "\n${BOLD}Commiting${PLAIN}"
-cd /tmp/mcs
+pushd /tmp/mcs
 
 git add -A && git commit --allow-empty -am "Publishing Site ${NAME} at ${GITHUB_SHA} on $(date -u)"
 
 echo -e "\n${BOLD}Pushing${PLAIN}"
 git push --force
-
+popd
 echo -e "\n${BOLD}Site ${NAME} at ${GITHUB_SHA} was successfully deployed MCS branch!${PLAIN}"
