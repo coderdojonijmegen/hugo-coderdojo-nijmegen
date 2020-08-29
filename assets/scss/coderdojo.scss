@@ -16,6 +16,9 @@ $headerHeight: 120px;
 $footerHeight: 1000px;
 $contentWidth: 1200px;
 
+$photoBorderRadius: 5px;
+$photoMargin: 15px;
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -154,7 +157,8 @@ main {
         margin-bottom: 40px;
         img {
             float: right;
-            margin-left: 30px;
+            margin: $photoMargin 0px $photoMargin $photoMargin;
+            border-radius: $photoBorderRadius;
         }
     }
     padding: 15px;
@@ -196,6 +200,11 @@ main {
         overflow-x: auto;
         table {
             width: 100%;
+        }
+        img {
+            max-width: fit-content;
+            border-radius: $photoBorderRadius;
+            margin: $photoMargin;
         }
     }
     pre {
