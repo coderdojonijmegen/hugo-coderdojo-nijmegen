@@ -7,4 +7,5 @@
 | **netwerk** | CoderDojoWifi2.4GHz |
 | **wachtwoord** | 4Ninjas |
 | **server** | http://coderdojo.server |
+| **installers** | http://coderdojo.server/installers |
 
