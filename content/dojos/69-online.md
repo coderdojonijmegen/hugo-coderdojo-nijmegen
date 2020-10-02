@@ -1,6 +1,6 @@
 ---
 title: "#69 Online"
-date: 2020-10-02T0:0:0+01:00
+date: 2020-10-02  T0:0:0+01:00
 draft: false
 headercolor: "orange-background"
 wanneer: 
