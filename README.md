@@ -23,7 +23,7 @@ Om de site te kunnen bekijken, start je `hugo server` vanuit de root van de chec
 
 ## Dojo's toevoegen of pagina's aanpassen
 
-De pagina's van de site staan allemaal in de [content](https://github.com/coderdojonijmgen/hugo-coderdojo-nijmegen/content) directory volgens de structuur van de site:
+De pagina's van de site staan allemaal in de [content](https://github.com/coderdojonijmegen/hugo-coderdojo-nijmegen/tree/master/content) directory volgens de structuur van de site:
 ```
 C:.
 ├───archetypes
@@ -53,7 +53,7 @@ De rest van de directorystructuur bevat alle bestanden die nodig zijn om de site
 
 ### Nieuwe instructie
 
-De `content/instructies` directory is vrijwel leeg. De instructies staan in hun eigen repositories en worden in de `Decontent/instructies` directory gecloned en uiteindelijk mee gebouwd met de rest van de site.
+De `content/instructies` directory is vrijwel leeg. De instructies staan in hun eigen repositories en worden in de `content/instructies` directory gecloned en uiteindelijk mee gebouwd met de rest van de site.
 
 Om een nieuwe instructie te maken, volg je de volgende stappen:
 
