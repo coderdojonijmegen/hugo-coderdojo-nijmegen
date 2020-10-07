@@ -51,12 +51,37 @@ De rest van de directorystructuur bevat alle bestanden die nodig zijn om de site
 
 ## Instructies schrijven voor op de site
 
-De `content/instructies` directory is vrijwel leeg. De instructies staan in hun eigen repositories en worden in de `content/instructies` directory gecloned en uiteindelijk mee gebouwd met de rest van de site.
+De `content/instructies` directory is vrijwel leeg. De instructies staan in hun eigen repositories en worden in de `Decontent/instructies` directory gecloned en uiteindelijk mee gebouwd met de rest van de site.
 
 Om een nieuwe instructie te maken, volg je de volgende stappen:
 
 1. maak een repository op GitHub; er is geen vaste naam conventie, maar een aantal repositorynamen bestaat uit `programmeertaal-onderwerp`.
 2. clone de _hugo-coderdojo-nijmegen_ repository
 3. clone de repository van de nieuwe instructie in de `content/instructies` directory van de _hugo-coderdojo-nijmegen_ checkout, dus: `content/instructies/programmeertaal-onderwerp`
-4. maak in de checkout van de nieuwe instructie een `index.md` bestand aan. Hierin wordt de instructie geschreven.
-5. 
+4. maak in de checkout van de nieuwe instructie een `index.md` bestand aan. Hierin wordt de instructie geschreven. Het handigst is om daarvoor commando `hugo new instructies/proogrammeertaal-onderwerp/index.md` te gebruiken. Hugo voegt dan automatisch de "front matter" toe aan de kop van het bestand op basis van de locatie (archetype).
+5. De "front matter" van een instructie pagina bestaat uit:
+   ```
+   ---
+   title: "{{ replace .Name "-" " " | title }}"
+   date: {{ .Date }}
+   draft: false
+   toc: true
+   headercolor: "teal-background"
+   ---
+   ```
+   * de `title` wordt automatisch ingevuld en is gelijk aan `ProgrammeertaalOnderwerp`. Deze zou je kunnen veranderen naar `Programmeertaal - Onderwerp`, zodat deze past bij de andere titels.
+   * de `date` wordt ook automatisch ingevuld en is gelijk aan de huidige datum en tijd.
+   * `draft` wordt gebruikt om content voor te bereiden, maar nog niet live te zetten. Wij zetten die op `false`, omdat wij de voorbereiding doen in een branch.
+   * `toc` is een optie van onze eigen site template en creëert een inhoudsopgave op de instructie pagina. Deze staat standaard aan, omdat instructie pagina's over het algemeen uit redelijk wat hoofdstukjes bestaan en het handig is om er met een inhoudsopgave doorheen te navigeren.
+   * `headercolor` is ook een optie van onze eigen site template en bepaald de kleur van de kop van de webpagina. Deze is voor instructies `teal-background` en voor dojos `orange-background`.
+
+De titel van de pagina wordt als `<h1>` gerenderd net als MarkDown `#`. Gebruik dus als hoogste niveau `##` om onderscheid te houden tussen de titel van de pagina en de hoofdstukken. Dit is ook van belang voor de inhoudsopgave, deze gebruikt niveaus `##` en lager.
+
+Voor gebruik van Scratch elementen gebruik je short-code `{{< scratch >}} ... {{< /scratch >}}` met daarin de Scratch code. Deze wordt dan omgezet in Scratch blocks bij het bouwen van de site. Voorbeeld:
+```
+{{< scratch >}}
+    wanneer [pijltje omhoog v] is ingedrukt
+    richt naar (0) graden
+    neem (5) stappen
+{{< /scratch >}}
+```
