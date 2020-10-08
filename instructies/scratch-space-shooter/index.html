@@ -1,37 +1,84 @@
-<!doctype html><html lang=nl-nl><head><title>Scratch - Snake</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.39e1cb3b1cf265373f4ae59709a638f8007a8992e94c6e0c7fbc912727963cb1.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/scratch-space-shooter>Scratch space shooter</a></li></ul></breadcrumbs><h1>Scratch - Snake</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#benodigdheden>Benodigdheden</a></li><li><a href=#inleiding>Inleiding</a></li><li><a href=#maak-de-slang>Maak de slang</a></li><li><a href=#zorg-dat-de-slang-kan-bewegen>Zorg dat de slang kan bewegen</a></li><li><a href=#laat-de-appels-verschijnen>Laat de appels verschijnen</a></li><li><a href=#maak-de-slang-langer>Maak de slang langer</a></li><li><a href=#uitbreidingen>Uitbreidingen</a></li></ul></nav></aside><p>We gaan met Scratch het klassieke spel Snake bouwen.</p><h2 id=benodigdheden>Benodigdheden</h2><p>Deze opdrachten maak je met <a href=https://scratch.mit.edu/>Scratch</a>. Als je nog geen account had, maak dit dan eerst aan.</p><p>Zet in Scratch eerst de taal op Nederlands via de wereldbol linksboven.</p><h2 id=inleiding>Inleiding</h2><p>In deze opdracht ga je het klassieke spelletje Snake, dus Slang, programmeren. Je bestuurt in dit spelletje een slang en je doel is door zo veel mogelijk te eten zo lang mogelijk te worden. Maar pas op, als je in je eigen staart bijt dan ben je af!</p><p>Dit zijn de stappen die je gaat programmeren:</p><ol><li>Maak de slang</li><li>Zorg dat de slang kan bewegen</li><li>Laat het eten van de slang verschijnen</li><li>Maak de slang langer door het eten</li><li>Laat het spel eindigen als de slang in de eigen staart bijt</li></ol><p>Als je dan nog zin (en tijd) hebt dan zijn er nog allerlei uitbreidingen mogelijk.</p><p>Als startpunt voor de opdracht kun je dit project gebruiken (je kunt dan stap 1 van de opdraht overslaan). Je kunt het project zelf gaan bewerken door op de Remix knop boven in Scratch te klikken:</p><p><img src=imgs/remix.png alt=Remix></p><p>De opdracht is afgeleid van <a href=https://bournetocode.com/projects/7-CS-ScratchArcade/pages/2_Lesson.html>deze instructies</a> (<a href=https://github.com/digixc/7-CS-ScratchArcade>Github bron</a>).</p><h2 id=maak-de-slang>Maak de slang</h2><p>Als je gekozen hebt het project helemaal vanaf het begin te doen, ontwerp dan je eigen slang of download deze plaatjes om de twee uiterlijken van de slang mee te maken:</p><p><img src=imgs/slang_lijf.png alt="Slang lijf"> <img src=imgs/slang_hoofd.png alt="Slang hoofd">
-Volg deze stappen om een sprite van de slang te maken:</p><ol><li>Klik op het icoon voor een nieuwe sprite (rechtsonder, plaatje van de kat) en kies voor Upload sprite.</li><li>Upload het hoofd van de slang.</li><li>Ga naar het tabblad Uiterlijken (linksboven, rechts naast het Code tabblad).</li><li>Klik op het icoon voor een nieuw uiterlijk (linksonder, plaatje van de kat) en kies voor Upload uiterlijk.</li><li>Upload het lijf van de slang.</li><li>Klik nu op het hoofd van de slang.</li></ol><h2 id=zorg-dat-de-slang-kan-bewegen>Zorg dat de slang kan bewegen</h2><p>Het is de bedoeling om de slang met de pijltjestoetsen te laten bewegen. Er zijn verschillende manieren om dit te doen, bijvoorbeeld zo:</p><div class=scratch>wanneer [pijltje omhoog v] is ingedrukt
-richt naar (0) graden
-neem (5) stappen</div><p>Met <em>richt naar 0 graden</em> draai je het hoofd van de slang naar boven, met <em>neem 5 stappen</em> beweegt de slang 5 stappen in die richting.
-Maar&mldr; als je de toets loslaat, dan houdt de slang op met bewegen.</p><p><strong>Opdracht</strong> Zorg dat de slang doorgaat met bewegen totdat je een andere kant op gaat.
-<em>Tip 1</em>: hiervoor heb je het <em>herhaal</em> blok uit het menu <em>Besturen</em> nodig.
-<em>Tip 2</em>: begin het programma met het <em>wanneer op de vlag wordt geklikt</em> blok uit het menu <em>Gebeurtenissen</em>.</p><div class=toggle><div class=toggle_header>Klik om de voorbeeldcode te laten zien om de slang omhoog te laten bewegen</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+<!doctype html><html lang=nl-nl><head><title>Scratch - Space shooter</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.39e1cb3b1cf265373f4ae59709a638f8007a8992e94c6e0c7fbc912727963cb1.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/scratch-space-shooter>Scratch space shooter</a></li></ul></breadcrumbs><h1>Scratch - Space shooter</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#benodigdheden>Benodigdheden</a></li><li><a href=#inleiding>Inleiding</a></li><li><a href=#laat-een-ruimteschip-bewegen-met-de-pijltjestoetsen>Laat een ruimteschip bewegen met de pijltjestoetsen</a></li><li><a href=#maak-een-bewegende-achtergrond-waardoor-het-lijkt-alsof-je-door-de-ruimte-vliegt>Maak een bewegende achtergrond waardoor het lijkt alsof je door de ruimte vliegt</a></li><li><a href=#laat-meteorieten-verschijnen-en-naar-het-ruimteschip-vliegen>Laat meteorieten verschijnen en naar het ruimteschip vliegen</a></li><li><a href=#uitbreidingen>Uitbreidingen</a></li></ul></nav></aside><p>Je gaat met Scratch een &ldquo;space shooter&rdquo; bouwen.</p><h2 id=benodigdheden>Benodigdheden</h2><p>Deze opdrachten maak je met <a href=https://scratch.mit.edu/>Scratch</a>. Als je nog geen account had, maak dit dan eerst aan.</p><p>Zet in Scratch eerst de taal op Nederlands via de wereldbol linksboven.</p><h2 id=inleiding>Inleiding</h2><p>In deze opdracht ga je een &ldquo;space shooter&rdquo; spel bouwen, waarbij je een ruimteschip bestuurt dat meteorieten kapot moet schieten of ontwijken.</p><p>Dit zijn de stappen die je gaat programmeren:</p><ol><li>Laat een ruimteschip bewegen met de pijltjestoetsen</li><li>Maak een bewegende achtergrond waardoor het lijkt alsof je door de ruimte vliegt</li><li>Laat meteorieten verschijnen en naar het ruimteschip vliegen</li><li>Zorg dat het ruimteschip op de meteorieten kan schieten</li></ol><p>Als je hierna nog zin (en tijd) hebt dan zijn er nog allerlei uitbreidingen mogelijk, denk bijvoorbeeld aan het spel steeds iets moeilijker maken of geluid en andere <em>special effects</em> toevoegen.</p><h2 id=laat-een-ruimteschip-bewegen-met-de-pijltjestoetsen>Laat een ruimteschip bewegen met de pijltjestoetsen</h2><p>Eerst moet je een sprite hebben voor je ruimteschip. Je kunt dit natuurlijk zelf ontwerpen, maar ook een bestaande sprite kiezen (bijvoorbeeld het <em>Rocketship</em>).</p><p>Zorg er eerst voor dat de sprite niet te groot is ten opzichte van het speelveld. Je kunt dit doen door het blok <em>maak grootte</em> te gebruiken dat je vindt in het menu <em>Uiterlijken</em>. Speel een beetje met het percentage om de goede grootte te vinden. Zorg ook dat het ruimteschip in het midden onderaan begint door het op x = 0 te plaatsen (x loopt van links naar rechts) en y zo in te stellen dat het nog net in beeld is. Je programma zou er nu ongeveer zo uit moeten zien:</p><div class=scratch>wanneer groene vlag wordt aangeklikt
+maak grootte (25) %
+ga naar x: (0) y: (-150)</div><p>De beweging van het ruimteschip kun je op verschillende manieren programmeren. Je kunt bijvoorbeeld iedere keer bij het indrukken van <em>pijltje links</em> de sprite een stukje laten opschuiven. Bij dit spel gaat het iets anders: als je op een pijltjestoets drukt dan geef je het ruimteschip een bepaalde snelheid, die vervolgens weer naar 0 (dus stilstaan) gaat. Op deze manier zal het ruimteschip een mooie vloeiende beweging maken. Neem de volgende stappen:</p><ul><li>Maak een <strong>variabele</strong> <em>x-snelheid</em> aan (in het menu Variabelen).</li><li>Zet deze snelheid aan het begin van het spel op 0.</li><li>Verander de snelheid naar een getal groter dan 0 als <em>pijltje rechts</em> wordt ingedrukt, en kleiner dan 0 voor <em>pijltje links</em>.</li><li>Verander vervolgens de (x-)positie van het ruimteschip met de waarde van de variabele <em>x-snelheid</em>.</li><li>Laat de snelheid steeds iets verder afnemen tot deze uiteindelijk weer 0 is.</li></ul><p><em>Tip 1</em>: de laatste drie stappen in de lijst hierboven moet je in een <em>herhaal</em> blok zetten.</p><p><em>Tip 2</em>: je kunt de snelheid bijvoorbeeld laten afnemen door er een getal van af te trekken. Een andere manier is om de waarde te vermenigvuldigen met een getal kleiner dan 1.</p><div class=toggle><div class=toggle_header>Klik om te laten zien hoe je programma er nu ongeveer uit zou moeten zien.</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+maak grootte (25) %
+ga naar x: (0) y: (-150)
+maak [snelheid_x] (0)
 herhaal
-als &lt;toets [pijltje omhoog v] ingedrukt?> dan
-richt naar (0) graden
+als &lt;toets [pijltje links v] ingedrukt?> dan
+maak [snelheid_x] (5)
 end
-neem (10) stappen
-wacht (0.1) sec.</div></div></div><p>In de voorbeeldcode wordt het blok <em>wacht 0.1 sec</em>. gebruikt. Dit is niet nodig om de slang te laten bewegen, maar
-wordt verderop in het spel belangrijk. Door de wachttijd en/of het aantal stappen dat de slang zet te veranderen kun je
-de snelheid van de slang bepalen.</p><h2 id=laat-de-appels-verschijnen>Laat de appels verschijnen</h2><p>Nu is het tijd om de slang eten te geven. Dit voorbeeld gaat uit van appels, je kunt natuurlijk ook iets heel anders
-verzinnen. Om het lekker onvoorspelbaar te maken waar de appel verschijnt, is het blok <em>ga naar willekeurige positie</em> uit
-het menu <em>Beweging</em> heel geschikt.</p><p><strong>Opdracht</strong> Maak een nieuwe sprite voor de appel, en zorg dat er bij het begin van het spel een appel verschijnt.
-<em>Tip</em>: zorg dat je de appel-sprite hebt gekozen, zodat de code die je maakt ook echt bepaalt wat de appel moet doen.</p><div class=toggle><div class=toggle_header>Klik om de voorbeeldcode te laten zien</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
-ga naar (willekeurige positie)</div></div></div><p>De volgende stap is om een &ldquo;nieuwe&rdquo; appel op een andere plek te laten
-verschijnen wanneer de slang er een heeft opgegeten. Hiervoor maak je niet echt
-een <em>nieuwe</em> appel, maar je laat de appel-sprite gewoon op een andere plek
-verschijnen.</p><p><strong>Opdracht</strong> Laat de appel op een andere plek verschijnen als de slang er een
-heeft opgegeten. <em>Tip</em>: hiervoor kun je het blok <em>raak ik &mldr;</em> uit het menu
-<em>Waarnemen</em> gebruiken.</p><div class=toggle><div class=toggle_header>Klik om de voorbeeldcode te laten zien</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
-ga naar (willekeurige positie)
+als &lt;toets [pijltje rechts v] ingedrukt?> dan
+maak [snelheid_x] (-5)
+end
+verander x met snelheid: (snelheid_x)
+maak [snelheid_x] ((snelheid_x) * (0.9))
+end</div></div></div><h2 id=maak-een-bewegende-achtergrond-waardoor-het-lijkt-alsof-je-door-de-ruimte-vliegt>Maak een bewegende achtergrond waardoor het lijkt alsof je door de ruimte vliegt</h2><p>Download dit plaatje voor de achtergrond van het spel:</p><p><img src=imgs/ruimte.gif alt=Ruimte></p><p>Volg deze stappen om van dit plaatje een sprite voor de achtergrond te maken:</p><ol><li>Klik op het icoon voor een nieuwe sprite (rechtsonder, plaatje van de kat) en kies voor Upload sprite.</li><li>Upload het ruimte-plaatje.</li><li>Ga naar het tabblad Uiterlijken (linksboven, rechts naast het Code tabblad).</li><li>Maak in de editor het plaatje net zo groot als het hele speelveld door het op te rekken.</li></ol><p>Laat de achtergrond aan het begin van het spel in het midden van het speelveld, dan zijn <em>x</em> en <em>y</em> allebei 0:</p><div class=scratch>wanneer groene vlag wordt aangeklikt
+ga naar x: (0) y: (0)</div><p>Nu ga je de achtergrond laten bewegen zodat het net is of je schip door de ruimte vliegt. <strong>Vraag</strong>: als je wil dat je schip vooruit vliegt, welke kant moet de achtergrond dan op gaan?</p><p>Net als bij de snelheid van je ruimteschip moet je hier een variabele maken, nu voor de &ldquo;scroll&rdquo; snelheid van de ruimte. Vervolgens verander je steeds de positie van de achtergrond met de snelheid die je hebt ingesteld. <strong>Vraag</strong>: moet je nu de <em>x</em> of de <em>y</em> veranderen? En moet <em>x</em> of <em>y</em> steeds groter worden? Of juist kleiner?</p><div class=toggle><div class=toggle_header>Klik om de code te bekijken.</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+ga naar x: (0) y: (0)
+maak [snelheid_scrollen] (4)
 herhaal
-als &lt;raak ik (slang hoofd v)?> dan
-ga naar (willekeurige positie)
-end</div></div></div><h2 id=maak-de-slang-langer>Maak de slang langer</h2><p>Van al die appels groeit de slang natuurlijk wel! Het is nu tijd om de slang
-langer te maken als je een appel eet. Hiervoor is het eerst nodig dat je
-bijhoudt hoeveel appels de slang al heeft gegeten, dat kun je ook meteen als
-je <em>score</em> in het spel gebruiken!</p><p><strong>Opdracht</strong> Hou het aantal gegeten appels bij. <em>Tip 1</em>: hiervoor heb je een
-<em>variabele</em> nodig, deze maak je in het menu <em>Variabelen</em>. <em>Tip 2</em>: zet aan het
-begin van het spel de waarde van de variabele op 0.</p><div class=toggle><div class=toggle_header>Klik om de voorbeeldcode te laten zien</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+verander y met ((snelheid_scrollen) * (-1))
+end</div></div></div><p>Als je nu het programma start, dan zie je dat er twee dingen fout gaan:</p><ul><li>je achtergrond verdwijnt uit beeld en komt niet meer terug</li><li>er verschijnt een steeds groter wit vlak!</li></ul><p>Een manier om deze twee problemen op te lossen staat beschreven in deze afbeelding:</p><p><img src=imgs/ruimte-scrollen.png alt=Scrollen></p><p>Wat je ziet is dat je twee achtergronden nodig hebt: de sprite, en een <em>kloon</em> van de sprite. Pijl (1) geeft aan dat de sprite en kloon allebei naar beneden schuiven. Pijl (2) geeft aan dat zodra er een achtergrond <em>uit beeld</em> is verdwenen, je deze weer naar boven moet verplaatsen. Op deze manier zorg je ervoor dat je geen wit vlak meer zult zien! Je moet nu dus een stuk code schrijven dat <em>als</em> de sprite uit beeld is (<strong>vraag</strong>: wat is dan de waarde van <em>y</em>?) deze weer naar boven verplaatst. En je moet deze code niet alleen schrijven voor de sprite zelf, maar ook voor de kloon van de sprite. Dit is best lastig, probeer het eerst eens alleen voor de sprite zelf.</p><div class=toggle><div class=toggle_header>Uiteindelijk is dit de code die zorgt voor een bewegende achtergrond.</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+ga naar x: (0) y: (0)
+maak een kloon van [mijzelf v]
+maak [snelheid_scrollen] (4)
+herhaal
+als &lt;(y-positie) > (-340)> dan
+verander y met ((snelheid_scrollen) * (-1))
+anders
+ga naar x: (0) y: (345)
+end
+end
+wanneer ik als kloon start
+ga naar x: (0) y: (345)
+maak [snelheid_scrollen] (4)
+herhaal
+als &lt;(y-positie) > (-340)> dan
+verander y met ((snelheid_scrollen) * (-1))
+anders
+ga naar x: (0) y: (345)
+end
+end</div></div></div><h2 id=laat-meteorieten-verschijnen-en-naar-het-ruimteschip-vliegen>Laat meteorieten verschijnen en naar het ruimteschip vliegen</h2><div class=toggle><div class=toggle_header>Code voor kogels 1</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+maak grootte (50) %
+verdwijn
+herhaal
+als &lt;toets [spatiebalk v] ingedrukt?> dan
+maak een kloon van (mijzelf v)
+wacht (0.5) sec.
+end
+end</div></div></div><div class=toggle><div class=toggle_header>Code voor kogels 2</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+verschijn
+ga naar laag [voorgrond v]
+ga naar (Ruimteschip v)
+herhaal tot &lt;raak ik (rand v)?>
+verander y met (10)
+end
+end</div></div></div><div class=toggle><div class=toggle_header>Code voor meteorieten 1</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+verdwijn
+maak grootte (20) %
+maak [score v] (0)
+herhaal
+wacht (4) sec.
+maak een kloon van (mijzelf v)
+end</div></div></div><div class=toggle><div class=toggle_header>Code voor meteorieten 2</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+ga naar laag [voorgrond v]
+verschijn
+ga naar x: (willekeurig getal tussen (-200) en (200)) y: (180)
+herhaal tot &lt; (y-positie) < (-180)>
+verander y met (-2)
+end
+verwijder deze kloon</div></div></div><div class=toggle><div class=toggle_header>Code voor meteorieten 3</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+herhaal
+als &lt; raak ik (Kogel v)?> dan
+verander [score v] met (1)
+verwijder deze kloon
+end</div></div></div><div class=toggle><div class=toggle_header>Code voor meteorieten 4</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+herhaal
+als &lt; raak ik (Ruimteschip v)?> dan
+maak [score v] (0)
+verwijder deze kloon
+end</div></div></div><div class=toggle><div class=toggle_header>Klik om de voorbeeldcode te laten zien</div><div style=display:none><div class=scratch>wanneer ik als kloon start
 als &lt;raak ik kleur [#9afeb6]?> dan
 stop [alle v]</div></div></div><h2 id=uitbreidingen>Uitbreidingen</h2><p>Je kunt het spel natuurlijk nog veel mooier, spannender en moeilijker maken.
 Hier heb je alvast een lijstje met ideeën als je nog verder wil programmeren
