@@ -32,10 +32,6 @@ body {
     line-height: 1.5em;
 }
 
-svg {
-    height: fit-content !important;
-}
-
 ol {
     margin-left: 15px;
 }
@@ -78,22 +74,22 @@ ol {
     }
 }
 
-.toggle .toggle_header {
-    display: block;
-    clear: both;
-    cursor: pointer;
-    margin: 10px;
-}
-.toggle .toggle_header p {
-    display: inline;
-}
-
-.toggle .toggle_header:after {
-    content: " ▶";
-}
-
-.toggle .toggle_header.open:after {
-    content: " ▼";
+.toggle {
+    .toggle_header, .toggle_header_open {
+        display: block;
+        clear: both;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .toggle_header p, .toggle_header_open p {
+        display: inline;
+    }
+    .toggle_header:after {
+        content: " ▶";
+    }
+    .toggle_header_open:after {
+        content: " ▼";
+    }
 }
 
 header {
@@ -306,24 +302,11 @@ footer {
     }
 }
 
-@media screen and (min-width: 700px) {
-    .scratch svg {
-        box-sizing: content-box;
-        transform: scale(0.5) !important;
-        width: 100% !important;
-    }
-}
-@media screen and (min-width: 900px) {
-    .scratch svg {
-        box-sizing: content-box;
-        transform: scale(0.7) !important;
-    }
-}
-@media screen and (min-width: 1100px) {
-    .scratch svg {
-        box-sizing: content-box;
+.scratch {
+    svg {
         transform: scale(1.0) !important;
     }
+    overflow-x: auto;
 }
 
 @media screen and (min-width: 1200px) {
