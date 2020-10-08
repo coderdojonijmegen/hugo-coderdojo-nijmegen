@@ -2,6 +2,6 @@ coderdojonijmegen/py-turtle content/instructies/python-turtle
 coderdojonijmegen/love2d-shooter content/instructies/love2d-shooter
 coderdojonijmegen/love2d-snake content/instructies/love2d-snake
 coderdojonijmegen/scratch-snake content/instructies/scratch-snake
-coderdojonijmegen/scratch-snake content/instructies/scratch-space-shooter
+coderdojonijmegen/scratch-space-shooter content/instructies/scratch-space-shooter
 coderdojonijmegen/microbit content/instructies/microbit
 coderdojonijmegen/mblock content/instructies/mblock
