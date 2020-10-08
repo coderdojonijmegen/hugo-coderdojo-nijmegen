@@ -47,12 +47,12 @@ while IFS=" " read -r p || [ -n "$p" ]
 do
   INSTRUCTIE_REPO="${p% *}"
   INSTRUCTIE_PATH="${p#* }"
-  git clone --depth=1 --single-branch --branch "master" https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/$INSTRUCTIE_REPO.git $INSTRUCTIE_PATH
+  git clone --depth=1 --single-branch https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/$INSTRUCTIE_REPO.git $INSTRUCTIE_PATH
 done < instructies.txt
 
 
 echo -e "\n${BOLD}Generating Public Site ${NAME} at commit ${GITHUB_SHA}${PLAIN}"
-git clone --depth=1 --single-branch --branch "${INPUT_BRANCH}" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/gh-pages
+git clone --depth=1 --single-branch --branch "gh-pages" "https://x-access-token:${INPUT_GITHUBTOKEN}@github.com/${REPO}.git" /tmp/gh-pages
 rm -rf /tmp/gh-pages/*
 
 hugo ${INPUT_ARGS} -d /tmp/gh-pages/
