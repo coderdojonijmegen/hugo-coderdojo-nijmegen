@@ -43,7 +43,7 @@ Heb je je aangemeld voor Scratch en/of MakeCode Arcade, dan kun je uit deze opdr
 Heb je je aangemeld voor Python, dan zijn dit de opdrachten voor deze keer:
 
 - [Astro-Pi](https://projects.raspberrypi.org/nl-NL/projects/astro-pi-mission-zero)
-- [Vind het ruimtestation](https://projects.raspberrypi.org/nl-NL/projects/where-is-the-space-station)
+- [Waar is het ruimtestation?](https://projects.raspberrypi.org/nl-NL/projects/where-is-the-space-station)
 
 ## Jitsi
 
