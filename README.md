@@ -53,7 +53,7 @@ De rest van de directorystructuur bevat alle bestanden die nodig zijn om de site
 
 Om een nieuwe dojo aankondiging te maken, maak je een nieuw bestand aan in de `content/dojos` directory. Gebruik als
 naam de aflevering van de dojo gecombineerd met het onderwerp, zoals bijvoorbeeld _62-website-bouwen.md_. Handiger is
-het om commando `hugo new dojos/70-online.md`. Dit maakt het bestand aan en vult het met "front matter":
+het om commando `hugo new content/dojos/70-online.md`. Dit maakt het bestand aan en vult het met "front matter":
 ```
 ---
 title: "#{{ replace .Name "-" " " | title }}"
@@ -102,7 +102,7 @@ Om een nieuwe instructie te maken, volg je de volgende stappen:
 1. maak een repository op GitHub; er is geen vaste naam conventie, maar een aantal repositorynamen bestaat uit `programmeertaal-onderwerp`.
 2. clone de _hugo-coderdojo-nijmegen_ repository
 3. clone de repository van de nieuwe instructie in de `content/instructies` directory van de _hugo-coderdojo-nijmegen_ checkout, dus: `content/instructies/programmeertaal-onderwerp`
-4. maak in de checkout van de nieuwe instructie een `index.md` bestand aan. Hierin wordt de instructie geschreven. Het handigst is om daarvoor commando `hugo new instructies/proogrammeertaal-onderwerp/index.md` te gebruiken. Hugo voegt dan automatisch de "front matter" toe aan de kop van het bestand op basis van de locatie (archetype). Ook wordt dan de licentie short-code toegevoegd (zie hoofdstuk [licentie](#licentie)).
+4. maak in de checkout van de nieuwe instructie een `index.md` bestand aan. Hierin wordt de instructie geschreven. Het handigst is om daarvoor commando `hugo new content/instructies/proogrammeertaal-onderwerp/index.md` te gebruiken. Hugo voegt dan automatisch de "front matter" toe aan de kop van het bestand op basis van de locatie (archetype). Ook wordt dan de licentie short-code toegevoegd (zie hoofdstuk [licentie](#licentie)).
 5. De "front matter" van een instructie pagina bestaat uit:
    ```
    ---
