@@ -49,6 +49,48 @@ C:.
 ```
 De rest van de directorystructuur bevat alle bestanden die nodig zijn om de site te bouwen, zoals templates, plaatjes, lettertypen en JavaScripts.
 
+## Een nieuwe dojo aankondiging maken
+
+Om een nieuwe dojo aankondiging te maken, maak je een nieuw bestand aan in de `content/dojos` directory. Gebruik als
+naam de aflevering van de dojo gecombineerd met het onderwerp, zoals bijvoorbeeld _62-website-bouwen.md_. Handiger is
+het om commando `hugo new dojos/70-online.md`. Dit maakt het bestand aan en vult het met "front matter":
+```
+---
+title: "#{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: false
+headercolor: "orange-background"
+wanneer: 
+  van: 2020-03-07T12:00:00.0Z
+  tot: 2020-03-07T14:30:00.0Z
+waar: "Rootnet, Kerkenbos 1059, 6546 BB Nijmegen"
+eventbrite:
+  inschrijventot: 2020-03-07T00:00:00.0Z
+  url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-62-93475366337"
+instructies:
+  - /instructies/microbit
+---
+```
+De "front matter" is nodig om de dojo informatie boven aan de pagina te specificeren en om de inschrijfknop te tonen.
+Meer gedetailleerd:
+* de `title` wordt afgeleid van de bestandsnaam; `62-website-bouwen.md` wordt _#62 Website Bouwen_
+* de `date` wordt ook automatisch ingevuld en is gelijk aan de huidige datum en tijd.
+* `draft` wordt gebruikt om content voor te bereiden, maar nog niet live te zetten. Wij zetten die op `false`, 
+  omdat wij de voorbereiding doen in een branch.
+* `headercolor` is een optie van onze eigen site template en bepaald de kleur van de kop van de webpagina. 
+  Deze is voor dojos `orange-background`.
+* met `wanneer` wordt aangegeven wanneer de dojo plaats vind. `van` geeft de starttijd aan en `tot` de eindtijd. 
+  Let er op dat je hetzelfde tijdformaat aanhoud, inclusief eventuele voorloop nullen.
+* `waar` geeft de locatie van de dojo aan. Dit wordt omgezet naar een linkje naar Google Maps, dus het is handig om 
+  echt een adres te gebruiken.
+* `eventbrite` informatie wordt gebruikt om de inschrijfknop te maken. De knop gebruikt de `url` als doel locatie. 
+  `inschrijventot` wordt gebruikt om de knop te verwijderen na de opgegeven tijd. Dit is geen exacte tijd, want de 
+  knop wordt alleen verwijderd als de site opnieuw gebouwd wordt. Dit gebeurt iedere dag om 1 uur 's nachts (UTC).
+* tenslotte is er de `instructies` lijst om te verwijzen naar de instructies die gebruikt worden tijdens de dojo. 
+  Deze worden tijdens de dojo op de voorpagina van de MCS getoond, maar zijn niet zichtbaar op de site op internet.
+  De lijst dient kan uit lokale paden, zoals _/instructies/microbit_, bestaan, maar mag ook links op internet, 
+  zoals https://projects.raspberrypi.org/nl-NL/projects/lost-in-space, bevatten.
+
 ## Instructies schrijven voor op de site
 
 ### Nieuwe instructie
@@ -64,18 +106,18 @@ Om een nieuwe instructie te maken, volg je de volgende stappen:
 5. De "front matter" van een instructie pagina bestaat uit:
    ```
    ---
-   title: "{{ replace .Name "-" " " | title }}"
+   title: "{{ replace .Name "-" " - " | title }}"
    date: {{ .Date }}
    draft: false
    toc: true
    headercolor: "teal-background"
    ---
    ```
-   * de `title` wordt automatisch ingevuld en is gelijk aan `ProgrammeertaalOnderwerp`. Deze zou je kunnen veranderen naar `Programmeertaal - Onderwerp`, zodat deze past bij de andere titels.
+   * de `title` wordt automatisch ingevuld en is gelijk aan `Programmeertaal - Onderwerp`, afgeleid van de bestandsnaam.
    * de `date` wordt ook automatisch ingevuld en is gelijk aan de huidige datum en tijd.
    * `draft` wordt gebruikt om content voor te bereiden, maar nog niet live te zetten. Wij zetten die op `false`, omdat wij de voorbereiding doen in een branch.
    * `toc` is een optie van onze eigen site template en creëert een inhoudsopgave op de instructie pagina. Deze staat standaard aan, omdat instructie pagina's over het algemeen uit redelijk wat hoofdstukjes bestaan en het handig is om er met een inhoudsopgave doorheen te navigeren.
-   * `headercolor` is ook een optie van onze eigen site template en bepaald de kleur van de kop van de webpagina. Deze is voor instructies `teal-background` en voor dojos `orange-background`.
+   * `headercolor` is ook een optie van onze eigen site template en bepaald de kleur van de kop van de webpagina. Deze is voor instructies `teal-background`.
 
 ### Inhoudsopgave
 
