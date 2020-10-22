@@ -6,3 +6,4 @@ coderdojonijmegen/scratch-space-shooter content/instructies/scratch-space-shoote
 coderdojonijmegen/scratch3 content/instructies/scratch-videosensing
 coderdojonijmegen/microbit content/instructies/microbit
 coderdojonijmegen/mblock content/instructies/mblock
+coderdojonijmegen/web-development content/instructies/web-development

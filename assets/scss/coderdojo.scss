@@ -208,9 +208,22 @@ main {
     }
     .highlight {
         padding: 7px 15px 7px 15px;
-        background-color: #272822;
         border-radius: 7px;
+        border: 1px solid #DDD;
         overflow-x: auto;
+        margin-bottom: 10px;
+    }
+    .verdieping {
+        border: 1px solid #ddd;
+        background-color: #eee;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    .html-voorbeeld {
+        border: 1px solid #ddd;
+        background-color: #eee;
+        padding: 15px;
+        margin-bottom: 10px;
     }
     .inschrijven {
         text-align: center;
@@ -239,11 +252,6 @@ main {
         ul {
             list-style-type: none;
         }
-    }
-    .verdieping {
-        border: 1px solid #ddd;
-        background-color: #eee;
-        padding: 15px;
     }
     ul.instructie-lijst {
         list-style-type: none;

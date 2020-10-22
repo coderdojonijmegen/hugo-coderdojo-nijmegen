@@ -31,3 +31,16 @@ title = "CoderDojo Nijmegen"
     name = "stichting"
     url = "/stichting/"
     weight = -80
+
+[markup.highlight]
+  anchorLineNos = false
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineAnchors = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "github"
+  tabWidth = 4
