@@ -73,7 +73,6 @@ ol {
         color: white;
     }
 }
-
 .toggle {
     .toggle_header, .toggle_header_open {
         display: block;
@@ -238,14 +237,27 @@ main {
             box-shadow: black 1px 1px 2px 0px;
         }
     }
-    .dojo {
-        border-bottom: solid 1px $orange;
+    .mcs-index {
+        zoom: 2.0;
+        line-height: 1.4em;
+        .dojo a {
+            text-decoration: none;
+        }
+        table {
+            width: 100%;
+        }
     }
-    .dojo-kop {
-        font-size: larger;
-        border-top: solid 2px $orange;
-        padding-top: 10px;
-        margin-top: 30px;
+    .dojo {
+        border: 1px solid #DDD;
+        padding: 2em;
+        a {
+            text-decoration: none;
+        }
+        .dojo-kop {
+            font-size: larger;
+            padding-top: 10px;
+        }
+        margin-bottom: 3em;
     }
     .toc {
         margin-bottom: 50px;
@@ -269,10 +281,6 @@ main {
     }
 }
 
-.mcs-index {
-    zoom: 2.0;
-    line-height: 1.4em;
-}
 
 footer {
     background-color: $footerBackgroundColor;

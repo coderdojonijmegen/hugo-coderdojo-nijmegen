@@ -13,13 +13,13 @@
 <article>
     <h1>Dojo</h1>
 
-    <ul class="pages">
     {{ $maanden := .Site.Data.dagenenmaanden.maanden }}
     {{ $dagen := .Site.Data.dagenenmaanden.dagen }}
     {{ range first 1 (where .Site.RegularPages.ByDate.Reverse "Section" "dojos") }}
-    <li class="dojo">
+    <div class="dojo">
+        <a href="{{ .RelPermalink }}">
         <div class="dojo-kop">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ .Title }}
         {{ with .Params }}
         <span>{{ index $dagen (dateFormat "Monday" .wanneer.van) }}
         {{ dateFormat "2" .wanneer.van }}
@@ -33,9 +33,9 @@
             <a href="{{ .RelPermalink }}">meer…</a>
             {{ end }}
         </p>
-    </li>
+        </a>
+    </div>
     {{ end }}
-    </ul>
 
     <p>
         meer <a href="{{(printf "%s" .Site.BaseURL)}}dojos">dojos</a>

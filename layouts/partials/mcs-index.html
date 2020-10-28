@@ -11,11 +11,15 @@
         {{ end}}
     </ul>
     <h1>Dojo</h1>
-    <div class="dojo-kop">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <div class="dojo">
+        <a href="{{ .RelPermalink }}">
+        <div class="dojo-kop">
+            {{ .Title }}
+        </div>
+        <article>
+            {{ .Content }}
+        </article>
+        </a>
     </div>
-    <article>
-        {{ .Content }}
-    </article>
     {{ end }}
 </div>
