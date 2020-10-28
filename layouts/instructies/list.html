@@ -5,16 +5,14 @@
     {{ partial "toc" . }}
     {{ .Content }}
     {{ if not (and (gt .WordCount 100 ) (.Params.toc)) }}
-    <ul class="instructie-lijst">
-        {{ range .Pages.ByTitle }}
-        <li>
-            <a href="{{ .RelPermalink }}">
-                <span class="instructie-titel">{{ .Title }}</span><br>
-                {{ .Summary }}
-            </a>
-        </li>
-        {{ end }}
-    </ul>
+    {{ range .Pages.ByTitle }}
+    <div class="instructie-lijst">
+        <a href="{{ .RelPermalink }}">
+            <span class="instructie-titel">{{ .Title }}</span><br>
+            {{ .Summary | plainify | htmlUnescape }}
+        </a>
+    </div>
+    {{ end }}
     {{ end }}
 </article>
 {{ partial "footer" . }}

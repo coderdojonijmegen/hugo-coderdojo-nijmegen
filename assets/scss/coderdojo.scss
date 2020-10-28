@@ -252,6 +252,7 @@ main {
         padding: 2em;
         a {
             text-decoration: none;
+            display: block;
         }
         .dojo-kop {
             font-size: larger;
@@ -259,25 +260,30 @@ main {
         }
         margin-bottom: 3em;
     }
+    .dojo:hover {
+        background-color: #FAFAFA;
+    }
     .toc {
         margin-bottom: 50px;
         ul {
             list-style-type: none;
         }
     }
-    ul.instructie-lijst {
-        list-style-type: none;
-        li {
-            margin-bottom: 0.6em;
-            margin-left: -13px;
-        }
+    .instructie-lijst {
+        border: 1px solid #DDD;
+        margin-bottom: 1.5em;
         a {
+            padding: 1em;
             text-decoration: none;
+            display: block;
         }
         .instructie-titel {
             font-size: 1.1em;
             font-weight: bold;
         }
+    }
+    .instructie-lijst:hover {
+        background-color: #FAFAFA;
     }
 }
 
