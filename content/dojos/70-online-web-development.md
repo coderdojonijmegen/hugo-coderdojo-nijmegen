@@ -1,5 +1,5 @@
 ---
-title: "#70 Online Web Development"
+title: "#70 Online: Web Development"
 date: 2020-10-27T23:24:58+01:00
 draft: false
 headercolor: "orange-background"

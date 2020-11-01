@@ -38,7 +38,8 @@ Bij CoderDojo vinden we deelnemers en mentoren met verschillende achtergronden l
 mentor prettig voelt in een diverse groep mensen.
 
 Tot slot: bij CoderDojo Nijmegen proberen we een zo veilig mogelijke omgeving te bieden aan onze bezoekers. Een onderdeel 
-daarvan is dat we voor al onze mentoren een Verklaring Omtrent Gedrag aanvragen.
+daarvan is dat we voor al onze mentoren een [Verklaring Omtrend Gedrag](https://www.justis.nl/producten/vog/wat-is-een-vog.aspx)
+aanvragen.
 
 Zie onze [instructiepagina](/instructies) voor voorbeelden van onderwerpen die we behandelen. Op de 
 [teampagina](/team) kun je iets lezen over de huidige mentoren.
