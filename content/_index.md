@@ -5,15 +5,11 @@ date: 2020-02-06T21:26:04+01:00
 draft: false
 ---
 
-# Welkom!
-Bij CoderDojo Nijmegen leren jonge mensen, vanaf 7 jaar, om te programmeren, websites bouwen, apps ontwikkelen, programma’s te maken, games te maken en meer. 
-Elke maand behandelen we een ander onderwerp. 
+## Welkom
 
-Naast het leren programmeren, ontmoeten deelnemers gelijkgestemde mensen, delen deelnemers waar ze aan aan het werken zijn en maken ze nieuwe dingen. 
+CoderDojo Nijmegen brengt jonge mensen vanaf 7 jaar in aanraking met IT. Ze kunnen bij ons kunnen ze in een vriendelijke omgeving ontdekken hoe je bijvoorbeeld een game ontwerpt, een website bouwt, of een robot programmeert. We organiseren maandelijks een gratis [workshop]({{< ref "dojos" >}}) (*dojo*) voor jongeren tussen 7 en 17 jaar (*ninja's*). De inhoud van en begeleiding tijdens de dojo's wordt verzorgd door een groep [vrijwilligers]({{< ref "team" >}}). Bij CoderDojo Nijmegen proberen we veel verschillende [onderwerpen]({{< ref "instructies" >}}) aan bod te laten komen.
 
-CoderDojo maakt leren programmeren een leuke en sociale ervaring. 
-
-CoderDojo heeft slechts één regel:
+Naast het leren programmeren ontmoeten deelnemers gelijkgestemde mensen, kunnen ze met elkaar delen waar ze aan werken zijn en maken ze nieuwe dingen. CoderDojo maakt leren programmeren daarmee een leuke en sociale ervaring. CoderDojo heeft slechts één regel:
 
 **Boven Alles: Wees Cool!**
   
