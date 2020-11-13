@@ -32,6 +32,11 @@ title = "CoderDojo Nijmegen"
     url = "/stichting/"
     weight = -80
 
+  [[menu.main]]
+    name = "zoeken"
+    url = "/search/"
+    weight = -70
+
 [markup.highlight]
   anchorLineNos = false
   codeFences = true
@@ -44,3 +49,6 @@ title = "CoderDojo Nijmegen"
   noClasses = true
   style = "vs"
   tabWidth = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

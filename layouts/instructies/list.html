@@ -6,9 +6,9 @@
     {{ .Content }}
     {{ if not (and (gt .WordCount 100 ) (.Params.toc)) }}
     {{ range .Pages.ByTitle }}
-    <div class="instructie-lijst">
+    <div class="linkknop">
         <a href="{{ .RelPermalink }}">
-            <span class="instructie-titel">{{ .Title }}</span><br>
+            <span class="linkknoptitel">{{ .Title }}</span><br>
             {{ .Summary | plainify | htmlUnescape }}
         </a>
     </div>
