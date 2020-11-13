@@ -269,7 +269,7 @@ main {
             list-style-type: none;
         }
     }
-    .instructie-lijst {
+    .linkknop {
         border: 1px solid #DDD;
         margin-bottom: 1.5em;
         a {
@@ -277,13 +277,28 @@ main {
             text-decoration: none;
             display: block;
         }
-        .instructie-titel {
+        .linkknoptitel {
             font-size: 1.1em;
             font-weight: bold;
         }
     }
-    .instructie-lijst:hover {
+    .linkknop:hover {
         background-color: #FAFAFA;
+    }
+    .search {
+        input[type="text"] {
+            width: 75%;
+            height: 3em;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        button {
+            border: 1px solid #ddd;
+            background-color: #ddd;
+            height: 3em;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
 

@@ -1,0 +1,28 @@
+{{ partial "header" . }}
+<h1>Doorzoek de website</h1>
+<div class="search">
+  <form action="{{ "search" | absURL }}">
+  <input type="text" id="search-query" name="s" placeholder="type een zoekterm en druk enter" >
+  <button>zoek</button>
+  </form>
+</div>
+<h2>Resultaten</h2>
+<div id="search-results">
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+<script src="{{ "js/search.js" | absURL }}"></script>
+<script id="search-result-template" type="text/x-js-template">
+  <div class="linkknop">
+    <a href="${link}">
+      <span class="linkknoptitel">${title}</span>
+      <p>
+        ${snippet}...
+      </p>
+    </a>
+  </div>
+</script>
+
+{{ partial "footer" . }}
