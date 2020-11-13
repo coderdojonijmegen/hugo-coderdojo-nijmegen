@@ -34,7 +34,7 @@ title = "CoderDojo Nijmegen"
 
   [[menu.main]]
     name = "zoeken"
-    url = "/search/"
+    url = "/zoeken/"
     weight = -70
 
 [markup.highlight]

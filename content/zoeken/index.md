@@ -1,7 +1,7 @@
 ---
-title: "Search Results"
+title: "Zoeken"
 sitemap:
   priority : 0.1
-layout: "search"
+layout: "zoeken"
 headercolor: "purple-background"
 ---
