@@ -1,16 +1,6 @@
 {{ partial "header" . }}
 {{ partial "breadcrumbs" . }}
-<h1>{{ .Title }}</h1>
-<div class="search">
-    <form action="{{ "instructiesdoorzoeken" | absURL }}">
-    <input type="text" id="search-query" name="s" placeholder="type een zoekterm om de instructies te doorzoeken en druk enter" >
-    <button>zoek</button>
-    </form>
-    <form action="{{ "taal" | absURL }}">
-    <button>talen</button>
-    </form>
-</div>
-<h2></h2>
+<h1>Instructies - talen</h1>
 <article class="instructie">
     {{ partial "toc" . }}
     {{ if not (and (gt .WordCount 100 ) (.Params.toc)) }}

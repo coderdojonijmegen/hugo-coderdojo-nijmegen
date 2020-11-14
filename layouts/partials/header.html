@@ -9,7 +9,7 @@
     <link rel="icon" href="{{ "/imgs/icon-512x512.png" | relURL }}" />
 </head>
 <body>
-<header class="{{ .Params.headercolor }}">
+<header class="{{ if isset .Params "headercolor" }}{{ .Params.headercolor }}{{ else }}teal-background{{ end }}">
     <menu>
         <span class="menu-toggle" id="js-menu-toggle">
             <i></i>

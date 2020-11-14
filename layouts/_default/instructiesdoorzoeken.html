@@ -1,7 +1,7 @@
 {{ partial "header" . }}
-<h1>Website doorzoeken</h1>
+<h1>Instructies doorzoeken</h1>
 <div class="search">
-  <form action="{{ "zoeken" | absURL }}">
+  <form action="{{ "instructiesdoorzoeken" | absURL }}">
   <input type="text" id="search-query" name="s" placeholder="type een zoekterm en druk enter" >
   <button>zoek</button>
   </form>
@@ -13,7 +13,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
-<script src="{{ "js/zoeken.js" | absURL }}"></script>
+<script src="{{ "js/instructiesdoorzoeken.js" | absURL }}"></script>
 <script id="search-result-template" type="text/x-js-template">
   <div class="linkknop">
     <a href="${link}">
