@@ -7,3 +7,4 @@ coderdojonijmegen/scratch3 content/instructies/scratch-videosensing
 coderdojonijmegen/microbit content/instructies/microbit
 coderdojonijmegen/mblock content/instructies/mblock
 coderdojonijmegen/web-development content/instructies/web-development
+coderdojonijmegen/coding-for-web-php content/instructies/web-development-php
