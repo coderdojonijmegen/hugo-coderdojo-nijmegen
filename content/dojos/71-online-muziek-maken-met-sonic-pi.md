@@ -4,7 +4,7 @@ date: 2020-12-15T22:59:58+01:00
 draft: false
 headercolor: "orange-background"
 wanneer: 
-  van: 2020-12-12T12:00:00.0Z
+  van: 2020-12-12T12:30:00.0Z
   tot: 2020-12-12T14:30:00.0Z
 waar: "online"
 eventbrite:
