@@ -1,6 +1,7 @@
 {{ partial "header" . }}
 {{ partial "breadcrumbs" . }}
 <h1>{{ .Title }}</h1>
+{{ if not (.Params.toc) }}
 <div class="search">
     <form action="{{ "instructiesdoorzoeken" | absURL }}">
     <input type="text" id="search-query" name="s" placeholder="type een zoekterm om de instructies te doorzoeken en druk enter" >
@@ -10,9 +11,10 @@
     <button>talen</button>
     </form>
 </div>
-<h2></h2>
+{{ end }}
 <article class="instructie">
     {{ partial "toc" . }}
+    {{ .Content }}
     {{ if not (and (gt .WordCount 100 ) (.Params.toc)) }}
     {{ range .Pages.ByTitle }}
     <div class="linkknop">
