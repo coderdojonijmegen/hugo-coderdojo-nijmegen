@@ -1,5 +1,5 @@
 ---
-title: "#72 Online Kies Je Eigen Onderwerp"
+title: "#72 Online: Kies Je Eigen Onderwerp"
 date: 2021-01-05T08:02:04+01:00
 draft: false
 headercolor: "orange-background"
