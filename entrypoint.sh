@@ -6,6 +6,16 @@ set -e
 PLAIN='\033[0m'
 BOLD='\033[1;37m'
 
+python3 -m pip install -r requirements.txt
+python3 dojo.py
+result=$?
+if [ $result -eq 10 ]; then
+  if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+    exit 0
+  fi
+fi
+
+
 if [ "${INPUT_HUGOVERSION}" ]; then
   echo -e "\n${BOLD}Using Hugo version ${INPUT_HUGOVERSION}.${PLAIN}"
   wget "https://github.com/gohugoio/hugo/releases/download/v$(echo "${INPUT_HUGOVERSION}" | grep -o  "[0-9]\+.[0-9]\+.[0-9]\+")/hugo_${INPUT_HUGOVERSION}_Linux-64bit.tar.gz"
