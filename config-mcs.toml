@@ -50,6 +50,9 @@ title = "CoderDojo Nijmegen"
   style = "github"
   tabWidth = 4
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS", "JSON"]
