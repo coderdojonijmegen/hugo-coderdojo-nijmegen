@@ -13,6 +13,7 @@ DEFAULT_HUGO_VERSION = "extended_0.74.3"
 HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
                     "hugo_{hugo_version}_Linux-64bit.tar.gz"
+REF_MASTER = "refs/heads/master"
 GH_PAGES = "gh-pages"
 TMP_GH_PAGES = "/tmp/gh-pages"
 TMP_MCS = "/tmp/mcs"
@@ -21,15 +22,18 @@ MCS = "mcs"
 
 def env_var(var_name, default_value=None):
     if var_name in os.environ:
-        return os.environ[var_name]
+        value = os.environ[var_name]
     elif default_value is not None:
-        return default_value
+        value = default_value
     else:
         raise EnvironmentError(var_name + " not found!")
+    if var_name != "INPUT_GITHUBTOKEN":
+        print(f"var_name={value}")
+    return value
 
 
 github_event_name = env_var("GITHUB_EVENT_NAME")
-github_branch = env_var("GITHUB_BASE_REF")
+github_branch = env_var("GITHUB_REF")
 github_repo = env_var("GITHUB_REPOSITORY")
 github_actor = env_var("GITHUB_ACTOR")
 github_sha = env_var("GITHUB_SHA")
@@ -92,7 +96,7 @@ git(f"config --global user.email {github_actor}@users.noreply.github.com")
 git("add -A")
 git("diff --cached")
 git("commit -m", message=f"{futureDojoEventUrl} toegevoegd")
-if github_branch == "master":
+if github_branch == REF_MASTER:
     git("push")
 else:
     print("=> not pushing when not on master")
@@ -121,7 +125,7 @@ def clone_build_push(branch, target_dir):
     git("add -A", working_dir=target_dir)
     now = datetime.now().strftime("%Y-%m-%d %H:%i:%s")
     git(f"commit --allow-empty -am", message=f"Publishing Site {branch} at {github_sha } on {now}.", working_dir=target_dir)
-    if github_branch == "master":
+    if github_branch == REF_MASTER:
         git("push --force", working_dir=target_dir)
     else:
         print("=> not pushing when not on master")
