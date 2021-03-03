@@ -123,7 +123,7 @@ def clone_build_push(branch, target_dir):
         cname_file.write(cname)
 
     git("add -A", working_dir=target_dir)
-    now = datetime.now().strftime("%Y-%m-%d %H:%i:%s")
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     git(f"commit --allow-empty -am", message=f"Publishing Site {branch} at {github_sha } on {now}.", working_dir=target_dir)
     if github_branch == REF_MASTER:
         git("push --force", working_dir=target_dir)
