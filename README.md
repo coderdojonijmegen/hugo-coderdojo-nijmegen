@@ -51,6 +51,11 @@ De rest van de directorystructuur bevat alle bestanden die nodig zijn om de site
 
 ## Een nieuwe dojo aankondiging maken
 
+Sinds [dojo #74](https://coderdojo-nijmegen.nl/dojos/74-online-websites-maken/), wordt de dojo pagina automatisch
+afgeleid van de aankondiging op EventBrite. Zie [dojo.py](dojo.py) voor hoe het werkt. Ieder uur wordt er gekeken
+of er een nieuwe aankondiging is en als die er is, dan wordt er een markdown bestand gegenereerd en naar de repository
+gepushed. Deze wordt vervolgens gepubliceerd op de site door [deploy.py](deploy.py).
+
 Om een nieuwe dojo aankondiging te maken, maak je een nieuw bestand aan in de `content/dojos` directory. Gebruik als
 naam de aflevering van de dojo gecombineerd met het onderwerp, zoals bijvoorbeeld _62-website-bouwen.md_. Handiger is
 het om commando `hugo new content/dojos/70-online.md`. Dit maakt het bestand aan en vult het met "front matter":
