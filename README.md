@@ -52,7 +52,7 @@ De rest van de directorystructuur bevat alle bestanden die nodig zijn om de site
 ## Een nieuwe dojo aankondiging maken
 
 Sinds [dojo #74](https://coderdojo-nijmegen.nl/dojos/74-online-websites-maken/), wordt de dojo pagina automatisch
-afgeleid van de aankondiging op EventBrite. Zie [dojo.py](dojo.py) voor hoe het werkt. Ieder uur wordt er gekeken
+afgeleid van de aankondiging op EventBrite. Zie [dojo.py](utils/dojo.py) voor hoe het werkt. Ieder uur wordt er gekeken
 of er een nieuwe aankondiging is en als die er is, dan wordt er een markdown bestand gegenereerd en naar de repository
 gepushed. Deze wordt vervolgens gepubliceerd op de site door [deploy.py](deploy.py).
 

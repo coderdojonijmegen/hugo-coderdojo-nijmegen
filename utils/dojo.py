@@ -68,7 +68,7 @@ class Dojo:
 
     @staticmethod
     def write_dojo_page(future_dojo_event_info):
-        with open("archetypes/dojos-template.md", "r") as template_file:
+        with open("../archetypes/dojos-template.md", "r") as template_file:
             template = template_file.read()
 
         dojo_filename = "content/dojos/" + future_dojo_event_info['event_title'].replace(":", "").replace(" ", "-").lower() + ".md"

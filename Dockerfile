@@ -12,8 +12,8 @@ RUN apt update && apt install -y \
 ENV INPUT_HUGOVERSION extended_0.74.0
 
 COPY ./entrypoint.sh /entrypoint.sh
-COPY ./deploy.py /deploy.py
-COPY ./dojo.py /dojo.py
+COPY deploy.py /deploy.py
+COPY utils/ /utils/
 COPY ./requirements.txt /requirements.txt
 
 ENTRYPOINT [ "/entrypoint.sh" ]
