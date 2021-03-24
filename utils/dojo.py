@@ -77,8 +77,8 @@ class Dojo:
         return os.path.exists(dojo_filename)
 
     @staticmethod
-    def write_dojo_page(future_dojo_event_info):
-        with open("../archetypes/dojos-template.md", "r") as template_file:
+    def write_dojo_page(future_dojo_event_info, template):
+        with open(template, "r") as template_file:
             template = template_file.read()
 
         dojo_filename = Dojo.get_dojo_filename(future_dojo_event_info)

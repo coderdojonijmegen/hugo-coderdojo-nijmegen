@@ -13,6 +13,7 @@ DEFAULT_HUGO_VERSION = "extended_0.74.3"
 HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
                     "hugo_{hugo_version}_Linux-64bit.tar.gz"
+DOJO_PAGE_TEMPLATE = "./archetypes/dojos-template.md"
 REF_MASTER = "refs/heads/master"
 GH_PAGES = "gh-pages"
 TMP_GH_PAGES = "/tmp/gh-pages"
@@ -39,7 +40,7 @@ futureDojoEventUrl = Dojo.get_future_dojo_event()
 if futureDojoEventUrl is not None:
     dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
     if not Dojo.dojo_page_already_exists(dojo_info):
-        Dojo.write_dojo_page(dojo_info)
+        Dojo.write_dojo_page(dojo_info, DOJO_PAGE_TEMPLATE)
     elif github_event_name == "schedule" and datetime.now().hour != 1:
         h_message("publiceer alleen als er een nieuwe dojo is gepland of 's nachts om 1 uur")
         exit(0)
