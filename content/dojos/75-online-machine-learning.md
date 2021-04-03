@@ -24,7 +24,7 @@ instructies:
 
 Deze maand gaan we met een onderwerp aan de slag dat we nog niet eerder hebben behandeld, namelijk <em>machine learning</em>. Grote kans dat je geen idee hebt wat je je hierbij moet voorstellen, het doel van de dojo is dan ook om daar een beetje verandering in te brengen. Kort gezegd gaat het erom dat we de <em>machine</em>, dus computer gaan proberen iets te <em>learnen</em>, dus leren - maar dan niet met opdrachten als "als dit gebeurt doe dan dat". We gaan dit doen in Scratch dus het is handig als je daar al mee kunt werken.
 
-[Kijk hier](CD75-ML.pdf) voor de introductie die we bij deze dojo hebben gegeven, hier staan ook een aantal links in om meer over machine learning te weten te komen. 
+[Kijk hier](https://github.com/coderdojonijmegen/hugo-coderdojo-nijmegen/blob/master/content/dojos/CD75-ML.pdf) voor de introductie die we bij deze dojo hebben gegeven, hier staan ook een aantal links in om meer over machine learning te weten te komen. 
 
 <!--more-->
 
