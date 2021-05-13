@@ -20,15 +20,43 @@ CoderDojo Nijmegen organiseert maandelijks gratis IT workshops (Dojo’s) voor k
 Bovenstaande is iets wat elk van de, ongeveer 1000, CoderDojo’s in de wereld probeert te doen. Daarnaast worden er internationale evenementen georganiseerd: bij EUDojo laten kinderen aan europarlementariërs zien hoe (belangrijk het is dat) zij leren programmeren.
 
 ## Het bestuur
-{{< responsive_table >}}
+<div class="flex-grid">
+<div class="flex-grid-col">
 
-| ![Esther van Popta](esther.png) | ![Leo Willems](leo.png) | ![Bas Hopman](bas.png) | ![Daan Willems](daan.png) | ![Rianne Kooi](rianne.jpg) |
-|:------:|:------:|:------:|:------:|:------:|
-| Esther van Popta | Leo Willems | Bas Hopman | Daan Willems | Rianne Kooi |
-| _voorzitter_ | _penningmeester_ | _secretaris_ | _algemeen bestuurslid_ | _algemeen bestuurslid_ |
-| [![LinkedIn](/imgs/linkedin-grey.png)](https://nl.linkedin.com/in/esthervanpopta) |[![LinkedIn](/imgs/linkedin-grey.png)](http://leowillems.nl) |[![LinkedIn](/imgs/linkedin-grey.png)](https://bas.familiehopman.net) |[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/daan-willems-48665712b/) |[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/rianne-kooi//) |
+![Esther van Popta](esther.png)
+Esther van Popta
+_voorzitter_
+[![LinkedIn](/imgs/linkedin-grey.png)](https://nl.linkedin.com/in/esthervanpopta)
+ </div>
+<div class="flex-grid-col">
 
-{{< /responsive_table >}}
+![Leo Willems](leo.png)
+Leo Willems
+_penningmeester_
+[![LinkedIn](/imgs/linkedin-grey.png)](http://leowillems.nl)
+</div>
+<div class="flex-grid-col">
+
+![Bas Hopman](bas.png)
+Bas Hopman
+_secretaris_
+[![LinkedIn](/imgs/linkedin-grey.png)](https://bas.familiehopman.net)
+</div>
+<div class="flex-grid-col">
+
+![Daan Willems](daan.png)
+Daan Willems
+_algemeen bestuurslid_
+[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/daan-willems-48665712b/)
+</div>
+<div class="flex-grid-col">
+
+![Rianne Kooi](rianne.jpg)
+Rianne Kooi
+_algemeen bestuurslid_
+[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/rianne-kooi//)
+</div>
+</div>
 
 ### Contactgegevens
 Stichting CoderDojo Nijmegen  

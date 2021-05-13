@@ -191,6 +191,16 @@ main {
         margin-top: 0.7em;
         margin-bottom: 0.2em;
     }
+    .flex-grid {
+        display: block;
+    }
+    .flex-grid-col {
+        flex: 1;
+        white-space: pre;
+        p {
+            text-align: center;
+        }
+    }
     .responsive_table {
         overflow-x: auto;
         table {
@@ -404,6 +414,9 @@ footer {
             form {
                 margin-right: 20px;
             }
+        }
+        .flex-grid {
+            display: flex;
         }
     }
     footer {
