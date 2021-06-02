@@ -1,0 +1,11 @@
+version: "2"
+services:
+  ninja_chat_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: "node"
+    environment:
+      - NODE_ENV=production
+    ports:
+      - 3000:3000

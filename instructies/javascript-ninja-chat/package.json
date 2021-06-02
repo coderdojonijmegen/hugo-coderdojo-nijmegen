@@ -1,0 +1,24 @@
+{
+  "name": "ninja-chat",
+  "version": "1.0.0",
+  "main": "build/app.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --outDir src/server/build/ src/server/src/app.ts",
+    "start": "node src/server/build/app.js",
+    "postinstall": "npm run build"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-static": "^4.0.0",
+    "@types/node": "^10.9.4",
+    "@types/socket.io": "^1.4.38",
+    "typescript": "^3.0.3",
+    "jquery": "^3.5.0",
+    "koa": "^2.5.2",
+    "koa-static": "^5.0.0",
+    "socket.io": "^2.4.0"
+  }
+}
