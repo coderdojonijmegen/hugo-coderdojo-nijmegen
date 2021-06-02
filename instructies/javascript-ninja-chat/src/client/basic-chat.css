@@ -1,0 +1,67 @@
+* {
+   box-sizing: border-box; 
+   font-family: 'Roboto', sans-serif;
+}
+
+body, html, .container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.boven {
+    flex: 0 0 80px;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: darkgreen;
+    padding: 5px;
+}
+
+.midden {
+    flex: 1 0 80px;
+    justify-content: center;
+    background-color: lightyellow;
+    padding: 5px;
+}
+
+.onder {
+    flex: 0 0 80px;
+    background-color: lightgrey;
+    padding: 5px;
+}
+
+.berichten {
+    flex: 1 0 50%;
+    max-width: 800px;
+}
+
+.bericht {
+    overflow: auto;
+    background-color: white;
+    padding: 5px;
+    width: 70%;
+    border-radius: 7px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.eigen {
+    position: relative;
+    right: -25%;
+}
+
+.berichtInput {
+    flex: 1 0 200px;
+}
+
