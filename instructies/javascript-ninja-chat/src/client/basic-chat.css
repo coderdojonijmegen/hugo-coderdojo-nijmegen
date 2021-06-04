@@ -1,67 +1,120 @@
 * {
-   box-sizing: border-box; 
+    /* Dit is een standaard instelling die voor alle blokjes gelden. */
+    box-sizing: border-box; 
 }
 
 body, html, .container {
+    /* 
+     * Hiermee zeggen we dat we met de container class het hele scherm
+     * willen gebruiken.
+     */
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 .container {
+    /*
+     * Flex instellingen (column) zorgt ervoor dat de blokjes boven elkaar
+     * komen. Het zorgt er ook voor dat de blokjes goed over het scherm worden
+     * verdeeld.
+     */
     display: flex;
     flex-direction: column;
+
+    /* Het 'Roboto' lettertype is het standaard lettertype voor ninja-chat. */
     font-family: 'Roboto', sans-serif;
 }
 
 .container > div {
+    /*
+     * Elke div die direct in de container gaat heeft deze instellingen.
+     * Flex (row) instellingen, zorgen ervoor dat de blokjes naast elkaar komen.
+     * Het zorg er ook voor dat de blokjes goed over het scherm worden verdeeld.
+     */
     display: flex;
     flex-direction: row;
 }
 
 .boven {
+    /*
+     * De flex instellingen zorgen ervoor dat 'boven' altijd 80 pixels hoog is.
+     * Het zal nooit uit zichzelf groter of kleiner worden.
+     */
     flex: 0 0 80px;
+    /*
+     * Deze instellingen zorgen dat de blokjes die er in zitten gelijk worden
+     * verdeeld over de balk.
+     */
     justify-content: space-between;
     align-items: center;
 
+    /* Kleur en padding. */
     background-color: darkgreen;
     padding: 5px;
 }
 
 .midden {
+    /* Deze flex maakt minimaal 80px hoog, maar kan verder uitgerekt worden. */
     flex: 1 0 80px;
     justify-content: center;
+
+    /* Kleur en padding. */
     background-color: lightyellow;
     padding: 5px;
 }
 
 .onder {
+    /* Deze flex maakt exact 80px hoog, kan niet groeien of krimpen. */
     flex: 0 0 80px;
+
+    /*
+     * Er is hier geen justify-content. Dat maakt dat blokjes worden uitgerekt,
+     * zodat ze de volledige breedte van het scherm gebruiken.
+     */
+
+    /* Kleur en padding. */
     background-color: lightgrey;
     padding: 5px;
 }
 
 .berichten {
+    /*
+     * Het berichten deel is minimaal de helft van het scherm breed en kan nog
+     * verder groeien. De max-width zorgt ervoor dat het nooit verder groeit dan
+     * 800 pixels.
+     */
     flex: 1 0 50%;
     max-width: 800px;
 }
 
 .bericht {
+    /*
+     * Overflow auto geeft het bericht een scroll balk als het bericht te groot
+     * wordt.
+     */
     overflow: auto;
+    width: 70%;
+
+    /* 
+     * Kleur, padding, border en margin. Maak de getallen heel groot of heel
+     * klein om te zien wat het precies doet.
+     */
     background-color: white;
     padding: 5px;
-    width: 70%;
-    border-radius: 7px;
     border: 1px solid black;
+    border-radius: 7px;
     margin: 5px;
 }
 
 .eigen {
+    /* Eigen berichtjes worden meer naar rechts gezet. */
     position: relative;
     right: -25%;
 }
 
 .berichtInput {
+    /* Het input veld voor berichten is minimaal 200px groot en kan groeien. */
     flex: 1 0 200px;
 }
 
