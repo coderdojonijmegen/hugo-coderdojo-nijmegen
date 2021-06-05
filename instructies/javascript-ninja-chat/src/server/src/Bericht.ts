@@ -16,7 +16,7 @@ export class Bericht {
             tijdstip: this.tijdstip.toLocaleTimeString("nl-NL"),
             gebruiker: this.gebruiker.naam,
             kanaal: this.kanaal,
-            tekst: JSON.stringify(this.tekst)
+            tekst: (typeof this.tekst === 'string') ? this.tekst : JSON.stringify(this.tekst)
         }
     }
 }
