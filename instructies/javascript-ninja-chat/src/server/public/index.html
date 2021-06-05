@@ -1,29 +1,47 @@
+<!doctype html>
 <html>
+
+<!-- In de head staan dingen zoals de titel en wat andere basis informatie.  -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Ninja Chat</title>
+
+    <title>Ninja chat</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="ninja-chat.css">
 </head>
+
+
 <body>
-    <div class="container">
-        <header>
-            <span>Kanaal</span>
-            <input type="number" name="kanaal" class="kanaalInput">
-            <button class="bekijkDeelnemers">Bekijk deelnemers</button>
-        </header>
-
-        <main class="berichten"></main>
-
-        <footer>
-            <div class="footerNaam"><input type="text" name="naamInput" class="naamInput"></div>
-            <div class="footerBericht"><input type="text" name="berichtInput" class="berichtInput" placeholder="Type je bericht..."></div>
-            <div class="footerKnop"><button class="stuurBericht">Stuur</button></div>
-        </footer>
+<!-- Hier staan de onderdelen die je ziet op je scherm. -->
+<div class="container">
+    <div class="boven">
+        <h1><img src="coderdojo.png" width="32" height="32"> Ninja chat</h1>
+        <div>Naam: <input type="text" class="naamInput"></div>
+        <div>Kanaal: <input type="number" class="kanaalInput"></div>
     </div>
 
+    <div class="midden">
+        <div class="berichten"></div>
+        <div class="deelnemers"><button class="bekijkDeelnemers">Bekijk deelnemers</button></div>
+    </div>
+
+    <div class="onder">
+        <textarea class="berichtInput"></textarea>
+        <button class="stuurBericht">Stuur bericht</button>
+    </div>
+</div>
+
+
+<!-- De scripts zorgen ervoor dat knoppen werken en berichten worden verstuurd/ontvangen. -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.socket.io/4.1.1/socket.io.min.js" integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a" crossorigin="anonymous"></script>
     <script src="ninja-chat.js"></script>
+
 </body>
 </html>
+
