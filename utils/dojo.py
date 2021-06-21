@@ -97,7 +97,7 @@ class Dojo:
                             .replace("{{picture_url}}", future_dojo_event_info['picture_url'])
                             .replace("{{event_description}}",
                                      Dojo.replace_nth(future_dojo_event_info['event_description'],
-                                                      "</p>\n<p>", "</p>\n\n<!--more-->\n\n<p>", 2))
+                                                      "</p>\n", "</p>\n\n<!--more-->\n\n", 1))
                             .replace("<p><strong>", "\n## ").replace("</strong></p>", "")
                             .replace("<p>", "\n\n").replace("</p>", "")
                             .replace("<ul>", "").replace("</ul>", "")
@@ -117,4 +117,4 @@ if __name__ == "__main__":
     if futureDojoEventUrl is not None:
         dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
         if not Dojo.dojo_page_already_exists(dojo_info):
-            Dojo.write_dojo_page(dojo_info)
+            Dojo.write_dojo_page(dojo_info, "../archetypes/dojos-template.md")
