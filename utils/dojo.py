@@ -51,6 +51,8 @@ class Dojo:
         dojo_event_details_time_start, dojo_event_details_time_end = \
             [item['content'] for item in dojo_event_details_soup
                 .find_all("div", "event-details__data")[0].find_all("meta")]
+        for a in dojo_event_details_soup.find_all('a', href=True):
+            a.extract()
         dojo_event_details_location = dojo_event_details_soup.find_all("div", "event-details__data")[1].text
         return {
             "event_title": dojo_event_title.strip().split("#")[1],
