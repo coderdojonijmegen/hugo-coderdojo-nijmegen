@@ -1,0 +1,383 @@
+<!doctype html><html lang=nl-nl><head><title>Arduino - Snelle Introductie</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.61db37bcd148e662d2261c1d2d72717290e0cf0a49801d958fc7f22b8326207d.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/arduino-snelle-introductie>Arduino snelle introductie</a></li></ul></breadcrumbs><h1>Arduino - Snelle Introductie</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#wat-is-de-arduino>Wat is de Arduino?</a></li><li><a href=#de-software-installeren>De software installeren</a></li><li><a href=#je-eerste-arduino-programma>Je eerste Arduino-programma</a><ul><li><a href=#oefening>Oefening</a></li></ul></li><li><a href=#hoe-zit-een-arduino-programma-in-elkaar>Hoe zit een Arduino-programma in elkaar?</a></li><li><a href=#hoe-een-breadboard-werkt>Hoe een breadboard werkt</a></li><li><a href=#digitale-sensors-een-knop>Digitale sensors: een knop</a><ul><li><a href=#hoe-werkt-het>Hoe werkt het?</a></li></ul></li><li><a href=#if-statements>If-statements</a><ul><li><a href=#interpunctie>Interpunctie</a></li><li><a href=#oefening-1>Oefening</a></li></ul></li><li><a href=#zien-wat-er-gebeurt-de-seriële-monitor>Zien wat er gebeurt: de seriële monitor</a></li><li><a href=#analoge-sensors>Analoge sensors</a><ul><li><a href=#oefening-2>Oefening</a></li></ul></li><li><a href=#seriële-plotter>Seriële plotter</a><ul><li><a href=#meerdere-sensoren>Meerdere sensoren</a></li></ul></li><li><a href=#ultrasone-afstandssensor>Ultrasone afstandssensor</a></li><li><a href=#variabelen>Variabelen</a><ul><li><a href=#oefening-3>Oefening</a></li></ul></li><li><a href=#inputs-en-outputs-combineren>Inputs en outputs combineren</a><ul><li><a href=#stap-1>Stap 1</a></li><li><a href=#stap-2>Stap 2</a></li><li><a href=#stap-3>Stap 3</a></li><li><a href=#stap-4>Stap 4</a></li><li><a href=#bestaande-code-gebruiken>Bestaande code gebruiken</a></li></ul></li><li><a href=#dingen-laten-bewegen-met-servo-motors>Dingen laten bewegen met servo-motors</a><ul><li><a href=#grotere-servos>Grotere servo’s</a></li><li><a href=#oefening-4>Oefening</a></li></ul></li><li><a href=#tot-slot>Tot slot</a></li><li><a href=#extra>Extra</a><ul><li><a href=#problemen-oplossen>Problemen oplossen</a></li><li><a href=#libraries-installeren>Libraries installeren</a></li><li><a href=#een-timer-voor-arduino-programmas-millis>Een timer voor Arduino-programma’s: millis()</a></li><li><a href=#wat-je-kunt-meten-en-doen-met-arduino>Wat je kunt meten en doen met Arduino</a></li></ul></li><li><a href=#licentie>Licentie</a><ul><li><a href=#verantwoording-fotos>Verantwoording foto’s</a></li></ul></li></ul></nav></aside><p>Alles wat je moet weten om gave dingen te maken</p><h2 id=wat-is-de-arduino>Wat is de Arduino?</h2><p>De Arduino is een microcontroller, wat betekent dat het een heel simpele computer is. Je kunt er sensoren op aansluiten
+om van alles waar te nemen in de omgeving, en er ook allerlei soorten ‘outputs’ mee aansturen zoals motoren en lampen.</p><p><img src=imgs/ArduinoUndo.png alt="Arduino Uno"></p><figcaption>Er bestaan verschillende soorten Arduino’s en veel vergelijkbare microcontrollers, maar de Arduino Uno
+die je hierboven ziet is het bekendst.</figcaption><p>Op de Arduino zie je nummers en markeringen staan die aangeven wat je erop kunt
+aansluiten. ‘3.3V’ en ‘5V’ zijn de pinnen waar je stroom met die voltages uit kunt
+halen. Je zou ze kunnen zien als de plus van een batterij. De min van het Arduinobordje vind je bij ‘GND’.</p><p>Verder zie je 14 digitale pins en 6 analoge pins, die we allemaal kunnen gebruiken als inputs én als outputs.</p><h2 id=de-software-installeren>De software installeren</h2><p>We hebben de Arduino-software nodig om het Arduino-bordje te kunnen
+programmeren. Om de software te downloaden ga je naar <a href=https://arduino.cc/download>arduino.cc/download</a>.</p><p><img src=imgs/ArduinoIDEdownload.png alt="Arduino IDE download"></p><p>Kies je besturingssysteem (Windows, Linux of Mac) in het dondergroene vlak met
+de titel ‘Download options’. (Heb je Windows? Kies dan de bovenste optie.)
+In het volgende scherm kun je klikken op ‘Just download’. Als het bestand gedownload is, kun je het Arduino-programma
+installeren en openen.</p><h2 id=je-eerste-arduino-programma>Je eerste Arduino-programma</h2><p>De stukjes software die we maken voor de Arduino noemen we schetsen (in het Engels ‘sketches’) of gewoon programma’s.
+Schetsen zijn tekstbestandjes waar instructies voor het Arduino-bordje in staan. Programmeurs noemen zulke instructies
+ook wel ‘code’. Je gaat nu je eerste Arduino-programma maken door een bestaand voorbeeld te openen en aan te passen.</p><p>Open het menu Bestand, dan Voorbeelden, Basics en klik dan op Blink. De schets
+dat zich nu opent in een nieuw venster gaan we uploaden naar de Arduino.</p><p>Sluit het Arduino-bordje aan op je computer met een USB-kabel.</p><p>Klik op het tweede icoontje van links:</p><p><img src=imgs/ArduinoUploadCode.png alt="Arduino upload code"></p><p>Het Arduino-programma zal de schets nu op de chip van de Arduino gaan zetten.</p><p>Mogelijk krijg je de eerste keer een venster te zien waarin je moet aangeven waar
+de computer de Arduino kan vinden. Kies daar voor een adres met ‘usb’, ‘serial’ of
+‘COM’ erin, en niet voor ‘bluetooth’.</p><p>Als je linksonder in het scherm ‘Uploaden voltooid’ ziet, dan is het gelukt en is er nu
+op de Arduino een LED-lampje aan het knipperen!</p><p>Als je een foutmelding krijgt, bekijk dan de pagina ‘Problemen oplossen’ achteraan deze handleiding.</p><p><img src=imgs/ArduinoFoutmelding.png alt="Arduino foutmelding"></p><h3 id=oefening>Oefening</h3><ol><li>Kun je het LED-lampje sneller laten knipperen?<br>Let op: als je iets in de schets verandert, moet je hem opnieuw uploaden.</li><li>Kun je de LED in verschillende patronen laten knipperen?<br>Kun je bijvoorbeeld SOS knipperen?</li></ol><h2 id=hoe-zit-een-arduino-programma-in-elkaar>Hoe zit een Arduino-programma in elkaar?</h2><p>Belangrijk om door te hebben: bijna alle Arduino-schetsen hebben drie onderdelen.</p><p>In het eerste deel, helemaal bovenaan in de schets, worden vaak wat variabelen
+klaargezet. (Hoe variabelen werken kun je verderop in deze handleiding lezen.)</p><p>In het geval van Blink staat daar alleen wat commentaar. Alle regels met twee
+schuine strepen ervoor zijn toelichting. Zulke regels staan er om aan jou uit te
+leggen hoe het programma werkt. Alle regels tussen /* en */ zijn ook commentaar.
+(Je herkent commentaar ook aan de grijze kleur van de tekst.)</p><p>Het tweede deel is een functie die ‘setup’ heet. Alles wat daarin staat, wordt één
+keer uitgevoerd.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#2b91af>void</span> setup() {
+   <span style=color:green>// alles wat tussen de accolades (de gekrulde haakjes) staat, hoort bij
+</span><span style=color:green></span>   <span style=color:green>// setup en wordt in één keer uitgevoerd.
+</span><span style=color:green></span>   <span style=color:green>// In Blink wordt bijvoorbeeld het ingebouwde LED-lampje op
+</span><span style=color:green></span>   <span style=color:green>// het Arduino-bord aangemeld als output:
+</span><span style=color:green></span>   pinMode(LED_BUILTIN, OUTPUT);
+}</code></pre></div><p>Het derde deel van de schets is de functie die ‘loop’ heet. Dit deel van het
+programma wordt steeds weer opnieuw gedaan, voor altijd.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#2b91af>void</span> loop() {
+   digitalWrite(LED_BUILTIN, HIGH); <span style=color:green>// zet de LED aan (HIGH is het voltage niveau)
+</span><span style=color:green></span>   delay(1000);                     <span style=color:green>// wacht een seconde
+</span><span style=color:green></span>   digitalWrite(LED_BUILTIN, LOW);  <span style=color:green>// zet de LED uit (bij LOW is de spanning uit)
+</span><span style=color:green></span>   delay(1000);                     <span style=color:green>// wacht een seconde
+</span><span style=color:green></span>}</code></pre></div><figcaption>De ingebouwde LED is op de Arduino Uno aangesloten op pin 13. ‘LED_BUILTIN’ is een woord dat 2
+Arduino herkent, maar je zou in plaats daarvan ook ‘13’ kunnen schrijven.</figcaption><p>In Blink bijvoorbeeld wordt in loop() het ingebouwde LED-lampje aangezet 2
+(‘HIGH’), dan wordt er een seconde gewacht (duizend milliseconden), dan wordt de
+LED weer uitgezet (‘LOW’), dan wordt er weer een seconde gewacht, en dan begint
+loop() weer opnieuw.</p><h2 id=hoe-een-breadboard-werkt>Hoe een breadboard werkt</h2><p>Om sensors en andere componenten te verbinden met de Arduino (of met elkaar), is het vaak handig om een
+breadboard te gebruiken.</p><p>De gaatjes op het breadboard zijn binnenin het plastic bordje met metalen strips met elkaar verbonden.
+De gaatjes in het midden zijn verbonden in kolommen van vijf (zoals die in het groene kader hiernaast).</p><p><img src=imgs/breadboard.png alt=Breadboard></p><figcaption>De letters en cijfers op het breadboard gebruiken we
+meestal niet.</figcaption><p>Die vijf gaatjes zijn alleen met elkaar verbonden, dus niet met gaatjes ernaast of met gaatjes aan de overkant van de
+kloof in het midden.</p><p>De horizontale rijen bovenaan en onderaan, met de rode en blauwe lijnen ernaast,
+gebruiken we om meerdere onderdelen van stroom te voorzien. Rood is plus en
+blauw (of zwart) is min, net zoals batterijen een plus en een min hebben.
+Die gaatjes zijn alleen verbonden met de andere gaatjes in dezelfde horizontale rij,
+dus niet niet met de gaatjes erboven of eronder.</p><p><img src=imgs/ArduinoKapotMaken.png alt="Moeilijk om Arduino kapot te maken"></p><p>Het is daarom verstandig om je altijd aan de juiste kleuren te houden: de rode rij op
+het breadboard voor plus en de blauwe rij voor min. Gebruik ook zoveel mogelijk
+rode draadjes om componenten met de positieve kant te verbinden, en zwarte of
+blauwe draadjes voor de verbinding met de negatieve kant.</p><h2 id=digitale-sensors-een-knop>Digitale sensors: een knop</h2><p>Een Arduino programmeren om lampjes te laten knipperen is leuk, maar eigenlijk
+willen we dat hij ook kan reageren op zijn omgeving. Laten we dat nu proberen.</p><p><img src=imgs/ArduinoBreadboardEnSensor.png alt="Arduino, breadboard en sensor"></p><p>Verbind eerst een drukknop met de Arduino zoals op de tekening:</p><ul><li>Zet de knop op het breadboard met twee pootjes aan elke kant van de gleuf in het midden (als het zo dadelijk niet
+werkt, moet je de knop misschien een kwartslag draaien).</li><li>Verbind één kant van de knop met één van de gaatjes van de Arduino waar GND naast staat. De andere kant van de
+knop verbind je met het gaatje waar ‘2’ bij staat (niet ‘A2’).</li></ul><p>Open nu de schets die bij deze schakeling hoort, via het menu Bestand >
+Voorbeelden > Digital > DigitalInputPullup.</p><p>Upload de schets naar de Arduino.</p><p>Probeer de knop maar. Als het goed is, heb je nu je eerste werkende digitale
+sensor! Als je op de knop drukt, gaat de LED aan. Dit is dus al meteen een
+combinatie van input en output.</p><h3 id=hoe-werkt-het>Hoe werkt het?</h3><p>In het programma zie je dat in de functie setup() pin nummer 2 als een ingang
+wordt ‘opengezet’:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>pinMode(2, INPUT_PULLUP);</code></pre></div><p>Op die pin heb je de knop aangesloten, en dankzij deze regel in de schets weet de
+Arduino dat ook.</p><p>Vervolgens wordt pin nummer 13 als een uitgang gedefiniëerd:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>pinMode(13, OUTPUT);</code></pre></div><p>De ingebouwde LED op de Arduino is verbonden met pin 13, en dankzij deze regel
+weet de Arduino dat we die willen gaan gebruiken.</p><p>Nu gaan we in de gaten houden of de knop wordt ingedrukt. Dat doen we met de
+functie digitalRead():</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#2b91af>int</span> sensorVal = digitalRead(2);</code></pre></div><p>Als je op de knopt drukt die is verbonden met pin 2 van de Arduino, levert
+digitalRead hier een 0 op. Als je de knop loslaat, wordt dat een 1. Die waarde
+wordt vervolgens bewaard in een variabele die ‘sensorVal’ heet (meer uitleg over
+variabelen lees je verderop).</p><figcaption>Daarom is een knop een voorbeeld van een digitale sensor: er zijn maar twee mogelijkheden. Andere
+voorbeelden van digitale sensoren zijn bewegingsensors (zoals PIR-sensors die automatisch het licht
+aandoen in WC’s) en ‘oogjes’ zoals bovenaan roltrappen.</figcaption><p>Dit alles staat in de functie loop(), wat betekent dat digitalRead() steeds opnieuw
+wordt uitgevoerd en de knop dus continu in de gaten wordt gehouden. ‘sensorVal’
+bevat steeds de huidige stand van de knop, 1 of 0, aan of uit.</p><p>Om iets te doen met de informatie die de sensor doorgeeft, staat in de schets
+vervolgens een if-statement. Hoe dat werkt, lees je hierna</p><h2 id=if-statements>If-statements</h2><p>Om de Arduino iets te laten doen als er iets verandert, moeten we hem leren om
+vragen te stellen. Een vraag in Arduino ziet er zo uit:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#00f>if</span> (sensorWaarde &gt; 30) {
+    <span style=color:green>// doe hier iets
+</span><span style=color:green></span>}</code></pre></div><p>Dit heet een if-statement. Je laat Arduino vragen: is de knop ingedrukt? Of, zoals in
+het voorbeeld hierboven: is het getal dat de sensor teruggeeft groter dan 30? Als
+het antwoord op zo’n vraag ‘ja’ is, dan voert Arduino de code uit die tussen de
+gekrulde haken staat.</p><p>In de DigitalInputPullup-schets van zojuist ziet dat er zo uit:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#00f>if</span> (sensorVal == HIGH) {
+    digitalWrite(13, LOW);
+} <span style=color:#00f>else</span> {
+    digitalWrite(13, HIGH);
+}</code></pre></div><figcaption>Door hoe we de knop hebben aangesloten, betekent ‘HIGH’ in dit geval dat de knop niet wordt ingedrukt.</figcaption><p>Hier wordt eerst gevraagd: wordt de knop ingedrukt? Als dat niet zo is, dan zetten
+we het LEDje uit, en anders zetten we het aan. Dit is dus een uitbreiding op het if-statement: met ‘else’ kunnen we
+instructies toevoegen voor het geval het antwoord op de vraag ‘nee’ is.</p><h3 id=interpunctie>Interpunctie</h3><p>Merk op dat elke haakje openen een haakje sluiten nodig heeft, dus ‘(’ en ‘)’, en ‘{’
+en ‘}’. Elk commando zoals digitalWrite() moet eindigen op een puntkomma.
+Programmeertalen zijn heel gevoelig op dit soort dingen en zullen niet meewerken
+als je dit soort dingen verkeerd doet. Als je toch foutmeldingen krijgt, kijk dan naar
+de paragraaf ‘Problemen met de code’ aan het eind van deze handleiding.</p><h3 id=oefening-1>Oefening</h3><p>Nu gaat de LED aan als je de knop indrukt. Kun je de code zo aanpassen dat de
+LED juist uitgaat als je de knop indrukt?</p><h2 id=zien-wat-er-gebeurt-de-seriële-monitor>Zien wat er gebeurt: de seriële monitor</h2><p>Stel je voor dat er iets misgaat, bijvoorbeeld dat er níet een LEDje gaat branden als
+je op de knop drukt. Dan zou het handig zijn als de Arduino zelf kon vertellen of hij
+ten minste ziet dat de knop wordt ingedrukt, want dat zou ons helpen te ontdekken
+wat het probleem is. Gelukkig kan de Arduino dat.</p><p>We kunnen een communicatieverbinding opzetten tussen de computer en het
+Arduino-bordje. Dat doen we door deze regel in setup() te zetten (in de
+DigitalInputPullup-schets staat dit er al):</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>Serial.begin(9600);</code></pre></div><p>In loop() zetten we direct onder de regel waar we de sensor uitlezen deze regels:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>Serial.print(<span style=color:#a31515>&#34;sensor = &#34;</span>);
+Serial.println(sensorValue);</code></pre></div><p>Open vervolgens de seriële monitor door te klikken op het vergrootglasicoontje rechtsbovenaan in het venster.</p><p><img src=imgs/vergrootglasicoontje.png alt="vergrootglas icoontje"></p><p>Als de schets van de knop (DigitalInputPullup) nog steeds op de chip van de
+Arduino staat, dan zou je nu in de seriële monitor moeten kunnen zien of de knop
+wordt ingedrukt. Als je niks ziet veranderen, dan weet je dus dat de knop het niet
+doet of niet goed is verbonden met pin 2.</p><p>De seriële verbinding is vaak enorm handig om te
+kijken of Arduino doet wat wij in gedachte hadden, en
+zo niet, waar het probleem dan zit.</p><p>We kunnen de verbinding ook gebruiken om sensordata uit de Arduino te gebruiken in andere software op
+de computer, bijvoorbeeld om interactieve animaties of
+muziek te maken.</p><div class=verdieping>Die 9600 is de baud rate, de snelheid waarmee de computer en de Arduino met elkaar praten. Sommige schetsen gebruiken
+andere waardes zoals 115200. De baud rate in de seriële monitor moet overeen komen met die in de schets, anders zie je
+rare tekens of gewoon niets.
+<img src=imgs/baudrate.png alt="uitleg baudrate"></div><h2 id=analoge-sensors>Analoge sensors</h2><p>De knop die we tot nu toe gebruikt hebben, is een soort digitale sensor. Zulke
+sensoren kennen alleen 1 en 0, oftewel aan en uit, LOW en HIGH.</p><p>Er zijn ook een heleboel analoge sensoren, die tussenwaardes kunnen
+geven. Een voorbeeld daarvan is een lichtsensor, die kan laten weten
+of het donker is of juist heel erg licht, maar die ook alle gradaties
+ertussenin kan meten.</p><p><img src=imgs/lichtsensor.png alt="licht sensor"></p><p>Een ander voorbeeld van een analoge sensor is de potmeter of
+potentiometer. Dat is een draaiknop die je het beste kent als
+volumeknop op versterkers. In Arduino kun je heel precies de
+positie zien van de draaiknop.</p><p><img src=imgs/potmeter.png alt=potmeter></p><p>Sluit de potmeter aan zoals op de
+afbeelding: de middelste pin op de
+analoge poort A0, en de buitenste pinnen
+op 5V en GND.</p><p><img src=imgs/ArduinoBreadboardEnPotmeter.png alt="Arduino en potmeter"></p><p>Open vervolgens dit programma:
+Bestand > Voorbeelden > 03. Analog >
+AnalogInput.</p><p>Upload de schets naar de Arduino. Als het goed is kun je nu de LED sneller en
+langzamer laten knipperen door aan de knop te draaien!</p><p>Ook leuk: probeer de waardes die van de potmeter komen te bekijken met de
+seriële plotter. Hoe dat moet, wordt onthuld op de volgende pagina.</p><h3 id=oefening-2>Oefening</h3><p>Sluit een kleine speaker of ‘buzzer’ aan op GND en pin 13
+(via het breadboard). Dat is dus op dezelfde pin als de
+interne LED van de Arduino. Hoor je een verschil als je aan
+de knop draait?</p><p><img src=imgs/buzzer.png alt=buzzer></p><h2 id=seriële-plotter>Seriële plotter</h2><p>Om analoge waarden goed te kunnen laten zien, heeft de Arduino-software een
+geweldige feature in huis.</p><p>Open het menu Hulpmiddelen en klik op Seriële plotter (sluit eerst de seriële
+monitor als dat venster nog openstaat). <em>De sneltoets-combinatie voor de seriële plotter is shift+command+L.</em></p><p>Open de schets AnalogReadSerial via het menu Bestand > Voorbeelden > 01.
+Basics > AnalogReadSerial, en upload het naar de Arduino.</p><p><img src=imgs/serielePlotter.png alt="seriële plotter"></p><p>Je zou in het venster van de seriële plotter nu een grafiek moeten zien van de veranderingen in de positie
+van de potmeter! (Of de resultaten van een andere analoge sensor, zoals bijvoorbeeld de lichtsensor.)</p><h3 id=meerdere-sensoren>Meerdere sensoren</h3><p>Als je de resultaten van meerdere sensoren in de seriële plotter wil zien, dan moet
+je zorgen dat die waardes gescheiden door tabs worden doorgestuurd:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>Serial.print(sensor1);  <span style=color:green>// waarde van de eerste sensor
+</span><span style=color:green></span>Serial.print(<span style=color:#a31515>&#34;,</span><span style=color:#a31515>\t</span><span style=color:#a31515>&#34;</span>);    <span style=color:green>// waardes gescheiden door komma en tab
+</span><span style=color:green></span>Serial.print(sensor2);  <span style=color:green>// waarde van de tweede sensor
+</span><span style=color:green></span>Serial.println();       // witregel</code></pre></div><p>Het helpt om verder geen print()’s in je programma te hebben die tekst schrijven
+naar de seriele verbinding (zoals je soms wel doet om feedback van je schets te
+zien in de seriële monitor). Als je zulke print()’s met tekst wel hebt in je schets,
+misschien moet je ze dan even tijdelijk uitschakelen door er met // commentaar van
+te maken.</p><h2 id=ultrasone-afstandssensor>Ultrasone afstandssensor</h2><p><img src=imgs/ultrasoneSensor.png alt="ultrasone sensor"></p><p>Als je wil weten hoe ver iets of iemand is (bij je robot of kunstwerk vandaan bijvoorbeeld), dan is
+een ultrasone afstandssensor geweldig. Er zitten twee ronde dingen op, een speaker en een microfoon. De sensor werkt
+door met de speaker een ultrasoon geluid te maken, en vervolgens met de microfoon te meten hoe lang het duurt
+voordat de echo van dat geluid terugkomt. Door die tijd te delen door snelheid van het geluid, kan de Arduino
+uitrekenen hoe ver weg iets is.<br><em>343 meter per seconde; de gevonden tijd wordt ook nog door 2 gedeeld, omdat het geluid twee keer de 6
+afstand heeft afgelegd als de echo wordt opgevangen.</em></p><p>Je sluit de sensor zo aan op de Arduino, eventueel via een breadboard:</p><ul><li>de pin op de sensor waar VCC bij staat naar 5V op de Arduino,</li><li>GND op de sensor naar GND op de Arduino,</li><li>Trigger naar digitale pin 12 van de Arduino,</li><li>Echo naar pin 11 van de Arduino.</li></ul><p><img src=imgs/ArduinoBreadboardEnUltrasoneSensor.png alt="Arduino en ultrasone sensor"></p><p>Je kunt code voor dit type sensor overal online
+vinden, maar de NewPing-library is erg
+makkelijk te gebruiken. Die moet je dan wel
+even installeren—als je nog niet weet hoe dat
+moet, kijk dan even op de pagina ‘Libraries
+installeren’ verderop.</p><p>In het voorbeeldprogramma NewPingExample
+(zie Bestand > Voorbeelden > NewPing) kun je
+zelf de maximale afstand instellen die je wil
+meten. Een meter of vier à vijf is wel het
+maximaal haalbare met deze sensor.<br><em>Meer informatie over de NewPing-library vind je hier: <a href=https://bitbucket.org/teckel12/arduino-new-ping>https://bitbucket.org/teckel12/arduino-new-ping</a></em></p><p>Upload de code naar de Arduino, en open de
+seriële monitor om de afstand te zien die de
+sensor meet.</p><div class=verdieping>Ultrasone afstandssensors meten de
+afstand tot objecten in een smalle strook
+van 15 graden. Als je een breder gebied
+wil scannen, dan zou je meerdere
+ultrasone sensors naast elkaar kunnen
+zetten, of een enkele sensor op een
+motortje kunnen zetten om een
+draaiende radar te maken. Een meer
+complete oplossing is beeldherkenning,
+maar dat is ook een stuk ingewikkelder.
+Als je alleen maar wil weten óf iemand in
+de buurt is (en niet per se hoe ver weg
+ze zijn), gebruik dan een PIR-sensor.</div><h2 id=variabelen>Variabelen</h2><p>Variabelen zijn woorden of letters waarmee we Arduino iets kunnen laten
+onthouden. Dat is belangrijk als we Arduino bijvoorbeeld willen laten bijhouden hoe
+vaak iets is gebeurd.</p><p>Een variabele definiëren ziet er zo uit:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#2b91af>int</span> aantal = 100;</code></pre></div><p>Door ‘int’ ervoor te zetten zeggen we: de variabele is een heel getal, dus geen
+decimaal. Dan geven we de variabele zijn naam. In dit geval is dat ‘aantal’, maar
+het zou net zo goed ‘x’ mogen zijn, of ‘sensorWaarde’. Meestal kiezen we een
+naam die goed duidelijk maakt wat voor informatie we willen opslaan in die
+variabele. Vervolgens vertellen we de variabele wat zijn beginwaarde wordt—in dit
+geval 100. Tot slot wordt de regel afgesloten met een puntkomma, net als alle
+commando&rsquo;s in Arduino.<br><em>Andere typen variabelen zijn bijvoorbeeld float (dat is wel een decimaal getal) en bool (alleen ‘true’ of 8
+‘false’). Je vindt alle typen op <a href=https://www.arduino.cc/reference/en/>https://www.arduino.cc/reference/en/</a> onder ‘Data Types’.</em></p><p>Als je een variabele eenmaal op die manier gedefiniëerd hebt, dan kun je met die
+variabele gaan rekenen. Als we dit doen…</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>aantal = aantal + 100;</code></pre></div><p>… dan heeft ‘aantal’ nu een waarde van 200.</p><h3 id=oefening-3>Oefening</h3><p>Met variabelen kun je bijvoorbeeld ook bijhouden hoe vaak een knop is ingedrukt.
+Je kunt daarvoor de schets DigitalInputPullup gebruiken (zie eventueel de pagina
+over digitale sensors). Probeer het eerst zelf, en lees eventueel daarna de oplossing.</p><details><summary>mogelijke oplossing</summary>
+Voeg een variabele toe bovenaan in de schets (dus nog boven setup()). Tel vervolgens steeds 1 bij op, op 9
+de plek waar de schets iets doet op het moment dat de knop wordt ingedrukt. Verplaats de Serial.println
+naar diezelfde plek om in plaats van ‘sensorVal’ de waarde van jouw variabele naar de seriële monitor te
+schrijven. Als je onder die regel ook nog ‘delay(500);’ toevoegt, dan wacht de Arduino een halve seconde
+voordat hij verdergaat. Op die manier telt hij steeds maar één druk op de knip in plaats van dat hij doortelt
+zolang als de knop is ingedrukt :-)</details><h2 id=inputs-en-outputs-combineren>Inputs en outputs combineren</h2><p>Vaak willen we met de Arduino meerdere inputs en outputs tegelijk gebruiken én ze
+laten samenwerken. Je kunt bijvoorbeeld een potentiometer gebruiken om de
+snelheid van een motor te veranderen, of een lichtsensor gebruiken om de
+toonhoogte van een buzzer te verhogen of te verlagen. Hier lees je hoe dat moet.</p><h3 id=stap-1>Stap 1</h3><p>Als je twee componenten met elkaar wil laten samenwerken, laat ze dan altijd eerst
+apart werken. Als er dan later iets niet werkt, weet je dat het in ieder geval niet ligt
+aan de individuele componenten en dat maakt het zoeken naar een oplossing veel
+makkelijker.
+Dus bijvoorbeeld:</p><ul><li>Sluit de potmeter aan op de Arduino</li><li>Upload het programma voor de potmeter naar de Arduino, en zorg dat je de waarden van de potmeter te zien krijgt in de seriële monitor.</li><li>Sluit vervolgens de buzzer aan (laat de potmeter aangesloten!).</li><li>Zet de software voor de buzzer op de Arduino (laat het venster met de code met de potmeter openstaan), en ga pas verder als je de buzzer hoort.</li></ul><h3 id=stap-2>Stap 2</h3><p>Nu heb je dus twee werkende programma’s,
+en die kun je gaan combineren tot één
+programma. Zet ze naast elkaar, zodat je
+beide vensters op je beeldscherm hebt.</p><figcaption>DigitalInputPullup</figcaption><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#2b91af>void</span> setup() {
+    Serial.begin(9600);
+    pinMode(2, INPUT_PULLUP);
+    pinMode(13, OUTPUT);
+}
+
+<span style=color:#2b91af>void</span> loop() {
+    <span style=color:#2b91af>int</span> sensorVal = digitalRead(2);
+
+    <span style=color:#00f>if</span> (sensorVal == HIGH) {
+        digitalWrite(13, LOW);
+    } <span style=color:#00f>else</span> {
+        digitalWrite(13, HIGH);
+    }
+}</code></pre></div><figcaption>Sweep</figcaption><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#00f>#include</span> <span style=color:#00f>&lt;Servo.h&gt;</span><span style=color:#00f>
+</span><span style=color:#00f></span>Servo myservo;
+
+<span style=color:#2b91af>void</span> setup() {
+    myservo.attach(9);
+}
+
+<span style=color:#2b91af>void</span> loop() {
+    myservo.write(10);
+    delay(1000);
+    myservo.write(160);
+    delay(1000);
+}</code></pre></div><p>In Arduino-schetsen mogen setup() en loop()
+maar één keer voorkomen. We kunnen de
+schetsen dus niet combineren door ze
+simpelweg de ene onder de andere te plakken.</p><p>Kopiëer daarom de inhoud van de ene setup() naar de andere. Let op dat je geen
+accolades (gekrulde haken) meekopiëert. Let ook goed op dat je geen code boven
+of onder de accolades van setup() plaatst—de code hoort tussen { en } want anders
+werkt het niet.</p><p>Doe hetzelfde voor loop() en eventuele
+regels die nog bóven setup staan.</p><p>Voor de afgebeelde schetsen ziet dat er zo uit:</p><figcaption>Gecombineerd</figcaption><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#00f>#include</span> <span style=color:#00f>&lt;Servo.h&gt;</span><span style=color:#00f>
+</span><span style=color:#00f></span>Servo myservo;
+
+<span style=color:#2b91af>void</span> setup() {
+    Serial.begin(9600);
+    pinMode(2, INPUT_PULLUP);
+    pinMode(13, OUTPUT);
+    myservo.attach(9);
+}
+
+<span style=color:#2b91af>void</span> loop() {
+    <span style=color:#2b91af>int</span> sensorVal = digitalRead(2);
+
+    <span style=color:#00f>if</span> (sensorVal == HIGH) {
+        digitalWrite(13, LOW);
+    } <span style=color:#00f>else</span> {
+        digitalWrite(13, HIGH);
+    }
+
+    myservo.write(10);
+    delay(1000);
+    myservo.write(160);
+    delay(1000);
+}</code></pre></div><h3 id=stap-3>Stap 3</h3><p>Laat je nieuwe schets controleren door Arduino. Gebruik daarvoor het eerste
+icoontje, links bovenaan. Als je linksonderin ziet ‘Compileren voltooid’ dan heb je
+het samenvoegen goed gedaan! Als je een foutmelding krijgt, los het probleem dan
+op. Gebruik eventueel de checklist aan het eind van deze handleiding.
+Sla je gecombineerde schets op op je computer, via Bestand > ‘Opslaan als…’.</p><div class=verdieping>Soms wil je twee schetsen combineren
+die allebei dezelfde pin in gebruik
+hebben. Als je die schetsen
+samenvoegt, zul je dus voor één van
+die twee inputs of outputs een andere
+pin moeten gebruiken en dat onderdeel
+dan dus ook op die andere pin op de
+Arduino moeten aansluiten.</div><h3 id=stap-4>Stap 4</h3><p>Nu heb je een schets die met twee componenten
+werkt. Als je hem uploadt naar de Arduino, dan
+zouden dus beide onderdelen het moeten doen.</p><p>Maar je wil natuurlijk dat beide componenten
+sámenwerken! Het makkelijkste is een if-statement gebruiken (zie de pagina daarover).
+Een andere mogelijkheid is de sensor-data direct
+gebruiken voor een output; je zou bijvoorbeeld
+waardes uit een lichtsensor direct kunnen
+gebruiken als de graden voor een servo-motor.</p><div class=verdieping>In Arduino-schetsen wordt vaak
+gebruik gemaakt van de functie
+delay(). Dat levert echter nogal
+eens problemen op als je de
+Arduino twee of meer dingen
+tegelijk willen laten doen. De
+oplossing daarvoor is een timer
+zetten; hoe dat moet, lees je op de
+pagina’s verderop over timers en
+millis().</div><h3 id=bestaande-code-gebruiken>Bestaande code gebruiken</h3><p>Wat je óók kunt doen, is code van anderen gebruiken. Stel dat je een
+kleurensensor wil gebruiken samen met een paar LED-lampjes, dan kun je bij
+Google iets intypen als ‘Arduino kleurensensor LEDs’. Je vindt ongetwijfeld een
+heleboel handleidingen die laten zien welke onderdelen ze gebruikten en hoe,
+inclusief de nodige code.</p><p>Als je zulke code overneemt, lees die code dan in ieder geval goed door en probeer
+te begrijpen wat elk stukje doet. Als de code niet werkt, gebruik dan de checklist
+aan het eind van deze handleiding om het probleem op te lossen.</p><h2 id=dingen-laten-bewegen-met-servo-motors>Dingen laten bewegen met servo-motors</h2><p>De simpelste manier om met de Arduino iets te laten
+bewegen (robotjes, plotters, bloempotten die naar het
+licht draaien) is een servo. Er zijn twee soorten:
+servo’s die draaien tussen 0 en 180 graden, en servo’s
+die door kunnen blijven draaien.<br><em>Zulke ‘continuous’ servo’s vertalen de richting die je ze opgeeft in een draairichting en snelheid. ‘0’ is 10
+bijvoorbeeld volle snelheid naar links, ‘90’ is stilstaan en ‘110’ betekent ‘draai langzaam naar rechts’. Als je
+bij zo’n servo toch wil weten hoe ver hij is gedraaid, heb je een ‘rotary encoder’ of ‘encoder wheel’ nodig.</em></p><p>De meeste kleine servo-motors hebben drie draadjes:</p><ul><li>bruin is ground, dus min</li><li>rood is voltage, dus plus</li><li>geel is de pin waarop de Arduino de servo aanstuurt.</li></ul><p>Sluit de servo aan, met de gele draad op pin 9. Als je deze schets uploadt, gaat het
+motortje heen en weer draaien: Bestand > Voorbeelden > Servo > Sweep</p><p>Zoals je ziet in de code, wordt de servo naar een bepaalde plek gestuurd met de
+functie myservo.write(). In de schets gebeurt dat in een for-loop om hem
+stapsgewijs heen en weer te laten draaien, maar je kunt de servo bijvoorbeeld ook
+naar de middenpositie sturen met het commando</p><h3 id=grotere-servos>Grotere servo’s</h3><p>De servo zoals op de foto is klein
+en niet erg sterk. Er zijn ook (veel)
+sterkere servo’s. Die kun je ook
+met de Arduino aansturen, maar
+om ze van stroom te voorzien is
+een externe batterij nodig:</p><h3 id=oefening-4>Oefening</h3><p>Stuur de servo een paar keer naar verschillende standen, en laat hem tussendoor
+een seconde wachten. Hint: de for-loops heb je hiervoor niet nodig, want aan een
+paar myservo.write’s en delay()’s heb je genoeg.</p><h2 id=tot-slot>Tot slot</h2><p>Je kunt met de Arduino ontelbaar veel combinaties maken met verschillende inputs
+en outputs. Je kunt bijvoorbeeld een MP3-speler geluiden laten horen als een
+bewegingssensor beweging detecteert, of LED-strips van kleur laten veranderen op
+basis van een hartslag die je meet met een hartslagsensor.</p><p><img src=imgs/ArduinoPlantenVochtSensor.png alt="Arduino planten vochtsensor"></p><p>Wat je kunt maken met elektronica wordt praktisch nergens meer door beperkt. Onderdelen zijn ontzettend goedkoop
+geworden, en de informatie over hoe je ze moet aansluiten en kunt gebruiken is altijd online te vinden. Zoek bijvoorbeeld
+op Google naar ‘Arduino planten vochtsensor’ en je vindt duizenden handleidingen die niet alleen laten zien
+hoe je zo’n sensor aansluit op je Arduino, maar die ook de nodige code delen.</p><p>Een paar sites zijn met name aan te raden voor inspiratie en praktische informatie:</p><ul><li>Instructables: <a href=https://www.instructables.com/circuits/arduino/projects/>https://www.instructables.com/circuits/arduino/projects/</a></li><li>Arduino: <a href=https://blog.arduino.cc/>https://blog.arduino.cc/</a> en <a href=https://www.arduino.cc/reference/en/>https://www.arduino.cc/reference/en/</a></li><li>Hackster.io: <a href=https://www.hackster.io/arduino>https://www.hackster.io/arduino</a></li></ul><p>Het belangrijkste is dat je ziet dat iedereen kan programmeren en toffe dingen kan
+maken met elektronica. Niemand kan of weet alles meteen, maar met oefening en
+gewoon blijven proberen kom je heel ver. Er is ontzettend veel mogelijk, en jij hoort
+bij de mensen die gave dingen kunnen maken.</p><h2 id=extra>Extra</h2><h3 id=problemen-oplossen>Problemen oplossen</h3><h4 id=problemen-met-verbinding>Problemen met verbinding</h4><p>Dit is een lijst van mogelijke oplossingen als je er niet in slaagt om code te
+uploaden naar de Arduino. Als de eerste oplossing niet helpt, probeer dan de
+volgende oplossingen, in de volgorde waarop ze genoemd worden.</p><ol><li>Selecteer de juiste poort.
+Als je een foutmelding krijgt bij het uploaden, dan is het meestal omdat de
+computer niet weet op welke USB-poort de Arduino te vinden is:<br><img src=imgs/ArduinoFoutmelding.png alt="Aruino foutmelding"><br>Je kunt dat oplossen door de juiste poort te selecteren in het menu
+Hulpmiddelen onder ‘Poort’. Soms staat er al bij waar de Arduino is verbonden,
+maar de kans bestaat dat je zelf moet raden. Het zou een adres moeten zijn
+met ‘usb’ erin, ‘serial’ of ‘COM’.
+Zorg dat onder ‘Board’ de juiste Arduino is geselecteerd (meestal Arduino Uno).</li><li>Zit de USB-kabel er aan beide kanten goed in?</li><li>Probeer eens een andere USB-poort (en dan weer stap 1).</li><li>Herstart de Arduino-software.</li><li>Probeer het uploaden zonder dat er iets met de Arduino verbonden is. (Als dit
+helpt dan is er ergens kortsluiting óf is er iets verbonden met de verkeerde pin.)</li><li>Herstart de computer (en zie dan weer stap 1).</li><li>Als je computer de Arduino niet kan vinden onder ‘Poort’, dan kan het nodig zijn
+om een driver installeren. Voer de instructies uit op <a href=https://www.arduino.cc/en/>https://www.arduino.cc/en/</a>
+Guide/DriverInstallation (en doe dan weer stap 1).</li><li>Probeer een andere Arduino</li></ol><h4 id=problemen-met-de-code>Problemen met de code</h4><p>De foutmeldingen die Arduino geeft onderin beeld zijn vaak behoorlijk helder.
+Probeer ze te begrijpen zodat je sneller een probleem kunt opsporen en oplossen.</p><ol><li>Waar zit de fout? Vind de regel die rood is gemaakt. De fout kan ook direct
+boven die regel zitten.</li><li>De meest voorkomende fout is dat een functie of commando niet goed
+afgesloten wordt. Staat er een ‘}’ te veel of te weinig? Zorg dat er voor elke ‘(’
+een ‘)’ is en voor elke ‘{’ ook een afsluitende ‘}’ en dat elk commando wordt
+afgesloten met een puntkomma.</li><li>Staat alle code wel echt ín setup() of loop()? Dus binnen de gekrulde haken van
+een van beide functies?</li><li>Als je schets een library aanroept die niet gevonden kan worden, dan krijg je de
+foutmelding ‘No such file or directory’. Installeer in dat geval alsnog de
+bijbehorende library; zie daarvoor de pagina ‘Libraries installeren’ in deze
+handleiding.</li><li>Zoek online naar oplossingen voor de foutmelding die je krijgt. Zoek naar
+‘Arduino “exacte foutmelding tussen aanhalingstekens”’.</li><li>Gebruik een heel andere schets. Probeer een van de voorbeeldschetsen in
+Arduino en pas die aan, of probeer online code te vinden die doet wat jij wil.</li></ol><h4 id=geen-foutmelding-maar-toch-niet-de-werking-die-je-verwacht>Geen foutmelding, maar toch niet de werking die je verwacht?</h4><ul><li>Check of de componenten echt met de juiste pinnen zijn verbonden en dat dat
+ook de pinnen zijn die genoemd worden in de code.</li><li>Bij gebruik van een breadboard: zitten de componenten écht op het goede rijtje?</li><li>Gebruik Serial.println()’s om te weten wat de Arduino aan het doen is (zie de
+uitleg daarover op de pagina over de seriële plotter).</li><li>Probeer een ander exemplaar van het onderdeel dat je probeert aan te sluiten,
+om te zien of dat misschien het probeem is. Probeer eventueel ook andere
+draadjes of zelfs een ander breadboard.</li></ul><h3 id=libraries-installeren>Libraries installeren</h3><p>Je hoeft lang niet alles helemaal zelf te programmeren. Er is al heel veel software geschreven door mensen
+die hun werk graag met je delen (dat heet open-source software en het is geweldig!).</p><p><img src=imgs/ArduinoDisplayRemote.png alt="Arduino met display en afstandsbediening"></p><p>Als zulke software uitgebreider is dan een enkele schets, dan heet zo’n software-pakketje een bibliotheek, of library.
+Het Arduino-programma heeft een aantal libraries al voor-geïnstalleerd, maar soms zul je dat zelf moeten doen.</p><p>Stel dat je een infrarood-sensor wil uitproberen om met een afstandsbediening je Arduino-project te kunnen bedienen. Dat
+wordt je makkelijk gemaakt door een library die IRremote heet.</p><p><img src=imgs/BibliotheekBeheer.png alt="Arduino bibliotheek beheer"></p><p>Ga naar het menu Hulpmiddelen > Bibliotheken beheren. Zoek op ‘IRremote’ in het zoekvenster,
+en dan staat hij waarschijnlijk als tweede in de lijst resultaten.</p><p>Klik op ‘Installeren’ en dan ‘sluiten’.</p><p>Als je een library geïnstalleerd hebt, kun je via
+Bestand > Voorbeelden de voorbeeldschetsen
+openen die bij de library horen. Met die
+schetsen kun je snel leren hoe je de library
+kunt gebruiken in je eigen project.<br><em>In het geval van IRremote: Bestand > Voorbeelden > IRremote > IR receiveDemo. Meer uitleg over 12
+afstandsbedieningen en hoe je de library gebruikt vind je hier:
+<a href=https://www.circuitbasics.com/arduino-ir-remote-receiver-tutorial/>https://www.circuitbasics.com/arduino-ir-remote-receiver-tutorial/</a></em></p><div class=verdieping>Niet álle bibliotheken kun je op deze
+manier installeren. Soms moet je een
+map met bestanden downloaden en
+die dan handmatig toevoegen aan de
+map waar Arduino de bibliotheken
+bewaart. De locatie van die map vind
+je via het menu Arduino > Preferences.</div><h3 id=een-timer-voor-arduino-programmas-millis>Een timer voor Arduino-programma’s: millis()</h3><p>Als je Arduino twee dingen tegelijk wil laten doen, zoals
+een lampje laten knipperen en ondertussen in de gaten
+houden of een knop wordt ingedrukt, dan is het belangrijk
+om géén delay() te gebruiken. De functie delay() zorgt
+ervoor dat de de Arduino een tijdje wacht, en ondertussen
+staat alles stil. Als hij bijvoorbeeld wacht tot de LED weer
+aan of uitgezet kan worden, kan hij dus niet tegelijk in de
+gaten houden of de knop wordt ingedrukt.</p><p>Om zoiets wel tegelijk te kunnen doen, laten we Arduino een soort stopwatch
+gebruiken. Die stopwatch heet millis(). Met die functie kunnen we in de gaten
+houden hoe lang onze schets al loopt, en op gezette tijden iets doen.</p><p>Hieronder zie je bijvoorbeeld een schets die elke drie seconden een LED aan- of
+uitzet, zónder in de tussentijd alles te blokkeren met delay().<br><em>In het Engels heet deze oplossing ook ‘non-blocking code’, code die niet blokkeert. Er is een handige
+library voor, die arduino-timer heet. Daarmee kun je meerdere ‘stopwatches’ in één schets hebben. Als je
+hem installeert (zie ‘Libraries installeren’), zie je de mogelijkheden in de bijbehorende voorbeeldschetsen.</em></p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:green>// Begintijd is het aantal milliseconden sinds het script begon.
+</span><span style=color:green></span><span style=color:#2b91af>int</span> begintijd = millis();
+
+<span style=color:#2b91af>void</span> setup() {
+    pinMode(LED_BUILTIN, OUTPUT);   <span style=color:green>// Het ingebouwde LEDje op de Arduino activeren
+</span><span style=color:green></span>}
+
+<span style=color:#2b91af>void</span> loop() {
+    <span style=color:#00f>if</span> ((millis() - begintijd) &gt; 3000) {    <span style=color:green>// Zijn er al 3 seconden verstreken?
+</span><span style=color:green></span>        <span style=color:green>// Zo ja, doe dan dit:
+</span><span style=color:green></span>
+        <span style=color:green>// verander de LED naar aan of uit
+</span><span style=color:green></span>        <span style=color:green>// (het uitroepteken betekent &#39;maak er van wat hij nu NIET is&#39;)
+</span><span style=color:green></span>        digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN) );
+
+        <span style=color:green>// reset de stopwatch: verander begintijd naar het aantal milliseconden NU
+</span><span style=color:green></span>        begintijd = millis();
+    }
+
+    <span style=color:green>// Nu kunnen we hier andere dingen doen, zoals motortjes laten draaien, of in 
+</span><span style=color:green></span>    <span style=color:green>// de gaten houden of knoppen worden ingedrukt, zónder te wachten op delays.
+</span><span style=color:green></span>}</code></pre></div><h3 id=wat-je-kunt-meten-en-doen-met-arduino>Wat je kunt meten en doen met Arduino</h3><table><thead><tr><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr><td>Afstandssensor</td><td>Licht: lampen, lasers, LEDs, EL wire, glasvezel</td></tr><tr><td>Accelerometer</td><td>Geluid: speakers, transducers, versterkers, MP3-spelers<br><em>Er zijn er verschillende, maar deze is goedkoop en gemakkelijk aan te sluiten: <a href=https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299>https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299</a></em></td></tr><tr><td>Gyroscoop</td><td>Motoren: servo’s, heel precieze stappenmotoren, hele snelle DCmotoren, heel sterke gear motors, trilmotors, lineaire actuatoren, ventilatoren.</td></tr><tr><td>Kompas</td><td>Solenoids</td></tr><tr><td>Temperatuur</td><td>Elektromagneten, ferrofluids</td></tr><tr><td>Relatieve luchtvochtigheid</td><td>Video (animaties, video’s, VR/AR)</td></tr><tr><td>Vochtsensor (planten water geven!)</td><td>LCD-display (zoals in snoepautomaten)</td></tr><tr><td>Barometer</td><td>Pomp (bijv. om het te laten regenen of een beeld te laten huilen)</td></tr><tr><td>Lichtsensor</td><td>Metaal dat van vorm verandert</td></tr><tr><td>Kleurensensor</td><td>Warmte- en koel-elementen</td></tr><tr><td>Draaiknoppen en lineaire potmeters (zoals de schuiven op mengpanelen)</td><td>Rookmachine</td></tr><tr><td>Microfoons (of andere audio-signalen)</td><td>Website of sociale media (automatisch informatie posten op basis van sensorgegevens)</td></tr><tr><td>Aanraking</td><td></td></tr><tr><td>Schakelaars</td><td></td></tr><tr><td>Keyboard en muis</td><td></td></tr><tr><td>Vingerafdruk</td><td></td></tr><tr><td>Camera’s</td><td></td></tr><tr><td>Bewegingssensor</td><td></td></tr><tr><td>Infrarood-ontvanger (je project besturen met afstandsbediening!)</td><td></td></tr><tr><td>Hartslag<br><em>Sommige hartslagsensors werken amper. Deze is wat duurder, maar geeft wel redelijk goede meetresultaten: <a href=https://www.kiwi-electronics.nl/pim-438>https://www.kiwi-electronics.nl/pim-438</a></em></td><td></td></tr><tr><td>Rook</td><td></td></tr><tr><td>Gas</td><td></td></tr><tr><td>Straling</td><td></td></tr><tr><td>Vlammendetector</td><td></td></tr><tr><td>Magneetvelden</td><td></td></tr><tr><td>Trilling</td><td></td></tr><tr><td>Buigsensor</td><td></td></tr><tr><td>Stroming</td><td></td></tr><tr><td>Hersenactiviteit</td><td></td></tr></tbody></table><p><img src=imgs/ArduinoOnderdelen.png alt="Arduino onderdelen"></p><p>Dit is zeker geen complete lijst, maar je ziet vast zo al dat de mogelijkheden
+eindeloos zijn. Welke combinaties van inputs en outputs lijken jou interessant?</p><h2 id=licentie>Licentie</h2><p>Deze handleiding is geschreven door Jaap Meijers (instructeur/beheerder van het
+Hacklab van de Koninklijke Academie van Beeldende Kunsten in Den Haag en mentor van <a href=https://coderdojo-nijmegen.nl>CoderDojo Nijmegen</a>) en
+gepubliceerd in mei 2021 onder de <a href=https://creativecommons.org/licenses/by/4.0/deed.nl>Creative Commons Attribution 4.0 Internationallicentie</a>.
+Dat betekent dat je deze handleiding vrij mag verspreiden en aanpassen,
+mits je de bron vermeldt en verwijst naar de licentie.</p><h3 id=verantwoording-fotos>Verantwoording foto’s</h3><ul><li>Arduino met relais en lamp: Adilson Thomsen/FilipeFlop/Wikimedia</li><li>Breadboard: Victoria.nunez2/Wikimedia</li><li>LDR: Arnau 944/Wikimedia</li><li>Potmeter: Iainf/Wikimedia</li><li>Piezo buzzer: Adafruit/Flickr</li><li>Ultrasone afstandssensor: Nowforever/Wikimedia</li><li>Microservo: eigen foto</li><li>Arduino met bloemen: madshobye/Instructables.com</li><li>Diagram IR-remote bij ‘Libraries installeren’: Benne de Bakker/makerguides.com</li><li>Stopwatch: Matthew/Flickr</li><li>Losse onderdelen: Robin Glauser/Unsplash</li><li>Diagrammen met potmeter, ultrasone afstandssensor en servo: Fritzing.org</li><li>Alle screenshots van Arduino IDE, diagram bij ‘Digitale sensors’ en de foto van Arduino-bord bij
+‘Wat is de Arduino’: Arduino.cc</li></ul></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Honigcomplex | Unit 40<br>Waalbandijk 16<br>6541 AJ Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2021</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
+<a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
+<a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
+<a href=https://www.eventbrite.nl/o/stichting-coderdojo-nijmegen-12043791497 target=_blank rel="noopener noreferrer"><img src=/imgs/eventbrite.png alt=Eventbrite></a>
+<a href=https://github.com/coderdojonijmegen target=_blank rel="noopener noreferrer"><img src=/imgs/github.png alt=GitHub></a></div></footer><script src=/js/bundle.js></script></body></html>
