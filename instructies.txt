@@ -9,3 +9,4 @@ coderdojonijmegen/mblock content/instructies/mblock
 coderdojonijmegen/web-development content/instructies/web-development
 coderdojonijmegen/coding-for-web-php content/instructies/web-development-php
 coderdojonijmegen/ninja-chat content/instructies/javascript-ninja-chat
+coderdojonijmegen/arduino-snelle-introductie content/instructies/arduino-snelle-introductie
