@@ -40,7 +40,7 @@ class Dojo:
         dojo_event = requests.get(dojo_event_url).text
         dojo_event_soup = BeautifulSoup(dojo_event, 'html.parser')
 
-        dojo_event_title = dojo_event_soup.find_all("div", {"data-automation": "listing-event-description"})[0].text
+        dojo_event_title = dojo_event_soup.find_all("h1", {"data-automation": "listing-title"})[0].text
         dojo_event_hero_picture_url = dojo_event_soup.find_all("div", "listing-hero")[0] \
             .find_all("picture")[0] \
             .attrs['content']
