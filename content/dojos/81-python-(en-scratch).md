@@ -5,13 +5,13 @@ draft: false
 headercolor: "orange-background"
 wanneer: 
   van: 2021-10-02T12:00:00+0200
-  tot: 2021-10-30T14:30:00+0200
+  tot: 2021-10-02T14:30:00+0200
 waar: "Bibliotheek Zwanenveld
 Zwanenveld 9098 
 6538 SC Nijmegen 
 Netherlands"
 eventbrite:
-  inschrijventot: 2021-10-30T00:00:00.0Z
+  inschrijventot: 2021-10-02T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-81-python-en-scratch-175798466947"
 instructies:
   - 
@@ -46,7 +46,7 @@ We houden ons aan de regels die gelden in de bibliotheek. Kijk even op <a href="
 <h2>Wanneer en waar?</h2>
 
 
-Zaterdag 2 september van 12:00u tot 14:30u. We zitten in de bibliotheek Gelderland Zuid, <a href="https://www.obgz.nl/openingstijden/gids/detail.279863.html/bibliotheek-zwanenveld/" rel="nofollow noopener noreferrer" target="_blank">vestiging Zwanenveld</a>. Het adres is  Zwanenveld 9098, 6538 SC Nijmegen.
+Zaterdag 2 oktober van 12:00u tot 14:30u. We zitten in de bibliotheek Gelderland Zuid, <a href="https://www.obgz.nl/openingstijden/gids/detail.279863.html/bibliotheek-zwanenveld/" rel="nofollow noopener noreferrer" target="_blank">vestiging Zwanenveld</a>. Het adres is  Zwanenveld 9098, 6538 SC Nijmegen.
 <h2>No show?</h2>
 
 
