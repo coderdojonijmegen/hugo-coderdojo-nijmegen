@@ -4,6 +4,7 @@ coderdojonijmegen/love2d-snake content/instructies/love2d-snake
 coderdojonijmegen/scratch-snake content/instructies/scratch-snake
 coderdojonijmegen/scratch-space-shooter content/instructies/scratch-space-shooter
 coderdojonijmegen/scratch3 content/instructies/scratch-videosensing
+coderdojonijmegen/scratch-art content/instructies/scratch-art
 coderdojonijmegen/microbit content/instructies/microbit
 coderdojonijmegen/mblock content/instructies/mblock
 coderdojonijmegen/web-development content/instructies/web-development
