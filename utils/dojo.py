@@ -18,10 +18,11 @@ class Dojo:
         events_page = requests.get(CODER_DOJO_NIJMEGEN_EVENTS_PAGE_URL).text
         events_page_soup = BeautifulSoup(events_page, 'html.parser')
 
-        future_event_cards = events_page_soup.find_all("div", "eds-event-card--consumer")
+        future_event_cards = events_page_soup.find_all("div", {"id": "events"})
         future_event_urls = []
         for future_event_card in future_event_cards:
             future_event_urls.append(future_event_card
+                                     .find("div")
                                      .find("a", "eds-event-card-content__action-link")
                                      .attrs['href']
                                      .split('?')[0]
