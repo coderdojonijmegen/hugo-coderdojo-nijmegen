@@ -183,8 +183,8 @@ Python snapt geen Nederlands. Voor een overzicht van de kleuren die mogelijk zij
 Turtle instructies</a>.<br>Op regel 4 maken we de achtergrond zwart. Hierdoor komen de kleuren in het lijstje beter uit.<br>Op regel 7 wordt een kleur gekozen uit het lijstje en geactiveerd.</p><p><strong>Opdracht 11</strong>: Neem de code over en kies eens wat andere kleuren. Je kunt ook het lijstje kort of langer maken, maar
 dan moet het getal 7 op regel 7 aangepast worden, zodat het gelijk is aan het aantal kleuren in de lijst.</p><h2 id=lissajous>Lissajous</h2><p>Met lijnen, polygonen en cirkels kun je al mooie plaatjes maken. Met een
 <a href=https://nl.wikipedia.org/wiki/Lissajousfiguur>Lissajous</a> wordt het nóg interessanter.</p><p>Met een wiskundige formule worden twee golven gecombineerd:</p><p><img src=imgs/golf.gif alt="Sinussen en cirkel"></p><h3 id=sinus>Sinus</h3><p>Allereerst tekenen we een sinus-golf:</p><p><img src=imgs/sinus.png alt=Sinus-golf></p><p>Met deze code:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
@@ -193,19 +193,19 @@ dan moet het getal 7 op regel 7 aangepast worden, zodat het gelijk is aan het aa
 </span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> turtle <span style=color:#00f>import</span> *
-<span style=color:#00f>from</span> math <span style=color:#00f>import</span> sin
-
+<span style=display:block;width:100%;background-color:#e5e5e5><span style=color:#00f>from</span> math <span style=color:#00f>import</span> sin
+</span>
 penup()
 goto(-400, 0)
 pendown()
 <span style=color:#00f>for</span> i <span style=color:#00f>in</span> range(-400, 400):
 <span style=display:block;width:100%;background-color:#e5e5e5>    goto(i, 100 * sin((i + 400) / 50))
 </span>
-done()</code></pre></td></tr></table></div></div><p>Het commando <code>sin</code> zorgt hier voor de golfvorm. Afhankelijk van het getal dat je als parameter mee geeft, gaat de golf
+done()</code></pre></td></tr></table></div></div><p><strong>Let op: zorg dat je regel 2 overneemt, anders wordt het <code>sinus</code> commando niet herkend.</strong></p><p>Het commando <code>sin</code> zorgt hier voor de golfvorm. Afhankelijk van het getal dat je als parameter mee geeft, gaat de golf
 sneller of langzamer.</p><p><strong>Opdracht 12</strong>: Vervang getal 50 op regel 8 eens door een groter of kleiner getal. Wat gebeurt er?
 <strong>Opdracht 13</strong>: Vervang getal 100 op regel 8 eens door een groter of kleiner getal. Wat gebeurt er?</p><h3 id=lissajous-1>Lissajous</h3><p>Als we twee sinussen in één formule combineren, dan kun je een Lissajous tekenen. Kijk eens naar de volgende code:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
 </span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
 </span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
@@ -219,8 +219,8 @@ sneller of langzamer.</p><p><strong>Opdracht 12</strong>: Vervang getal 50 op re
 </span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> turtle <span style=color:#00f>import</span> *
-<span style=display:block;width:100%;background-color:#e5e5e5><span style=color:#00f>from</span> math <span style=color:#00f>import</span> sin
-</span>
+<span style=color:#00f>from</span> math <span style=color:#00f>import</span> sin
+
 <span style=display:block;width:100%;background-color:#e5e5e5>a = 4
 </span><span style=display:block;width:100%;background-color:#e5e5e5>b = 3
 </span><span style=display:block;width:100%;background-color:#e5e5e5>x = 0
@@ -232,7 +232,7 @@ sneller of langzamer.</p><p><strong>Opdracht 12</strong>: Vervang getal 50 op re
 </span><span style=display:block;width:100%;background-color:#e5e5e5>    x += a
 </span><span style=display:block;width:100%;background-color:#e5e5e5>    y += b
 </span>
-done()</code></pre></td></tr></table></div></div><p><strong>Let op: zorg dat je regel 2 overneemt, anders wordt het <code>sinus</code> commando niet herkend.</strong></p><p>Op regel 11 zie je de combinatie van twee sinussen in het <code>goto</code> commando. Met dit commando verschuif je de pen
+done()</code></pre></td></tr></table></div></div><p>Op regel 11 zie je de combinatie van twee sinussen in het <code>goto</code> commando. Met dit commando verschuif je de pen
 over het plaatje. Met de eerste parameter horizontaal en met de tweede verticaal. Door voor beiden een sinus te
 gebruiken, schuift de pen zowel horizontaal en verticaal.</p><p><img src=imgs/4-3-lissajous.png alt="4 - 3 lissajous"></p><p><strong>Opdracht 13</strong>: Neem de code over en voer het uit. Zie je hetzelfde plaatje als hierboven?<br><strong>Opdracht 14</strong>: Maak de waarde voor s (regel 8) eens kleiner? Wat gebeurt er? En als je het groter maakt?<br><strong>Opdracht 15</strong>: Variabelen <em>a</em> en <em>b</em> bepalen de vorm van de Lissajous. Probeer eens andere waarden, zoals bijvoorbeeld
 <em>a</em> = 18 en <em>b</em> = 19. Hoe ziet dat er uit?</p><h2 id=tot-slot>Tot slot</h2><p>Zoals je ziet kun je met Python Turtle leuke kunststukjes maken. Gebruik je fantasie, maar vooral durf te proberen met
