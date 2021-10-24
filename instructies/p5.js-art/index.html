@@ -1,0 +1,95 @@
+<!doctype html><html lang=nl-nl><head><title>P5.js - Art</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.61db37bcd148e662d2261c1d2d72717290e0cf0a49801d958fc7f22b8326207d.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/p5.js-art>P5.js art</a></li></ul></breadcrumbs><h1>P5.js - Art</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#introductie>Introductie</a><ul><li><a href=#editor>Editor</a></li></ul></li><li><a href=#de-basis>De basis</a></li></ul></nav></aside><p>Kunst maken in de browser.</p><h2 id=introductie>Introductie</h2><p>Naast kunst met <a href=/instructies/scratch-art/>Scratch</a> en <a href=/instructies/python-art/>Python</a>, kun je ook kunst
+programmeren met <a href=https://processing.org/>Processing</a>.</p><p>Er is ook een Processing variant voor in de browser. Deze heet <a href=https://p5js.org/>p5.js</a>. We gaan er in deze instructie
+mee aan de slag. Eerst een voorbeeld van wat je ermee kunt doen:</p><div id=sketch-holder><script src=p5.js-widget/p5.js_0.4.23/p5.js></script><script src=sketch.js></script></div><div class=toggle><div class=toggle_header>de code bij dit voorbeeld</div><div style=display:none><p>Favoriet van Jaap! 😉</p><p>Kopie van <a href=https://openprocessing.org/sketch/422446>Sketch 422446</a>.<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#000;font-weight:700>var</span> circle <span style=color:#000;font-weight:700>=</span> <span style=color:#099>200</span>;
+<span style=color:#000;font-weight:700>var</span> rot;
+<span style=color:#000;font-weight:700>var</span> col;
+<span style=color:#000;font-weight:700>var</span> freq <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.000005</span>;
+<span style=color:#000;font-weight:700>var</span> cont <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0</span>;
+<span style=color:#000;font-weight:700>var</span> r;
+
+<span style=color:#000;font-weight:700>function</span> setup() {
+    createCanvas(<span style=color:#099>600</span>, <span style=color:#099>600</span>);
+}
+
+<span style=color:#000;font-weight:700>function</span> draw() {
+    background(<span style=color:#099>242</span>);
+    translate(<span style=color:#099>300</span>, <span style=color:#099>300</span>);
+    rotate(radians(rot));
+    
+    ellipseMode(RADIUS);
+    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i<span style=color:#000;font-weight:700>=</span><span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>&lt;</span><span style=color:#099>500</span>; i <span style=color:#000;font-weight:700>++</span>) {
+        circle<span style=color:#000;font-weight:700>=</span> <span style=color:#099>200</span> <span style=color:#000;font-weight:700>+</span> <span style=color:#099>50</span><span style=color:#000;font-weight:700>*</span>sin(millis()<span style=color:#000;font-weight:700>*</span>freq<span style=color:#000;font-weight:700>*</span>i);
+        col<span style=color:#000;font-weight:700>=</span>map(circle,<span style=color:#099>150</span>,<span style=color:#099>250</span>,<span style=color:#099>255</span>,<span style=color:#099>60</span>);
+        r<span style=color:#000;font-weight:700>=</span>map(circle,<span style=color:#099>150</span>,<span style=color:#099>250</span>,<span style=color:#099>5</span>,<span style=color:#099>2</span>);
+        fill(col,<span style=color:#099>0</span>,<span style=color:#099>74</span>);
+        noStroke();
+        ellipse(circle<span style=color:#000;font-weight:700>*</span>cos(i), circle<span style=color:#000;font-weight:700>*</span>sin(i),r,r);
+        rot<span style=color:#000;font-weight:700>=</span>rot<span style=color:#000;font-weight:700>+</span><span style=color:#099>0.00005</span>;
+    }
+}
+</code></pre></td></tr></table></div></div></div></div><h3 id=editor>Editor</h3><p>p5.js is een Javascript bibliotheek. Deze kun je in elke editor gebruiken. Door een webserver te gebruiken, kun je het
+resultaat bekijken in een webbrowsers. Het is echter makkelijker om een editor in de browser te gebruiken. Ga
+daarvoor naar <a href=p5.js-widget/p5-widget.html target=_blank>deze editor</a>.</p><p>De volgende instructies en voorbeelden gaan ervan uit dat je deze editor gebruikt.</p><h2 id=de-basis>De basis</h2><p>p5.js scripts hebben de volgende basis:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span></span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:#000;font-weight:700>function</span> setup() {
+</span><span style=display:block;width:100%;background-color:#e5e5e5>}
+</span>
+<span style=display:block;width:100%;background-color:#e5e5e5><span style=color:#000;font-weight:700>function</span> draw() {
+</span><span style=display:block;width:100%;background-color:#e5e5e5>}
+</span></code></pre></td></tr></table></div></div><p>Er zijn twee functies die worden aangeroepen door de p5.js bibliotheek:</p><ul><li><code>setup()</code> wordt éénmaal bij de start van het script uitgevoerd</li><li><code>draw()</code> wordt oneindig herhaald en iedere schermvernieuwing aangeroepen (normaal 60 keer per seconde)</li></ul><p>In de <code>setup()</code> functie zet je éénmalige instellingen, zoals bijvoorbeeld een vaste achtegrondkleur. In de <code>draw()</code>
+functie dingen die veranderen, zoals bijvoorbeeld een verschuivende kubus.</p><p>Het volgende voorbeeld tekent een draaiend vierkant:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#000;font-weight:700>function</span> setup() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    createCanvas(<span style=color:#099>300</span>, <span style=color:#099>300</span>);
+</span>}
+
+<span style=color:#000;font-weight:700>function</span> draw() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    background(<span style=color:#099>255</span>);
+</span><span style=display:block;width:100%;background-color:#e5e5e5>    translate(width <span style=color:#000;font-weight:700>/</span> <span style=color:#099>2</span>, height <span style=color:#000;font-weight:700>/</span> <span style=color:#099>2</span>);
+</span><span style=display:block;width:100%;background-color:#e5e5e5>    rotate(frameCount<span style=color:#000;font-weight:700>/</span><span style=color:#099>50</span>);
+</span><span style=display:block;width:100%;background-color:#e5e5e5>    rect(<span style=color:#000;font-weight:700>-</span><span style=color:#099>26</span>, <span style=color:#000;font-weight:700>-</span><span style=color:#099>26</span>, <span style=color:#099>52</span>, <span style=color:#099>52</span>);
+</span>}
+</code></pre></td></tr></table></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Honigcomplex | Unit 40<br>Waalbandijk 16<br>6541 AJ Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2021</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
+<a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
+<a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
+<a href=https://www.eventbrite.nl/o/stichting-coderdojo-nijmegen-12043791497 target=_blank rel="noopener noreferrer"><img src=/imgs/eventbrite.png alt=Eventbrite></a>
+<a href=https://github.com/coderdojonijmegen target=_blank rel="noopener noreferrer"><img src=/imgs/github.png alt=GitHub></a></div></footer><script src=/js/bundle.js></script></body></html>
