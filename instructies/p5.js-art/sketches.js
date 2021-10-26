@@ -58,7 +58,7 @@ new p5(function(ctx) {
     ctx.draw = function() {
         let speed = ctx.abs(ctx.mouseX - ctx.pmouseX) + ctx.abs(ctx.mouseY - ctx.pmouseY);
         ctx.stroke(speed);
-        ctx.fill(ctx.color(150 - speed, speed, 128 + speed))
+        ctx.fill(ctx.color(255 - speed, speed, 128 + speed))
         ctx.ellipse(ctx.mouseX, ctx.mouseY, speed, speed);
     }
 }, 'voorbeeld2')
