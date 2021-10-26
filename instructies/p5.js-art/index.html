@@ -1,4 +1,4 @@
-<!doctype html><html lang=nl-nl><head><title>P5.js - Art</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.662622f28ab20db1c226430c1682906ca9939860fb6873f9dc60a990f9bc69bf.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/p5.js-art>P5.js art</a></li></ul></breadcrumbs><h1>P5.js - Art</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#introductie>Introductie</a><ul><li><a href=#editor>Editor</a></li></ul></li><li><a href=#de-basis>De basis</a></li><li><a href=#cirkels-en-muis>Cirkels en muis</a><ul><li><a href=#een-cirkel>Een cirkel</a></li></ul></li></ul></nav></aside><p>Kunst maken in de browser.</p><script src=p5.js-widget/p5.js_0.4.23/p5.js></script><script src=sketches.js></script><h2 id=introductie>Introductie</h2><p>Naast kunst met <a href=/instructies/scratch-art/>Scratch</a> en <a href=/instructies/python-art/>Python</a>, kun je ook kunst
+<!doctype html><html lang=nl-nl><head><title>P5.js - Art</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.662622f28ab20db1c226430c1682906ca9939860fb6873f9dc60a990f9bc69bf.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/p5.js-art>P5.js art</a></li></ul></breadcrumbs><h1>P5.js - Art</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#introductie>Introductie</a><ul><li><a href=#editor>Editor</a></li></ul></li><li><a href=#de-basis>De basis</a></li><li><a href=#cirkels-en-muis>Cirkels en muis</a><ul><li><a href=#tekenvlak>Tekenvlak</a></li><li><a href=#een-cirkel>Een cirkel</a></li><li><a href=#de-cirkel-bewegen-met-de-muis>De cirkel bewegen met de muis</a></li><li><a href=#een-kleurtje-voor-de-cirkel>Een kleurtje voor de cirkel</a></li><li><a href=#de-cirkel-grootte-afhankelijk-van-de-snelheid>De cirkel grootte afhankelijk van de snelheid</a></li><li><a href=#de-kleur-afhankelijk-van-de-snelheid>De kleur afhankelijk van de snelheid</a></li></ul></li></ul></nav></aside><p>Kunst maken in de browser.</p><script src=p5.js-widget/p5.js_0.4.23/p5.js></script><script src=sketches.js></script><h2 id=introductie>Introductie</h2><p>Naast kunst met <a href=/instructies/scratch-art/>Scratch</a> en <a href=/instructies/python-art/>Python</a>, kun je ook kunst
 programmeren met <a href=https://processing.org/>Processing</a>.</p><p>Er is ook een Processing variant voor in de browser. Deze heet <a href=https://p5js.org/>p5.js</a>. We gaan er in deze instructie
 mee aan de slag. Eerst een voorbeeld van wat je ermee kunt doen:</p><div id=demo></div><div class=toggle><div class=toggle_header>de code bij dit voorbeeld</div><div style=display:none><p>Favoriet van Jaap! 😉</p><p>Kopie van <a href=https://openprocessing.org/sketch/422446>Sketch 422446</a>.<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
@@ -96,7 +96,124 @@ er?<br><strong>Opdracht 4</strong>: regel 8 zorgt ervoor dat het vierkant draait
 een waarde van 100?<br><strong>Opdracht 5</strong>: regel 9 tekent het vierkant. De eerste twee getallen -26 verschuiven het draaipunt van het vierkant
 horizontaal en vertikaal. De twee laatste bepalen de hoogte en breedte. Vervang de getallen 52 eens door 75. Wat
 gebeurt er? En als je één van de twee 52 laat en de ander veranderd naar 75?</p><p>Na het uitvoeren van deze eerste opdrachten begrijp je een beetje hoe het werkt. In de volgende hoofdstukken gaan we
-verder met meer voorbeelden en uitleg.</p><h2 id=cirkels-en-muis>Cirkels en muis</h2><p>In dit hoofdstuk gaan we kunst maken met je muis. Beweeg je muis maar eens over het grijze vlak hieronder. 😉</p><div class=p5js_voorbeeld id=voorbeeld2></div>Stap voor stap gaan we dit nabouwen.<h3 id=een-cirkel>Een cirkel</h3><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+verder met meer voorbeelden en uitleg.</p><h2 id=cirkels-en-muis>Cirkels en muis</h2><p>In dit hoofdstuk gaan we kunst maken met je muis. Beweeg je muis maar eens over het grijze vlak hieronder. 😉</p><div class=p5js_voorbeeld id=voorbeeld2></div>Stap voor stap gaan we dit nabouwen.<h3 id=tekenvlak>Tekenvlak</h3><p>We beginnen met het vlak waarin we de cirkels gaan tekenen:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>function</span> setup() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    createCanvas(710, 400);
+</span><span style=display:block;width:100%;background-color:#e5e5e5>    background(102);
+</span>}
+
+<span style=color:#00f>function</span> draw() {
+}
+</code></pre></td></tr></table></div></div><p><strong>Opdracht 6</strong>: neem bovenstaande code over in de editor en voer het programma uit. Je hebt nu een grijs vlak.</p><h3 id=een-cirkel>Een cirkel</h3><p>De volgende stap is een cirkel:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>function</span> setup() {
+    createCanvas(710, 400);
+    background(102);
+}
+
+<span style=color:#00f>function</span> draw() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    ellipse(300, 200, 60, 60);
+</span>}
+</code></pre></td></tr></table></div></div><p><strong>Opdracht 7</strong>: neem regel 7 over in je code en voer het programma uit. Er verschijnt nu een witte cirkel in het grijze
+vlak. Wat gebeurt er als je de getallen 300 en 200 veranderd? En als je de getallen 60 veranderd?</p><h3 id=de-cirkel-bewegen-met-de-muis>De cirkel bewegen met de muis</h3><p>Om de cirkel te bewegen met de muis, moet je er voor zorgen dat de cirkel de positie van de muis volgt:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>function</span> setup() {
+    createCanvas(710, 400);
+    background(102);
+}
+
+<span style=color:#00f>function</span> draw() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    ellipse(mouseX, mouseY, 60, 60);
+</span>}
+</code></pre></td></tr></table></div></div><p><strong>Opdracht 8</strong>: vervang de getallen 300 en 200 in regel 7 met <code>mouseX</code> en <code>mouseY</code>. Deze twee variabelen bevatten de
+horizontale positie (<code>mouseX</code>) en vertikale positie (<code>mouseY</code>) van de muis. Voor je programma uit. Beweegt de
+cirkel mee?</p><h3 id=een-kleurtje-voor-de-cirkel>Een kleurtje voor de cirkel</h3><p>Het voorbeeld heeft een gekleurde cirkel. Laten we eens een kleurtje toevoegen:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">9
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>function</span> setup() {
+    createCanvas(710, 400);
+    background(102);
+}
+
+<span style=color:#00f>function</span> draw() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    fill(color(255, 128, 0));
+</span>    ellipse(mouseX, mouseY, 60, 60);
+}
+</code></pre></td></tr></table></div></div><p><strong>Opdracht 9</strong>: voeg regel 7 toe aan je code. Welke kleur heeft de cirkel?</p><p>Het commando <code>fill()</code> vult het figuur dat erna wordt getekend met de kleur die wordt bepaald door het commando <code>color()</code>.
+Het commando <code>color()</code> heeft 3 parameters, een voor rood, een voor groen en een voor blauw. Alle drie de kleuren kunnen
+met een getal tussen 0 en 255 worden bepaald. 0 is geen kleur en 255 is maximaal kleur. <code>color(0, 0, 0)</code> komt daarmee
+overeen met zwart en <code>color(255, 0, 0)</code> met helder rood.</p><p><strong>Opdracht 10</strong>: speel met de kleur van de cirkel door met de getallen 255, 128 en 0 op regel 7 te variëren.</p><h3 id=de-cirkel-grootte-afhankelijk-van-de-snelheid>De cirkel grootte afhankelijk van de snelheid</h3><p>Als je de snelheid van de muis berekent, kun je die gebruiken om de grootte van de cirkel ermee aan te passen:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>function</span> setup() {
+    createCanvas(710, 400);
+    background(102);
+}
+
+<span style=color:#00f>function</span> draw() {
+<span style=display:block;width:100%;background-color:#e5e5e5>    <span style=color:#00f>let</span> snelheid = abs(mouseX - pmouseX) + abs(mouseY - pmouseY)
+</span>    fill(color(255, 128, 0));
+<span style=display:block;width:100%;background-color:#e5e5e5>    ellipse(mouseX, mouseY, snelheid, snelheid);
+</span>}
+</code></pre></td></tr></table></div></div><p><strong>Opdracht 11</strong>: voeg regel 7 toe en pas regel 9 aan. Wordt de cirkel groter en kleiner?</p><p>Op regel 7 wordt de snelheid van de muis berekend. Wil je daar meer over weten, lees dan door in onderstaande grijze
+vak.</p><div class=verdieping><h4 id=hoe-bereken-je-de-snelheid-van-de-muis>Hoe bereken je de snelheid van de muis?</h4><p>Op het moment dat je je muis beweegt, dan beweegt het horizontaal, vertikaal of in beide richtingen als je je muis
+schuin beweegt. Als je je muis langzaam beweegt, dan verschuift het een kleiner stukje per seconde dan als je het
+sneller beweegt.</p><p>De verschuiving die je doet, kun je berekenen door het verschil te bepalen tussen de vorige positie en de huidige. In
+p5.js geven <code>pmouseX</code> en <code>pmouseY</code> de vorige horizontale en vertikale positie en <code>mouseX</code> en <code>mouseY</code> de huidige.</p><p>De horizontale en vertikale verschuiving kun je als volgt tekenen:</p><p><img src=imgs/vector.png alt=vector></p><p>Een schuine beweging, zoals getekend in het plaatje, is het resultaat van een horizontale en vertikale verschuiving.
+De lengte van de schuine pijl is dan een maat voor de snelheid. Hoe langer de pijl, hoe groter de verschuiving en dus
+hoe groter de snelheid.</p><p>De code bevat een berekening voor de maat van de snelheid (niet 100% correct, maar voldoende voor dit doel). Het telt
+de horizontale verschuiving (<code>abs(mouseX - pmouseX</code>) op bij de vertikale verschuiving (<code>abs(mouseY - pmouseY</code>)).</p></div><h3 id=de-kleur-afhankelijk-van-de-snelheid>De kleur afhankelijk van de snelheid</h3><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>function</span> setup() {
+    createCanvas(710, 400);
+    background(102);
+}
+
+<span style=color:#00f>function</span> draw() {
+    <span style=color:#00f>let</span> snelheid = abs(mouseX - pmouseX) + abs(mouseY - pmouseY)
+<span style=display:block;width:100%;background-color:#e5e5e5>    fill(color(255 - snelheid, snelheid, 128 + snelheid))
+</span>    ellipse(mouseX, mouseY, snelheid, snelheid);
+}
+</code></pre></td></tr></table></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
 aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Honigcomplex | Unit 40<br>Waalbandijk 16<br>6541 AJ Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2021</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
 <a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
 <a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
