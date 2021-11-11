@@ -45,5 +45,5 @@ Wij behouden ons het recht voor om wijzigingen aan te brengen in deze privacyver
 Voor vragen over ons privacybeleid of vragen omtrent inzage, wijzigingen in (of verwijdering van) uw persoonsgegevens kunt u te allen tijde contact met ons opnemen via onderstaande gegevens:
 
 Stichting CoderDojo Nijmegen  
-Waalbandijk 16  
-6541 AJ  Nijmegen
+Nijhoffstraat 5
+6524 AT Nijmegen  

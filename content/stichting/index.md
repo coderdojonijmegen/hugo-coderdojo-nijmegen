@@ -60,8 +60,8 @@ _algemeen bestuurslid_
 
 ### Contactgegevens
 Stichting CoderDojo Nijmegen  
-Waalbandijk 16 | Unit 40  
-6541 AJ Nijmegen  
+Nijhoffstraat 5
+6524 AT Nijmegen  
 
 RSIN: 857425948  
 Bank: NL38 RABO 0317 6808 70
