@@ -669,6 +669,21 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#00f>let</span> doelwitten = []
 <span style=color:#00f>let</span> levens = 5;
 <span style=color:#00f>let</span> spelerIsDood = <span style=color:#00f>false</span>;
@@ -716,6 +731,21 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
     <span style=color:#00f>if</span>(levens &lt;= 0) {
         spelerIsDood = <span style=color:#00f>true</span>;
     }
+}
+	
+<span style=color:#00f>function</span> mouseClicked() {
+  <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
+    t = doelwitten[i];
+    
+    <span style=color:green>//Bereken de afstand tussen de muis en het doelwit
+</span><span style=color:green></span>	<span style=color:#00f>let</span> afstand = dist(mouseX, mouseY, t.x, t.y);
+
+    <span style=color:#00f>if</span>(afstand &lt; t.r/2) { <span style=color:green>//Als de afstand kleiner is dan de halve radius van het doelwit is het raak
+</span><span style=color:green></span>      doelwitten.splice(i, 1); <span style=color:green>//Verwijder het doelwit dat geraakt is
+</span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>      <span style=color:#00f>return</span>;
+    }
+  }
 }
 </code></pre></td></tr></table></div></div><h2 id=verbeter-het-spel>Verbeter het spel</h2><p>We hebben zojuist een spel gemaakt. Kan jij het spel verbeteren?
 Probeer de volgende ideeën toe te voegen:</p><ul><li>Geef de doelwitten mooie kleuren.
