@@ -669,6 +669,21 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#000;font-weight:700>let</span> doelwitten <span style=color:#000;font-weight:700>=</span> []
 <span style=color:#000;font-weight:700>let</span> levens <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>;
 <span style=color:#000;font-weight:700>let</span> spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>false</span>;
@@ -716,6 +731,21 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
     <span style=color:#000;font-weight:700>if</span>(levens <span style=color:#000;font-weight:700>&lt;=</span> <span style=color:#099>0</span>) {
         spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>true</span>;
     }
+}
+	
+<span style=color:#000;font-weight:700>function</span> mouseClicked() {
+  <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+    t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
+    
+    <span style=color:#998;font-style:italic>//Bereken de afstand tussen de muis en het doelwit
+</span><span style=color:#998;font-style:italic></span>	<span style=color:#000;font-weight:700>let</span> afstand <span style=color:#000;font-weight:700>=</span> dist(mouseX, mouseY, t.x, t.y);
+
+    <span style=color:#000;font-weight:700>if</span>(afstand <span style=color:#000;font-weight:700>&lt;</span> t.r<span style=color:#000;font-weight:700>/</span><span style=color:#099>2</span>) { <span style=color:#998;font-style:italic>//Als de afstand kleiner is dan de halve radius van het doelwit is het raak
+</span><span style=color:#998;font-style:italic></span>      doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Verwijder het doelwit dat geraakt is
+</span><span style=color:#998;font-style:italic></span>      doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), r<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:#998;font-style:italic></span>      <span style=color:#000;font-weight:700>return</span>;
+    }
+  }
 }
 </code></pre></td></tr></table></div></div><h2 id=verbeter-het-spel>Verbeter het spel</h2><p>We hebben zojuist een spel gemaakt. Kan jij het spel verbeteren?
 Probeer de volgende ideeën toe te voegen:</p><ul><li>Geef de doelwitten mooie kleuren.
