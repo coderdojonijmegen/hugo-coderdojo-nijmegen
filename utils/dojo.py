@@ -18,7 +18,8 @@ class Dojo:
         events_page = requests.get(CODER_DOJO_NIJMEGEN_EVENTS_PAGE_URL).text
         events_page_soup = BeautifulSoup(events_page, 'html.parser')
 
-        future_event_cards = events_page_soup.find_all("div", {"id": "events"})
+        future_event_cards = events_page_soup.find("div", {"data-testid": "organizer-profile__future-events"}) \
+            .find_all("div", {"class", "eds-event-card--consumer"})
         future_event_urls = []
         for future_event_card in future_event_cards:
             future_event_urls.append(future_event_card
@@ -43,8 +44,7 @@ class Dojo:
 
         dojo_event_title = dojo_event_soup.find_all("h1", {"data-automation": "listing-title"})[0].text
         dojo_event_hero_picture_url = dojo_event_soup.find_all("div", "listing-hero")[0] \
-            .find_all("picture")[0] \
-            .attrs['content']
+            .find_all("picture")[0].find_all("img")[0].attrs["src"]
         dojo_event_html = "\n".join([str(item) for item in
                                      dojo_event_soup.find_all("div", "structured-content-rich-text")[0].contents])
         dojo_event_details_soup = dojo_event_soup.find_all("div", "event-details hide-small")[0]
