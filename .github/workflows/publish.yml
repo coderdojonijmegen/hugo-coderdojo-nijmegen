@@ -21,5 +21,6 @@ jobs:
         with:
           githubToken: ${{ secrets.PAT }}
           hugoVersion: extended_0.74.3
+          eventbriteApiKey: ${{ secrets.EVENTBRITE_API_KEY }}
           args: --gc --minify --cleanDestinationDir
           cname: coderdojo-nijmegen.nl

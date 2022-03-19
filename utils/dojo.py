@@ -8,7 +8,7 @@ from requests import get
 
 from utils.utils import h_message
 
-API_KEY = environ["EVENTBRITE_API_KEY"]
+API_KEY = environ["INPUT_EVENTBRITEAPIKEY"]
 
 auth_header = {"Authorization": f"Bearer {API_KEY}"}
 
