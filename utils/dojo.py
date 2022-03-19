@@ -29,7 +29,8 @@ class Dojo:
 
         event_shorts = "\n - ".join([f"{future_event['name']['text']}" for future_event in future_events["events"]])
         h_message(f"geplande dojo(s): \n - {event_shorts}")
-        return future_events["events"][0]["resource_uri"]
+        latest_event = future_events["events"][0]
+        return latest_event["resource_uri"] if latest_event["status"] == "live" else None
 
     @staticmethod
     def get_dojo_info(dojo_event_url):
