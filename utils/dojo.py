@@ -1,74 +1,56 @@
 #!/usr/bin/env python3
 
-import requests
 import re
-import os.path
 from datetime import datetime
-from bs4 import BeautifulSoup
+from os import path, environ
+
+from requests import get
 
 from utils.utils import h_message
 
-CODER_DOJO_NIJMEGEN_EVENTS_PAGE_URL = "https://www.eventbrite.nl/o/stichting-coderdojo-nijmegen-12043791497"
+API_KEY = environ["EVENTBRITE_API_KEY"]
+
+auth_header = {"Authorization": f"Bearer {API_KEY}"}
 
 
 class Dojo:
 
     @staticmethod
     def get_future_dojo_event():
-        events_page = requests.get(CODER_DOJO_NIJMEGEN_EVENTS_PAGE_URL).text
-        events_page_soup = BeautifulSoup(events_page, 'html.parser')
-
-        future_event_cards = events_page_soup.find("div", {"data-testid": "organizer-profile__future-events"}) \
-            .find_all("div", {"class", "eds-event-card--consumer"})
-        future_event_urls = []
-        for future_event_card in future_event_cards:
-            future_event_urls.append(future_event_card
-                                     .find("div")
-                                     .find("a", "eds-event-card-content__action-link")
-                                     .attrs['href']
-                                     .split('?')[0]
-                                     )
-        if len(future_event_urls) == 0:
+        r = get(f"https://www.eventbriteapi.com/v3/organizations/187233351803/events/"
+                f"?order_by=created_desc"
+                f"&time_filter=current_future"
+                f"&page=1",
+                headers=auth_header)
+        future_events = r.json()
+        if future_events["pagination"]["object_count"] == 0:
             h_message("geen geplande dojo's gevonden")
             return None
-        else:
-            future_event_urls_formatted_list = "\n - " + "\n - ".join(future_event_urls) \
-                if len(future_event_urls) > 1 else "\n - " + future_event_urls[0]
-            h_message(f"geplande dojo(s): {future_event_urls_formatted_list}")
-            return future_event_urls[0] if len(future_event_urls) == 1 else None
+
+        event_shorts = "\n - ".join([f"{future_event['name']['text']}" for future_event in future_events["events"]])
+        h_message(f"geplande dojo(s): \n - {event_shorts}")
+        return future_events["events"][0]["resource_uri"]
 
     @staticmethod
     def get_dojo_info(dojo_event_url):
-        dojo_event = requests.get(dojo_event_url).text
-        dojo_event_soup = BeautifulSoup(dojo_event, 'html.parser')
+        r = get(f"{dojo_event_url}?expand=venue", headers=auth_header)
+        event = r.json()
+        rd = get(f"{dojo_event_url}description", headers=auth_header)
+        event["description_ext"] = rd.json()["description"]
 
-        dojo_event_title = dojo_event_soup.find_all("h1", {"data-automation": "listing-title"})[0].text
-        dojo_event_hero_picture_url = dojo_event_soup.find_all("div", "listing-hero")[0] \
-            .find_all("picture")[0].find_all("img")[0].attrs["src"]
-        dojo_event_html = "\n".join([str(item) for item in
-                                     dojo_event_soup.find_all("div", "structured-content-rich-text")[0].contents])
-        dojo_event_details_soup = dojo_event_soup.find_all("div", "event-details hide-small")[0]
-        dojo_event_details_date_text = dojo_event_details_soup.find_all("p", "js-date-time-first-line")[0].text
-        dojo_event_details_time_start, dojo_event_details_time_end = \
-            [item['content'] for item in dojo_event_details_soup
-                .find_all("div", "event-details__data")[0].find_all("meta")]
-        for a in dojo_event_details_soup.find_all('a', href=True):
-            a.extract()
-        dojo_event_details_location = dojo_event_details_soup.find_all("div", "event-details__data")[1].text
         return {
-            "event_title": dojo_event_title.strip().split("#")[1],
-            "picture_url": dojo_event_hero_picture_url,
-            "event_url": dojo_event_url,
-            "event_description": dojo_event_html,
-            "event_date": dojo_event_details_date_text,
-            "location": dojo_event_details_location.strip(),
-            "start_time": datetime.strptime(dojo_event_details_time_start, '%Y-%m-%dT%H:%M:%S%z'),
-            "end_time": datetime.strptime(dojo_event_details_time_end, '%Y-%m-%dT%H:%M:%S%z')
+            "event_title": event["name"]["text"].strip().split("#")[1],
+            "picture_url": event["logo"]["url"],
+            "event_url": event["url"],
+            "event_description": event["description_ext"],
+            "location": "online" if event["online_event"] else event["venue"]["address"]["localized_address_display"],
+            "start_time": datetime.strptime(event["start"]["local"], '%Y-%m-%dT%H:%M:%S'),
+            "end_time": datetime.strptime(event["end"]["local"], '%Y-%m-%dT%H:%M:%S')
         }
 
     @staticmethod
     def replace_nth(string, sub, wanted, n):
-        where = [m.start() for m in re.finditer(sub, string)][n-1]
+        where = [m.start() for m in re.finditer(sub, string)][n - 1]
         before = string[:where]
         after = string[where:]
         after = after.replace(sub, wanted, 1)
@@ -77,7 +59,7 @@ class Dojo:
     @staticmethod
     def dojo_page_already_exists(future_dojo_event_info):
         dojo_filename = Dojo.get_dojo_filename(future_dojo_event_info)
-        return os.path.exists(dojo_filename)
+        return path.exists(dojo_filename)
 
     @staticmethod
     def write_dojo_page(future_dojo_event_info, template):
@@ -86,6 +68,7 @@ class Dojo:
 
         dojo_filename = Dojo.get_dojo_filename(future_dojo_event_info)
         with open(dojo_filename, "w") as dojo_file:
+            print(f"{dojo_filename} gemaakt")
             dojo_file.write(template
                             .replace("{{title}}", "#" + future_dojo_event_info['event_title'])
                             .replace("{{date}}", datetime.strftime(datetime.now(), '%Y-%m-%dT00:00:00+0100'))
@@ -99,14 +82,22 @@ class Dojo:
                             .replace("{{event_url}}", future_dojo_event_info['event_url'])
                             .replace("{{picture_url}}", future_dojo_event_info['picture_url'])
                             .replace("{{event_description}}",
-                                     Dojo.replace_nth(future_dojo_event_info['event_description'],
-                                                      "</p>\n", "</p>\n\n<!--more-->\n\n", 1))
+                                     re.sub(r"<div>.*<p>",
+                                            "<p>",
+                                            Dojo.replace_nth(
+                                                future_dojo_event_info['event_description'],
+                                                "</p>",
+                                                "</p>\n\n<!--more-->\n\n",
+                                                1
+                                            ),
+                                            1
+                                            )
+                                     ).replace("</div></div>", "")
                             .replace("<p><strong>", "\n## ").replace("</strong></p>", "")
                             .replace("<p>", "\n\n").replace("</p>", "")
                             .replace("<ul>", "").replace("</ul>", "")
                             .replace("<li>", "\n - ").replace("</li>", "")
                             )
-            print(f"{dojo_filename} gemaakt")
 
     @staticmethod
     def get_dojo_filename(future_dojo_event_info):
@@ -120,4 +111,4 @@ if __name__ == "__main__":
     if futureDojoEventUrl is not None:
         dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
         if not Dojo.dojo_page_already_exists(dojo_info):
-            Dojo.write_dojo_page(dojo_info, "../archetypes/dojos-template.md")
+            Dojo.write_dojo_page(dojo_info, "archetypes/dojos-template.md")
