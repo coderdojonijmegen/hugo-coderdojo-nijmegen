@@ -306,7 +306,7 @@ Dit doen wij met een for-loop:</p><div class=highlight><div style=background-col
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);  
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);  
 }
 </code></pre></td></tr></table></div></div><p>Je code zal er (ongeveer) uit zien als volgt.
 Dit is een lastig onderdeel van de opdracht, dus als je hier vragen over hebt, stel deze dan vooral!</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
@@ -344,7 +344,7 @@ Dit is een lastig onderdeel van de opdracht, dus als je hier vragen over hebt, s
 </span><span style=display:block;width:100%;background-color:#e5e5e5>        t = doelwitten[i];
 </span><span style=display:block;width:100%;background-color:#e5e5e5>        
 </span><span style=display:block;width:100%;background-color:#e5e5e5>        <span style=color:green>//Teken alle doelwitten
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span><span style=display:block;width:100%;background-color:#e5e5e5>    }  
 </span>}
 </code></pre></td></tr></table></div></div><p><strong>Opdracht 17</strong>
@@ -385,11 +385,11 @@ We kunnen de doelwitten op onderstaande manier toevoegen:</p><div class=highligh
   createCanvas(400, 400);
 
  <span style=color:green>//voeg begin doelwitten toe
-</span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span></span><span style=color:green></span>}
 <span style=color:#00f>function</span> draw() {
     background(255);
@@ -399,7 +399,7 @@ We kunnen de doelwitten op onderstaande manier toevoegen:</p><div class=highligh
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
     }  
 }
 </code></pre></td></tr></table></div></div><p><strong>Opdracht 18</strong>
@@ -426,10 +426,10 @@ We voegen een regel toe zodat de doelwitten langzaam krimpen.</p><div class=high
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
 
         <span style=color:green>//Krimp alle doelwitten
-</span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        t.r -= krimpSnelheid; 
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        t.d -= krimpSnelheid; 
 </span>    }  
 }
 </code></pre></td></tr></table></div></div><p><strong>Opdracht 19</strong>
@@ -465,15 +465,15 @@ moeten we een doelwit weggooien als het te klein is om nog verder te kunnen krim
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
 
         <span style=color:green>//Krimp alle doelwitten
-</span><span style=color:green></span>        t.r -= krimpSnelheid; 
+</span><span style=color:green></span>        t.d -= krimpSnelheid; 
 
 <span style=display:block;width:100%;background-color:#e5e5e5>        <span style=color:green>//verwijder te kleine doelwitten
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        <span style=color:#00f>if</span>(t.r &lt; 0) { <span style=color:green>//Is de grote kleiner dan 0? Dan verwijderen
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
 </span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>        }
 </span>    }  
 }
@@ -503,9 +503,9 @@ Probeer elke regel te begrijpen en vraag om hulp als er iets onduidelijk is!</p>
     <span style=color:green>//Bereken de afstand tussen de muis en het doelwit
 </span><span style=color:green></span>	<span style=color:#00f>let</span> afstand = dist(mouseX, mouseY, t.x, t.y);
 
-    <span style=color:#00f>if</span>(afstand &lt; t.r/2) { <span style=color:green>//Als de afstand kleiner is dan de halve radius van het doelwit is het raak
+    <span style=color:#00f>if</span>(afstand &lt; t.d/2) { <span style=color:green>//Als de afstand kleiner is dan de halve diameter (radius) van het doelwit is het raak
 </span><span style=color:green></span>      doelwitten.splice(i, 1); <span style=color:green>//Verwijder het doelwit dat geraakt is
-</span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span><span style=color:green></span>      <span style=color:#00f>return</span>;
     }
   }
@@ -542,15 +542,15 @@ We voegen toe dat de speler een leven verliest als een doelwit verdwijnt waar hi
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
 
         <span style=color:green>//Krimp alle doelwitten
-</span><span style=color:green></span>        t.r -= krimpSnelheid; 
+</span><span style=color:green></span>        t.d -= krimpSnelheid; 
 
         <span style=color:green>//verwijder te kleine doelwitten
-</span><span style=color:green></span>        <span style=color:#00f>if</span>(t.r &lt; 0) { <span style=color:green>//Is de grote kleiner dan 0? Dan verwijderen
+</span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
 </span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:green></span>            levens--;
 </span>        }
     }  
@@ -603,15 +603,15 @@ Als laatste: we laten de speler weten wanneer hij verloren heeft, via de volgend
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
 
         <span style=color:green>//Krimp alle doelwitten
-</span><span style=color:green></span>        t.r -= krimpSnelheid; 
+</span><span style=color:green></span>        t.d -= krimpSnelheid; 
 
         <span style=color:green>//verwijder te kleine doelwitten
-</span><span style=color:green></span>        <span style=color:#00f>if</span>(t.r &lt; 0) { <span style=color:green>//Is de grote kleiner dan 0? Dan verwijderen
+</span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
 </span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span><span style=color:green></span>            levens--;
         }
     }  
@@ -693,11 +693,11 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
   createCanvas(400, 400);
 
  <span style=color:green>//voeg begin doelwitten toe
-</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span><span style=color:green></span>}
 
 <span style=color:#00f>function</span> draw() {
@@ -715,15 +715,15 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
         t = doelwitten[i];
         
         <span style=color:green>//Teken alle doelwitten
-</span><span style=color:green></span>        ellipse(t.x, t.y, t.r, t.r);    
+</span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
 
         <span style=color:green>//Krimp alle doelwitten
-</span><span style=color:green></span>        t.r -= krimpSnelheid; 
+</span><span style=color:green></span>        t.d -= krimpSnelheid; 
 
         <span style=color:green>//verwijder te kleine doelwitten
-</span><span style=color:green></span>        <span style=color:#00f>if</span>(t.r &lt; 0) { <span style=color:green>//Is de grote kleiner dan 0? Dan verwijderen
+</span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
 </span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span><span style=color:green></span>            levens--;
         }
     }  
@@ -740,9 +740,9 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
     <span style=color:green>//Bereken de afstand tussen de muis en het doelwit
 </span><span style=color:green></span>	<span style=color:#00f>let</span> afstand = dist(mouseX, mouseY, t.x, t.y);
 
-    <span style=color:#00f>if</span>(afstand &lt; t.r/2) { <span style=color:green>//Als de afstand kleiner is dan de halve radius van het doelwit is het raak
+    <span style=color:#00f>if</span>(afstand &lt; t.d/2) { <span style=color:green>//Als de afstand kleiner is dan de halve diameter (radius) van het doelwit is het raak
 </span><span style=color:green></span>      doelwitten.splice(i, 1); <span style=color:green>//Verwijder het doelwit dat geraakt is
-</span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), r: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
 </span><span style=color:green></span>      <span style=color:#00f>return</span>;
     }
   }
