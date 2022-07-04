@@ -1,4 +1,4 @@
-<!doctype html><html lang=nl-nl><head><title>Python - Turtle</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.662622f28ab20db1c226430c1682906ca9939860fb6873f9dc60a990f9bc69bf.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/python-turtle>Python turtle</a></li></ul></breadcrumbs><h1>Python - Turtle</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#commandos>Commando&rsquo;s</a><ul><li><a href=#python-interpreter>Python Interpreter</a></li><li><a href=#tekenen>Tekenen</a></li><li><a href=#dikkere-lijnen>Dikkere lijnen</a></li><li><a href=#draaien>Draaien</a></li><li><a href=#kleur>Kleur</a></li><li><a href=#opnieuw-beginnen>Opnieuw beginnen</a></li></ul></li><li><a href=#opdrachten>Opdrachten</a><ul><li><a href=#opdracht-1-a>Opdracht 1-A</a></li><li><a href=#opdracht-1-b>Opdracht 1-B</a></li><li><a href=#opdracht-1-c>Opdracht 1-C</a></li></ul></li><li><a href=#kleuren-overzicht>Kleuren overzicht</a></li></ul><ul><li><a href=#variabelen-en-loops>Variabelen en loops</a><ul><li><a href=#variabelen>Variabelen</a></li><li><a href=#herhaling>Herhaling</a></li></ul></li><li><a href=#figuren-tekenen>Figuren tekenen</a><ul><li><a href=#veelhoek>Veelhoek</a></li><li><a href=#ster>Ster</a></li></ul></li><li><a href=#opdrachten-1>Opdrachten</a><ul><li><a href=#opdracht-2-a>Opdracht 2-A</a></li><li><a href=#opdracht-2-b>Opdracht 2-B</a></li><li><a href=#opdracht-2-c>Opdracht 2-C</a></li></ul></li></ul><ul><li><a href=#meer-turtle-commandos>Meer turtle commando&rsquo;s</a><ul><li><a href=#vormen-en-stempels>Vormen en stempels</a></li><li><a href=#turtle-posities>Turtle posities</a></li><li><a href=#inkleuren>Inkleuren</a></li><li><a href=#tekst-en-turtle-verbergen>Tekst en turtle verbergen</a></li></ul></li><li><a href=#opdrachten-2>Opdrachten</a><ul><li><a href=#opdracht-3-a>Opdracht 3-A</a></li><li><a href=#opdracht-3-b>Opdracht 3-B</a></li></ul></li><li><a href=#antwoorden>Antwoorden</a></li></ul></nav></aside><p>Deze keer gaan we tekenen met Python Turtle.</p><h1 id=turtle-introductie>Turtle introductie</h1><h2 id=commandos>Commando&rsquo;s</h2><h3 id=python-interpreter>Python Interpreter</h3><p>Start Thonny.</p><p>Type onderin (je hoeft de &#187;> niet te typen):</p><pre><code>&gt;&gt;&gt; from turtle import *
+<!doctype html><html lang=nl-nl><head><title>Python - Turtle</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.662622f28ab20db1c226430c1682906ca9939860fb6873f9dc60a990f9bc69bf.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/python-turtle>Python turtle</a></li></ul></breadcrumbs><h1>Python - Turtle</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#commandos>Commando&rsquo;s</a><ul><li><a href=#python-interpreter>Python Interpreter</a></li><li><a href=#tekenen>Tekenen</a></li><li><a href=#dikkere-lijnen>Dikkere lijnen</a></li><li><a href=#draaien>Draaien</a></li><li><a href=#kleur>Kleur</a></li><li><a href=#opnieuw-beginnen>Opnieuw beginnen</a></li></ul></li><li><a href=#opdrachten>Opdrachten</a><ul><li><a href=#opdracht-1-a>Opdracht 1-A</a></li><li><a href=#opdracht-1-b>Opdracht 1-B</a></li><li><a href=#opdracht-1-c>Opdracht 1-C</a></li></ul></li><li><a href=#kleuren-overzicht>Kleuren overzicht</a></li></ul><ul><li><a href=#variabelen-en-loops>Variabelen en loops</a><ul><li><a href=#variabelen>Variabelen</a></li><li><a href=#herhaling>Herhaling</a></li></ul></li><li><a href=#figuren-tekenen>Figuren tekenen</a><ul><li><a href=#veelhoek>Veelhoek</a></li><li><a href=#ster>Ster</a></li></ul></li><li><a href=#opdrachten-1>Opdrachten</a><ul><li><a href=#opdracht-2-a>Opdracht 2-A</a></li><li><a href=#opdracht-2-b>Opdracht 2-B</a></li><li><a href=#opdracht-2-c>Opdracht 2-C</a></li></ul></li></ul><ul><li><a href=#meer-turtle-commandos>Meer turtle commando&rsquo;s</a><ul><li><a href=#veelhoeken-functie>Veelhoeken functie</a></li><li><a href=#vormen-en-stempels>Vormen en stempels</a></li><li><a href=#turtle-posities>Turtle posities</a></li><li><a href=#turtle-draaien>Turtle draaien</a></li><li><a href=#inkleuren>Inkleuren</a></li><li><a href=#tekst-en-turtle-verbergen>Tekst en turtle verbergen</a></li></ul></li><li><a href=#opdrachten-2>Opdrachten</a><ul><li><a href=#opdracht-3-a>Opdracht 3-A</a></li><li><a href=#opdracht-3-b>Opdracht 3-B</a></li><li><a href=#opdracht-3-c>Opdracht 3-C</a></li></ul></li><li><a href=#antwoorden>Antwoorden</a></li></ul></nav></aside><p>Deze keer gaan we tekenen met Python Turtle.</p><h1 id=turtle-introductie>Turtle introductie</h1><h2 id=commandos>Commando&rsquo;s</h2><h3 id=python-interpreter>Python Interpreter</h3><p>Start Thonny.</p><p>Type onderin (je hoeft de &#187;> niet te typen):</p><pre><code>&gt;&gt;&gt; from turtle import *
 </code></pre><p>Hiermee geef je Python de opdracht om de turtle te gebruiken.</p><h3 id=tekenen>Tekenen</h3><p>Je turtle kan voor je tekenen door hem opdrachten te geven. Type het volgende:</p><pre><code>&gt;&gt;&gt; forward(100)
 </code></pre><p>Met dit commando gaat je turtle 100 stapjes vooruit. Als dat nog niet gebeurd
 was, moet nu een scherm zijn geopend, waarin je de de turtle en een lijn kan
@@ -87,7 +87,25 @@ sterren zijn niet eens in 1 lijn te tekenen, bijvoorbeeld de 6-puntige ster. De
 ...     right(hoek)
 </code></pre><h2 id=opdrachten-1>Opdrachten</h2><p>Probeer de onderstaande figuren te tekenen.</p><h3 id=opdracht-2-a>Opdracht 2-A</h3><p><img src=images/o2a.png alt></p><p><em>Tip:</em> De hoek is 150 graden.</p><h3 id=opdracht-2-b>Opdracht 2-B</h3><p><img src=images/o2b.png alt></p><p><em>Uitdaging:</em> probeer zo min mogelijk commando&rsquo;s te gebruiken om de opdracht uit te voeren. Lukt het in 5
 regels? Vraag een mentor om tips!</p><h3 id=opdracht-2-c>Opdracht 2-C</h3><p><img src=images/o2c.png alt=cirkel></p><p><em>Tip:</em> Gebruik een zo klein mogelijke waarde in je forward() zodat de cirkel
-niet te groot wordt!</p><h1 id=turtle-voor-gevorderden>Turtle voor gevorderden</h1><h2 id=meer-turtle-commandos>Meer turtle commando&rsquo;s</h2><h3 id=vormen-en-stempels>Vormen en stempels</h3><p>Je turtle lijkt tot nu toe niet echt op een schildpad, maar dat kun je
+niet te groot wordt!</p><h1 id=turtle-voor-gevorderden>Turtle voor gevorderden</h1><h2 id=meer-turtle-commandos>Meer turtle commando&rsquo;s</h2><h3 id=veelhoeken-functie>Veelhoeken functie</h3><p>Tot nu toe tekenen we veelhoeken door herhaaldelijk vooruit te lopen en een stukje te draaien.
+Omdat veelhoeken vaak van pas komen, is hier echter ook een aparte functie voor:</p><pre><code>&gt;&gt;&gt; circle(50, 360, 4)
+</code></pre><p>In dit geval tekenen we een veelhoek met een afstand van 50 tussen de omtrek en het middelpunt;
+dit noemen we de radius.
+Met 360 geven we aan dat we de volledige vorm willen tekenen.
+Voor een halve veelhoek gebruiken we hier bijvoorbeeld 180.
+Het laatste getal, 4, geeft aan dat we vier keer willen draaien en vooruit lopen.
+Hiermee maken we dus een ruit!</p><p>Als je wil kan je de volgende code proberen.
+Deze tekent tien veelhoeken naast elkaar: van een eenhoek (monogoon) tot een tienhoek (decagoon).</p><pre><code>&gt;&gt;&gt; for i in range(10):
+&gt;&gt;&gt;     radius = 50
+&gt;&gt;&gt;     aantal_punten = i + 1
+&gt;&gt;&gt;     locatie_x = -500 + i * 100
+&gt;&gt;&gt; 
+&gt;&gt;&gt;     penup()
+&gt;&gt;&gt;     setpos(locatie_x, -radius)
+&gt;&gt;&gt;     pendown()
+&gt;&gt;&gt; 
+&gt;&gt;&gt;     circle(radius, 360, aantal_punten)
+</code></pre><h3 id=vormen-en-stempels>Vormen en stempels</h3><p>Je turtle lijkt tot nu toe niet echt op een schildpad, maar dat kun je
 veranderen:</p><pre><code>&gt;&gt;&gt; shape('turtle')
 &gt;&gt;&gt; color('darkgreen')
 </code></pre><p>Met shape() kun je dus de vorm veranderen. Andere vormen zijn “arrow”,
@@ -147,7 +165,14 @@ kan die positie ook opslaan in variabelen, zodat je ze later kan gebruiken:</p><
 &gt;&gt;&gt; x = xcor()
 &gt;&gt;&gt; setpos(x, 0)
 &gt;&gt;&gt; setpos(0, 0)
-</code></pre><h3 id=inkleuren>Inkleuren</h3><p>Je turtle tekent mooie lijnen, maar je vormen kunnen ook ingekleurd worden:</p><pre><code>&gt;&gt;&gt; bgcolor('black')
+</code></pre><h3 id=turtle-draaien>Turtle draaien</h3><p>Zoals je de turtle naar een bepaalde plek kan laten gaan,
+kan je deze ook naar een bepaalde hoek laten draaien:</p><pre><code>&gt;&gt;&gt; setheading(0)    # rechts
+&gt;&gt;&gt; setheading(90)   # boven
+&gt;&gt;&gt; setheading(180)  # links
+&gt;&gt;&gt; setheading(270)  # onder
+&gt;&gt;&gt; 
+&gt;&gt;&gt; setheading(135)  # ???
+</code></pre><p>De turtle draait dus naar een bepaalde hoek, zonder dat het uitmaakt waar hij daarvoor naartoe kijkt.</p><h3 id=inkleuren>Inkleuren</h3><p>Je turtle tekent mooie lijnen, maar je vormen kunnen ook ingekleurd worden:</p><pre><code>&gt;&gt;&gt; bgcolor('black')
 &gt;&gt;&gt; color('green')
 &gt;&gt;&gt; fillcolor('darkgreen')
 &gt;&gt;&gt; width(3)
@@ -183,7 +208,19 @@ commando&rsquo;s ken je nog niet? Snap je waar ze voor bedoeld zijn?</p><pre><co
 ...
 &gt;&gt;&gt; hideturtle()
 </code></pre><p><em>Tip:</em> hideturtle() is ook een handig commando bij het stempelen. Om de turtle
-weer te tonen gebruik je showturtle().</p><h2 id=opdrachten-2>Opdrachten</h2><p>Probeer de onderstaande tekeningen na te maken, of bedenk je eigen tekeningen.</p><h3 id=opdracht-3-a>Opdracht 3-A</h3><p><em>Schildpadden in een zandbak</em></p><p><img src=images/o3a.png alt=schildpadjes></p><h3 id=opdracht-3-b>Opdracht 3-B</h3><p>TODO: een klok, een ruiten 3 speelkaart.</p><h2 id=antwoorden>Antwoorden</h2><div class=toggle><div class=toggle_header>Mocht je er niet uitkomen, dan kun je hier klikken voor antwoorden.</div><div style=display:none>Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeelduitwerkingen:<div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#00f>from</span> turtle <span style=color:#00f>import</span> *
+weer te tonen gebruik je showturtle().</p><h2 id=opdrachten-2>Opdrachten</h2><p>Probeer de onderstaande tekeningen na te maken, of bedenk je eigen tekeningen.</p><h3 id=opdracht-3-a>Opdracht 3-A</h3><p><em>Schildpadden in een zandbak</em></p><p><img src=images/o3a.png alt=schildpadjes></p><h3 id=opdracht-3-b>Opdracht 3-B</h3><p><em>Een analoge klok.</em></p><p><img src=images/o3b.png alt="analoge klok"></p><p>Challenge: als je de wijzers een bepaalde stand in wil laten nemen,
+kan je hiervoor de volgende functies gebruiken:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>def</span> uren_naar_hoek(uren):
+    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;uren&#34; aan moet geven. &#34;&#34;&#34;</span>
+    <span style=color:#00f>return</span> - (uren / 12.0) * 360 + 90
+
+
+<span style=color:#00f>def</span> minuten_naar_hoek(minuten):
+    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;minuten&#34; aan moet geven. &#34;&#34;&#34;</span>
+    <span style=color:#00f>return</span> - (minuten / 60.0) * 360 + 90
+    </code></pre></div><p>De hoek kan je vervolgens aan setheading() geven.</p><h3 id=opdracht-3-c>Opdracht 3-C</h3><p><em>Een ruiten drie speelkaart. <sup>Maar: er klopt iets niet helemaal!</sup></em></p><p><img src=images/o3c.png alt="ruiten drie"></p><p>De kaart bevat twee vormen die meerdere keren herhaald worden: de ruit en het getal drie.
+Als je bekend bent met functies, kan het handig zijn om deze hier te gebruiken.
+Daarnaast kan je natuurlijk ook een ruiten een kaart maken,
+als je de circle() functie nog lastig vindt.</p><h2 id=antwoorden>Antwoorden</h2><div class=toggle><div class=toggle_header>Mocht je er niet uitkomen, dan kun je hier klikken voor antwoorden.</div><div style=display:none>Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeelduitwerkingen:<div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    <span style=color:#00f>from</span> turtle <span style=color:#00f>import</span> *
     </code></pre></div><h2>Deel 1</h2><h3>Opdracht 1-A</h3><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
     color(<span style=color:#a31515>&#39;green&#39;</span>)
     width(5)
@@ -282,6 +319,243 @@ Je kan er zelf nog een paar toevoegen als je wil!<div class=highlight><pre style
     shape(<span style=color:#a31515>&#39;turtle&#39;</span>)
     color(<span style=color:#a31515>&#39;blue&#39;</span>)
     stempel2 = stamp()
+    </code></pre></div><h3>Opdracht 3-B</h3><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>def</span> uren_naar_hoek(uren):
+    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;uren&#34; aan moet geven. &#34;&#34;&#34;</span>
+    <span style=color:#00f>return</span> - (uren / 12.0) * 360 + 90
+
+
+<span style=color:#00f>def</span> minuten_naar_hoek(minuten):
+    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;minuten&#34; aan moet geven. &#34;&#34;&#34;</span>
+    <span style=color:#00f>return</span> - (minuten / 60.0) * 360 + 90
+
+
+<span style=color:green># De radius van de circel voor de klok.</span>
+radius = 100
+
+<span style=color:green># Voer hier de beoogde tijd in. Je kan de hoeken natuurlijk ook op gevoel kiezen! </span>
+minuten = 45  <span style=color:green># 45 / 60</span>
+uren    = 12  <span style=color:green># 12 / 12</span>
+
+<span style=color:green># Maak de omgeving in orde.</span>
+speed(<span style=color:#a31515>&#39;fastest&#39;</span>)
+bgcolor(<span style=color:#a31515>&#39;white&#39;</span>)
+color(<span style=color:#a31515>&#39;black&#39;</span>)
+penup()
+
+<span style=color:green># Start met het tekenen van een circel en een twaalfhoek.</span>
+width(5)
+setpos(0, -radius)
+pendown()
+circle(radius, 360, 360)
+circle(radius, 360, 12)
+penup()
+
+<span style=color:green># Vervolgens tekenen we de kleine wijzer, op basis van &#34;uren&#34;.</span>
+setpos(0, 0)
+setheading(minuten_naar_hoek(minuten))
+pendown()
+forward(.8 * radius)
+stempel0 = stamp()
+penup()
+
+<span style=color:green># De grote wijzer tekenen we op een soortgelijke manier.</span>
+setpos(0, 0)
+setheading(uren_naar_hoek(uren))
+pendown()
+forward(.5 * radius)
+stempel1 = stamp()
+penup()
+
+<span style=color:green># Challenges:</span>
+<span style=color:green># - voeg een secondewijzer toe;</span>
+<span style=color:green># - voeg (enkele) getallen toe;</span>
+<span style=color:green># - voeg streepjes voor uren aan de buitenrand toe.</span>
+
+done()
+    </code></pre></div><h3>Opdracht 3-C</h3><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>speed(<span style=color:#a31515>&#39;fastest&#39;</span>)
+
+
+<span style=color:#00f>def</span> teken_ruit(midden_x, midden_y, radius):
+    <span style=color:#a31515>&#34;&#34;&#34;Teken een ruit met radius: radius. &#34;&#34;&#34;</span>
+    penup()
+    setpos(midden_x, midden_y-radius)
+    setheading(0)
+
+    pendown()
+    begin_fill()
+    circle(radius, 360, 4)
+    end_fill()
+    penup()
+
+
+<span style=color:#00f>def</span> teken_drie(midden_x, midden_y, radius):
+    <span style=color:#a31515>&#34;&#34;&#34;
+</span><span style=color:#a31515>    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
+</span><span style=color:#a31515>    Van belang: circle draait linksom.
+</span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+    penup()
+    setpos(midden_x, midden_y)
+    setheading(0)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+    setpos(midden_x-radius, midden_y-radius)
+    setheading(270)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+
+<span style=color:green># De hoogte en breedte van de kaart.</span>
+hoogte = 400
+breedte = 250
+
+<span style=color:green># De radius van de ruiten op de kaart.</span>
+ruit_radius_groot = 40
+ruit_radius_klein = 10
+
+<span style=color:green># De radius van de circels van de drie op de kaart.</span>
+drie_radius = 10
+
+<span style=color:green># Teken de omtrek van de kaart.</span>
+penup()
+setpos(-.5 * breedte, .5 * hoogte)
+pendown()
+<span style=color:#00f>for</span> i <span style=color:#00f>in</span> range(2):
+    forward(breedte)
+    right(90)
+    forward(hoogte)
+    right(90)
+
+<span style=color:green># Vanaf hier kleuren we alles rood.</span>
+color(<span style=color:#a31515>&#39;red&#39;</span>)
+fillcolor(<span style=color:#a31515>&#39;red&#39;</span>)
+
+<span style=color:green># De ruit in het midden:</span>
+teken_ruit(0, 0, ruit_radius_groot)
+<span style=color:green># De ruit aan de bovenkant, op een afstand van 20 van de ruit in het midden:</span>
+teken_ruit(0,  2 * ruit_radius_groot + 20, ruit_radius_groot)
+<span style=color:green># De ruit aan de onderkant, op een afstand van 20 van de ruit in het midden:</span>
+teken_ruit(0, -2 * ruit_radius_groot - 20, ruit_radius_groot)
+
+<span style=color:green># Het getal drie in de hoek linksboven.</span>
+<span style=color:green># De afstanden tot de omtrek kan je eventueel nog op &#39;drie_radius&#39; afstemmen.</span>
+width(5)
+teken_drie(-.5 * breedte + 15,  .5 * hoogte - 25, drie_radius)
+teken_drie( .5 * breedte - 15, -.5 * hoogte + 25, drie_radius)
+
+<span style=color:green># Extra: de kleine ruiten onder- en boven de getallen:</span>
+teken_ruit(-.5 * breedte + 15,  .5 * hoogte - 65, ruit_radius_klein)
+teken_ruit( .5 * breedte - 15, -.5 * hoogte + 65, ruit_radius_klein)
+
+setpos(0, 0)
+
+done()
+    </code></pre></div><h3>Extra: getallen 0, 1, 2, 3, 4 tekenen.</h3><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>speed(<span style=color:#a31515>&#39;fastest&#39;</span>)
+
+
+<span style=color:#00f>def</span> teken_nul(midden_x, midden_y, radius):
+    <span style=color:#a31515>&#34;&#34;&#34;
+</span><span style=color:#a31515>    Teken een nul met hoogte: 2 * diameter, breedte: diameter.
+</span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+    penup()
+    setpos(midden_x + radius, midden_y + radius)
+    setheading(90)
+
+    pendown()
+    circle(radius, 180)
+    forward(2 * radius)
+    circle(radius, 180)
+    forward(2 * radius)
+    penup()
+
+
+<span style=color:#00f>def</span> teken_een(midden_x, midden_y, lengte):
+    <span style=color:#a31515>&#34;&#34;&#34;
+</span><span style=color:#a31515>    Teken een (simpele) een met hoogte: lengte, breedte: width.
+</span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+    penup()
+    setpos(midden_x, midden_y + .5 * lengte)
+    setheading(270)
+
+    pendown()
+    forward(lengte)
+    penup()
+
+
+<span style=color:#00f>def</span> teken_twee(midden_x, midden_y, radius):
+    <span style=color:#a31515>&#34;&#34;&#34;
+</span><span style=color:#a31515>    Teken een tween met hoogte: 2 * diameter, breedte: diameter.
+</span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+    penup()
+    setpos(midden_x + radius, midden_y + radius)
+    setheading(90)
+
+    pendown()
+    circle(radius, 180)
+    penup()
+
+    setpos(midden_x + radius, midden_y + radius)
+
+    pendown()
+    setpos(midden_x - radius, midden_y - 2 * radius)
+    setheading(0)
+    forward(2 * radius)
+    penup()
+
+
+<span style=color:#00f>def</span> teken_drie(midden_x, midden_y, radius):
+    <span style=color:#a31515>&#34;&#34;&#34;
+</span><span style=color:#a31515>    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
+</span><span style=color:#a31515>    Van belang: circle draait linksom.
+</span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+    penup()
+    setpos(midden_x, midden_y)
+    setheading(0)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+    setpos(midden_x-radius, midden_y-radius)
+    setheading(270)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+
+<span style=color:#00f>def</span> teken_vier(midden_x, midden_y, hoogte):
+    <span style=color:#a31515>&#34;&#34;&#34;
+</span><span style=color:#a31515>    Teken een vier met hoogte: 2 * diameter, breedte: diameter
+</span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+    breedte = .5 * hoogte
+    penup()
+    setpos(midden_x + .25 * breedte, midden_y - .5 * hoogte)
+
+    pendown()
+    setpos(midden_x + .25 * breedte, midden_y + .5 * hoogte)
+    setpos(midden_x -  .5 * breedte, midden_y)
+    setpos(midden_x +  .5 * breedte, midden_y)
+    penup()
+
+
+<span style=color:green># Stel vast hoe groot de getallen moeten worden.</span>
+radius = 50
+getal_hoogte = 4 * radius
+getal_breedte = 2 * radius
+
+teken_nul(-200, 0, radius)
+teken_een(-100, 0, getal_hoogte)
+teken_twee(0, 0, radius)
+teken_drie(100, 0, radius)
+teken_vier(200, 0, getal_hoogte)
+
+
+done()
     </code></pre></div></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
 aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2022</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
 <a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
