@@ -8,7 +8,6 @@ import requests
 from utils.dojo import Dojo
 from utils.utils import h_message, env_var, git, hugo, rm_rf
 
-
 DEFAULT_HUGO_VERSION = "extended_0.74.3"
 HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
@@ -19,7 +18,6 @@ GH_PAGES = "gh-pages"
 TMP_GH_PAGES = "/tmp/gh-pages"
 TMP_MCS = "/tmp/mcs"
 MCS = "mcs"
-
 
 github_event_name = env_var("GITHUB_EVENT_NAME")
 github_branch = env_var("GITHUB_REF")
@@ -32,9 +30,7 @@ hugo_base_version = re.compile(r"(\d+.\d+.\d+)").search(hugo_version).group(0)
 hugo_args = env_var("INPUT_ARGS", "")
 cname = env_var("INPUT_CNAME", github_repo)
 
-
 url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
-
 
 futureDojoEventUrl = Dojo.get_future_dojo_event()
 if futureDojoEventUrl is not None:
@@ -80,12 +76,14 @@ def clone_build_push(args, branch, target_dir):
 
     git("add -A", working_dir=target_dir)
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    git(f"commit --allow-empty -am", message=f"Publishing Site {cname} to {branch} at {github_sha } on {now}.",
-        working_dir=target_dir)
-    if github_branch == REF_MASTER:
-        git("push --force", working_dir=target_dir)
+    if git(f"commit -am", message=f"Publishing Site {cname} to {branch} at {github_sha} on {now}.",
+           working_dir=target_dir) is 0:
+        if github_branch == REF_MASTER:
+            git("push --force", working_dir=target_dir)
+        else:
+            print("=> not pushing when not on master")
     else:
-        print("=> not pushing when not on master")
+        print("=> no changes")
 
 
 h_message(f"downloading {url} to {HUGO_TAR_GZ}")
