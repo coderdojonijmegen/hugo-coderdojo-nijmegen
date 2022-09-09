@@ -2,10 +2,10 @@
 
 ## WIFI
 
-|   |                                                                                        |
-|---|----------------------------------------------------------------------------------------|
-| **netwerk** | CoderDojoWifi2.4GHz                                                                    |
-| **wachtwoord** | 4Ninjas!                                                                               |
-| **server** | https://server.coderdojo-nijmegen.nl                                                   |
-| **installatiebestanden** | [installatiebestanden](https://installers.server.coderdojo-nijmegen.nl)                |
+|                          |                                                                         |
+|--------------------------|-------------------------------------------------------------------------|
+| **netwerk**              | CoderDojoWifi2.4GHz                                                     |
+| **wachtwoord**           | coderdojo                                                               |
+| **server**               | https://server.coderdojo-nijmegen.nl                                    |
+| **installatiebestanden** | [installatiebestanden](https://installers.server.coderdojo-nijmegen.nl) |
 
