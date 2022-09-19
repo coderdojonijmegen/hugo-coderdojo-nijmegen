@@ -242,89 +242,132 @@ updateGeld(geld)
 <span style=color:#00f>const</span> powerupDiv = document.getElementById(<span style=color:#a31515>"powerupWinkel"</span>)
 <span style=color:#00f>const</span> tierDiv = powerupDiv.getElementsByClassName(<span style=color:#a31515>"tier"</span> + tier)[0]</p><pre><code>tierDiv.remove()
 </code></pre><p>}</code></pre></div></p></div></div><h2 id=uitbreidingen>Uitbreidingen</h2><p>Allereerst: gefeliciteerd met het halen van het einde van deze instructie!</p><p>Er zijn een hoop uitbreidingen mogelijk op het basisconcept:</p><ul><li>de kosten van Clickers verhogen na elke aankoop;</li><li>meerde Powerups per Clicker;</li><li>meer Clickers toevoegen;</li></ul><p>Hier kan je zelf mee aan de slag gaan
-en natuurlijk extra hulp bij vragen.</p><p>Laat ons eventueel weten of er nog andere uitbreidingen zijn die je in deze instructie zou willen zien!</p><h2 id=top-secret>Top secret</h2><div class=toggle><div class=toggle_header>De volledige voorbeeldcode</div><div style=display:none><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:green>/* Een lijst met de icoontjes van de Clickers. */</span>
-clickerIcons = [
-    <span style=color:#a31515>&#34;https://pngimg.com/uploads/chef/chef_PNG54.png&#34;</span>,
-    <span style=color:green>/* tier 1 */</span>
-    <span style=color:green>/* tier 2 */</span>
-    <span style=color:green>/* tier 3 */</span>
-    <span style=color:green>/* tier 4 */</span>
-]
-<p><span style=color:green>/* De volgende functies beïnvloeden het uiterlijk van de pagina. */</span></p>
-<p><span style=color:green>/* Voeg een nieuw icoontje toe aan de lijst met Actieve Clickers van tier tier */</span>
-<span style=color:#00f>function</span> voegActieveClickerToe(tier) {
-<span style=color:#00f>const</span> actieveClickerDiv = document.getElementById(<span style=color:#a31515>&quot;actieveClickers&quot;</span>)
-<span style=color:#00f>const</span> tierDiv = actieveClickerDiv.getElementsByClassName(<span style=color:#a31515>&quot;tier&quot;</span> + tier)[0]</p>
-<pre><code>&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; afbeelding = document.createElement(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;)
-afbeelding.src = clickerIcons[tier]
-afbeelding.className = &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;icon&amp;#34;&lt;/span&gt;
+en natuurlijk extra hulp bij vragen.</p><p>Laat ons eventueel weten of er nog andere uitbreidingen zijn die je in deze instructie zou willen zien!</p><h2 id=top-secret>Top secret</h2><div class=toggle><div class=toggle_header>De volledige voorbeeldcode</div><div style=display:none><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>    <span style=color:green>/* Een lijst met de icoontjes van de Clickers. */</span>
+    clickerIcons = [
+        <span style=color:#a31515>&#34;https://pngimg.com/uploads/chef/chef_PNG54.png&#34;</span>,
+        <span style=color:green>/* tier 1 */</span>
+        <span style=color:green>/* tier 2 */</span>
+        <span style=color:green>/* tier 3 */</span>
+        <span style=color:green>/* tier 4 */</span>
+    ]
+<pre><code>&lt;span style=&quot;color:#008000&quot;&gt;/* De volgende functies beïnvloeden het uiterlijk van de pagina. */&lt;/span&gt;
 
-tierDiv.appendChild(afbeelding)
-</code></pre><p>}</p><p><span style=color:green>/* Verander het geld bedrag dat op de pagina word weergegeven naar hoeveelheid. */</span>
-<span style=color:#00f>function</span> updateGeld(hoeveelheid) {
-<span style=color:#00f>const</span> geldH2 = document.getElementById(<span style=color:#a31515>"geld"</span>)</p><pre><code>geldH2.innerText = &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;Geld: &amp;#34;&lt;/span&gt; + hoeveelheid + &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;$&amp;#34;&lt;/span&gt;
-</code></pre><p>}</p><p><span style=color:green>/* Verander het geld per seconde bedrag dat op de pagina word weergegeven naar hoeveelheid. */</span>
-<span style=color:#00f>function</span> updateGeldPerSeconde(hoeveelheid) {
-<span style=color:#00f>const</span> geldPerSecondeH2 = document.getElementById(<span style=color:#a31515>"geldPerSeconde"</span>)</p><pre><code>geldPerSecondeH2.innerText = &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;Geld per seconde: &amp;#34;&lt;/span&gt; + hoeveelheid + &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;$&amp;#34;&lt;/span&gt;
-</code></pre><p>}</p><p><span style=color:green>/* Verwijder de Powerup voor tier tier uit de lijst. */</span>
-<span style=color:#00f>function</span> verwijderPowerup(tier) {
-<span style=color:#00f>const</span> powerupDiv = document.getElementById(<span style=color:#a31515>"powerupWinkel"</span>)
-<span style=color:#00f>const</span> tierDiv = powerupDiv.getElementsByClassName(<span style=color:#a31515>"tier"</span> + tier)[0]</p><pre><code>tierDiv.remove()
-</code></pre><p>}</p><p><span style=color:green>/* Vanaf hier focussen we op de functionaliteit! */</span></p><p><span style=color:green>/* De volgende gegevens veranderen niet. */</span>
-<span style=color:#00f>const</span> aantalClickerTiers = 5
-<span style=color:#00f>const</span> clickerKosten = [1, 10, 50, 100, 500]
-<span style=color:#00f>const</span> powerupKosten = [10, 100, 500, 1000, 5000]</p><p><span style=color:green>/* De volgende gevevens kunnen veranderen. */</span>
-<span style=color:#00f>let</span> geld = 0
-<span style=color:#00f>let</span> maxAantalClickers = 14 <span style=color:green>/* Voor de basisfunctie ligt dit aan de grootte van je scherm. */</span>
-<span style=color:#00f>const</span> clickerInkomsten = [1, 2, 4, 8, 32]
-<span style=color:#00f>const</span> aantalClickers = [0, 0, 0, 0, 0]
-<span style=color:#00f>const</span> beschikbarePowerups = [<span style=color:#00f>true</span>, <span style=color:#00f>true</span>, <span style=color:#00f>true</span>, <span style=color:#00f>true</span>, <span style=color:#00f>true</span>]</p><p><span style=color:green>/* Voegt 1$ toe en update de pagina */</span>
-<span style=color:#00f>function</span> onClickCookie() {
-geld = geld + 1</p><pre><code>updateGeld(geld) &lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
-</code></pre><p>}</p><p><span style=color:green>/* Berekent het geld dat de Clickers genereren per seconde. */</span>
-<span style=color:#00f>function</span> berekenGeldPerSeconde() {
-<span style=color:#00f>let</span> totaal = 0</p><pre><code>&lt;span style=&quot;color:#00f&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color:#00f&quot;&gt;let&lt;/span&gt; tier = 0; tier &amp;lt; aantalClickerTiers; tier++) {
-    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; inkomsten = clickerInkomsten[tier]
-    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; aantal = aantalClickers[tier]
-    totaal += inkomsten * aantal
+&lt;span style=&quot;color:#008000&quot;&gt;/* Voeg een nieuw icoontje toe aan de lijst met Actieve Clickers van tier tier */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; voegActieveClickerToe(tier) {
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; actieveClickerDiv = document.getElementById(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;actieveClickers&amp;#34;&lt;/span&gt;)
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; tierDiv = actieveClickerDiv.getElementsByClassName(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;tier&amp;#34;&lt;/span&gt; + tier)[0]
+
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; afbeelding = document.createElement(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;)
+    afbeelding.src = clickerIcons[tier]
+    afbeelding.className = &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;icon&amp;#34;&lt;/span&gt;
+
+    tierDiv.appendChild(afbeelding)
 }
 
-&lt;span style=&quot;color:#00f&quot;&gt;return&lt;/span&gt; totaal
-</code></pre><p>}</p><p><span style=color:green>/* Koopt een Powerup, mits hier geld voor is en de Powerup nog niet gekocht is. Update de pagina. */</span>
-<span style=color:#00f>function</span> koopPowerup(tier) {
-<span style=color:#00f>if</span> (beschikbarePowerups[tier] == <span style=color:#00f>false</span>) {
-<span style=color:#00f>return</span>
-}
-<span style=color:#00f>if</span> (geld &lt; powerupKosten[tier]) {
-<span style=color:#00f>return</span>
-}</p><pre><code>beschikbarePowerups[tier] = &lt;span style=&quot;color:#00f&quot;&gt;false&lt;/span&gt;;
-geld = geld - powerupKosten[tier]
-clickerInkomsten[tier] = clickerInkomsten[tier] * 2
+&lt;span style=&quot;color:#008000&quot;&gt;/* Verander het geld bedrag dat op de pagina word weergegeven naar hoeveelheid. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; updateGeld(hoeveelheid) {
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; geldH2 = document.getElementById(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;geld&amp;#34;&lt;/span&gt;)
 
-&lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
-verwijderPowerup(tier)
-updateGeldPerSeconde(berekenGeldPerSeconde())
-updateGeld(geld)
-</code></pre><p>}</p><p><span style=color:green>/* Koopt een Clicker, mits hier geld voor is en er nog ruimte is. Update de pagina. */</span>
-<span style=color:#00f>function</span> koopClicker(tier) {
-<span style=color:#00f>if</span> (aantalClickers[tier] >= maxAantalClickers) {
-<span style=color:#00f>return</span>
+    geldH2.innerText = &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;Geld: &amp;#34;&lt;/span&gt; + hoeveelheid + &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;$&amp;#34;&lt;/span&gt;
 }
-<span style=color:#00f>if</span> (geld &lt; clickerKosten[tier]) {
-<span style=color:#00f>return</span>
-}</p><pre><code>geld = geld - clickerKosten[tier]
-aantalClickers[tier] = aantalClickers[tier] + 1
 
-&lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
-voegActieveClickerToe(tier)
-updateGeldPerSeconde(berekenGeldPerSeconde())
-updateGeld(geld)
-</code></pre><p>}</p><p><span style=color:green>/* Voegt het geld van de Clickers toe aan het geld. Update de pagina. */</span>
-<span style=color:#00f>function</span> updateClickerGeld() {
-geld = geld + berekenGeldPerSeconde()</p><pre><code>&lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
-updateGeld(geld)
-</code></pre><p>}</p><p><span style=color:green>/* Zorgt dat updateClickerGeld elke seconde activeert. */</span>
-setInterval(updateClickerGeld, 1000)</code></pre></div></p></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+&lt;span style=&quot;color:#008000&quot;&gt;/* Verander het geld per seconde bedrag dat op de pagina word weergegeven naar hoeveelheid. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; updateGeldPerSeconde(hoeveelheid) {
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; geldPerSecondeH2 = document.getElementById(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;geldPerSeconde&amp;#34;&lt;/span&gt;)
+
+    geldPerSecondeH2.innerText = &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;Geld per seconde: &amp;#34;&lt;/span&gt; + hoeveelheid + &lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;$&amp;#34;&lt;/span&gt;
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Verwijder de Powerup voor tier tier uit de lijst. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; verwijderPowerup(tier) {
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; powerupDiv = document.getElementById(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;powerupWinkel&amp;#34;&lt;/span&gt;)
+    &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; tierDiv = powerupDiv.getElementsByClassName(&lt;span style=&quot;color:#a31515&quot;&gt;&amp;#34;tier&amp;#34;&lt;/span&gt; + tier)[0]
+
+    tierDiv.remove()
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Vanaf hier focussen we op de functionaliteit! */&lt;/span&gt;
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* De volgende gegevens veranderen niet. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; aantalClickerTiers = 5
+&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; clickerKosten = [1, 10, 50, 100, 500]
+&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; powerupKosten = [10, 100, 500, 1000, 5000]
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* De volgende gevevens kunnen veranderen. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;let&lt;/span&gt; geld = 0
+&lt;span style=&quot;color:#00f&quot;&gt;let&lt;/span&gt; maxAantalClickers = 14 &lt;span style=&quot;color:#008000&quot;&gt;/* Voor de basisfunctie ligt dit aan de grootte van je scherm. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; clickerInkomsten = [1, 2, 4, 8, 32]
+&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; aantalClickers = [0, 0, 0, 0, 0]
+&lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; beschikbarePowerups = [&lt;span style=&quot;color:#00f&quot;&gt;true&lt;/span&gt;, &lt;span style=&quot;color:#00f&quot;&gt;true&lt;/span&gt;, &lt;span style=&quot;color:#00f&quot;&gt;true&lt;/span&gt;, &lt;span style=&quot;color:#00f&quot;&gt;true&lt;/span&gt;, &lt;span style=&quot;color:#00f&quot;&gt;true&lt;/span&gt;]
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Voegt 1$ toe en update de pagina */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; onClickCookie() {
+    geld = geld + 1
+
+    updateGeld(geld) &lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Berekent het geld dat de Clickers genereren per seconde. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; berekenGeldPerSeconde() {
+    &lt;span style=&quot;color:#00f&quot;&gt;let&lt;/span&gt; totaal = 0
+
+    &lt;span style=&quot;color:#00f&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color:#00f&quot;&gt;let&lt;/span&gt; tier = 0; tier &amp;lt; aantalClickerTiers; tier++) {
+        &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; inkomsten = clickerInkomsten[tier]
+        &lt;span style=&quot;color:#00f&quot;&gt;const&lt;/span&gt; aantal = aantalClickers[tier]
+        totaal += inkomsten * aantal
+    }
+
+    &lt;span style=&quot;color:#00f&quot;&gt;return&lt;/span&gt; totaal
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Koopt een Powerup, mits hier geld voor is en de Powerup nog niet gekocht is. Update de pagina. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; koopPowerup(tier) {
+    &lt;span style=&quot;color:#00f&quot;&gt;if&lt;/span&gt; (beschikbarePowerups[tier] == &lt;span style=&quot;color:#00f&quot;&gt;false&lt;/span&gt;) {
+        &lt;span style=&quot;color:#00f&quot;&gt;return&lt;/span&gt;
+    }
+    &lt;span style=&quot;color:#00f&quot;&gt;if&lt;/span&gt; (geld &amp;lt; powerupKosten[tier]) {
+        &lt;span style=&quot;color:#00f&quot;&gt;return&lt;/span&gt;
+    }
+
+    beschikbarePowerups[tier] = &lt;span style=&quot;color:#00f&quot;&gt;false&lt;/span&gt;;
+    geld = geld - powerupKosten[tier]
+    clickerInkomsten[tier] = clickerInkomsten[tier] * 2
+
+    &lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
+    verwijderPowerup(tier)
+    updateGeldPerSeconde(berekenGeldPerSeconde())
+    updateGeld(geld)
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Koopt een Clicker, mits hier geld voor is en er nog ruimte is. Update de pagina. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; koopClicker(tier) {
+    &lt;span style=&quot;color:#00f&quot;&gt;if&lt;/span&gt; (aantalClickers[tier] &amp;gt;= maxAantalClickers) {
+        &lt;span style=&quot;color:#00f&quot;&gt;return&lt;/span&gt;
+    }
+    &lt;span style=&quot;color:#00f&quot;&gt;if&lt;/span&gt; (geld &amp;lt; clickerKosten[tier]) {
+        &lt;span style=&quot;color:#00f&quot;&gt;return&lt;/span&gt;
+    }
+
+    geld = geld - clickerKosten[tier]
+    aantalClickers[tier] = aantalClickers[tier] + 1
+
+    &lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
+    voegActieveClickerToe(tier)
+    updateGeldPerSeconde(berekenGeldPerSeconde())
+    updateGeld(geld)
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Voegt het geld van de Clickers toe aan het geld. Update de pagina. */&lt;/span&gt;
+&lt;span style=&quot;color:#00f&quot;&gt;function&lt;/span&gt; updateClickerGeld() {
+    geld = geld + berekenGeldPerSeconde()
+
+    &lt;span style=&quot;color:#008000&quot;&gt;/* Update de pagina! */&lt;/span&gt;
+    updateGeld(geld)
+}
+
+&lt;span style=&quot;color:#008000&quot;&gt;/* Zorgt dat updateClickerGeld elke seconde activeert. */&lt;/span&gt;
+setInterval(updateClickerGeld, 1000)
+</code></pre><p></code></pre></div></p></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
 aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2022</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
 <a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
 <a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
