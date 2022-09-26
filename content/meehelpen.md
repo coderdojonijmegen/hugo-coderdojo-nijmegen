@@ -7,7 +7,7 @@ draft: false
 
 CoderDojo's draaien op de inzet van vrijwilligers die graag hun kennis delen of hun tijd willen inzetten om kinderen verder te helpen.
 Wil jij ons ook graag helpen? Dat kan absoluut! Ook als je niet technisch onderlegd bent kun je veel voor ons doen - er 
-komt van alles kijken bij de organisatie van een dojo. Heb je interesse? Stuur dan een mailtje naar 𝗂𝗇𝖿𝗈@𝖼𝗈𝖽𝖾𝗋𝖽𝗈𝗃𝗈-𝗇𝗂𝗃𝗆𝖾𝗀𝖾𝗇.𝗇𝗅.
+komt van alles kijken bij de organisatie van een dojo. Heb je interesse? Stuur dan een mailtje naar _𝗂𝗇𝖿𝗈@𝖼𝗈𝖽𝖾𝗋𝖽𝗈𝗃𝗈-𝗇𝗂𝗃𝗆𝖾𝗀𝖾𝗇.𝗇𝗅_.
 
 ## Wat zoeken we in een mentor?
 
@@ -41,5 +41,7 @@ Tot slot: bij CoderDojo Nijmegen proberen we een zo veilig mogelijke omgeving te
 daarvan is dat we voor al onze mentoren een [Verklaring Omtrend Gedrag](https://www.justis.nl/producten/vog/wat-is-een-vog.aspx)
 aanvragen.
 
-Zie onze [instructiepagina](/instructies) voor voorbeelden van onderwerpen die we behandelen. Op de 
+Heb je interesse? Stuur dan een mailtje naar _𝗂𝗇𝖿𝗈@𝖼𝗈𝖽𝖾𝗋𝖽𝗈𝗃𝗈-𝗇𝗂𝗃𝗆𝖾𝗀𝖾𝗇.𝗇𝗅_.
+
+Zie ook onze [instructiepagina](/instructies) voor voorbeelden van onderwerpen die we behandelen. Op de 
 [teampagina](/team) kun je iets lezen over de huidige mentoren.

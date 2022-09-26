@@ -7,7 +7,7 @@ draft: false
 
 ## Wie zijn we?
 
-### Pieter Buur | Champion
+### Pieter Buur | Mentor
 {{< mentor src="pieter.png" title="Pieter Buur" >}}
 
 Na meer dan tien jaar onderzoek naar de hersenen gedaan te hebben met MRI, werkt Pieter tegenwoordig als data scientist en ontwikkelt bijvoorbeeld chatbots en manieren om interessante informatie uit teksten (zoals nieuwsberichten) te halen.
@@ -23,9 +23,10 @@ Hij leert zelf nog altijd graag en vind het ook leuk om zijn enthousiasme en kun
 {{< /mentor >}}
 ### Daan Willems | Mentor
 ### Jaap Meijers | Mentor
-### Rik Bosch | Mentor
-### Kevin van den Broek | Mentor
 ### Tjeerd van der Zee | Mentor
+### Auke Zijlstra | Mentor
+### Maud-Marit | Mentor
+
 
 ## Ook lid worden van het team?
 CoderDojo Nijmegen is altijd op zoek naar vrijwilligers. Kijk ook op pagina [meehelpen]({{< ref "meehelpen" >}}).
