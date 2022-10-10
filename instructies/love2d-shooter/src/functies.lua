@@ -38,7 +38,7 @@ nieuweKogelInterval = 20
 nieuweKogelTimer = 0
 function maakNieuweKogel(kogels, speler)
   if nieuweKogelTimer < 0 then
-    nieuweKogel = { x = speler.x + (speler.plaatje:getWidth()/2), y = spelerY, plaatje = kogelPlaatje }
+    nieuweKogel = { x = speler.x + (speler.plaatje:getWidth()/2), y = speler.y, plaatje = kogelPlaatje }
     table.insert(kogels, nieuweKogel)
     nieuweKogelTimer = nieuweKogelInterval
   else
