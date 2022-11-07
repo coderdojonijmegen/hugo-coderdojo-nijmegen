@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from os import path, environ
 
 from requests import get
@@ -79,6 +79,9 @@ class Dojo:
                                                                        '%Y-%m-%dT%H:%M:%S%z'))
                             .replace("{{start_date}}", datetime.strftime(future_dojo_event_info['end_time'],
                                                                          '%Y-%m-%d'))
+                            .replace("{{latest_signup_datetime}}",
+                                     datetime.strftime(future_dojo_event_info['start_time'] - timedelta(hours=1),
+                                                       '%Y-%m-%dT%H:%M:%S%z'))
                             .replace("{{location}}", future_dojo_event_info['location'])
                             .replace("{{event_url}}", future_dojo_event_info['event_url'])
                             .replace("{{picture_url}}", future_dojo_event_info['picture_url'])

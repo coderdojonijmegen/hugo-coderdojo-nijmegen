@@ -8,7 +8,7 @@ wanneer:
   tot: {{end_time}}
 waar: "{{location}}"
 eventbrite:
-  inschrijventot: {{start_date}}T00:00:00.0Z
+  inschrijventot: {{latest_signup_datetime}}
   url: "{{event_url}}"
 instructies:
   - 
