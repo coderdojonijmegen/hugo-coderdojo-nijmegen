@@ -7,7 +7,8 @@ import requests
 
 from utils.dojo import Dojo
 from utils.slack import notify
-from utils.utils import h_message, env_var, git, hugo, rm_rf
+from utils.utils import h_message, git, hugo, rm_rf
+from utils.env import env_var
 
 DEFAULT_HUGO_VERSION = "extended_0.74.3"
 HUGO_TAR_GZ = "hugo.tar.gz"

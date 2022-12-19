@@ -3,7 +3,7 @@ import textwrap
 
 import requests
 
-from utils.utils import env_var
+from utils.env import env_var
 
 SLACK_CHANNEL = env_var("INPUT_SLACKWEBHOOK")
 
