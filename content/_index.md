@@ -13,7 +13,8 @@ maandelijks een gratis [workshop](/dojos) (*dojo*) voor jongeren tussen 7 en 17 
 begeleiding tijdens de dojo's wordt verzorgd door een groep [vrijwilligers](/team). Bij CoderDojo Nijmegen proberen we 
 veel verschillende [onderwerpen](/instructies) aan bod te laten komen.
 
-Naast het leren programmeren ontmoeten deelnemers gelijkgestemde mensen, kunnen ze met elkaar delen waar ze aan werken en maken ze nieuwe dingen. CoderDojo maakt leren programmeren daarmee een leuke en sociale ervaring. CoderDojo heeft 
+Naast het leren programmeren ontmoeten deelnemers gelijkgestemde mensen, kunnen ze met elkaar delen waar ze aan werken 
+en maken ze nieuwe dingen. CoderDojo maakt leren programmeren daarmee een leuke en sociale ervaring. CoderDojo heeft 
 slechts één regel:
 
 **Boven Alles: Wees Cool!**
