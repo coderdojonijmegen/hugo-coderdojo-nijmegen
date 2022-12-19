@@ -87,8 +87,6 @@ def clone_build_push(args, branch, target_dir):
             print("=> not pushing when not on master")
     else:
         print("=> no changes")
-    notify(branch, f"pushed changes to {branch}; see {env_var('GITHUB_SERVER_URL')}/"
-                   f"{env_var('GITHUB_REPOSITORY')}/actions/runs/{env_var('GITHUB_RUN_ID')}")
 
 
 h_message(f"downloading {url} to {HUGO_TAR_GZ}")
