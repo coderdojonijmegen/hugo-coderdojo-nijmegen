@@ -5,7 +5,7 @@ import requests
 
 from utils.utils import env_var
 
-SLACK_CHANNEL = env_var("INPUT_SLACK_WEBHOOK")
+SLACK_CHANNEL = env_var("INPUT_SLACKWEBHOOK")
 
 
 def notify(title: str, message: str):
