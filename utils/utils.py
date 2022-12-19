@@ -1,6 +1,8 @@
 import subprocess
 import os
 
+from utils import slack
+
 
 def h_message(message):
     print(f"\n\n\033[1;37m{message}\033[0m\n")
@@ -21,8 +23,8 @@ def env_var(var_name, default_value=None):
 def _sub(args):
     print(args)
     with subprocess.Popen(args) as proc:
-        proc.communicate()
-        return proc.returncode
+        stdout, stderr = proc.communicate()
+        return proc.returncode, stdout, stderr
 
 
 def git(args, message=None, working_dir=None):
@@ -39,7 +41,9 @@ def git(args, message=None, working_dir=None):
 
 
 def hugo(args):
-    if _sub(f"./hugo {args}".split(" ")) != 0:
+    ret_code, stdout, stderr = _sub(f"./hugo {args}".split(" "))
+    if ret_code != 0:
+        slack.notify("Hugo error", f"{stdout}: {stderr}")
         exit(-1)
 
 
