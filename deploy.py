@@ -86,7 +86,6 @@ def clone_build_push(args, branch, target_dir):
             print("=> not pushing when not on master")
     else:
         print("=> no changes")
-        notify(branch, f"no changes on {branch}")
 
 
 h_message(f"downloading {url} to {HUGO_TAR_GZ}")
