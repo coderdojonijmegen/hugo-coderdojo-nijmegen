@@ -6,6 +6,7 @@ from datetime import datetime
 import requests
 
 from utils.dojo import Dojo
+from utils.slack import notify
 from utils.utils import h_message, env_var, git, hugo, rm_rf
 
 DEFAULT_HUGO_VERSION = "extended_0.74.3"
@@ -80,10 +81,12 @@ def clone_build_push(args, branch, target_dir):
            working_dir=target_dir) is 0:
         if github_branch == REF_MASTER:
             git("push --force", working_dir=target_dir)
+            notify(branch, f"pushed changes to {branch}")
         else:
             print("=> not pushing when not on master")
     else:
         print("=> no changes")
+        notify(branch, f"no changes on {branch}")
 
 
 h_message(f"downloading {url} to {HUGO_TAR_GZ}")

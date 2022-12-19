@@ -22,5 +22,6 @@ jobs:
           githubToken: ${{ secrets.PAT }}
           hugoVersion: extended_0.74.3
           eventbriteApiKey: ${{ secrets.EVENTBRITE_API_KEY }}
+          slackWebhook: ${{ secrets.SLACK_WEBHOOK }}
           args: --gc --minify --cleanDestinationDir
           cname: coderdojo-nijmegen.nl

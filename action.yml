@@ -11,6 +11,10 @@ inputs:
     description: 'API key to get dojo events from Eventbrite'
     required: true
 
+  slackWebhook:
+    description: 'Slack webhook to use to send notifications'
+    required: true
+
   cname:
     description: 'The custom domain name for your GH Pages Site'
     required: false
