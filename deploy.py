@@ -78,7 +78,7 @@ def clone_build_push(args, branch, target_dir):
     git("add -A", working_dir=target_dir)
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if git(f"commit -am", message=f"Publishing Site {cname} to {branch} at {github_sha} on {now}.",
-           working_dir=target_dir) is 0:
+           working_dir=target_dir) == 0:
         if github_branch == REF_MASTER:
             git("push --force", working_dir=target_dir)
             notify(branch, f"pushed changes to {branch}")
