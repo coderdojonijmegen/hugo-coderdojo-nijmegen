@@ -10,5 +10,5 @@ We hebben allerlei instructies voor diverse talen zoals Löve2D, Scratch, Python
 Deze zijn beschikbaar in verschillende layouts, maar zijn we aan het omzetten
 voor gebruik in deze site.
 
-Hieronder vind je die af zijn. 
+Hieronder vind je die af zijn.
 De rest vind je hier: https://coderdojonijmegen.github.io/
