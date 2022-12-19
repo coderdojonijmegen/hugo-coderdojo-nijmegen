@@ -56,7 +56,7 @@ houden statistieken bij op onze website, maar dit gebeurt te allen tijde geanoni
 
 Deze privacyverklaring is niet van toepassing op websites van derden die door middel van links met deze website zijn
 verbonden. Wij kunnen niet garanderen dat deze derden op een betrouwbare of veilige manier met uw persoonsgegevens
-omgaan. Wij raden u aan de privacyverklaring van deze websites te lezen alvorens van deze websites gebruik te maken.
+omgaan. Wij raden u aan de privacyverklaring van deze websites te lezen voor van deze websites gebruik te maken.
 
 # Wijzigingen in deze privacyverklaring
 
