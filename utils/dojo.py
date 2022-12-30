@@ -98,6 +98,7 @@ class Dojo:
                                             )
                                      ).replace("</div></div>", "")
                             .replace("<p><strong>", "\n## ").replace("</strong></p>", "")
+                            .replace("<h2>", "\n## ").replace("</h2>", "")
                             .replace("<p>", "\n\n").replace("</p>", "")
                             .replace("<ul>", "").replace("</ul>", "")
                             .replace("<li>", "\n - ").replace("</li>", "")
