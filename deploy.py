@@ -65,9 +65,9 @@ for instruction_repo in instruction_repos:
         git(f"clone --depth=1 --single-branch https://x-access-token:{github_token}@github.com/{repo}.git {path}")
 
 
-def clone_build_push(args, branch, target_dir):
-    h_message(f"clone, build, commit and push to {branch}")
-    git(f"clone --depth=1 --single-branch --branch {branch} https://x-access-token:{github_token}@github.com"
+def clone_build_push(args, target_branch, target_dir):
+    h_message(f"clone, build, commit and push to {target_branch}")
+    git(f"clone --depth=1 --single-branch --branch {target_branch} https://x-access-token:{github_token}@github.com"
         f"/{github_repo}.git {target_dir}")
     rm_rf(f"{target_dir}/*")
 
@@ -78,14 +78,16 @@ def clone_build_push(args, branch, target_dir):
 
     git("add -A", working_dir=target_dir)
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    return_code, _, _ = git(f"commit -am", message=f"Publishing Site {cname} to {branch} at {github_sha} on {now}.",
+    return_code, _, _ = git(f"commit -am", message=f"Publishing Site {cname} to {target_branch} at {github_sha} on {now}.",
                             working_dir=target_dir)
     if return_code == 0:
         if github_branch == REF_MASTER:
             git("push --force", working_dir=target_dir)
             _, stdout, _ = git("log -1 --pretty=%B")
-            notify(branch, f"pushed changes from commit '{stdout}' to {branch}; see {env_var('GITHUB_SERVER_URL')}/"
-                           f"{env_var('GITHUB_REPOSITORY')}/actions/runs/{env_var('GITHUB_RUN_ID')}")
+            message = f"pushed changes from commit '{stdout}' to {target_branch}; see {env_var('GITHUB_SERVER_URL')}/" \
+                      f"{env_var('GITHUB_REPOSITORY')}/actions/runs/{env_var('GITHUB_RUN_ID')}"
+            print(message)
+            notify(target_branch, message)
         else:
             print("=> not pushing when not on master")
     else:
