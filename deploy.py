@@ -83,7 +83,7 @@ def clone_build_push(args, branch, target_dir):
     if return_code == 0:
         if github_branch == REF_MASTER:
             git("push --force", working_dir=target_dir)
-            _, stdout, _ = git("git log -1 --pretty=%B")
+            _, stdout, _ = git("log -1 --pretty=%B")
             notify(branch, f"pushed changes from commit '{stdout}' to {branch}; see {env_var('GITHUB_SERVER_URL')}/"
                            f"{env_var('GITHUB_REPOSITORY')}/actions/runs/{env_var('GITHUB_RUN_ID')}")
         else:
