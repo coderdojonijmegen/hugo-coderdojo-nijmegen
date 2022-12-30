@@ -1,5 +1,5 @@
 ---
-title: "#92: Raspberry Pi  &  micro:bit"
+title: "#92: Raspberry Pi & micro:bit"
 date: 2022-12-30T00:00:00+0100
 draft: false
 headercolor: "orange-background"
@@ -18,25 +18,25 @@ instructies:
 
 
 
-W﻿e zijn deze eerste dojo van 2023 te gast bij Mosadex e-Health aan het Keizer Karel plein.
+We zijn deze eerste dojo van 2023 te gast bij Mosadex e-Health aan het Keizer Karel plein.
 
 <!--more-->
 
 
 
-W﻿at heel gaaf is, is dat we gebruik mogen maken van een grote ruimte met daarin een hele wand vol oude computers. Hun computer museum! Er zijn zelfs computers bij die ouder zijn dan sommige mentoren!!<h2>Wat gaan we doen?</h2>
+Wat heel gaaf is, is dat we gebruik mogen maken van een grote ruimte met daarin een hele wand vol oude computers. Hun computer museum! Er zijn zelfs computers bij die ouder zijn dan sommige mentoren!!<h2>Wat gaan we doen?</h2>
 
-W﻿at gaan we dan doen in deze bijzondere omgeving?
+Wat gaan we dan doen in deze bijzondere omgeving?
 
 Mosadex stelt niet alleen de ruimte ter beschikking, maar zorgt ook voor beeldschermen en toetsenborden, zodat we weer eens een dojo kunnen organiseren met Raspberry Pi's!
 
 Voor wie ze niet kent, dat zijn computertjes op een klein bordje. Vergelijkbaar met een micro:bit, maar nóg veelzijdiger en echte computer waar je dus ook een scherm en toetsenbord aan kunt verbinden.
 
-O﻿mdat we 11 Raspberry Pi's ter beschikking hebben, houden we een sessie voor en na de pauze, zodat we alle kinderen er mee kunnen laten spelen.
+Omdat we 11 Raspberry Pi's ter beschikking hebben, houden we een sessie voor en na de pauze, zodat we alle kinderen er mee kunnen laten spelen.
 
 Even geen Raspberry Pi? Dan kun je aan de slag met de micro:bit!
 
-K﻿ortom, dit zal een bijzondere dojo worden!<h2>Voorbereiding</h2>
+Kortom, dit zal een bijzondere dojo worden!<h2>Voorbereiding</h2>
 
 Neem een laptop mee voor de opdrachten met de micro:bit en natuurlijk een goed humeur!<h2>Algemene info</h2>
 
