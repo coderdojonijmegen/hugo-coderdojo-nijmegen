@@ -23,11 +23,7 @@ def git(args, message=None, working_dir=None):
         cmd = f"/usr/bin/git {args}".split(" ")
         if message is not None:
             cmd.append(f"{message}")
-        ret_code, stdout, stderr = _sub(cmd)
-        if ret_code != 0:
-            slack.notify("git error", f"{stdout}: {stderr}")
-            exit(-1)
-        return ret_code
+        return _sub(cmd)
     finally:
         os.chdir(cwd)
 
