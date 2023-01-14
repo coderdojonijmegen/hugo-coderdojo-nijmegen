@@ -15,7 +15,8 @@ Om het circuit compleet te maken en het ledje aan te laten gaan moeten we de con
 De pin die wij hebben gebruikt heet <code>pin 18</code>. We moeten dus met code <code>pin 18</code> gaan aanzetten.
 Dit dit we in Python als volgt:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED
 led = LED(18)
-led.on()
+<span style=color:#00f>while</span> True:
+    led.on()
 </code></pre></div><p>De bovenstaande code begint met het importeren van de code (<code>gpiozero</code>) om de pin te besturen.
 Hierna zeggen we dat er een ledje zit op <code>pin 18</code> met de regel code: <code>LED(18)</code>.
 Daarna zetten we deze led aan. Start het script met:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>python3 script.py
