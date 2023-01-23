@@ -1,5 +1,5 @@
 ---
-title: "#92: Games maken met Löve2D"
+title: "#93: Games maken met Löve2D"
 date: 2023-01-23T00:00:00+0100
 draft: false
 headercolor: "orange-background"
@@ -9,7 +9,7 @@ wanneer:
 waar: "Zwanenveld 9098, 6538 SC Nijmegen"
 eventbrite:
   inschrijventot: 2023-02-04T11:00:00
-  url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-92-games-maken-met-love2d-523046294547"
+  url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-93-games-maken-met-love2d-523046294547"
 instructies:
   - 
 ---
