@@ -17,3 +17,4 @@ coderdojonijmegen/p5.js-art content/instructies/p5.js-art
 coderdojonijmegen/processing-spiekbriefje content/instructies/processing-spiekbriefje
 coderdojonijmegen/machinelearning-beeldherkenning content/instructies/machinelearning-beeldherkenning
 coderdojonijmegen/python-raspberry-pi content/instructies/python-raspberry-pi
+coderdojonijmegen/love2d-blocks content/instructies/love2d-blocks
