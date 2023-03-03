@@ -56,13 +56,17 @@
 Je kunt &ldquo;sketches&rdquo; schrijven in een editor op je PC en het resultaat dan bekijken in een webbrowser. Het is echter makkelijker om een editor in de browser
 zelf te gebruiken. Ga daarvoor naar <a href=p5.js-widget/p5-widget.html target=_blank>deze editor</a>.</p><p>De volgende instructies en voorbeelden gaan ervan uit dat je deze editor gebruikt.</p><h2 id=de-basis>De basis</h2><p>p5.js sketches hebben de volgende basis:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
 </span></span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:block;width:100%;background-color:#e5e5e5><span style=color:#000;font-weight:700>function</span> setup() {
+</span><span style=display:block;width:100%;background-color:#e5e5e5>  createCanvas(<span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span><span style=display:block;width:100%;background-color:#e5e5e5>}
 </span>
 <span style=display:block;width:100%;background-color:#e5e5e5><span style=color:#000;font-weight:700>function</span> draw() {
+</span><span style=display:block;width:100%;background-color:#e5e5e5>  background(<span style=color:#099>255</span>, <span style=color:#099>0</span>, <span style=color:#099>200</span>);
 </span><span style=display:block;width:100%;background-color:#e5e5e5>}
 </span></code></pre></td></tr></table></div></div><p>Er zijn twee functies die worden aangeroepen door de p5.js bibliotheek:</p><ul><li><code>setup()</code> wordt éénmaal bij de start van het script uitgevoerd</li><li><code>draw()</code> wordt oneindig herhaald en iedere schermvernieuwing aangeroepen (normaal 60 keer per seconde)</li></ul><p>In de <code>setup()</code> functie zet je éénmalige instellingen, zoals bijvoorbeeld een vaste achtegrondkleur. In de <code>draw()</code>
 functie dingen die veranderen, zoals bijvoorbeeld een verschuivende kubus.</p><p>Het volgende voorbeeld tekent een draaiend vierkant:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
@@ -92,9 +96,9 @@ waarde? En wat met een hoge?<br><strong>Opdracht 3</strong>: misschien vraag je 
 de regel te zetten, maak je er commentaar van en wordt het niet meer uitgevoerd. Zet <code>//</code> voor regel 6. Wat gebeurt
 er?<br><strong>Opdracht 4</strong>: regel 8 zorgt ervoor dat het vierkant draait. Verander waarde 50 eens door 10. Wat gebeurt er? En bij
 een waarde van 100?<br><strong>Opdracht 5</strong>: regel 9 tekent het vierkant. De eerste twee getallen -26 verschuiven het draaipunt van het vierkant
-horizontaal en vertikaal. De twee laatste bepalen de hoogte en breedte. Vervang de getallen 52 eens door 75. Wat
+horizontaal en verticaal. De twee laatste bepalen de hoogte en breedte. Vervang de getallen 52 eens door 75. Wat
 gebeurt er? En als je één van de twee 52 laat en de ander veranderd naar 75?</p><p>Na het uitvoeren van deze eerste opdrachten begrijp je een beetje hoe het werkt. In de volgende hoofdstukken gaan we
-verder met meer voorbeelden en uitleg.</p><h2 id=cirkels-en-muis>Cirkels en muis</h2><p>In dit hoofdstuk gaan we kunst maken met je muis. Beweeg je muis maar eens over het grijze vlak hieronder. 😉</p><div class=p5js_voorbeeld id=voorbeeld2></div>Stap voor stap gaan we dit nabouwen.<h3 id=tekenvlak>Tekenvlak</h3><p>We beginnen met het vlak waarin we de cirkels gaan tekenen:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+verder met meer voorbeelden en uitleg.</p><h2 id=cirkels-en-muis>Cirkels en muis</h2><p>In dit hoofdstuk gaan we kunst maken met je muis. Beweeg je muis maar eens over het grijze vlak hieronder. 😉</p><div class=p5js_voorbeeld id=voorbeeld2></div>Stap voor stap gaan we dit nabouwen.<h3 id=tekenvlak>Tekenvlak</h3><p>We openen nu een nieuw venster om opnieuw te beginnen. Ga daarvoor naar <a href=p5.js-widget/p5-widget.html target=_blank>deze editor</a>.</p><p>We beginnen met het vlak waarin we de cirkels gaan tekenen:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
 </span></span><span style=display:block;width:100%;background-color:#e5e5e5><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
 </span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
@@ -180,11 +184,11 @@ overeen met zwart en <code>color(255, 0, 0)</code> met helder rood.</p><p><stron
 }
 
 <span style=color:#000;font-weight:700>function</span> draw() {
-<span style=display:block;width:100%;background-color:#e5e5e5>    <span style=color:#000;font-weight:700>let</span> snelheid <span style=color:#000;font-weight:700>=</span> abs(mouseX <span style=color:#000;font-weight:700>-</span> pmouseX) <span style=color:#000;font-weight:700>+</span> abs(mouseY <span style=color:#000;font-weight:700>-</span> pmouseY)
+<span style=display:block;width:100%;background-color:#e5e5e5>    <span style=color:#000;font-weight:700>let</span> snelheid <span style=color:#000;font-weight:700>=</span> abs(mouseX <span style=color:#000;font-weight:700>-</span> pmouseX) <span style=color:#000;font-weight:700>+</span> abs(mouseY <span style=color:#000;font-weight:700>-</span> pmouseY);
 </span>    fill(color(<span style=color:#099>255</span>, <span style=color:#099>128</span>, <span style=color:#099>0</span>));
 <span style=display:block;width:100%;background-color:#e5e5e5>    ellipse(mouseX, mouseY, snelheid, snelheid);
 </span>}
-</code></pre></td></tr></table></div></div><p><strong>Opdracht 11</strong>: voeg regel 7 toe en pas regel 9 aan. Wordt de cirkel groter en kleiner?</p><p>Op regel 7 wordt de snelheid van de muis berekend. Wil je daar meer over weten, lees dan door in onderstaande grijze
+</code></pre></td></tr></table></div></div><p><strong>Opdracht 11</strong>: voeg regel 7 toe en pas regel 9 aan. Wordt de cirkel groter en kleiner als je je muis sneller en langzamer beweegt?</p><p>Op regel 7 wordt de snelheid van de muis berekend. Wil je daar meer over weten, lees dan door in onderstaande grijze
 vak.</p><div class=verdieping><h4 id=hoe-bereken-je-de-snelheid-van-de-muis>Hoe bereken je de snelheid van de muis?</h4><p>Op het moment dat je je muis beweegt, dan beweegt het horizontaal, vertikaal of in beide richtingen als je je muis
 schuin beweegt. Als je je muis langzaam beweegt, dan verschuift het een kleiner stukje per seconde dan als je het
 sneller beweegt.</p><p>De verschuiving die je doet, kun je berekenen door het verschil te bepalen tussen de vorige positie en de huidige. In
@@ -209,9 +213,9 @@ We hebben de snelheid al berekend, nu gaat we die gebruiken bij het inkleuren va
 }
 
 <span style=color:#000;font-weight:700>function</span> draw() {
-    <span style=color:#000;font-weight:700>let</span> snelheid <span style=color:#000;font-weight:700>=</span> abs(mouseX <span style=color:#000;font-weight:700>-</span> pmouseX) <span style=color:#000;font-weight:700>+</span> abs(mouseY <span style=color:#000;font-weight:700>-</span> pmouseY)
-<span style=display:block;width:100%;background-color:#e5e5e5>    <span style=color:#000;font-weight:700>let</span> kleur <span style=color:#000;font-weight:700>=</span> color(<span style=color:#099>255</span> <span style=color:#000;font-weight:700>-</span> snelheid, snelheid, <span style=color:#099>128</span> <span style=color:#000;font-weight:700>+</span> snelheid)
-</span><span style=display:block;width:100%;background-color:#e5e5e5>    fill(kleur)
+    <span style=color:#000;font-weight:700>let</span> snelheid <span style=color:#000;font-weight:700>=</span> abs(mouseX <span style=color:#000;font-weight:700>-</span> pmouseX) <span style=color:#000;font-weight:700>+</span> abs(mouseY <span style=color:#000;font-weight:700>-</span> pmouseY);
+<span style=display:block;width:100%;background-color:#e5e5e5>    <span style=color:#000;font-weight:700>let</span> kleur <span style=color:#000;font-weight:700>=</span> color(<span style=color:#099>255</span> <span style=color:#000;font-weight:700>-</span> snelheid, snelheid, <span style=color:#099>128</span> <span style=color:#000;font-weight:700>+</span> snelheid);
+</span><span style=display:block;width:100%;background-color:#e5e5e5>    fill(kleur);
 </span>    ellipse(mouseX, mouseY, snelheid, snelheid);
 }
 </code></pre></td></tr></table></div></div><p>Met het commando <code>color</code> op regel 8 kunnen we een kleur maken. Het commando heeft 3 parameters. Het eerste bepaald de
@@ -296,19 +300,7 @@ Onze doelwitten worden cirkels.
 Om cirkels te tekenen, kunnen we de ellipse functie gebruiken.</p><p>We hebben eerder al een lijst met doelwitten gemaakt:
 hier zorgt de eerste regel voor.
 We gaan nu elk doelwit in de lijst met doelwitten af en tekenen ze op het scherm.
-Dit doen wij met een for-loop:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
-        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
-        
-        <span style=color:#998;font-style:italic>//Teken alle doelwitten
-</span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);  
-}
-</code></pre></td></tr></table></div></div><p>Je code zal er (ongeveer) uit zien als volgt.
+Dit doen wij met een for-loop.</p><p>Je code zal er (ongeveer) uit zien als volgt.
 Dit is een lastig onderdeel van de opdracht, dus als je hier vragen over hebt, stel deze dan vooral!</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
@@ -479,23 +471,23 @@ moeten we een doelwit weggooien als het te klein is om nog verder te kunnen krim
 }
 </code></pre></td></tr></table></div></div><p><strong>Opdracht 20</strong>
 In deze stap programmeren we dat we op doelwitten kunnen klikken, om deze te verwijderen.
-Dat doen we als volgt.
+Dat doen we als volgt:
 De functie mouseClicked() activeert wanneer je klikt.
 Plaats deze functie helemaal onderaan in het bestand.
-Probeer elke regel te begrijpen en vraag om hulp als er iets onduidelijk is!</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+Probeer elke regel te begrijpen en vraag om hulp als er iets onduidelijk is!</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#000;font-weight:700>function</span> mouseClicked() {
   <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
     t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
