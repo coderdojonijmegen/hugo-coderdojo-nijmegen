@@ -23,7 +23,10 @@ def git(args, message=None, working_dir=None):
         cmd = f"/usr/bin/git {args}".split(" ")
         if message is not None:
             cmd.append(f"{message}")
-        return _sub(cmd)
+        return_code, stdout, stderr = _sub(cmd)
+        if return_code != 0:
+            raise IOError(stderr)
+        return return_code, stdout, stderr
     finally:
         os.chdir(cwd)
 
