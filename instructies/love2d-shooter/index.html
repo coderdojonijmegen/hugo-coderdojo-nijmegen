@@ -1,0 +1,324 @@
+<!doctype html><html lang=nl-nl><head><title>Löve2D - Shooter</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.a4d35daeac053c966529d9ed9dbdf3df516238746c9829a8c54708b1cb923b7c.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/love2d-shooter>Love2d shooter</a></li></ul></breadcrumbs><h1>Löve2D - Shooter</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#wat-leer-je>Wat leer je?</a></li><li><a href=#benodigdheden>Benodigdheden</a><ul><li><a href=#installatie-löve>Installatie Löve</a></li></ul></li><li><a href=#stappen>Stappen</a><ul><li><a href=#stap-0-installatie-voorbereidde-code>Stap 0: installatie voorbereidde code</a></li><li><a href=#stap-1-teken-het-vliegtuig-van-de-speler>Stap 1: teken het vliegtuig van de speler</a></li><li><a href=#stap-2-eigenschappen-van-de-speler>Stap 2: eigenschappen van de speler</a></li><li><a href=#stap-3-de-speler-bewegen>Stap 3: de speler bewegen</a></li><li><a href=#stap-4-de-vijand>Stap 4: de vijand</a></li><li><a href=#stap-5-meerdere-vijanden>Stap 5: meerdere vijanden</a></li><li><a href=#stap-6-de-vijand-ontwijken>Stap 6: de vijand ontwijken</a></li><li><a href=#stap-7-schieten>Stap 7: schieten</a></li><li><a href=#stap-8-raken-en-scoren>Stap 8: raken en scoren</a></li><li><a href=#stap-9-opnieuw-starten>Stap 9: opnieuw starten</a></li><li><a href=#voorbereide-functies>Voorbereide functies</a></li><li><a href=#voorbeeld-code>Voorbeeld code</a></li></ul></li><li><a href=#conclusie>Conclusie</a></li><li><a href=#vervolg>Vervolg</a></li></ul></nav></aside><p>We gaan met 2D game &ldquo;framework&rdquo; Löve2D een shooter bouwen.</p><p>We gaan een eenvoudige shooter maken.
+Deze instructie is een vertaling en bewerking van een <a href=http://osmstudios.com/tutorials/your-first-love2d-game-in-200-lines-part-1-of-3>tutorial</a> gemaakt door >_OSMSTUDIOS.</p><h2 id=wat-leer-je>Wat leer je?</h2><p>Tijdens de Dojo&rsquo;s over Scratch hebben jullie kennis gemaakt met variabelen en functies (blokken). Daar gaan we mee verder.</p><p>In Scratch kun je met drag-and-drop variabelen en functies combineren tot een programma, maar bij de meeste
+programmeertalen wordt het programma in tekst geschreven. Dat is ook het geval bij Löve. We gaan dus typen.</p><p>Omdat we er geen typecursus van willen maken, zijn een aantal functies, net als bij Scratch, al voor jullie gemaakt.
+Je hoeft deze dus niet helemaal zelf meer te maken. Je hoeft ze alleen maar te gebruiken.
+Dit zijn de functies:
+<code>xRechterRand</code>, <code>yOnderRand</code>, <code>xWillekeurig</code>, <code>tekenVijanden</code>, <code>tekenKogels</code>, <code>maakNieuweVijand</code>,
+<code>maakNieuweKogel</code>, <code>spelerHeeftVijandGeraakt</code> en <code>kogelHeeftVijandGeraakt</code>.</p><p>Als je deze in de uitleg tegenkomt, hoef je ze dus niet zelf te implementeren!</p><h2 id=benodigdheden>Benodigdheden</h2><p>Om deze instructie te kunnen volgen, moet je Löve en een goede editor geïnstalleerd hebben.
+Verder moet je wat code downloaden om verder op te bouwen, maar dit wordt in stap 0 uitgelegd.</p><h3 id=installatie-löve>Installatie Löve</h3><p>Hopelijk heb je de installatie al voorbereid na het ontvangen van de uitnodiging voor deze Dojo. Als dat zo is, kun je
+dit hoofdstukje overslaan en doorgaan naar Stap 1.</p><h4 id=windows>Windows</h4><p>Löve is op Windows gemakkelijk te installeren via één van de installers. Als alternatief kun je kiezen voor één van de
+zipbestanden en deze op een gewenste locatie unzippen. Maak het jezelf gemakkelijk door Löve op een eenvoudig te
+onthouden plek te installeren, bijvoorbeeld in de map</p><pre><code>c:\love\
+</code></pre><p>Zie de <a href=https://love2d.org/#download>Löve download pagina</a> voor de installatie bestanden.
+Als je twijfelt tussen de 32- of 64-bits versie, kun je voor de zekerheid kiezen voor 32-bits versie of gewoon even
+<a href=https://support.microsoft.com/nl-nl/help/13443/windows-which-operating-system>checken</a> welke versie je hebt.</p><h4 id=mac>Mac</h4><p><a href=https://love2d.org/#download>Download</a> het zip bestand voor Mac en unzip het op de gewenste locatie.</p><h4 id=linux>Linux</h4><p>Voor Ubuntu kun je kiezen voor het toevoegen van de
+<a href=https://launchpad.net/~bartbes/%2Barchive/ubuntu/love-stable>Löve PPA</a>
+of voor de installatie van één van de .deb bestanden.<br>Onderstaand vind je de instructies voor het gebruiken van de AppImage:</p><div class=toggle><div class=toggle_header>Instructies voor het gebruiken van de Löve AppImage</div><div style=display:none><ol><li><p>Download de <a href=https://love2d.org/#download>Löve <code>appimage x86_64</code></a>.
+Zet deze bijvoorbeeld in je <code>~/Documents</code> directory.</p></li><li><p>Voer hier vervolgens de volgende commands op uit (vanuit <code>~/Documents</code>).
+Je <code>.AppImage</code> kan een andere versie/naam hebben dan in het voorbeeld!</p></li></ol><pre><code class=language-verbatim data-lang=verbatim>chmod u+x love-11.4-x86_64.AppImage
+./love-11.4-x86_64.AppImage --appimage-extract</code></pre><ol start=3><li>Het resultaat is een directory <code>~/Documents/squashfs-root</code>.
+Deze directory bevat het bestand <code>AppRun</code>, welke uitvoerbaar is.</li><li>Zorg nu dat je weet waar je <code>.lua</code> bestanden staan (zie onderstaande stap 1).
+In ons voorbeeld is dit in <code>~/Documents/love2d-shooter-master/src/</code>.
+Je voert de code dan op de volgende manier uit:</li></ol><pre><code class=language-verbatim data-lang=verbatim>~/Documents/squashfs-root/AppRun ~/Documents/love2d-shooter-master/src/</code></pre><p>Let op dat het scherm in eerste instantie zwart is, omdat we nog geen code geschreven hebben.<br>Mocht het niet lukken om de code op deze manier uit te voeren, vraag dan gerust om hulp!</p></div></div><h4 id=tekst-editor>Tekst editor</h4><p>Als je gaat programmeren is het handig om een editor te installeren met meer mogelijkheden dan &lsquo;kladblok&rsquo;.
+<a href=https://www.sublimetext.com/download>Sublime Text</a> snapt Lua en dus Löve. Als alternatief kun je kiezen voor
+<a href=https://notepad-plus-plus.org/download/>Notepad++</a>.</p><h2 id=stappen>Stappen</h2><p>TIP: de onderstaande stukken code hoef je niet over te typen. Je kunt ze natuurlijk gewoon copy-pasten in je editor.</p><h3 id=stap-0-installatie-voorbereidde-code>Stap 0: installatie voorbereidde code</h3><p>Download the code van GitHub: <a href=https://github.com/coderdojonijmegen/love2d-shooter/archive/master.zip>Löve 2D shooter code</a>
+De zip-file bevat een <code>src/</code> folder. Kopieer de inhoud daarvan naar <code>c:\games\shooter</code>.
+Om de voorbereidde code uit te voeren, druk je op de Windows knop en typ je <code>cmd</code>. Je krijgt dan een zwart venster.
+Typ dan cd <code>c:\games\shooter</code> om naar de folder te gaan waar je de code hebt neergezet. Typ tenslotte <code>c:\love\love.exe .\</code>
+om het programma te starten. Als alles goed gaat, krijg je een zwart venster.</p><h3 id=stap-1-teken-het-vliegtuig-van-de-speler>Stap 1: teken het vliegtuig van de speler</h3><p>In deze stap laden we het plaatje van het vliegtuig van de speler
+en tekenen we het plaatje op het scherm.
+Open <code>main.lua</code> in je tekst editor en type het volgende:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- variabele om het plaatje in op te slaan</span>
+spelersVliegtuig = <span style=color:#00f>nil</span>
+
+<span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.load(arg)
+  <span style=color:green>-- laad het plaatje in de variabele</span>
+  spelersVliegtuig = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/spelersVliegtuig.png&#39;</span>)
+<span style=color:#00f>end</span></code></pre></div><p>En vervolgens om op het scherm te tekenen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.draw(dt)
+  <span style=color:green>-- teken het plaatje op het scherm</span>
+  love.graphics.draw(spelersVliegtuig, 100, 100)
+<span style=color:#00f>end</span></code></pre></div><p>Start je programmaatje en zie het resultaat:</p><p><img src=images/image9.png alt="scherm met vliegtuig"></p><div class=verdieping><h3 id=x-en-y-as>x en y as</h3><p><img src=images/image6.png alt="assen stelsel in Löve2D"></p><p>In de code hebben we bij het aanroepen van functie <code>love.graphics.draw</code> twee keer het getal <code>100</code> gebruikt.
+Dit getal gebruiken we om de positie van het plaatje in het scherm te bepalen. Daarbij is positie <code>(0,0)</code> links bovenin. Bij <code>(100,100)</code> is
+het plaatje dus 100 stappen naar beneden en 100 naar rechts verschoven ten opzichte van <code>(0,0)</code>.
+Voor de horizontale positie wordt vaak variabele naam <code>x</code> gebruikt en voor de verticale positie <code>y</code>.
+Een handige manier van opschrijven is <code>(x, y)</code>, bijvoorbeeld <code>(50, 30)</code> als <code>x = 50</code> en <code>y = 30</code>.</p><p>In Scratch komen <code>x</code> en <code>y</code> waarden voor de plaats van een Sprite ook terug.
+Hieronder staat Scratch op <code>x = 31</code> en <code>y = -36</code></p><p><img src=images/image8.png alt="x en y in Scratch"></p></div><h3 id=stap-2-eigenschappen-van-de-speler>Stap 2: eigenschappen van de speler</h3><p>Het vliegtuig van de speler staat nu nog stil op positie <code>(100,100)</code>, maar zal natuurlijk van links naar rechts gaan bewegen
+als we wat verder zijn. Je zou kunnen zeggen dat de speler een aantal eigenschappen heeft:</p><ul><li>het plaatje</li><li>de positie</li></ul><p>Om die informatie bij elkaar te houden, vervangen we variabele <code>spelersVliegtuig</code> door een nieuwe variabele waarin
+meerdere eigenschappen opgeslagen kunnen worden. Deze variabele noemen we <code>speler</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- variabele om eigenschappen van de speler in op te slaan</span>
+speler = { x = 200, y = 560, plaatje = <span style=color:#00f>nil</span> }
+
+<span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.load(arg)
+  <span style=color:green>-- laad het plaatje in eigenschap plaatje van de variabele speler</span>
+  speler.plaatje = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/spelersVliegtuig.png&#39;</span>)
+<span style=color:#00f>end</span></code></pre></div><p>Het tekenen van het plaatje moet ook aangepast worden,
+zodat we de eigenschappen van de nieuwe variabele <code>speler</code> gebruiken:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.draw(dt)
+  <span style=color:green>-- teken het plaatje op het scherm</span>
+  love.graphics.draw(speler.plaatje, speler.x, speler.y)
+<span style=color:#00f>end</span></code></pre></div><p>Start het programma opnieuw op, en je zal zien dat het vliegtuig nu onderin het venster staat.
+De wijzigingen die je hebt gemaakt zorgen dat we het plaatje later kunnen laten bewegen.</p><h3 id=stap-3-de-speler-bewegen>Stap 3: de speler bewegen</h3><p>Je programma toont nu alleen een stilstaand plaatje. Dat is natuurlijk niet erg interessant. In deze stap ga je het plaatje laten bewegen.</p><h4 id=bewegen-met-pijltjes>Bewegen met pijltjes</h4><p>Om het plaatje horizontaal te laten bewegen, moet de <code>speler.x</code> eigenschap worden aangepast. De waarde van <code>speler.x</code>
+moet kleiner worden om naar links te bewegen en groter om naar rechts te bewegen. Je kunt dit ook eenvoudig uitproberen
+door de waarde <code>200</code> in de code groter of kleiner te maken en je programma te starten.</p><p>Om het plaatje te laten bewegen terwijl het programma draait, moet het programma gaan reageren op toetsen van je
+toetsenbord. De pijl naar links zorgt voor een beweging naar links en de pijl naar rechts zorgt voor een beweging naar rechts:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.update(dt)
+  <span style=color:green>-- als pijltje naar links wordt ingedrukt</span>
+  <span style=color:#00f>if</span> love.keyboard.isDown(<span style=color:#a31515>&#39;left&#39;</span>) <span style=color:#00f>then</span>
+
+	<span style=color:green>-- dan doe een stap naar links</span>
+	speler.x = speler.x - 1
+
+  <span style=color:green>-- als pijltje naar rechts wordt ingedrukt</span>
+  <span style=color:#00f>elseif</span> love.keyboard.isDown(<span style=color:#a31515>&#39;right&#39;</span>) <span style=color:#00f>then</span>
+
+	<span style=color:green>-- dan doe een stap naar rechts</span>
+	speler.x = speler.x + 1
+  <span style=color:#00f>end</span>
+<span style=color:#00f>end</span></code></pre></div><p>Als je voor het eerst dit soort code leest ziet het bovenstaande voorbeeld er ingewikkeld uit.
+Maar: vergelijk het eens met het bewegen via pijltjes in Scratch. <code>love.update(dt)</code> wordt steeds opnieuw uitgevoerd en is daarom vergelijkbaar met
+de <code>herhaal</code> loop in Scratch. <code>if ... then</code> is gelijk aan de <code>als ... dan</code> keuze in Scratch.
+In Scratch zou dit er ongeveer als volgt hebben uitgezien:</p><div class=scratch>wanneer groene vlag wordt aangeklikt
+herhaal
+als &lt;toets [pijltje links v] ingedrukt?> dan
+verander x met (-1)
+end
+als &lt;toets [pijltje rechts v] ingedrukt?> dan
+verander x met (1)
+end
+end</div><p>Als je de code hebt ingevoerd (in Löve2D, niet in Scratch 😀), kun je het programma starten om uit te proberen of het werkt.</p><p>Probeer ook eens een andere stapgrootte dan <code>1</code>. Doet dat wat je ervan verwacht? Wat gebeurt er als je er een negatief getal van maakt?
+Kun je de code aanpassen, zodat je ook naar boven en beneden kunt bewegen
+(gebruik toetsen <code>up</code> voor naar boven en <code>down</code> voor naar beneden)?
+Wat gebeurt er als je bijvoorbeeld het pijltje naar rechts lang ingedrukt houdt?</p><h4 id=stoppen-bij-de-rand>Stoppen bij de rand</h4><p>Om te voorkomen dat het plaatje het venster kan verlaten,
+moeten we voorkomen dat het verder beweegt als het aan de randen
+van het venster komt. Aan de linker kant is dat makkelijk:
+beweeg niet verder als <code>speler.x</code> gelijk is aan <code>0</code>.
+In code ziet dat er als volgt uit:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als pijltje naar links ingedrukt</span>
+<span style=color:#00f>if</span> love.keyboard.isDown(<span style=color:#a31515>&#39;left&#39;</span>) <span style=color:#00f>then</span>
+
+  <span style=color:green>-- en linker rand is nog niet bereikt</span>
+  <span style=color:#00f>if</span> speler.x &gt; 0 <span style=color:#00f>then</span>
+
+	<span style=color:green>-- dan doe een stap naar links</span>
+	speler.x = speler.x - 1
+
+  <span style=color:#00f>end</span></code></pre></div><p>Aan de rechter zijde is dat lastiger.
+Daar hangt de maximale <code>x</code> af van de breedte van het venster. De maximale waarde
+voor <code>x</code> is gelijk aan de breedte van het venster, of <code>xRechterRand()</code>.
+Let op: <code>xRechterRand</code> is een van de kant en klare functies!</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als pijltje naar rechts ingedrukt</span>
+<span style=color:#00f>elseif</span> love.keyboard.isDown(<span style=color:#a31515>&#39;right&#39;</span>) <span style=color:#00f>then</span>
+
+  <span style=color:green>-- en de rechter rand is nog niet bereikt</span>
+  <span style=color:#00f>if</span> speler.x &lt; xRechterRand() <span style=color:#00f>then</span>
+
+	<span style=color:green>-- dan doe een stap naar rechts</span>
+	speler.x = speler.x + 1
+
+  <span style=color:#00f>end</span>
+<span style=color:#00f>end</span></code></pre></div><p>Pas de code die je eerder bij stap 3 (bewegen met pijltjes) hebt geschreven aan, zodat je stopt bij de rand. Controleer
+ook of het plaatje nu niet aan de rechterkant verdwijnt. Voor de duidelijkheid hebben we de Scratch code ook
+aangepast en bijgevoegd:</p><div class=scratch>wanneer groene vlag wordt aangeklikt
+herhaal
+als &lt;toets [pijltje links v] ingedrukt?> dan
+als &lt;(x-positie) > (0)> dan
+verander x met (-1)
+end
+end
+als &lt;toets [pijltje rechts v] ingedrukt?> dan
+als &lt;(x-positie) < (240)> dan
+verander x met (1)
+end
+end
+end</div><h3 id=stap-4-de-vijand>Stap 4: de vijand</h3><p>Het spel draait natuurlijk niet alleen om het heen en weer bewegen van een vliegtuigje.
+Er zijn ook vijanden. In deze stap gaan we die vijanden maken.</p><p>We beginnen met het tekenen van één vijand.
+Daarvoor voegen we één regel toe (bijna bovenaan je code) en we voegen
+een regel code toe aan de <code>love.load()</code> en <code>love.draw()</code> functies:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- variabelen om eigenschappen van de speler en vijand in op te slaan</span>
+speler = { x = 200, y = 560, plaatje = <span style=color:#00f>nil</span> }
+vijand = { x = 200, y = 0, plaatje = <span style=color:#00f>nil</span> }
+
+<span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.load(arg)
+
+  <span style=color:green>-- laad het plaatje in eigenschap plaatje van de variabele speler</span>
+  speler.plaatje = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/spelersVliegtuig.png&#39;</span>)
+  vijand.plaatje = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/vijandsVliegtuig.png&#39;</span>)
+<span style=color:#00f>end</span>
+
+<span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.draw(dt)
+
+  <span style=color:green>-- teken het plaatje op het scherm</span>
+  love.graphics.draw(speler.plaatje, speler.x, speler.y)
+  love.graphics.draw(vijand.plaatje, vijand.x, vijand.y)
+<span style=color:#00f>end</span></code></pre></div><p>Probeer bovenstaande code uit.</p><p>Er is nu één vijand en deze staat recht tegenover de speler. Een stilstaande vijand is niet zo interessant, dus we laten
+&rsquo;m naar de speler bewegen. Dat kan vrij eenvoudig door het volgende aan de code toe te voegen aan je <code>love.update(dt)</code> functie:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.update(dt)
+
+  <span style=color:green>-- laat de vijand een stapje naar beneden doen </span>
+  vijand.y = vijand.y + 1</code></pre></div><p>Bovenstaande code werkt hetzelfde als het verplaatsen van de speler.
+Nu bewegen we echter verticaal, van boven naar beneden.
+Daarom moeten we de <code>y</code>-positie in plaats van de <code>x</code>-positie veranderen.
+De positie van de vijand wordt steeds met <code>1</code> stapje naar
+beneden verzet. Zo beweegt de vijand naar de speler toe.</p><p>Om het plaatje van buiten het venster tevoorschijn te laten komen,
+moet de <code>y</code>-positie aangepast worden naar <code>-100</code>.
+Pas de code bovenin je script aan door <code>y = 0</code> te veranderen naar <code>y = -100</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua>vijand = { x = 200, y = -100, plaatje = <span style=color:#00f>nil</span> }</code></pre></div><p>Onder aan het scherm vliegt de vijand het venster uit en is dan verdwenen. Het is natuurlijk leuker als er aan de
+bovenkant een nieuwe vijand verschijnt. Daarvoor moet je, net als bij het bewegend maken van de vijand,
+onderstaande code toevoegen aan <code>love.update(dt)</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als de vijand de onderrand heeft bereikt</span>
+<span style=color:#00f>if</span> vijand.y &gt; yOnderRand() <span style=color:#00f>then</span>
+
+  <span style=color:green>-- verplaats het dan uit het zicht boven het venster</span>
+  vijand.y = -100
+
+<span style=color:#00f>end</span></code></pre></div><p>Om je te helpen met het begrijpen van de code: het verplaatsen van de vijand in Scratch zou er ongeveer zo uitzien:</p><div class=scratch>verander y met (1)
+als &lt;(y-positie) > (180)> dan
+maak y (-200)
+end</div><p>Om het nog interessanter te maken, zou het leuk zijn als de vijand niet steeds op dezelfde plaats van boven naar
+beneden beweegt. De waarde van <code>vijand.x</code> (horizontale positie) zou iedere keer anders moeten zijn.
+Gebruik daarvoor de functie <code>xWillekeurig()</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als de vijand de onderrand heeft bereikt</span>
+<span style=color:#00f>if</span> vijand.y &gt; yOnderRand() <span style=color:#00f>then</span>
+
+  <span style=color:green>-- verplaats het dan uit het zicht boven het venster</span>
+  vijand.y = -100
+
+  <span style=color:green>-- en zet de horizontale positie naar een willekeurige waarde</span>
+  vijand.x = xWillekeurig()
+
+<span style=color:#00f>end</span></code></pre></div><p>Wat je in Scratch zou doen:</p><div class=scratch>verander y met (1)
+als &lt;(y-positie) > (180)> dan
+maak y (-200)
+maak x (willekeurig getal tussen (-240) en (240))
+end</div><h3 id=stap-5-meerdere-vijanden>Stap 5: meerdere vijanden</h3><p>We hebben nu een enkele vijand. Die is natuurlijk makkelijk te ontwijken.
+Het wordt veel spannender met meerdere vijanden.
+Daarvoor moeten we het één en ander aanpassen, de code die je eerder hebt geschreven voor één vijand, gaan we vervangen
+met code voor meerdere vijanden. Je moet hier en daar dus code verwijderen!</p><p>Allereerst hebben we een lijst met vijanden nodig, die voegen we bovenaan de code toe, bij <code>speler</code>.
+Variabelen staan vaak bovenaan in code:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- variabelen om eigenschappen van de speler in op te slaan</span>
+speler = { x = 200, y = 560, plaatje = <span style=color:#00f>nil</span> }
+
+<span style=color:green>-- lijst om vijanden in op te slaan</span>
+vijanden = {}</code></pre></div><p>Een andere variabele die we nodig hebben is het plaatje van de vijand. Eerder deden we dat in de functie <code>love.draw(dt)</code>
+met <code>speler.plaatje</code>. Die regel mag nu verwijderd worden en in plaats daarvan zetten we bij de variabelen
+<code>speler</code> en <code>vijanden</code> ook het plaatje voor de vijand:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- laad het plaatje van de vijand</span>
+vijandPlaatje = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/vijandsVliegtuig.png&#39;</span>)</code></pre></div><p>De vijanden moeten ook getekend worden, zorg ervoor dat jouw <code>love.draw(dt)</code> functie eruit ziet zoals hieronder:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.draw(dt)
+
+  <span style=color:green>-- teken het plaatje op het scherm</span>
+  love.graphics.draw(speler.plaatje, speler.x, speler.y)
+
+  <span style=color:green>-- teken de vijanden in de lijst</span>
+  tekenVijanden(vijanden)
+
+<span style=color:#00f>end</span></code></pre></div><p>Er worden alleen vijanden getekend die bestaan, daarom moeten vijanden ook aangemaakt worden:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.update(dt)
+
+  maakNieuweVijand(vijanden)</code></pre></div><p>In de vorige stap hebben we de vijand laten bewegen. Deze code moeten we nu voor iedere vijand in de lijst uitvoeren:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.update(dt)
+
+  maakNieuweVijand(vijanden) 
+
+  <span style=color:green>-- voor elke vijand in de lijst  </span>
+  <span style=color:#00f>for</span> index, vijand <span style=color:#00f>in</span> ipairs(vijanden) <span style=color:#00f>do</span>
+
+	<span style=color:green>-- laat de vijand een stapje naar beneden doen  </span>
+	vijand.y = vijand.y + 2
+
+	<span style=color:green>-- als de vijand de onderrand heeft bereikt</span>
+	<span style=color:#00f>if</span> vijand.y &gt; yOnderRand() <span style=color:#00f>then</span>
+
+	  <span style=color:green>-- verwijder de vijand</span>
+	  table.remove(vijanden, index)
+
+	<span style=color:#00f>end</span>
+  <span style=color:#00f>end</span></code></pre></div><p>Het maken en verwijderen van vijanden zoals we dat hierboven doen is in Scratch heel lastig. We geven daarom geen
+voorbeeld van het bovenstaande in Scratch. Waar het kan doen we dat wel.</p><p>Voer het programma uit. Als het goed is ziet het eruit als in onderstaande plaatje:</p><p><img src=images/image3.png alt="scherm met vijandelijke vliegtuigen"></p><h3 id=stap-6-de-vijand-ontwijken>Stap 6: de vijand ontwijken</h3><p>Als de speler een vijand raakt, is het spel afgelopen. Om te zien of de speler een vijand geraakt heeft, hebben we
+functie <code>spelerHeeftVijandGeraakt()</code>.</p><p>Als het resultaat van de functie waar (<code>true</code>) is, dan moet het spel gestopt worden.</p><p>Voeg daarvoor de volgende code toe aan functie <code>love.update(dt)</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als de speler een vijand geraakt heeft</span>
+<span style=color:#00f>if</span> spelerHeeftVijandGeraakt() <span style=color:#00f>then</span>
+
+  <span style=color:green>-- is het spel afgelopen</span>
+  spelIsAfgelopen = <span style=color:#00f>true</span>
+
+<span style=color:#00f>end</span></code></pre></div><p>In Scratch zou het er zo uitzien:</p><div class=scratch>als &lt;raak ik [Vijand v]?> dan
+maak[spelIsAfgelopen v] (1)
+end</div><p>In variabele <code>spelIsAfgelopen</code> wordt bijgehouden of het spel nog loopt of al is afgelopen. Als het is afgelopen,
+wordt de speler niet langer getekend. Pas daarvoor de functie <code>love.draw(dt)</code> aan door het tekenen van de speler
+binnen een <code>if</code> statement te plaatsen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>function</span> <span style=color:#2b91af>love</span>.draw(dt)
+
+  <span style=color:green>-- als het spel nog niet is afgelopen</span>
+  <span style=color:#00f>if</span> spelIsAfgelopen == <span style=color:#00f>false</span> <span style=color:#00f>then</span>
+
+	<span style=color:green>-- teken het plaatje op het scherm</span>
+	love.graphics.draw(speler.plaatje, speler.x, speler.y)
+
+  <span style=color:#00f>end</span></code></pre></div><p>In Scratch zou het er zo uitzien:</p><div class=scratch>als &lt;(spelIsAfgelopen) = (0)> dan
+verschijn
+end</div><p>Vergeet niet om bovenaan het bestand de variabele toe te voegen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua>spelIsAfgelopen = <span style=color:#00f>false</span></code></pre></div><p>Als je nu het spel speelt, wordt het spelersvliegtuig niet meer getekend als je een vijand hebt geraakt.</p><h3 id=stap-7-schieten>Stap 7: schieten</h3><p>De stap schieten lijkt op een combinatie van stappen 4 en 5.</p><p>Er moet een lijst worden toegevoegd voor de kogels:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- variabelen om eigenschappen van de speler in op te slaan</span>
+speler = { x = spelerX, y = spelerY, plaatje = <span style=color:#00f>nil</span> }
+
+<span style=color:green>-- lijst om vijanden in op te slaan</span>
+vijanden = {}
+
+<span style=color:green>-- lijst om kogels in op te slaan</span>
+kogels = {}</code></pre></div><p>Het plaatje van de kogel moet worden geladen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- laad het plaatje van de vijand</span>
+vijandPlaatje = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/vijandsVliegtuig.png&#39;</span>)
+
+<span style=color:green>-- laad het plaatje van de kogel</span>
+kogelPlaatje = love.graphics.newImage(<span style=color:#a31515>&#39;plaatjes/kogel.png&#39;</span>)</code></pre></div><p>En het plaatje moet worden getekend, dat doe je in de <code>love.draw(dt)</code> functie:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- teken de kogels in de lijst</span>
+tekenKogels(kogels)</code></pre></div><p>In tegenstelling tot de vijanden, worden nieuwe kogels alleen aangemaakt als de speler de spatiebalk indrukt.
+In de <code>love.update(dt)</code> functie voeg je het volgende toe:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>if</span> spelIsAfgelopen == <span style=color:#00f>false</span> <span style=color:#00f>then</span>
+
+	<span style=color:green>-- als de spatiebalk wordt ingedrukt</span>
+	<span style=color:#00f>if</span> love.keyboard.isDown(<span style=color:#a31515>&#39;space&#39;</span>) <span style=color:#00f>then</span>
+
+	  <span style=color:green>-- schiet dan</span>
+	  maakNieuweKogel(kogels, speler)
+
+	<span style=color:#00f>end</span>
+
+	maakNieuweVijand(vijanden)  </code></pre></div><p>Als je de code tot nu toe uitprobeert, krijg je wel kogels te zien, maar die bewegen niet.
+Dit ziet eruit als het plaatje hieronder.</p><p><img src=images/image12.png alt="scherm met vijandelijke vliegtuigen en kogels"></p><p>Aan de <code>love.update(dt)</code> functie moet extra code worden toegevoegd om de kogels te laten bewegen.
+Elke kogel in de lijst laten we telkens vier stappen omhoog gaan.
+Als een kogel uit beeld verdwijnt, halen we de kogel ook uit de lijst:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:#00f>if</span> spelIsAfgelopen == <span style=color:#00f>false</span> <span style=color:#00f>then</span>
+	<span style=color:green>-- als de spatiebalk wordt ingedrukt</span>
+	<span style=color:#00f>if</span> love.keyboard.isDown(<span style=color:#a31515>&#39;space&#39;</span>) <span style=color:#00f>then</span>
+		<span style=color:green>-- schiet dan</span>
+		maakNieuweKogel(kogels, speler)
+	<span style=color:#00f>end</span>
+
+	<span style=color:green>-- voor elke kogel in de lijst</span>
+	<span style=color:#00f>for</span> index, kogel <span style=color:#00f>in</span> ipairs(kogels) <span style=color:#00f>do</span>
+
+		<span style=color:green>-- beweeg de kogel naar boven</span>
+		kogel.y = kogel.y - (2 * stapGrootte)
+
+		<span style=color:green>-- als de kogel de bovenrand heeft bereikt</span>
+		<span style=color:#00f>if</span> kogel.y &lt; -20 <span style=color:#00f>then</span>
+			<span style=color:green>-- verwijder het uit de lijst</span>
+			table.remove(kogels, index)
+		<span style=color:#00f>end</span>
+	<span style=color:#00f>end</span>
+
+	maakNieuweVijand(vijanden)  </code></pre></div><p>Dat ziet er beter uit!</p><p><img src=images/image15.png alt="scherm met vijandelijke vliegtuigen en bewegende kogels"></p><h3 id=stap-8-raken-en-scoren>Stap 8: raken en scoren</h3><p>De vijanden vliegen, je kunt je vliegtuig besturen en je kan schieten.
+Maar je schoten raken nog niets en de
+vijanden vliegen door. Daar gaan we in deze stap wat aan doen.</p><p>Functie <code>kogelHeeftVijandGeraakt()</code> laat ons weten of een kogel een vijand geraakt heeft.
+Ook verwijdert deze functie de geraakte vijand en de kogel:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als de kogel een vijand geraakt heeft</span>
+<span style=color:#00f>if</span> kogelHeeftVijandGeraakt() <span style=color:#00f>then</span>
+
+  <span style=color:green>-- heb je een punt gescoord</span>
+  score = score + 1
+
+<span style=color:#00f>end</span></code></pre></div><p>Voeg bovenstaande code toe aan <code>love.update(dt)</code>. Om de score in op te slaan, moet je ook nog een variabele
+aanmaken boven aan het bestand:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua>score = 0</code></pre></div><p>In Scratch ziet het er zo uit:</p><div class=scratch>maak [score v] (0)
+als &lt;raak ik [Kogel v]?> dan
+verander [score v] met (1)
+end</div><p>We willen natuurlijk de score kunnen zien.
+Voeg daarvoor in <code>love.draw(dt)</code> het volgende toe:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- zet de tekstkleur op wit</span>
+love.graphics.setColor(255, 255, 255)
+
+<span style=color:green>-- en druk de score af</span>
+love.graphics.print(<span style=color:#a31515>&#34;SCORE: &#34;</span> .. tostring(score), 400, 10)</code></pre></div><h3 id=stap-9-opnieuw-starten>Stap 9: opnieuw starten</h3><p>Mocht je een vijand aanraken, dan is het spel afgelopen, maar dan wil je natuurlijk wel opnieuw kunnen beginnen.
+Daarvoor gaan we code toevoegen aan <code>love.update(dt)</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=color:green>-- als de o van opnieuw wordt ingedrukt</span>
+<span style=color:#00f>if</span> love.keyboard.isDown(<span style=color:#a31515>&#39;o&#39;</span>) <span style=color:#00f>then</span>
+
+	<span style=color:green>-- wordt het spel opnieuw gestart</span>
+	kogels = {}
+	vijanden = {}
+	score = 0
+	spelIsAfgelopen = <span style=color:#00f>false</span>
+
+<span style=color:#00f>end</span></code></pre></div><p>Als je op de toets <code>o</code> drukt begint je spel opnieuw. Het spel is nu klaar!</p><h3 id=voorbereide-functies>Voorbereide functies</h3><p>Bij het maken van het spelletje heb je gebruik gemaakt van een aantal voorbereide functies. Als je je nu afvraagt hoe
+die functies zijn gemaakt, dan kun je eens kijken in het bestand <a href=src/functies.lua>functies.lua</a>.</p><h3 id=voorbeeld-code>Voorbeeld code</h3><p>Mocht je nu ook nog een voorbeeld van de volledige code willen bekijken, dan kan je eens kijken in
+<a href=src/voorbeeld.lua>voorbeeld.lua</a>.</p><h2 id=conclusie>Conclusie</h2><p>Het spelletje is af en je hebt geleerd hoe je een 2D shooter kunt maken met Löve.</p><h2 id=vervolg>Vervolg</h2><p>Als je meer wilt maken met Löve, dan zijn er meerdere instructies (in het Engels: tutorials) op het internet te vinden.
+Helaas zijn die wel vrijwel allemaal Engelstalig.</p><p>Een overzicht vind je op site van Löve zelf: <a href=https://love2d.org/wiki/Category:Tutorials>https://love2d.org/wiki/Category:Tutorials</a>.</p><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2023</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
+<a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
+<a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
+<a href=https://www.eventbrite.nl/o/stichting-coderdojo-nijmegen-12043791497 target=_blank rel="noopener noreferrer"><img src=/imgs/eventbrite.png alt=Eventbrite></a>
+<a href=https://github.com/coderdojonijmegen target=_blank rel="noopener noreferrer"><img src=/imgs/github.png alt=GitHub></a></div></footer><script src=/js/bundle.js></script></body></html>

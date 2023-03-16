@@ -1,0 +1,89 @@
+<!doctype html><html lang=nl-nl><head><title>Scratch - Space shooter</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.a4d35daeac053c966529d9ed9dbdf3df516238746c9829a8c54708b1cb923b7c.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/scratch-space-shooter>Scratch space shooter</a></li></ul></breadcrumbs><h1>Scratch - Space shooter</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#benodigdheden>Benodigdheden</a></li><li><a href=#inleiding>Inleiding</a></li><li><a href=#laat-een-ruimteschip-bewegen-met-de-pijltjestoetsen>Laat een ruimteschip bewegen met de pijltjestoetsen</a></li><li><a href=#maak-een-bewegende-achtergrond>Maak een bewegende achtergrond</a></li><li><a href=#laat-meteorieten-verschijnen-en-naar-het-ruimteschip-vliegen>Laat meteorieten verschijnen en naar het ruimteschip vliegen</a></li><li><a href=#schieten-op-de-meteorieten>Schieten op de meteorieten</a></li><li><a href=#winnen-en-verliezen>Winnen en verliezen</a></li><li><a href=#uitbreidingen>Uitbreidingen</a></li></ul></nav></aside><p>Je gaat met Scratch een &ldquo;space shooter&rdquo; bouwen.</p><h2 id=benodigdheden>Benodigdheden</h2><p>Deze opdrachten maak je met <a href=https://scratch.mit.edu/>Scratch</a>. Als je nog geen account had, maak dit dan eerst aan.</p><p>Zet in Scratch eerst de taal op Nederlands via de wereldbol linksboven.</p><h2 id=inleiding>Inleiding</h2><p>In deze opdracht ga je een &ldquo;space shooter&rdquo; spel bouwen, waarbij je een ruimteschip bestuurt dat meteorieten kapot moet schieten of ontwijken. Het spel is gebaseerd op <a href="https://www.youtube.com/watch?v=Mcc4LpbfOVM">dit project</a>.</p><p>Dit zijn de stappen die je gaat programmeren:</p><ol><li>Laat een ruimteschip bewegen met de pijltjestoetsen</li><li>Maak een bewegende achtergrond waardoor het lijkt alsof je door de ruimte vliegt</li><li>Laat meteorieten verschijnen en naar het ruimteschip vliegen</li><li>Zorg dat het ruimteschip op de meteorieten kan schieten</li></ol><p>Als je hierna nog zin (en tijd) hebt dan zijn er nog allerlei uitbreidingen mogelijk, denk bijvoorbeeld aan het spel steeds iets moeilijker maken of geluid en andere <em>special effects</em> toevoegen.</p><h2 id=laat-een-ruimteschip-bewegen-met-de-pijltjestoetsen>Laat een ruimteschip bewegen met de pijltjestoetsen</h2><p>Eerst moet je een sprite hebben voor je ruimteschip. Je kunt dit natuurlijk zelf ontwerpen, maar ook een bestaande sprite kiezen (bijvoorbeeld het <em>Rocketship</em>). Noem deze sprite <em>ruimteschip</em>.</p><p>Zorg er eerst voor dat de sprite niet te groot is ten opzichte van het speelveld. Je kunt dit doen door het blok <em>maak grootte</em> te gebruiken dat je vindt in het menu <em>Uiterlijken</em>. Speel een beetje met het percentage om de goede grootte te vinden. Zorg ook dat het ruimteschip in het midden onderaan begint door het op x = 0 te plaatsen (x loopt van links naar rechts) en y zo in te stellen dat het nog net in beeld is. Je programma zou er nu ongeveer zo uit moeten zien:</p><div class=scratch>wanneer groene vlag wordt aangeklikt
+maak grootte (25) %
+ga naar x: (0) y: (-150)</div><p>De beweging van het ruimteschip kun je op verschillende manieren programmeren. Je kunt bijvoorbeeld iedere keer bij het indrukken van <em>pijltje links</em> de sprite een stukje laten opschuiven. Bij dit spel gaat het iets anders: als je op een pijltjestoets drukt dan geef je het ruimteschip een bepaalde snelheid, die vervolgens weer naar 0 (dus stilstaan) gaat. Op deze manier zal het ruimteschip een mooie vloeiende beweging maken. Neem de volgende stappen:</p><ul><li>Maak een <strong>variabele</strong> <em>x-snelheid</em> aan (in het menu Variabelen).</li><li>Zet deze snelheid aan het begin van het spel op 0.</li><li>Verander de snelheid naar een getal groter dan 0 als <em>pijltje rechts</em> wordt ingedrukt, en kleiner dan 0 voor <em>pijltje links</em>.</li><li>Verander vervolgens de (x-)positie van het ruimteschip met de waarde van de variabele <em>x-snelheid</em>.</li><li>Laat de snelheid steeds iets verder afnemen tot deze uiteindelijk weer 0 is.</li></ul><p><strong>Tip 1</strong>: de laatste drie stappen in de lijst hierboven moet je in een <em>herhaal</em> blok zetten.</p><p><strong>Tip 2</strong>: je kunt de snelheid bijvoorbeeld laten afnemen door er een getal van af te trekken. Een andere manier is om de waarde te vermenigvuldigen met een getal kleiner dan 1.</p><div class=toggle><div class=toggle_header>Klik om te laten zien hoe je programma er nu ongeveer uit zou moeten zien.</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+maak grootte (25) %
+ga naar x: (0) y: (-150)
+maak [snelheid_x] (0)
+herhaal
+als &lt;toets [pijltje links v] ingedrukt?> dan
+maak [snelheid_x] (5)
+end
+als &lt;toets [pijltje rechts v] ingedrukt?> dan
+maak [snelheid_x] (-5)
+end
+verander x met: (snelheid_x)
+maak [snelheid_x] ((snelheid_x) * (0.9))
+end</div></div></div><h2 id=maak-een-bewegende-achtergrond>Maak een bewegende achtergrond</h2><p>Sla dit plaatje voor de achtergrond van het spel op je computer op:</p><p><img src=imgs/ruimte.gif alt=Ruimte></p><p>Maak door de volgende stappen te volgen een <em>sprite</em> van dit plaatje:</p><ol><li>Klik op het icoon voor een nieuwe sprite (rechtsonder, plaatje van de kat) en kies voor <em>Upload sprite</em>.</li><li>Upload het ruimte-plaatje.</li><li>Ga naar het tabblad <em>Uiterlijken</em> (linksboven, rechts naast het <em>Code</em> tabblad).</li><li>Maak in de editor het plaatje net zo groot als het hele speelveld door het op te rekken.</li></ol><p>Plaats de ruimte-achtergrond aan het begin van het spel in het midden van het speelveld. <strong>Vraag</strong>: wat zijn <em>x</em> en <em>y</em> dan?</p><div class=toggle><div class=toggle_header>Klik om de code te bekijken</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+ga naar x: (0) y: (0)</div></div></div><p>Nu ga je de achtergrond laten bewegen zodat het net is of je schip door de ruimte vliegt. <strong>Vraag</strong>: als je wil dat je schip vooruit vliegt, welke kant moet de achtergrond dan op gaan?</p><p>Net als bij de snelheid van je ruimteschip moet je hier een <em>variabele maken</em>, nu voor de &ldquo;scroll&rdquo; snelheid van de ruimte. Vervolgens verander je steeds de positie van de achtergrond met de snelheid die je hebt ingesteld. <strong>Vraag</strong>: moet je nu de <em>x</em> of de <em>y</em> veranderen? En moet <em>x</em> of <em>y</em> steeds groter worden? Of juist kleiner?</p><div class=toggle><div class=toggle_header>Klik om de code te bekijken</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+ga naar x: (0) y: (0)
+maak [snelheid_scrollen] (4)
+herhaal
+verander y met ((snelheid_scrollen) * (-1))
+end</div></div></div><p>Als je nu het programma start, dan zie je dat er twee dingen fout gaan:</p><ul><li>je achtergrond verdwijnt uit beeld en komt niet meer terug</li><li>er verschijnt een steeds groter wit vlak!</li></ul><p>Een manier om deze twee problemen op te lossen staat beschreven in deze afbeelding:</p><p><img src=imgs/ruimte-scrollen.png alt=Scrollen></p><p>Wat je ziet is dat je voor deze manier twee achtergronden gebruikt: de sprite, en een <em>kloon</em> van de sprite. De blauwe pijl (1) geeft aan dat de sprite en kloon allebei naar beneden schuiven. De rode pijl (2) laat zien dat zodra een achtergrond <em>beneden uit beeld</em> is verdwenen, je deze moet verplaatsen naar <em>boven</em> het speelveld. Op deze manier zorg je ervoor dat je geen wit vlak meer zult zien! Je moet nu dus een stuk code schrijven dat <strong>als de sprite uit beeld is, deze weer naar boven verplaatst</strong>. En je moet deze code niet alleen voor de sprite zelf, maar <strong>ook voor de kloon van de sprite schrijven</strong>.</p><p><strong>Tip 1</strong>: dit is best een lastig stuk code, probeer het daarom eerst eens alleen voor de sprite, en daarna ook voor de kloon.</p><p><strong>Tip 2</strong>: denk even goed na over de waarde die <em>y</em> heeft als de achtergrond boven en onder het speelveld is.</p><div class=toggle><div class=toggle_header>Uiteindelijk is dit de code die zorgt voor een bewegende achtergrond.</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+ga naar x: (0) y: (0)
+maak een kloon van [mijzelf v]
+maak [snelheid_scrollen] (4)
+herhaal
+als &lt;(y-positie) > (-340)> dan
+verander y met ((snelheid_scrollen) * (-1))
+anders
+ga naar x: (0) y: (345)
+end
+end
+wanneer ik als kloon start
+ga naar x: (0) y: (345)
+maak [snelheid_scrollen] (4)
+herhaal
+als &lt;(y-positie) > (-340)> dan
+verander y met ((snelheid_scrollen) * (-1))
+anders
+ga naar x: (0) y: (345)
+end
+end</div></div></div><h2 id=laat-meteorieten-verschijnen-en-naar-het-ruimteschip-vliegen>Laat meteorieten verschijnen en naar het ruimteschip vliegen</h2><p>Je hebt nu een ruimteschip dat door de ruimte vliegt en naar links en rechts kan bewegen. De hoogste tijd om de meteorieten te laten verschijnen! Dit ga je doen door steeds een nieuwe kloon van de &ldquo;echte&rdquo; sprite te maken.</p><p>Maak eerst een nieuwe sprite door een plaatje van een meteoriet in Scratch te laden, er zelf een te tekenen of een bestaande sprite te gebruiken (bijvoorbeeld een bal). Noem de sprite <em>meteoriet</em>.</p><p>Het belangrijkste wat deze sprite doet is het elke paar seconden (of zo snel als je wilt) maken van een kloon van zichzelf.</p><div class=toggle><div class=toggle_header>Klik om de code te bekijken</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+herhaal
+wacht (4) sec.
+maak een kloon van (mijzelf v)
+end</div></div></div><p>Als je de sprite zelf niet ziet, dan komt dat omdat deze <em>achter</em> de bewegende achtergrond zit. Dat geeft niets want alleen de klonen moeten zichtbaar zijn, maar het is wat onhandig als je wil zien wat je code doet. Je kunt hiervoor het blok <em>ga naar laag voorgrond</em> toevoegen.</p><p>Ook als je de sprite en klonen wel ziet, gebeurt er nog vrij weinig. Dat komt omdat ze allemaal bovenop elkaar verschijnen. De volgende stap is dan ook om de klonen op allerlei plaatsen te laten verschijnen.</p><p><strong>Tip 1</strong>: er is een speciaal <em>wanneer ik als kloon start</em> blok waar je deze code onder kunt zetten.</p><p><strong>Tip 2</strong>: laat de meteorieten ergens bovenin verschijnen (dus zet <em>y</em> bijvoorbeeld op 180).</p><p><strong>Tip 3</strong>: gebruik voor de <em>x</em> het blok <em>willekeurig getal tussen &mldr;</em>.</p><div class=toggle><div class=toggle_header>De code voor een kloon zou er ongeveer zo uit moeten zien</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+ga naar laag [voorgrond v]
+ga naar x: (willekeurig getal tussen (-200) en (200)) y: (180)
+verschijn</div></div></div><p>Je bent er bijna! De een-na-laatste stap is om de klonen naar beneden te laten bewegen. Je kunt hiervoor weer een variabele voor de beweegsnelheid maken, een <em>herhaal</em> blok waarin je elke keer de plek van de sprite een beetje verandert werkt ook goed.</p><p>En waarom ben je nu nog niet helemaal klaar? Omdat het slim is je klonen ook weer te laten verdwijnen als ze onderaan het veld zijn aangekomen. Op deze manier blijft het spel soepel lopen.</p><div class=toggle><div class=toggle_header>De code voor een kloon ziet er dan zo uit</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+ga naar laag [voorgrond v]
+ga naar x: (willekeurig getal tussen (-200) en (200)) y: (180)
+verschijn
+herhaal tot &lt; (y-positie) < (-180)>
+verander y met (-2)
+end
+verwijder deze kloon</div></div></div><h2 id=schieten-op-de-meteorieten>Schieten op de meteorieten</h2><p>Het is tijd om de meteorieten uit de weg te ruimen. Kies of maak een sprite die de kogel wordt, en noem deze ook <em>kogel</em>. Laat vervolgens een kogel &ldquo;uit&rdquo; het ruimteschip komen (bijvoorbeeld als je op de spatiebalk drukt) en naar het ruimteschip vliegen.</p><p><strong>Tip 1</strong>: de code voor deze sprite lijkt wat op die voor de meteoriet; ook hier moet je klonen maken en die naar de meteorieten laten bewegen.</p><p><strong>Tip 2</strong>: het blok <em>ga naar</em> is handig om de startplek van de kogel te bepalen.</p><p><strong>Tip 3</strong>: als de kogel niets raakt is het wel slim de kloon te verwijderen als deze uit beeld verdwijnt.</p><div class=toggle><div class=toggle_header>Code om kogels af te schieten</div><div style=display:none><div class=scratch>wanneer groene vlag wordt aangeklikt
+verdwijn
+herhaal
+als &lt;toets [spatiebalk v] ingedrukt?> dan
+maak een kloon van (mijzelf v)
+end
+end
+wanneer ik als kloon start
+verschijn
+ga naar laag [voorgrond v]
+ga naar (ruimteschip v)
+herhaal tot &lt;raak ik (rand v)?>
+verander y met (10)
+end
+verwijder deze kloon</div></div></div><h2 id=winnen-en-verliezen>Winnen en verliezen</h2><p>Natuurlijk wil je ook punten verdienen wanneer je een meteoriet raakt met je kogels, en bijvoorbeeld weer verliezen wanneer het ruimteschip door een meteoriet geraakt wordt. Maak voor de puntentelling een variabele <em>score</em> aan en zet die op 0 aan het begin van het spel (doe dit bij de code voor het ruimteschip).</p><p>Nu moeten we nog een paar stukken code toevoegen, namelijk:</p><ul><li>om op te merken wanneer een een meteoriet door een kogel geraakt wordt</li><li>om hierna de meteoriet en de kogel te laten verdwijnen</li><li>om op te merken wanneer een meteoriet het ruimteschip raakt</li></ul><p><strong>Tip</strong>: de meeste code hoort bij klonen van de meteoriet sprite.</p><div class=toggle><div class=toggle_header>Code voor het raken van een meteoriet met een kogel</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+herhaal
+als &lt; raak ik (kogel v)?> dan
+verander [score v] met (1)
+verwijder deze kloon
+end</div></div></div><div class=toggle><div class=toggle_header>Code voor het laten verdwijnen van de kogel (deze hoort bij de kogel sprite!)</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+wacht tot &lt; raak ik (meteoriet v)?>
+wacht (0.1) sec.
+verwijder deze kloon</div></div></div><div class=toggle><div class=toggle_header>Code voor het raken van het ruimteschip met een meteoriet</div><div style=display:none><div class=scratch>wanneer ik als kloon start
+herhaal
+als &lt; raak ik (ruimteschip v)?> dan
+maak [score v] (0)
+verwijder deze kloon
+end</div></div></div><p>Dit was het, veel speelplezier!</p><h2 id=uitbreidingen>Uitbreidingen</h2><p>Je kunt het spel natuurlijk nog veel mooier, spannender en moeilijker maken.
+Hier heb je alvast een lijstje met ideeën als je nog verder wil programmeren:</p><ul><li>zorg dat je minder vaak kogels kunt afschieten</li><li>laat de meteorieten niet alleen naar beneden komen maar ook echt op je ruimteschip af</li><li>laat de meteorieten sneller bewegen als je meer punten hebt gehaald</li><li>voeg geluiden en andere effecten toe</li></ul><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2023</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
+<a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
+<a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
+<a href=https://www.eventbrite.nl/o/stichting-coderdojo-nijmegen-12043791497 target=_blank rel="noopener noreferrer"><img src=/imgs/eventbrite.png alt=Eventbrite></a>
+<a href=https://github.com/coderdojonijmegen target=_blank rel="noopener noreferrer"><img src=/imgs/github.png alt=GitHub></a></div></footer><script src=/js/bundle.js></script></body></html>
