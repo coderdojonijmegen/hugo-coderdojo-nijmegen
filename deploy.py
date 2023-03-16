@@ -49,7 +49,7 @@ git(f"config --global --add safe.directory /github/workspace")
 
 git("add -A")
 git("diff --cached")
-git("commit -m", message=f"{futureDojoEventUrl} toegevoegd")
+git("commit -m", message=f"{futureDojoEventUrl} toegevoegd", accept_git_non_zero_return=True)
 if github_branch == REF_MASTER:
     git("push")
 else:
@@ -79,7 +79,7 @@ def clone_build_push(args, target_branch, target_dir):
     git("add -A", working_dir=target_dir)
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     return_code, _, _ = git(f"commit -am", message=f"Publishing Site {cname} to {target_branch} at {github_sha} on {now}.",
-                            working_dir=target_dir)
+                            working_dir=target_dir, accept_git_non_zero_return=True)
     if return_code == 0:
         if github_branch == REF_MASTER:
             git("push --force", working_dir=target_dir)

@@ -15,7 +15,7 @@ def _sub(args):
         return proc.returncode, stdout, stderr
 
 
-def git(args, message=None, working_dir=None):
+def git(args, message=None, working_dir=None, accept_git_non_zero_return=False):
     cwd = os.getcwd()
     if working_dir is not None:
         os.chdir(working_dir)
@@ -24,7 +24,7 @@ def git(args, message=None, working_dir=None):
         if message is not None:
             cmd.append(f"{message}")
         return_code, stdout, stderr = _sub(cmd)
-        if return_code != 0:
+        if not accept_git_non_zero_return and return_code != 0:
             raise IOError(stderr)
         return return_code, stdout, stderr
     finally:
