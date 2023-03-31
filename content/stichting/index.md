@@ -81,8 +81,8 @@ _algemeen bestuurslid_
 
 ### Contactgegevens
 
-Stichting CoderDojo Nijmegen
-Nijhoffstraat 5
+Stichting CoderDojo Nijmegen  
+Nijhoffstraat 5  
 6524 AT Nijmegen
 
 RSIN: 857425948  
