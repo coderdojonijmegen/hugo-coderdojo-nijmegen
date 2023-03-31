@@ -15,7 +15,7 @@ HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
                     "hugo_{hugo_version}_Linux-64bit.tar.gz"
 DOJO_PAGE_TEMPLATE = "./archetypes/dojos-template.md"
-REF_MASTER = "refs/heads/master"
+REF_MAIN = "refs/heads/main"
 GH_PAGES = "gh-pages"
 TMP_GH_PAGES = "/tmp/gh-pages"
 TMP_MCS = "/tmp/mcs"
@@ -50,10 +50,10 @@ git(f"config --global --add safe.directory /github/workspace")
 git("add -A")
 git("diff --cached")
 git("commit -m", message=f"{futureDojoEventUrl} toegevoegd", accept_git_non_zero_return=True)
-if github_branch == REF_MASTER:
+if github_branch == REF_MAIN:
     git("push")
 else:
-    print("=> not pushing when not on master")
+    print("=> not pushing when not on main")
 
 with open("instructies.txt", "r") as inst:
     instruction_repos = inst.readlines()
@@ -81,7 +81,7 @@ def clone_build_push(args, target_branch, target_dir):
     return_code, _, _ = git(f"commit -am", message=f"Publishing Site {cname} to {target_branch} at {github_sha} on {now}.",
                             working_dir=target_dir, accept_git_non_zero_return=True)
     if return_code == 0:
-        if github_branch == REF_MASTER:
+        if github_branch == REF_MAIN:
             git("push --force", working_dir=target_dir)
             _, stdout, _ = git("log -1 --pretty=%B")
             message = f"pushed changes from commit '{stdout}' to {target_branch}; see {env_var('GITHUB_SERVER_URL')}/" \
@@ -89,7 +89,7 @@ def clone_build_push(args, target_branch, target_dir):
             print(message)
             notify(target_branch, message)
         else:
-            print("=> not pushing when not on master")
+            print("=> not pushing when not on main")
     else:
         print("=> no changes")
 
