@@ -19,7 +19,7 @@ jobs:
       - uses: ./
         name: Publish Site
         with:
-          githubToken: ${{ secrets.PAT }}
+          githubToken: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
           hugoVersion: extended_0.74.3
           eventbriteApiKey: ${{ secrets.EVENTBRITE_API_KEY }}
           slackWebhook: ${{ secrets.SLACK_WEBHOOK }}
