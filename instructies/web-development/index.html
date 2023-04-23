@@ -1,10 +1,13 @@
-<!doctype html><html lang=nl-nl><head><title>Web - Development</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.a4d35daeac053c966529d9ed9dbdf3df516238746c9829a8c54708b1cb923b7c.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/web-development>Web development</a></li></ul></breadcrumbs><h1>Web - Development</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#introductie>Introductie</a></li><li><a href=#benodigdheden>Benodigdheden</a></li><li><a href=#onderdelen-van-een-html-pagina-basis>Onderdelen van een HTML-pagina (basis)</a><ul><li><a href=#structuur-van-een-pagina>Structuur van een pagina</a></li><li><a href=#de-standaard-onderdelen>De standaard onderdelen</a></li><li><a href=#koppen>Koppen</a></li><li><a href=#de-stijl-van-tekst>De stijl van tekst</a></li><li><a href=#links>Links</a></li><li><a href=#plaatjes>Plaatjes</a></li></ul></li><li><a href=#stijl-toevoegen-met-css-basis>Stijl toevoegen met CSS (basis)</a><ul><li><a href=#stijl-toevoegen>Stijl toevoegen</a></li><li><a href=#spelen-met-kleur>Spelen met kleur</a></li><li><a href=#tekstgrootte-aanpassen>Tekstgrootte aanpassen</a></li><li><a href=#verschillende-soorten-letters-gebruiken>Verschillende soorten letters gebruiken</a></li><li><a href=#stijlen-combineren>Stijlen combineren</a></li><li><a href=#toegankelijkheid>Toegankelijkheid</a></li></ul></li><li><a href=#actie-toevoegen-met-javascript-basis>Actie toevoegen met JavaScript (basis)</a><ul><li><a href=#toevoegen-aan-een-html-bestand>Toevoegen aan een HTML bestand</a></li><li><a href=#functies>Functies</a></li><li><a href=#variabelen>Variabelen</a></li></ul></li><li><a href=#stijl-toevoegen-met-css-vervolg>Stijl toevoegen met CSS (vervolg)</a><ul><li><a href=#stijl-toevoegen-aan-sommige-maar-niet-alle-elementen>Stijl toevoegen aan sommige, maar niet alle elementen</a></li><li><a href=#class>Class</a></li><li><a href=#id>ID</a></li><li><a href=#combineren-van-stijlen>Combineren van stijlen</a></li></ul></li><li><a href=#actie-toevoegen-met-javascript-vervolg>Actie toevoegen met JavaScript (vervolg)</a><ul><li><a href=#een-klok-maken>Een klok maken</a></li></ul></li><li><a href=#het-instellen-van-kleuren-op-je-webpagina>Het instellen van kleuren op je webpagina</a><ul><li><a href=#namen>Namen</a></li><li><a href=#rgb-waarden>RGB-waarden</a></li><li><a href=#hex-waarden>HEX-waarden</a></li></ul></li><li><a href=#bronvermelding-afbeeldingen>Bronvermelding afbeeldingen</a></li></ul></nav></aside><p>Er zijn een paar verschillende <em>talen</em> die samen voor een belangrijk deel
+<!doctype html><html lang=nl-nl><head><title>Web - Development</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.8ed18b801f423f5add066f4ebea659920579a4991cd2fcd2ee63eeba6c60b99f.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i>
+<i></i>
+<i></i></span>
+<logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/web-development>Web development</a></li></ul></breadcrumbs><h1>Web - Development</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#introductie>Introductie</a></li><li><a href=#benodigdheden>Benodigdheden</a></li><li><a href=#onderdelen-van-een-html-pagina-basis>Onderdelen van een HTML-pagina (basis)</a><ul><li><a href=#structuur-van-een-pagina>Structuur van een pagina</a></li><li><a href=#de-standaard-onderdelen>De standaard onderdelen</a></li><li><a href=#koppen>Koppen</a></li><li><a href=#de-stijl-van-tekst>De stijl van tekst</a></li><li><a href=#links>Links</a></li><li><a href=#plaatjes>Plaatjes</a></li></ul></li><li><a href=#stijl-toevoegen-met-css-basis>Stijl toevoegen met CSS (basis)</a><ul><li><a href=#stijl-toevoegen>Stijl toevoegen</a></li><li><a href=#spelen-met-kleur>Spelen met kleur</a></li><li><a href=#tekstgrootte-aanpassen>Tekstgrootte aanpassen</a></li><li><a href=#verschillende-soorten-letters-gebruiken>Verschillende soorten letters gebruiken</a></li><li><a href=#stijlen-combineren>Stijlen combineren</a></li><li><a href=#toegankelijkheid>Toegankelijkheid</a></li></ul></li><li><a href=#actie-toevoegen-met-javascript-basis>Actie toevoegen met JavaScript (basis)</a><ul><li><a href=#toevoegen-aan-een-html-bestand>Toevoegen aan een HTML bestand</a></li><li><a href=#functies>Functies</a></li><li><a href=#variabelen>Variabelen</a></li></ul></li><li><a href=#stijl-toevoegen-met-css-vervolg>Stijl toevoegen met CSS (vervolg)</a><ul><li><a href=#stijl-toevoegen-aan-sommige-maar-niet-alle-elementen>Stijl toevoegen aan sommige, maar niet alle elementen</a></li><li><a href=#class>Class</a></li><li><a href=#id>ID</a></li><li><a href=#combineren-van-stijlen>Combineren van stijlen</a></li></ul></li><li><a href=#actie-toevoegen-met-javascript-vervolg>Actie toevoegen met JavaScript (vervolg)</a><ul><li><a href=#een-klok-maken>Een klok maken</a></li></ul></li><li><a href=#het-instellen-van-kleuren-op-je-webpagina>Het instellen van kleuren op je webpagina</a><ul><li><a href=#namen>Namen</a></li><li><a href=#rgb-waarden>RGB-waarden</a></li><li><a href=#hex-waarden>HEX-waarden</a></li></ul></li><li><a href=#bronvermelding-afbeeldingen>Bronvermelding afbeeldingen</a></li></ul></nav></aside><p>Er zijn een paar verschillende <em>talen</em> die samen voor een belangrijk deel
 bepalen wat er op websites staat (HTML), hoe ze eruit zien (CSS) en hoe ze
 werken (JavaScript).</p><h2 id=introductie>Introductie</h2><p>Deze instructies leggen eerst de basisonderdelen van HTML uit, en gaan daarna
 in op CSS en JavaScript. Afhankelijk je ervaring met deze talen kun je het best
 bij het begin starten, of ervoor kiezen dit over te slaan. De instructies
 bestaan uit een deel uitleg met tussendoor opdrachten om te oefenen met alle
-onderdelen.</p><p><img src=imgs/html-css-js-logos.png alt="web logo&rsquo;s"></p><h2 id=benodigdheden>Benodigdheden</h2><p>Voor deze instructies gebruiken we Visual Studio Code (VS Code) om de code te
+onderdelen.</p><p><img src=imgs/html-css-js-logos.png alt="web logo&amp;rsquo;s"></p><h2 id=benodigdheden>Benodigdheden</h2><p>Voor deze instructies gebruiken we Visual Studio Code (VS Code) om de code te
 schrijven, en om het resultaat te bekijken. Download en installeer eerst
 VS Code:
 <a href=https://code.visualstudio.com/download>Download Visual Studio Code</a></p><p><img src=imgs/vscode_extensions_online.png alt="Visual Studio Code extensie"></p><ol><li>Ga nu naar het Extensions menu.</li><li>Zoek naar de extensie <em>HTML Preview</em>.</li><li>Installeer de extensie en herstart VS Code.</li></ol><p>Om een html-pagina te laten zien in VS Code moet je op het <code>preview</code> icoon
@@ -12,15 +15,15 @@ klikken, dit bevindt zich rechtsboven in het scherm (let op: het is alleen
 zichtbaar als je een bestand van het soort .html open hebt, niet bij
 bijvoorbeeld een .txt bestand):</p><p><img src=imgs/vscode_preview.png alt=preview></p><p>Je bent nu klaar om te beginnen met de instructies!</p><h2 id=onderdelen-van-een-html-pagina-basis>Onderdelen van een HTML-pagina (basis)</h2><h3 id=structuur-van-een-pagina>Structuur van een pagina</h3><p>Websites worden geschreven in de taal van het internet: HTML. Er zijn veel
 verschillende &ldquo;woorden&rdquo;, of &ldquo;bouwblokken&rdquo;, in HTML. Een aantal van de meest
-gebruikte leer je hier kennen.</p><p>Een HTML-pagina heeft een paar standaard onderdelen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-  &lt;<span style=color:navy>html</span>&gt;
-  &lt;<span style=color:navy>head</span>&gt;
-  &lt;/<span style=color:navy>head</span>&gt;
-  &lt;<span style=color:navy>body</span>&gt;
-    &lt;<span style=color:navy>h1</span>&gt;Dit is een kop&lt;/<span style=color:navy>h1</span>&gt;
-    &lt;<span style=color:navy>p</span>&gt;Dit is een alinea.&lt;/<span style=color:navy>p</span>&gt;
-  &lt;/<span style=color:navy>body</span>&gt;
-  &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><ul><li>HTML onderdelen worden aangegeven met <em>tags</em>: de naam van het onderdeel tussen <code>&lt;></code> haakjes.</li><li>De meeste onderdelen hebben een <em>start</em> en een <em>eind</em> tag.</li><li>De eind tag heeft een <em>forward slash</em> dus <code>/</code> voor de naam, bijvoorbeeld <code>&lt;/html></code>.</li><li>Tags worden altijd geschreven met <em>kleine letters</em>.</li></ul><p><strong>Opdracht</strong> Kopieer en plak de basisonderdelen in een nieuw bestand en sla dit
+gebruikte leer je hier kennen.</p><p>Een HTML-pagina heeft een paar standaard onderdelen:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>h1</span>&gt;Dit is een kop&lt;/<span style=color:navy>h1</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>p</span>&gt;Dit is een alinea.&lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><ul><li>HTML onderdelen worden aangegeven met <em>tags</em>: de naam van het onderdeel tussen <code>&lt;></code> haakjes.</li><li>De meeste onderdelen hebben een <em>start</em> en een <em>eind</em> tag.</li><li>De eind tag heeft een <em>forward slash</em> dus <code>/</code> voor de naam, bijvoorbeeld <code>&lt;/html></code>.</li><li>Tags worden altijd geschreven met <em>kleine letters</em>.</li></ul><p><strong>Opdracht</strong> Kopieer en plak de basisonderdelen in een nieuw bestand en sla dit
 op als html-bestand (bijvoorbeeld <em>ninja.html</em>). <strong>Let op</strong>: pas nadat je het
 bestand hebt opgeslagen krijgt de tekst ook verschillende kleuren. Als je deze
 kleuren niet ziet kan het zijn dat je het bestand als tekst, dus eindigend op
@@ -31,14 +34,14 @@ Hiervoor zijn de <code>&lt;h1></code>, <code>&lt;h2></code>, <code>&lt;h3></code
 kun je je pagina een duidelijke indeling geven, zoals je kunt zien in het voorbeeld hierboven.</p><p><strong>Opdracht</strong> Tot hoe ver gaan de niveau&rsquo;s eigenlijk? Bestaat <code>&lt;h20></code>?</p><p><strong>Opdracht</strong> Maak een pagina die er zo uitziet:</p><div class=html-voorbeeld><h1>Heelal</h1><h2>Melkwegstelsel</h2><h3>Zonnestelsel</h3><h4>Aarde</h4></div><h3 id=de-stijl-van-tekst>De stijl van tekst</h3><p>Je kunt op een aantal manieren tekst extra benadrukken: door woorden <strong>dik</strong> te
 maken, of <code>schuin</code>. Hiervoor kun je bijvoorbeeld de tags <code>&lt;b></code> (voor dik) en
 <code>&lt;i></code> (voor schuin) gebruiken. Een aantal andere tags om extra effect aan je
-tekst te geven zijn <code>&lt;mark></code> en <code>&lt;del></code>. De HTML-code</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  Dit is &lt;<span style=color:navy>b</span>&gt;dik&lt;/<span style=color:navy>b</span>&gt;</code></pre></div><p>wordt dus</p><div class=html-voorbeeld>Dit is <b>dik</b></div><p><strong>Opdracht</strong> Gebruik de onderdelen die hierboven genoemd zijn eens uit en maak
+tekst te geven zijn <code>&lt;mark></code> en <code>&lt;del></code>. De HTML-code</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  Dit is &lt;<span style=color:navy>b</span>&gt;dik&lt;/<span style=color:navy>b</span>&gt;</span></span></code></pre></div><p>wordt dus</p><div class=html-voorbeeld>Dit is <b>dik</b></div><p><strong>Opdracht</strong> Gebruik de onderdelen die hierboven genoemd zijn eens uit en maak
 deze zin na (zet deze bijvoorbeeld onder de kop Aarde):</p><div class=html-voorbeeld>De <b>dikke</b> <mark>gele</mark> bij vloog <i>schuin</i> over mijn
 <del>kop</del> hoofd.</div><h3 id=links>Links</h3><p>Een superbelangrijk onderdeel van webpagina&rsquo;s zijn natuurlijk <em>links</em> die
 verwijzen naar andere pagina&rsquo;s, op dezelfde site of op een andere. Denk
 maar eens aan zoekmachines! Voor het maken van een link gebruik je de <code>&lt;a></code>
 tag. Het <em>adres</em> van de link, dus waar deze naar verwijst, voeg je toe door
 het <em>attribuut</em> <code>href</code> in de tag te zetten met als <em>waarde</em> het adres, op deze
-manier:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>a</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;https://scratch.mit.edu&#34;</span>&gt;Klik hier!&lt;/<span style=color:navy>a</span>&gt;</code></pre></div><p><strong>Opdracht</strong> Probeer op deze manier maar eens een link naar je favoriete
+manier:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>a</span> <span style=color:teal>href</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;https://scratch.mit.edu&#34;</span>&gt;Klik hier!&lt;/<span style=color:navy>a</span>&gt;</span></span></code></pre></div><p><strong>Opdracht</strong> Probeer op deze manier maar eens een link naar je favoriete
 website te maken. <strong>Let op</strong>: vergeet niet de aanhalingstekens om het adres
 van de website.</p><p>Zie je de link niet? Dat komt omdat je nog niets hebt toegevoegd om op te
 klikken! Dit komt tussen de start- en eindtag en mag tekst zijn, maar ook
@@ -47,25 +50,25 @@ bijvoorbeeld een afbeelding.</p><p><strong>Opdracht</strong> Maak op de pagina e
 ook weer?). Werkt de link? Tip: zet in de link <em>https://</em> voor de naam van de
 website.</p><h3 id=plaatjes>Plaatjes</h3><p>Met alleen maar tekst zouden veel websites er maar saai uit zien. Plaatjes kun
 je toevoegen aan je pagina met de <code>&lt;img></code> tag. Ook hier heb je weer een
-<em>attribuut</em> nodig, dat heet <code>src</code> (van <em>source</em>, Engels voor bron):</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>img</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;naam-van-het-plaatje.png&#34;</span>&gt;</code></pre></div><p><strong>Opdracht</strong>: Pas de link van de vorige opdracht zo aan dat je het CoderDojo
+<em>attribuut</em> nodig, dat heet <code>src</code> (van <em>source</em>, Engels voor bron):</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>img</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;naam-van-het-plaatje.png&#34;</span>&gt;</span></span></code></pre></div><p><strong>Opdracht</strong>: Pas de link van de vorige opdracht zo aan dat je het CoderDojo
 logo hieronder gebruikt in plaats van de tekst die er staat. Download Hiervoor
 het plaatje en sla het op in de map waar ook je html-pagina staat. Werkt de
 link nu ook weer? <strong>Let op</strong>: je moet de hele naam van het plaatje gebruiken,
 in dit geval is het een <em>png</em>-bestand.</p><p><img src=imgs/logo_coderdojo_nijmegen.png alt="Logo CoderDojo Nijmegen"></p><h2 id=stijl-toevoegen-met-css-basis>Stijl toevoegen met CSS (basis)</h2><p>Zonder <em>stijl</em> heeft tekst op een webpagina een standaardkleur (zwarte letters
 op een witte achtergrond), standaardgrootte en standaardlettertype. Je kunt
 eindeloos variëren met stijl, en er zijn verschillende manieren om stijl toe
-te voegen aan je HTML.</p><p>De opdrachten in deze instructie beginnen met deze HTML-code:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-  &lt;<span style=color:navy>html</span>&gt;
-  &lt;<span style=color:navy>body</span>&gt;
-    &lt;<span style=color:navy>p</span>&gt;
-      Dit is de best gestijlde regel HTML ooit!
-    &lt;/<span style=color:navy>p</span>&gt;
-    &lt;<span style=color:navy>p</span>&gt;
-      Hoewel, misschien is deze nog wel mooier...
-    &lt;/<span style=color:navy>p</span>&gt;
-  &lt;/<span style=color:navy>body</span>&gt;
-  &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p>Dit zou er in de preview zo uit moeten zien:</p><div class=html-voorbeeld><p>Dit is de best gestijlde regel HTML ooit!</p><p>Hoewel, misschien is deze nog wel mooier...</p></div><h3 id=stijl-toevoegen>Stijl toevoegen</h3><p>De makkelijkste manier om stijl toe te voegen aan je HTML is door een <code>style</code>
-attribuut toe te voegen aan een HTML-element, bijvoorbeeld:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;color:red&#34;</span>&gt;Wat zou de kleur van deze tekst zijn?&lt;/<span style=color:navy>p</span>&gt;</code></pre></div><p>In dit voorbeeld is <em>color</em> de <em>eigenschap</em> die je
+te voegen aan je HTML.</p><p>De opdrachten in deze instructie beginnen met deze HTML-code:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>      Dit is de best gestijlde regel HTML ooit!
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>      Hoewel, misschien is deze nog wel mooier...
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p>Dit zou er in de preview zo uit moeten zien:</p><div class=html-voorbeeld><p>Dit is de best gestijlde regel HTML ooit!</p><p>Hoewel, misschien is deze nog wel mooier...</p></div><h3 id=stijl-toevoegen>Stijl toevoegen</h3><p>De makkelijkste manier om stijl toe te voegen aan je HTML is door een <code>style</code>
+attribuut toe te voegen aan een HTML-element, bijvoorbeeld:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;color:red&#34;</span>&gt;Wat zou de kleur van deze tekst zijn?&lt;/<span style=color:navy>p</span>&gt;</span></span></code></pre></div><p>In dit voorbeeld is <em>color</em> de <em>eigenschap</em> die je
 wilt instellen, namelijk de kleur van de tekst. De <em>waarde</em> die je de tekst
 geeft is hier <em>red</em>, dus rood.</p><h3 id=spelen-met-kleur>Spelen met kleur</h3><p>De kleur van tekst bepaal je met de eigenschap <em>color</em>:
 <code>&lt;p style="color:green"></code>. Kleuren instellen kan op verschillende manieren,
@@ -75,15 +78,15 @@ veranderen, dit doe je met de eigenschap <em>background-color</em>:
 <code>&lt;p style="background-color:...."></code>.</p><p><strong>Opdracht</strong> Maak de tekst van de eerste alinea rood met een zwarte
 achtergrond, en die van de wit met een oranje achtergrond:</p><div class=html-voorbeeld><p style=color:red;background-color:#000>Dit is de best gestijlde regel HTML ooit!</p><p style=color:#fff;background-color:orange>Hoewel, misschien is deze nog wel mooier...</p></div><h3 id=tekstgrootte-aanpassen>Tekstgrootte aanpassen</h3><p>Eén manier om letters van verschillende grootte te maken is door :ref:<code>koppen</code>
 te gebruiken. Dat is niet altijd handig (waarom is nu niet belangrijk) en het
-kan ook met de eigenschap <em>font-size</em>. Een voorbeeld:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;font-size:25px&#34;</span>&gt;Groot!&lt;/<span style=color:navy>p</span>&gt;</code></pre></div><p>geeft dit resultaat</p><div class=html-voorbeeld><p style=font-size:25px>Groot!</p></div><p>In dit voorbeeld is <em>px</em> gebruikt om aan te geven hoe groot de tekst moet zijn,
+kan ook met de eigenschap <em>font-size</em>. Een voorbeeld:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;font-size:25px&#34;</span>&gt;Groot!&lt;/<span style=color:navy>p</span>&gt;</span></span></code></pre></div><p>geeft dit resultaat</p><div class=html-voorbeeld><p style=font-size:25px>Groot!</p></div><p>In dit voorbeeld is <em>px</em> gebruikt om aan te geven hoe groot de tekst moet zijn,
 dit is de grootte in pixels op het scherm. Je kunt ook procenten gebruiken,
 waarbij 100% de &ldquo;standaard&rdquo; grootte is: <code>&lt;p style="font-size:100%"></code>.</p><p><strong>Opdracht</strong> Maak de eerste zin van je pagina zo groot dat ie nog net op één
 regel past, en de tweede zo klein dat je &rsquo;m nog nét kunt lezen.</p><h3 id=verschillende-soorten-letters-gebruiken>Verschillende soorten letters gebruiken</h3><p>Naast de kleur en de grootte kun je ook nog het soort letters veranderen. Dit
 doe je met de eigenschap <em>font-family</em>:
 <code>&lt;style="font-family:naam,backup-naam"></code></p><p>Je ziet dat er <em>naam</em> en <em>backup-naam</em> als waarde staat ingevuld. De soort
 letter <em>backup-naam</em> is niet verplicht, maar wordt gebruikt als de computer de
-soort letter <em>naam</em> niet kent. Een voorbeeld:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;font-family:broadway,serif&#34;</span>&gt;Broadway is niet zo goed te lezen.&lt;/<span style=color:navy>p</span>&gt;
-  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;font-family:verdana,sans-serif&#34;</span>&gt;Verdana een stuk beter.&lt;/<span style=color:navy>p</span>&gt;</code></pre></div><p>geeft dit resultaat</p><div class=html-voorbeeld><p style=font-family:broadway,serif>Broadway is niet zo goed te lezen.</p><p style=font-family:verdana,serif>Verdana een stuk beter.</p></div><h3 id=stijlen-combineren>Stijlen combineren</h3><p>Je kun meer dan één eigenschap tegelijk instellen door ze met een punt-komma
+soort letter <em>naam</em> niet kent. Een voorbeeld:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;font-family:broadway,serif&#34;</span>&gt;Broadway is niet zo goed te lezen.&lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;font-family:verdana,sans-serif&#34;</span>&gt;Verdana een stuk beter.&lt;/<span style=color:navy>p</span>&gt;</span></span></code></pre></div><p>geeft dit resultaat</p><div class=html-voorbeeld><p style=font-family:broadway,serif>Broadway is niet zo goed te lezen.</p><p style=font-family:verdana,serif>Verdana een stuk beter.</p></div><h3 id=stijlen-combineren>Stijlen combineren</h3><p>Je kun meer dan één eigenschap tegelijk instellen door ze met een punt-komma
 achter elkaar te zetten, bijvoorbeeld: <code>&lt;p style="color:red;font-size:20px"></code></p><p><strong>Opdracht</strong> Combineer nu in de twee zinnen verschillende kleuren,
 lettergroottes en soorten letters. Leef je uit!</p><h3 id=toegankelijkheid>Toegankelijkheid</h3><p>Je hebt nu gezien dat je tekst op je webpagina er op heel veel verschillende
 manieren kunt laten uitzien. Dat het kán betekent natuurlijk nog niet dat het
@@ -92,324 +95,319 @@ goed zien te gebruiken zijn is het belangrijk (en voor sommige websites
 verplicht!) om bijvoorbeeld</p><ul><li>de letters groot genoeg te maken</li><li>de kleur van de letters en die van de achtergrond verschillend genoeg te
 maken</li><li>genoeg ruimte tussen regels tekst te laten.</li></ul><h2 id=actie-toevoegen-met-javascript-basis>Actie toevoegen met JavaScript (basis)</h2><p>De HTML die je net hebt geleerd is statisch. Om hier acties aan toe te voegen,
 zoals het klikken van een knop gebruiken we JavaScript (JS). Net zoals HTML
-kent ook JS veel verschillende &ldquo;woorden&rdquo;. Hier behandelen we er een aantal.</p><h3 id=toevoegen-aan-een-html-bestand>Toevoegen aan een HTML bestand</h3><p>JS wordt voor HTML bestanden geschreven in een speciaal blok:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-   &lt;<span style=color:navy>html</span>&gt;
-   &lt;<span style=color:navy>head</span>&gt;
-     &lt;<span style=color:navy>script</span>&gt;
-      JavaScript code hier<span style=color:#000;font-weight:700>!</span>
-     &lt;/<span style=color:navy>script</span>&gt;
-   &lt;/<span style=color:navy>head</span>&gt;
-   &lt;<span style=color:navy>body</span>&gt;
-   &lt;/<span style=color:navy>body</span>&gt;
-   &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p>Dit ziet er als volgt uit met code (De code wordt verder toegelicht):</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-   &lt;<span style=color:navy>html</span>&gt;
-   &lt;<span style=color:navy>head</span>&gt;
-     &lt;<span style=color:navy>script</span>&gt;
-
-      <span style=color:#000;font-weight:700>const</span> telOp <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>(getal1, getal2) {
-        <span style=color:#000;font-weight:700>return</span> getal1<span style=color:#000;font-weight:700>+</span>getal2;
-      }
-
-      <span style=color:#000;font-weight:700>const</span> resultaat <span style=color:#000;font-weight:700>=</span> telOp(<span style=color:#099>1</span>,<span style=color:#099>2</span>);
-
-      console.log(resultaat);
-
-     &lt;/<span style=color:navy>script</span>&gt;
-   &lt;/<span style=color:navy>head</span>&gt;
-   &lt;<span style=color:navy>body</span>&gt;
-   &lt;/<span style=color:navy>body</span>&gt;
-   &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><h3 id=functies>Functies</h3><p>Een functie in JS ziet er als volgt uit:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>    <span style=color:#000;font-weight:700>const</span> telOp <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>(getal1, getal2) {
-        <span style=color:#000;font-weight:700>return</span> getal1<span style=color:#000;font-weight:700>+</span>getal2;
-    }
-</code></pre></div><p>Hierbij zie je dat <code>function</code> aangeeft dat het een &lsquo;functie&rsquo; is.
+kent ook JS veel verschillende &ldquo;woorden&rdquo;. Hier behandelen we er een aantal.</p><h3 id=toevoegen-aan-een-html-bestand>Toevoegen aan een HTML bestand</h3><p>JS wordt voor HTML bestanden geschreven in een speciaal blok:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>     &lt;<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>      JavaScript code hier<span style=color:#000;font-weight:700>!</span>
+</span></span><span style=display:flex><span>     &lt;/<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p>Dit ziet er als volgt uit met code (De code wordt verder toegelicht):</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>     &lt;<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#000;font-weight:700>const</span> telOp <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>(getal1, getal2) {
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>return</span> getal1<span style=color:#000;font-weight:700>+</span>getal2;
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#000;font-weight:700>const</span> resultaat <span style=color:#000;font-weight:700>=</span> telOp(<span style=color:#099>1</span>,<span style=color:#099>2</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      console.log(resultaat);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>     &lt;/<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><h3 id=functies>Functies</h3><p>Een functie in JS ziet er als volgt uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>    <span style=color:#000;font-weight:700>const</span> telOp <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>(getal1, getal2) {
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>return</span> getal1<span style=color:#000;font-weight:700>+</span>getal2;
+</span></span><span style=display:flex><span>    }</span></span></code></pre></div><p>Hierbij zie je dat <code>function</code> aangeeft dat het een &lsquo;functie&rsquo; is.
 Vervolgens geven we de parameters op. Bij ons zijn dat getal1 en getal2.
 Als laatst gebruiken we deze twee variabelen om een optelling te doen.
-We geven dit getal terug door <code>return</code> te gebruiken.</p><p>Als we dit stukje code als volgt aanroepen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>   <span style=color:#000;font-weight:700>const</span> resultaat <span style=color:#000;font-weight:700>=</span> telOp(<span style=color:#099>1</span>,<span style=color:#099>2</span>);
-   console.log(resultaat)
-</code></pre></div><p>Dan zien we dat er 3 wordt geprint!
+We geven dit getal terug door <code>return</code> te gebruiken.</p><p>Als we dit stukje code als volgt aanroepen:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>   <span style=color:#000;font-weight:700>const</span> resultaat <span style=color:#000;font-weight:700>=</span> telOp(<span style=color:#099>1</span>,<span style=color:#099>2</span>);
+</span></span><span style=display:flex><span>   console.log(resultaat)</span></span></code></pre></div><p>Dan zien we dat er 3 wordt geprint!
 We slaan hierbij het resultaat op in <code>resultaat</code>
 en printen die vervolgens met <code>console.log()</code>.
 Om nu de output te zien van de <code>console.log()</code> functie moeten we de
 <code>console</code> openen. Je kunt dit doen op verschillende manieren:</p><p>Windows:</p><ul><li>F12</li><li>Rechtermuisknop + inspecteer</li><li>Control+Shift+J</li></ul><p>MacOs:</p><ul><li>Command+Option+J</li></ul><h3 id=variabelen>Variabelen</h3><p>Variabelen in JS gebruiken net als andere talen een speciale <code>syntax</code>.
 In JS kennen we <code>var</code>, <code>const</code> en <code>let</code>. Een goede tip om problemen tegen
 te gaan is om alleen <code>const</code> en <code>let</code> te gebruiken.</p><p><code>const</code> gebruiken we als een variabelen niet meer veranderd,
-en <code>let</code> als we de variabelen later nog aan willen passen.</p><p>Een variabele <code>resultaat</code> maken doen we als volgt:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>   <span style=color:#000;font-weight:700>let</span> resultaat <span style=color:#000;font-weight:700>=</span> <span style=color:#099>6</span>; <span style=color:#998;font-style:italic>//Zo
-</span><span style=color:#998;font-style:italic></span>   <span style=color:#000;font-weight:700>const</span> resultaatConst <span style=color:#000;font-weight:700>=</span> <span style=color:#099>6</span>; <span style=color:#998;font-style:italic>//Of zo
-</span></code></pre></div><p>In variabelen kunnen we data opslaan, dat is heel handig!</p><h4 id=voorbeeld-1-knop>Voorbeeld 1: Knop</h4><p>Bij een knop gaan we <code>HTML</code> en <code>JS</code> combineren!</p><p><strong>Opdracht</strong> Zorg allereest dat je een <code>HTML</code> pagina hebt met een knop.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-   &lt;<span style=color:navy>html</span>&gt;
-   &lt;<span style=color:navy>head</span>&gt;
-   &lt;/<span style=color:navy>head</span>&gt;
-   &lt;<span style=color:navy>body</span>&gt;
-      &lt;<span style=color:navy>button</span>&gt; Klik op mij! &lt;/<span style=color:navy>button</span>&gt;
-   &lt;/<span style=color:navy>body</span>&gt;
-   &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p>Wat gebeurt er nu als je op de knop klikt?</p><p><strong>Opdracht</strong> Om nu interactie toe te voegen aan de knop gaan we JS en html
-combineren.</p><ul><li>Op de knop kunnen we de volgende HTML toevoegen: <strong>onclick=&rdquo;"</strong>. Nu werkt
+en <code>let</code> als we de variabelen later nog aan willen passen.</p><p>Een variabele <code>resultaat</code> maken doen we als volgt:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>   <span style=color:#000;font-weight:700>let</span> resultaat <span style=color:#000;font-weight:700>=</span> <span style=color:#099>6</span>; <span style=color:#998;font-style:italic>//Zo
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#000;font-weight:700>const</span> resultaatConst <span style=color:#000;font-weight:700>=</span> <span style=color:#099>6</span>; <span style=color:#998;font-style:italic>//Of zo
+</span></span></span></code></pre></div><p>In variabelen kunnen we data opslaan, dat is heel handig!</p><h4 id=voorbeeld-1-knop>Voorbeeld 1: Knop</h4><p>Bij een knop gaan we <code>HTML</code> en <code>JS</code> combineren!</p><p><strong>Opdracht</strong> Zorg allereest dat je een <code>HTML</code> pagina hebt met een knop.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>   &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>button</span>&gt; Klik op mij! &lt;/<span style=color:navy>button</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>   &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p>Wat gebeurt er nu als je op de knop klikt?</p><p><strong>Opdracht</strong> Om nu interactie toe te voegen aan de knop gaan we JS en html
+combineren.</p><ul><li>Op de knop kunnen we de volgende HTML toevoegen: <strong>onclick=""</strong>. Nu werkt
 het echter nog niet..!</li><li>Nu moeten we een JS functie schrijven die de knop aan gaat roepen, weet jij
-nog waar dit moet staan in het HTML bestand?:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>      <span style=color:#000;font-weight:700>const</span> buttonClicked <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>() {
-         alert(<span style=color:#d14>&#34;Je hebt op de knop geklikt!&#34;</span>);
-      }
-</code></pre></div><ul><li>Als laatste gaan we deze twee elementen aan elkaar koppelen door de
-<strong>onclick=&rdquo;"</strong> aan te passen (Hier moet je wel de JS nog toevoegen!):</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>      <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-      &lt;<span style=color:navy>html</span>&gt;
-      &lt;<span style=color:navy>head</span>&gt;
-      &lt;/<span style=color:navy>head</span>&gt;
-      &lt;<span style=color:navy>body</span>&gt;
-         &lt;<span style=color:navy>button</span> <span style=color:teal>onclick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;buttonClicked()&#34;</span>&gt; Klik op mij! &lt;/<span style=color:navy>button</span>&gt;
-      &lt;/<span style=color:navy>body</span>&gt;
-      &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><h4 id=voorbeeld-2-een-element-toevoegen-op-de-pagina>Voorbeeld 2: Een element toevoegen op de pagina</h4><p>We kunnen in <code>JS</code> nog veel meer doen dan interactie toevoegen, bijvoorbeeld aan
-knoppen. Ook kunnen we <code>HTML</code> toevoegen aan de <code>HTML</code> pagina!</p><p>We hebben hier een aantal functies voor in JS.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>   <span style=color:#000;font-weight:700>const</span> element <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;&lt;id&gt;&#34;</span>);
-   element.insertAdjacentHTML(<span style=color:#d14>&#34;afterend&#34;</span>, <span style=color:#d14>&#34;&lt;p&gt;My text&lt;/p&gt;&#34;</span>);
-</code></pre></div><p>Er zijn nog veel meer mogelijkheden, maar dit is een van de simpelste.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>      <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-      &lt;<span style=color:navy>html</span>&gt;
-      &lt;<span style=color:navy>head</span>&gt;
-         &lt;<span style=color:navy>script</span>&gt;
-            <span style=color:#000;font-weight:700>const</span> voegElementToe <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>() {
-               <span style=color:#000;font-weight:700>const</span> element <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;mijnDivId&#34;</span>);
-               element.insertAdjacentHTML(<span style=color:#d14>&#34;afterend&#34;</span>, <span style=color:#d14>&#34;&lt;p&gt;My text&lt;/p&gt;&#34;</span>);
-            }
-         &lt;/<span style=color:navy>script</span>&gt;
-      &lt;/<span style=color:navy>head</span>&gt;
-      &lt;<span style=color:navy>body</span>&gt;
-      &lt;<span style=color:navy>button</span> <span style=color:teal>onclick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;voegElementToe()&#34;</span>&gt; Klik op mij! &lt;/<span style=color:navy>button</span>&gt;
-      &lt;<span style=color:navy>div</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;mijnDivId&#34;</span>&gt; Dit is een div&lt;/<span style=color:navy>div</span>&gt;
-      &lt;/<span style=color:navy>body</span>&gt;
-      &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p><strong>Opdracht</strong> Kun jij nu met jouw kennis van JS en HTML een element toevoegen
+nog waar dit moet staan in het HTML bestand?:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>      <span style=color:#000;font-weight:700>const</span> buttonClicked <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>() {
+</span></span><span style=display:flex><span>         alert(<span style=color:#d14>&#34;Je hebt op de knop geklikt!&#34;</span>);
+</span></span><span style=display:flex><span>      }</span></span></code></pre></div><ul><li>Als laatste gaan we deze twee elementen aan elkaar koppelen door de
+<strong>onclick=""</strong> aan te passen (Hier moet je wel de JS nog toevoegen!):</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>      <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>         &lt;<span style=color:navy>button</span> <span style=color:teal>onclick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;buttonClicked()&#34;</span>&gt; Klik op mij! &lt;/<span style=color:navy>button</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><h4 id=voorbeeld-2-een-element-toevoegen-op-de-pagina>Voorbeeld 2: Een element toevoegen op de pagina</h4><p>We kunnen in <code>JS</code> nog veel meer doen dan interactie toevoegen, bijvoorbeeld aan
+knoppen. Ook kunnen we <code>HTML</code> toevoegen aan de <code>HTML</code> pagina!</p><p>We hebben hier een aantal functies voor in JS.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>   <span style=color:#000;font-weight:700>const</span> element <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;&lt;id&gt;&#34;</span>);
+</span></span><span style=display:flex><span>   element.insertAdjacentHTML(<span style=color:#d14>&#34;afterend&#34;</span>, <span style=color:#d14>&#34;&lt;p&gt;My text&lt;/p&gt;&#34;</span>);</span></span></code></pre></div><p>Er zijn nog veel meer mogelijkheden, maar dit is een van de simpelste.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>      <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>         &lt;<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>const</span> voegElementToe <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>function</span>() {
+</span></span><span style=display:flex><span>               <span style=color:#000;font-weight:700>const</span> element <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;mijnDivId&#34;</span>);
+</span></span><span style=display:flex><span>               element.insertAdjacentHTML(<span style=color:#d14>&#34;afterend&#34;</span>, <span style=color:#d14>&#34;&lt;p&gt;My text&lt;/p&gt;&#34;</span>);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>         &lt;/<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>button</span> <span style=color:teal>onclick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;voegElementToe()&#34;</span>&gt; Klik op mij! &lt;/<span style=color:navy>button</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>div</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;mijnDivId&#34;</span>&gt; Dit is een div&lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p><strong>Opdracht</strong> Kun jij nu met jouw kennis van JS en HTML een element toevoegen
 als je op een knop klikt?</p><h4 id=voorbeeld-3-reageren-op-berichten-van-een-gebruiker>Voorbeeld 3: Reageren op berichten van een gebruiker</h4><p>Met de volgende HTML code hebben we een invoer veld waar de gebruiker iets in
-kan typen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-      &lt;<span style=color:navy>html</span>&gt;
-      &lt;<span style=color:navy>head</span>&gt;
-          &lt;<span style=color:navy>style</span>&gt;
-              #<span style=color:#555>inputId</span> {
-                  <span style=color:#000;font-weight:700>width</span>: <span style=color:#099>300</span><span style=color:#458;font-weight:700>px</span>;
-                  <span style=color:#000;font-weight:700>height</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
-                  <span style=color:#000;font-weight:700>font-size</span>: <span style=color:#000;font-weight:700>xx-large</span>;
-              }
-
-              .<span style=color:#458;font-weight:700>container</span> {
-                  <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>flex</span>;
-                  <span style=color:#000;font-weight:700>height</span>: <span style=color:#099>100</span><span style=color:#458;font-weight:700>vh</span>;
-                  <span style=color:#000;font-weight:700>justify-content</span>: <span style=color:#000;font-weight:700>center</span>;
-                  <span style=color:#000;font-weight:700>align-items</span>: <span style=color:#000;font-weight:700>center</span>;
-                  <span style=color:#000;font-weight:700>background-color</span>: <span style=color:#000;font-weight:700>blue</span>;
-              }
-          &lt;/<span style=color:navy>style</span>&gt;
-         &lt;<span style=color:navy>script</span>&gt;
-            <span style=color:#998;font-style:italic>//JavaScript code hier!
-</span><span style=color:#998;font-style:italic></span>         &lt;/<span style=color:navy>script</span>&gt;
-      &lt;/<span style=color:navy>head</span>&gt;
-      &lt;<span style=color:navy>body</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;container&#34;</span>&gt;
-        &lt;<span style=color:navy>span</span>&gt; Wat is je naam? &lt;/<span style=color:navy>span</span>&gt;
-        &lt;<span style=color:navy>input</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;inputId&#34;</span>&gt; &lt;/<span style=color:navy>input</span>&gt;
-      &lt;/<span style=color:navy>body</span>&gt;
-      &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p>Als de gebruiker nu iets typt, zie je alleen de tekst staan. Er gebeurt verder
+kan typen:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>   <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:navy>style</span>&gt;
+</span></span><span style=display:flex><span>              #<span style=color:#555>inputId</span> {
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>width</span>: <span style=color:#099>300</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>height</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>font-size</span>: <span style=color:#000;font-weight:700>xx-large</span>;
+</span></span><span style=display:flex><span>              }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>              .<span style=color:#458;font-weight:700>container</span> {
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>flex</span>;
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>height</span>: <span style=color:#099>100</span><span style=color:#458;font-weight:700>vh</span>;
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>justify-content</span>: <span style=color:#000;font-weight:700>center</span>;
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>align-items</span>: <span style=color:#000;font-weight:700>center</span>;
+</span></span><span style=display:flex><span>                  <span style=color:#000;font-weight:700>background-color</span>: <span style=color:#000;font-weight:700>blue</span>;
+</span></span><span style=display:flex><span>              }
+</span></span><span style=display:flex><span>          &lt;/<span style=color:navy>style</span>&gt;
+</span></span><span style=display:flex><span>         &lt;<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>            <span style=color:#998;font-style:italic>//JavaScript code hier!
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>         &lt;/<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>body</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;container&#34;</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>span</span>&gt; Wat is je naam? &lt;/<span style=color:navy>span</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>input</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;inputId&#34;</span>&gt; &lt;/<span style=color:navy>input</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p>Als de gebruiker nu iets typt, zie je alleen de tekst staan. Er gebeurt verder
 nog niet zo veel. Kun jij ervoor zorgen dat de computer terugpraat?</p><ul><li>Voeg een knop toe aan de HTML pagina</li><li>Als je op de knop klikt, log dan de text die in het input veld staat met
 <code>console.log</code>. Om de tekst uit het invoer veld te halen kun je gebruik
 maken van: <code>const input = document.getElementById("inputId").value;</code></li><li>Kun jij nu de computer <code>Hallo &lt;naam></code> laten zeggen? Je kan dit doen met de
 functie <code>alert()</code>, hier moet je nog wel text aan meegeven. Dit is een
-voorbeeld: <code>alert("Hoi Kevin!")</code></li></ul><h2 id=stijl-toevoegen-met-css-vervolg>Stijl toevoegen met CSS (vervolg)</h2><p>Maak voor de opdrachten in deze instructie een HTML-bestand met deze inhoud:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
-  &lt;<span style=color:navy>head</span>&gt;
-  &lt;<span style=color:navy>style</span>&gt;
-     <span style=color:#998;font-style:italic>/* hier komt je styling! */</span>
-  &lt;/<span style=color:navy>style</span>&gt;
-  &lt;/<span style=color:navy>head</span>&gt;
-  &lt;<span style=color:navy>body</span>&gt;
-    &lt;<span style=color:navy>h1</span>&gt;Deze pagina gaan we stylen!&lt;/<span style=color:navy>h1</span>&gt;
-    &lt;<span style=color:navy>h2</span>&gt;Dit is een h2 kop&lt;/<span style=color:navy>h2</span>&gt;
-    &lt;<span style=color:navy>div</span>&gt;
-      &lt;<span style=color:navy>h2</span>&gt;Dit is ook een h2 kop!&lt;/<span style=color:navy>h2</span>&gt;
-        &lt;<span style=color:navy>p</span>&gt;Wat zullen we met &lt;<span style=color:navy>span</span>&gt;deze&lt;/<span style=color:navy>span</span>&gt; alinea gaan doen?&lt;/<span style=color:navy>p</span>&gt;
-        &lt;<span style=color:navy>p</span>&gt;Deze alinea wordt nog mooier dan de vorige.&lt;/<span style=color:navy>p</span>&gt;
-    &lt;/<span style=color:navy>div</span>&gt;
-    &lt;<span style=color:navy>div</span>&gt;
-      &lt;<span style=color:navy>p</span>&gt;De vorige alinea&#39;s zijn &lt;<span style=color:navy>span</span>&gt;jaloers&lt;/<span style=color:navy>span</span>&gt; op mij.&lt;/<span style=color:navy>p</span>&gt;
-      &lt;<span style=color:navy>p</span>&gt;Jaloers op mij zul je bedoelen!&lt;/<span style=color:navy>p</span>&gt;
-    &lt;/<span style=color:navy>div</span>&gt;
-  &lt;/<span style=color:navy>body</span>&gt;
-  &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p>Tot nu toe heb je stijl toegevoegd door <code>style="..."</code> te gebruiken in de
+voorbeeld: <code>alert("Hoi Kevin!")</code></li></ul><h2 id=stijl-toevoegen-met-css-vervolg>Stijl toevoegen met CSS (vervolg)</h2><p>Maak voor de opdrachten in deze instructie een HTML-bestand met deze inhoud:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  <span style=color:#999;font-weight:700;font-style:italic>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>style</span>&gt;
+</span></span><span style=display:flex><span>     <span style=color:#998;font-style:italic>/* hier komt je styling! */</span>
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>style</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>h1</span>&gt;Deze pagina gaan we stylen!&lt;/<span style=color:navy>h1</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>h2</span>&gt;Dit is een h2 kop&lt;/<span style=color:navy>h2</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>h2</span>&gt;Dit is ook een h2 kop!&lt;/<span style=color:navy>h2</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>p</span>&gt;Wat zullen we met &lt;<span style=color:navy>span</span>&gt;deze&lt;/<span style=color:navy>span</span>&gt; alinea gaan doen?&lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>p</span>&gt;Deze alinea wordt nog mooier dan de vorige.&lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>p</span>&gt;De vorige alinea&#39;s zijn &lt;<span style=color:navy>span</span>&gt;jaloers&lt;/<span style=color:navy>span</span>&gt; op mij.&lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:navy>p</span>&gt;Jaloers op mij zul je bedoelen!&lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>  &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p>Tot nu toe heb je stijl toegevoegd door <code>style="..."</code> te gebruiken in de
 HTML-onderdelen. Dat heeft voordelen en nadelen. Het is handig dat je meteen
 kunt zien hoe de inhoud van je webpagina eruit komt te zien. Minder handig is
 dat je aan <em>ieder</em> stukje HTML op deze manier een stijl moet toevoegen. Dat is
 én veel werk, én wordt al snel onoverzichtelijk als je veel stijlen hebt.</p><p>Het is daarom gebruikelijk bij webpagina&rsquo;s om de inhoud en stijl op
 verschillende plekken neer te zetten. Een manier om dit te doen is binnen het
 <code>&lt;style></code> onderdeel. De code binnen het <code>&lt;style></code> onderdeel ziet er wat
-anders uit dan je tot nu toe gezien hebt. Om tekst rood te maken gebruikte je</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;color:red&#34;</span>&gt;Dit stukje tekst is rood&lt;/<span style=color:navy>p</span>&gt;</code></pre></div><p>Binnen <code>&lt;style></code> moet je deze code schrijven, een soort <em>regel</em> voor hoe de
-HTML zich moet gedragen:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>  <span style=color:navy>p</span> {
-    <span style=color:#000;font-weight:700>color</span>: <span style=color:#000;font-weight:700>red</span>;
-  }</code></pre></div><p><strong>Opdracht</strong> Wat denk je dat er gebeurt als je dit stukje code in het
+anders uit dan je tot nu toe gezien hebt. Om tekst rood te maken gebruikte je</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>style</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;color:red&#34;</span>&gt;Dit stukje tekst is rood&lt;/<span style=color:navy>p</span>&gt;</span></span></code></pre></div><p>Binnen <code>&lt;style></code> moet je deze code schrijven, een soort <em>regel</em> voor hoe de
+HTML zich moet gedragen:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=display:flex><span>  <span style=color:navy>p</span> {
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>color</span>: <span style=color:#000;font-weight:700>red</span>;
+</span></span><span style=display:flex><span>  }</span></span></code></pre></div><p><strong>Opdracht</strong> Wat denk je dat er gebeurt als je dit stukje code in het
 <code>&lt;style></code> onderdeel zet? Probeer het eens. Had je gelijk?</p><h3 id=stijl-toevoegen-aan-sommige-maar-niet-alle-elementen>Stijl toevoegen aan sommige, maar niet alle elementen</h3><p>Als je de opdracht van net hebt uitgevoerd, heb je gezien dat <em>alle</em> <code>&lt;p></code>
 onderdelen, dus alle alinea&rsquo;s, rode tekst hebben. Dit is dus wat deze code
 doet:</p><ul><li>de <em>eigenschap</em> kleur krijgt</li><li>de <em>waarde</em> rood</li><li>voor <em>alle</em> <code>&lt;p></code> onderdelen</li></ul><p>Maar stel nou dat je alleen bepaalde alinea&rsquo;s rood wilt maken?</p><h3 id=class>Class</h3><p>Dat kan bijvoorbeeld door het HTML-onderdeel lid te maken van een zogenaamde
-<em>class</em>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;naamvandeclass&#34;</span>&gt;Welke kleur is dit?&lt;/<span style=color:navy>p</span>&gt;</code></pre></div><p>In de CSS maak je een class door een <em>punt</em> aan het begin te gebruiken:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs>  .naamvandeclass {
-    color: red;
-  }
-</code></pre></div><p><strong>Opdracht</strong> Gebruik een <em>class</em> met de naam &ldquo;rodealinea&rdquo; om de 1e en 4e alinea
-rood te maken, dus zo:</p><div class=html-voorbeeld><!doctype html><head><style>.rodealinea{color:red}</style></head><body><h1>Deze pagina gaan we stylen!</h1><h2>Dit is een h2 kop</h2><div><h2>Dit is ook een h2 kop!</h2><p class=rodealinea>Wat zullen we met <span>deze</span> alinea gaan doen?</p><p>Deze alinea wordt nog mooier dan de vorige.</p></div><div><p>De vorige alinea's zijn <span>jaloers</span> op mij.</p><p class=rodealinea>Jaloers op mij zul je bedoelen!</p></div></body></html></div><h3 id=id>ID</h3><p>Een andere manier is om een HTML-onderdeel een uniek <em>id</em> te geven:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;ikbenuniek&#34;</span>&gt;Welke kleur is dit?&lt;/<span style=color:navy>p</span>&gt;</code></pre></div><p>In de CSS verwijs je naar een id door een <em>hashtag</em> aan het begin te gebruiken:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>  #<span style=color:#555>ikbenuniek</span> {
-    <span style=color:#000;font-weight:700>color</span>: <span style=color:#000;font-weight:700>red</span>;
-  }</code></pre></div><p><strong>Opdracht</strong> Maak de tekst van de eerste h1 kop blauw, en de 1e h2 kop groen
+<em>class</em>:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;naamvandeclass&#34;</span>&gt;Welke kleur is dit?&lt;/<span style=color:navy>p</span>&gt;</span></span></code></pre></div><p>In de CSS maak je een class door een <em>punt</em> aan het begin te gebruiken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span>  .naamvandeclass {
+</span></span><span style=display:flex><span>    color: red;
+</span></span><span style=display:flex><span>  }</span></span></code></pre></div><p><strong>Opdracht</strong> Gebruik een <em>class</em> met de naam &ldquo;rodealinea&rdquo; om de 1e en 4e alinea
+rood te maken, dus zo:</p><div class=html-voorbeeld><!doctype html><head><style>.rodealinea{color:red}</style></head><body><h1>Deze pagina gaan we stylen!</h1><h2>Dit is een h2 kop</h2><div><h2>Dit is ook een h2 kop!</h2><p class=rodealinea>Wat zullen we met <span>deze</span> alinea gaan doen?</p><p>Deze alinea wordt nog mooier dan de vorige.</p></div><div><p>De vorige alinea's zijn <span>jaloers</span> op mij.</p><p class=rodealinea>Jaloers op mij zul je bedoelen!</p></div></body></html></div><h3 id=id>ID</h3><p>Een andere manier is om een HTML-onderdeel een uniek <em>id</em> te geven:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;ikbenuniek&#34;</span>&gt;Welke kleur is dit?&lt;/<span style=color:navy>p</span>&gt;</span></span></code></pre></div><p>In de CSS verwijs je naar een id door een <em>hashtag</em> aan het begin te gebruiken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=display:flex><span>  #<span style=color:#555>ikbenuniek</span> {
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>color</span>: <span style=color:#000;font-weight:700>red</span>;
+</span></span><span style=display:flex><span>  }</span></span></code></pre></div><p><strong>Opdracht</strong> Maak de tekst van de eerste h1 kop blauw, en de 1e h2 kop groen
 (tip: je hebt hiervoor twee id&rsquo;s nodig, &ldquo;ikbenblauw&rdquo; en &ldquo;ikbengroen&rdquo;):</p><div class=html-voorbeeld><!doctype html><head><style>.rodealinea{color:red}#ikbenblauw{color:blue}#ikbengroen{color:green}</style></head><body><h1 id=ikbenblauw>Deze pagina gaan we stylen!</h1><h2 id=ikbengroen>Dit is een h2 kop</h2><div><h2>Dit is ook een h2 kop!</h2><p class=rodealinea>Wat zullen we met <span>deze</span> alinea gaan doen?</p><p>Deze alinea wordt nog mooier dan de vorige.</p></div><div><p>De vorige alinea's zijn <span>jaloers</span> op mij.</p><p class=rodealinea>Jaloers op mij zul je bedoelen!</p></div></body></html></div><p>Samengevat heb je nu gezien dat je stijl kunt geven aan</p><ul><li>alle onderdelen van een bepaalde soort</li><li>bepaalde onderdelen door ze lid te maken van een class</li><li>losse onderdelen door ze een (uniek) id te geven</li></ul><h3 id=combineren-van-stijlen>Combineren van stijlen</h3><p>Een grote kracht van CSS is dat je stijlen ook kunt combineren. Zo kun je
-meerdere eigenschappen tegelijk instellen in een CSS regel:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>  <span style=color:navy>p</span> {
-    <span style=color:#000;font-weight:700>color</span>: <span style=color:#000;font-weight:700>red</span>;
-    <span style=color:#000;font-weight:700>font-weight</span>: <span style=color:#000;font-weight:700>bold</span>;
-  }</code></pre></div><p><strong>Opdracht</strong> Voeg een tweede eigenschap toe aan de &ldquo;rodealinea&rdquo;, bijvoorbeeld
+meerdere eigenschappen tegelijk instellen in een CSS regel:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=display:flex><span>  <span style=color:navy>p</span> {
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>color</span>: <span style=color:#000;font-weight:700>red</span>;
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>font-weight</span>: <span style=color:#000;font-weight:700>bold</span>;
+</span></span><span style=display:flex><span>  }</span></span></code></pre></div><p><strong>Opdracht</strong> Voeg een tweede eigenschap toe aan de &ldquo;rodealinea&rdquo;, bijvoorbeeld
 <em>background-color</em> of <em>font-family</em>.</p><p>Je kunt een onderdeel ook lid maken van meer dan één <em>class</em> (in dit voorbeeld
-heten die &ldquo;rodealinea&rdquo; en &ldquo;box&rdquo;):</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>  &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;rodealinea box&#34;</span></code></pre></div><p><strong>Opdracht</strong> Maak een class &ldquo;box&rdquo; die de eigenschap <code>border</code> instelt op <code>1px solid black</code>, en voeg deze toe aan een van de rode alinea&rsquo;s:</p><div class=html-voorbeeld><!doctype html><head><style>.rodealinea{color:red}#ikbenblauw{color:blue}#ikbengroen{color:green}.box{border:1px solid #000}</style></head><body><h1 id=ikbenblauw>Deze pagina gaan we stylen!</h1><h2 id=ikbengroen>Dit is een h2 kop</h2><div><h2>Dit is ook een h2 kop!</h2><p class="rodealinea box">Wat zullen we met <span>deze</span> alinea gaan doen?</p><p>Deze alinea wordt nog mooier dan de vorige.</p></div><div><p>De vorige alinea's zijn <span>jaloers</span> op mij.</p><p class=rodealinea>Jaloers op mij zul je bedoelen!</p></div></body></html></div><h2 id=actie-toevoegen-met-javascript-vervolg>Actie toevoegen met JavaScript (vervolg)</h2><p>Nu je de basis van JS hebt gezien, gaan we wat verder met moeilijker
+heten die &ldquo;rodealinea&rdquo; en &ldquo;box&rdquo;):</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>  &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;rodealinea box&#34;</span></span></span></code></pre></div><p><strong>Opdracht</strong> Maak een class &ldquo;box&rdquo; die de eigenschap <code>border</code> instelt op <code>1px solid black</code>, en voeg deze toe aan een van de rode alinea&rsquo;s:</p><div class=html-voorbeeld><!doctype html><head><style>.rodealinea{color:red}#ikbenblauw{color:blue}#ikbengroen{color:green}.box{border:1px solid #000}</style></head><body><h1 id=ikbenblauw>Deze pagina gaan we stylen!</h1><h2 id=ikbengroen>Dit is een h2 kop</h2><div><h2>Dit is ook een h2 kop!</h2><p class="rodealinea box">Wat zullen we met <span>deze</span> alinea gaan doen?</p><p>Deze alinea wordt nog mooier dan de vorige.</p></div><div><p>De vorige alinea's zijn <span>jaloers</span> op mij.</p><p class=rodealinea>Jaloers op mij zul je bedoelen!</p></div></body></html></div><h2 id=actie-toevoegen-met-javascript-vervolg>Actie toevoegen met JavaScript (vervolg)</h2><p>Nu je de basis van JS hebt gezien, gaan we wat verder met moeilijker
 onderdelen.</p><h3 id=een-klok-maken>Een klok maken</h3><p><img src=imgs/clock.png alt=klok></p><p>We gaan een klok maken op een <code>HTML</code> pagina. Je kan de volgende <code>HTML</code>
-gebruiken:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>    &lt;<span style=color:navy>html</span>&gt;
-    &lt;<span style=color:navy>head</span>&gt;
-        &lt;<span style=color:navy>style</span>&gt;
-            <span style=color:navy>body</span> {
-                <span style=color:#000;font-weight:700>background</span>: <span style=color:#0086b3>linear-gradient</span>(<span style=color:#099>45</span><span style=color:#458;font-weight:700>deg</span>, <span style=color:#099>#1870ed</span> <span style=color:#099>0</span>, <span style=color:#099>#f18f88</span> <span style=color:#099>100</span><span style=color:#458;font-weight:700>%</span>);
-                <span style=color:#000;font-weight:700>font-family</span>: <span style=color:#d14>&#39;Montserrat&#39;</span>, <span style=color:#d14>&#39;sans-serif&#39;</span>;
-                <span style=color:#000;font-weight:700>min-height</span>: <span style=color:#099>100</span><span style=color:#458;font-weight:700>vh</span>;
-                <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>flex</span>;
-                <span style=color:#000;font-weight:700>align-items</span>: <span style=color:#000;font-weight:700>center</span>;
-                <span style=color:#000;font-weight:700>justify-content</span>: <span style=color:#000;font-weight:700>center</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-container</span> {
-                <span style=color:#000;font-weight:700>margin-top</span>: <span style=color:#099>30</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>margin-bottom</span>: <span style=color:#099>30</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>background-color</span>: <span style=color:#099>#080808</span>;
-                <span style=color:#000;font-weight:700>border-radius</span>: <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>padding</span>: <span style=color:#099>60</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>20</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>box-shadow</span>: <span style=color:#099>1</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>1</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span> <span style=color:#0086b3>rgba</span>(<span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>.15</span>), <span style=color:#099>0</span> <span style=color:#099>15</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>90</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>30</span><span style=color:#458;font-weight:700>px</span> <span style=color:#0086b3>rgba</span>(<span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>.25</span>);
-                <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>flex</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-col</span> {
-                <span style=color:#000;font-weight:700>text-align</span>: <span style=color:#000;font-weight:700>center</span>;
-                <span style=color:#000;font-weight:700>margin-right</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>margin-left</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>min-width</span>: <span style=color:#099>90</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>position</span>: <span style=color:#000;font-weight:700>relative</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>before</span><span style=color:#000;font-weight:700>,</span>
-            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>after</span> {
-                <span style=color:#000;font-weight:700>content</span>: <span style=color:#d14>&#34;&#34;</span>;
-                <span style=color:#000;font-weight:700>background-color</span>: <span style=color:#0086b3>rgba</span>(<span style=color:#099>201</span>, <span style=color:#099>166</span>, <span style=color:#099>166</span>, <span style=color:#099>0.3</span>);
-                <span style=color:#000;font-weight:700>height</span>: <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>width</span>: <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span>;
-                <span style=color:#000;font-weight:700>border-radius</span>: <span style=color:#099>50</span><span style=color:#458;font-weight:700>%</span>;
-                <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>block</span>;
-                <span style=color:#000;font-weight:700>position</span>: <span style=color:#000;font-weight:700>absolute</span>;
-                <span style=color:#000;font-weight:700>right</span>: <span style=color:#099>-42</span><span style=color:#458;font-weight:700>px</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>before</span> {
-                <span style=color:#000;font-weight:700>top</span>: <span style=color:#099>35</span><span style=color:#458;font-weight:700>%</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>after</span> {
-                <span style=color:#000;font-weight:700>top</span>: <span style=color:#099>50</span><span style=color:#458;font-weight:700>%</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-timer</span> {
-                <span style=color:#000;font-weight:700>color</span>: <span style=color:#099>#fff</span>;
-                <span style=color:#000;font-weight:700>font-size</span>: <span style=color:#099>4.2</span><span style=color:#458;font-weight:700>rem</span>;
-                <span style=color:#000;font-weight:700>text-transform</span>: <span style=color:#000;font-weight:700>uppercase</span>;
-            }
-
-            .<span style=color:#458;font-weight:700>clock-label</span> {
-                <span style=color:#000;font-weight:700>color</span>: <span style=color:#0086b3>rgba</span>(<span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>.35</span>);
-                <span style=color:#000;font-weight:700>text-transform</span>: <span style=color:#000;font-weight:700>uppercase</span>;
-                <span style=color:#000;font-weight:700>font-size</span>: <span style=color:#099>0.7</span><span style=color:#458;font-weight:700>rem</span>;
-                <span style=color:#000;font-weight:700>margin-top</span>: <span style=color:#099>10</span><span style=color:#458;font-weight:700>px</span>;
-            }
-
-            @<span style=color:#000;font-weight:700>media</span> <span style=color:#000;font-weight:700>(</span><span style=color:navy>max-width</span><span style=color:#000;font-weight:700>:</span> <span style=color:navy>825px</span><span style=color:#000;font-weight:700>)</span> {
-                .<span style=color:#458;font-weight:700>clock-container</span> {
-                    <span style=color:#000;font-weight:700>flex-direction</span>: <span style=color:#000;font-weight:700>column</span>;
-                    <span style=color:#000;font-weight:700>padding-top</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
-                    <span style=color:#000;font-weight:700>padding-bottom</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
-                }
-
-                .<span style=color:#458;font-weight:700>clock-col</span><span style=color:#000;font-weight:700>+</span>.<span style=color:#458;font-weight:700>clock-col</span> {
-                    <span style=color:#000;font-weight:700>margin-top</span>: <span style=color:#099>20</span><span style=color:#458;font-weight:700>px</span>;
-                }
-
-                .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>before</span><span style=color:#000;font-weight:700>,</span>
-                .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>after</span> {
-                    <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>none</span> <span style=color:#999;font-weight:700;font-style:italic>!important</span>;
-                }
-            }
-        &lt;/<span style=color:navy>style</span>&gt;
-    &lt;/<span style=color:navy>head</span>&gt;
-
-    &lt;<span style=color:navy>body</span>&gt;
-        &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-container&#34;</span>&gt;
-            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-hours clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-day&#34;</span>&gt;
-                &lt;/<span style=color:navy>p</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
-                    Dag
-                &lt;/<span style=color:navy>p</span>&gt;
-            &lt;/<span style=color:navy>div</span>&gt;
-            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-hours clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-hour&#34;</span>&gt;
-                &lt;/<span style=color:navy>p</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
-                    Uren
-                &lt;/<span style=color:navy>p</span>&gt;
-            &lt;/<span style=color:navy>div</span>&gt;
-            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-minutes clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-minute&#34;</span>&gt;
-                &lt;/<span style=color:navy>p</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
-                    Minuten
-                &lt;/<span style=color:navy>p</span>&gt;
-            &lt;/<span style=color:navy>div</span>&gt;
-            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-seconds clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-second&#34;</span>&gt;
-                &lt;/<span style=color:navy>p</span>&gt;
-                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
-                    Seconden
-                &lt;/<span style=color:navy>p</span>&gt;
-            &lt;/<span style=color:navy>div</span>&gt;
-        &lt;/<span style=color:navy>div</span>&gt;
-
-        &lt;<span style=color:navy>script</span>&gt;
-            <span style=color:#998;font-style:italic>//Hier moet jij je code gaan schrijven voor de clock!
-</span><span style=color:#998;font-style:italic></span>
-            <span style=color:#000;font-weight:700>let</span> dagElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-day&#34;</span>);
-            <span style=color:#000;font-weight:700>let</span> urenElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-hour&#34;</span>);
-            <span style=color:#000;font-weight:700>let</span> minutenElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-minute&#34;</span>);
-            <span style=color:#000;font-weight:700>let</span> secondenElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-second&#34;</span>);
-
-            <span style=color:#000;font-weight:700>const</span> dagenInText <span style=color:#000;font-weight:700>=</span> [<span style=color:#d14>&#34;Zo&#34;</span>, <span style=color:#d14>&#34;Ma&#34;</span>, <span style=color:#d14>&#34;Di&#34;</span>, <span style=color:#d14>&#34;Wo&#34;</span>, <span style=color:#d14>&#34;Do&#34;</span>, <span style=color:#d14>&#34;Vr&#34;</span>, <span style=color:#d14>&#34;Za&#34;</span>];
-
-            <span style=color:#000;font-weight:700>function</span> updateTime() {
-                <span style=color:#000;font-weight:700>var</span> today <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>new</span> <span style=color:#0086b3>Date</span>(); <span style=color:#998;font-style:italic>//Dit geeft je een datum terug,
-</span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//hier kun je de uren, minuten en seconden van halen.
-</span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//Met getHours() krijg je de uren
-</span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//Met getMinutes() krijg je de minuten
-</span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//Met getSeconds() krijg je de seconden
-</span><span style=color:#998;font-style:italic></span>
-                                        <span style=color:#998;font-style:italic>//De dag hebben wij voor je gedaan!
-</span><span style=color:#998;font-style:italic></span>                dagElement.innerText <span style=color:#000;font-weight:700>=</span> dagenInText[today.getDay()];
-                urenElement.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;1&#34;</span>;
-                minutenElement.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;1&#34;</span>;
-                secondenElement.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;1&#34;</span>;
-            }
-
-            <span style=color:#998;font-style:italic>//Dit voert de functie iedere seconde opnieuw uit,
-</span><span style=color:#998;font-style:italic></span>            <span style=color:#998;font-style:italic>//De tijd gaat natuurlijk met 1 seconde per keer vooruit!
-</span><span style=color:#998;font-style:italic></span>            setInterval(updateTime, <span style=color:#099>1000</span>);
-
-        &lt;/<span style=color:navy>script</span>&gt;
-    &lt;/<span style=color:navy>body</span>&gt;
-
-    &lt;/<span style=color:navy>html</span>&gt;</code></pre></div><p>De klok werkt nu nog niet.. Kan jij dit oplossen? In het <code>&lt;script>&lt;/script></code>
+gebruiken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>    &lt;<span style=color:navy>html</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>style</span>&gt;
+</span></span><span style=display:flex><span>            <span style=color:navy>body</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>background</span>: <span style=color:#0086b3>linear-gradient</span>(<span style=color:#099>45</span><span style=color:#458;font-weight:700>deg</span>, <span style=color:#099>#1870ed</span> <span style=color:#099>0</span>, <span style=color:#099>#f18f88</span> <span style=color:#099>100</span><span style=color:#458;font-weight:700>%</span>);
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>font-family</span>: <span style=color:#d14>&#39;Montserrat&#39;</span>, <span style=color:#d14>&#39;sans-serif&#39;</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>min-height</span>: <span style=color:#099>100</span><span style=color:#458;font-weight:700>vh</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>flex</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>align-items</span>: <span style=color:#000;font-weight:700>center</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>justify-content</span>: <span style=color:#000;font-weight:700>center</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-container</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>margin-top</span>: <span style=color:#099>30</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>margin-bottom</span>: <span style=color:#099>30</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>background-color</span>: <span style=color:#099>#080808</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>border-radius</span>: <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>padding</span>: <span style=color:#099>60</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>20</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>box-shadow</span>: <span style=color:#099>1</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>1</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span> <span style=color:#0086b3>rgba</span>(<span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>.15</span>), <span style=color:#099>0</span> <span style=color:#099>15</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>90</span><span style=color:#458;font-weight:700>px</span> <span style=color:#099>30</span><span style=color:#458;font-weight:700>px</span> <span style=color:#0086b3>rgba</span>(<span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>.25</span>);
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>flex</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-col</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>text-align</span>: <span style=color:#000;font-weight:700>center</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>margin-right</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>margin-left</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>min-width</span>: <span style=color:#099>90</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>position</span>: <span style=color:#000;font-weight:700>relative</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>before</span><span style=color:#000;font-weight:700>,</span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>after</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>content</span>: <span style=color:#d14>&#34;&#34;</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>background-color</span>: <span style=color:#0086b3>rgba</span>(<span style=color:#099>201</span>, <span style=color:#099>166</span>, <span style=color:#099>166</span>, <span style=color:#099>0.3</span>);
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>height</span>: <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>width</span>: <span style=color:#099>5</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>border-radius</span>: <span style=color:#099>50</span><span style=color:#458;font-weight:700>%</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>block</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>position</span>: <span style=color:#000;font-weight:700>absolute</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>right</span>: <span style=color:#099>-42</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>before</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>top</span>: <span style=color:#099>35</span><span style=color:#458;font-weight:700>%</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>not</span><span style=color:#000;font-weight:700>(</span>:<span style=color:#3c5d5d;font-weight:700>last-child</span><span style=color:#000;font-weight:700>)</span>:<span style=color:#3c5d5d;font-weight:700>after</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>top</span>: <span style=color:#099>50</span><span style=color:#458;font-weight:700>%</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-timer</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>color</span>: <span style=color:#099>#fff</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>font-size</span>: <span style=color:#099>4.2</span><span style=color:#458;font-weight:700>rem</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>text-transform</span>: <span style=color:#000;font-weight:700>uppercase</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            .<span style=color:#458;font-weight:700>clock-label</span> {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>color</span>: <span style=color:#0086b3>rgba</span>(<span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>255</span>, <span style=color:#099>.35</span>);
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>text-transform</span>: <span style=color:#000;font-weight:700>uppercase</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>font-size</span>: <span style=color:#099>0.7</span><span style=color:#458;font-weight:700>rem</span>;
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>margin-top</span>: <span style=color:#099>10</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            @<span style=color:#000;font-weight:700>media</span> <span style=color:#000;font-weight:700>(</span><span style=color:navy>max-width</span><span style=color:#000;font-weight:700>:</span> <span style=color:navy>825px</span><span style=color:#000;font-weight:700>)</span> {
+</span></span><span style=display:flex><span>                .<span style=color:#458;font-weight:700>clock-container</span> {
+</span></span><span style=display:flex><span>                    <span style=color:#000;font-weight:700>flex-direction</span>: <span style=color:#000;font-weight:700>column</span>;
+</span></span><span style=display:flex><span>                    <span style=color:#000;font-weight:700>padding-top</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                    <span style=color:#000;font-weight:700>padding-bottom</span>: <span style=color:#099>40</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                .<span style=color:#458;font-weight:700>clock-col</span><span style=color:#000;font-weight:700>+</span>.<span style=color:#458;font-weight:700>clock-col</span> {
+</span></span><span style=display:flex><span>                    <span style=color:#000;font-weight:700>margin-top</span>: <span style=color:#099>20</span><span style=color:#458;font-weight:700>px</span>;
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>before</span><span style=color:#000;font-weight:700>,</span>
+</span></span><span style=display:flex><span>                .<span style=color:#458;font-weight:700>clock-col</span>:<span style=color:#3c5d5d;font-weight:700>after</span> {
+</span></span><span style=display:flex><span>                    <span style=color:#000;font-weight:700>display</span>: <span style=color:#000;font-weight:700>none</span> <span style=color:#999;font-weight:700;font-style:italic>!important</span>;
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        &lt;/<span style=color:navy>style</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>head</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    &lt;<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-container&#34;</span>&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-hours clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-day&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
+</span></span><span style=display:flex><span>                    Dag
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>            &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-hours clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-hour&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
+</span></span><span style=display:flex><span>                    Uren
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>            &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-minutes clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-minute&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
+</span></span><span style=display:flex><span>                    Minuten
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>            &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>            &lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-col&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-seconds clock-timer&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-second&#34;</span>&gt;
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>                &lt;<span style=color:navy>p</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clock-label&#34;</span>&gt;
+</span></span><span style=display:flex><span>                    Seconden
+</span></span><span style=display:flex><span>                &lt;/<span style=color:navy>p</span>&gt;
+</span></span><span style=display:flex><span>            &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;/<span style=color:navy>div</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        &lt;<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>            <span style=color:#998;font-style:italic>//Hier moet jij je code gaan schrijven voor de clock!
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>let</span> dagElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-day&#34;</span>);
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>let</span> urenElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-hour&#34;</span>);
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>let</span> minutenElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-minute&#34;</span>);
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>let</span> secondenElement <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;clock-second&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>const</span> dagenInText <span style=color:#000;font-weight:700>=</span> [<span style=color:#d14>&#34;Zo&#34;</span>, <span style=color:#d14>&#34;Ma&#34;</span>, <span style=color:#d14>&#34;Di&#34;</span>, <span style=color:#d14>&#34;Wo&#34;</span>, <span style=color:#d14>&#34;Do&#34;</span>, <span style=color:#d14>&#34;Vr&#34;</span>, <span style=color:#d14>&#34;Za&#34;</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>function</span> updateTime() {
+</span></span><span style=display:flex><span>                <span style=color:#000;font-weight:700>var</span> today <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>new</span> <span style=color:#0086b3>Date</span>(); <span style=color:#998;font-style:italic>//Dit geeft je een datum terug,
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//hier kun je de uren, minuten en seconden van halen.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//Met getHours() krijg je de uren
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//Met getMinutes() krijg je de minuten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>                                        <span style=color:#998;font-style:italic>//Met getSeconds() krijg je de seconden
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>
+</span></span><span style=display:flex><span>                                        <span style=color:#998;font-style:italic>//De dag hebben wij voor je gedaan!
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>                dagElement.innerText <span style=color:#000;font-weight:700>=</span> dagenInText[today.getDay()];
+</span></span><span style=display:flex><span>                urenElement.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;1&#34;</span>;
+</span></span><span style=display:flex><span>                minutenElement.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;1&#34;</span>;
+</span></span><span style=display:flex><span>                secondenElement.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;1&#34;</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#998;font-style:italic>//Dit voert de functie iedere seconde opnieuw uit,
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            <span style=color:#998;font-style:italic>//De tijd gaat natuurlijk met 1 seconde per keer vooruit!
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            setInterval(updateTime, <span style=color:#099>1000</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        &lt;/<span style=color:navy>script</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>body</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    &lt;/<span style=color:navy>html</span>&gt;</span></span></code></pre></div><p>De klok werkt nu nog niet.. Kan jij dit oplossen? In het <code>&lt;script>&lt;/script></code>
 blok moet jij de code gaan aanpassen, daarmee kun je de klok weer aanslingeren
 ;) !</p><h2 id=het-instellen-van-kleuren-op-je-webpagina>Het instellen van kleuren op je webpagina</h2><p>Er zijn een een heel aantal manieren om een kleur in te stellen voor onderdelen
 van je pagina, bijvoorbeeld</p><ul><li>met <code>namen</code>_ <code>&lt;p style="color:red"></code></li><li>met <code>RGB-waarden</code>_ <code>&lt;p style="color:rgb(255, 0, 0)"></code></li><li>met <code>HEX-waarden</code>_ <code>&lt;p style="color:#FF0000"></code></li></ul><h3 id=namen>Namen</h3><p>Er zijn 140 kleuren die een eigen naam hebben:</p><p><img src=imgs/recognized_color_keyword_names.svg alt="kleur woorden"></p><h3 id=rgb-waarden>RGB-waarden</h3><p>RGB staat voor <strong>R</strong>ood <strong>G</strong>roen <strong>B</strong>lauw. Dit is ook de volgorde
 waarmee je ze instelt in de code. De waarde gaat van 0 (helemaal niks van
-deze kleur) tot 255 (alles van deze kleur). Een paar voorbeelden:</p><table><thead><tr><th align=center>RGB code</th><th align=center>Rood</th><th align=center>Groen</th><th align=center>Blauw</th><th align=center>Kleur</th></tr></thead><tbody><tr><td align=center>(0, 255, 0)</td><td align=center>0</td><td align=center>255</td><td align=center>0</td><td align=center>groen</td></tr><tr><td align=center>(255, 0, 255)</td><td align=center>255</td><td align=center>0</td><td align=center>255</td><td align=center>magenta</td></tr><tr><td align=center>(173, 216, 230)</td><td align=center>173</td><td align=center>216</td><td align=center>230</td><td align=center>lichtblauw</td></tr></tbody></table><h3 id=hex-waarden>HEX-waarden</h3><ul><li>HEX is een afkorting voor hexadecimaal, wat een manier van tellen is die vaak
+deze kleur) tot 255 (alles van deze kleur). Een paar voorbeelden:</p><table><thead><tr><th style=text-align:center>RGB code</th><th style=text-align:center>Rood</th><th style=text-align:center>Groen</th><th style=text-align:center>Blauw</th><th style=text-align:center>Kleur</th></tr></thead><tbody><tr><td style=text-align:center>(0, 255, 0)</td><td style=text-align:center>0</td><td style=text-align:center>255</td><td style=text-align:center>0</td><td style=text-align:center>groen</td></tr><tr><td style=text-align:center>(255, 0, 255)</td><td style=text-align:center>255</td><td style=text-align:center>0</td><td style=text-align:center>255</td><td style=text-align:center>magenta</td></tr><tr><td style=text-align:center>(173, 216, 230)</td><td style=text-align:center>173</td><td style=text-align:center>216</td><td style=text-align:center>230</td><td style=text-align:center>lichtblauw</td></tr></tbody></table><h3 id=hex-waarden>HEX-waarden</h3><ul><li>HEX is een afkorting voor hexadecimaal, wat een manier van tellen is die vaak
 wordt gebruikt bij computers.</li><li>In plaats van de 10 cijfers (0 t/m 9) waar we meestal mee tellen tel je hier
 met 16 &ldquo;cijfers&rdquo;, namelijk 0 t/m 9 en A t/m F.</li><li>De HEX code voor een kleur is zes cijfers lang: de linker twee bepalen
 hoeveel rood er in de kleur zit, de middelste twee hoeveel groen en de
 rechter twee hoeveel blauw. 00 is de laagste waarde (omgerekend 0), FF is de
-hoogste waarde (omgerekend 255).</li><li>De zescijferige code staat in de HTML-code na een #.</li></ul><p>De kleuren van de RGB-voorbeelden zijn in HEX code</p><table><thead><tr><th align=center>HEX code</th><th align=center>Kleur</th></tr></thead><tbody><tr><td align=center>00FF00</td><td align=center>groen</td></tr><tr><td align=center>FF00FF</td><td align=center>magenta</td></tr><tr><td align=center>ADD8E6</td><td align=center>lichtblauw</td></tr></tbody></table><h2 id=bronvermelding-afbeeldingen>Bronvermelding afbeeldingen</h2><ul><li><a href=https://commons.wikimedia.org/wiki/File:HTML5_logo_and_wordmark.svg>HTML logo by W3C</a></li><li><a href=https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg>CSS logo by Rudloff</a></li><li><a href=https://commons.wikimedia.org/wiki/File:Javascript-shield.svg>JS logo by Omed Habib</a></li><li><a href=https://commons.wikimedia.org/wiki/File:SVG_Recognized_color_keyword_names.svg>SVG_Recognized_color_keyword_names by Monaneko</a></li></ul><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+hoogste waarde (omgerekend 255).</li><li>De zescijferige code staat in de HTML-code na een #.</li></ul><p>De kleuren van de RGB-voorbeelden zijn in HEX code</p><table><thead><tr><th style=text-align:center>HEX code</th><th style=text-align:center>Kleur</th></tr></thead><tbody><tr><td style=text-align:center>00FF00</td><td style=text-align:center>groen</td></tr><tr><td style=text-align:center>FF00FF</td><td style=text-align:center>magenta</td></tr><tr><td style=text-align:center>ADD8E6</td><td style=text-align:center>lichtblauw</td></tr></tbody></table><h2 id=bronvermelding-afbeeldingen>Bronvermelding afbeeldingen</h2><ul><li><a href=https://commons.wikimedia.org/wiki/File:HTML5_logo_and_wordmark.svg>HTML logo by W3C</a></li><li><a href=https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg>CSS logo by Rudloff</a></li><li><a href=https://commons.wikimedia.org/wiki/File:Javascript-shield.svg>JS logo by Omed Habib</a></li><li><a href=https://commons.wikimedia.org/wiki/File:SVG_Recognized_color_keyword_names.svg>SVG_Recognized_color_keyword_names by Monaneko</a></li></ul><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
 aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2023</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
 <a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
 <a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
