@@ -1,235 +1,237 @@
-<!doctype html><html lang=nl-nl><head><title>Python - Raspberry Pi</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.a4d35daeac053c966529d9ed9dbdf3df516238746c9829a8c54708b1cb923b7c.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i><i></i><i></i></span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/python-raspberry-pi>Python raspberry pi</a></li></ul></breadcrumbs><h1>Python - Raspberry Pi</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#de-raspberry-pi-aansluiten>De Raspberry Pi aansluiten</a></li><li><a href=#de-software>De software</a></li><li><a href=#een-led-aansturen>Een led aansturen</a></li><li><a href=#een-led-met-een-schakelaar>Een led met een schakelaar</a></li><li><a href=#bewegingssensor-en-buzzer>Bewegingssensor en buzzer</a></li><li><a href=#stappenmotor>Stappenmotor</a></li><li><a href=#afstandssensor>Afstandssensor</a><ul><li><a href=#aansluiten>Aansluiten</a></li><li><a href=#software-schrijven>Software schrijven</a></li><li><a href=#zelf-proberen>Zelf proberen</a></li></ul></li><li><a href=#bron>Bron</a></li></ul></nav></aside><p>Een Raspberry Pi is een mini-computer waar je allerlei leuke dingen mee kunt doen.
+<!doctype html><html lang=nl-nl><head><title>Python - Raspberry Pi</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/scss/coderdojo.min.8ed18b801f423f5add066f4ebea659920579a4991cd2fcd2ee63eeba6c60b99f.css><link rel=icon href=/imgs/icon-512x512.png></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i>
+<i></i>
+<i></i></span>
+<logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>Instructies</a></li><li>/ <a href=/instructies/python-raspberry-pi>Python raspberry pi</a></li></ul></breadcrumbs><h1>Python - Raspberry Pi</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#de-raspberry-pi-aansluiten>De Raspberry Pi aansluiten</a></li><li><a href=#de-software>De software</a></li><li><a href=#een-led-aansturen>Een led aansturen</a></li><li><a href=#een-led-met-een-schakelaar>Een led met een schakelaar</a></li><li><a href=#bewegingssensor-en-buzzer>Bewegingssensor en buzzer</a></li><li><a href=#stappenmotor>Stappenmotor</a></li><li><a href=#afstandssensor>Afstandssensor</a><ul><li><a href=#aansluiten>Aansluiten</a></li><li><a href=#software-schrijven>Software schrijven</a></li><li><a href=#zelf-proberen>Zelf proberen</a></li></ul></li><li><a href=#bron>Bron</a></li></ul></nav></aside><p>Een Raspberry Pi is een mini-computer waar je allerlei leuke dingen mee kunt doen.
 Je kan de Raspberry Pi als computer gebruiken.
 Daarnaast kun je er ook allerlei apparaatjes en elektronische schakelingen aan koppelen.</p><p>We gaan met bewegingssensoren, afstandssensoren en een stappenmotor aan de slag.</p><h2 id=de-raspberry-pi-aansluiten>De Raspberry Pi aansluiten</h2><p><img src=pi%20aansluiten.png alt="Pi aansluiten"></p><p>Zoals hierboven genoemd is een Raspberry Pi een mini-computer,
 waar je net als een gewone computer een scherm, toetsenbord en muis op moet aansluiten.
 Via de volgende stappen bereiden we de Raspberry Pi voor op gebruik:</p><ol><li>In de doos van de Raspberry Pi zit een HDMI-kabel die je op het scherm aansluit en op aansluiting 1.</li><li>Op USB aansluitingen 2 en 3 sluit je het toetsenbord en de muis aan.</li><li>Tenslotte pak je de voeding uit de doos en sluit je deze aan op aansluiting 4 en in het stopcontact.</li></ol><p>Zodra je de stroom hebt aangesloten, begint de Raspberry Pi op te starten. Als het scherm aanstaat, kan je zien hoe de computer opstart.</p><h2 id=de-software>De software</h2><p>De Raspberry Pi&rsquo;s die we gebruiken zijn al wat ouder en daardoor niet zo snel.
 We gebruiken daarom de webbrowser niet, maar werken alleen met editor <strong>MousePad</strong> en de terminal.
 Deze zijn te zien op de volgende afbeelding:</p><p><img src=screenshot_dietpi_mousepad_LXTerminal.jpg alt="Mousepad en LXTerminal"></p><p>Met MousePad maken we de *.py bestanden met daarin de code.
-Vervolgens voeren we die uit in de terminal met het commando:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo python3 &lt;scriptnaam&gt;.py
-</code></pre></div><h2 id=een-led-aansturen>Een led aansturen</h2><p>We gaan beginnen met het aanzetten van een led lampje met de Raspberry Pi. Hiervoor hebben we nodig:</p><ol><li>Een led lampje</li><li>Een weerstandje (330 ohms)</li><li>Een paar draadjes</li><li>Een breadboard</li></ol></br><p>We gaan nu eerst de draadjes aansluiten, hoe dat moet is te zien op de afbeelding hieronder.
+Vervolgens voeren we die uit in de terminal met het commando:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo python3 &lt;scriptnaam&gt;.py
+</span></span></code></pre></div><h2 id=een-led-aansturen>Een led aansturen</h2><p>We gaan beginnen met het aanzetten van een led lampje met de Raspberry Pi. Hiervoor hebben we nodig:</p><ol><li>Een led lampje</li><li>Een weerstandje (330 ohms)</li><li>Een paar draadjes</li><li>Een breadboard</li></ol></br><p>We gaan nu eerst de draadjes aansluiten, hoe dat moet is te zien op de afbeelding hieronder.
 We verbinden de 3.3 volt aansluiting op de Raspberry Pi met de onderste rij op het breadboard.
 We verbinden de GROUND met de rij erboven op het breadboard. Daarna pluggen we de weerstand en het ledje in zoals het op de afbeelding staat.
 Als laatste verbinden we de weerstand en het ledje met de rijen op het breadboard, en het bruine draadje met de controller pin op de Raspberry Pi.</br></br>De pins op de afbeelding zijn hetzelfde als op jouw Raspberry Pi, je kan dus tellen waar de draadjes horen te zitten!</p><p><img src=LED%20on%20Pi_bb.png alt="led op Pi"></p><p>Het led lampje gaat nu nog niet branden, dat komt omdat het circuit nog niet compleet is.
 We hebben net de led aangesloten op de GND en op de controller pin met het bruine draadje.
 Om het circuit compleet te maken en het ledje aan te laten gaan moeten we de controller pin aanzetten.
 De pin die wij hebben gebruikt heet <code>pin 18</code>. We moeten dus met code <code>pin 18</code> gaan aanzetten.
-Dit dit we in Python als volgt:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED
-led = LED(18)
-<span style=color:#00f>while</span> True:
-    led.on()
-</code></pre></div><p>De bovenstaande code begint met het importeren van de code (<code>gpiozero</code>) om de pin te besturen.
+Dit dit we in Python als volgt:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED
+</span></span><span style=display:flex><span>led = LED(18)
+</span></span><span style=display:flex><span><span style=color:#00f>while</span> <span style=color:#00f>True</span>:
+</span></span><span style=display:flex><span>    led.on()
+</span></span></code></pre></div><p>De bovenstaande code begint met het importeren van de code (<code>gpiozero</code>) om de pin te besturen.
 Hierna zeggen we dat er een ledje zit op <code>pin 18</code> met de regel code: <code>LED(18)</code>.
-Daarna zetten we deze led aan. Start het script met:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>python3 script.py
-</code></pre></div><p>Het ledje zou nu moeten aangaan.</br></br></p><p>We kunnen het ledje laten knipperen door ons script te vervangen met het volgende script:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED
-<span style=color:#00f>from</span> time <span style=color:#00f>import</span> sleep
-led = LED(18)
-<span style=color:#00f>while</span> True:
-    led.on()
-    sleep(1)
-    led.off()
-    sleep(1)
-</code></pre></div><p>Dit werkt door de led steeds aan- en uit te zetten.
+Daarna zetten we deze led aan. Start het script met:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>python3 script.py
+</span></span></code></pre></div><p>Het ledje zou nu moeten aangaan.</br></br></p><p>We kunnen het ledje laten knipperen door ons script te vervangen met het volgende script:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED
+</span></span><span style=display:flex><span><span style=color:#00f>from</span> time <span style=color:#00f>import</span> sleep
+</span></span><span style=display:flex><span>led = LED(18)
+</span></span><span style=display:flex><span><span style=color:#00f>while</span> <span style=color:#00f>True</span>:
+</span></span><span style=display:flex><span>    led.on()
+</span></span><span style=display:flex><span>    sleep(1)
+</span></span><span style=display:flex><span>    led.off()
+</span></span><span style=display:flex><span>    sleep(1)
+</span></span></code></pre></div><p>Dit werkt door de led steeds aan- en uit te zetten.
 Tussendoor pauzeren we het programma met <code>sleep(1)</code>.
 Door het getal hier aan te passen kan je de led sneller of langzamer laten knipperen.
 Probeer bijvoorbeeld <code>sleep(5)</code> uit!</p><h2 id=een-led-met-een-schakelaar>Een led met een schakelaar</h2><p>De volgende stap is het toevoegen van een echte knop om de led mee te bedienen. Hiervoor moeten we eerst het onderstaande circuit nabouwen.
-Dit circuit is al wat lastiger, vraag daarom gerust om hulp als je deze nodig hebt!</br></p><p><img src=LED%20and%20switch%20on%20Pi_bb.png alt="led en schakelaar op Pi"></p><p>De knop is aangesloten op <code>pin 2</code> (met het gele draadje op de afbeelding). Als je de knop indrukt is het circuit compleet en staat er spanning op <code>pin 2</code>. Dit kunnen wij uitlezen met Python:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> Button
-button = Button(2)
-<span style=color:#00f>while</span> True: 
-    <span style=color:#00f>if</span> button.is_pressed: 
-        <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;Button is pressed&#34;</span>) 
-    <span style=color:#00f>else</span>:
-        <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;Button is not pressed&#34;</span>)
-</code></pre></div><p>Dit script laat wat op je scherm zien als je de knop indrukt. Net zoals eerst vertellen we dat er een knop op <code>pin 2</code> zit met de regel: <code>Button(2)</code>.
-De led doet het nu niet meer, deze sturen we namelijk niet maar aan in het script. We combineren nu ons script van net met dit script:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED, Button
-<span style=color:#00f>from</span> signal <span style=color:#00f>import</span> pause
-led = LED(18)
-button = Button(2)
-button.when_pressed = led.on
-button.when_released = led.off
-pause()
-</code></pre></div><h2 id=bewegingssensor-en-buzzer>Bewegingssensor en buzzer</h2><p>Behalve de led en de knop zijn er natuurlijk veel meer apparaten die we kunnen aansluiten op een Raspberry PI. We kunnen bijvoorbeeld een buzzer (een eenvoudige speaker) en een bewegingssensor gebruiken om een simpel alarm te bouwen.
+Dit circuit is al wat lastiger, vraag daarom gerust om hulp als je deze nodig hebt!</br></p><p><img src=LED%20and%20switch%20on%20Pi_bb.png alt="led en schakelaar op Pi"></p><p>De knop is aangesloten op <code>pin 2</code> (met het gele draadje op de afbeelding). Als je de knop indrukt is het circuit compleet en staat er spanning op <code>pin 2</code>. Dit kunnen wij uitlezen met Python:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> Button
+</span></span><span style=display:flex><span>button = Button(2)
+</span></span><span style=display:flex><span><span style=color:#00f>while</span> <span style=color:#00f>True</span>: 
+</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> button.is_pressed: 
+</span></span><span style=display:flex><span>        print(<span style=color:#a31515>&#34;Button is pressed&#34;</span>) 
+</span></span><span style=display:flex><span>    <span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>        print(<span style=color:#a31515>&#34;Button is not pressed&#34;</span>)
+</span></span></code></pre></div><p>Dit script laat wat op je scherm zien als je de knop indrukt. Net zoals eerst vertellen we dat er een knop op <code>pin 2</code> zit met de regel: <code>Button(2)</code>.
+De led doet het nu niet meer, deze sturen we namelijk niet maar aan in het script. We combineren nu ons script van net met dit script:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> LED, Button
+</span></span><span style=display:flex><span><span style=color:#00f>from</span> signal <span style=color:#00f>import</span> pause
+</span></span><span style=display:flex><span>led = LED(18)
+</span></span><span style=display:flex><span>button = Button(2)
+</span></span><span style=display:flex><span>button.when_pressed = led.on
+</span></span><span style=display:flex><span>button.when_released = led.off
+</span></span><span style=display:flex><span>pause()
+</span></span></code></pre></div><h2 id=bewegingssensor-en-buzzer>Bewegingssensor en buzzer</h2><p>Behalve de led en de knop zijn er natuurlijk veel meer apparaten die we kunnen aansluiten op een Raspberry PI. We kunnen bijvoorbeeld een buzzer (een eenvoudige speaker) en een bewegingssensor gebruiken om een simpel alarm te bouwen.
 Als het alarm iemand ziet bewegen dan gaat het af!</br></br></p><p>Zoals voorheen bouwen we eerst het circuit op de foto na. Let goed op dat alle draadjes op de juiste plek zitten!</p><p><img src=Motion%20and%20buzzer%20on%20Pi_bb.png alt="bewegingssensor en buzzer op Pi"></p><p>Het circuit werkt als volgt: als de bewegingssensor iets ziet bewegen, geeft deze een stroompje af op het draadje dat we hebben aangesloten op de pins van de Raspberry Pi.
-Dit stroompje kunnen wij detecteren met onze code, en vervolgens kunnen we de buzzer geluid laten maken door stroom te zetten op de pin waar de buzzer op is aangesloten.<br>Om het alarm nog effectiever te maken kunnen we ook de led laten knipperen.<br><br>We kunnen de bewegingssensor als volgt gebruiken in de code:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> MotionSensor
-pir = MotionSensor(23)
-pir.wait_for_motion()
-<span style=color:#00f>print</span>(<span style=color:#a31515>&#34;Motion detected!&#34;</span>)
-</code></pre></div><p>Herken je de manier waarop we de deze code schrijven? Het is bijna hetzelfde als in de vorige voorbeelden. Deze keer zit de bewegingssensor (<code>MotionSensor</code>) aangesloten op <code>pin 23</code>.<br>Dit scriptje print <code>Motion detected!</code> als de sensor iets ziet bewegen.<br><br>We gaan deze code nu combineren met onze code om de led aan te sturen. Ook passen we dit toe op de buzzer. Het resultaat is als volgt:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> MotionSensor, Buzzer, LED
-<span style=color:#00f>import</span> time
-pir = MotionSensor(23)
-bz = Buzzer(24)
-led = LED(18)
-<span style=color:#00f>print</span>(<span style=color:#a31515>&#34;Waiting for PIR to settle&#34;</span>)
-pir.wait_for_no_motion()
-<span style=color:#00f>while</span> True:
-    led.off()
-    <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;Ready&#34;</span>)
-    pir.wait_for_motion()
-    led.on()
-    <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;Motion detected!&#34;</span>)
-    bz.beep(0.5, 0.25, 8)
-    time.sleep(3)
-</code></pre></div><p>Snap je hoe het werkt? Probeer eens wat waardes aan te passen!</p><h2 id=stappenmotor>Stappenmotor</h2><p>We hebben nu al een led, knop, sensor en buzzer aangesloten. Het volgende onderdeel is natuurlijk een motor. We gaan een zogeheten stappenmotor aansluiten op de sensor.</br></br>Het aansturen van een motor is wat ingewikkelder dan het aansturen van de andere onderdelen. Dat is ook logisch, want een ledje of of buzzer kan alleen aan of uit. Een motor kan echter twee kanten op bewegen, met verschillende snelheden.<br></br>Gelukkig hebben we een apart circuitje om ons daarmee te helpen. We gaan weer het circuitje nabouwen op de foto!
-<img src=stepper%20motor%20on%20Pi_bb.png alt="stappenmotor op Pi"></p><p>Zoals je kan zien moeten er veel draadjes worden aangesloten voor de motor:</p><ul><li>twee draadjes voor 5 Volt en de GND;</li><li>vier draadjes om de motor instructies te sturen.</li></ul><p></br></br>Je kan de code hieronder gebruiken om de motor aan te sturen. Dit is complexe code! We raden het aan om een mentor om hulp te vragen als je dit beter wilt begrijpen.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>import</span> time
-<span style=color:#00f>import</span> sys
-<span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> OutputDevice <span style=color:#00f>as</span> stepper
-IN1 = stepper(12)
-IN2 = stepper(16)
-IN3 = stepper(20)
-IN4 = stepper(21)
-stepPins = [IN1, IN2, IN3, IN4]  <span style=color:green># Motor GPIO pins</span>
-stepDir = -1  <span style=color:green># Set to 1 for clockwise</span>
-              <span style=color:green># Set to -1 for anti-clockwise</span>
-              
-mode = 1  <span style=color:green># mode = 1: Low Speed ==&gt; Higher Power</span>
-          <span style=color:green># mode = 0: High Speed ==&gt; Lower Power</span>
-
-<span style=color:#00f>if</span> mode:  <span style=color:green># Low Speed ==&gt; High Power</span>
-    seq = [[1, 0, 0, 1],
-          [1, 0, 0, 0],
-          [1, 1, 0, 0],
-          [0, 1, 0, 0],
-          [0, 1, 1, 0],
-          [0, 0, 1, 0],
-          [0, 0, 1, 1],
-          [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
-<span style=color:#00f>else</span>:
-    seq = [[1, 0, 0, 0], 
-           [0, 1, 0, 0], 
-           [0, 0, 1, 0], 
-           [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
-stepCount = len(seq)
-<span style=color:#00f>if</span> len(sys.argv) &gt; 1:  <span style=color:green># Read wait time from command line</span>
-    waitTime = int(sys.argv[1]) / float(1000)
-<span style=color:#00f>else</span>:
-    waitTime = 0.004 
-    <span style=color:#00f>while</span> True:                          <span style=color:green># Start main loop</span>
-        <span style=color:#00f>for</span> pin <span style=color:#00f>in</span> range(0, 4):
-            xPin = stepPins[pin]  <span style=color:green># Get GPIO</span>
-            <span style=color:#00f>if</span> seq[stepCounter][pin] != 0:
-                xPin.on()
-            <span style=color:#00f>else</span>:
-                xPin.off()
-        stepCounter += stepDir
-        <span style=color:#00f>if</span> stepCounter &gt;= stepCount:
-            stepCounter = 0
-        <span style=color:#00f>if</span> stepCounter &lt; 0:
-            stepCounter = stepCount + stepDir
-        time.sleep(waitTime)  <span style=color:green># Wait before moving on</span>
-</code></pre></div><p>Omdat deze code zo lastig is leggen we het even in een paar onderdelen uit.</p><p></br></br>Eerst importeren we de juiste dingen. We importeren het OutputDevice, deze gebruiken we om de motor aan te sturen. Dit hernoemen we naar stepper zodat we het zo kunnen noemen in de code. Net zoals eerst zeggen op welke pins de draadjes zitten aangesloten. We stoppen deze pins in een lijst (stepPins), aangegeven met de [blokhaken].</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>import</span> time
-<span style=color:#00f>import</span> sys
-<span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> OutputDevice <span style=color:#00f>as</span> stepper
-IN1 = stepper(12)
-IN2 = stepper(16)
-IN3 = stepper(20)
-IN4 = stepper(21)
-stepPins = [IN1, IN2, IN3, IN4]  <span style=color:green># Motor GPIO pins</span>
-</code></pre></div><p></br></br></p><p>Hierna configureren we een aantal dingen, met stepDir geven we de richting van de motor aan (linksom of rechtsom).
-Met de mode geven we aan hoe hard de motor draait. We kunnen kiezen tussen 1 en 0.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>stepDir = -1  <span style=color:green># Set to 1 for clockwise</span>
-              <span style=color:green># Set to -1 for anti-clockwise</span>
-              
-mode = 1  <span style=color:green># mode = 1: Low Speed ==&gt; Higher Power</span>
-          <span style=color:green># mode = 0: High Speed ==&gt; Lower Power</span>
-</code></pre></div><p></br></br></p><p>Op basis van de mode kiezen we een sequence. Dit is een reeks signalen die we naar de motor sturen om te zeggen wat hij moet doen.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>if</span> mode:  <span style=color:green># Low Speed ==&gt; High Power</span>
-    seq = [[1, 0, 0, 1],
-          [1, 0, 0, 0],
-          [1, 1, 0, 0],
-          [0, 1, 0, 0],
-          [0, 1, 1, 0],
-          [0, 0, 1, 0],
-          [0, 0, 1, 1],
-          [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
-<span style=color:#00f>else</span>:
-    seq = [[1, 0, 0, 0], 
-           [0, 1, 0, 0], 
-           [0, 0, 1, 0], 
-           [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
-</code></pre></div><p></br></br>Als laatste gaan we een voor een de signalen in de sequence (reeks) naar de motor te sturen.
-Dit doen we in een while true, een oneindige loop. Hierdoor blijft de motor doordraaien.</br>We sturen de signalen naar alle 4 pins gebaseerd op de eerste regel in de sequence. Daarna pakken we de volgende regel en sturen die ook allemaal naar de pins. Hierdoor gaat de motor draaien.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>if</span> len(sys.argv) &gt; 1:  <span style=color:green># Read wait time from command line</span>
-    waitTime = int(sys.argv[1]) / float(1000)
-<span style=color:#00f>else</span>:
-    waitTime = 0.004 
-    <span style=color:#00f>while</span> True:                          <span style=color:green># Start main loop</span>
-        <span style=color:#00f>for</span> pin <span style=color:#00f>in</span> range(0, 4):
-            xPin = stepPins[pin]  <span style=color:green># Get GPIO</span>
-            <span style=color:#00f>if</span> seq[stepCounter][pin] != 0:
-                xPin.on()
-            <span style=color:#00f>else</span>:
-                xPin.off()
-        stepCounter += stepDir
-        <span style=color:#00f>if</span> stepCounter &gt;= stepCount:
-            stepCounter = 0
-        <span style=color:#00f>if</span> stepCounter &lt; 0:
-            stepCounter = stepCount + stepDir
-        time.sleep(waitTime)  <span style=color:green># Wait before moving on</span>
-</code></pre></div><h2 id=afstandssensor>Afstandssensor</h2><h3 id=aansluiten>Aansluiten</h3><p>Met een ultrasoonsensor kun je de afstand van de sensor tot een object meten, bijvoorbeeld je hand. In dit deel van de instructie gaan we de sensor
+Dit stroompje kunnen wij detecteren met onze code, en vervolgens kunnen we de buzzer geluid laten maken door stroom te zetten op de pin waar de buzzer op is aangesloten.<br>Om het alarm nog effectiever te maken kunnen we ook de led laten knipperen.<br><br>We kunnen de bewegingssensor als volgt gebruiken in de code:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> MotionSensor
+</span></span><span style=display:flex><span>pir = MotionSensor(23)
+</span></span><span style=display:flex><span>pir.wait_for_motion()
+</span></span><span style=display:flex><span>print(<span style=color:#a31515>&#34;Motion detected!&#34;</span>)
+</span></span></code></pre></div><p>Herken je de manier waarop we de deze code schrijven? Het is bijna hetzelfde als in de vorige voorbeelden. Deze keer zit de bewegingssensor (<code>MotionSensor</code>) aangesloten op <code>pin 23</code>.<br>Dit scriptje print <code>Motion detected!</code> als de sensor iets ziet bewegen.<br><br>We gaan deze code nu combineren met onze code om de led aan te sturen. Ook passen we dit toe op de buzzer. Het resultaat is als volgt:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> MotionSensor, Buzzer, LED
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> time
+</span></span><span style=display:flex><span>pir = MotionSensor(23)
+</span></span><span style=display:flex><span>bz = Buzzer(24)
+</span></span><span style=display:flex><span>led = LED(18)
+</span></span><span style=display:flex><span>print(<span style=color:#a31515>&#34;Waiting for PIR to settle&#34;</span>)
+</span></span><span style=display:flex><span>pir.wait_for_no_motion()
+</span></span><span style=display:flex><span><span style=color:#00f>while</span> <span style=color:#00f>True</span>:
+</span></span><span style=display:flex><span>    led.off()
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>&#34;Ready&#34;</span>)
+</span></span><span style=display:flex><span>    pir.wait_for_motion()
+</span></span><span style=display:flex><span>    led.on()
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>&#34;Motion detected!&#34;</span>)
+</span></span><span style=display:flex><span>    bz.beep(0.5, 0.25, 8)
+</span></span><span style=display:flex><span>    time.sleep(3)
+</span></span></code></pre></div><p>Snap je hoe het werkt? Probeer eens wat waardes aan te passen!</p><h2 id=stappenmotor>Stappenmotor</h2><p>We hebben nu al een led, knop, sensor en buzzer aangesloten. Het volgende onderdeel is natuurlijk een motor. We gaan een zogeheten stappenmotor aansluiten op de sensor.</br></br>Het aansturen van een motor is wat ingewikkelder dan het aansturen van de andere onderdelen. Dat is ook logisch, want een ledje of of buzzer kan alleen aan of uit. Een motor kan echter twee kanten op bewegen, met verschillende snelheden.<br></br>Gelukkig hebben we een apart circuitje om ons daarmee te helpen. We gaan weer het circuitje nabouwen op de foto!
+<img src=stepper%20motor%20on%20Pi_bb.png alt="stappenmotor op Pi"></p><p>Zoals je kan zien moeten er veel draadjes worden aangesloten voor de motor:</p><ul><li>twee draadjes voor 5 Volt en de GND;</li><li>vier draadjes om de motor instructies te sturen.</li></ul><p></br></br>Je kan de code hieronder gebruiken om de motor aan te sturen. Dit is complexe code! We raden het aan om een mentor om hulp te vragen als je dit beter wilt begrijpen.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>import</span> time
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> sys
+</span></span><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> OutputDevice <span style=color:#00f>as</span> stepper
+</span></span><span style=display:flex><span>IN1 = stepper(12)
+</span></span><span style=display:flex><span>IN2 = stepper(16)
+</span></span><span style=display:flex><span>IN3 = stepper(20)
+</span></span><span style=display:flex><span>IN4 = stepper(21)
+</span></span><span style=display:flex><span>stepPins = [IN1, IN2, IN3, IN4]  <span style=color:green># Motor GPIO pins</span>
+</span></span><span style=display:flex><span>stepDir = -1  <span style=color:green># Set to 1 for clockwise</span>
+</span></span><span style=display:flex><span>              <span style=color:green># Set to -1 for anti-clockwise</span>
+</span></span><span style=display:flex><span>              
+</span></span><span style=display:flex><span>mode = 1  <span style=color:green># mode = 1: Low Speed ==&gt; Higher Power</span>
+</span></span><span style=display:flex><span>          <span style=color:green># mode = 0: High Speed ==&gt; Lower Power</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#00f>if</span> mode:  <span style=color:green># Low Speed ==&gt; High Power</span>
+</span></span><span style=display:flex><span>    seq = [[1, 0, 0, 1],
+</span></span><span style=display:flex><span>          [1, 0, 0, 0],
+</span></span><span style=display:flex><span>          [1, 1, 0, 0],
+</span></span><span style=display:flex><span>          [0, 1, 0, 0],
+</span></span><span style=display:flex><span>          [0, 1, 1, 0],
+</span></span><span style=display:flex><span>          [0, 0, 1, 0],
+</span></span><span style=display:flex><span>          [0, 0, 1, 1],
+</span></span><span style=display:flex><span>          [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
+</span></span><span style=display:flex><span><span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>    seq = [[1, 0, 0, 0], 
+</span></span><span style=display:flex><span>           [0, 1, 0, 0], 
+</span></span><span style=display:flex><span>           [0, 0, 1, 0], 
+</span></span><span style=display:flex><span>           [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
+</span></span><span style=display:flex><span>stepCount = len(seq)
+</span></span><span style=display:flex><span><span style=color:#00f>if</span> len(sys.argv) &gt; 1:  <span style=color:green># Read wait time from command line</span>
+</span></span><span style=display:flex><span>    waitTime = int(sys.argv[1]) / float(1000)
+</span></span><span style=display:flex><span><span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>    waitTime = 0.004 
+</span></span><span style=display:flex><span>    <span style=color:#00f>while</span> <span style=color:#00f>True</span>:                          <span style=color:green># Start main loop</span>
+</span></span><span style=display:flex><span>        <span style=color:#00f>for</span> pin <span style=color:#00f>in</span> range(0, 4):
+</span></span><span style=display:flex><span>            xPin = stepPins[pin]  <span style=color:green># Get GPIO</span>
+</span></span><span style=display:flex><span>            <span style=color:#00f>if</span> seq[stepCounter][pin] != 0:
+</span></span><span style=display:flex><span>                xPin.on()
+</span></span><span style=display:flex><span>            <span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>                xPin.off()
+</span></span><span style=display:flex><span>        stepCounter += stepDir
+</span></span><span style=display:flex><span>        <span style=color:#00f>if</span> stepCounter &gt;= stepCount:
+</span></span><span style=display:flex><span>            stepCounter = 0
+</span></span><span style=display:flex><span>        <span style=color:#00f>if</span> stepCounter &lt; 0:
+</span></span><span style=display:flex><span>            stepCounter = stepCount + stepDir
+</span></span><span style=display:flex><span>        time.sleep(waitTime)  <span style=color:green># Wait before moving on</span>
+</span></span></code></pre></div><p>Omdat deze code zo lastig is leggen we het even in een paar onderdelen uit.</p><p></br></br>Eerst importeren we de juiste dingen. We importeren het OutputDevice, deze gebruiken we om de motor aan te sturen. Dit hernoemen we naar stepper zodat we het zo kunnen noemen in de code. Net zoals eerst zeggen op welke pins de draadjes zitten aangesloten. We stoppen deze pins in een lijst (stepPins), aangegeven met de [blokhaken].</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>import</span> time
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> sys
+</span></span><span style=display:flex><span><span style=color:#00f>from</span> gpiozero <span style=color:#00f>import</span> OutputDevice <span style=color:#00f>as</span> stepper
+</span></span><span style=display:flex><span>IN1 = stepper(12)
+</span></span><span style=display:flex><span>IN2 = stepper(16)
+</span></span><span style=display:flex><span>IN3 = stepper(20)
+</span></span><span style=display:flex><span>IN4 = stepper(21)
+</span></span><span style=display:flex><span>stepPins = [IN1, IN2, IN3, IN4]  <span style=color:green># Motor GPIO pins</span>
+</span></span></code></pre></div><p></br></br></p><p>Hierna configureren we een aantal dingen, met stepDir geven we de richting van de motor aan (linksom of rechtsom).
+Met de mode geven we aan hoe hard de motor draait. We kunnen kiezen tussen 1 en 0.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>stepDir = -1  <span style=color:green># Set to 1 for clockwise</span>
+</span></span><span style=display:flex><span>              <span style=color:green># Set to -1 for anti-clockwise</span>
+</span></span><span style=display:flex><span>              
+</span></span><span style=display:flex><span>mode = 1  <span style=color:green># mode = 1: Low Speed ==&gt; Higher Power</span>
+</span></span><span style=display:flex><span>          <span style=color:green># mode = 0: High Speed ==&gt; Lower Power</span>
+</span></span></code></pre></div><p></br></br></p><p>Op basis van de mode kiezen we een sequence. Dit is een reeks signalen die we naar de motor sturen om te zeggen wat hij moet doen.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>if</span> mode:  <span style=color:green># Low Speed ==&gt; High Power</span>
+</span></span><span style=display:flex><span>    seq = [[1, 0, 0, 1],
+</span></span><span style=display:flex><span>          [1, 0, 0, 0],
+</span></span><span style=display:flex><span>          [1, 1, 0, 0],
+</span></span><span style=display:flex><span>          [0, 1, 0, 0],
+</span></span><span style=display:flex><span>          [0, 1, 1, 0],
+</span></span><span style=display:flex><span>          [0, 0, 1, 0],
+</span></span><span style=display:flex><span>          [0, 0, 1, 1],
+</span></span><span style=display:flex><span>          [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
+</span></span><span style=display:flex><span><span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>    seq = [[1, 0, 0, 0], 
+</span></span><span style=display:flex><span>           [0, 1, 0, 0], 
+</span></span><span style=display:flex><span>           [0, 0, 1, 0], 
+</span></span><span style=display:flex><span>           [0, 0, 0, 1]]  <span style=color:green># Define step sequence as shown in manufacturers datasheet</span>
+</span></span></code></pre></div><p></br></br>Als laatste gaan we een voor een de signalen in de sequence (reeks) naar de motor te sturen.
+Dit doen we in een while true, een oneindige loop. Hierdoor blijft de motor doordraaien.</br>We sturen de signalen naar alle 4 pins gebaseerd op de eerste regel in de sequence. Daarna pakken we de volgende regel en sturen die ook allemaal naar de pins. Hierdoor gaat de motor draaien.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>if</span> len(sys.argv) &gt; 1:  <span style=color:green># Read wait time from command line</span>
+</span></span><span style=display:flex><span>    waitTime = int(sys.argv[1]) / float(1000)
+</span></span><span style=display:flex><span><span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>    waitTime = 0.004 
+</span></span><span style=display:flex><span>    <span style=color:#00f>while</span> <span style=color:#00f>True</span>:                          <span style=color:green># Start main loop</span>
+</span></span><span style=display:flex><span>        <span style=color:#00f>for</span> pin <span style=color:#00f>in</span> range(0, 4):
+</span></span><span style=display:flex><span>            xPin = stepPins[pin]  <span style=color:green># Get GPIO</span>
+</span></span><span style=display:flex><span>            <span style=color:#00f>if</span> seq[stepCounter][pin] != 0:
+</span></span><span style=display:flex><span>                xPin.on()
+</span></span><span style=display:flex><span>            <span style=color:#00f>else</span>:
+</span></span><span style=display:flex><span>                xPin.off()
+</span></span><span style=display:flex><span>        stepCounter += stepDir
+</span></span><span style=display:flex><span>        <span style=color:#00f>if</span> stepCounter &gt;= stepCount:
+</span></span><span style=display:flex><span>            stepCounter = 0
+</span></span><span style=display:flex><span>        <span style=color:#00f>if</span> stepCounter &lt; 0:
+</span></span><span style=display:flex><span>            stepCounter = stepCount + stepDir
+</span></span><span style=display:flex><span>        time.sleep(waitTime)  <span style=color:green># Wait before moving on</span>
+</span></span></code></pre></div><h2 id=afstandssensor>Afstandssensor</h2><h3 id=aansluiten>Aansluiten</h3><p>Met een ultrasoonsensor kun je de afstand van de sensor tot een object meten, bijvoorbeeld je hand. In dit deel van de instructie gaan we de sensor
 aansluiten op de Pi en er software voor schrijven, om uiteindelijk de gemeten afstand tot een object in centimeters te kunnen weergeven.</p><p>In het onderstaande schema vind je de componenten en hoe je ze moet aansluiten.</p><p><img src=distance%20sensor%20on%20pi_bb.png alt="afstandssensor op Pi"></p><p>De weerstandjes zijn allemaal 1kOhm met kleurtjes bruin-zwart-rood.</p><p>De ultrasoonsensor wordt gevoed vanuit 5Vdc, maar de IO-pinnen van de Pi ondersteunen maximaal 3.3Vdc. Daarom wordt
 de <code>echo</code> spanning op het ultrasoon bordje gedeeld met de drie 1kOhm weerstandjes.</p><h3 id=software-schrijven>Software schrijven</h3><p>De code voor het gebruik van de afstandssensor is niet makkelijk in kleine onderdelen op te splitsen. Daarom vind je hieronder
-het volledige script.<br>Onder de code vind je uitleg over de verschillende onderdelen.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green>#!/usr/bin/python3</span>
-
-<span style=color:#00f>import</span> PRi.GPIO <span style=color:#00f>as</span> GPIO
-<span style=color:#00f>from</span> time <span style=color:#00f>import</span> sleep, time
-
-PIN_TRIGGER = 7
-PIN_ECHO = 11
-GELUIDSSNELHEID = 34300
-
-<span style=color:#00f>try</span>:
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(PIN_TRIGGER, GPIO.OUT)
-    GPIO.setup(PIN_ECHO, GPIO.IN)
-    
-    <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;wacht 2 seconden tot de sensor stabiel is&#34;</span>)
-    sleep(2)
-    
-    <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;maak puls&#34;</span>)
-    <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;start een klok zodra het begin van de echo wordt gemeten&#34;</span>)
-    
-    GPIO.output(PIN_TRIGGER, GPIO.HIGH)
-    sleep(0.00001)
-    GPIO.output(PIN_TRIGGER, GPIO.LOW)
-    
-    <span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 0:
-        puls_start_tijd = time()
-        
-    <span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 1:
-        puls_eind_tijd = time()
-    
-    <span style=color:#00f>print</span>(<span style=color:#a31515>&#34;stop de klok als de echo voorbij is&#34;</span>)
-    puls_duur = puls_eind_tijd - puls_start_tijd
-    afstand = round(puls_duur * GELUIDSSNELHEID / 2, 2)
-    <span style=color:#00f>print</span>(f<span style=color:#a31515>&#34;gemeten afstand: {afstand}cm</span><span style=color:#a31515>\n\n</span><span style=color:#a31515>&#34;</span>)
-<span style=color:#00f>finally</span>:
-    GPIO.cleanup()
-</code></pre></div><h4 id=inputoutput-pinnen-gebruiken>Input/Output pinnen gebruiken</h4><p>Op de Rasberry Pi zitten twee rijen met pinnetjes waar je van alles op aan kunt sluiten. In deze code gebruiken we alleen
+het volledige script.<br>Onder de code vind je uitleg over de verschillende onderdelen.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:green>#!/usr/bin/python3</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#00f>import</span> PRi.GPIO <span style=color:#00f>as</span> GPIO
+</span></span><span style=display:flex><span><span style=color:#00f>from</span> time <span style=color:#00f>import</span> sleep, time
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>PIN_TRIGGER = 7
+</span></span><span style=display:flex><span>PIN_ECHO = 11
+</span></span><span style=display:flex><span>GELUIDSSNELHEID = 34300
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#00f>try</span>:
+</span></span><span style=display:flex><span>    GPIO.setmode(GPIO.BOARD)
+</span></span><span style=display:flex><span>    GPIO.setup(PIN_TRIGGER, GPIO.OUT)
+</span></span><span style=display:flex><span>    GPIO.setup(PIN_ECHO, GPIO.IN)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>&#34;wacht 2 seconden tot de sensor stabiel is&#34;</span>)
+</span></span><span style=display:flex><span>    sleep(2)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>&#34;maak puls&#34;</span>)
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>&#34;start een klok zodra het begin van de echo wordt gemeten&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    GPIO.output(PIN_TRIGGER, GPIO.HIGH)
+</span></span><span style=display:flex><span>    sleep(0.00001)
+</span></span><span style=display:flex><span>    GPIO.output(PIN_TRIGGER, GPIO.LOW)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 0:
+</span></span><span style=display:flex><span>        puls_start_tijd = time()
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    <span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 1:
+</span></span><span style=display:flex><span>        puls_eind_tijd = time()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>&#34;stop de klok als de echo voorbij is&#34;</span>)
+</span></span><span style=display:flex><span>    puls_duur = puls_eind_tijd - puls_start_tijd
+</span></span><span style=display:flex><span>    afstand = round(puls_duur * GELUIDSSNELHEID / 2, 2)
+</span></span><span style=display:flex><span>    print(<span style=color:#a31515>f</span><span style=color:#a31515>&#34;gemeten afstand: </span><span style=color:#a31515>{</span>afstand<span style=color:#a31515>}</span><span style=color:#a31515>cm</span><span style=color:#a31515>\n\n</span><span style=color:#a31515>&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#00f>finally</span>:
+</span></span><span style=display:flex><span>    GPIO.cleanup()
+</span></span></code></pre></div><h4 id=inputoutput-pinnen-gebruiken>Input/Output pinnen gebruiken</h4><p>Op de Rasberry Pi zitten twee rijen met pinnetjes waar je van alles op aan kunt sluiten. In deze code gebruiken we alleen
 I/O-pinnen. Ofwel, de pinnen kunnen geen spanning (0) of de maximale spanning (1) uitsturen. Ook kunnen ze alleen maar meten
 of de spanning 0V (0) of maximaal 3.3V (1) is.</p><p>De pinnen zijn instelbaar op verschillende manieren, dus als je ze wilt gebruiken, zul je de juiste instelling
-moeten gebruiken:</p><ul><li>De software voor het gebruik van de I/O-pinnen importeren:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>import</span> PRi.GPIO <span style=color:#00f>as</span> GPIO
-</code></pre></div><ul><li>Pin nummering modus:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>GPIO.setmode(GPIO.BOARD)
-</code></pre></div><p>Bij <code>GPIO.BOARD</code> komen de pin nummers in de code overeen met die van de header op het bordje. Voor de andere modus
+moeten gebruiken:</p><ul><li>De software voor het gebruik van de I/O-pinnen importeren:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>import</span> PRi.GPIO <span style=color:#00f>as</span> GPIO
+</span></span></code></pre></div><ul><li>Pin nummering modus:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>GPIO.setmode(GPIO.BOARD)
+</span></span></code></pre></div><p>Bij <code>GPIO.BOARD</code> komen de pin nummers in de code overeen met die van de header op het bordje. Voor de andere modus
 <code>GPIO.BCM</code> komen de nummers overeen met die van de chip die wordt gebruikt. Dat is een stuk lastiger, dus we gebruiken
-<code>GPIO.BOARD</code>.</p><ul><li>De gebruikte pinnen instellen:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>GPIO.setup(PIN_TRIGGER, GPIO.OUT)
-GPIO.setup(PIN_ECHO, GPIO.IN)
-</code></pre></div><p>Variabelen <code>PIN_TRIGGER</code> en <code>PIN_ECHO</code> zijn makkelijk te lezen, maar bevatten de waarden 7 en 11. Ofwel <code>pin 7</code> en <code>pin 11</code>.<br><code>PIN_TRIGGER</code> wordt ingesteld als output met <code>GPIO.OUT</code> en kan dus een spanning van 0V of 3.3V leveren.<br><code>PIN_ECHO</code> wordt gebruikt als input met <code>GPIO.IN</code> en kan juist meten of het signaal hoog of laag is.</p><ul><li><code>PIN_TRIGGER</code> hoog of laag zetten:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>GPIO.output(PIN_TRIGGER, GPIO.HIGH)
-GPIO.output(PIN_TRIGGER, GPIO.LOW)
-</code></pre></div><p>Met <code>GPIO.HIGH</code> of <code>GPIO.LOW</code> kun je pin <code>PIN_TRIGGER</code> hoog of laag zetten.</p><ul><li><code>PIN_ECHO</code> uitlezen:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>pin_waarde = GPIO.input(PIN_ECHO)
-</code></pre></div><p><code>pin_waarde</code> krijgt de waarden van <code>PIN_ECHO</code>, een 1 als er een hoge spanning op de pin staat en een 0 als er geen
-spanning op staat.</p><ul><li>Pin instellingen weer terugzetten:</li></ul><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>GPIO.cleanup()
-</code></pre></div><h4 id=hoe-werkt-het-afstand-meten-eigenlijk>Hoe werkt het afstand meten eigenlijk?</h4><p>Met dit stukje code laat je de sensor een ultrasoon signaal maken.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>GPIO.output(PIN_TRIGGER, GPIO.HIGH)
-sleep(0.00001)
-GPIO.output(PIN_TRIGGER, GPIO.LOW)
-</code></pre></div><p>De duur van het <code>echo</code>-signaal van de sensor is een maat voor de duur van de echo en daarmee van de afstand. Hoe groter
-de afstand is, hoe langer de echo duurt en daarmee het <code>echo</code>-signaal op <code>PIN_ECHO</code>.<br>Met de volgende code kunnen we meten hoe lang het <code>echo</code>-signaal duurt:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 0:
-    puls_start_tijd = time()
-    
-<span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 1:
-    puls_eind_tijd = time()
-
-</code></pre></div><p>Het eerste stukje wacht tot het begin van het <code>echo</code>-signaal begint.
+<code>GPIO.BOARD</code>.</p><ul><li>De gebruikte pinnen instellen:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>GPIO.setup(PIN_TRIGGER, GPIO.OUT)
+</span></span><span style=display:flex><span>GPIO.setup(PIN_ECHO, GPIO.IN)
+</span></span></code></pre></div><p>Variabelen <code>PIN_TRIGGER</code> en <code>PIN_ECHO</code> zijn makkelijk te lezen, maar bevatten de waarden 7 en 11. Ofwel <code>pin 7</code> en <code>pin 11</code>.<br><code>PIN_TRIGGER</code> wordt ingesteld als output met <code>GPIO.OUT</code> en kan dus een spanning van 0V of 3.3V leveren.<br><code>PIN_ECHO</code> wordt gebruikt als input met <code>GPIO.IN</code> en kan juist meten of het signaal hoog of laag is.</p><ul><li><code>PIN_TRIGGER</code> hoog of laag zetten:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>GPIO.output(PIN_TRIGGER, GPIO.HIGH)
+</span></span><span style=display:flex><span>GPIO.output(PIN_TRIGGER, GPIO.LOW)
+</span></span></code></pre></div><p>Met <code>GPIO.HIGH</code> of <code>GPIO.LOW</code> kun je pin <code>PIN_TRIGGER</code> hoog of laag zetten.</p><ul><li><code>PIN_ECHO</code> uitlezen:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>pin_waarde = GPIO.input(PIN_ECHO)
+</span></span></code></pre></div><p><code>pin_waarde</code> krijgt de waarden van <code>PIN_ECHO</code>, een 1 als er een hoge spanning op de pin staat en een 0 als er geen
+spanning op staat.</p><ul><li>Pin instellingen weer terugzetten:</li></ul><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>GPIO.cleanup()
+</span></span></code></pre></div><h4 id=hoe-werkt-het-afstand-meten-eigenlijk>Hoe werkt het afstand meten eigenlijk?</h4><p>Met dit stukje code laat je de sensor een ultrasoon signaal maken.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>GPIO.output(PIN_TRIGGER, GPIO.HIGH)
+</span></span><span style=display:flex><span>sleep(0.00001)
+</span></span><span style=display:flex><span>GPIO.output(PIN_TRIGGER, GPIO.LOW)
+</span></span></code></pre></div><p>De duur van het <code>echo</code>-signaal van de sensor is een maat voor de duur van de echo en daarmee van de afstand. Hoe groter
+de afstand is, hoe langer de echo duurt en daarmee het <code>echo</code>-signaal op <code>PIN_ECHO</code>.<br>Met de volgende code kunnen we meten hoe lang het <code>echo</code>-signaal duurt:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 0:
+</span></span><span style=display:flex><span>    puls_start_tijd = time()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span><span style=color:#00f>while</span> GPIO.input(PIN_ECHO) == 1:
+</span></span><span style=display:flex><span>    puls_eind_tijd = time()
+</span></span></code></pre></div><p>Het eerste stukje wacht tot het begin van het <code>echo</code>-signaal begint.
 Dan wordt <code>puls_start_tijd</code> niet meer bijgewerkt en de laatst gevonden tijd bewaard.<br>De volgende <code>while</code> wordt dan uitgevoerd en als het <code>echo</code>-signaal stopt, wordt de <code>puls_eind_tijd</code> bewaard.</p><p>Door <code>puls_start_tijd</code> van <code>puls_eind_tijd</code> af te trekken, weet je hoe lang de echo duurde. De snelheid van ultrasoon
-geluid (ultrageluid) is 34300 cm/s. Het geluid gaat van de sensor naar het object en dan weer terug, dus de afstand is gelijk aan:</p><pre><code>afstand = snelheid ultrasoon geluid * duur echo / 2
-</code></pre><p>Omdat het geluid heen-en-weer gaat, wordt het resultaat door 2 gedeeld:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>puls_duur = puls_eind_tijd - puls_start_tijd
-afstand = round(puls_duur * GELUIDSSNELHEID / 2, 2)
-</code></pre></div><h3 id=zelf-proberen>Zelf proberen</h3><p>De code meet nu een enkele keer de afstand en sluit dan af. Kun je de code zo aanpassen dat de code de meting
+geluid (ultrageluid) is 34300 cm/s. Het geluid gaat van de sensor naar het object en dan weer terug, dus de afstand is gelijk aan:</p><pre tabindex=0><code>afstand = snelheid ultrasoon geluid * duur echo / 2
+</code></pre><p>Omdat het geluid heen-en-weer gaat, wordt het resultaat door 2 gedeeld:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>puls_duur = puls_eind_tijd - puls_start_tijd
+</span></span><span style=display:flex><span>afstand = round(puls_duur * GELUIDSSNELHEID / 2, 2)
+</span></span></code></pre></div><h3 id=zelf-proberen>Zelf proberen</h3><p>De code meet nu een enkele keer de afstand en sluit dan af. Kun je de code zo aanpassen dat de code de meting
 bijvoorbeeld iedere seconde herhaalt en je kunt zien dat de afstand varieert als je je hand beweegt?<br>Is er een maximum afstand die je kunt meten?</p><p>Als je de afstand meerdere keren achter elkaar meet, zou je ook kunnen uitrekenen wat de snelheid was van de beweging
 tussen de twee metingen. Hoe zou je dat kunnen doen?</p><h2 id=bron>Bron</h2><p>Deze instructie is gebaseerd op het <a href=https://mjrobot.org/rpi-gpiozero/>werk</a> van Marcelo Rovai en de
 <a href=https://pimylifeup.com/raspberry-pi-distance-sensor/>instructie</a> van
