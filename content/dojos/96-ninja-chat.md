@@ -8,7 +8,7 @@ wanneer:
   tot: 2023-05-06T14:30:00
 waar: "Zwanenveld 9098, 6538 SC Nijmegen"
 eventbrite:
-  inschrijventot: 2023-05-06T11:00:00
+  inschrijventot: 2023-05-05T11:00:00
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-96-ninja-chat-623186596887"
 instructies:
   - 
