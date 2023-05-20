@@ -37,7 +37,7 @@ url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version
 futureDojoEventUrl = Dojo.get_future_dojo_event()
 if futureDojoEventUrl is not None:
     dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
-    if not Dojo.dojo_page_already_exists(dojo_info):
+    if not Dojo.dojo_page_already_exists(dojo_info) or dojo_info['start_time'] > datetime.now():
         Dojo.write_dojo_page(dojo_info, DOJO_PAGE_TEMPLATE)
     elif github_event_name == "schedule" and datetime.now().hour != 1:
         h_message("publiceer alleen als er een nieuwe dojo is gepland of 's nachts om 1 uur")
