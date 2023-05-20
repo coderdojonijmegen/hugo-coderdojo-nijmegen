@@ -40,6 +40,7 @@ class Dojo:
         event["description_ext"] = rd.json()["description"]
 
         return {
+            "event_id": event["id"],
             "event_title": event["name"]["text"].strip().split("#")[1],
             "picture_url": event["logo"]["url"],
             "event_url": event["url"],
@@ -106,9 +107,7 @@ class Dojo:
 
     @staticmethod
     def get_dojo_filename(future_dojo_event_info):
-        dojo_filename = "content/dojos/" + future_dojo_event_info['event_title'] \
-            .replace(":", "").replace(" ", "-").lower() + ".md"
-        return dojo_filename
+        return "content/dojos/" + future_dojo_event_info['id'] + ".md"
 
 
 if __name__ == "__main__":
