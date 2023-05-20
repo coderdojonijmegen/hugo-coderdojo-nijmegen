@@ -107,7 +107,7 @@ class Dojo:
 
     @staticmethod
     def get_dojo_filename(future_dojo_event_info):
-        return "content/dojos/" + future_dojo_event_info['id'] + ".md"
+        return "content/dojos/" + future_dojo_event_info['event_id'] + ".md"
 
 
 if __name__ == "__main__":
