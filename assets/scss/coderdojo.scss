@@ -278,10 +278,32 @@ main {
         .dojo-kop {
             font-size: larger;
             padding-top: 10px;
+            .gepland {
+                font-size: smaller;
+                color: red;
+            }
         }
         margin-bottom: 3em;
+        .locatie {
+            font-size: smaller;
+            color: #888;
+        }
     }
-    .dojo:hover {
+    .geplandedojo {
+        a {
+            text-decoration: none;
+            display: block;
+            line-height: 3em;
+        }
+        .dojo-kop {
+            font-size: larger;
+        }
+        .locatie {
+            font-size: smaller;
+            color: #888;
+        }
+    }
+    .dojo:hover, .geplandedojo:hover {
         background-color: #FAFAFA;
     }
     .toc {
