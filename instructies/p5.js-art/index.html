@@ -29,31 +29,31 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>var</span> circle = 200;
-</span></span><span style=display:flex><span><span style=color:#00f>var</span> rot;
-</span></span><span style=display:flex><span><span style=color:#00f>var</span> col;
-</span></span><span style=display:flex><span><span style=color:#00f>var</span> freq = 0.000005;
-</span></span><span style=display:flex><span><span style=color:#00f>var</span> cont = 0;
-</span></span><span style=display:flex><span><span style=color:#00f>var</span> r;
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>var</span> circle <span style=color:#000;font-weight:700>=</span> <span style=color:#099>200</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>var</span> rot;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>var</span> col;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>var</span> freq <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.000005</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>var</span> cont <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>var</span> r;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>    createCanvas(600, 600);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>    createCanvas(<span style=color:#099>600</span>, <span style=color:#099>600</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(242);
-</span></span><span style=display:flex><span>    translate(300, 300);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>242</span>);
+</span></span><span style=display:flex><span>    translate(<span style=color:#099>300</span>, <span style=color:#099>300</span>);
 </span></span><span style=display:flex><span>    rotate(radians(rot));
 </span></span><span style=display:flex><span>    
 </span></span><span style=display:flex><span>    ellipseMode(RADIUS);
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i=0; i&lt;500; i ++) {
-</span></span><span style=display:flex><span>        circle= 200 + 50*sin(millis()*freq*i);
-</span></span><span style=display:flex><span>        col=map(circle,150,250,255,60);
-</span></span><span style=display:flex><span>        r=map(circle,150,250,5,2);
-</span></span><span style=display:flex><span>        fill(col,0,74);
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i<span style=color:#000;font-weight:700>=</span><span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>&lt;</span><span style=color:#099>500</span>; i <span style=color:#000;font-weight:700>++</span>) {
+</span></span><span style=display:flex><span>        circle<span style=color:#000;font-weight:700>=</span> <span style=color:#099>200</span> <span style=color:#000;font-weight:700>+</span> <span style=color:#099>50</span><span style=color:#000;font-weight:700>*</span>sin(millis()<span style=color:#000;font-weight:700>*</span>freq<span style=color:#000;font-weight:700>*</span>i);
+</span></span><span style=display:flex><span>        col<span style=color:#000;font-weight:700>=</span>map(circle,<span style=color:#099>150</span>,<span style=color:#099>250</span>,<span style=color:#099>255</span>,<span style=color:#099>60</span>);
+</span></span><span style=display:flex><span>        r<span style=color:#000;font-weight:700>=</span>map(circle,<span style=color:#099>150</span>,<span style=color:#099>250</span>,<span style=color:#099>5</span>,<span style=color:#099>2</span>);
+</span></span><span style=display:flex><span>        fill(col,<span style=color:#099>0</span>,<span style=color:#099>74</span>);
 </span></span><span style=display:flex><span>        noStroke();
-</span></span><span style=display:flex><span>        ellipse(circle*cos(i), circle*sin(i),r,r);
-</span></span><span style=display:flex><span>        rot=rot+0.00005;
+</span></span><span style=display:flex><span>        ellipse(circle<span style=color:#000;font-weight:700>*</span>cos(i), circle<span style=color:#000;font-weight:700>*</span>sin(i),r,r);
+</span></span><span style=display:flex><span>        rot<span style=color:#000;font-weight:700>=</span>rot<span style=color:#000;font-weight:700>+</span><span style=color:#099>0.00005</span>;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div></div></div><h3 id=editor>Editor</h3><p>p5.js is een Javascript bibliotheek. Deze kun je in elke webpagina integreren.
 Je kunt &ldquo;sketches&rdquo; schrijven in een editor op je PC en het resultaat dan bekijken in een webbrowser. Het is echter makkelijker om een editor in de browser
@@ -64,12 +64,12 @@ zelf te gebruiken. Ga daarvoor naar <a href=p5.js-widget/p5-widget.html target=_
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span></span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex;background-color:#e5e5e5><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>  createCanvas(100, 100);
+</span></span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex;background-color:#e5e5e5><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>  createCanvas(<span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex;background-color:#e5e5e5><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>  background(255, 0, 200);
+</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>  background(<span style=color:#099>255</span>, <span style=color:#099>0</span>, <span style=color:#099>200</span>);
 </span></span><span style=display:flex;background-color:#e5e5e5><span>}</span></span></code></pre></td></tr></table></div></div><p>Er zijn twee functies die worden aangeroepen door de p5.js bibliotheek:</p><ul><li><code>setup()</code> wordt éénmaal bij de start van het script uitgevoerd</li><li><code>draw()</code> wordt oneindig herhaald en iedere schermvernieuwing aangeroepen (normaal 60 keer per seconde)</li></ul><p>In de <code>setup()</code> functie zet je éénmalige instellingen, zoals bijvoorbeeld een vaste achtegrondkleur. In de <code>draw()</code>
 functie dingen die veranderen, zoals bijvoorbeeld een verschuivende kubus.</p><p>Het volgende voorbeeld tekent een draaiend vierkant:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
@@ -81,15 +81,15 @@ functie dingen die veranderen, zoals bijvoorbeeld een verschuivende kubus.</p><p
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    createCanvas(150, 150);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    createCanvas(<span style=color:#099>150</span>, <span style=color:#099>150</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    background(255);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    translate(width / 2, height / 2);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    rotate(frameCount/50);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    rect(-26, -26, 52, 52);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    translate(width <span style=color:#000;font-weight:700>/</span> <span style=color:#099>2</span>, height <span style=color:#000;font-weight:700>/</span> <span style=color:#099>2</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    rotate(frameCount<span style=color:#000;font-weight:700>/</span><span style=color:#099>50</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    rect(<span style=color:#000;font-weight:700>-</span><span style=color:#099>26</span>, <span style=color:#000;font-weight:700>-</span><span style=color:#099>26</span>, <span style=color:#099>52</span>, <span style=color:#099>52</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><div class=p5js_voorbeeld id=voorbeeld1></div><p>We zullen stap voor stap door de code heen lopen:</p><ul><li>op regel 2 in de <code>setup</code> functie wordt het tekenblad (canvas) gemaakt. Dit hoeft slechts 1 keer te gebeuren.</li><li>regels 6 tot en met 9 worden telkens herhaald:<ul><li><code>background(255)</code> maakt de achtergrond kleur wit (waarde 255).</li><li><code>translate(width / 2, height / 2)</code> zorgt ervoor dat het vierkant midden in het tekenblad komt.</li><li><code>rotate(frameCount / 50)</code> draait het vierkant iedere keer dat dit wordt uitgevoerd. <code>frameCount</code> staat voor het
 aantal schermvernieuwingen per seconde. Daardoor bepaald <code>frameCount / 50</code> de snelheid waarmee het vierkant draait.</li><li>tenslotte tekent <code>rect(-26, -26, 52, 52)</code> het vierkant.</li></ul></li></ul><p><strong>Opdracht 1</strong>: neem de code over in de editor en kijk of er een draaiend vierkant wordt getekend door op de speel knop
 te klikken.<br><strong>Opdracht 2</strong>: vervang waarde 255 op regel 6 eens met een andere waarde tussen 0 en 256. Wat gebeurt er met een lage
@@ -106,12 +106,12 @@ verder met meer voorbeelden en uitleg.</p><h2 id=cirkels-en-muis>Cirkels en muis
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    createCanvas(710, 400);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    background(102);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    createCanvas(<span style=color:#099>710</span>, <span style=color:#099>400</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    background(<span style=color:#099>102</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 6</strong>: neem bovenstaande code over in de editor en voer het programma uit. Je hebt nu een grijs vlak.</p><h3 id=een-cirkel>Een cirkel</h3><p>De volgende stap is een cirkel:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
@@ -120,13 +120,13 @@ verder met meer voorbeelden en uitleg.</p><h2 id=cirkels-en-muis>Cirkels en muis
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>    createCanvas(710, 400);
-</span></span><span style=display:flex><span>    background(102);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>    createCanvas(<span style=color:#099>710</span>, <span style=color:#099>400</span>);
+</span></span><span style=display:flex><span>    background(<span style=color:#099>102</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    ellipse(300, 200, 60, 60);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    ellipse(<span style=color:#099>300</span>, <span style=color:#099>200</span>, <span style=color:#099>60</span>, <span style=color:#099>60</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 7</strong>: neem regel 7 over in je code en voer het programma uit. Er verschijnt nu een witte cirkel in het grijze
 vlak. Wat gebeurt er als je de getallen 300 en 200 veranderd? En als je de getallen 60 veranderd?</p><h3 id=de-cirkel-bewegen-met-de-muis>De cirkel bewegen met de muis</h3><p>Om de cirkel te bewegen met de muis, moet je er voor zorgen dat de cirkel de positie van de muis volgt:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
@@ -136,13 +136,13 @@ vlak. Wat gebeurt er als je de getallen 300 en 200 veranderd? En als je de getal
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>    createCanvas(710, 400);
-</span></span><span style=display:flex><span>    background(102);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>    createCanvas(<span style=color:#099>710</span>, <span style=color:#099>400</span>);
+</span></span><span style=display:flex><span>    background(<span style=color:#099>102</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    ellipse(mouseX, mouseY, 60, 60);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    ellipse(mouseX, mouseY, <span style=color:#099>60</span>, <span style=color:#099>60</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 8</strong>: vervang de getallen 300 en 200 in regel 7 met <code>mouseX</code> en <code>mouseY</code>. Deze twee variabelen bevatten de
 horizontale positie (<code>mouseX</code>) en vertikale positie (<code>mouseY</code>) van de muis. Voor je programma uit. Beweegt de
 cirkel mee?</p><h3 id=een-kleurtje-voor-de-cirkel>Een kleurtje voor de cirkel</h3><p>Het voorbeeld heeft een gekleurde cirkel. Laten we eens een kleurtje toevoegen:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
@@ -154,14 +154,14 @@ cirkel mee?</p><h3 id=een-kleurtje-voor-de-cirkel>Een kleurtje voor de cirkel</h
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">9
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>    createCanvas(710, 400);
-</span></span><span style=display:flex><span>    background(102);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>    createCanvas(<span style=color:#099>710</span>, <span style=color:#099>400</span>);
+</span></span><span style=display:flex><span>    background(<span style=color:#099>102</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    fill(color(255, 128, 0));
-</span></span><span style=display:flex><span>    ellipse(mouseX, mouseY, 60, 60);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    fill(color(<span style=color:#099>255</span>, <span style=color:#099>128</span>, <span style=color:#099>0</span>));
+</span></span><span style=display:flex><span>    ellipse(mouseX, mouseY, <span style=color:#099>60</span>, <span style=color:#099>60</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 9</strong>: voeg regel 7 toe aan je code. Welke kleur heeft de cirkel?</p><p>Het commando <code>fill()</code> vult het figuur dat erna wordt getekend met de kleur die wordt bepaald door het commando <code>color()</code>.
 Het commando <code>color()</code> heeft 3 parameters, een voor rood, een voor groen en een voor blauw. Alle drie de kleuren kunnen
 met een getal tussen 0 en 255 worden bepaald. 0 is geen kleur en 255 is maximaal kleur. <code>color(0, 0, 0)</code> komt daarmee
@@ -175,14 +175,14 @@ overeen met zwart en <code>color(255, 0, 0)</code> met helder rood.</p><p><stron
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>    createCanvas(710, 400);
-</span></span><span style=display:flex><span>    background(102);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>    createCanvas(<span style=color:#099>710</span>, <span style=color:#099>400</span>);
+</span></span><span style=display:flex><span>    background(<span style=color:#099>102</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#00f>let</span> snelheid = abs(mouseX - pmouseX) + abs(mouseY - pmouseY);
-</span></span><span style=display:flex><span>    fill(color(255, 128, 0));
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#000;font-weight:700>let</span> snelheid <span style=color:#000;font-weight:700>=</span> abs(mouseX <span style=color:#000;font-weight:700>-</span> pmouseX) <span style=color:#000;font-weight:700>+</span> abs(mouseY <span style=color:#000;font-weight:700>-</span> pmouseY);
+</span></span><span style=display:flex><span>    fill(color(<span style=color:#099>255</span>, <span style=color:#099>128</span>, <span style=color:#099>0</span>));
 </span></span><span style=display:flex;background-color:#e5e5e5><span>    ellipse(mouseX, mouseY, snelheid, snelheid);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 11</strong>: voeg regel 7 toe en pas regel 9 aan. Wordt de cirkel groter en kleiner als je je muis sneller en langzamer beweegt?</p><p>Op regel 7 wordt de snelheid van de muis berekend. Wil je daar meer over weten, lees dan door in onderstaande grijze
 vak.</p><div class=verdieping><h4 id=hoe-bereken-je-de-snelheid-van-de-muis>Hoe bereken je de snelheid van de muis?</h4><p>Op het moment dat je je muis beweegt, dan beweegt het horizontaal, vertikaal of in beide richtingen als je je muis
@@ -203,14 +203,14 @@ We hebben de snelheid al berekend, nu gaat we die gebruiken bij het inkleuren va
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>    createCanvas(710, 400);
-</span></span><span style=display:flex><span>    background(102);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>    createCanvas(<span style=color:#099>710</span>, <span style=color:#099>400</span>);
+</span></span><span style=display:flex><span>    background(<span style=color:#099>102</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    <span style=color:#00f>let</span> snelheid = abs(mouseX - pmouseX) + abs(mouseY - pmouseY);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#00f>let</span> kleur = color(255 - snelheid, snelheid, 128 + snelheid);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>let</span> snelheid <span style=color:#000;font-weight:700>=</span> abs(mouseX <span style=color:#000;font-weight:700>-</span> pmouseX) <span style=color:#000;font-weight:700>+</span> abs(mouseY <span style=color:#000;font-weight:700>-</span> pmouseY);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#000;font-weight:700>let</span> kleur <span style=color:#000;font-weight:700>=</span> color(<span style=color:#099>255</span> <span style=color:#000;font-weight:700>-</span> snelheid, snelheid, <span style=color:#099>128</span> <span style=color:#000;font-weight:700>+</span> snelheid);
 </span></span><span style=display:flex;background-color:#e5e5e5><span>    fill(kleur);
 </span></span><span style=display:flex><span>    ellipse(mouseX, mouseY, snelheid, snelheid);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p>Met het commando <code>color</code> op regel 8 kunnen we een kleur maken. Het commando heeft 3 parameters. Het eerste bepaald de
@@ -229,12 +229,12 @@ We beginnen met het maken van een canvas van 400 bij 400 pixels.<div class=highl
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    createCanvas(400, 400);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    createCanvas(<span style=color:#099>400</span>, <span style=color:#099>400</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    background(255);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    background(<span style=color:#099>255</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div></p><p><strong>Opdracht 14</strong>
 Om het spel goed te laten verlopen, moeten we verschillende gegevens bijhouden.
 Zo willen we bijvoorbeeld weten hoeveel levens de speler nog heeft,
@@ -250,16 +250,16 @@ Daarnaast houden we bij hoe snel de doelwitten krimpen en welke doelwitten we al
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex;background-color:#e5e5e5><span><span style=color:#00f>let</span> doelwitten = []
-</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#00f>let</span> levens = 5;
-</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#00f>let</span> spelerIsDood = <span style=color:#00f>false</span>;
-</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#00f>let</span> krimpSnelheid = 0.1;
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex;background-color:#e5e5e5><span><span style=color:#000;font-weight:700>let</span> doelwitten <span style=color:#000;font-weight:700>=</span> []
+</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#000;font-weight:700>let</span> levens <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>;
+</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#000;font-weight:700>let</span> spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>false</span>;
+</span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#000;font-weight:700>let</span> krimpSnelheid <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.1</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>  createCanvas(400, 400);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>  createCanvas(<span style=color:#099>400</span>, <span style=color:#099>400</span>);
 </span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 15</strong>
 Het is handig als de speler weet hoeveel levens hij nog heeft. Laten we dat toevoegen.
 De tekst wordt 20 pixels van links, en 20 pixels vanaf boven getekend.
@@ -275,17 +275,17 @@ Probeer de tekst zelf eens te verplaatsen naar een andere hoek.<div class=highli
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>let</span> doelwitten = []
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> levens = 5;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> spelerIsDood = <span style=color:#00f>false</span>;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> krimpSnelheid = 0.1;
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> doelwitten <span style=color:#000;font-weight:700>=</span> []
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> levens <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>false</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> krimpSnelheid <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.1</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>  createCanvas(400, 400);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>  createCanvas(<span style=color:#099>400</span>, <span style=color:#099>400</span>);
 </span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div></p><p><strong>Opdracht 16</strong>
 Laten we wat doelwitten te voorschijn toveren.
 Onze doelwitten worden cirkels.
@@ -312,23 +312,23 @@ Dit is een lastig onderdeel van de opdracht, dus als je hier vragen over hebt, s
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>let</span> doelwitten = []
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> levens = 5;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> spelerIsDood = <span style=color:#00f>false</span>;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> krimpSnelheid = 0.1;
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> doelwitten <span style=color:#000;font-weight:700>=</span> []
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> levens <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>false</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> krimpSnelheid <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.1</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>  createCanvas(400, 400);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>  createCanvas(<span style=color:#099>400</span>, <span style=color:#099>400</span>);
 </span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        t = doelwitten[i];
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex;background-color:#e5e5e5><span>        
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex;background-color:#e5e5e5><span>    }  
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 17</strong>
 Je zult zien dat er nog niks getekend wordt.
@@ -359,30 +359,30 @@ We kunnen de doelwitten op onderstaande manier toevoegen:</p><div class=highligh
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>let</span> doelwitten = []
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> levens = 5;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> spelerIsDood = <span style=color:#00f>false</span>;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> krimpSnelheid = 0.1;
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> doelwitten <span style=color:#000;font-weight:700>=</span> []
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> levens <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>false</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> krimpSnelheid <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.1</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>  createCanvas(400, 400);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>  createCanvas(<span style=color:#099>400</span>, <span style=color:#099>400</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span> <span style=color:green>//voeg begin doelwitten toe
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>}
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></span><span style=display:flex><span> <span style=color:#998;font-style:italic>//voeg begin doelwitten toe
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>}
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>        t = doelwitten[i];
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex><span>    }  
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 18</strong>
 Cool! Maar er gebeurt nog steeds niks.
@@ -400,18 +400,18 @@ We voegen een regel toe zodat de doelwitten langzaam krimpen.</p><div class=high
 </span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>        t = doelwitten[i];
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//Krimp alle doelwitten
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>        t.d -= krimpSnelheid; 
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Krimp alle doelwitten
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>        t.d <span style=color:#000;font-weight:700>-=</span> krimpSnelheid; 
 </span></span><span style=display:flex><span>    }  
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 19</strong>
 Als je het programma nu draait en lang genoeg wacht, dan zullen de cirkels verdwijnen.
@@ -438,24 +438,24 @@ moeten we een doelwit weggooien als het te klein is om nog verder te kunnen krim
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>        t = doelwitten[i];
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//Krimp alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        t.d -= krimpSnelheid; 
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Krimp alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        t.d <span style=color:#000;font-weight:700>-=</span> krimpSnelheid; 
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        <span style=color:green>//verwijder te kleine doelwitten
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>        }
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        <span style=color:#998;font-style:italic>//verwijder te kleine doelwitten
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>        <span style=color:#000;font-weight:700>if</span>(t.d <span style=color:#000;font-weight:700>&lt;</span> <span style=color:#099>0</span>) { <span style=color:#998;font-style:italic>//Is de grootte kleiner dan 0? Dan verwijderen
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>            doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Haal het doelwit uit de lijst.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>            doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>        }
 </span></span><span style=display:flex><span>    }  
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 20</strong>
 In deze stap programmeren we dat we op doelwitten kunnen klikken, om deze te verwijderen.
@@ -476,17 +476,17 @@ Probeer elke regel te begrijpen en vraag om hulp als er iets onduidelijk is!</p>
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> mouseClicked() {
-</span></span><span style=display:flex><span>  <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>    t = doelwitten[i];
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> mouseClicked() {
+</span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>    t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    <span style=color:green>//Bereken de afstand tussen de muis en het doelwit
-</span></span></span><span style=display:flex><span><span style=color:green></span>	<span style=color:#00f>let</span> afstand = dist(mouseX, mouseY, t.x, t.y);
+</span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>//Bereken de afstand tussen de muis en het doelwit
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>	<span style=color:#000;font-weight:700>let</span> afstand <span style=color:#000;font-weight:700>=</span> dist(mouseX, mouseY, t.x, t.y);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span>(afstand &lt; t.d/2) { <span style=color:green>//Als de afstand kleiner is dan de halve diameter (radius) van het doelwit is het raak
-</span></span></span><span style=display:flex><span><span style=color:green></span>      doelwitten.splice(i, 1); <span style=color:green>//Verwijder het doelwit dat geraakt is
-</span></span></span><span style=display:flex><span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>      <span style=color:#00f>return</span>;
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span>(afstand <span style=color:#000;font-weight:700>&lt;</span> t.d<span style=color:#000;font-weight:700>/</span><span style=color:#099>2</span>) { <span style=color:#998;font-style:italic>//Als de afstand kleiner is dan de halve diameter (radius) van het doelwit is het raak
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>      doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Verwijder het doelwit dat geraakt is
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>      doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>      <span style=color:#000;font-weight:700>return</span>;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Opdracht 21</strong>
@@ -513,24 +513,24 @@ We voegen toe dat de speler een leven verliest als een doelwit verdwijnt waar hi
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>        t = doelwitten[i];
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//Krimp alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        t.d -= krimpSnelheid; 
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Krimp alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        t.d <span style=color:#000;font-weight:700>-=</span> krimpSnelheid; 
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//verwijder te kleine doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
-</span></span></span><span style=display:flex><span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span></span></span><span style=display:flex><span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:green></span>            levens--;
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//verwijder te kleine doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        <span style=color:#000;font-weight:700>if</span>(t.d <span style=color:#000;font-weight:700>&lt;</span> <span style=color:#099>0</span>) { <span style=color:#998;font-style:italic>//Is de grootte kleiner dan 0? Dan verwijderen
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Haal het doelwit uit de lijst.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex;background-color:#e5e5e5><span><span style=color:#998;font-style:italic></span>            levens<span style=color:#000;font-weight:700>--</span>;
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>    }  
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><strong>Opdracht 22</strong>
@@ -566,36 +566,36 @@ Als laatste: we laten de speler weten wanneer hij verloren heeft, via de volgend
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
 </span></span><span style=background-color:#e5e5e5><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
 </span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#00f>if</span>(spelerIsDood) {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        textSize(52);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        text(<span style=color:#a31515>&#34;Dood!&#34;</span>, 130, 170, 100, 100);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        textSize(32);
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        <span style=color:#00f>return</span>; 
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#000;font-weight:700>if</span>(spelerIsDood) {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        textSize(<span style=color:#099>52</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        text(<span style=color:#d14>&#34;Dood!&#34;</span>, <span style=color:#099>130</span>, <span style=color:#099>170</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        textSize(<span style=color:#099>32</span>);
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        <span style=color:#000;font-weight:700>return</span>; 
 </span></span><span style=display:flex;background-color:#e5e5e5><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>        t = doelwitten[i];
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//Krimp alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        t.d -= krimpSnelheid; 
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Krimp alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        t.d <span style=color:#000;font-weight:700>-=</span> krimpSnelheid; 
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//verwijder te kleine doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
-</span></span></span><span style=display:flex><span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span></span></span><span style=display:flex><span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>            levens--;
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//verwijder te kleine doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        <span style=color:#000;font-weight:700>if</span>(t.d <span style=color:#000;font-weight:700>&lt;</span> <span style=color:#099>0</span>) { <span style=color:#998;font-style:italic>//Is de grootte kleiner dan 0? Dan verwijderen
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Haal het doelwit uit de lijst.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            levens<span style=color:#000;font-weight:700>--</span>;
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>    }  
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#00f>if</span>(levens &lt;= 0) {
-</span></span><span style=display:flex;background-color:#e5e5e5><span>        spelerIsDood = <span style=color:#00f>true</span>;
+</span></span><span style=display:flex;background-color:#e5e5e5><span>    <span style=color:#000;font-weight:700>if</span>(levens <span style=color:#000;font-weight:700>&lt;=</span> <span style=color:#099>0</span>) {
+</span></span><span style=display:flex;background-color:#e5e5e5><span>        spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>true</span>;
 </span></span><span style=display:flex;background-color:#e5e5e5><span>    }
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><p><strong>Afronden</strong>
 Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code vergelijken met de uitwerking hieronder.</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
@@ -661,66 +661,66 @@ Als het goed is heb je nu een spel gemaakt. Werkt het niet? Je kan jouw code ver
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#00f>let</span> doelwitten = []
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> levens = 5;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> spelerIsDood = <span style=color:#00f>false</span>;
-</span></span><span style=display:flex><span><span style=color:#00f>let</span> krimpSnelheid = 0.1;
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> doelwitten <span style=color:#000;font-weight:700>=</span> []
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> levens <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>false</span>;
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> krimpSnelheid <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0.1</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> setup() {
-</span></span><span style=display:flex><span>  createCanvas(400, 400);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> setup() {
+</span></span><span style=display:flex><span>  createCanvas(<span style=color:#099>400</span>, <span style=color:#099>400</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span> <span style=color:green>//voeg begin doelwitten toe
-</span></span></span><span style=display:flex><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>  doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>}
+</span></span><span style=display:flex><span> <span style=color:#998;font-style:italic>//voeg begin doelwitten toe
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>  doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> draw() {
-</span></span><span style=display:flex><span>    background(255);
-</span></span><span style=display:flex><span>    text(<span style=color:#a31515>&#34;Levens: &#34;</span>+str(levens), 20, 20, 100, 100);
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> draw() {
+</span></span><span style=display:flex><span>    background(<span style=color:#099>255</span>);
+</span></span><span style=display:flex><span>    text(<span style=color:#d14>&#34;Levens: &#34;</span><span style=color:#000;font-weight:700>+</span>str(levens), <span style=color:#099>20</span>, <span style=color:#099>20</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span>(spelerIsDood) {
-</span></span><span style=display:flex><span>        textSize(52);
-</span></span><span style=display:flex><span>        text(<span style=color:#a31515>&#34;Dood!&#34;</span>, 130, 170, 100, 100);
-</span></span><span style=display:flex><span>        textSize(32);
-</span></span><span style=display:flex><span>        <span style=color:#00f>return</span>; 
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span>(spelerIsDood) {
+</span></span><span style=display:flex><span>        textSize(<span style=color:#099>52</span>);
+</span></span><span style=display:flex><span>        text(<span style=color:#d14>&#34;Dood!&#34;</span>, <span style=color:#099>130</span>, <span style=color:#099>170</span>, <span style=color:#099>100</span>, <span style=color:#099>100</span>);
+</span></span><span style=display:flex><span>        textSize(<span style=color:#099>32</span>);
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>return</span>; 
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>        t = doelwitten[i];
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>        t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:green>//Teken alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        ellipse(t.x, t.y, t.d, t.d);    
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Teken alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        ellipse(t.x, t.y, t.d, t.d);    
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//Krimp alle doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        t.d -= krimpSnelheid; 
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//Krimp alle doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        t.d <span style=color:#000;font-weight:700>-=</span> krimpSnelheid; 
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>//verwijder te kleine doelwitten
-</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:#00f>if</span>(t.d &lt; 0) { <span style=color:green>//Is de grootte kleiner dan 0? Dan verwijderen
-</span></span></span><span style=display:flex><span><span style=color:green></span>            doelwitten.splice(i, 1); <span style=color:green>//Haal het doelwit uit de lijst.
-</span></span></span><span style=display:flex><span><span style=color:green></span>            doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>            levens--;
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>//verwijder te kleine doelwitten
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        <span style=color:#000;font-weight:700>if</span>(t.d <span style=color:#000;font-weight:700>&lt;</span> <span style=color:#099>0</span>) { <span style=color:#998;font-style:italic>//Is de grootte kleiner dan 0? Dan verwijderen
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Haal het doelwit uit de lijst.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>            levens<span style=color:#000;font-weight:700>--</span>;
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>    }  
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span>(levens &lt;= 0) {
-</span></span><span style=display:flex><span>        spelerIsDood = <span style=color:#00f>true</span>;
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span>(levens <span style=color:#000;font-weight:700>&lt;=</span> <span style=color:#099>0</span>) {
+</span></span><span style=display:flex><span>        spelerIsDood <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>true</span>;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>	
-</span></span><span style=display:flex><span><span style=color:#00f>function</span> mouseClicked() {
-</span></span><span style=display:flex><span>  <span style=color:#00f>for</span> (<span style=color:#00f>var</span> i = doelwitten.length-1; i &gt;= 0; i--) {
-</span></span><span style=display:flex><span>    t = doelwitten[i];
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> mouseClicked() {
+</span></span><span style=display:flex><span>  <span style=color:#000;font-weight:700>for</span> (<span style=color:#000;font-weight:700>var</span> i <span style=color:#000;font-weight:700>=</span> doelwitten.length<span style=color:#000;font-weight:700>-</span><span style=color:#099>1</span>; i <span style=color:#000;font-weight:700>&gt;=</span> <span style=color:#099>0</span>; i<span style=color:#000;font-weight:700>--</span>) {
+</span></span><span style=display:flex><span>    t <span style=color:#000;font-weight:700>=</span> doelwitten[i];
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    <span style=color:green>//Bereken de afstand tussen de muis en het doelwit
-</span></span></span><span style=display:flex><span><span style=color:green></span>	<span style=color:#00f>let</span> afstand = dist(mouseX, mouseY, t.x, t.y);
+</span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>//Bereken de afstand tussen de muis en het doelwit
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>	<span style=color:#000;font-weight:700>let</span> afstand <span style=color:#000;font-weight:700>=</span> dist(mouseX, mouseY, t.x, t.y);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span>(afstand &lt; t.d/2) { <span style=color:green>//Als de afstand kleiner is dan de halve diameter (radius) van het doelwit is het raak
-</span></span></span><span style=display:flex><span><span style=color:green></span>      doelwitten.splice(i, 1); <span style=color:green>//Verwijder het doelwit dat geraakt is
-</span></span></span><span style=display:flex><span><span style=color:green></span>      doelwitten.push({x: random(300), y: random(300), d: 50}) <span style=color:green>//Voeg een doelwit toe op een nieuwe willekeurige plek.
-</span></span></span><span style=display:flex><span><span style=color:green></span>      <span style=color:#00f>return</span>;
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span>(afstand <span style=color:#000;font-weight:700>&lt;</span> t.d<span style=color:#000;font-weight:700>/</span><span style=color:#099>2</span>) { <span style=color:#998;font-style:italic>//Als de afstand kleiner is dan de halve diameter (radius) van het doelwit is het raak
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>      doelwitten.splice(i, <span style=color:#099>1</span>); <span style=color:#998;font-style:italic>//Verwijder het doelwit dat geraakt is
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>      doelwitten.push({x<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), y<span style=color:#000;font-weight:700>:</span> random(<span style=color:#099>300</span>), d<span style=color:#000;font-weight:700>:</span> <span style=color:#099>50</span>}) <span style=color:#998;font-style:italic>//Voeg een doelwit toe op een nieuwe willekeurige plek.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>      <span style=color:#000;font-weight:700>return</span>;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><h2 id=verbeter-het-spel>Verbeter het spel</h2><p>We hebben zojuist een spel gemaakt. Kan jij het spel verbeteren?

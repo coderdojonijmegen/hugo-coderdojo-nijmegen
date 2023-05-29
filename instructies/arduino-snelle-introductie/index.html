@@ -20,19 +20,19 @@ klaargezet. (Hoe variabelen werken kun je verderop in deze handleiding lezen.)</
 schuine strepen ervoor zijn toelichting. Zulke regels staan er om aan jou uit te
 leggen hoe het programma werkt. Alle regels tussen /* en */ zijn ook commentaar.
 (Je herkent commentaar ook aan de grijze kleur van de tekst.)</p><p>Het tweede deel is een functie die ‘setup’ heet. Alles wat daarin staat, wordt één
-keer uitgevoerd.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#2b91af>void</span> setup() {
-</span></span><span style=display:flex><span>   <span style=color:green>// alles wat tussen de accolades (de gekrulde haakjes) staat, hoort bij
-</span></span></span><span style=display:flex><span><span style=color:green></span>   <span style=color:green>// setup en wordt in één keer uitgevoerd.
-</span></span></span><span style=display:flex><span><span style=color:green></span>   <span style=color:green>// In Blink wordt bijvoorbeeld het ingebouwde LED-lampje op
-</span></span></span><span style=display:flex><span><span style=color:green></span>   <span style=color:green>// het Arduino-bord aangemeld als output:
-</span></span></span><span style=display:flex><span><span style=color:green></span>   pinMode(LED_BUILTIN, OUTPUT);
+keer uitgevoerd.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>setup</span>() {
+</span></span><span style=display:flex><span>   <span style=color:#998;font-style:italic>// alles wat tussen de accolades (de gekrulde haakjes) staat, hoort bij
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#998;font-style:italic>// setup en wordt in één keer uitgevoerd.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#998;font-style:italic>// In Blink wordt bijvoorbeeld het ingebouwde LED-lampje op
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#998;font-style:italic>// het Arduino-bord aangemeld als output:
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#900;font-weight:700>pinMode</span>(LED_BUILTIN, OUTPUT);
 </span></span><span style=display:flex><span>}</span></span></code></pre></div><p>Het derde deel van de schets is de functie die ‘loop’ heet. Dit deel van het
-programma wordt steeds weer opnieuw gedaan, voor altijd.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#2b91af>void</span> loop() {
-</span></span><span style=display:flex><span>   digitalWrite(LED_BUILTIN, HIGH); <span style=color:green>// zet de LED aan (HIGH is het voltage niveau)
-</span></span></span><span style=display:flex><span><span style=color:green></span>   delay(1000);                     <span style=color:green>// wacht een seconde
-</span></span></span><span style=display:flex><span><span style=color:green></span>   digitalWrite(LED_BUILTIN, LOW);  <span style=color:green>// zet de LED uit (bij LOW is de spanning uit)
-</span></span></span><span style=display:flex><span><span style=color:green></span>   delay(1000);                     <span style=color:green>// wacht een seconde
-</span></span></span><span style=display:flex><span><span style=color:green></span>}</span></span></code></pre></div><figcaption>De ingebouwde LED is op de Arduino Uno aangesloten op pin 13. ‘LED_BUILTIN’ is een woord dat 2
+programma wordt steeds weer opnieuw gedaan, voor altijd.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>loop</span>() {
+</span></span><span style=display:flex><span>   <span style=color:#900;font-weight:700>digitalWrite</span>(LED_BUILTIN, HIGH); <span style=color:#998;font-style:italic>// zet de LED aan (HIGH is het voltage niveau)
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#900;font-weight:700>delay</span>(<span style=color:#099>1000</span>);                     <span style=color:#998;font-style:italic>// wacht een seconde
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#900;font-weight:700>digitalWrite</span>(LED_BUILTIN, LOW);  <span style=color:#998;font-style:italic>// zet de LED uit (bij LOW is de spanning uit)
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>   <span style=color:#900;font-weight:700>delay</span>(<span style=color:#099>1000</span>);                     <span style=color:#998;font-style:italic>// wacht een seconde
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>}</span></span></code></pre></div><figcaption>De ingebouwde LED is op de Arduino Uno aangesloten op pin 13. ‘LED_BUILTIN’ is een woord dat 2
 Arduino herkent, maar je zou in plaats daarvan ook ‘13’ kunnen schrijven.</figcaption><p>In Blink bijvoorbeeld wordt in loop() het ingebouwde LED-lampje aangezet 2
 (‘HIGH’), dan wordt er een seconde gewacht (duizend milliseconden), dan wordt de
 LED weer uitgezet (‘LOW’), dan wordt er weer een seconde gewacht, en dan begint
@@ -54,10 +54,10 @@ knop verbind je met het gaatje waar ‘2’ bij staat (niet ‘A2’).</li></ul>
 Voorbeelden > Digital > DigitalInputPullup.</p><p>Upload de schets naar de Arduino.</p><p>Probeer de knop maar. Als het goed is, heb je nu je eerste werkende digitale
 sensor! Als je op de knop drukt, gaat de LED aan. Dit is dus al meteen een
 combinatie van input en output.</p><h3 id=hoe-werkt-het>Hoe werkt het?</h3><p>In het programma zie je dat in de functie setup() pin nummer 2 als een ingang
-wordt ‘opengezet’:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>pinMode(2, INPUT_PULLUP);</span></span></code></pre></div><p>Op die pin heb je de knop aangesloten, en dankzij deze regel in de schets weet de
-Arduino dat ook.</p><p>Vervolgens wordt pin nummer 13 als een uitgang gedefiniëerd:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>pinMode(13, OUTPUT);</span></span></code></pre></div><p>De ingebouwde LED op de Arduino is verbonden met pin 13, en dankzij deze regel
+wordt ‘opengezet’:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#900;font-weight:700>pinMode</span>(<span style=color:#099>2</span>, INPUT_PULLUP);</span></span></code></pre></div><p>Op die pin heb je de knop aangesloten, en dankzij deze regel in de schets weet de
+Arduino dat ook.</p><p>Vervolgens wordt pin nummer 13 als een uitgang gedefiniëerd:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#900;font-weight:700>pinMode</span>(<span style=color:#099>13</span>, OUTPUT);</span></span></code></pre></div><p>De ingebouwde LED op de Arduino is verbonden met pin 13, en dankzij deze regel
 weet de Arduino dat we die willen gaan gebruiken.</p><p>Nu gaan we in de gaten houden of de knop wordt ingedrukt. Dat doen we met de
-functie digitalRead():</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#2b91af>int</span> sensorVal = digitalRead(2);</span></span></code></pre></div><p>Als je op de knopt drukt die is verbonden met pin 2 van de Arduino, levert
+functie digitalRead():</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#458;font-weight:700>int</span> sensorVal <span style=color:#000;font-weight:700>=</span> <span style=color:#900;font-weight:700>digitalRead</span>(<span style=color:#099>2</span>);</span></span></code></pre></div><p>Als je op de knopt drukt die is verbonden met pin 2 van de Arduino, levert
 digitalRead hier een 0 op. Als je de knop loslaat, wordt dat een 1. Die waarde
 wordt vervolgens bewaard in een variabele die ‘sensorVal’ heet (meer uitleg over
 variabelen lees je verderop).</p><figcaption>Daarom is een knop een voorbeeld van een digitale sensor: er zijn maar twee mogelijkheden. Andere
@@ -66,15 +66,15 @@ aandoen in WC’s) en ‘oogjes’ zoals bovenaan roltrappen.</figcaption><p>Dit
 wordt uitgevoerd en de knop dus continu in de gaten wordt gehouden. ‘sensorVal’
 bevat steeds de huidige stand van de knop, 1 of 0, aan of uit.</p><p>Om iets te doen met de informatie die de sensor doorgeeft, staat in de schets
 vervolgens een if-statement. Hoe dat werkt, lees je hierna</p><h2 id=if-statements>If-statements</h2><p>Om de Arduino iets te laten doen als er iets verandert, moeten we hem leren om
-vragen te stellen. Een vraag in Arduino ziet er zo uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#00f>if</span> (sensorWaarde &gt; 30) {
-</span></span><span style=display:flex><span>    <span style=color:green>// doe hier iets
-</span></span></span><span style=display:flex><span><span style=color:green></span>}</span></span></code></pre></div><p>Dit heet een if-statement. Je laat Arduino vragen: is de knop ingedrukt? Of, zoals in
+vragen te stellen. Een vraag in Arduino ziet er zo uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#000;font-weight:700>if</span> (sensorWaarde <span style=color:#000;font-weight:700>&gt;</span> <span style=color:#099>30</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>// doe hier iets
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>}</span></span></code></pre></div><p>Dit heet een if-statement. Je laat Arduino vragen: is de knop ingedrukt? Of, zoals in
 het voorbeeld hierboven: is het getal dat de sensor teruggeeft groter dan 30? Als
 het antwoord op zo’n vraag ‘ja’ is, dan voert Arduino de code uit die tussen de
-gekrulde haken staat.</p><p>In de DigitalInputPullup-schets van zojuist ziet dat er zo uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#00f>if</span> (sensorVal == HIGH) {
-</span></span><span style=display:flex><span>    digitalWrite(13, LOW);
-</span></span><span style=display:flex><span>} <span style=color:#00f>else</span> {
-</span></span><span style=display:flex><span>    digitalWrite(13, HIGH);
+gekrulde haken staat.</p><p>In de DigitalInputPullup-schets van zojuist ziet dat er zo uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#000;font-weight:700>if</span> (sensorVal <span style=color:#000;font-weight:700>==</span> HIGH) {
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>digitalWrite</span>(<span style=color:#099>13</span>, LOW);
+</span></span><span style=display:flex><span>} <span style=color:#000;font-weight:700>else</span> {
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>digitalWrite</span>(<span style=color:#099>13</span>, HIGH);
 </span></span><span style=display:flex><span>}</span></span></code></pre></div><figcaption>Door hoe we de knop hebben aangesloten, betekent ‘HIGH’ in dit geval dat de knop niet wordt ingedrukt.</figcaption><p>Hier wordt eerst gevraagd: wordt de knop ingedrukt? Als dat niet zo is, dan zetten
 we het LEDje uit, en anders zetten we het aan. Dit is dus een uitbreiding op het if-statement: met ‘else’ kunnen we
 instructies toevoegen voor het geval het antwoord op de vraag ‘nee’ is.</p><h3 id=interpunctie>Interpunctie</h3><p>Merk op dat elke haakje openen een haakje sluiten nodig heeft, dus ‘(’ en ‘)’, en ‘{’
@@ -87,8 +87,8 @@ je op de knop drukt. Dan zou het handig zijn als de Arduino zelf kon vertellen o
 ten minste ziet dat de knop wordt ingedrukt, want dat zou ons helpen te ontdekken
 wat het probleem is. Gelukkig kan de Arduino dat.</p><p>We kunnen een communicatieverbinding opzetten tussen de computer en het
 Arduino-bordje. Dat doen we door deze regel in setup() te zetten (in de
-DigitalInputPullup-schets staat dit er al):</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>Serial.begin(9600);</span></span></code></pre></div><p>In loop() zetten we direct onder de regel waar we de sensor uitlezen deze regels:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>Serial.print(<span style=color:#a31515>&#34;sensor = &#34;</span>);
-</span></span><span style=display:flex><span>Serial.println(sensorValue);</span></span></code></pre></div><p>Open vervolgens de seriële monitor door te klikken op het vergrootglasicoontje rechtsbovenaan in het venster.</p><p><img src=imgs/vergrootglasicoontje.png alt="vergrootglas icoontje"></p><p>Als de schets van de knop (DigitalInputPullup) nog steeds op de chip van de
+DigitalInputPullup-schets staat dit er al):</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>Serial.<span style=color:#900;font-weight:700>begin</span>(<span style=color:#099>9600</span>);</span></span></code></pre></div><p>In loop() zetten we direct onder de regel waar we de sensor uitlezen deze regels:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>Serial.<span style=color:#900;font-weight:700>print</span>(<span style=color:#d14>&#34;sensor = &#34;</span>);
+</span></span><span style=display:flex><span>Serial.<span style=color:#900;font-weight:700>println</span>(sensorValue);</span></span></code></pre></div><p>Open vervolgens de seriële monitor door te klikken op het vergrootglasicoontje rechtsbovenaan in het venster.</p><p><img src=imgs/vergrootglasicoontje.png alt="vergrootglas icoontje"></p><p>Als de schets van de knop (DigitalInputPullup) nog steeds op de chip van de
 Arduino staat, dan zou je nu in de seriële monitor moeten kunnen zien of de knop
 wordt ingedrukt. Als je niks ziet veranderen, dan weet je dus dat de knop het niet
 doet of niet goed is verbonden met pin 2.</p><p>De seriële verbinding is vaak enorm handig om te
@@ -120,10 +120,10 @@ geweldige feature in huis.</p><p>Open het menu Hulpmiddelen en klik op Seriële 
 monitor als dat venster nog openstaat). <em>De sneltoets-combinatie voor de seriële plotter is shift+command+L.</em></p><p>Open de schets AnalogReadSerial via het menu Bestand > Voorbeelden > 01.
 Basics > AnalogReadSerial, en upload het naar de Arduino.</p><p><img src=imgs/serielePlotter.png alt="seriële plotter"></p><p>Je zou in het venster van de seriële plotter nu een grafiek moeten zien van de veranderingen in de positie
 van de potmeter! (Of de resultaten van een andere analoge sensor, zoals bijvoorbeeld de lichtsensor.)</p><h3 id=meerdere-sensoren>Meerdere sensoren</h3><p>Als je de resultaten van meerdere sensoren in de seriële plotter wil zien, dan moet
-je zorgen dat die waardes gescheiden door tabs worden doorgestuurd:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>Serial.print(sensor1);  <span style=color:green>// waarde van de eerste sensor
-</span></span></span><span style=display:flex><span><span style=color:green></span>Serial.print(<span style=color:#a31515>&#34;,</span><span style=color:#a31515>\t</span><span style=color:#a31515>&#34;</span>);    <span style=color:green>// waardes gescheiden door komma en tab
-</span></span></span><span style=display:flex><span><span style=color:green></span>Serial.print(sensor2);  <span style=color:green>// waarde van de tweede sensor
-</span></span></span><span style=display:flex><span><span style=color:green></span>Serial.println();       <span style=color:green>// witregel
+je zorgen dat die waardes gescheiden door tabs worden doorgestuurd:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>Serial.<span style=color:#900;font-weight:700>print</span>(sensor1);  <span style=color:#998;font-style:italic>// waarde van de eerste sensor
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>Serial.<span style=color:#900;font-weight:700>print</span>(<span style=color:#d14>&#34;,</span><span style=color:#d14>\t</span><span style=color:#d14>&#34;</span>);    <span style=color:#998;font-style:italic>// waardes gescheiden door komma en tab
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>Serial.<span style=color:#900;font-weight:700>print</span>(sensor2);  <span style=color:#998;font-style:italic>// waarde van de tweede sensor
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>Serial.<span style=color:#900;font-weight:700>println</span>();       <span style=color:#998;font-style:italic>// witregel
 </span></span></span></code></pre></div><p>Het helpt om verder geen print()’s in je programma te hebben die tekst schrijven
 naar de seriele verbinding (zoals je soms wel doet om feedback van je schets te
 zien in de seriële monitor). Als je zulke print()’s met tekst wel hebt in je schets,
@@ -158,7 +158,7 @@ Als je alleen maar wil weten óf iemand in
 de buurt is (en niet per se hoe ver weg
 ze zijn), gebruik dan een PIR-sensor.</div><h2 id=variabelen>Variabelen</h2><p>Variabelen zijn woorden of letters waarmee we Arduino iets kunnen laten
 onthouden. Dat is belangrijk als we Arduino bijvoorbeeld willen laten bijhouden hoe
-vaak iets is gebeurd.</p><p>Een variabele definiëren ziet er zo uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#2b91af>int</span> aantal = 100;</span></span></code></pre></div><p>Door ‘int’ ervoor te zetten zeggen we: de variabele is een heel getal, dus geen
+vaak iets is gebeurd.</p><p>Een variabele definiëren ziet er zo uit:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#458;font-weight:700>int</span> aantal <span style=color:#000;font-weight:700>=</span> <span style=color:#099>100</span>;</span></span></code></pre></div><p>Door ‘int’ ervoor te zetten zeggen we: de variabele is een heel getal, dus geen
 decimaal. Dan geven we de variabele zijn naam. In dit geval is dat ‘aantal’, maar
 het zou net zo goed ‘x’ mogen zijn, of ‘sensorWaarde’. Meestal kiezen we een
 naam die goed duidelijk maakt wat voor informatie we willen opslaan in die
@@ -166,7 +166,7 @@ variabele. Vervolgens vertellen we de variabele wat zijn beginwaarde wordt—in 
 geval 100. Tot slot wordt de regel afgesloten met een puntkomma, net als alle
 commando&rsquo;s in Arduino.<br><em>Andere typen variabelen zijn bijvoorbeeld float (dat is wel een decimaal getal) en bool (alleen ‘true’ of 8
 ‘false’). Je vindt alle typen op <a href=https://www.arduino.cc/reference/en/>https://www.arduino.cc/reference/en/</a> onder ‘Data Types’.</em></p><p>Als je een variabele eenmaal op die manier gedefiniëerd hebt, dan kun je met die
-variabele gaan rekenen. Als we dit doen…</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>aantal = aantal + 100;</span></span></code></pre></div><p>… dan heeft ‘aantal’ nu een waarde van 200.</p><h3 id=oefening-3>Oefening</h3><p>Met variabelen kun je bijvoorbeeld ook bijhouden hoe vaak een knop is ingedrukt.
+variabele gaan rekenen. Als we dit doen…</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span>aantal <span style=color:#000;font-weight:700>=</span> aantal <span style=color:#000;font-weight:700>+</span> <span style=color:#099>100</span>;</span></span></code></pre></div><p>… dan heeft ‘aantal’ nu een waarde van 200.</p><h3 id=oefening-3>Oefening</h3><p>Met variabelen kun je bijvoorbeeld ook bijhouden hoe vaak een knop is ingedrukt.
 Je kunt daarvoor de schets DigitalInputPullup gebruiken (zie eventueel de pagina
 over digitale sensors). Probeer het eerst zelf, en lees eventueel daarna de oplossing.</p><details><summary>mogelijke oplossing</summary>
 Voeg een variabele toe bovenaan in de schets (dus nog boven setup()). Tel vervolgens steeds 1 bij op, op 9
@@ -184,32 +184,32 @@ makkelijker.
 Dus bijvoorbeeld:</p><ul><li>Sluit de potmeter aan op de Arduino</li><li>Upload het programma voor de potmeter naar de Arduino, en zorg dat je de waarden van de potmeter te zien krijgt in de seriële monitor.</li><li>Sluit vervolgens de buzzer aan (laat de potmeter aangesloten!).</li><li>Zet de software voor de buzzer op de Arduino (laat het venster met de code met de potmeter openstaan), en ga pas verder als je de buzzer hoort.</li></ul><h3 id=stap-2>Stap 2</h3><p>Nu heb je dus twee werkende programma’s,
 en die kun je gaan combineren tot één
 programma. Zet ze naast elkaar, zodat je
-beide vensters op je beeldscherm hebt.</p><figcaption>DigitalInputPullup</figcaption><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#2b91af>void</span> setup() {
-</span></span><span style=display:flex><span>    Serial.begin(9600);
-</span></span><span style=display:flex><span>    pinMode(2, INPUT_PULLUP);
-</span></span><span style=display:flex><span>    pinMode(13, OUTPUT);
+beide vensters op je beeldscherm hebt.</p><figcaption>DigitalInputPullup</figcaption><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>setup</span>() {
+</span></span><span style=display:flex><span>    Serial.<span style=color:#900;font-weight:700>begin</span>(<span style=color:#099>9600</span>);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>pinMode</span>(<span style=color:#099>2</span>, INPUT_PULLUP);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>pinMode</span>(<span style=color:#099>13</span>, OUTPUT);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> loop() {
-</span></span><span style=display:flex><span>    <span style=color:#2b91af>int</span> sensorVal = digitalRead(2);
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>loop</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#458;font-weight:700>int</span> sensorVal <span style=color:#000;font-weight:700>=</span> <span style=color:#900;font-weight:700>digitalRead</span>(<span style=color:#099>2</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (sensorVal == HIGH) {
-</span></span><span style=display:flex><span>        digitalWrite(13, LOW);
-</span></span><span style=display:flex><span>    } <span style=color:#00f>else</span> {
-</span></span><span style=display:flex><span>        digitalWrite(13, HIGH);
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span> (sensorVal <span style=color:#000;font-weight:700>==</span> HIGH) {
+</span></span><span style=display:flex><span>        <span style=color:#900;font-weight:700>digitalWrite</span>(<span style=color:#099>13</span>, LOW);
+</span></span><span style=display:flex><span>    } <span style=color:#000;font-weight:700>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#900;font-weight:700>digitalWrite</span>(<span style=color:#099>13</span>, HIGH);
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}</span></span></code></pre></div><figcaption>Sweep</figcaption><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;Servo.h&gt;</span><span style=color:#00f>
-</span></span></span><span style=display:flex><span><span style=color:#00f></span>Servo myservo;
+</span></span><span style=display:flex><span>}</span></span></code></pre></div><figcaption>Sweep</figcaption><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#999;font-weight:700;font-style:italic>#include</span> <span style=color:#999;font-weight:700;font-style:italic>&lt;Servo.h&gt;</span><span style=color:#999;font-weight:700;font-style:italic>
+</span></span></span><span style=display:flex><span><span style=color:#999;font-weight:700;font-style:italic></span>Servo myservo;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> setup() {
-</span></span><span style=display:flex><span>    myservo.attach(9);
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>setup</span>() {
+</span></span><span style=display:flex><span>    myservo.<span style=color:#900;font-weight:700>attach</span>(<span style=color:#099>9</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> loop() {
-</span></span><span style=display:flex><span>    myservo.write(10);
-</span></span><span style=display:flex><span>    delay(1000);
-</span></span><span style=display:flex><span>    myservo.write(160);
-</span></span><span style=display:flex><span>    delay(1000);
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>loop</span>() {
+</span></span><span style=display:flex><span>    myservo.<span style=color:#900;font-weight:700>write</span>(<span style=color:#099>10</span>);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>delay</span>(<span style=color:#099>1000</span>);
+</span></span><span style=display:flex><span>    myservo.<span style=color:#900;font-weight:700>write</span>(<span style=color:#099>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>delay</span>(<span style=color:#099>1000</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></div><p>In Arduino-schetsen mogen setup() en loop()
 maar één keer voorkomen. We kunnen de
 schetsen dus niet combineren door ze
@@ -217,29 +217,29 @@ simpelweg de ene onder de andere te plakken.</p><p>Kopiëer daarom de inhoud van
 accolades (gekrulde haken) meekopiëert. Let ook goed op dat je geen code boven
 of onder de accolades van setup() plaatst—de code hoort tussen { en } want anders
 werkt het niet.</p><p>Doe hetzelfde voor loop() en eventuele
-regels die nog bóven setup staan.</p><p>Voor de afgebeelde schetsen ziet dat er zo uit:</p><figcaption>Gecombineerd</figcaption><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#00f>#include</span> <span style=color:#00f>&lt;Servo.h&gt;</span><span style=color:#00f>
-</span></span></span><span style=display:flex><span><span style=color:#00f></span>Servo myservo;
+regels die nog bóven setup staan.</p><p>Voor de afgebeelde schetsen ziet dat er zo uit:</p><figcaption>Gecombineerd</figcaption><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#999;font-weight:700;font-style:italic>#include</span> <span style=color:#999;font-weight:700;font-style:italic>&lt;Servo.h&gt;</span><span style=color:#999;font-weight:700;font-style:italic>
+</span></span></span><span style=display:flex><span><span style=color:#999;font-weight:700;font-style:italic></span>Servo myservo;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> setup() {
-</span></span><span style=display:flex><span>    Serial.begin(9600);
-</span></span><span style=display:flex><span>    pinMode(2, INPUT_PULLUP);
-</span></span><span style=display:flex><span>    pinMode(13, OUTPUT);
-</span></span><span style=display:flex><span>    myservo.attach(9);
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>setup</span>() {
+</span></span><span style=display:flex><span>    Serial.<span style=color:#900;font-weight:700>begin</span>(<span style=color:#099>9600</span>);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>pinMode</span>(<span style=color:#099>2</span>, INPUT_PULLUP);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>pinMode</span>(<span style=color:#099>13</span>, OUTPUT);
+</span></span><span style=display:flex><span>    myservo.<span style=color:#900;font-weight:700>attach</span>(<span style=color:#099>9</span>);
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> loop() {
-</span></span><span style=display:flex><span>    <span style=color:#2b91af>int</span> sensorVal = digitalRead(2);
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>loop</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#458;font-weight:700>int</span> sensorVal <span style=color:#000;font-weight:700>=</span> <span style=color:#900;font-weight:700>digitalRead</span>(<span style=color:#099>2</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> (sensorVal == HIGH) {
-</span></span><span style=display:flex><span>        digitalWrite(13, LOW);
-</span></span><span style=display:flex><span>    } <span style=color:#00f>else</span> {
-</span></span><span style=display:flex><span>        digitalWrite(13, HIGH);
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span> (sensorVal <span style=color:#000;font-weight:700>==</span> HIGH) {
+</span></span><span style=display:flex><span>        <span style=color:#900;font-weight:700>digitalWrite</span>(<span style=color:#099>13</span>, LOW);
+</span></span><span style=display:flex><span>    } <span style=color:#000;font-weight:700>else</span> {
+</span></span><span style=display:flex><span>        <span style=color:#900;font-weight:700>digitalWrite</span>(<span style=color:#099>13</span>, HIGH);
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    myservo.write(10);
-</span></span><span style=display:flex><span>    delay(1000);
-</span></span><span style=display:flex><span>    myservo.write(160);
-</span></span><span style=display:flex><span>    delay(1000);
+</span></span><span style=display:flex><span>    myservo.<span style=color:#900;font-weight:700>write</span>(<span style=color:#099>10</span>);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>delay</span>(<span style=color:#099>1000</span>);
+</span></span><span style=display:flex><span>    myservo.<span style=color:#900;font-weight:700>write</span>(<span style=color:#099>160</span>);
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>delay</span>(<span style=color:#099>1000</span>);
 </span></span><span style=display:flex><span>}</span></span></code></pre></div><h3 id=stap-3>Stap 3</h3><p>Laat je nieuwe schets controleren door Arduino. Gebruik daarvoor het eerste
 icoontje, links bovenaan. Als je linksonderin ziet ‘Compileren voltooid’ dan heb je
 het samenvoegen goed gedaan! Als je een foutmelding krijgt, los het probleem dan
@@ -353,28 +353,28 @@ gebruiken. Die stopwatch heet millis(). Met die functie kunnen we in de gaten
 houden hoe lang onze schets al loopt, en op gezette tijden iets doen.</p><p>Hieronder zie je bijvoorbeeld een schets die elke drie seconden een LED aan- of
 uitzet, zónder in de tussentijd alles te blokkeren met delay().<br><em>In het Engels heet deze oplossing ook ‘non-blocking code’, code die niet blokkeert. Er is een handige
 library voor, die arduino-timer heet. Daarmee kun je meerdere ‘stopwatches’ in één schets hebben. Als je
-hem installeert (zie ‘Libraries installeren’), zie je de mogelijkheden in de bijbehorende voorbeeldschetsen.</em></p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:green>// Begintijd is het aantal milliseconden sinds het script begon.
-</span></span></span><span style=display:flex><span><span style=color:green></span><span style=color:#2b91af>int</span> begintijd = millis();
+hem installeert (zie ‘Libraries installeren’), zie je de mogelijkheden in de bijbehorende voorbeeldschetsen.</em></p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=display:flex><span><span style=color:#998;font-style:italic>// Begintijd is het aantal milliseconden sinds het script begon.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span><span style=color:#458;font-weight:700>int</span> begintijd <span style=color:#000;font-weight:700>=</span> <span style=color:#900;font-weight:700>millis</span>();
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> setup() {
-</span></span><span style=display:flex><span>    pinMode(LED_BUILTIN, OUTPUT);   <span style=color:green>// Het ingebouwde LEDje op de Arduino activeren
-</span></span></span><span style=display:flex><span><span style=color:green></span>}
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>setup</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#900;font-weight:700>pinMode</span>(LED_BUILTIN, OUTPUT);   <span style=color:#998;font-style:italic>// Het ingebouwde LEDje op de Arduino activeren
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#2b91af>void</span> loop() {
-</span></span><span style=display:flex><span>    <span style=color:#00f>if</span> ((millis() - begintijd) &gt; 3000) {    <span style=color:green>// Zijn er al 3 seconden verstreken?
-</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:green>// Zo ja, doe dan dit:
-</span></span></span><span style=display:flex><span><span style=color:green></span>
-</span></span><span style=display:flex><span>        <span style=color:green>// verander de LED naar aan of uit
-</span></span></span><span style=display:flex><span><span style=color:green></span>        <span style=color:green>// (het uitroepteken betekent &#39;maak er van wat hij nu NIET is&#39;)
-</span></span></span><span style=display:flex><span><span style=color:green></span>        digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN) );
+</span></span><span style=display:flex><span><span style=color:#458;font-weight:700>void</span> <span style=color:#900;font-weight:700>loop</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>if</span> ((<span style=color:#900;font-weight:700>millis</span>() <span style=color:#000;font-weight:700>-</span> begintijd) <span style=color:#000;font-weight:700>&gt;</span> <span style=color:#099>3000</span>) {    <span style=color:#998;font-style:italic>// Zijn er al 3 seconden verstreken?
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        <span style=color:#998;font-style:italic>// Zo ja, doe dan dit:
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>// verander de LED naar aan of uit
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        <span style=color:#998;font-style:italic>// (het uitroepteken betekent &#39;maak er van wat hij nu NIET is&#39;)
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        <span style=color:#900;font-weight:700>digitalWrite</span>(LED_BUILTIN, <span style=color:#000;font-weight:700>!</span><span style=color:#900;font-weight:700>digitalRead</span>(LED_BUILTIN) );
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:green>// reset de stopwatch: verander begintijd naar het aantal milliseconden NU
-</span></span></span><span style=display:flex><span><span style=color:green></span>        begintijd = millis();
+</span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>// reset de stopwatch: verander begintijd naar het aantal milliseconden NU
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>        begintijd <span style=color:#000;font-weight:700>=</span> <span style=color:#900;font-weight:700>millis</span>();
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:green>// Nu kunnen we hier andere dingen doen, zoals motortjes laten draaien, of in 
-</span></span></span><span style=display:flex><span><span style=color:green></span>    <span style=color:green>// de gaten houden of knoppen worden ingedrukt, zónder te wachten op delays.
-</span></span></span><span style=display:flex><span><span style=color:green></span>}</span></span></code></pre></div><h3 id=wat-je-kunt-meten-en-doen-met-arduino>Wat je kunt meten en doen met Arduino</h3><table><thead><tr><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr><td>Afstandssensor</td><td>Licht: lampen, lasers, LEDs, EL wire, glasvezel</td></tr><tr><td>Accelerometer</td><td>Geluid: speakers, transducers, versterkers, MP3-spelers<br><em>Er zijn er verschillende, maar deze is goedkoop en gemakkelijk aan te sluiten: <a href=https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299>https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299</a></em></td></tr><tr><td>Gyroscoop</td><td>Motoren: servo’s, heel precieze stappenmotoren, hele snelle DCmotoren, heel sterke gear motors, trilmotors, lineaire actuatoren, ventilatoren.</td></tr><tr><td>Kompas</td><td>Solenoids</td></tr><tr><td>Temperatuur</td><td>Elektromagneten, ferrofluids</td></tr><tr><td>Relatieve luchtvochtigheid</td><td>Video (animaties, video’s, VR/AR)</td></tr><tr><td>Vochtsensor (planten water geven!)</td><td>LCD-display (zoals in snoepautomaten)</td></tr><tr><td>Barometer</td><td>Pomp (bijv. om het te laten regenen of een beeld te laten huilen)</td></tr><tr><td>Lichtsensor</td><td>Metaal dat van vorm verandert</td></tr><tr><td>Kleurensensor</td><td>Warmte- en koel-elementen</td></tr><tr><td>Draaiknoppen en lineaire potmeters (zoals de schuiven op mengpanelen)</td><td>Rookmachine</td></tr><tr><td>Microfoons (of andere audio-signalen)</td><td>Website of sociale media (automatisch informatie posten op basis van sensorgegevens)</td></tr><tr><td>Aanraking</td><td></td></tr><tr><td>Schakelaars</td><td></td></tr><tr><td>Keyboard en muis</td><td></td></tr><tr><td>Vingerafdruk</td><td></td></tr><tr><td>Camera’s</td><td></td></tr><tr><td>Bewegingssensor</td><td></td></tr><tr><td>Infrarood-ontvanger (je project besturen met afstandsbediening!)</td><td></td></tr><tr><td>Hartslag<br><em>Sommige hartslagsensors werken amper. Deze is wat duurder, maar geeft wel redelijk goede meetresultaten: <a href=https://www.kiwi-electronics.nl/pim-438>https://www.kiwi-electronics.nl/pim-438</a></em></td><td></td></tr><tr><td>Rook</td><td></td></tr><tr><td>Gas</td><td></td></tr><tr><td>Straling</td><td></td></tr><tr><td>Vlammendetector</td><td></td></tr><tr><td>Magneetvelden</td><td></td></tr><tr><td>Trilling</td><td></td></tr><tr><td>Buigsensor</td><td></td></tr><tr><td>Stroming</td><td></td></tr><tr><td>Hersenactiviteit</td><td></td></tr></tbody></table><p><img src=imgs/ArduinoOnderdelen.png alt="Arduino onderdelen"></p><p>Dit is zeker geen complete lijst, maar je ziet vast zo al dat de mogelijkheden
+</span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>// Nu kunnen we hier andere dingen doen, zoals motortjes laten draaien, of in 
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>    <span style=color:#998;font-style:italic>// de gaten houden of knoppen worden ingedrukt, zónder te wachten op delays.
+</span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic></span>}</span></span></code></pre></div><h3 id=wat-je-kunt-meten-en-doen-met-arduino>Wat je kunt meten en doen met Arduino</h3><table><thead><tr><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr><td>Afstandssensor</td><td>Licht: lampen, lasers, LEDs, EL wire, glasvezel</td></tr><tr><td>Accelerometer</td><td>Geluid: speakers, transducers, versterkers, MP3-spelers<br><em>Er zijn er verschillende, maar deze is goedkoop en gemakkelijk aan te sluiten: <a href=https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299>https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299</a></em></td></tr><tr><td>Gyroscoop</td><td>Motoren: servo’s, heel precieze stappenmotoren, hele snelle DCmotoren, heel sterke gear motors, trilmotors, lineaire actuatoren, ventilatoren.</td></tr><tr><td>Kompas</td><td>Solenoids</td></tr><tr><td>Temperatuur</td><td>Elektromagneten, ferrofluids</td></tr><tr><td>Relatieve luchtvochtigheid</td><td>Video (animaties, video’s, VR/AR)</td></tr><tr><td>Vochtsensor (planten water geven!)</td><td>LCD-display (zoals in snoepautomaten)</td></tr><tr><td>Barometer</td><td>Pomp (bijv. om het te laten regenen of een beeld te laten huilen)</td></tr><tr><td>Lichtsensor</td><td>Metaal dat van vorm verandert</td></tr><tr><td>Kleurensensor</td><td>Warmte- en koel-elementen</td></tr><tr><td>Draaiknoppen en lineaire potmeters (zoals de schuiven op mengpanelen)</td><td>Rookmachine</td></tr><tr><td>Microfoons (of andere audio-signalen)</td><td>Website of sociale media (automatisch informatie posten op basis van sensorgegevens)</td></tr><tr><td>Aanraking</td><td></td></tr><tr><td>Schakelaars</td><td></td></tr><tr><td>Keyboard en muis</td><td></td></tr><tr><td>Vingerafdruk</td><td></td></tr><tr><td>Camera’s</td><td></td></tr><tr><td>Bewegingssensor</td><td></td></tr><tr><td>Infrarood-ontvanger (je project besturen met afstandsbediening!)</td><td></td></tr><tr><td>Hartslag<br><em>Sommige hartslagsensors werken amper. Deze is wat duurder, maar geeft wel redelijk goede meetresultaten: <a href=https://www.kiwi-electronics.nl/pim-438>https://www.kiwi-electronics.nl/pim-438</a></em></td><td></td></tr><tr><td>Rook</td><td></td></tr><tr><td>Gas</td><td></td></tr><tr><td>Straling</td><td></td></tr><tr><td>Vlammendetector</td><td></td></tr><tr><td>Magneetvelden</td><td></td></tr><tr><td>Trilling</td><td></td></tr><tr><td>Buigsensor</td><td></td></tr><tr><td>Stroming</td><td></td></tr><tr><td>Hersenactiviteit</td><td></td></tr></tbody></table><p><img src=imgs/ArduinoOnderdelen.png alt="Arduino onderdelen"></p><p>Dit is zeker geen complete lijst, maar je ziet vast zo al dat de mogelijkheden
 eindeloos zijn. Welke combinaties van inputs en outputs lijken jou interessant?</p><h2 id=licentie>Licentie</h2><p>Deze handleiding is geschreven door Jaap Meijers (instructeur/beheerder van het
 Hacklab van de Koninklijke Academie van Beeldende Kunsten in Den Haag en mentor van <a href=https://coderdojo-nijmegen.nl>CoderDojo Nijmegen</a>) en
 gepubliceerd in mei 2021 onder de <a href=https://creativecommons.org/licenses/by/4.0/deed.nl>Creative Commons Attribution 4.0 Internationallicentie</a>.

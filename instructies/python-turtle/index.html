@@ -212,350 +212,350 @@ commando&rsquo;s ken je nog niet? Snap je waar ze voor bedoeld zijn?</p><pre><co
 &gt;&gt;&gt; hideturtle()
 </code></pre><p><em>Tip:</em> hideturtle() is ook een handig commando bij het stempelen. Om de turtle
 weer te tonen gebruik je showturtle().</p><h2 id=opdrachten-2>Opdrachten</h2><p>Probeer de onderstaande tekeningen na te maken, of bedenk je eigen tekeningen.</p><h3 id=opdracht-3-a>Opdracht 3-A</h3><p><em>Schildpadden in een zandbak</em></p><p><img src=images/o3a.png alt=schildpadjes></p><h3 id=opdracht-3-b>Opdracht 3-B</h3><p><em>Een analoge klok.</em></p><p><img src=images/o3b.png alt="analoge klok"></p><p>Challenge: als je de wijzers een bepaalde stand in wil laten nemen,
-kan je hiervoor de volgende functies gebruiken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>def</span> uren_naar_hoek(uren):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;uren&#34; aan moet geven. &#34;&#34;&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> - (uren / 12.0) * 360 + 90
+kan je hiervoor de volgende functies gebruiken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>uren_naar_hoek</span>(uren):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;uren&#34; aan moet geven. &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>return</span> <span style=color:#000;font-weight:700>-</span> (uren <span style=color:#000;font-weight:700>/</span> <span style=color:#099>12.0</span>) <span style=color:#000;font-weight:700>*</span> <span style=color:#099>360</span> <span style=color:#000;font-weight:700>+</span> <span style=color:#099>90</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> minuten_naar_hoek(minuten):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;minuten&#34; aan moet geven. &#34;&#34;&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> - (minuten / 60.0) * 360 + 90
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>minuten_naar_hoek</span>(minuten):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;minuten&#34; aan moet geven. &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>return</span> <span style=color:#000;font-weight:700>-</span> (minuten <span style=color:#000;font-weight:700>/</span> <span style=color:#099>60.0</span>) <span style=color:#000;font-weight:700>*</span> <span style=color:#099>360</span> <span style=color:#000;font-weight:700>+</span> <span style=color:#099>90</span>
 </span></span><span style=display:flex><span>    </span></span></code></pre></div><p>De hoek kan je vervolgens aan setheading() geven.</p><h3 id=opdracht-3-c>Opdracht 3-C</h3><p><em>Een ruiten drie speelkaart. <sup>Maar: er klopt iets niet helemaal!</sup></em></p><p><img src=images/o3c.png alt="ruiten drie"></p><p>De kaart bevat twee vormen die meerdere keren herhaald worden: de ruit en het getal drie.
 Als je bekend bent met functies, kan het handig zijn om deze hier te gebruiken.
 Daarnaast kan je natuurlijk ook een ruiten een kaart maken,
-als je de circle() functie nog lastig vindt.</p><h2 id=antwoorden>Antwoorden</h2><div class=toggle><div class=toggle_header>Mocht je er niet uitkomen, dan kun je hier klikken voor antwoorden.</div><div style=display:none>Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeelduitwerkingen:<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    <span style=color:#00f>from</span> turtle <span style=color:#00f>import</span> *
-</span></span><span style=display:flex><span>    </span></span></code></pre></div><h2>Deel 1</h2><h3>Opdracht 1-A</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;green&#39;</span>)
-</span></span><span style=display:flex><span>    width(5)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)</span></span></code></pre></div><h3>Opdracht 1-B</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;yellow&#39;</span>)
-</span></span><span style=display:flex><span>    width(3)
-</span></span><span style=display:flex><span>    left(90)
+als je de circle() functie nog lastig vindt.</p><h2 id=antwoorden>Antwoorden</h2><div class=toggle><div class=toggle_header>Mocht je er niet uitkomen, dan kun je hier klikken voor antwoorden.</div><div style=display:none>Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeelduitwerkingen:<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    <span style=color:#000;font-weight:700>from</span> <span style=color:#555>turtle</span> <span style=color:#000;font-weight:700>import</span> <span style=color:#000;font-weight:700>*</span>
+</span></span><span style=display:flex><span>    </span></span></code></pre></div><h2>Deel 1</h2><h3>Opdracht 1-A</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;green&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>5</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)</span></span></code></pre></div><h3>Opdracht 1-B</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;yellow&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>3</span>)
+</span></span><span style=display:flex><span>    left(<span style=color:#099>90</span>)
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    forward(50)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(200)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(200)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(50)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>50</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>200</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>200</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>50</span>)
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;lightblue&#39;</span>)
-</span></span><span style=display:flex><span>    width(1)
-</span></span><span style=display:flex><span>    right(45)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)</span></span></code></pre></div><h3>Opdracht 1-C</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;darkkhaki&#39;</span>)
-</span></span><span style=display:flex><span>    width(5)
-</span></span><span style=display:flex><span>    forward(200)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(200)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;lightblue&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>1</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>45</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)</span></span></code></pre></div><h3>Opdracht 1-C</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;darkkhaki&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>5</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>200</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>200</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;red&#39;</span>)
-</span></span><span style=display:flex><span>    width(2)
-</span></span><span style=display:flex><span>    right(45)
-</span></span><span style=display:flex><span>    forward(100)
-</span></span><span style=display:flex><span>    right(90)
-</span></span><span style=display:flex><span>    forward(100)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;red&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>2</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>45</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;darkkhaki&#39;</span>)
-</span></span><span style=display:flex><span>    right(45)
-</span></span><span style=display:flex><span>    forward(100)</span></span></code></pre></div><h2>Deel 2</h2><h3>Opdracht 2-A</h3>Tip: 12 x 150 = 1800, en 1800 / 360 = 5.
-Omdat 1800 deelbaar is door 360, komen de hoeken precies goed uit voor een ster.<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;lightblue&#39;</span>)
-</span></span><span style=display:flex><span>    width(3)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;darkkhaki&#39;</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>45</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>100</span>)</span></span></code></pre></div><h2>Deel 2</h2><h3>Opdracht 2-A</h3>Tip: 12 x 150 = 1800, en 1800 / 360 = 5.
+Omdat 1800 deelbaar is door 360, komen de hoeken precies goed uit voor een ster.<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;lightblue&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>3</span>)
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> i <span style=color:#00f>in</span> range(12):
-</span></span><span style=display:flex><span>        forward(100)
-</span></span><span style=display:flex><span>        right(150)</span></span></code></pre></div><h3>Opdracht 2-B</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;lightblue&#39;</span>)
-</span></span><span style=display:flex><span>    width(3)
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> i <span style=color:#00f>in</span> range(4):
-</span></span><span style=display:flex><span>        <span style=color:#00f>for</span> j <span style=color:#00f>in</span> range(3):
-</span></span><span style=display:flex><span>            forward(100)
-</span></span><span style=display:flex><span>            right(120)
-</span></span><span style=display:flex><span>        right(90)</span></span></code></pre></div><h3>Opdracht 2-C</h3>Tip: In plaats van 360 en 1 kan je ook andere getallen kiezen.
-Zorg dat deze keer elkaar 360 zijn.<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;lightblue&#39;</span>)
-</span></span><span style=display:flex><span>    width(3)
-</span></span><span style=display:flex><span>    <span style=color:#00f>for</span> i <span style=color:#00f>in</span> range(360):
-</span></span><span style=display:flex><span>        forward(2)
-</span></span><span style=display:flex><span>        right(1)</span></span></code></pre></div><h2>Deel 3</h2><h3>Opdracht 3-A</h3>In deze voorbeelduitwerking staan 2 stempels.
-Je kan er zelf nog een paar toevoegen als je wil!<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#a31515>&#39;black&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;yellow&#39;</span>)
-</span></span><span style=display:flex><span>    width(5)
-</span></span><span style=display:flex><span>    fillcolor(<span style=color:#a31515>&#39;lightyellow&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#0086b3>range</span>(<span style=color:#099>12</span>):
+</span></span><span style=display:flex><span>        forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>        right(<span style=color:#099>150</span>)</span></span></code></pre></div><h3>Opdracht 2-B</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;lightblue&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>3</span>)
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#0086b3>range</span>(<span style=color:#099>4</span>):
+</span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>for</span> j <span style=color:#000;font-weight:700>in</span> <span style=color:#0086b3>range</span>(<span style=color:#099>3</span>):
+</span></span><span style=display:flex><span>            forward(<span style=color:#099>100</span>)
+</span></span><span style=display:flex><span>            right(<span style=color:#099>120</span>)
+</span></span><span style=display:flex><span>        right(<span style=color:#099>90</span>)</span></span></code></pre></div><h3>Opdracht 2-C</h3>Tip: In plaats van 360 en 1 kan je ook andere getallen kiezen.
+Zorg dat deze keer elkaar 360 zijn.<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;lightblue&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>3</span>)
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#0086b3>range</span>(<span style=color:#099>360</span>):
+</span></span><span style=display:flex><span>        forward(<span style=color:#099>2</span>)
+</span></span><span style=display:flex><span>        right(<span style=color:#099>1</span>)</span></span></code></pre></div><h2>Deel 3</h2><h3>Opdracht 3-A</h3>In deze voorbeelduitwerking staan 2 stempels.
+Je kan er zelf nog een paar toevoegen als je wil!<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>    bgcolor(<span style=color:#d14>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;yellow&#39;</span>)
+</span></span><span style=display:flex><span>    width(<span style=color:#099>5</span>)
+</span></span><span style=display:flex><span>    fillcolor(<span style=color:#d14>&#39;lightyellow&#39;</span>)
 </span></span><span style=display:flex><span>    begin_fill()
-</span></span><span style=display:flex><span>    setpos(0,200)
-</span></span><span style=display:flex><span>    setpos(200,200)
-</span></span><span style=display:flex><span>    setpos(200,0)
-</span></span><span style=display:flex><span>    setpos(0,0)
+</span></span><span style=display:flex><span>    setpos(<span style=color:#099>0</span>,<span style=color:#099>200</span>)
+</span></span><span style=display:flex><span>    setpos(<span style=color:#099>200</span>,<span style=color:#099>200</span>)
+</span></span><span style=display:flex><span>    setpos(<span style=color:#099>200</span>,<span style=color:#099>0</span>)
+</span></span><span style=display:flex><span>    setpos(<span style=color:#099>0</span>,<span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>    end_fill()
 </span></span><span style=display:flex><span>    
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    setpos(50,50)
-</span></span><span style=display:flex><span>    shape(<span style=color:#a31515>&#39;turtle&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;green&#39;</span>)
-</span></span><span style=display:flex><span>    stempel1 = stamp()
+</span></span><span style=display:flex><span>    setpos(<span style=color:#099>50</span>,<span style=color:#099>50</span>)
+</span></span><span style=display:flex><span>    shape(<span style=color:#d14>&#39;turtle&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;green&#39;</span>)
+</span></span><span style=display:flex><span>    stempel1 <span style=color:#000;font-weight:700>=</span> stamp()
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    setpos(84,129)
-</span></span><span style=display:flex><span>    right(120)
-</span></span><span style=display:flex><span>    shape(<span style=color:#a31515>&#39;turtle&#39;</span>)
-</span></span><span style=display:flex><span>    color(<span style=color:#a31515>&#39;blue&#39;</span>)
-</span></span><span style=display:flex><span>    stempel2 = stamp()
-</span></span><span style=display:flex><span>    </span></span></code></pre></div><h3>Opdracht 3-B</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#00f>def</span> uren_naar_hoek(uren):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;uren&#34; aan moet geven. &#34;&#34;&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> - (uren / 12.0) * 360 + 90
+</span></span><span style=display:flex><span>    setpos(<span style=color:#099>84</span>,<span style=color:#099>129</span>)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>120</span>)
+</span></span><span style=display:flex><span>    shape(<span style=color:#d14>&#39;turtle&#39;</span>)
+</span></span><span style=display:flex><span>    color(<span style=color:#d14>&#39;blue&#39;</span>)
+</span></span><span style=display:flex><span>    stempel2 <span style=color:#000;font-weight:700>=</span> stamp()
+</span></span><span style=display:flex><span>    </span></span></code></pre></div><h3>Opdracht 3-B</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>uren_naar_hoek</span>(uren):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;uren&#34; aan moet geven. &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>return</span> <span style=color:#000;font-weight:700>-</span> (uren <span style=color:#000;font-weight:700>/</span> <span style=color:#099>12.0</span>) <span style=color:#000;font-weight:700>*</span> <span style=color:#099>360</span> <span style=color:#000;font-weight:700>+</span> <span style=color:#099>90</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> minuten_naar_hoek(minuten):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;minuten&#34; aan moet geven. &#34;&#34;&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#00f>return</span> - (minuten / 60.0) * 360 + 90
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>minuten_naar_hoek</span>(minuten):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;Geeft de hoek voor de wijzer die &#34;minuten&#34; aan moet geven. &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>return</span> <span style=color:#000;font-weight:700>-</span> (minuten <span style=color:#000;font-weight:700>/</span> <span style=color:#099>60.0</span>) <span style=color:#000;font-weight:700>*</span> <span style=color:#099>360</span> <span style=color:#000;font-weight:700>+</span> <span style=color:#099>90</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># De radius van de circel voor de klok.</span>
-</span></span><span style=display:flex><span>radius = 100
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De radius van de circel voor de klok.</span>
+</span></span><span style=display:flex><span>radius <span style=color:#000;font-weight:700>=</span> <span style=color:#099>100</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Voer hier de beoogde tijd in. Je kan de hoeken natuurlijk ook op gevoel kiezen! </span>
-</span></span><span style=display:flex><span>minuten = 45  <span style=color:green># 45 / 60</span>
-</span></span><span style=display:flex><span>uren    = 12  <span style=color:green># 12 / 12</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Voer hier de beoogde tijd in. Je kan de hoeken natuurlijk ook op gevoel kiezen! </span>
+</span></span><span style=display:flex><span>minuten <span style=color:#000;font-weight:700>=</span> <span style=color:#099>45</span>  <span style=color:#998;font-style:italic># 45 / 60</span>
+</span></span><span style=display:flex><span>uren    <span style=color:#000;font-weight:700>=</span> <span style=color:#099>12</span>  <span style=color:#998;font-style:italic># 12 / 12</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Maak de omgeving in orde.</span>
-</span></span><span style=display:flex><span>speed(<span style=color:#a31515>&#39;fastest&#39;</span>)
-</span></span><span style=display:flex><span>bgcolor(<span style=color:#a31515>&#39;white&#39;</span>)
-</span></span><span style=display:flex><span>color(<span style=color:#a31515>&#39;black&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Maak de omgeving in orde.</span>
+</span></span><span style=display:flex><span>speed(<span style=color:#d14>&#39;fastest&#39;</span>)
+</span></span><span style=display:flex><span>bgcolor(<span style=color:#d14>&#39;white&#39;</span>)
+</span></span><span style=display:flex><span>color(<span style=color:#d14>&#39;black&#39;</span>)
 </span></span><span style=display:flex><span>penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Start met het tekenen van een circel en een twaalfhoek.</span>
-</span></span><span style=display:flex><span>width(5)
-</span></span><span style=display:flex><span>setpos(0, -radius)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Start met het tekenen van een circel en een twaalfhoek.</span>
+</span></span><span style=display:flex><span>width(<span style=color:#099>5</span>)
+</span></span><span style=display:flex><span>setpos(<span style=color:#099>0</span>, <span style=color:#000;font-weight:700>-</span>radius)
 </span></span><span style=display:flex><span>pendown()
-</span></span><span style=display:flex><span>circle(radius, 360, 360)
-</span></span><span style=display:flex><span>circle(radius, 360, 12)
+</span></span><span style=display:flex><span>circle(radius, <span style=color:#099>360</span>, <span style=color:#099>360</span>)
+</span></span><span style=display:flex><span>circle(radius, <span style=color:#099>360</span>, <span style=color:#099>12</span>)
 </span></span><span style=display:flex><span>penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Vervolgens tekenen we de kleine wijzer, op basis van &#34;uren&#34;.</span>
-</span></span><span style=display:flex><span>setpos(0, 0)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Vervolgens tekenen we de kleine wijzer, op basis van &#34;uren&#34;.</span>
+</span></span><span style=display:flex><span>setpos(<span style=color:#099>0</span>, <span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>setheading(minuten_naar_hoek(minuten))
 </span></span><span style=display:flex><span>pendown()
-</span></span><span style=display:flex><span>forward(.8 * radius)
-</span></span><span style=display:flex><span>stempel0 = stamp()
+</span></span><span style=display:flex><span>forward(<span style=color:#099>.8</span> <span style=color:#000;font-weight:700>*</span> radius)
+</span></span><span style=display:flex><span>stempel0 <span style=color:#000;font-weight:700>=</span> stamp()
 </span></span><span style=display:flex><span>penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># De grote wijzer tekenen we op een soortgelijke manier.</span>
-</span></span><span style=display:flex><span>setpos(0, 0)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De grote wijzer tekenen we op een soortgelijke manier.</span>
+</span></span><span style=display:flex><span>setpos(<span style=color:#099>0</span>, <span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>setheading(uren_naar_hoek(uren))
 </span></span><span style=display:flex><span>pendown()
-</span></span><span style=display:flex><span>forward(.5 * radius)
-</span></span><span style=display:flex><span>stempel1 = stamp()
+</span></span><span style=display:flex><span>forward(<span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> radius)
+</span></span><span style=display:flex><span>stempel1 <span style=color:#000;font-weight:700>=</span> stamp()
 </span></span><span style=display:flex><span>penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Challenges:</span>
-</span></span><span style=display:flex><span><span style=color:green># - voeg een secondewijzer toe;</span>
-</span></span><span style=display:flex><span><span style=color:green># - voeg (enkele) getallen toe;</span>
-</span></span><span style=display:flex><span><span style=color:green># - voeg streepjes voor uren aan de buitenrand toe.</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Challenges:</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># - voeg een secondewijzer toe;</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># - voeg (enkele) getallen toe;</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># - voeg streepjes voor uren aan de buitenrand toe.</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>done()
-</span></span><span style=display:flex><span>    </span></span></code></pre></div><h3>Opdracht 3-C</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>speed(<span style=color:#a31515>&#39;fastest&#39;</span>)
+</span></span><span style=display:flex><span>    </span></span></code></pre></div><h3>Opdracht 3-C</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>speed(<span style=color:#d14>&#39;fastest&#39;</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_ruit(midden_x, midden_y, radius):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;Teken een ruit met radius: radius. &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_ruit</span>(midden_x, midden_y, radius):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;Teken een ruit met radius: radius. &#34;&#34;&#34;</span>
 </span></span><span style=display:flex><span>    penup()
-</span></span><span style=display:flex><span>    setpos(midden_x, midden_y-radius)
-</span></span><span style=display:flex><span>    setheading(0)
+</span></span><span style=display:flex><span>    setpos(midden_x, midden_y<span style=color:#000;font-weight:700>-</span>radius)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
 </span></span><span style=display:flex><span>    begin_fill()
-</span></span><span style=display:flex><span>    circle(radius, 360, 4)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>360</span>, <span style=color:#099>4</span>)
 </span></span><span style=display:flex><span>    end_fill()
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_drie(midden_x, midden_y, radius):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Van belang: circle draait linksom.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_drie</span>(midden_x, midden_y, radius):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Van belang: circle draait linksom.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    &#34;&#34;&#34;</span>
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>    setpos(midden_x, midden_y)
-</span></span><span style=display:flex><span>    setheading(0)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    circle(radius, 270)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    setpos(midden_x-radius, midden_y-radius)
-</span></span><span style=display:flex><span>    setheading(270)
+</span></span><span style=display:flex><span>    setpos(midden_x<span style=color:#000;font-weight:700>-</span>radius, midden_y<span style=color:#000;font-weight:700>-</span>radius)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    circle(radius, 270)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># De hoogte en breedte van de kaart.</span>
-</span></span><span style=display:flex><span>hoogte = 400
-</span></span><span style=display:flex><span>breedte = 250
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De hoogte en breedte van de kaart.</span>
+</span></span><span style=display:flex><span>hoogte <span style=color:#000;font-weight:700>=</span> <span style=color:#099>400</span>
+</span></span><span style=display:flex><span>breedte <span style=color:#000;font-weight:700>=</span> <span style=color:#099>250</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># De radius van de ruiten op de kaart.</span>
-</span></span><span style=display:flex><span>ruit_radius_groot = 40
-</span></span><span style=display:flex><span>ruit_radius_klein = 10
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De radius van de ruiten op de kaart.</span>
+</span></span><span style=display:flex><span>ruit_radius_groot <span style=color:#000;font-weight:700>=</span> <span style=color:#099>40</span>
+</span></span><span style=display:flex><span>ruit_radius_klein <span style=color:#000;font-weight:700>=</span> <span style=color:#099>10</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># De radius van de circels van de drie op de kaart.</span>
-</span></span><span style=display:flex><span>drie_radius = 10
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De radius van de circels van de drie op de kaart.</span>
+</span></span><span style=display:flex><span>drie_radius <span style=color:#000;font-weight:700>=</span> <span style=color:#099>10</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Teken de omtrek van de kaart.</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Teken de omtrek van de kaart.</span>
 </span></span><span style=display:flex><span>penup()
-</span></span><span style=display:flex><span>setpos(-.5 * breedte, .5 * hoogte)
+</span></span><span style=display:flex><span>setpos(<span style=color:#000;font-weight:700>-</span><span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte, <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte)
 </span></span><span style=display:flex><span>pendown()
-</span></span><span style=display:flex><span><span style=color:#00f>for</span> i <span style=color:#00f>in</span> range(2):
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>for</span> i <span style=color:#000;font-weight:700>in</span> <span style=color:#0086b3>range</span>(<span style=color:#099>2</span>):
 </span></span><span style=display:flex><span>    forward(breedte)
-</span></span><span style=display:flex><span>    right(90)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
 </span></span><span style=display:flex><span>    forward(hoogte)
-</span></span><span style=display:flex><span>    right(90)
+</span></span><span style=display:flex><span>    right(<span style=color:#099>90</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Vanaf hier kleuren we alles rood.</span>
-</span></span><span style=display:flex><span>color(<span style=color:#a31515>&#39;red&#39;</span>)
-</span></span><span style=display:flex><span>fillcolor(<span style=color:#a31515>&#39;red&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Vanaf hier kleuren we alles rood.</span>
+</span></span><span style=display:flex><span>color(<span style=color:#d14>&#39;red&#39;</span>)
+</span></span><span style=display:flex><span>fillcolor(<span style=color:#d14>&#39;red&#39;</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># De ruit in het midden:</span>
-</span></span><span style=display:flex><span>teken_ruit(0, 0, ruit_radius_groot)
-</span></span><span style=display:flex><span><span style=color:green># De ruit aan de bovenkant, op een afstand van 20 van de ruit in het midden:</span>
-</span></span><span style=display:flex><span>teken_ruit(0,  2 * ruit_radius_groot + 20, ruit_radius_groot)
-</span></span><span style=display:flex><span><span style=color:green># De ruit aan de onderkant, op een afstand van 20 van de ruit in het midden:</span>
-</span></span><span style=display:flex><span>teken_ruit(0, -2 * ruit_radius_groot - 20, ruit_radius_groot)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De ruit in het midden:</span>
+</span></span><span style=display:flex><span>teken_ruit(<span style=color:#099>0</span>, <span style=color:#099>0</span>, ruit_radius_groot)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De ruit aan de bovenkant, op een afstand van 20 van de ruit in het midden:</span>
+</span></span><span style=display:flex><span>teken_ruit(<span style=color:#099>0</span>,  <span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> ruit_radius_groot <span style=color:#000;font-weight:700>+</span> <span style=color:#099>20</span>, ruit_radius_groot)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De ruit aan de onderkant, op een afstand van 20 van de ruit in het midden:</span>
+</span></span><span style=display:flex><span>teken_ruit(<span style=color:#099>0</span>, <span style=color:#000;font-weight:700>-</span><span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> ruit_radius_groot <span style=color:#000;font-weight:700>-</span> <span style=color:#099>20</span>, ruit_radius_groot)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Het getal drie in de hoek linksboven.</span>
-</span></span><span style=display:flex><span><span style=color:green># De afstanden tot de omtrek kan je eventueel nog op &#39;drie_radius&#39; afstemmen.</span>
-</span></span><span style=display:flex><span>width(5)
-</span></span><span style=display:flex><span>teken_drie(-.5 * breedte + 15,  .5 * hoogte - 25, drie_radius)
-</span></span><span style=display:flex><span>teken_drie( .5 * breedte - 15, -.5 * hoogte + 25, drie_radius)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Het getal drie in de hoek linksboven.</span>
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># De afstanden tot de omtrek kan je eventueel nog op &#39;drie_radius&#39; afstemmen.</span>
+</span></span><span style=display:flex><span>width(<span style=color:#099>5</span>)
+</span></span><span style=display:flex><span>teken_drie(<span style=color:#000;font-weight:700>-</span><span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte <span style=color:#000;font-weight:700>+</span> <span style=color:#099>15</span>,  <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte <span style=color:#000;font-weight:700>-</span> <span style=color:#099>25</span>, drie_radius)
+</span></span><span style=display:flex><span>teken_drie( <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte <span style=color:#000;font-weight:700>-</span> <span style=color:#099>15</span>, <span style=color:#000;font-weight:700>-</span><span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte <span style=color:#000;font-weight:700>+</span> <span style=color:#099>25</span>, drie_radius)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Extra: de kleine ruiten onder- en boven de getallen:</span>
-</span></span><span style=display:flex><span>teken_ruit(-.5 * breedte + 15,  .5 * hoogte - 65, ruit_radius_klein)
-</span></span><span style=display:flex><span>teken_ruit( .5 * breedte - 15, -.5 * hoogte + 65, ruit_radius_klein)
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Extra: de kleine ruiten onder- en boven de getallen:</span>
+</span></span><span style=display:flex><span>teken_ruit(<span style=color:#000;font-weight:700>-</span><span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte <span style=color:#000;font-weight:700>+</span> <span style=color:#099>15</span>,  <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte <span style=color:#000;font-weight:700>-</span> <span style=color:#099>65</span>, ruit_radius_klein)
+</span></span><span style=display:flex><span>teken_ruit( <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte <span style=color:#000;font-weight:700>-</span> <span style=color:#099>15</span>, <span style=color:#000;font-weight:700>-</span><span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte <span style=color:#000;font-weight:700>+</span> <span style=color:#099>65</span>, ruit_radius_klein)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>setpos(0, 0)
+</span></span><span style=display:flex><span>setpos(<span style=color:#099>0</span>, <span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>done()
-</span></span><span style=display:flex><span>    </span></span></code></pre></div><h3>Extra: getallen 0, 1, 2, 3, 4 tekenen.</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>speed(<span style=color:#a31515>&#39;fastest&#39;</span>)
+</span></span><span style=display:flex><span>    </span></span></code></pre></div><h3>Extra: getallen 0, 1, 2, 3, 4 tekenen.</h3><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>speed(<span style=color:#d14>&#39;fastest&#39;</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_nul(midden_x, midden_y, radius):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Teken een nul met hoogte: 2 * diameter, breedte: diameter.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_nul</span>(midden_x, midden_y, radius):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Teken een nul met hoogte: 2 * diameter, breedte: diameter.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    &#34;&#34;&#34;</span>
 </span></span><span style=display:flex><span>    penup()
-</span></span><span style=display:flex><span>    setpos(midden_x + radius, midden_y + radius)
-</span></span><span style=display:flex><span>    setheading(90)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>+</span> radius, midden_y <span style=color:#000;font-weight:700>+</span> radius)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>90</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    circle(radius, 180)
-</span></span><span style=display:flex><span>    forward(2 * radius)
-</span></span><span style=display:flex><span>    circle(radius, 180)
-</span></span><span style=display:flex><span>    forward(2 * radius)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>180</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> radius)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>180</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> radius)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_een(midden_x, midden_y, lengte):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Teken een (simpele) een met hoogte: lengte, breedte: width.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_een</span>(midden_x, midden_y, lengte):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Teken een (simpele) een met hoogte: lengte, breedte: width.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    &#34;&#34;&#34;</span>
 </span></span><span style=display:flex><span>    penup()
-</span></span><span style=display:flex><span>    setpos(midden_x, midden_y + .5 * lengte)
-</span></span><span style=display:flex><span>    setheading(270)
+</span></span><span style=display:flex><span>    setpos(midden_x, midden_y <span style=color:#000;font-weight:700>+</span> <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> lengte)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
 </span></span><span style=display:flex><span>    forward(lengte)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_twee(midden_x, midden_y, radius):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Teken een tween met hoogte: 2 * diameter, breedte: diameter.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_twee</span>(midden_x, midden_y, radius):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Teken een tween met hoogte: 2 * diameter, breedte: diameter.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    &#34;&#34;&#34;</span>
 </span></span><span style=display:flex><span>    penup()
-</span></span><span style=display:flex><span>    setpos(midden_x + radius, midden_y + radius)
-</span></span><span style=display:flex><span>    setheading(90)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>+</span> radius, midden_y <span style=color:#000;font-weight:700>+</span> radius)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>90</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    circle(radius, 180)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>180</span>)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    setpos(midden_x + radius, midden_y + radius)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>+</span> radius, midden_y <span style=color:#000;font-weight:700>+</span> radius)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    setpos(midden_x - radius, midden_y - 2 * radius)
-</span></span><span style=display:flex><span>    setheading(0)
-</span></span><span style=display:flex><span>    forward(2 * radius)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>-</span> radius, midden_y <span style=color:#000;font-weight:700>-</span> <span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> radius)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>0</span>)
+</span></span><span style=display:flex><span>    forward(<span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> radius)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_drie(midden_x, midden_y, radius):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Van belang: circle draait linksom.
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_drie</span>(midden_x, midden_y, radius):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Van belang: circle draait linksom.
+</span></span></span><span style=display:flex><span><span style=color:#d14>    &#34;&#34;&#34;</span>
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>    setpos(midden_x, midden_y)
-</span></span><span style=display:flex><span>    setheading(0)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>0</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    circle(radius, 270)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    setpos(midden_x-radius, midden_y-radius)
-</span></span><span style=display:flex><span>    setheading(270)
+</span></span><span style=display:flex><span>    setpos(midden_x<span style=color:#000;font-weight:700>-</span>radius, midden_y<span style=color:#000;font-weight:700>-</span>radius)
+</span></span><span style=display:flex><span>    setheading(<span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    circle(radius, 270)
+</span></span><span style=display:flex><span>    circle(radius, <span style=color:#099>270</span>)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00f>def</span> teken_vier(midden_x, midden_y, hoogte):
-</span></span><span style=display:flex><span>    <span style=color:#a31515>&#34;&#34;&#34;
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    Teken een vier met hoogte: 2 * diameter, breedte: diameter
-</span></span></span><span style=display:flex><span><span style=color:#a31515>    &#34;&#34;&#34;</span>
-</span></span><span style=display:flex><span>    breedte = .5 * hoogte
+</span></span><span style=display:flex><span><span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>teken_vier</span>(midden_x, midden_y, hoogte):
+</span></span><span style=display:flex><span>    <span style=color:#d14>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#d14>    Teken een vier met hoogte: 2 * diameter, breedte: diameter
+</span></span></span><span style=display:flex><span><span style=color:#d14>    &#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    breedte <span style=color:#000;font-weight:700>=</span> <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte
 </span></span><span style=display:flex><span>    penup()
-</span></span><span style=display:flex><span>    setpos(midden_x + .25 * breedte, midden_y - .5 * hoogte)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>+</span> <span style=color:#099>.25</span> <span style=color:#000;font-weight:700>*</span> breedte, midden_y <span style=color:#000;font-weight:700>-</span> <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    pendown()
-</span></span><span style=display:flex><span>    setpos(midden_x + .25 * breedte, midden_y + .5 * hoogte)
-</span></span><span style=display:flex><span>    setpos(midden_x -  .5 * breedte, midden_y)
-</span></span><span style=display:flex><span>    setpos(midden_x +  .5 * breedte, midden_y)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>+</span> <span style=color:#099>.25</span> <span style=color:#000;font-weight:700>*</span> breedte, midden_y <span style=color:#000;font-weight:700>+</span> <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> hoogte)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>-</span>  <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte, midden_y)
+</span></span><span style=display:flex><span>    setpos(midden_x <span style=color:#000;font-weight:700>+</span>  <span style=color:#099>.5</span> <span style=color:#000;font-weight:700>*</span> breedte, midden_y)
 </span></span><span style=display:flex><span>    penup()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:green># Stel vast hoe groot de getallen moeten worden.</span>
-</span></span><span style=display:flex><span>radius = 50
-</span></span><span style=display:flex><span>getal_hoogte = 4 * radius
-</span></span><span style=display:flex><span>getal_breedte = 2 * radius
+</span></span><span style=display:flex><span><span style=color:#998;font-style:italic># Stel vast hoe groot de getallen moeten worden.</span>
+</span></span><span style=display:flex><span>radius <span style=color:#000;font-weight:700>=</span> <span style=color:#099>50</span>
+</span></span><span style=display:flex><span>getal_hoogte <span style=color:#000;font-weight:700>=</span> <span style=color:#099>4</span> <span style=color:#000;font-weight:700>*</span> radius
+</span></span><span style=display:flex><span>getal_breedte <span style=color:#000;font-weight:700>=</span> <span style=color:#099>2</span> <span style=color:#000;font-weight:700>*</span> radius
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>teken_nul(-200, 0, radius)
-</span></span><span style=display:flex><span>teken_een(-100, 0, getal_hoogte)
-</span></span><span style=display:flex><span>teken_twee(0, 0, radius)
-</span></span><span style=display:flex><span>teken_drie(100, 0, radius)
-</span></span><span style=display:flex><span>teken_vier(200, 0, getal_hoogte)
+</span></span><span style=display:flex><span>teken_nul(<span style=color:#000;font-weight:700>-</span><span style=color:#099>200</span>, <span style=color:#099>0</span>, radius)
+</span></span><span style=display:flex><span>teken_een(<span style=color:#000;font-weight:700>-</span><span style=color:#099>100</span>, <span style=color:#099>0</span>, getal_hoogte)
+</span></span><span style=display:flex><span>teken_twee(<span style=color:#099>0</span>, <span style=color:#099>0</span>, radius)
+</span></span><span style=display:flex><span>teken_drie(<span style=color:#099>100</span>, <span style=color:#099>0</span>, radius)
+</span></span><span style=display:flex><span>teken_vier(<span style=color:#099>200</span>, <span style=color:#099>0</span>, getal_hoogte)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>done()
