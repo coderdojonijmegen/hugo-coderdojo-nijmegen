@@ -47,7 +47,7 @@ title = "CoderDojo Nijmegen"
   lineNos = false
   lineNumbersInTable = true
   noClasses = true
-  style = "vs"
+  style = "github"
   tabWidth = 4
 
 [markup.goldmark.renderer]
@@ -56,6 +56,3 @@ title = "CoderDojo Nijmegen"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS", "JSON"]
-
-[taxonomies]
-  taal = "taal"

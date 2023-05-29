@@ -54,5 +54,5 @@ title = "CoderDojo Nijmegen"
   unsafe = true
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
-section = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS", "JSON"]
