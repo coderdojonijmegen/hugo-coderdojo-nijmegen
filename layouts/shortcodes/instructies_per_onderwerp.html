@@ -1,0 +1,14 @@
+{{ $onderwerp := .Get 0 }}
+
+<div class="instructies">
+{{ range (where .Site.RegularPages.ByTitle "Section" "instructies") }}
+    {{ if eq .Params.onderwerp $onderwerp }}
+        <div class="linkknop">
+            <a href="{{ .RelPermalink }}">
+                <span class="linkknoptitel">{{ .Title }}</span><br>
+                {{ .Summary | plainify | htmlUnescape }}
+            </a>
+        </div>
+    {{ end }}
+{{ end }}
+</div>

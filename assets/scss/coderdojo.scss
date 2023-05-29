@@ -206,6 +206,26 @@ main {
             text-align: center;
         }
     }
+    .onderwerpen {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .onderwerp {
+            border: 1px solid #ddd;
+            margin: 5px;
+            width: 370px;
+            padding: 10px;
+            p {
+                text-align: left;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        .onderwerp:hover {
+            background-color: #FAFAFA;
+        }
+    }
     .responsive_table {
         overflow-x: auto;
         table {

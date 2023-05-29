@@ -1,0 +1,24 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+<h1>{{ .Title }}</h1>
+<div class="search">
+    <form action="{{ "instructiesdoorzoeken" | absURL }}">
+    <input type="text" id="search-query" name="s" placeholder="type een zoekterm om de instructies te doorzoeken en druk enter" >
+    <button>zoek</button>
+    </form>
+    <form action="{{ "taal" | absURL }}">
+    <button>talen</button>
+    </form>
+</div>
+<div class="onderwerpen">
+    {{ range (where .Site.RegularPages.ByDate.Reverse "Section" "onderwerpen") }}
+    <div class="onderwerp">
+        <a href="{{ .RelPermalink }}">
+            {{ .Summary }}
+        </a>
+    </div>
+    {{ end }}
+</div>
+
+{{ .Content }}
+{{ partial "footer" . }}

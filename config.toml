@@ -14,7 +14,7 @@ title = "CoderDojo Nijmegen"
 
   [[menu.main]]
     name = "instructies"
-    url = "/instructies/"
+    url = "/onderwerpen/"
     weight = -100
 
   [[menu.main]]
