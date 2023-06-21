@@ -10,6 +10,7 @@ waar: "{{location}}"
 eventbrite:
   inschrijventot: {{latest_signup_datetime}}
   url: "{{event_url}}"
+banner: "{{picture_url}}"
 instructies:
   - 
 ---
