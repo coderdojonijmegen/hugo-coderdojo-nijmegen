@@ -4,6 +4,7 @@ import re
 from datetime import datetime, timedelta
 from os import path, environ
 
+import frontmatter
 from requests import get
 
 from utils.utils import h_message
@@ -65,15 +66,20 @@ class Dojo:
 
     @staticmethod
     def write_dojo_page(future_dojo_event_info, template):
+        dojo_filename = Dojo.get_dojo_filename(future_dojo_event_info)
+
+        date_created = datetime.now()
+        if Dojo.dojo_page_already_exists(future_dojo_event_info):
+            date_created = datetime.strptime(frontmatter.load(dojo_filename)["date"], '%Y-%m-%dT%H:%M:%S%z')
+
         with open(template, "r") as template_file:
             template = template_file.read()
 
-        dojo_filename = Dojo.get_dojo_filename(future_dojo_event_info)
         with open(dojo_filename, "w") as dojo_file:
             print(f"{dojo_filename} gemaakt")
             dojo_file.write(template
                             .replace("{{title}}", "#" + future_dojo_event_info['event_title'])
-                            .replace("{{date}}", datetime.strftime(datetime.now(), '%Y-%m-%dT00:00:00+0100'))
+                            .replace("{{date}}", datetime.strftime(date_created, '%Y-%m-%dT00:00:00+0100'))
                             .replace("{{start_time}}", datetime.strftime(future_dojo_event_info['start_time'],
                                                                          '%Y-%m-%dT%H:%M:%S%z'))
                             .replace("{{end_time}}", datetime.strftime(future_dojo_event_info['end_time'],
