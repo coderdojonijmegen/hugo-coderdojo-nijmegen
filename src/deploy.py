@@ -35,13 +35,15 @@ hugo_base_version = re.compile(r"(\d+.\d+.\d+)").search(hugo_version).group(0)
 hugo_args = env_var("INPUT_ARGS", "")
 cname = env_var("INPUT_CNAME", github_repo)
 slack_channel = env_var("INPUT_SLACKWEBHOOK")
+eventbrite_api_key = env_var("INPUT_EVENTBRITEAPIKEY")
 
 hugo_download_url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
 
-futureDojoEventUrls = Dojo.get_future_dojo_events()
+dojo = Dojo(eventbrite_api_key)
+futureDojoEventUrls = dojo.get_future_dojo_events()
 if futureDojoEventUrls:
     for event_url in futureDojoEventUrls:
-        dojo_info = Dojo.get_dojo_info(event_url)
+        dojo_info = dojo.get_dojo_info(event_url)
         Dojo.write_dojo_page(dojo_info, DOJO_PAGE_TEMPLATE)
 
 git(f"config --global user.name {github_actor}")

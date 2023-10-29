@@ -9,20 +9,18 @@ from requests import get
 
 from utils.utils import h_message
 
-API_KEY = environ["INPUT_EVENTBRITEAPIKEY"]
-
-auth_header = {"Authorization": f"Bearer {API_KEY}"}
-
 
 class Dojo:
 
-    @staticmethod
-    def get_future_dojo_events() -> list:
+    def __init__(self, eventbrite_api_key: str):
+        self.auth_header = {"Authorization": f"Bearer {eventbrite_api_key}"}
+
+    def get_future_dojo_events(self) -> list:
         r = get(f"https://www.eventbriteapi.com/v3/organizations/187233351803/events/"
                 f"?order_by=created_desc"
                 f"&time_filter=current_future"
                 f"&page=1",
-                headers=auth_header)
+                headers=self.auth_header)
         future_events = r.json()
         if future_events["pagination"]["object_count"] == 0:
             h_message("geen geplande dojo's gevonden")
@@ -33,11 +31,10 @@ class Dojo:
 
         return [future_event['resource_uri'] for future_event in future_events['events']]
 
-    @staticmethod
-    def get_dojo_info(dojo_event_url):
-        r = get(f"{dojo_event_url}?expand=venue", headers=auth_header)
+    def get_dojo_info(self, dojo_event_url):
+        r = get(f"{dojo_event_url}?expand=venue", headers=self.auth_header)
         event = r.json()
-        rd = get(f"{dojo_event_url}description", headers=auth_header)
+        rd = get(f"{dojo_event_url}description", headers=self.auth_header)
         event["description_ext"] = rd.json()["description"]
 
         return {
@@ -114,11 +111,3 @@ class Dojo:
     @staticmethod
     def get_dojo_filename(future_dojo_event_info):
         return "content/dojos/" + future_dojo_event_info['event_id'] + ".md"
-
-
-if __name__ == "__main__":
-    futureDojoEventUrl = Dojo.get_future_dojo_events()
-    if futureDojoEventUrl is not None:
-        dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
-        if not Dojo.dojo_page_already_exists(dojo_info):
-            Dojo.write_dojo_page(dojo_info, "archetypes/dojos-template.md")
