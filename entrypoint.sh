@@ -2,4 +2,4 @@
 
 set -e
 
-python3 -u deploy.py
+PYTHONPATH=/src/ python3 -u /deploy.py
