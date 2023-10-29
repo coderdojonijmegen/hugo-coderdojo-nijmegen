@@ -17,7 +17,7 @@ auth_header = {"Authorization": f"Bearer {API_KEY}"}
 class Dojo:
 
     @staticmethod
-    def get_future_dojo_event():
+    def get_future_dojo_events() -> list:
         r = get(f"https://www.eventbriteapi.com/v3/organizations/187233351803/events/"
                 f"?order_by=created_desc"
                 f"&time_filter=current_future"
@@ -30,8 +30,8 @@ class Dojo:
 
         event_shorts = "\n - ".join([f"{future_event['name']['text']}" for future_event in future_events["events"]])
         h_message(f"geplande dojo(s): \n - {event_shorts}")
-        latest_event = future_events["events"][0]
-        return latest_event["resource_uri"] if latest_event["status"] == "live" else None
+
+        return [future_event['resource_uri'] for future_event in future_events['events']]
 
     @staticmethod
     def get_dojo_info(dojo_event_url):
@@ -117,7 +117,7 @@ class Dojo:
 
 
 if __name__ == "__main__":
-    futureDojoEventUrl = Dojo.get_future_dojo_event()
+    futureDojoEventUrl = Dojo.get_future_dojo_events()
     if futureDojoEventUrl is not None:
         dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
         if not Dojo.dojo_page_already_exists(dojo_info):

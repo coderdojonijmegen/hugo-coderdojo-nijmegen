@@ -34,14 +34,11 @@ cname = env_var("INPUT_CNAME", github_repo)
 
 url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
 
-futureDojoEventUrl = Dojo.get_future_dojo_event()
-if futureDojoEventUrl is not None:
-    dojo_info = Dojo.get_dojo_info(futureDojoEventUrl)
-    if not Dojo.dojo_page_already_exists(dojo_info) or dojo_info['start_time'] > datetime.now():
+futureDojoEventUrls = Dojo.get_future_dojo_events()
+if futureDojoEventUrls:
+    for url in futureDojoEventUrls:
+        dojo_info = Dojo.get_dojo_info(url)
         Dojo.write_dojo_page(dojo_info, DOJO_PAGE_TEMPLATE)
-    elif github_event_name == "schedule" and datetime.now().hour != 1:
-        h_message("publiceer alleen als er een nieuwe dojo is gepland of 's nachts om 1 uur")
-        exit(0)
 
 git(f"config --global user.name {github_actor}")
 git(f"config --global user.email {github_actor}@users.noreply.github.com")
@@ -49,7 +46,7 @@ git(f"config --global --add safe.directory /github/workspace")
 
 git("add -A")
 git("diff --cached")
-git("commit -m", message=f"{futureDojoEventUrl} toegevoegd", accept_git_non_zero_return=True)
+git("commit -m", message=f"{','.join(futureDojoEventUrls)} toegevoegd/bijgewerkt", accept_git_non_zero_return=True)
 if github_branch == REF_MAIN:
     git("push")
 else:
