@@ -13,11 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-        name: Checkout Repo
-
-      - uses: ghcr.io/coderdojonijmegen/hugo-coderdojo-nijmegen:main
-        name: Publish Site
+      - uses: docker/login-action@v2.1.0
+        name: Docker login
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish Site
+        run: |
+          docker run ghcr.io/coderdojonijmegen/hugo-coderdojo-nijmegen:main
         with:
           githubToken: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
           hugoVersion: extended_0.111.3
