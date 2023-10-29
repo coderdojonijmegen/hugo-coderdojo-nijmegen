@@ -2,6 +2,7 @@ FROM ubuntu:22.04
 
 ENV TZ=Europe/Amsterdam
 
+COPY ./requirements.txt /requirements.txt
 RUN apt update && apt install -y \
 	git \
 	tar \
@@ -9,13 +10,12 @@ RUN apt update && apt install -y \
 	python3 \
 	python3-pip \
 	nano \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+    && python3 -m pip install -r requirements.txt
 
 ENV INPUT_HUGOVERSION extended_0.111.3
 
 COPY ./entrypoint.sh /entrypoint.sh
-COPY deploy.py /deploy.py
-COPY utils/ /utils/
-COPY ./requirements.txt /requirements.txt
+COPY src/ /
 
 ENTRYPOINT [ "/entrypoint.sh" ]
