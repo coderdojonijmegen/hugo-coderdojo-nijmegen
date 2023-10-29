@@ -22,10 +22,10 @@ jobs:
       - name: Publish Site
         run: |
           docker run ghcr.io/coderdojonijmegen/hugo-coderdojo-nijmegen:main
-        with:
-          githubToken: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
-          hugoVersion: extended_0.111.3
-          eventbriteApiKey: ${{ secrets.EVENTBRITE_API_KEY }}
-          slackWebhook: ${{ secrets.SLACK_WEBHOOK }}
-          args: --gc --minify --cleanDestinationDir
-          cname: coderdojo-nijmegen.nl
+#        with:
+#          githubToken: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
+#          hugoVersion: extended_0.111.3
+#          eventbriteApiKey: ${{ secrets.EVENTBRITE_API_KEY }}
+#          slackWebhook: ${{ secrets.SLACK_WEBHOOK }}
+#          args: --gc --minify --cleanDestinationDir
+#          cname: coderdojo-nijmegen.nl
