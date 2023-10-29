@@ -3,12 +3,8 @@ import textwrap
 
 import requests
 
-from utils.env import env_var
 
-SLACK_CHANNEL = env_var("INPUT_SLACKWEBHOOK")
-
-
-def notify(title: str, message: str):
+def notify(title: str, message: str, slack_channel: str):
     blocks = [
         {
             "type": "header",
@@ -41,4 +37,4 @@ def notify(title: str, message: str):
         "blocks": blocks
     }
 
-    requests.post(SLACK_CHANNEL, json.dumps(slack_message))
+    requests.post(slack_channel, json.dumps(slack_message))

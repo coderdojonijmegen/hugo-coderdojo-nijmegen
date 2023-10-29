@@ -32,10 +32,7 @@ def git(args, message=None, working_dir=None, accept_git_non_zero_return=False):
 
 
 def hugo(args):
-    ret_code, stdout, stderr = _sub(f"./hugo {args}".split(" "))
-    if ret_code != 0:
-        slack.notify("Hugo error", f"{stdout}: {stderr}")
-        exit(-1)
+    return _sub(f"./hugo {args}".split(" "))
 
 
 def rm_rf(dir_path):

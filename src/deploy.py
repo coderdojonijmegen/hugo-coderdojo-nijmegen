@@ -21,6 +21,9 @@ TMP_GH_PAGES = "/tmp/gh-pages"
 TMP_MCS = "/tmp/mcs"
 MCS = "mcs"
 
+github_server_url = env_var('GITHUB_SERVER_URL')
+github_repository = env_var('GITHUB_REPOSITORY')
+github_run_id = env_var('GITHUB_RUN_ID')
 github_event_name = env_var("GITHUB_EVENT_NAME")
 github_branch = env_var("GITHUB_REF")
 github_repo = env_var("GITHUB_REPOSITORY")
@@ -31,6 +34,7 @@ hugo_version = env_var("INPUT_HUGOVERSION", DEFAULT_HUGO_VERSION)
 hugo_base_version = re.compile(r"(\d+.\d+.\d+)").search(hugo_version).group(0)
 hugo_args = env_var("INPUT_ARGS", "")
 cname = env_var("INPUT_CNAME", github_repo)
+slack_channel = env_var("INPUT_SLACKWEBHOOK")
 
 hugo_download_url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
 
@@ -68,7 +72,10 @@ def clone_build_push(args, target_branch, target_dir):
         f"/{github_repo}.git {target_dir}")
     rm_rf(f"{target_dir}/*")
 
-    hugo(f"{args} -d {target_dir}/")
+    ret_code, stdout, stderr = hugo(f"{args} -d {target_dir}/")
+    if ret_code != 0:
+        notify("Hugo error", f"{stdout}: {stderr}", slack_channel)
+        exit(-1)
 
     with open(f"{target_dir}/CNAME", "w") as cname_file:
         cname_file.write(cname)
@@ -81,10 +88,10 @@ def clone_build_push(args, target_branch, target_dir):
         if github_branch == REF_MAIN:
             git("push --force", working_dir=target_dir)
             _, stdout, _ = git("log -1 --pretty=%B")
-            message = f"pushed changes from commit '{stdout}' to {target_branch}; see {env_var('GITHUB_SERVER_URL')}/" \
-                      f"{env_var('GITHUB_REPOSITORY')}/actions/runs/{env_var('GITHUB_RUN_ID')}"
+            message = f"pushed changes from commit '{stdout}' to {target_branch}; see {github_server_url}/" \
+                      f"{github_repository}/actions/runs/{github_run_id}"
             print(message)
-            notify(target_branch, message)
+            notify(target_branch, message, slack_channel)
         else:
             print("=> not pushing when not on main")
     else:
