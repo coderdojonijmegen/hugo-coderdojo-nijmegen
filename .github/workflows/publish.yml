@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
         name: Checkout Repo
 
-      - uses: ./
+      - uses: ghcr.io/coderdojonijmegen/hugo-coderdojo-nijmegen:main
         name: Publish Site
         with:
           githubToken: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
