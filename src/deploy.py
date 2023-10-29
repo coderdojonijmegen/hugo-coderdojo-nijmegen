@@ -14,7 +14,7 @@ DEFAULT_HUGO_VERSION = "extended_0.74.3"
 HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
                     "hugo_{hugo_version}_Linux-64bit.tar.gz"
-DOJO_PAGE_TEMPLATE = "/site/archetypes/dojos-template.md"
+DOJO_PAGE_TEMPLATE = "./archetypes/dojos-template.md"
 REF_MAIN = "refs/heads/main"
 GH_PAGES = "gh-pages"
 TMP_GH_PAGES = "/tmp/gh-pages"
