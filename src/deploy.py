@@ -32,12 +32,12 @@ hugo_base_version = re.compile(r"(\d+.\d+.\d+)").search(hugo_version).group(0)
 hugo_args = env_var("INPUT_ARGS", "")
 cname = env_var("INPUT_CNAME", github_repo)
 
-url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
+hugo_download_url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
 
 futureDojoEventUrls = Dojo.get_future_dojo_events()
 if futureDojoEventUrls:
-    for url in futureDojoEventUrls:
-        dojo_info = Dojo.get_dojo_info(url)
+    for event_url in futureDojoEventUrls:
+        dojo_info = Dojo.get_dojo_info(event_url)
         Dojo.write_dojo_page(dojo_info, DOJO_PAGE_TEMPLATE)
 
 git(f"config --global user.name {github_actor}")
@@ -91,9 +91,9 @@ def clone_build_push(args, target_branch, target_dir):
         print("=> no changes")
 
 
-h_message(f"downloading {url} to {HUGO_TAR_GZ}")
+h_message(f"downloading {hugo_download_url} to {HUGO_TAR_GZ}")
 with open(HUGO_TAR_GZ, "wb") as hugo_tar_gz:
-    hugo_tar_gz.write(requests.get(url, allow_redirects=True).content)
+    hugo_tar_gz.write(requests.get(hugo_download_url, allow_redirects=True).content)
 
 h_message(f"extracting {HUGO_TAR_GZ}")
 with tarfile.open(HUGO_TAR_GZ, "r:gz") as tar:
