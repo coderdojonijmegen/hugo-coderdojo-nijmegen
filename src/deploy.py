@@ -48,7 +48,7 @@ if futureDojoEventUrls:
 
 git(f"config --global user.name {github_actor}")
 git(f"config --global user.email {github_actor}@users.noreply.github.com")
-git(f"config --global --add safe.directory /github/workspace")
+git(f"config --global --add safe.directory /site")
 
 git("add -A")
 git("diff --cached")
