@@ -28,13 +28,12 @@ jobs:
             -e INPUT_CNAME="coderdojo-nijmegen.nl" \
             -e INPUT_SLACKWEBHOOK=${{ secrets.SLACK_WEBHOOK }} \
             -e INPUT_EVENTBRITEAPIKEY=${{ secrets.EVENTBRITE_API_KEY }} \
-            -e GITHUB_SERVER_URL=${{ GITHUB_SERVER_URL }} \
-            -e GITHUB_REPOSITORY=${{ GITHUB_REPOSITORY }} \
-            -e GITHUB_RUN_ID=${{ GITHUB_RUN_ID }} \
-            -e GITHUB_EVENT_NAME=${{ GITHUB_EVENT_NAME }} \
-            -e GITHUB_REF=${{ GITHUB_REF }} \
-            -e GITHUB_REPOSITORY=${{ GITHUB_REPOSITORY }} \
-            -e GITHUB_ACTOR=${{ GITHUB_ACTOR }} \
-            -e GITHUB_SHA=${{ GITHUB_SHA }} \
+            -e GITHUB_SERVER_URL=${{ github.server_url }} \
+            -e GITHUB_REPOSITORY=${{ github.repository }} \
+            -e GITHUB_RUN_ID=${{ github.run_id }} \
+            -e GITHUB_EVENT_NAME=${{ github.event_name }} \
+            -e GITHUB_REF=${{ github.ref }} \
+            -e GITHUB_ACTOR=${{ github.actor }} \
+            -e GITHUB_SHA=${{ github.sha }} \
             -v ${{ github.workspace }}:/site/ \
             ghcr.io/coderdojonijmegen/hugo-coderdojo-nijmegen:main
