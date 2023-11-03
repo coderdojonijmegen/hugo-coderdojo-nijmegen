@@ -15,7 +15,7 @@ RUN apt update && apt install -y \
 
 ENV INPUT_HUGOVERSION extended_0.111.3
 
-COPY ./entrypoint.sh /entrypoint.sh
-COPY src/ /src/
+COPY ./ /
+COPY ./.git /
 
 ENTRYPOINT [ "/entrypoint.sh" ]
