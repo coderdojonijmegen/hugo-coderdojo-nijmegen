@@ -36,5 +36,5 @@ jobs:
             -e GITHUB_REPOSITORY=GITHUB_REPOSITORY \
             -e GITHUB_ACTOR=GITHUB_ACTOR \
             -e GITHUB_SHA=GITHUB_SHA \
-            -v "/home/runner/work/hugo-coderdojo-nijmegen/hugo-coderdojo-nijmegen":"/site/" \
+            -v "/home/runner/work/hugo-coderdojo-nijmegen/hugo-coderdojo-nijmegen":"/" \
             ghcr.io/coderdojonijmegen/hugo-coderdojo-nijmegen:main
