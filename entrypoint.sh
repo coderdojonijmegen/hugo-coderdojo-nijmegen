@@ -2,4 +2,5 @@
 
 set -e
 
-PYTHONPATH=/src/ python3 -u /src/deploy.py
+pushd /site/
+PYTHONPATH=/site/src/ python3 -u /site/src/deploy.py

@@ -2,6 +2,7 @@ FROM ubuntu:22.04
 
 ENV TZ=Europe/Amsterdam
 
+COPY ./entrypoint.sh /entrypoint.sh
 COPY ./requirements.txt /requirements.txt
 RUN apt update && apt install -y \
 	git \
