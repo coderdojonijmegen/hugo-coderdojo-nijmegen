@@ -18,3 +18,4 @@ coderdojonijmegen/scratch-space-shooter content/instructies/scratch-space-shoote
 coderdojonijmegen/scratch3 content/instructies/scratch-videosensing
 coderdojonijmegen/web-development content/instructies/web-development
 coderdojonijmegen/web-ontbijtkoekclicker content/instructies/ontbijtkoekclicker
+coderdojonijmegen/python-raspberrypi-pico content/instructies/python-raspberrypi-pico
