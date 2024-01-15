@@ -35,7 +35,7 @@ Kinderen vanaf 7 jaar kunnen gratis meedoen aan CoderDojo. Ben je 12 jaar of jon
 Om zeker te weten dat we over voldoende spullen beschikken, moet je van tevoren ook even <strong>reserveren</strong>. Je hebt<strong> één ticket per kind</strong> nodig. Ouders hoeven geen ticket te reserveren. Denk er wel even aan om je <strong>ticket mee te nemen naar CoderDojo</strong> (dit mag digitaal).
 ## CoderDojo en Corona
 
-We houden ons aan de regels die gelden in de bibliotheek. Kijk even op <a href="https://www.obgz.nl/corona.html" target="_blank" rel="nofollow noopener noreferrer">https://www.obgz.nl/corona.html</a> voor de regels die tijdens de dojo van kracht zijn.
+We houden ons aan de regels die gelden in de bibliotheek.
 ## Wanneer en waar?
 
 Zaterdag 4 maart van 11:00u tot 13:30u. 
