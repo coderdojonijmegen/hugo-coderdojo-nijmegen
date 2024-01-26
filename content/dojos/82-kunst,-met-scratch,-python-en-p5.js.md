@@ -45,7 +45,7 @@ Om zeker te weten dat we over voldoende spullen beschikken, moet je van tevoren 
 <h2>CoderDojo en Corona</h2>
 
 
-We houden ons aan de regels die gelden in de bibliotheek. Kijk even op <a href="https://www.obgz.nl/corona.html" rel="nofollow noopener noreferrer" target="_blank">https://www.obgz.nl/corona.html</a> voor de regels die tijdens de dojo van kracht zijn.
+We houden ons aan de regels die gelden in de bibliotheek. 
 <h2>Wanneer en waar?</h2>
 
 
