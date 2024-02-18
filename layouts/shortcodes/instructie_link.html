@@ -1,0 +1,8 @@
+<div class="instructies">
+    <div class="linkknop">
+        <a href="{{ .Get "href" }}">
+        <span class="linkknoptitel">{{ .Get "titel" }}</span><br>
+        {{ .Inner | markdownify }}
+        </a>
+    </div>
+</div>
