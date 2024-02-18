@@ -1,0 +1,16 @@
+{{ $maanden := .Site.Data.dagenenmaanden.maanden }}
+{{ $dagen := .Site.Data.dagenenmaanden.dagen }}
+
+<div class="geplandedojo">
+    <a href="{{ .RelPermalink }}">
+    <div class="dojo-kop">
+    {{ .Title }} -
+    {{ with .Params }}
+    <span>{{ index $dagen (dateFormat "Monday" .wanneer.van) }}
+    {{ dateFormat "2" .wanneer.van }}
+    {{ index $maanden (dateFormat "1" .wanneer.van) }}
+        {{ dateFormat "2006" .wanneer.van }}</span> <span class="locatie">@ {{ .waar }}</span>
+    {{ end }}
+    </div>
+    </a>
+</div>

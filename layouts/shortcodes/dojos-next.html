@@ -1,0 +1,12 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Add "i" 0 }}
+{{ $now := now | time.Format "2006-01-02T15:04:05" }}
+{{ $pages := where .Site.RegularPages.ByDate "Section" "dojos" }}
+{{ range $pages }}
+    {{ $wanneerVan := .Params.wanneer.van | time.Format "2006-01-02T15:04:05" }}
+    {{ $k := $scratch.Get "i" }}
+    {{ if and (ge $wanneerVan $now) (lt $k 1) }}
+        {{ $scratch.Add "i" 1 }}
+        {{ partial "partials/dojo-link.html" . }}
+    {{ end }}
+{{ end }}

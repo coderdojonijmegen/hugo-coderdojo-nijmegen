@@ -20,3 +20,12 @@ slechts één regel:
 **Boven Alles: Wees Cool!**
   
 Pesten, liegen en mensen hun tijd verdoen is niet cool.
+
+## De eerstvolgende dojo
+
+{{< dojos-next >}}
+
+## Geplande dojos
+
+{{< dojos-future-short >}}
+

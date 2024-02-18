@@ -7,3 +7,15 @@ draft: false
 
 # Dojos
 Hieronder vind je een overzicht van de dojo's:
+
+## De eerstvolgende
+
+{{< dojos-next >}}
+
+## Gepland
+
+{{< dojos-future-short >}}
+
+## Geweest
+
+{{< dojos-past >}}
