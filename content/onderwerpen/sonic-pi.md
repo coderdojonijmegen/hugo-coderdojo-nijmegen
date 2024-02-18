@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: Sonic Pi
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/sonic-pi.png"
 ---
 
 ![Sonic Pi](/onderwerpen/logos/sonic-pi.png)

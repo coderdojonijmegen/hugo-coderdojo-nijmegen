@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: Javascript
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/html-javascript-css.png"
 ---
 
 ![HTML, Javascript & CSS logo](/onderwerpen/logos/html-javascript-css.png)

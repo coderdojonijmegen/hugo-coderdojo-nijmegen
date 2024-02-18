@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: bot
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/mbot.png"
 ---
 
 ![mBot logo](/onderwerpen/logos/mbot.png)

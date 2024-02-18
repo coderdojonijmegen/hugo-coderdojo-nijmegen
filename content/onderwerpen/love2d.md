@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: Löve2D
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/love2d.png"
 ---
 
 ![Löve2D logo](/onderwerpen/logos/love2d.png)

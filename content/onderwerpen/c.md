@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: C
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/c.png"
 ---
 
 ![C logo](/onderwerpen/logos/c.png)

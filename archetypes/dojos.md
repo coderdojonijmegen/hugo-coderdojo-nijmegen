@@ -12,6 +12,7 @@ eventbrite:
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-62-93475366337"
 instructies:
   - /instructies/microbit
+banner: "https://coderdojo-nijmegen.nl/dojos/some-pic.png"
 ---
 
 < intro plaatje >

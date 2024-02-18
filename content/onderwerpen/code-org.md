@@ -1,7 +1,11 @@
 ---
 title: "Code.org"
 date: 2023-11-30T21:31:59+01:00
+headercolor: "teal-background"
 draft: false
+toc: false
+onderwerp: Code.org
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/code-org.png"
 ---
 
 ![Code.org](/onderwerpen/logos/code-org.png)

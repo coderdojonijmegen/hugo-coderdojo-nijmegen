@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: Scratch
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/scratch.png"
 ---
 
 ![Scratch logo](/onderwerpen/logos/scratch.png)

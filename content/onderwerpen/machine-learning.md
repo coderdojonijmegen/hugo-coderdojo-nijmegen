@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: Machine Learning
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/machine-learning.png"
 ---
 
 ![Machine Learning logo](/onderwerpen/logos/machine-learning.png)

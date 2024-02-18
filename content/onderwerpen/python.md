@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: Python
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/python.png"
 ---
 
 ![Python logo](/onderwerpen/logos/python.png)

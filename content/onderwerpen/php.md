@@ -5,6 +5,7 @@ headercolor: "teal-background"
 draft: false
 toc: false
 onderwerp: PHP
+banner: "https://coderdojo-nijmegen.nl/onderwerpen/logos/php.png"
 ---
 
 ![PHP logo](/onderwerpen/logos/php.png)

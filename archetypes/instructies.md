@@ -5,6 +5,7 @@ draft: false
 toc: true
 headercolor: "teal-background"
 taal: 
+banner: "https://coderdojo-nijmegen.nl/instructies/<some-instruction>/banner.png"
 ---
 
 
