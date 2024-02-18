@@ -13,8 +13,13 @@ title = "CoderDojo Nijmegen"
     weight = -110
 
   [[menu.main]]
-    name = "instructies"
+    name = "onderwerpen"
     url = "/onderwerpen/"
+    weight = -100
+
+  [[menu.main]]
+    name = "instructies"
+    url = "/instructies/"
     weight = -100
 
   [[menu.main]]
