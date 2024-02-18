@@ -61,3 +61,8 @@ Happy birthday met Sonic Pi!
 {{< instructie_link href="https://coderdojo-leiden.github.io/jingle-bells/" titel="Jingle Bells" >}}
 Speciaal voor kerst: Jingle Bells met Sonic Pi!
 {{< /instructie_link >}}
+
+## Muziek
+
+Als je wat ervaring hebt opgedaan met Sonic Pi, kun je [hier](https://www.pimba.nl/liedjes/toetsen?level=1) wat muziek
+vinden om te gebruiken in je scripts. Er wordt gebruik gemaakt van dezelfde letters als in Sonic Pi.
