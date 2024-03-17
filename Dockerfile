@@ -15,6 +15,6 @@ RUN apt update && apt install -y \
     && python3 -m pip install -r requirements.txt \
     && mkdir /site
 
-ENV INPUT_HUGOVERSION extended_0.111.3
+ENV INPUT_HUGOVERSION extended_0.123.8
 
 ENTRYPOINT [ "/entrypoint.sh" ]
