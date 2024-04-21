@@ -50,11 +50,15 @@ class Dojo:
 
     @staticmethod
     def replace_nth(string, sub, wanted, n):
-        where = [m.start() for m in re.finditer(sub, string)][n - 1]
-        before = string[:where]
-        after = string[where:]
-        after = after.replace(sub, wanted, 1)
-        return before + after
+        found_strings = [m.start() for m in re.finditer(sub, string)]
+        if found_strings:
+            where = found_strings[n - 1]
+            before = string[:where]
+            after = string[where:]
+            after = after.replace(sub, wanted, 1)
+            return before + after
+        else:
+            return string
 
     @staticmethod
     def dojo_page_already_exists(future_dojo_event_info):
@@ -62,11 +66,52 @@ class Dojo:
         return path.exists(dojo_filename)
 
     @staticmethod
-    def write_dojo_page(future_dojo_event_info, template):
-        dojo_filename = Dojo.get_dojo_filename(future_dojo_event_info)
+    def parse_template(template: str, dojo_event_info: dict, date_created: str) -> str:
+        description = Dojo.replace_nth(
+            dojo_event_info['event_description'],
+            "<h2>",
+            "\n\n<!--more-->\n\n<h2>",
+            2
+        )
+        description = Dojo.replace_nth(
+            description,
+            "<h3>",
+            "\n\n<!--more-->\n\n<h3>",
+            2
+        )
+        description = re.sub(r"<div>.*</div><div.*<h2>", "<h2>", description, 0)
+        description = re.sub(r"<div>.*</div><div.*<h3>", "<h3>", description, 0)
+        return template \
+            .replace("{{title}}", "#" + dojo_event_info['event_title']) \
+            .replace("{{date}}", date_created) \
+            .replace("{{start_time}}", datetime.strftime(dojo_event_info['start_time'],
+                                                         '%Y-%m-%dT%H:%M:%S%z')) \
+            .replace("{{end_time}}", datetime.strftime(dojo_event_info['end_time'],
+                                                       '%Y-%m-%dT%H:%M:%S%z')) \
+            .replace("{{start_date}}", datetime.strftime(dojo_event_info['end_time'],
+                                                         '%Y-%m-%d')) \
+            .replace("{{latest_signup_datetime}}",
+                     datetime.strftime(dojo_event_info['start_time'] - timedelta(hours=1),
+                                       '%Y-%m-%dT%H:%M:%S%z')) \
+            .replace("{{location}}", dojo_event_info['location']) \
+            .replace("{{event_url}}", dojo_event_info['event_url']) \
+            .replace("{{picture_url}}", dojo_event_info['picture_url']) \
+            .replace("{{event_description}}", description) \
+            .replace("<strong>", "\n** ").replace("</strong>", "**") \
+            .replace("<h2>", "\n## ").replace("</h2>", "") \
+            .replace("<h3>", "\n## ").replace("</h3>", "") \
+            .replace("<p>", "\n\n").replace("</p>", "") \
+            .replace("<ul>", "").replace("</ul>", "") \
+            .replace("<li>", "\n - ").replace("</li>", "") \
+            .replace("<br>", "\n").replace("</li>", "") \
+            .replace("</div></div>", "")
+
+    @staticmethod
+    def write_dojo_page(dojo_event_info, template):
+        dojo_filename = Dojo.get_dojo_filename(dojo_event_info)
 
         date_created = datetime.now()
-        if Dojo.dojo_page_already_exists(future_dojo_event_info):
+        if Dojo.dojo_page_already_exists(dojo_event_info):
             date_created = datetime.strptime(frontmatter.load(dojo_filename)["date"], '%Y-%m-%dT%H:%M:%S%z')
 
         with open(template, "r") as template_file:
@@ -74,40 +119,12 @@ class Dojo:
 
         with open(dojo_filename, "w") as dojo_file:
             print(f"{dojo_filename} gemaakt")
-            dojo_file.write(template
-                            .replace("{{title}}", "#" + future_dojo_event_info['event_title'])
-                            .replace("{{date}}", datetime.strftime(date_created, '%Y-%m-%dT00:00:00+0100'))
-                            .replace("{{start_time}}", datetime.strftime(future_dojo_event_info['start_time'],
-                                                                         '%Y-%m-%dT%H:%M:%S%z'))
-                            .replace("{{end_time}}", datetime.strftime(future_dojo_event_info['end_time'],
-                                                                       '%Y-%m-%dT%H:%M:%S%z'))
-                            .replace("{{start_date}}", datetime.strftime(future_dojo_event_info['end_time'],
-                                                                         '%Y-%m-%d'))
-                            .replace("{{latest_signup_datetime}}",
-                                     datetime.strftime(future_dojo_event_info['start_time'] - timedelta(hours=1),
-                                                       '%Y-%m-%dT%H:%M:%S%z'))
-                            .replace("{{location}}", future_dojo_event_info['location'])
-                            .replace("{{event_url}}", future_dojo_event_info['event_url'])
-                            .replace("{{picture_url}}", future_dojo_event_info['picture_url'])
-                            .replace("{{event_description}}",
-                                     re.sub(r"<div>.*<p>",
-                                            "<p>",
-                                            Dojo.replace_nth(
-                                                future_dojo_event_info['event_description'],
-                                                "</p>",
-                                                "</p>\n\n<!--more-->\n\n",
-                                                1
-                                            ),
-                                            1
-                                            )
-                                     ).replace("</div></div>", "")
-                            .replace("<strong>", "\n** ").replace("</strong>", "**")
-                            .replace("<h2>", "\n## ").replace("</h2>", "")
-                            .replace("<p>", "\n\n").replace("</p>", "")
-                            .replace("<ul>", "").replace("</ul>", "")
-                            .replace("<li>", "\n - ").replace("</li>", "")
-                            )
+            dojo_file.write(Dojo.parse_template(
+                template,
+                dojo_event_info,
+                datetime.strftime(date_created, '%Y-%m-%dT00:00:00+0100')
+            ))
 
     @staticmethod
-    def get_dojo_filename(future_dojo_event_info):
-        return "content/dojos/" + future_dojo_event_info['event_id'] + ".md"
+    def get_dojo_filename(dojo_event_info):
+        return "content/dojos/" + dojo_event_info['event_id'] + ".md"

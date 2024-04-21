@@ -13,9 +13,12 @@ def test_get_future_dojo_events():
 
 
 def test_get_dojo_info():
+    with open("../archetypes/dojos-template.md", "r") as template_file:
+        template = template_file.read()
+
     dojo = Dojo(eventbrite_api_key)
     dojo_events = dojo.get_future_dojo_events()
-    if len(dojo_events) > 0:
-        dojo_info = dojo.get_dojo_info(dojo_events[0])
-        assert "location" in dojo_info
-        assert "event_description" in dojo_info
+    for dojo_event in dojo_events:
+        dojo_info = dojo.get_dojo_info(dojo_event)
+        page = Dojo.parse_template(template, dojo_info, "2024-04-21")
+        print(page)
