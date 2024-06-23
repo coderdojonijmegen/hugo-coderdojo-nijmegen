@@ -1,0 +1,9 @@
+<div class="onderwerpen">
+    {{ range (where .Site.RegularPages.ByDate.Reverse "Section" "onderwerpen") }}
+    <div class="onderwerp">
+        <a href="{{ .RelPermalink }}">
+            {{ .Summary }}
+        </a>
+    </div>
+    {{ end }}
+</div>
