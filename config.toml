@@ -3,7 +3,7 @@ languageCode = "nl-nl"
 title = "CoderDojo Nijmegen"
 
 [params]
-  mcs = true
+  mcs = false
 
 [menu]
 
