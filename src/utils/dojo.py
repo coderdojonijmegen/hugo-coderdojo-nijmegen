@@ -97,7 +97,8 @@ class Dojo:
             .replace("{{event_url}}", dojo_event_info['event_url']) \
             .replace("{{picture_url}}", dojo_event_info['picture_url']) \
             .replace("{{event_description}}", description) \
-            .replace("<strong>", "\n** ").replace("</strong>", "**") \
+            .replace("<strong><strong>", "**").replace("</strong></strong>", "**") \
+            .replace("<strong>", "**").replace("</strong>", "**") \
             .replace("<h2>", "\n## ").replace("</h2>", "") \
             .replace("<h3>", "\n## ").replace("</h3>", "") \
             .replace("<p>", "\n\n").replace("</p>", "") \
