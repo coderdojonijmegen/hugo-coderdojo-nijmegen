@@ -5,13 +5,13 @@
 Deze instructies zijn waarschijnlijk net iets anders dan je gewent bent. Bovenaan je scherm zie je verschillende hoofdstukken. Ieder hoofdstuk bestaat uit een aantal vragen. bijvoorbeeld:
 ::question:: Hebben we er zin in?
 ::correct:: Jaa!!!
-::wrong:: nee, Ik ga Roblox spelen.
+::wrong:: Nee, ik ga Roblox spelen.
 
 ::text:: Zoals je ziet komt er nieuwe text zodra je een vraag correct beantwoord.
 
-soms zijn de vragen wat moeilijker, als je niet zeker bent over een vraag is dat het perfecte moment om een vraag te stellen. Dat vinden wij ook het leukst. Verder is het niet erg om een vraag fout te beantwoorden, dat is alleen voor jou om je eigen kennis te testen.
+Soms zijn de vragen wat moeilijker, als je niet zeker bent over een vraag is dat het perfecte moment om een vraag aan een mentor te stellen. Dat vinden wij ook het leukst. Verder is het niet erg om een vraag fout te beantwoorden, dat is alleen voor jou om je eigen kennis te testen.
 
-::question:: is het erg om fouten te maken?
+::question:: Is het erg om fouten te maken?
 ::wrong:: Het is niet erg om fouten te maken.
 ::wrong:: Het is niet erg om fouten te maken.
 ::correct:: Het is niet erg om fouten te maken.
@@ -25,30 +25,30 @@ soms zijn de vragen wat moeilijker, als je niet zeker bent over een vraag is dat
 ::correct:: <img barcodes.jpg>
 ::wrong:: <img qr_code.png>
 
-::text:: streepjescodes kom je overal tegen. ze worden veer gebuikt in supermarkten, op flesjes drinken staat bijvoorbeeld een streepjescode. Daarmee kunnen ze aan de kassa zien wat voorn drinken je koopt en wat het kost. 
+::text:: Streepjescodes kom je overal tegen. Ze worden veel gebuikt in supermarkten, op flesjes drinken staat bijvoorbeeld een streepjescode. Daarmee kunnen ze aan de kassa zien wat voor een drinken je koopt en wat het kost. 
 ::question:: Weet je nog: wat moet je doen as je een vraag niet snapt?
-::correct:: hulp vragen.
-::wrong:: verder gaan en kijken of je het later wel snapt. 
-::wrong:: opgeven en Roblox gaan spelen.
+::correct:: Hulp vragen.
+::wrong:: Verder gaan en kijken of je het later wel snapt. 
+::wrong:: Opgeven en Roblox gaan spelen.
 
 ::text:: Misschien herinner je je de actie van Albert Heijn in september 2024. Bij elke keer dat je boodschappen deed, kreeg je speciale dierenplaatjes.
 <img dierenplaatje.png de voor en achterkant van een dierenplaatje>
-Hierboven zie je de voor en achterkant zon' dierenplaatje, een grutto in dit geval. 
-::question:: waar staat de streepjescode?
+Hierboven zie je de voor en achterkant zo een dierenplaatje, een grutto in dit geval. 
+::question:: Waar staat de streepjescode?
 ::correct:: Op de achterkant (plaatje links)
 ::wrong:: Op de voorkant (plaatje rechts)
 
-::text:: streepjescodes zijn niet gemaakt voor mensen maar voor computers. Bij de dierenplaatjes is er een scanner waar je het dierenplaatje doorheen kan swipen:
+::text:: Streepjescodes zijn niet gemaakt voor mensen maar voor computers. Bij de dierenplaatjes is er een scanner waar je het dierenplaatje doorheen kan swipen:
 <img dierenplaatje_in_scanner.jpeg dierenplaatje in scanner>
-Deze scanner kan door middel van een lichtsensor de zwarte en witte streepjes zien. Hierdoor weet de scanner welk plaatje je gescand hebt en welk geluid hij moet afspelen.
+Deze scanner ziet door middel van een lichtsensor de zwarte en witte streepjes. Hierdoor weet de scanner welk plaatje je gescand hebt en welk geluid hij moet afspelen.
 ::question:: Probeer zelf een dierenplaatje te scannen.
-::correct:: Het is mij gelukt een dierenplaatje te scannen!
+::correct:: Het is mij gelukt een dierenplaatje te scannen en ik heb het geluid van het dier gehoord!
 
-::text:: goed gedaan!
+::text:: Goed gedaan!
 
 Vandaag gaan we er achter komen hoe streepjescode werken, hoe we ze kunnen maken met code en hoe we ze kunnen lezen. We gaan zelfs proberen de scanner voor de dierenplaatjes te hacken door zelf streepjescodes te maken!
 
-je bent nu klaar om naar het volgende onderdeel te gaan. klik boven aan de pagina op de sectie "Wat Zijn Streepjescodes?".
+Je bent nu klaar om naar het volgende onderdeel te gaan. Klik boven aan de pagina op de sectie "Wat zijn Streepjescodes?".
 
 
 
@@ -63,23 +63,23 @@ je bent nu klaar om naar het volgende onderdeel te gaan. klik boven aan de pagin
 
 
 
-::section:: Wat Zijn Streepjescodes?
-::text:: Voor een computer is het moeilijk om text te lezen. Het kost niet alleen veel rekenkracht om text te lezen maar het hebt er ook een camera voor nodig. Dat is vrij duur dus hebben we het de computer makkelijk gemaakt met een streepjescode.
+::section:: Wat zijn Streepjescodes?
+::text:: Voor een computer is het moeilijk om text te lezen. Het kost niet alleen veel rekenkracht om text te lezen maar je hebt er ook een camera voor nodig. Dat is vrij duur dus hebben we het de computer makkelijk gemaakt met een streepjescode.
 
-computers denken in nullen en enen, ook wel binaire getallen genoemd. zo hebben barcodes dikke en dunne strepen. Een dunne streep is een nul en een dikke streep een een.
-::question:: streepjescodes worden vaak in supermarkten gebruikt om de computer te vertellen welk product er gescand word. Kan je ook met een camera de text op een product lezen zodat je geen streepjescode nodig hebt? en is dat handig?
+Computers denken in nullen en enen, ook wel binaire getallen genoemd. Zo hebben barcodes dikke en dunne strepen. Een dunne streep is een nul en een dikke streep een een.
+::question:: Streepjescodes worden vaak in supermarkten gebruikt om de computer te vertellen welk product er gescand wordt. Kun je ook met een camera de text op een product lezen zodat je geen streepjescode nodig hebt? Is dat handig?
 ::wrong:: Ja dat kan, en dat is ook handig omdat er toch op een product moet staan wat het is voor de klanten.
 ::correct:: Ja dat kan, maar is niet handig omdat daar veel rekenkracht en een goede camera voor nodig zijn en dat is duur.
 ::wrong:: Nee dat kan niet, maar het zou wel handig zijn want camera's zijn goedkoper.
-::wrong:: Nee dat kan niet, en dat is ook niet handig want goede camera's zijn erg duur.
+::wrong:: Nee dat kan niet, dat is ook niet handig want goede camera's zijn erg duur.
 
 ::question:: In een barcode is er verschil tussen dikke en dunne strepen. wat is dat verschil?
 ::wrong:: Dikke strepen zijn 0 en dunne strepen zijn 1.
 ::correct:: Dikke strepen zijn 1 en dunne strepen zijn 0.
 
-::text:: Barcodes gebruiken altijd witte en zwarte strepen, nooit andere kleuren. Dit heeft een goede reden. Wit is namelijk de kleur die het meeste licht weerkaatst. Zwart weerkaatst het minste ligt.
+::text:: Barcodes gebruiken altijd witte en zwarte strepen, nooit andere kleuren. Dit heeft een goede reden. Wit is namelijk de kleur die het meeste licht weerkaatst. Zwart weerkaatst het minste licht.
 <img scannerDiagram.png twee plaatjes met een zaklamp en een oog waar links de zaklamp op een wit hokje schijnt en veel licht weerkaatst naar het oog. Rechts weerkaatst het licht van een zwart blokje en veel minder licht gaat naar het oog>
-Hierboven zie je het idee achter een scanner, er schijnt een lamp op een stukje barcode. links schijnt hij op een wit stukje barcode en rechts op een donker stukje. je ziet dat er bij het witte blokje meer licht bij het oog komt. zo kunnen we het verschil tussen zwarte en witte streepjes zien. in een scanner is de lamp vaak een lazer en het oog een lichtsensor. Het is een eigenlijk Een soort camera die enkel in zwart wit kan zien en maar een pixel en zijn zelf licht geeft.
+Hierboven zie je het idee achter een scanner, er schijnt een lamp op een stukje barcode. links schijnt hij op een wit stukje barcode en rechts op een donker stukje. je ziet dat er bij het witte blokje meer licht bij het oog komt. zo kunnen we het verschil tussen zwarte en witte streepjes zien. in een scanner is de lamp vaak een lazer en het oog een lichtsensor. Het is een eigenlijk Een soort camera die enkel in zwart wit kan zien, maximaal een pixel en zijn zelf licht geeft.
 
 Als we de streepjescode onder deze scanner doorhalen kunnen we zien wanneer we zwart of wit zien. Aan hoe lang we zwart zien kunnen we detecteren of we een dikke of een dunne streep scannen.
 ::question:: Waarom zie je nooit een streepjescode met groene en blauwe strepen?
@@ -87,14 +87,14 @@ Als we de streepjescode onder deze scanner doorhalen kunnen we zien wanneer we z
 ::wrong:: De sensor kan geen kleur zien dus als je twee kleuren gebruikt zoals groen en blauw of zelfs donkerblauw en lichtblauw is dat onzichtbaar voor de scanner.
 ::correct:: Groen en blauw weerkaatsen ongeveer evenveel licht. Dus dan kan de scanner niet het verschil tussen de strepen zien.
 
-::text:: Het is belangrijk dat je de streepjescode met een constante snelheid onder de scanner doorhaalt. Misschien heb je dit al gemerkt toen je zelf een dierenplaatje moest scannen. Het probleem is dat als je bijvoorbeeld bij het laatste dunne streepje vertraagt dan lijkt het voor de scanner op een dik streepje. scanners bij de supermarkt hebben een rood streepje. Dit is eigenlijk helemaal geen streepje maar een lazer die heel snel van links naar rechts beweegt. Zo beweeg je de eigenlijk de scanner en kan je de barcode stil houden.
+::text:: Het is belangrijk dat je de streepjescode met een constante snelheid onder de scanner doorhaalt. Misschien heb je dit al gemerkt toen je zelf een dierenplaatje moest scannen. Het probleem is dat als je bijvoorbeeld bij het laatste dunne streepje vertraagt dan lijkt het voor de scanner op een dik streepje. Scanners bij de supermarkt hebben een rode licht streep. Dit is eigenlijk helemaal geen streepje maar een lazer die heel snel van links naar rechts beweegt. Zo beweeg je de eigenlijk de scanner en kan je de barcode stil houden.
 
 ::question:: Waarom moet je een streepjescode met een constante snelheid onder de scanner doorhalen?
 ::wrong:: Omdat de scanner anders geen rood streepje kan maken.
 ::correct:: Omdat de scanner anders dikke en dunne streepjes niet goed kan onderscheiden.
 ::wrong:: Omdat de scanner dan alleen de helft van de code leest.
 
-::text:: Je kan dus streepjescodes gebruiken om nullen en enen makkelijk door een computer te laten lezen. In de volgende sectie gaan we kijken hoe je die nullen en enen kan omzetten naar getallen. Vervolgens kan een computer zo'n getal omzetten naar een actie. De supermarkt heeft bijvoorbeeld een database waar alle producten die ze verkopen een apart nummer hebben. Wanneer de computer dat nummer van een barcode leest kan hij dus opzoeken welk product bij dat nummer hoort.
+::text:: Je kunt dus streepjescodes gebruiken om nullen en enen makkelijk door een computer te laten lezen. In de volgende sectie gaan we kijken hoe je die nullen en enen kan omzetten naar getallen. Vervolgens kan een computer zo'n getal omzetten naar een actie. De supermarkt heeft bijvoorbeeld een database waar alle producten die ze verkopen een apart nummer hebben. Wanneer de computer dat nummer van een barcode leest kan hij dus opzoeken welk product bij dat nummer hoort.
 ::question:: Hoe weet de dierenplaatjes scanner welk geluid hij moet afspelen?
 ::wrong:: Het geluid staat opgeslagen in de barcode als nullen en enen.
 ::correct:: De scanner kan een nummer uit de barcode halen en dan in zijn geheugen opzoeken welk geluid daar bij hoort.
@@ -116,10 +116,10 @@ Als je al binaire en decimale getallen naar elkaar om kan zetten mag je dit deel
 
 ::section:: Binaire Getallen
 ::text:: In het vorige deel hebben we gezien dat een barcode gebruikt word om een computer nullen en enen te laten lezen. Deze nullen en enen representeren getallen.  
-voordat we naar binaire getallen kijken geen we eerst naar decimale getallen kijken. Dat zijn getallen met grondtal 10. Dit zijn getallen waar je mee bekend bent. Zo is honderdeen opgeschreven als 101. grondtal 10 verwijst naar het aantal symbolen dat je kan opschrijven in een hokje. Bijvoorbeeld voor grondtal 10 heb je 
-0,1,2,3,4,5,6,7,8 en 9 
+Voordat we naar binaire getallen kijken, gaan we eerst naar decimale getallen kijken. Dat zijn getallen met grondtal 10. Dit zijn getallen waar je mee bekend bent. Zo is honderdeen opgeschreven als 101. grondtal 10 verwijst naar het aantal symbolen dat je kan opschrijven in een hokje. Bijvoorbeeld voor grondtal 10 heb je 
+0, 1, 2, 3, 4, 5, 6, 7, 8 en 9
 als symbolen. Wil je een hoger gaan krijg je 10 en dat bestaat uit twee symbolen, 0 en 1. Zo heeft hexadecimaal de symbolen 
-0,1,2,3,4,5,6,7,8,9,A,B,C,D,E en F 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E en F 
 dat zijn er 16 dus hexadecimaal heeft grondtal 16.
 ::question:: Binair heeft de symbolen 0 en 1. welk grondtal heeft binair? (typ een getal)
 ::exact:: 2
@@ -137,15 +137,15 @@ Hetzelfde geld voor binair (grondtal 2). we hebben symbolen voor nul en één ma
 ::wrong:: elf
 
 ::text:: Correct! net zoals in het decimaal (grondtal 10) staat 11 voor één keer tien en één keer één samen dus 10 + 1 = 11 dus elf!
-op die zelfde manier staat 11 in binair (grondtal 2) voor één keer twee en één keer één dus 2 + 1 = 3 dus drie !
+op die zelfde manier staat 11 in binair (grondtal 2) voor één keer twee en één keer één dus 2 + 1 = 3 dus drie!
 
-soms willen we meer dan twee symbolen gebruiken in het decimaal (grondtal 10) straat de 1 in 100 voor één keer honderd. honderd is tien keer meer dan tien, dus we vermenigvuldigen weer met het grondtal. Dus in het decimaal als je wil weten waar elk symbool voor staat begin je bij het rechter symbool dat een waarde van één krijgt. Het symbool daar links van krijgt de waarde het grondtal keer hoger, in ons geval tien. dus de waarde van het symbool links is tien keer groter dan één. het getal daar links van tien keer groter dan tien, daar links van tien keer groter dan honderd etc.
+Soms willen we meer dan twee symbolen gebruiken in het decimaal (grondtal 10) straat de 1 in 100 voor één keer honderd. honderd is tien keer meer dan tien, dus we vermenigvuldigen weer met het grondtal. Dus in het decimaal als je wil weten waar elk symbool voor staat begin je bij het rechter symbool dat een waarde van één krijgt. Het symbool daar links van krijgt de waarde het grondtal keer hoger, in ons geval tien. dus de waarde van het symbool links is tien keer groter dan één. het getal daar links van tien keer groter dan tien, daar links van tien keer groter dan honderd etc.
 <img decimaal_stelsel.png>
-hierboven kun je zien hoe het decimale getal 1234 is opgebouwd.
+Hierboven kun je zien hoe het decimale getal 1234 is opgebouwd.
 
-Binair (grondtal twee) wekt op dezelfde manier. Begin bij het symbool rechts die heeft een waarde van één. het symbool daar links van is twee(het grondtal)hoger dus twee, het symbool daar links van is weer twee keer groter dus vier enzovoorts.
+Binair (grondtal twee) werkt op dezelfde manier. Begin bij het symbool rechts die heeft een waarde van één. Het symbool daar links van is twee (het grondtal) hoger, dus twee. Het symbool daar links van is weer twee keer groter dus vier, enzovoorts.
 <img binair_stelsel.png>
-hierboven kun je het getal negen in binair zien.
+Hierboven kun je het getal negen in binair zien.
 ::question:: Wat is het binaire (grondtal 2) getal 100? (voer een decimaal getal in)
 ::exact:: 4
 ::question:: Wat is het binaire (grondtal 2) getal 1000? (voer een decimaal getal in)
@@ -154,7 +154,7 @@ hierboven kun je het getal negen in binair zien.
 ::exact:: 16
 ::question:: Wat is het binaire (grondtal 2) getal 100000? (voer een decimaal getal in)
 ::exact:: 32
-::text:: juist in het decimaal worden de getallen steeds twee keer zo groot als je één nul toevoegt.
+::text:: Juist in het decimaal worden de getallen steeds twee keer zo groot als je één nul toevoegt.
 ::question:: maak je eigen spiekbriefje! schrijf de veelvouden van twee op een blaadje zodat je dat makkelijk kan spieken.
 ::correct:: Ik heb een spiekbriefje met de getallen 
 ... 8, 4, 2, 1 
@@ -179,33 +179,33 @@ Er is een simpel patroon om decimale (grondtal 10) naar binair (grondtal 2) om t
 We beginnen links ons doelgetal is tien. Het patroon is als volgt:
  - als het getal groter is dan ons doelgetal schrijven we er een nul onder.
  - als het getal kleiner of gelijk aan ons doelgetal is schrijven we er een nul onder en trekken we het van ons doelgetal af.
-voorbeeld: ons doelgetal is tien omdat we tien in binair willen opschrijven. eerst komen we 32 tegen, 32 is groter dan tien dus schijven we een nul op:
+Voorbeeld: ons doelgetal is tien omdat we tien in binair willen opschrijven. eerst komen we 32 tegen, 32 is groter dan tien dus schijven we een nul op:
 32, 16, 8, 4, 2, 1
 0
-daarna hebben we 16, ook groter dan 10 dus weer een nul.
+Daarna hebben we 16, ook groter dan 10 dus weer een nul.
 32, 16, 8, 4, 2, 1
 00
-daarna hebben we 8, acht is kleiner dan 10 dus we schrijven een één op en ons nieuwe doelgetal word 10 - 8 = 2.
+Daarna hebben we 8, acht is kleiner dan 10 dus we schrijven een één op en ons nieuwe doelgetal word 10 - 8 = 2.
 32, 16, 8, 4, 2, 1
 001
-daarna hebben we 4, dat is groter dan ons nieuwe doelgetal 2 dus weer een nul.
+Daarna hebben we 4, dat is groter dan ons nieuwe doelgetal 2 dus weer een nul.
 32, 16, 8, 4, 2, 1
 0010
-daarna hebben we 2, dat is gelijk aan ons doelgetal dus we schrijven een één op en ons nieuwe doelgetal word 2 - 2 = 0.
+Daarna hebben we 2, dat is gelijk aan ons doelgetal dus we schrijven een één op en ons nieuwe doelgetal word 2 - 2 = 0.
 32, 16, 8, 4, 2, 1
 00101
-als laatste hebben we 1, dat is groter dan ons nieuwe doelgetal 0 dus weer een nul.
+Als laatste hebben we 1, dat is groter dan ons nieuwe doelgetal 0 dus weer een nul.
 32, 16, 8, 4, 2, 1
 001010
 Nu zijn we klaar! Als je wil kan je de nullen aan het begin weghalen. 
 
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 4 als binair (grondtal 2) cijfer?
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 4 als binair (grondtal 2) cijfer?
 ::exact:: 100
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 5 als binair (grondtal 2) cijfer? 
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 5 als binair (grondtal 2) cijfer? 
 ::exact:: 101
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 11 als binair (grondtal 2) cijfer? 
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 11 als binair (grondtal 2) cijfer? 
 ::exact:: 1011
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 40 als binair (grondtal 2) cijfer? 
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 40 als binair (grondtal 2) cijfer? 
 ::exact:: 101000
 
 ::question:: Opdracht: probeer eens met binaire getallen tot 10 te tellen. schrijf dit op een blaadje (of in je favoriete text editor). Laat je werk controleren.
