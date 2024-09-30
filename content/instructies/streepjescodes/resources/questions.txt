@@ -227,7 +227,54 @@ Klik bovenaan de pagina op "Dierenplaatje Voorspellen".
 
 ::section:: Dierenplaatje Voorspellen
 ::text:: TODO: lezen van de barcode en zo het dichte dierenplaatje voorspellen.
+::text:: Je hebt nu geleerd hoe je een streepjescode kunt omzetten naar een binaire reeks. De volgende stap is om deze binaire reeks te analyseren en te begrijpen hoe de verschillende delen van de streepjescode van de dierenplaatjes werken. In de volgende sectie gaan we ontdekken welke bits het kaartnummer bevatten.
 
+::question:: Laten we beginnen met de de kaart 82, de Ijsduiker, wat is de binaire code van het getal 82?
+::exact:: 1010010
+
+::text:: Goed gedaan! Nu gaan we kijken naar de binaire code van de dierenplaatjes. De binaire code van het dierenplaatje met nummer 82 is: 0001010010101. We moeten nu uitzoeken welke bits in de barcode van de kaart, de binaire vorm van het getal 82 bevat.
+::question:: Zoek de binaire reeks 1010010 in de barcode van de Ijsduiker. Welke bits blijven over aan het einde van de binaire reeks?
+::exact:: 101
+
+::text:: Goed gedaan! De bits 101 blijven over aan het einde van de binaire reeks. We gaan nu zelf code schrijven om op basis van een barcode het getal van de kaart terug te geven. Het zal je opgevallen zijn dat er ook drie nullen aan het begin van de barcode staan. Dit komt omdat de barcode ruimte heeft voor het getal 255, maar er zijn maar 96 verschillende dierenplaatjes. Elk getal van een kaart wordt dus omgezet in 10 bits waarbij minimaal de eerste drie bits altijd 0 zijn.
+Om een streepjescode om te zetten naar het getal van de kaart, moeten we de binaire code splitsen in twee delen. We hebben alleen de eerste 10 bits nodig, de rest van de bits kunnen we negeren. Vervolgens kunnen we deze tien bits omzetten naar een decimaal getal.
+JavaScript heeft twee handig functies die we kunnen gebruiken om dit te doen: `slice` en `parseInt`. De `slice` functie kan gebruikt worden om een deel van een string te selecteren. De `parseInt` functie kan gebruikt worden om een binaire string om te zetten naar een decimaal getal.
+::question:: Schrijf hieronder de code om een binaire vorm van een streepjescode om te zetten naar het decimale getal van de kaart. Als je op test klikt, zal de code uitgevoerd worden en het resultaat getoond worden. Als je klaar bent kun je op valideren klikken om te controleren of je code correct is en door te gaan.
+::interpreter:: 
+
+
+TODO: input with this as default
+```javascript
+function streepjescodeNaarKaartnummer(streepjescode) {
+  // Schrijf je code hier
+}
+```
+
+TODO: code that should run based on the pressed buttons (validation & test), the outcome should be rendered somewhere (validation = success or failure, test = result)
+```javascript
+var barcode = '0001010010101';
+var studentCode = `function streepjescodeNaarKaartnummer(streepjescode) {
+  return parseInt(streepjescode.slice(0, 10), 2);
+}`;
+var wrap = s => '{ return ' + s + ' }';
+var executableStudentCode = new Function(wrap(studentCode));
+
+function test() {
+  var result = executableStudentCode.call(null).call(null, barcode);
+  console.log(result);
+}
+
+function validate() {
+  console.log(executableStudentCode.call(null).call(null, barcode));
+  if (executableStudentCode.call(null).call(null, barcode) === 82) {
+    console.log('success');
+    return true;
+  }
+
+  console.log('failure');
+  return false;
+}
+```
 
 
 
@@ -239,3 +286,4 @@ Klik bovenaan de pagina op "Dierenplaatje Voorspellen".
 
 ::section:: Dierenplaatje Hacken
 ::text:: TODO: zelf een dierenplaatje barcode maken
+TODO: we need to describe the last three bits to be able to generate the barcode
