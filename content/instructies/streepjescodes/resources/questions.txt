@@ -226,7 +226,6 @@ Klik bovenaan de pagina op "Dierenplaatje Voorspellen".
 
 
 ::section:: Dierenplaatje Voorspellen
-::text:: TODO: lezen van de barcode en zo het dichte dierenplaatje voorspellen.
 ::text:: Je hebt nu geleerd hoe je een streepjescode kunt omzetten naar een binaire reeks. De volgende stap is om deze binaire reeks te analyseren en te begrijpen hoe de verschillende delen van de streepjescode van de dierenplaatjes werken. In de volgende sectie gaan we ontdekken welke bits het kaartnummer bevatten.
 
 ::question:: Laten we beginnen met de de kaart 82, de Ijsduiker, wat is de binaire code van het getal 82?
