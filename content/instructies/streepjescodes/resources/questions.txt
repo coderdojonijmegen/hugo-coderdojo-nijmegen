@@ -374,3 +374,4 @@ function validate() {
 }
 ```
 
+::text:: Gefeliciteerd! Je hebt nu geleerd hoe je een barcode kunt maken voor een dierenplaatje. Je kunt nu zelf een barcode maken voor elk dierenplaatje dat je wilt. Je kunt deze barcodes printen en met de soundbox testen of je het dierengeluid te horen krijgt!
