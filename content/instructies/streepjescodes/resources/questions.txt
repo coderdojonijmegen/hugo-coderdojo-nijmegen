@@ -251,6 +251,7 @@ function streepjescodeNaarKaartnummer(streepjescode) {
 
 TODO: code that should run based on the pressed buttons (validation & test), the outcome should be rendered somewhere (validation = success or failure, test = result)
 ```javascript
+var cardNumber = 82;
 var barcode = '0001010010101';
 var studentCode = `function streepjescodeNaarKaartnummer(streepjescode) {
   return parseInt(streepjescode.slice(0, 10), 2);
@@ -265,7 +266,7 @@ function test() {
 
 function validate() {
   console.log(executableStudentCode.call(null).call(null, barcode));
-  if (executableStudentCode.call(null).call(null, barcode) === 82) {
+  if (executableStudentCode.call(null).call(null, barcode) === cardNumber) {
     console.log('success');
     return true;
   }
@@ -284,5 +285,92 @@ function validate() {
 
 
 ::section:: Dierenplaatje Hacken
-::text:: TODO: zelf een dierenplaatje barcode maken
-TODO: we need to describe the last three bits to be able to generate the barcode
+::text:: Je hebt nu geleerd hoe je een streepjescode kunt omzetten naar een binaire reeks en hoe je deze binaire reeks kunt analyseren om het getal van de kaart te vinden. De volgende stap is om zelf een streepjescode te maken voor een dierenplaatje. We gaan een barcode maken voor de Ijsduiker, kaartnummer 82. De barcode van de Ijsduiker is 0001010010101. We hebben al gezien dat de eerste drie bits altijd 0 zijn en dat we alleen de eerste 10 bits nodig hebben. We moeten nu de laatste drie bits van de barcode invullen. Deze bits zijn nodig om de scanner te vertellen dat de barcode compleet is. De laatste drie bits zijn 101. 
+
+::text:: Het 11e bit is het resultaat van een XOR-bewerking (eXclusive OR) over de eerste 10 bits. XOR vergelijkt elk bit van het kaartnummer. Als de bits hetzelfde zijn (bijvoorbeeld 0 en 0 of 1 en 1), is het resultaat 0. Als de bits verschillend zijn (bijvoorbeeld 0 en 1 of 1 en 0), is het resultaat 1. De 12e bit is het resultaat van een AND-bewerking over de eerste 10 bits. AND vergelijkt elk bit van het kaartnummer. Als beide bits 1 zijn, is het resultaat 1.
+
+::question:: Wat is de XOR-bit voor 01?
+::exact:: 1
+
+::question Wat is de XOR-bit voor 00?
+::exact:: 0
+
+::question:: Wat is de XOR-bit voor 10?
+::exact:: 1
+
+::questions:: Wat is de XOR-bit voor 11?
+::exact:: 0
+
+::text:: Goed gedaan! Het twaalfde bit is de inverse van het XOR-bit. Dit betekend dat als het 11e bit 1 is, het 12e bit 0 is en andersom.
+
+::question:: Wat is het 12e bit als het 11e bit 1 is?
+::exact:: 0
+
+::question:: Wat is het 12e bit als het 11e bit 0 is?
+::exact:: 1
+
+::text:: Het dertiende bit is het eenvoudigste deel van de reeks: dit bit is altijd gelijk aan 1. Dit bit fungeert als een soort afsluiter van de reeks en geeft aan dat de code compleet is.
+
+::text:: Nu we weten welke functie alle bits hebben, kunnen we code schrijven om op basis van een kaart nummer de bijbehorende barcode te maken. JavaScript heeft een heel handige functie die we kunnen gebruiken om XOR bewerkingen uit te voeren: `^`. Je kunt hierdoor `getal1 ^ getal2` gebruiken om de XOR bewerking uit te voeren.
+
+::question:: Schrijf hieronder de code om het getal van een kaart om te zetten naar het binaire getal van de streepjescode. Als je op test klikt, zal de code uitgevoerd worden en het resultaat getoond worden. Als je klaar bent kun je op valideren klikken om te controleren of je code correct is en door te gaan.
+
+
+TODO: input with this as default
+```javascript
+function kaartnummerNaarStreepjescode(kaartnummer) {
+  // Schrijf je code hier
+}
+```
+
+TODO: code that should run based on the pressed buttons (validation & test), the outcome should be rendered somewhere (validation = success or failure, test = result)
+```javascript
+var cardNumber = 82;
+var barcode = '0001010010101';
+var studentCode = `function kaartnummerNaarStreepjescode(kaartNummer) {
+  // Zet het getal om naar een binaire string van 10 bits
+  let binaryCode = kaartNummer.toString(2).padStart(10, '0');
+    
+  // Bereken het XOR-bit (11e bit) door elk bit te XOR-en
+  let xorBit = 0;
+  for (let i = 0; i < binaryCode.length; i++) {
+      xorBit ^= parseInt(binaryCode[i], 10); // XOR-bewerking tussen bits
+  }
+  
+  // Bereken het inverse van het XOR-bit (12e bit)
+  let inverseXorBit = xorBit === 1 ? 0 : 1;
+  
+  // Het 13e bit is altijd 1
+  let lastBit = 1;
+  
+  // Voeg de drie extra bits toe aan de binaire code
+  return binaryCode + xorBit + inverseXorBit + lastBit;
+}`;
+var wrap = s => '{ return ' + s + ' }';
+var executableStudentCode = new Function(wrap(studentCode));
+
+function bin2barcode(binaryString) {
+    return binaryString.replace(/0/g, '█  ').replace(/1/g, '██ ');
+}
+
+function test() {
+  var result = executableStudentCode.call(null).call(null, cardNumber);
+  console.log(result);
+  var barcode = bin2barcode(result);
+  console.log(barcode);
+}
+
+function validate() {
+  var result = executableStudentCode.call(null).call(null, cardNumber);
+  console.log(result);
+  console.log(bin2barcode(result));
+  if (result === barcode) {
+    console.log('success');
+    return true;
+  }
+
+  console.log('failure');
+  return false;
+}
+```
+
