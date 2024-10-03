@@ -4,12 +4,16 @@
     <title>{{ .Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
-    {{ $style := resources.Get "scss/coderdojo.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    {{ $style := resources.Get "scss/coderdojo.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <link rel="icon" href="{{ "/imgs/icon-512x512.png" | relURL }}" />
     <meta property="og:title" content="CoderDojo Nijmegen - {{ .Title}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="{{ .Params.banner }}" />
+    {{ if .Params.banner }}
+        <meta property="og:image" content="{{ .Params.banner }}" />
+    {{ else }}
+        <meta property="og:image" content="https://coderdojo-nijmegen.nl/imgs/logo_coderdojo_nijmegen.png" />
+    {{ end }}
     <meta property="og:url" content="https://coderdojo-nijmegen.nl{{ .RelPermalink }}" />
 </head>
 <body>
