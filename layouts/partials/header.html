@@ -4,7 +4,8 @@
     <title>{{ .Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
-    {{ $style := resources.Get "scss/coderdojo.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+    {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+    {{ $style := resources.Get "scss/coderdojo.scss" | toCSS $opts | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <link rel="icon" href="{{ "/imgs/icon-512x512.png" | relURL }}" />
     <meta property="og:title" content="CoderDojo Nijmegen - {{ .Title}}" />
