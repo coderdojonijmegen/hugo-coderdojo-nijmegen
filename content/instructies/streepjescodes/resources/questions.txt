@@ -2,16 +2,16 @@
 
 ::text:: Leuk dat jullie er zijn en welkom op deze CoderDojo!
 
-Deze instructies zijn waarschijnlijk net iets anders dan je gewent bent. Bovenaan je scherm zie je verschillende hoofdstukken. Ieder hoofdstuk bestaat uit een aantal vragen. bijvoorbeeld:
+Deze instructies zijn waarschijnlijk net iets anders dan je gewend bent. Bovenaan je scherm zie je verschillende hoofdstukken. Ieder hoofdstuk bestaat uit een aantal vragen. Bijvoorbeeld:
 ::question:: Hebben we er zin in?
-::correct:: Jaa!!!
-::wrong:: nee, Ik ga Roblox spelen.
+::correct:: Jaaaa!!!
+::wrong:: Nee, ik ga Roblox spelen.
 
 ::text:: Zoals je ziet komt er nieuwe text zodra je een vraag correct beantwoord.
 
-soms zijn de vragen wat moeilijker, als je niet zeker bent over een vraag is dat het perfecte moment om een vraag te stellen. Dat vinden wij ook het leukst. Verder is het niet erg om een vraag fout te beantwoorden, dat is alleen voor jou om je eigen kennis te testen.
+Soms zijn de vragen wat moeilijker, als je niet zeker bent over een vraag is dat het perfecte moment om een vraag aan een mentor te stellen. Dat vinden wij ook het leukst. Verder is het niet erg om een vraag fout te beantwoorden, dat is alleen voor jou om je eigen kennis te testen.
 
-::question:: is het erg om fouten te maken?
+::question:: Is het erg om fouten te maken?
 ::wrong:: Het is niet erg om fouten te maken.
 ::wrong:: Het is niet erg om fouten te maken.
 ::correct:: Het is niet erg om fouten te maken.
@@ -19,36 +19,36 @@ soms zijn de vragen wat moeilijker, als je niet zeker bent over een vraag is dat
 
 ::text:: Wat gaan we doen vandaag: 
 ::text:: We gaan het hebben over streepjescodes, ook wel eens barcodes genoemd (uit het Engels).
-::question:: welke van de volgende afbeeldingen is een streepjescode?
+::question:: Welke van de volgende afbeeldingen is een streepjescode?
 ::wrong:: <img PDF417.png>
 ::wrong:: <img DataMatrix.jpg>
 ::correct:: <img barcodes.jpg>
 ::wrong:: <img qr_code.png>
 
-::text:: streepjescodes kom je overal tegen. ze worden veer gebuikt in supermarkten, op flesjes drinken staat bijvoorbeeld een streepjescode. Daarmee kunnen ze aan de kassa zien wat voorn drinken je koopt en wat het kost. 
+::text:: Streepjescodes kom je overal tegen. Ze worden veel gebuikt in supermarkten, op flesjes drinken staat bijvoorbeeld een streepjescode. Daarmee kunnen ze aan de kassa zien wat voor een drinken je koopt en wat het kost. 
 ::question:: Weet je nog: wat moet je doen as je een vraag niet snapt?
-::correct:: hulp vragen.
-::wrong:: verder gaan en kijken of je het later wel snapt. 
-::wrong:: opgeven en Roblox gaan spelen.
+::correct:: Hulp vragen.
+::wrong:: Verder gaan en kijken of je het later wel snapt. 
+::wrong:: Opgeven en Roblox gaan spelen.
 
 ::text:: Misschien herinner je je de actie van Albert Heijn in september 2024. Bij elke keer dat je boodschappen deed, kreeg je speciale dierenplaatjes.
 <img dierenplaatje.png de voor en achterkant van een dierenplaatje>
-Hierboven zie je de voor en achterkant zon' dierenplaatje, een grutto in dit geval. 
-::question:: waar staat de streepjescode?
+Hierboven zie je de voor en achterkant zo een dierenplaatje, een grutto in dit geval. 
+::question:: Waar staat de streepjescode?
 ::correct:: Op de achterkant (plaatje links)
 ::wrong:: Op de voorkant (plaatje rechts)
 
-::text:: streepjescodes zijn niet gemaakt voor mensen maar voor computers. Bij de dierenplaatjes is er een scanner waar je het dierenplaatje doorheen kan swipen:
+::text:: Streepjescodes zijn niet gemaakt voor mensen maar voor computers. Bij de dierenplaatjes is er een scanner waar je het dierenplaatje doorheen kan swipen:
 <img dierenplaatje_in_scanner.jpeg dierenplaatje in scanner>
-Deze scanner kan door middel van een lichtsensor de zwarte en witte streepjes zien. Hierdoor weet de scanner welk plaatje je gescand hebt en welk geluid hij moet afspelen.
+Deze scanner ziet door middel van een lichtsensor de zwarte en witte streepjes. Hierdoor weet de scanner welk plaatje je gescand hebt en welk geluid hij moet afspelen.
 ::question:: Probeer zelf een dierenplaatje te scannen.
-::correct:: Het is mij gelukt een dierenplaatje te scannen!
+::correct:: Het is mij gelukt een dierenplaatje te scannen en ik heb het geluid van het dier gehoord!
 
-::text:: goed gedaan!
+::text:: Goed gedaan!
 
 Vandaag gaan we er achter komen hoe streepjescode werken, hoe we ze kunnen maken met code en hoe we ze kunnen lezen. We gaan zelfs proberen de scanner voor de dierenplaatjes te hacken door zelf streepjescodes te maken!
 
-je bent nu klaar om naar het volgende onderdeel te gaan. klik boven aan de pagina op de sectie "Wat Zijn Streepjescodes?".
+Je bent nu klaar om naar het volgende onderdeel te gaan. Klik boven aan de pagina op de sectie "Wat zijn Streepjescodes?".
 
 
 
@@ -63,38 +63,38 @@ je bent nu klaar om naar het volgende onderdeel te gaan. klik boven aan de pagin
 
 
 
-::section:: Wat Zijn Streepjescodes?
-::text:: Voor een computer is het moeilijk om text te lezen. Het kost niet alleen veel rekenkracht om text te lezen maar het hebt er ook een camera voor nodig. Dat is vrij duur dus hebben we het de computer makkelijk gemaakt met een streepjescode.
+::section:: Wat zijn Streepjescodes?
+::text:: Voor een computer is het moeilijk om text te lezen. Het kost niet alleen veel rekenkracht om text te lezen maar je hebt er ook een camera voor nodig. Dat is vrij duur dus hebben we het de computer makkelijk gemaakt met een streepjescode.
 
-computers denken in nullen en enen, ook wel binaire getallen genoemd. zo hebben barcodes dikke en dunne strepen. Een dunne streep is een nul en een dikke streep een een.
-::question:: streepjescodes worden vaak in supermarkten gebruikt om de computer te vertellen welk product er gescand word. Kan je ook met een camera de text op een product lezen zodat je geen streepjescode nodig hebt? en is dat handig?
+Computers denken in nullen en enen, ook wel binaire getallen genoemd. Zo hebben barcodes dikke en dunne strepen. Een dunne streep is een nul en een dikke streep een een.
+::question:: Streepjescodes worden vaak in supermarkten gebruikt om de computer te vertellen welk product er gescand wordt. Kun je ook met een camera de text op een product lezen zodat je geen streepjescode nodig hebt? Is dat handig?
 ::wrong:: Ja dat kan, en dat is ook handig omdat er toch op een product moet staan wat het is voor de klanten.
 ::correct:: Ja dat kan, maar is niet handig omdat daar veel rekenkracht en een goede camera voor nodig zijn en dat is duur.
 ::wrong:: Nee dat kan niet, maar het zou wel handig zijn want camera's zijn goedkoper.
-::wrong:: Nee dat kan niet, en dat is ook niet handig want goede camera's zijn erg duur.
+::wrong:: Nee dat kan niet, dat is ook niet handig want goede camera's zijn erg duur.
 
-::question:: In een barcode is er verschil tussen dikke en dunne strepen. wat is dat verschil?
+::question:: In een barcode is er verschil tussen dikke en dunne strepen. Wat is dat verschil?
 ::wrong:: Dikke strepen zijn 0 en dunne strepen zijn 1.
 ::correct:: Dikke strepen zijn 1 en dunne strepen zijn 0.
 
-::text:: Barcodes gebruiken altijd witte en zwarte strepen, nooit andere kleuren. Dit heeft een goede reden. Wit is namelijk de kleur die het meeste licht weerkaatst. Zwart weerkaatst het minste ligt.
-<img scannerDiagram.png twee plaatjes met een zaklamp en een oog waar links de zaklamp op een wit hokje schijnt en veel licht weerkaatst naar het oog. Rechts weerkaatst het licht van een zwart blokje en veel minder licht gaat naar het oog>
-Hierboven zie je het idee achter een scanner, er schijnt een lamp op een stukje barcode. links schijnt hij op een wit stukje barcode en rechts op een donker stukje. je ziet dat er bij het witte blokje meer licht bij het oog komt. zo kunnen we het verschil tussen zwarte en witte streepjes zien. in een scanner is de lamp vaak een lazer en het oog een lichtsensor. Het is een eigenlijk Een soort camera die enkel in zwart wit kan zien en maar een pixel en zijn zelf licht geeft.
+::text:: Barcodes gebruiken altijd witte en zwarte strepen, nooit andere kleuren. Dit heeft een goede reden. Wit is namelijk de kleur die het meeste licht weerkaatst. Zwart weerkaatst het minste licht.
+<img scannerDiagram.png Twee plaatjes met een zaklamp en een oog waar links de zaklamp op een wit hokje schijnt en veel licht weerkaatst naar het oog. Rechts weerkaatst het licht van een zwart blokje en veel minder licht gaat naar het oog>
+Hierboven zie je het idee achter een scanner, er schijnt een lamp op een stukje barcode. Links schijnt hij op een wit stukje barcode en rechts op een donker stukje. Je ziet dat er bij het witte blokje meer licht bij het oog komt. Zo kunnen we het verschil tussen zwarte en witte streepjes zien. In een scanner is de lamp vaak een laser en het oog een lichtsensor. Het is een eigenlijk een soort camera die enkel in zwart-wit kan zien, maximaal een pixel en zijn zelf licht geeft.
 
 Als we de streepjescode onder deze scanner doorhalen kunnen we zien wanneer we zwart of wit zien. Aan hoe lang we zwart zien kunnen we detecteren of we een dikke of een dunne streep scannen.
 ::question:: Waarom zie je nooit een streepjescode met groene en blauwe strepen?
-::wrong:: Het zou wel kunnen maar groene en blauwe strepen staan niet mooi op verpakkingen.
+::wrong:: Het zou wel kunnen, maar groene en blauwe strepen staan niet mooi op verpakkingen.
 ::wrong:: De sensor kan geen kleur zien dus als je twee kleuren gebruikt zoals groen en blauw of zelfs donkerblauw en lichtblauw is dat onzichtbaar voor de scanner.
 ::correct:: Groen en blauw weerkaatsen ongeveer evenveel licht. Dus dan kan de scanner niet het verschil tussen de strepen zien.
 
-::text:: Het is belangrijk dat je de streepjescode met een constante snelheid onder de scanner doorhaalt. Misschien heb je dit al gemerkt toen je zelf een dierenplaatje moest scannen. Het probleem is dat als je bijvoorbeeld bij het laatste dunne streepje vertraagt dan lijkt het voor de scanner op een dik streepje. scanners bij de supermarkt hebben een rood streepje. Dit is eigenlijk helemaal geen streepje maar een lazer die heel snel van links naar rechts beweegt. Zo beweeg je de eigenlijk de scanner en kan je de barcode stil houden.
+::text:: Het is belangrijk dat je de streepjescode met een constante snelheid onder de scanner doorhaalt. Misschien heb je dit al gemerkt toen je zelf een dierenplaatje moest scannen. Het probleem is dat, als je bijvoorbeeld bij het laatste dunne streepje vertraagt, dit voor de scanner op een dik streepje lijkt. Scanners bij de supermarkt hebben een rode licht streep. Dit is eigenlijk helemaal geen streepje maar een laser die heel snel van links naar rechts beweegt. Zo beweeg je de eigenlijk de scanner en kan je de barcode stil houden.
 
 ::question:: Waarom moet je een streepjescode met een constante snelheid onder de scanner doorhalen?
 ::wrong:: Omdat de scanner anders geen rood streepje kan maken.
 ::correct:: Omdat de scanner anders dikke en dunne streepjes niet goed kan onderscheiden.
 ::wrong:: Omdat de scanner dan alleen de helft van de code leest.
 
-::text:: Je kan dus streepjescodes gebruiken om nullen en enen makkelijk door een computer te laten lezen. In de volgende sectie gaan we kijken hoe je die nullen en enen kan omzetten naar getallen. Vervolgens kan een computer zo'n getal omzetten naar een actie. De supermarkt heeft bijvoorbeeld een database waar alle producten die ze verkopen een apart nummer hebben. Wanneer de computer dat nummer van een barcode leest kan hij dus opzoeken welk product bij dat nummer hoort.
+::text:: Je kunt dus streepjescodes gebruiken om nullen en enen makkelijk door een computer te laten lezen. In de volgende sectie gaan we kijken hoe je die nullen en enen kan omzetten naar getallen. Vervolgens kan een computer zo'n getal omzetten naar een actie. De supermarkt heeft bijvoorbeeld een database waar alle producten die ze verkopen een apart nummer hebben. Wanneer de computer dat nummer van een barcode leest kan hij dus opzoeken welk product bij dat nummer hoort.
 ::question:: Hoe weet de dierenplaatjes scanner welk geluid hij moet afspelen?
 ::wrong:: Het geluid staat opgeslagen in de barcode als nullen en enen.
 ::correct:: De scanner kan een nummer uit de barcode halen en dan in zijn geheugen opzoeken welk geluid daar bij hoort.
@@ -116,10 +116,10 @@ Als je al binaire en decimale getallen naar elkaar om kan zetten mag je dit deel
 
 ::section:: Binaire Getallen
 ::text:: In het vorige deel hebben we gezien dat een barcode gebruikt word om een computer nullen en enen te laten lezen. Deze nullen en enen representeren getallen.  
-voordat we naar binaire getallen kijken geen we eerst naar decimale getallen kijken. Dat zijn getallen met grondtal 10. Dit zijn getallen waar je mee bekend bent. Zo is honderdeen opgeschreven als 101. grondtal 10 verwijst naar het aantal symbolen dat je kan opschrijven in een hokje. Bijvoorbeeld voor grondtal 10 heb je 
-0,1,2,3,4,5,6,7,8 en 9 
+Voordat we naar binaire getallen kijken, gaan we eerst naar decimale getallen kijken. Dat zijn getallen met grondtal 10. Dit zijn getallen waar je mee bekend bent. Zo is honderdeen opgeschreven als 101. Grondtal 10 verwijst naar het aantal symbolen dat je kan opschrijven in een hokje. Bijvoorbeeld voor grondtal 10 heb je 
+0, 1, 2, 3, 4, 5, 6, 7, 8 en 9
 als symbolen. Wil je een hoger gaan krijg je 10 en dat bestaat uit twee symbolen, 0 en 1. Zo heeft hexadecimaal de symbolen 
-0,1,2,3,4,5,6,7,8,9,A,B,C,D,E en F 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E en F 
 dat zijn er 16 dus hexadecimaal heeft grondtal 16.
 ::question:: Binair heeft de symbolen 0 en 1. welk grondtal heeft binair? (typ een getal)
 ::exact:: 2
@@ -128,7 +128,7 @@ dat zijn er 16 dus hexadecimaal heeft grondtal 16.
 
 In het decimale stelsel (grondtal 10) hebben we symbolen voor nul tot en met negen. Als we grotere getallen willen gebruiken moeten we meer dan een symbool gebruiken. als we bijvoorbeeld tien willen opschrijven schrijven we 10. Hier staat de 1 niet voor één maar voor één keer tien. Tien is precies ons grondtal!
 
-Hetzelfde geld voor binair (grondtal 2). we hebben symbolen voor nul en één maar als we hoger willen moeten we twee symbolen gebruiken 10 in binair is twee! de 1 staat hier dus niet voor één maar voor twee. twee is precies ons grondtal!
+Hetzelfde geld voor binair (grondtal 2). We hebben symbolen voor nul en één maar als we hoger willen moeten we twee symbolen gebruiken: 10 in binair is twee! De 1 staat hier dus niet voor één maar voor twee. Twee is precies ons grondtal!
 
 ::question:: Wat is het binaire (grondtal 2) getal 11?
 ::wrong:: één
@@ -136,16 +136,16 @@ Hetzelfde geld voor binair (grondtal 2). we hebben symbolen voor nul en één ma
 ::correct:: drie 
 ::wrong:: elf
 
-::text:: Correct! net zoals in het decimaal (grondtal 10) staat 11 voor één keer tien en één keer één samen dus 10 + 1 = 11 dus elf!
-op die zelfde manier staat 11 in binair (grondtal 2) voor één keer twee en één keer één dus 2 + 1 = 3 dus drie !
+::text:: Correct! Net zoals in het decimaal (grondtal 10) staat 11 voor één keer tien en één keer één samen dus 10 + 1 = 11 dus elf!
+Op diezelfde manier staat 11 in binair (grondtal 2) voor één keer twee en één keer één dus 2 + 1 = 3 dus drie!
 
-soms willen we meer dan twee symbolen gebruiken in het decimaal (grondtal 10) straat de 1 in 100 voor één keer honderd. honderd is tien keer meer dan tien, dus we vermenigvuldigen weer met het grondtal. Dus in het decimaal als je wil weten waar elk symbool voor staat begin je bij het rechter symbool dat een waarde van één krijgt. Het symbool daar links van krijgt de waarde het grondtal keer hoger, in ons geval tien. dus de waarde van het symbool links is tien keer groter dan één. het getal daar links van tien keer groter dan tien, daar links van tien keer groter dan honderd etc.
+Soms willen we meer dan twee symbolen gebruiken. In het decimaal (grondtal 10) staat de 1 in 100 voor één keer honderd. Honderd is tien keer meer dan tien, dus we vermenigvuldigen weer met het grondtal. Dus als je wil weten waar elk symbool voor staat in het decimaal, begin je bij het rechter symbool dat een waarde van één krijgt. Het symbool daar links van krijgt de waarde het grondtal keer hoger, in ons geval tien. Dus de waarde van het symbool links is tien keer groter dan één. het getal daar links van tien keer groter dan tien, daar links van tien keer groter dan honderd etc.
 <img decimaal_stelsel.png>
-hierboven kun je zien hoe het decimale getal 1234 is opgebouwd.
+Hierboven kun je zien hoe het decimale getal 1234 is opgebouwd.
 
-Binair (grondtal twee) wekt op dezelfde manier. Begin bij het symbool rechts die heeft een waarde van één. het symbool daar links van is twee(het grondtal)hoger dus twee, het symbool daar links van is weer twee keer groter dus vier enzovoorts.
+Binair (grondtal twee) werkt op dezelfde manier. Begin bij het symbool rechts die een waarde heeft van één. Het symbool daar links van is twee (het grondtal) hoger, dus twee. Het symbool daar links van is weer twee keer groter dus vier, enzovoorts.
 <img binair_stelsel.png>
-hierboven kun je het getal negen in binair zien.
+Hierboven kun je het getal negen in binair zien.
 ::question:: Wat is het binaire (grondtal 2) getal 100? (voer een decimaal getal in)
 ::exact:: 4
 ::question:: Wat is het binaire (grondtal 2) getal 1000? (voer een decimaal getal in)
@@ -154,14 +154,14 @@ hierboven kun je het getal negen in binair zien.
 ::exact:: 16
 ::question:: Wat is het binaire (grondtal 2) getal 100000? (voer een decimaal getal in)
 ::exact:: 32
-::text:: juist in het decimaal worden de getallen steeds twee keer zo groot als je één nul toevoegt.
-::question:: maak je eigen spiekbriefje! schrijf de veelvouden van twee op een blaadje zodat je dat makkelijk kan spieken.
+::text:: Juist in het decimaal worden de getallen steeds twee keer zo groot als je één nul toevoegt.
+::question:: Maak je eigen spiekbriefje! Schrijf de veelvouden van twee op een blaadje zodat je dat makkelijk kan spieken.
 ::correct:: Ik heb een spiekbriefje met de getallen 
 ... 8, 4, 2, 1 
 gemaakt!
 
 ::text:: Als er meer dan één één staat kun je de waardes één voor één opzoeken en bij elkaar optellen.
-zo is het binaire getal 110 gelijk aan vier 4 + 2 = 6.
+Zo is het binaire getal 110 gelijk aan vier 4 + 2 = 6.
 
 ::question:: Wat is het binaire (grondtal 2) getal 11? (voer een decimaal getal in)
 ::exact:: 3
@@ -174,41 +174,41 @@ zo is het binaire getal 110 gelijk aan vier 4 + 2 = 6.
 
 ::text:: Goed bezig! Je kan nu binaire getallen lezen! Maar we zijn er nog niet, we willen ook binair kunnen schrijven.
 
-Er is een simpel patroon om decimale (grondtal 10) naar binair (grondtal 2) om te zetten. Stel we willen het getal tien omzetten naar een binair getal. Eerst pakken we ons spiekbriefje erbij:
+Er is een simpel patroon om decimaal (grondtal 10) naar binair (grondtal 2) om te zetten. Stel we willen het getal tien omzetten naar een binair getal. Eerst pakken we ons spiekbriefje erbij:
 32, 16, 8, 4, 2, 1
-We beginnen links ons doelgetal is tien. Het patroon is als volgt:
+We beginnen links; we willen tien als getal maken (doelgetal). Het patroon is als volgt:
  - als het getal groter is dan ons doelgetal schrijven we er een nul onder.
- - als het getal kleiner of gelijk aan ons doelgetal is schrijven we er een nul onder en trekken we het van ons doelgetal af.
-voorbeeld: ons doelgetal is tien omdat we tien in binair willen opschrijven. eerst komen we 32 tegen, 32 is groter dan tien dus schijven we een nul op:
+ - als het getal kleiner of gelijk aan ons doelgetal is schrijven we er een één onder en trekken we het van ons doelgetal af.
+Voorbeeld: ons doelgetal is tien omdat we tien in binair willen opschrijven. eerst komen we 32 tegen, 32 is groter dan tien dus schijven we een nul op:
 32, 16, 8, 4, 2, 1
 0
-daarna hebben we 16, ook groter dan 10 dus weer een nul.
+Daarna hebben we 16, ook groter dan 10 dus weer een nul.
 32, 16, 8, 4, 2, 1
 00
-daarna hebben we 8, acht is kleiner dan 10 dus we schrijven een één op en ons nieuwe doelgetal word 10 - 8 = 2.
+Daarna hebben we 8, acht is kleiner dan 10 dus we schrijven een één op en ons nieuwe doelgetal word 10 - 8 = 2.
 32, 16, 8, 4, 2, 1
 001
-daarna hebben we 4, dat is groter dan ons nieuwe doelgetal 2 dus weer een nul.
+Daarna hebben we 4, dat is groter dan ons nieuwe doelgetal 2 dus weer een nul.
 32, 16, 8, 4, 2, 1
 0010
-daarna hebben we 2, dat is gelijk aan ons doelgetal dus we schrijven een één op en ons nieuwe doelgetal word 2 - 2 = 0.
+Daarna hebben we 2, dat is gelijk aan ons doelgetal dus we schrijven een één op en ons nieuwe doelgetal word 2 - 2 = 0.
 32, 16, 8, 4, 2, 1
 00101
-als laatste hebben we 1, dat is groter dan ons nieuwe doelgetal 0 dus weer een nul.
+Als laatste hebben we 1, dat is groter dan ons nieuwe doelgetal 0 dus weer een nul.
 32, 16, 8, 4, 2, 1
 001010
 Nu zijn we klaar! Als je wil kan je de nullen aan het begin weghalen. 
 
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 4 als binair (grondtal 2) cijfer?
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 4 als binair (grondtal 2) cijfer?
 ::exact:: 100
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 5 als binair (grondtal 2) cijfer? 
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 5 als binair (grondtal 2) cijfer? 
 ::exact:: 101
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 11 als binair (grondtal 2) cijfer? 
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 11 als binair (grondtal 2) cijfer? 
 ::exact:: 1011
-::question:: Hoe schrijf je her decimale (grondtal 10) cijfer 40 als binair (grondtal 2) cijfer? 
+::question:: Hoe schrijf je het decimale (grondtal 10) cijfer 40 als binair (grondtal 2) cijfer? 
 ::exact:: 101000
 
-::question:: Opdracht: probeer eens met binaire getallen tot 10 te tellen. schrijf dit op een blaadje (of in je favoriete text editor). Laat je werk controleren.
+::question:: Opdracht: probeer eens met binaire getallen tot 10 te tellen. Schrijf dit op een blaadje (of in je favoriete text editor). Laat je werk controleren.
 ::correct:: Ik kan in binair tot tien tellen!
 
 ::text:: Gefeliciteerd! Je kan nu binaire getallen schrijven en lezen!
@@ -226,8 +226,35 @@ Klik bovenaan de pagina op "Dierenplaatje Voorspellen".
 
 
 ::section:: Dierenplaatje Voorspellen
-::text:: TODO: lezen van de barcode en zo het dichte dierenplaatje voorspellen.
+::text:: Je hebt nu geleerd hoe je een streepjescode kunt omzetten naar een binaire reeks. Zo'n binaire reeks bestaat uit nullen en enen, ook wel bits genoemd. De volgende stap is om deze binaire reeks te analyseren en te begrijpen hoe de verschillende delen van de streepjescode van de dierenplaatjes werken. In de volgende sectie gaan we ontdekken welke bits het kaartnummer bevatten.
 
+::question:: Laten we beginnen met de de kaart 82, de Ijsduiker, wat is de binaire code van het getal 82?
+::exact:: 1010010
+
+::text:: Goed gedaan! Nu gaan we kijken naar de binaire code van de dierenplaatjes. De binaire code van het dierenplaatje met nummer 82 is: `0001010010101` We moeten nu uitzoeken welke bits in de barcode van de kaart, de binaire vorm van het getal 82 bevat.
+::question:: Zoek de binaire reeks 1010010 in de barcode van de Ijsduiker. Welke bits blijven over aan het einde van de binaire reeks?
+::exact:: 101
+
+::text:: Goed gedaan! De bits 101 blijven over aan het einde van de binaire reeks. We gaan nu zelf code schrijven om op basis van een barcode het getal van de kaart terug te geven. Het zal je opgevallen zijn dat er ook drie nullen aan het begin van de barcode staan. Dit komt omdat de barcode ruimte heeft voor het getal 255, maar er zijn maar 96 verschillende dierenplaatjes. Elk getal van een kaart wordt dus omgezet in 10 bits waarbij minimaal de eerste drie bits altijd 0 zijn.
+Om een streepjescode om te zetten naar het getal van de kaart, moeten we de binaire code splitsen in twee delen. We hebben alleen de eerste 10 bits nodig, de rest van de bits kunnen we negeren. Herinner je dat een dik streepje een 1 is en een dun streepje een nul.
+::text:: We gaan kijken of je van een dicht dierenplaatje kan voorspellen welk dier het is zonder hem open te maken.
+::question:: Vraag een begeleider om een dicht dierenplaatje. Schrijf de eerste 10 bits van de streepjescode van jou dichte dierenplaatje op.
+::correct:: Ik heb tien 0 en 1 opgeschreven. (laat je antwoord controleren)
+
+::text:: Vervolgens kunnen we deze tien bits omzetten naar een decimaal getal. We hebben al gezien hoe dit met de hand moet, maar we gaan het nu met code proberen.
+JavaScript heeft hier een handige functie om dit te doen: `parseInt(text,grondtal)` De parseInt functie kan gebruikt worden om een binaire string om te zetten naar een decimaal getal. Dit doe je door voor text een stukje text te geven en een grondtal mee te geven. Bijvoorbeeld `parseInt('101',4)` gaat 101 bereken als een getal met grondtal 4. 
+[link https://sharepad.io/p/FzvlQc2 Zie hier een interactief voorbeeld]
+::question:: Gebruik het interactieve voorbeeld hierboven om het binaire getal 111001011101 in decimaal om te zetten. Geef het decimale getal.
+::exact:: 3677
+::text:: Lekker bezig! Met de code `console.log(parseInt('111001011101',2));` krijg je het binaire getal als decimaal te zien!
+
+::text:: Op deze manier kun je barcodes naar nummers omzetten. Boven aan deze pagina kun je op "Namen Lijst" klikken om een lijst te krijgen waar staat welk dier bij welk nummer hoort.
+::question:: Gebruik het binaire getal dat je twee vragen terug hebt opgeschreven om het dier op te zoeken. Klopt je voorspelling?
+::correct:: Ik heb mijn dierenplaatje open gemaakt en het dier klopt!
+
+::text:: Hoera! Je kan nu dierenplaatjes voorspellen.
+
+Je bent nu klaar voor het volgende deel. Daar gaan we zelf een barcode maken om de scanner te laten denken dat we een dierenplaatje hebben die we helemaal niet hebben. Klik bovenaan de pagina op "Dierenplaatje Hacken".
 
 
 
@@ -238,4 +265,209 @@ Klik bovenaan de pagina op "Dierenplaatje Voorspellen".
 
 
 ::section:: Dierenplaatje Hacken
-::text:: TODO: zelf een dierenplaatje barcode maken
+::text:: Je hebt nu geleerd hoe je een streepjescode kunt omzetten naar een binaire reeks en hoe je deze binaire reeks kunt analyseren om het getal van de kaart te vinden. De volgende stap is om zelf een streepjescode te maken voor een dierenplaatje. We gaan een barcode maken voor de Ijsduiker, kaartnummer 82. De barcode van de Ijsduiker is 0001010010101. We hebben al gezien dat de eerste drie bits altijd 0 zijn en dat we alleen de eerste 10 bits nodig hebben. We moeten nu de laatste drie bits van de barcode invullen. Deze bits zijn nodig om de scanner te vertellen dat de barcode compleet is. De laatste drie bits zijn 101. 
+
+::text:: Het 11e bit is het resultaat van een XOR-bewerking (eXclusive OR) over de eerste 10 bits. XOR vergelijkt elk bit van het kaartnummer. Als de bits hetzelfde zijn (bijvoorbeeld 0 en 0 of 1 en 1), is het resultaat 0. Als de bits verschillend zijn (bijvoorbeeld 0 en 1 of 1 en 0), is het resultaat 1.
+
+::question:: Wat is de XOR-bit voor 01?
+::exact:: 1
+
+::question:: Wat is de XOR-bit voor 00?
+::exact:: 0
+
+::question:: Wat is de XOR-bit voor 10?
+::exact:: 1
+
+::question:: Wat is de XOR-bit voor 11?
+::exact:: 0
+
+::text:: Als je meer bits hebt zoals 1011 en je wil daar de XOR over bereken kun je eerst de XOR van de eerste twee bits nemen (in ons geval 1 en 0) en die twee bits vervangen door het resultaat. Voorbeeld:
+`
+1011
+111
+01
+1
+`
+::question:: Wat is de XOR-bit over 110?
+::exact:: 0
+
+::question:: Wat is de XOR-bit over 100?
+::exact:: 1
+
+::question:: Wat is de XOR-bit over 101101?
+::exact:: 0
+
+::text:: Goed gedaan! Het twaalfde bit is de inverse van het XOR-bit. Dit betekend dat als het 11e bit 1 is, het 12e bit 0 is en andersom.
+
+::question:: Wat is het 12e bit als het 11e bit 1 is?
+::exact:: 0
+
+::question:: Wat is het 12e bit als het 11e bit 0 is?
+::exact:: 1
+
+::text:: Het dertiende bit is het eenvoudigste deel van de reeks: dit bit is altijd gelijk aan 1. Dit bit werkt als een soort afsluiter van de reeks en geeft aan dat de code compleet is.
+
+::text:: Nu we weten welke functie alle bits hebben, kunnen we code schrijven om op basis van een kaart nummer de bijbehorende barcode te maken.
+
+We beginnen met ons decimaal getal als nullen en enen te krijgen.
+Dit kan gemakkelijk met de `kaartNummer.toString(grondtal)` functie, vervang grondtal door het grondtal dat je wil gebruiken.
+[link https://sharepad.io/p/zfAMA8s Klik hier voor de website om code te schrijven]
+Je kan in de "kaartnummerNaarStreepjescode" functie jouw code schrijven. De `controleer(81)` zal kijken of jouw programma 81 kan omzetten naar een streepjescode. Pas als de hele barcode af is, stopt hij met zeggen dat de hele barcode nog niet werkt, dus dat mag je voor nu nog negeren.
+::question:: Gebruik de toString functie om het getal naar binair om te zetten. Welk binair nummer krijg je?
+::exact:: 1010001
+::text:: [link https://sharepad.io/p/aGCv6y3 Je code zou er nu zo uit moeten zien]
+::question:: Hoeveel bits heeft dat getal?
+::exact:: 7
+::text:: Inderdaad, maar dat is een probleem, want we hebben geleerd dat we de eerste tien bits moeten vullen.
+Er moeten dus nullen voor totdat de totale lengte 10.
+
+Dit probleem kunnen we oplossen met de `binaireCode.padStart(lengte, karakter)` functie, waarmee je aan de voorkant een karakter toe kan voegen totdat de totale lengte "lengte" is. Voorbeeld:
+`binaireCode.padStart(8, 'x')` 
+Als binaireCode 1001 is dan is het resultaat `xxxx1001`
+[link https://sharepad.io/p/EeqZ8G8 Voeg aan deze code toe dat er extra nullen komen]
+::question:: Welke bits worden er nu gegenereerd?
+::exact:: 0001010001
+::text:: [link https://sharepad.io/p/Y4irbpT Je code zou er nu zo uit moeten zien]
+::text:: Nu mogen we het XOR bit berekenen. JavaScript heeft een heel handige functie die we kunnen gebruiken om XOR bewerkingen uit te voeren: `^`. Je kunt hierdoor `getal1 ^ getal2` gebruiken om de XOR bewerking uit te voeren.
+[link https://sharepad.io/p/3u2Gha9 bekijk deze code]
+::question:: Klopt deze implementatie en wat doen we hier?
+::correct:: De implementatie klopt en de for-loop gaat over alle 10 de bits heen en berekent de XOR met de huidige waarde van xorBit totdat alle bits gehad zijn.
+::wrong:: De implementatie klopt en de for-loop maakt het huidige bitNummer nul en berekend dan de XOR met dat bit.
+::wrong:: De implementatie klopt niet en we kijken hier maar naar 2 bits en berekenen de XOR.
+::wrong:: De implementatie klopt niet en de xorBit word hier nul en de for loop past deze niet aan.
+
+::text:: Dit is inderdaad een correcte implementatie. Nu gaan we de inverse xorBit implementeren.
+::question:: [link https://sharepad.io/p/zGt3Pod Maak deze code af]
+::wrong:: Het laatste bit is hetzelfde als het op één na laatste bit.
+::correct:: Het laatste bit is anders dan het op één na laatste bit.
+
+::text:: [link https://sharepad.io/p/dFdDfU9 Je code zou er nu zo uit moeten zien.]
+
+Nu moeten we de laatste stap doen.
+::question:: Wat moest het laatste bit zijn?
+::wrong:: Het laatste bit is altijd 1.
+::correct:: Het laatste bit is altijd 0.
+::wrong:: Het laatste bit is altijd hetzelfde als het een-na-laatste bit.
+::wrong:: Het laatste bit is altijd het tegenovergestelde van het een-na-laatste bit.
+
+::text:: De laatste stap is om het laatste bit toe te voegen.
+::question:: Voeg het laatste bit toe aan de code.
+::correct:: Ik krijg te zien dat de hele barcode werkt!
+
+::text:: [link https://sharepad.io/p/04ZLvJZ Je code zou er nu zo uit moeten zien.]
+::text:: Gefeliciteerd! Je hebt nu geleerd hoe je een barcode kunt maken voor een dierenplaatje. Je kunt nu zelf een barcode maken voor elk dierenplaatje dat je wilt. Je kunt deze barcodes printen en met de soundbox testen of je het dierengeluid te horen krijgt!
+
+Je kan ook proberen zelf een barcode te tekenen:
+<img getekende_barcode.jpeg Een getekende barcode>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Namen Lijst
+::text::
+1.	Grutto
+2.	Grote bonte specht
+3.	Roerdomp
+4.	Europese otter
+5.	Europese egel
+6.	Adder
+7.	Meerkikker
+8.	Wild zwijn
+9.	Bruinvis
+10.	Wisent
+11.	Boshommel
+12.	Haring
+13.	Geelvleugelara
+14.	Tijger
+15.	Berggorilla
+16.	Tokeh
+17.	Kapucijnluiaard
+18.	Orang-oetan
+19.	Zwarte brulaap
+20.	Geelgouden pijlgifkikker
+21.	Midden-Amerikaanse tapir
+22.	Jaguar
+23.	Witte klokvogel
+24.	Grote paradijsvogel
+25.	Reuzenalbatros
+26.	Zeeleguaan
+27.	Gewone pijlstaartrog
+28.	Tijgerpistoolgarnaal
+29.	Bultrug
+30.	Lederschildpad
+31.	Tuimelaar
+32.	Stellers zeearend
+33.	Doejong
+34.	Blauwe papegaaivis
+35.	Komodovaraan
+36.	Pauw bidsprinkhaankreeft
+37.	Texaanse ratelslang
+38.	Wilde kameel
+39.	Arabische oryx
+40.	Roodkopgier
+41.	Heilige pillenkeve
+42.	Stokstaartje
+43.	Zuidelijke sprinkhaanmuis
+44.	Rode reuzenkangoeroe
+45.	Naakte molrat
+46.	Witbuikzandhoen
+47.	Fennek
+48.	Gravende schorpioen
+49.	Edelhert
+50.	Koala
+51.	Kleine panda
+52.	Amoerluipaard
+53.	Canadese lynx
+54.	Bruine beer
+55.	Grijze grootoorvleermuis
+56.	Zeventienjarige cicade
+57.	Reuzenpanda
+58.	Gewone kookaburra
+59.	Grijze wolf
+60.	Trommelwolfspin
+61.	Ijsbeer
+62.	Walrus
+63.	Narwal
+64.	Poolvos
+65.	Rendier
+66.	Keizerspinguin
+67.	Zadelrob
+68.	Sneeuwuil
+69.	Orka
+70.	Papegaaiduiker
+71.	Berglemming
+72.	Noordse stern
+73.	Roze pelikaan
+74.	Nijlpaard
+75.	Vogelbekdier
+76.	Capibara
+77.	Afrikaanse stierkikker
+78.	Orinocodolfijn
+79.	Chinese Alligator
+80.	Malariamug
+81.	Schoenbekooievaar
+82.	Ijsduiker
+83.	Japanse kraanvogel
+84.	Axolotl
+85.	Savanneolifant
+86.	Cheeta
+87.	Masaigiraffe
+88.	Gevlekte hyena
+89.	Indisch schubdier
+90.	Przewalskipaard
+91.	Secretarisvogel
+92.	Zwarte neushoorn
+93.	Utahprairiehond
+94.	Leeuw
+95.	Aardvarken
+96.	Dikstaartgalago
