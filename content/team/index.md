@@ -7,46 +7,36 @@ draft: false
 
 ## Wie zijn we?
 
-### Pieter | Mentor
+We zijn een groep mensen die enthousiast zijn over wat programmeren te bieden heeft en kinderen daar graag kennis
+mee laten maken. Met achtergronden in onder andere software ontwikkeling, software security en onderwijs, zijn er
+diverse onderwerpen die we onder de aandacht brengen.
 
-{{< mentor src="pieter.png" title="Pieter" >}}
+De dagelijkse leiding is in handen van de Champion, op dit moment Bas. Verder hebben we een mooie groep mentoren:
 
-Na meer dan tien jaar onderzoek naar de hersenen gedaan te hebben met MRI, werkt Pieter tegenwoordig als data scientist
-en ontwikkelt bijvoorbeeld chatbots en manieren om interessante informatie uit teksten (zoals nieuwsberichten) te halen.
+<div class="content" style="
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;">
+    <!-- content -->
+</div>
+<script src="TagCloud.min.js"></script>
+<script>
+var mentoren = [
+    'Bas',
+    'Claudia',
+    'Edwin',
+    'Jaap',
+    'Joachim',
+    'Maud-Marit',
+    'Natasha',
+    'Oscar',
+    'Rik',
+    'Sijmen',
+    'Tjeerd',
+    'Wouter',
+];
+TagCloud('.content', mentoren);
+</script>
 
-In zijn vrije tijd vindt Pieter het leuk – ook samen met zijn dochters en soms op school – bezig te zijn met allerlei
-soorten electronica zoals robots, micro:bit en Arduino.
-{{< /mentor >}}
-
-### Bas | Mentor
-
-{{< mentor src="bas.png" title="Bas" >}}
-
-Bas is een all-round softwareontwikkelaar bij Signify (voormalig Philips Lighting) in Eindhoven. Van origine een
-elektrotechnicus, maar al 20 jaar bezig met software in werk en hobby. Hij heeft software gemaakt voor lampen
-elektronica, Linux mini computers, websites, systeem testen en diverse scriptjes. Gebruikte programmeertalen zijn o.a.
-ANSI-C, Java, Python, SQL, HTML, JavaScript en PHP.
-
-Hij leert zelf nog altijd graag en vind het ook leuk om zijn enthousiasme en kunde over te brengen aan kinderen. Zijn
-twee kinderen zijn ook geïnteresseerd en zul je zo af en toe ook zien tijdens een Dojo.
-{{< /mentor >}}
-
-### Daan | Mentor
-
-### Jaap | Mentor
-
-### Tjeerd | Mentor
-
-### Rik | Mentor
-
-### Auke | Mentor
-
-### Maud-Marit | Mentor
-
-### Claudia | Mentor
-
-### Sijmen | Mentor
-
-## Ook lid worden van het team?
-
-CoderDojo Nijmegen is altijd op zoek naar vrijwilligers. Kijk ook op pagina [meehelpen]({{< ref "meehelpen" >}}).
+CoderDojo Nijmegen is altijd op zoek naar vrijwilligers. Kijk ook op pagina [meehelpen]({{< ref "meehelpen" >}})
+voor meer informatie.
