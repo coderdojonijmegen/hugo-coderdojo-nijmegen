@@ -1,5 +1,6 @@
 coderdojonijmegen/arduino-snelle-introductie content/instructies/arduino-snelle-introductie
 coderdojonijmegen/coding-for-web-php content/instructies/web-development-php
+coderdojonijmegen/hoe-werken-streepjescodes content/instructies/streepjescodes
 coderdojonijmegen/love2d-blocks content/instructies/love2d-blocks
 coderdojonijmegen/love2d-shooter content/instructies/love2d-shooter
 coderdojonijmegen/love2d-snake content/instructies/love2d-snake
@@ -12,10 +13,10 @@ coderdojonijmegen/processing-spiekbriefje content/instructies/processing-spiekbr
 coderdojonijmegen/py-turtle content/instructies/python-turtle
 coderdojonijmegen/python-art content/instructies/python-art
 coderdojonijmegen/python-raspberry-pi content/instructies/python-raspberry-pi
+coderdojonijmegen/python-raspberry-pi-pico content/instructies/python-raspberry-pi-pico
 coderdojonijmegen/scratch-art content/instructies/scratch-art
 coderdojonijmegen/scratch-snake content/instructies/scratch-snake
 coderdojonijmegen/scratch-space-shooter content/instructies/scratch-space-shooter
 coderdojonijmegen/scratch3 content/instructies/scratch-videosensing
 coderdojonijmegen/web-development content/instructies/web-development
 coderdojonijmegen/web-ontbijtkoekclicker content/instructies/ontbijtkoekclicker
-coderdojonijmegen/python-raspberry-pi-pico content/instructies/python-raspberry-pi-pico
