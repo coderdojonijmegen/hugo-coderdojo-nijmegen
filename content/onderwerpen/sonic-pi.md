@@ -64,5 +64,5 @@ Speciaal voor kerst: Jingle Bells met Sonic Pi!
 
 ## Muziek
 
-Als je wat ervaring hebt opgedaan met Sonic Pi, kun je [hier](https://www.pimba.nl/liedjes/toetsen?level=1) wat muziek
+Als je wat ervaring hebt opgedaan met Sonic Pi, kun je [hier](https://pimbapiano.com/nl/liedjes?title=&level=1&genre=3) wat muziek
 vinden om te gebruiken in je scripts. Er wordt gebruik gemaakt van dezelfde letters als in Sonic Pi.
