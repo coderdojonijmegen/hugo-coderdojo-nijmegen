@@ -65,13 +65,6 @@ _secretaris_
 </div>
 <div class="flex-grid-col">
 
-![Daan Willems](daan.png)
-Daan Willems
-_algemeen bestuurslid_
-[![LinkedIn](/imgs/linkedin-grey.png)](https://www.linkedin.com/in/daan-willems-48665712b/)
-</div>
-<div class="flex-grid-col">
-
 ![Rianne Kooi](rianne.jpg)
 Rianne Kooi
 _algemeen bestuurslid_

@@ -8,4 +8,5 @@ aliases:
     - /materiaal
 ---
 
+![Dall-E: Create me a picture of a bookshelf filled with instructions for CoderDojo workshops.](/imgs/coderdojo-bookshelf-DallE.jpg)
 

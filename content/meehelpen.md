@@ -18,6 +18,9 @@ investeren. We richten ons op kinderen vanaf 7 jaar, wat wil zeggen dat een groo
 niet erg ingewikkeld is. Het belangrijkste is dat je met enige regelmaat (maximaal 1 x per maand) een zaterdag beschikbaar 
 bent om te helpen bij de CoderDojo workshops.
 
+![Dall-E: Create me a photo realistic image of a CoderDojo mentor supporting children to execute programming instructions. The mentor is bent over looking at the screen of the laptop of the child.
+The child is sitting at a table with 3 other children on the other sides of the table.](/imgs/mentor-met-kinderen-Dall-E.jpg)
+
 Veel mentoren hebben zelf ook iets aan hun hulp bij CoderDojo, bijvoorbeeld in hun werk, studie of thuissituatie. Het is 
 dus niet erg als je niet alleen iets komt 'brengen', maar ook ‘halen’ bij CoderDojo. Integendeel: dit kan juist je plezier 
 en motivatie vergroten. Mentoren hebben ook uiteenlopende interesses: de een bouwt het liefst websites, de ander digitale 
