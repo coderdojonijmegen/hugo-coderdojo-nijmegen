@@ -20,6 +20,8 @@ bent om te helpen bij de CoderDojo workshops.
 
 ![Dall-E: Create me a photo realistic image of a CoderDojo mentor supporting children to execute programming instructions. The mentor is bent over looking at the screen of the laptop of the child.
 The child is sitting at a table with 3 other children on the other sides of the table.](/imgs/mentor-met-kinderen-Dall-E.jpg)
+{{< caption >}}Dall-E prompt: Create me a photo realistic image of a CoderDojo mentor supporting children to execute programming instructions. The mentor is bent over looking at the screen of the laptop of the child.
+The child is sitting at a table with 3 other children on the other sides of the table.{{< /caption >}}
 
 Veel mentoren hebben zelf ook iets aan hun hulp bij CoderDojo, bijvoorbeeld in hun werk, studie of thuissituatie. Het is 
 dus niet erg als je niet alleen iets komt 'brengen', maar ook ‘halen’ bij CoderDojo. Integendeel: dit kan juist je plezier 
