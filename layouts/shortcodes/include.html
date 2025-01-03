@@ -1,0 +1,4 @@
+<div class="included">
+    {{ $file := .Get "file" }}
+    {{ (.Site.GetPage $file).Content }}
+</div>

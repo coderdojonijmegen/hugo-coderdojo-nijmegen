@@ -1,0 +1,7 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range (where .Site.RegularPages "Section" "installatie") -}}
+{{- if not (in .Params.categories "search") -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "date" (.Date.Format "January 2, 2006") "categories" .Params.categories "contents" .Plain "permalink" .Permalink) -}}
+{{- end -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
