@@ -6,3 +6,4 @@ hugo-coderdojo-nijmegen.iml
 dojo_bas.iml
 *.pyc
 /venv/
+.DS_Store
