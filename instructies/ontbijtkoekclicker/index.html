@@ -15,7 +15,8 @@ Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je e
 Dit zorgt dat je af en toe lange URLs in de code voorbij ziet komen.
 Deze URLs kan je eventueel vervangen door de afbeeldingen te downloaden.
 Zet gedownloade afbeeldingen in dezelfde directory als waar pagina.html zich bevindt.
-Deze kan je vervolgens als volgt gebruiken:<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>img</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;VOORBEELDNAAM.jpg&#34;</span>&gt;</span></span></code></pre></div></div></div><h2 id=overzicht-van-het-spel>Overzicht van het spel</h2><p>We beginnen met een samenvatting van het spel, zodat het duidelijk is waar we naartoe werken.
+Deze kan je vervolgens als volgt gebruiken:<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>img</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;VOORBEELDNAAM.jpg&#34;</span>&gt;</span></span></code></pre></td></tr></table></div></div></div></div><h2 id=overzicht-van-het-spel>Overzicht van het spel</h2><p>We beginnen met een samenvatting van het spel, zodat het duidelijk is waar we naartoe werken.
 De leukste manier om hier een idee over te krijgen is natuurlijk door het origineel te spelen.</p><p>Het doel van het spel is om cookies te genereren.
 Dit kun je doen door op het koekje te klikken, maar je kunt niet eeuwig blijven klikken.
 Uiteindelijk wil je dat er zoveel mogelijk koekjes automatisch worden gegenereerd.
@@ -33,7 +34,17 @@ hebben we een aantal keuzes in de opzet van het HTML-bestand gemaakt.
 Die keuzes lichten we in dit deel toe,
 zodat je de individuele onderdelen op de HTML-pagina straks gemakkelijk
 kan beïnvloeden via JavaScript-code.</p><p>We beginnen met het HTMl bestand. Het bestand pagina.html bevat een <code>section</code> tag
-met daarin vier verschillende <code>div</code> tags:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>section</span>&gt;
+met daarin vier verschillende <code>div</code> tags:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>section</span>&gt;
 </span></span><span style=display:flex><span>	<span style=color:#998;font-style:italic>&lt;!-- In deze div kan de speler op de Cookie klikken. --&gt;</span> 
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>div</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;klikruimte&#34;</span>&gt;&lt;/<span style=color:navy>div</span>&gt;
 </span></span><span style=display:flex><span>	<span style=color:#998;font-style:italic>&lt;!-- In deze div laten we van elk type Clicker zien hoeveel we er hebben. --&gt;</span> 
@@ -42,18 +53,38 @@ met daarin vier verschillende <code>div</code> tags:</p><div class=highlight><pr
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tierdisplay rows&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;clickerWinkel&#34;</span>&gt;&lt;/<span style=color:navy>div</span>&gt;
 </span></span><span style=display:flex><span>	<span style=color:#998;font-style:italic>&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt;</span> 
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tierdisplay table&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;powerupWinkel&#34;</span>&gt;&lt;/<span style=color:navy>div</span>&gt;
-</span></span><span style=display:flex><span>&lt;/<span style=color:navy>section</span>&gt;</span></span></code></pre></div><p>Deze <code>div</code>s komen overeen met de onderdelen van het originele spel
+</span></span><span style=display:flex><span>&lt;/<span style=color:navy>section</span>&gt;</span></span></code></pre></td></tr></table></div></div><p>Deze <code>div</code>s komen overeen met de onderdelen van het originele spel
 en bepalen dus op welke plek van de pagina de onderdelen komen te staan.
 Het belangrijkste onderdeel van de <code>div</code>s zijn de <code>id</code>s.
 Met behulp van de <code>id</code>s kunnen we deze <code>div</code>s bereiken en gebruiken in JavaScript.</p><p>Stel bijvoorbeeld dat we in het overzicht met actieve Clickers een Clicker toe willen voegen.
-Om te zorgen dat we vanuit de <code>div</code> met actieve Clickers opereren, bereiken we deze als volgt:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> actieveClickerDiv <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;actieveClickers&#34;</span>)</span></span></code></pre></div><p>Kortom, elk onderdeel van het spel komt overeen met een <code>div</code> in de HTML-code!
+Om te zorgen dat we vanuit de <code>div</code> met actieve Clickers opereren, bereiken we deze als volgt:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> actieveClickerDiv <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;actieveClickers&#34;</span>)</span></span></code></pre></td></tr></table></div></div><p>Kortom, elk onderdeel van het spel komt overeen met een <code>div</code> in de HTML-code!
 Als we bijvoorbeeld in JavaScript iets aan de Powerups willen veranderen,
 zoeken we de Powerup <code>div</code> eerst op met de correcte <code>id</code>!
 De <code>id</code> is in dit voorbeeld <code>powerupWinkel</code>.</p><h2 id=relatie-met-de-html-code-2>Relatie met de HTML-code (2)</h2><p>We weten nu waar de onderdelen van het spel komen te staan,
 maar hoe zien die onderdelen er precies uit?
 En wat staat er in de bijbehorende <code>div</code>s?</p><p>De meeste onderdelen bestaan uit een lijst,
 met een onderdeel (of: <a href=https://nl.wikipedia.org/wiki/Lijst_(informatica)>element</a>) voor elke rang (Engels: &ldquo;tier&rdquo;) Clicker.
-Als voorbeeld kunnen we naar de Powerups kijken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#998;font-style:italic>&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt;</span> 
+Als voorbeeld kunnen we naar de Powerups kijken:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#998;font-style:italic>&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt;</span> 
 </span></span><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tierdisplay table&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;powerupWinkel&#34;</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>h3</span>&gt;Powerups&lt;/<span style=color:navy>h3</span>&gt;
 </span></span><span style=display:flex><span>
@@ -71,28 +102,55 @@ Als voorbeeld kunnen we naar de Powerups kijken:</p><div class=highlight><pre ta
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier2&#34;</span> <span style=color:teal>onClick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;koopPowerup(2)&#34;</span>&gt;...&lt;/<span style=color:navy>div</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier3&#34;</span> <span style=color:teal>onClick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;koopPowerup(3)&#34;</span>&gt;...&lt;/<span style=color:navy>div</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier4&#34;</span> <span style=color:teal>onClick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;koopPowerup(4)&#34;</span>&gt;...&lt;/<span style=color:navy>div</span>&gt;
-</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></div><p>De Deegroller Powerup (tier 0) is hier volledig uitgewerkt.
+</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></td></tr></table></div></div><p>De Deegroller Powerup (tier 0) is hier volledig uitgewerkt.
 Het belangrijkste onderdeel van dit voorbeeld is de <code>class</code> van de elementen in de lijst.
 De <code>class</code> werkt op een soortgelijke manier als de <code>id</code>, maar een class is niet uniek.
 Hierdoor kunnen we het <code>class</code> systeem voor alle drie de lijsten gebruiken die we gaan maken.
 Als iets met de goedkoopste Clicker te maken heeft, heeft het <code>class="tier0"</code>.
 De een na goedkoopste Clicker heeft <code>class="tier1"</code>, etc.</p><p>Als je een element zoekt, moet je nu echter wel zorgen dat je in de juiste lijst zoekt.
 De volgende code verkrijgt resultaten met <code>class="tier0"</code> uit
-<span style=color:red>alle lijsten</span> (actieve Clickers, Clickers winkel, Powerup winkel).</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>const tierDiv = document.getElementsByClassName(&#34;tier0&#34;)</span></span></code></pre></div><p>Dat is niet de bedoeling als we bijvoorbeeld iets aan de tier 0 Powerup willen veranderen.
+<span style=color:red>alle lijsten</span> (actieve Clickers, Clickers winkel, Powerup winkel).</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>const tierDiv = document.getElementsByClassName(&#34;tier0&#34;)</span></span></code></pre></td></tr></table></div></div><p>Dat is niet de bedoeling als we bijvoorbeeld iets aan de tier 0 Powerup willen veranderen.
 In plaats daarvan zorgen we dat we eerst naar de Powerups kijken,
-en vervolgens naar die van tier 0:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>const actieveClickerDiv = document.getElementById(&#34;powerup&#34;)
-</span></span><span style=display:flex><span>const tierDiv = actieveClickerDiv.getElementsByClassName(&#34;tier0&#34;)[0]</span></span></code></pre></div><p>Let op: omdat <code>getElementsByClassName</code> meerdere resultaten <em>kan</em> geven
+en vervolgens naar die van tier 0:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>const actieveClickerDiv = document.getElementById(&#34;powerup&#34;)
+</span></span><span style=display:flex><span>const tierDiv = actieveClickerDiv.getElementsByClassName(&#34;tier0&#34;)[0]</span></span></code></pre></td></tr></table></div></div><p>Let op: omdat <code>getElementsByClassName</code> meerdere resultaten <em>kan</em> geven
 (in dit voorbeeld niet), kiezen we de eerste via <code>[0]</code>.</p><h2 id=een-klikbaar-koekje>Een klikbaar koekje</h2><p>Aan het begin van het spel heb je nog geen Clickers en moet je handmatig je koekjes verdienen.
 Dit doe je door op de grote afbeelding van het koekje te klikken.
-Hier komen enkele dingen bij kijken:</p><ul><li>elke klik op de afbeelding word geregistreerd via een <code>onClick="onClickCookie()"</code> HTML-attribuut;</li><li>we houden de hoeveelheid koekjes bij in een variabele <code>geld</code> in JavaScript, deze begint op <code>0</code>;</li><li>de functie <code>onClickCookie</code> verhoogt <code>geld</code> met <code>1</code>;</li><li>een functie <code>updateGeld</code> zorgt dat de nieuwe waarde van <code>geld</code> in de HTML-code update;</li><li><code>onClickCookie</code> roept <code>updateGeld</code> aan na het verhogen van <code>geld</code>.</li></ul><p>Om dit te implementeren, moet je goed letten op de <code>id</code>s van de <code>div</code>- en <code>h2</code> tags:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;klikRuimte&#34;</span>&gt;
+Hier komen enkele dingen bij kijken:</p><ul><li>elke klik op de afbeelding word geregistreerd via een <code>onClick="onClickCookie()"</code> HTML-attribuut;</li><li>we houden de hoeveelheid koekjes bij in een variabele <code>geld</code> in JavaScript, deze begint op <code>0</code>;</li><li>de functie <code>onClickCookie</code> verhoogt <code>geld</code> met <code>1</code>;</li><li>een functie <code>updateGeld</code> zorgt dat de nieuwe waarde van <code>geld</code> in de HTML-code update;</li><li><code>onClickCookie</code> roept <code>updateGeld</code> aan na het verhogen van <code>geld</code>.</li></ul><p>Om dit te implementeren, moet je goed letten op de <code>id</code>s van de <code>div</code>- en <code>h2</code> tags:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;klikRuimte&#34;</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>img</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;https://www.pngall.com/wp-content/uploads/2016/07/Cookie-PNG.png&#34;</span> <span style=color:teal>onClick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;onClickCookie()&#34;</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>br</span>&gt;
 </span></span><span style=display:flex><span>	<span style=color:#998;font-style:italic>&lt;!-- In deze h2 tags laten we de huidige hoeveelheid geld zien, 
 </span></span></span><span style=display:flex><span><span style=color:#998;font-style:italic>		en hoeveel geld we per seconde verdienen. --&gt;</span> 
 </span></span><span style=display:flex><span>		&lt;<span style=color:navy>h2</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;geld&#34;</span>&gt;Geld: 0$&lt;/<span style=color:navy>h2</span>&gt;
 </span></span><span style=display:flex><span>		&lt;<span style=color:navy>h2</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;geldPerSeconde&#34;</span>&gt;Geld per seconde: 0$&lt;/<span style=color:navy>h2</span>&gt;
-</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></div><p>Voor <code>updateGeld</code> heb je de <code>h2</code> die het geld weergeeft nodig.
-Als je deze eenmaal gevonden hebt, kan je de inhoud van de <code>h2</code> via <code>innerText</code> als volgt updaten:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>geldH2.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;Geld: &#34;</span> <span style=color:#000;font-weight:700>+</span> hoeveelheid <span style=color:#000;font-weight:700>+</span> <span style=color:#d14>&#34;$&#34;</span></span></span></code></pre></div><div class=toggle><div class=toggle_header>Voorbeeldcode klikbaar koekje</div><div style=display:none><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> geld <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0</span>
+</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></td></tr></table></div></div><p>Voor <code>updateGeld</code> heb je de <code>h2</code> die het geld weergeeft nodig.
+Als je deze eenmaal gevonden hebt, kan je de inhoud van de <code>h2</code> via <code>innerText</code> als volgt updaten:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>geldH2.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;Geld: &#34;</span> <span style=color:#000;font-weight:700>+</span> hoeveelheid <span style=color:#000;font-weight:700>+</span> <span style=color:#d14>&#34;$&#34;</span></span></span></code></pre></td></tr></table></div></div><div class=toggle><div class=toggle_header>Voorbeeldcode klikbaar koekje</div><div style=display:none><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> geld <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#998;font-style:italic>/* Voegt 1$ toe en update de pagina */</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>function</span> onClickCookie() {
@@ -106,15 +164,20 @@ Als je deze eenmaal gevonden hebt, kan je de inhoud van de <code>h2</code> via <
 </span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>const</span> geldH2 <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;geld&#34;</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    geldH2.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;Geld: &#34;</span> <span style=color:#000;font-weight:700>+</span> hoeveelheid <span style=color:#000;font-weight:700>+</span> <span style=color:#d14>&#34;$&#34;</span>
-</span></span><span style=display:flex><span>}</span></span></code></pre></div>Eventueel kan je `updateGeld` ook direct gebruik laten maken van de globale variabele `geld`.</div></div><h2 id=clickers-winkel>Clickers winkel</h2><p>Als we eenmaal wat koekjes hebben, willen we het spel natuurlijk voor ons laten werken!
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div>Eventueel kan je `updateGeld` ook direct gebruik laten maken van de globale variabele `geld`.</div></div><h2 id=clickers-winkel>Clickers winkel</h2><p>Als we eenmaal wat koekjes hebben, willen we het spel natuurlijk voor ons laten werken!
 Hiervoor gebruiken we Clickers, die je kan kopen bij de Clickers winkel.
 In pagina.html zien we een <code>div</code> met <code>id=clickerWinkel</code>;
 dit is waar we de Clickers te koop zullen zetten.
-In deze <code>div</code> vinden we de volgende HTML-code:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier1 ruimte&#34;</span> <span style=color:teal>onClick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;koopClicker(1)&#34;</span>&gt;
+In deze <code>div</code> vinden we de volgende HTML-code:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier1 ruimte&#34;</span> <span style=color:teal>onClick</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;koopClicker(1)&#34;</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>img</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;icon&#34;</span> <span style=color:teal>src</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;???&#34;</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>text</span>&gt;???&lt;/<span style=color:navy>text</span>&gt;
 </span></span><span style=display:flex><span>	&lt;<span style=color:navy>text</span>&gt;??? $&lt;/<span style=color:navy>text</span>&gt;
-</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt; </span></span></code></pre></div><p>Hier kan je je eigen Clickers in zetten, met een plaatje en een prijs!
+</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt; </span></span></code></pre></td></tr></table></div></div><p>Hier kan je je eigen Clickers in zetten, met een plaatje en een prijs!
 Dit doe je door de <code>???</code> te vervangen.
 Als voorbeeld hebben we dit al gedaan voor <code>tier0</code> in het HTML-bestand;
 hier is een chefkok met zijn cloche te zien.
@@ -123,7 +186,28 @@ Laten we een paar doelen vaststellen:</p><ul><li>elke klik op een Clicker <code>
 om te zorgen dat ze later op de pagina passen <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>;</li><li>we houden per tier Clicker bij hoeveel ze kosten;</li><li>de functie <code>koopClicker</code> checkt of je genoeg geld hebt en of er nog niet teveel Clickers zijn;</li><li>als dit het geval is, registreer dan de nieuwe Clicker en haal het geld weg (aankoop voltooid);</li><li>update naderhand de pagina op basis van de veranderingen.</li></ul><p>Vooralsnog verdienen de Clickers dus nog geen koekjes voor ons,
 we houden enkel bij hoeveel we er van welke tier gekocht hebben.</p><p>Tip: omdat we het onderdeel Actieve Clickers nog niet hebben, is het lastig te zien of de winkel werkt.
 Het kan handig zijn om in <code>clickerWinkel</code> <code>console.log(aantalClickers[tier])</code> te gebruiken,
-om te zien hoeveel je er hebt na aanschaf.</p><div class=toggle><div class=toggle_header>Voorbeeldcode Clicker winkel</div><div style=display:none><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> aantalClickers <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>]
+om te zien hoeveel je er hebt na aanschaf.</p><div class=toggle><div class=toggle_header>Voorbeeldcode Clicker winkel</div><div style=display:none><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> aantalClickers <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>]
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> clickerKosten <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>1</span>, <span style=color:#099>10</span>, <span style=color:#099>50</span>, <span style=color:#099>100</span>, <span style=color:#099>500</span>]
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> geld <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0</span>
@@ -143,12 +227,48 @@ om te zien hoeveel je er hebt na aanschaf.</p><div class=toggle><div class=toggl
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>/* Update de pagina! */</span>
 </span></span><span style=display:flex><span>    updateGeld(geld)
-</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></div><h2 id=actieve-clickers-inkomsten-toevoegen>Actieve Clickers inkomsten toevoegen</h2><p>In deze sectie zorgen we dat de actieve Clickers geld genereren.
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div></div></div><h2 id=actieve-clickers-inkomsten-toevoegen>Actieve Clickers inkomsten toevoegen</h2><p>In deze sectie zorgen we dat de actieve Clickers geld genereren.
 Dit doen we door elke seconde het inkomen van alle actieve Clickers bij elkaar op te tellen.
 Het totaal voegen we toe aan de hoeveelheid koekjes die we al hebben.
 Een voorbeeld:</p><table><thead><tr><th style=text-align:left>Clicker     </th><th style=text-align:center>Inkomen per seconde     </th><th style=text-align:left>Aantal     </th><th style=text-align:left>Totaal     </th></tr></thead><tbody><tr><td style=text-align:left>Kok</td><td style=text-align:center>1</td><td style=text-align:left>4</td><td style=text-align:left>4</td></tr><tr><td style=text-align:left>Clicker tier 1</td><td style=text-align:center>2</td><td style=text-align:left>1</td><td style=text-align:left>2</td></tr><tr><td style=text-align:left>Clicker tier 2</td><td style=text-align:center>4</td><td style=text-align:left>3</td><td style=text-align:left>12</td></tr><tr><td style=text-align:left>Clicker tier 3</td><td style=text-align:center>0</td><td style=text-align:left>0</td><td style=text-align:left>0</td></tr><tr><td style=text-align:left>Clicker tier 4</td><td style=text-align:center>0</td><td style=text-align:left>0</td><td style=text-align:left>0</td></tr><tr><td style=text-align:left></td><td style=text-align:center></td><td style=text-align:left><strong>Som:</strong></td><td style=text-align:left><strong>18</strong></td></tr></tbody></table><p>We hebben drie nieuwe functies nodig:</p><ul><li><code>berekenGeldPerSeconde</code> voert de berekening uit het voorbeeld uit;</li><li><code>updateGeldPerSeconde</code> update de <code>div</code> met <code>id="geldPerSeconde"</code>;</li><li><code>koopClicker</code> (en later <code>koopPowerup</code>) voeren <code>updateGeldPerSeconde</code> uit bij aankoop van een nieuwe Clicker.</li><li><code>updateClickerGeld</code> voegt de inkomsten van de Clickers toe aan het totaal,
-met behulp van <code>berekenGeldPerSeconde</code>.</li></ul><p>Om de functie <code>updateClickerGeld</code> elke seconde uit te voeren kan je de volgende code gebruiken:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#998;font-style:italic>/* Zorgt dat updateClickerGeld elke seconde activeert. */</span>
-</span></span><span style=display:flex><span>setInterval(updateClickerGeld, <span style=color:#099>1000</span>)</span></span></code></pre></div><div class=toggle><div class=toggle_header>Voorbeeldcode actieve Clickers inkomsten toevoegen</div><div style=display:none><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> aantalClickerTiers <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>
+met behulp van <code>berekenGeldPerSeconde</code>.</li></ul><p>Om de functie <code>updateClickerGeld</code> elke seconde uit te voeren kan je de volgende code gebruiken:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#998;font-style:italic>/* Zorgt dat updateClickerGeld elke seconde activeert. */</span>
+</span></span><span style=display:flex><span>setInterval(updateClickerGeld, <span style=color:#099>1000</span>)</span></span></code></pre></td></tr></table></div></div><div class=toggle><div class=toggle_header>Voorbeeldcode actieve Clickers inkomsten toevoegen</div><div style=display:none><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> aantalClickerTiers <span style=color:#000;font-weight:700>=</span> <span style=color:#099>5</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> clickerInkomsten <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>1</span>, <span style=color:#099>2</span>, <span style=color:#099>4</span>, <span style=color:#099>8</span>, <span style=color:#099>32</span>]
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> aantalClickers <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>, <span style=color:#099>0</span>]
@@ -181,11 +301,23 @@ met behulp van <code>berekenGeldPerSeconde</code>.</li></ul><p>Om de functie <co
 </span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>const</span> geldPerSecondeH2 <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;geldPerSeconde&#34;</span>)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    geldPerSecondeH2.innerText <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;Geld per seconde: &#34;</span> <span style=color:#000;font-weight:700>+</span> hoeveelheid <span style=color:#000;font-weight:700>+</span> <span style=color:#d14>&#34;$&#34;</span>
-</span></span><span style=display:flex><span>}</span></span></code></pre></div>Vergeet niet dat `koopClicker` (en later `koopPowerup`) `updateGeldPerSeconde`
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div>Vergeet niet dat `koopClicker` (en later `koopPowerup`) `updateGeldPerSeconde`
 uitvoeren bij aankoop van een nieuwe Clicker!</div></div><h2 id=actieve-clickers-weergeven>Actieve Clickers weergeven</h2><p>We kunnen eindelijk werkende Clickers toevoegen, maar de pagina voelt nog erg leeg.
 Het zou leuk zijn om te zien welke Clickers we in dienst hebben!
 Hiervoor gebruiken we de <code>div</code> met <code>id="actieveClickers"</code>.
-Dit is hoe de <code>div</code> er uit zou moeten zien na het kopen van twee Chefs:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tierdisplay rows&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;actieveClickers&#34;</span>&gt;
+Dit is hoe de <code>div</code> er uit zou moeten zien na het kopen van twee Chefs:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tierdisplay rows&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;actieveClickers&#34;</span>&gt;
 </span></span><span style=display:flex><span>&lt;<span style=color:navy>h3</span>&gt;Actieve Clickers&lt;/<span style=color:navy>h3</span>&gt;
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier0&#34;</span>&gt;
@@ -196,21 +328,49 @@ Dit is hoe de <code>div</code> er uit zou moeten zien na het kopen van twee Chef
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tier1&#34;</span>&gt;&lt;/<span style=color:navy>div</span>&gt;
 </span></span><span style=display:flex><span>...
-</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></div><p>We gebruiken hier weer hetzelfde systeem als voorheen, waarin elk onderdeel van het spel een <code>div</code> is,
+</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></td></tr></table></div></div><p>We gebruiken hier weer hetzelfde systeem als voorheen, waarin elk onderdeel van het spel een <code>div</code> is,
 welke een lijst met <code>class="tier"</code> elementen bevat.
 Die elementen kunnen we dus vinden zoals voorheen!
 De vraag is nu: hoe voegen we hier afbeeldingen aan toe zoals in het bovenstaande voorbeeld?</p><p>Het antwoord: via <code>document.createElement</code>.
 Via deze functie kunnen we in de JavaScript-code HTML-elementen maken,
 en deze later in een ander HTML-element toevoegen.
-Dit is te zien in het volgende voorbeeld:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> actieveClickerDiv <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;actieveClickers&#34;</span>)
+Dit is te zien in het volgende voorbeeld:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> actieveClickerDiv <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.getElementById(<span style=color:#d14>&#34;actieveClickers&#34;</span>)
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> tierDiv <span style=color:#000;font-weight:700>=</span> actieveClickerDiv.getElementsByClassName(<span style=color:#d14>&#34;tier0&#34;</span>)[<span style=color:#099>0</span>]
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> afbeelding <span style=color:#000;font-weight:700>=</span> <span style=color:#0086b3>document</span>.createElement(<span style=color:#d14>&#34;img&#34;</span>)
 </span></span><span style=display:flex><span>afbeelding.src <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;&#34;</span> <span style=color:#998;font-style:italic>/* jouw afbeelding bron */</span>
 </span></span><span style=display:flex><span>afbeelding.className <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;icon&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>tierDiv.appendChild(afbeelding)</span></span></code></pre></div><p>Het voorbeeld laat alleen niet zien hoe je dit voor een willekeurige <code>tier</code> doet.
-Als je dit lastig vindt, vraag dan gerust om hulp!</p><div class=toggle><div class=toggle_header>Voorbeeldcode actieve Clickers</div><div style=display:none><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#998;font-style:italic>/* Een lijst met de icoontjes van de Clickers. */</span>
+</span></span><span style=display:flex><span>tierDiv.appendChild(afbeelding)</span></span></code></pre></td></tr></table></div></div><p>Het voorbeeld laat alleen niet zien hoe je dit voor een willekeurige <code>tier</code> doet.
+Als je dit lastig vindt, vraag dan gerust om hulp!</p><div class=toggle><div class=toggle_header>Voorbeeldcode actieve Clickers</div><div style=display:none><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#998;font-style:italic>/* Een lijst met de icoontjes van de Clickers. */</span>
 </span></span><span style=display:flex><span>clickerIcons <span style=color:#000;font-weight:700>=</span> [
 </span></span><span style=display:flex><span>    <span style=color:#d14>&#34;https://pngimg.com/uploads/chef/chef_PNG54.png&#34;</span>,
 </span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>/* tier 1 */</span>
@@ -229,7 +389,7 @@ Als je dit lastig vindt, vraag dan gerust om hulp!</p><div class=toggle><div cla
 </span></span><span style=display:flex><span>    afbeelding.className <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;icon&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    tierDiv.appendChild(afbeelding)
-</span></span><span style=display:flex><span>}</span></span></code></pre></div>Van belang: gebruik `voegActieveClickerToe(tier)` aan het einde van de functie `koopClicker`,
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div>Van belang: gebruik `voegActieveClickerToe(tier)` aan het einde van de functie `koopClicker`,
 zodat het kopen van een Clicker van tier `tier` een nieuwe aan de lijst voor `tier` Clickers toevoegt.</div></div><h2 id=clicker-powerup-winkel>Clicker Powerup winkel</h2><p>We kunnen nu handmatig koekjes verdienen en deze investeren in Clickers.
 De Clickers zijn te zien in het overzicht met actieve Clickers.
 Het spel voelt echter een beetje eenzijdig:
@@ -239,7 +399,23 @@ In het voorbeeld kan je voor de Chef een deegroller kopen:
 deze zorgt dat de Chef twee keer zoveel koekjes per seconde kan produceren.</p><p>In deze instructie zullen we één Powerup per tier Clicker maken.
 Dit is net iets simpeler dan in het originele spel,
 maar je kan het later uitbreiden!
-De HTML-code voor Powerups lijkt erg op die van de Clicker winkel:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#998;font-style:italic>&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt;</span> 
+De HTML-code voor Powerups lijkt erg op die van de Clicker winkel:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#998;font-style:italic>&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt;</span> 
 </span></span><span style=display:flex><span>&lt;<span style=color:navy>div</span> <span style=color:teal>class</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;tierdisplay table&#34;</span> <span style=color:teal>id</span><span style=color:#000;font-weight:700>=</span><span style=color:#d14>&#34;powerupWinkel&#34;</span>&gt;
 </span></span><span style=display:flex><span>&lt;<span style=color:navy>h3</span>&gt;Powerups&lt;/<span style=color:navy>h3</span>&gt;
 </span></span><span style=display:flex><span>	<span style=color:#998;font-style:italic>&lt;!-- Via deze div kan je de Deegroller Powerup kopen. Deze kan je als voorbeeld gebruiken. --&gt;</span> 
@@ -254,11 +430,45 @@ De HTML-code voor Powerups lijkt erg op die van de Clicker winkel:</p><div class
 </span></span><span style=display:flex><span>	&lt;/<span style=color:navy>div</span>&gt;
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>	...
-</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></div><p>Ook hier komt een kort plan van aanpak van pas:</p><ul><li>elke klik op een Clicker <code>div</code> word geregistreerd via een <code>onClick="koopPowerup(n)"</code> HTML-attribuut;</li><li>we houden per tier Clicker bij of de Powerup al gekocht is;</li><li>de functie <code>koopPowerup</code> check of je genoeg geld hebt en of de Powerup nog niet gekocht is;</li><li>als dit het geval is, registreer dan de nieuwe Powerup en haal het geld weg (aankoop voltooid);</li><li>update naderhand de pagina op basis van de veranderingen.</li></ul><p>Ook moeten we zorgen dat we ergens een lijstje bijhouden met de inkomsten per seconde
+</span></span><span style=display:flex><span>&lt;/<span style=color:navy>div</span>&gt;</span></span></code></pre></td></tr></table></div></div><p>Ook hier komt een kort plan van aanpak van pas:</p><ul><li>elke klik op een Clicker <code>div</code> word geregistreerd via een <code>onClick="koopPowerup(n)"</code> HTML-attribuut;</li><li>we houden per tier Clicker bij of de Powerup al gekocht is;</li><li>de functie <code>koopPowerup</code> check of je genoeg geld hebt en of de Powerup nog niet gekocht is;</li><li>als dit het geval is, registreer dan de nieuwe Powerup en haal het geld weg (aankoop voltooid);</li><li>update naderhand de pagina op basis van de veranderingen.</li></ul><p>Ook moeten we zorgen dat we ergens een lijstje bijhouden met de inkomsten per seconde
 van elke Clicker. Als de Powerup is gekocht, vermenigvuldigen we die inkomsten met twee.</p><p>Tip: als de aanschaf van een Powerup succesvol is,
 moeten we zorgen dat men deze niet nogmaals kan kopen.
-Je kan de Powerup uit de lijst halen via:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> tierDiv <span style=color:#000;font-weight:700>=</span> ...
-</span></span><span style=display:flex><span>tierDiv.remove()</span></span></code></pre></div><div class=toggle><div class=toggle_header>Voorbeeldcode Powerup winkel</div><div style=display:none><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> powerupKosten <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>10</span>, <span style=color:#099>100</span>, <span style=color:#099>500</span>, <span style=color:#099>1000</span>, <span style=color:#099>5000</span>]
+Je kan de Powerup uit de lijst halen via:</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> tierDiv <span style=color:#000;font-weight:700>=</span> ...
+</span></span><span style=display:flex><span>tierDiv.remove()</span></span></code></pre></td></tr></table></div></div><div class=toggle><div class=toggle_header>Voorbeeldcode Powerup winkel</div><div style=display:none><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> powerupKosten <span style=color:#000;font-weight:700>=</span> [<span style=color:#099>10</span>, <span style=color:#099>100</span>, <span style=color:#099>500</span>, <span style=color:#099>1000</span>, <span style=color:#099>5000</span>]
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>let</span> geld <span style=color:#000;font-weight:700>=</span> <span style=color:#099>0</span>
 </span></span><span style=display:flex><span><span style=color:#000;font-weight:700>const</span> beschikbarePowerups <span style=color:#000;font-weight:700>=</span> [<span style=color:#000;font-weight:700>true</span>, <span style=color:#000;font-weight:700>true</span>, <span style=color:#000;font-weight:700>true</span>, <span style=color:#000;font-weight:700>true</span>, <span style=color:#000;font-weight:700>true</span>]
@@ -289,8 +499,134 @@ Je kan de Powerup uit de lijst halen via:</p><div class=highlight><pre tabindex=
 </span></span><span style=display:flex><span>    <span style=color:#000;font-weight:700>const</span> tierDiv <span style=color:#000;font-weight:700>=</span> powerupDiv.getElementsByClassName(<span style=color:#d14>&#34;tier&#34;</span> <span style=color:#000;font-weight:700>+</span> tier)[<span style=color:#099>0</span>]
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    tierDiv.remove()
-</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></div><h2 id=uitbreidingen>Uitbreidingen</h2><p>Allereerst: gefeliciteerd met het halen van het einde van deze instructie!</p><p>Er zijn een hoop uitbreidingen mogelijk op het basisconcept:</p><ul><li>de kosten van Clickers verhogen na elke aankoop;</li><li>meerde Powerups per Clicker;</li><li>meer Clickers toevoegen;</li></ul><p>Hier kan je zelf mee aan de slag gaan
-en natuurlijk extra hulp bij vragen.</p><p>Laat ons eventueel weten of er nog andere uitbreidingen zijn die je in deze instructie zou willen zien!</p><h2 id=top-secret>Top secret</h2><div class=toggle><div class=toggle_header>De volledige voorbeeldcode</div><div style=display:none><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>    <span style=color:#998;font-style:italic>/* Een lijst met de icoontjes van de Clickers. */</span>
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div></div></div><h2 id=uitbreidingen>Uitbreidingen</h2><p>Allereerst: gefeliciteerd met het halen van het einde van deze instructie!</p><p>Er zijn een hoop uitbreidingen mogelijk op het basisconcept:</p><ul><li>de kosten van Clickers verhogen na elke aankoop;</li><li>meerde Powerups per Clicker;</li><li>meer Clickers toevoegen;</li></ul><p>Hier kan je zelf mee aan de slag gaan
+en natuurlijk extra hulp bij vragen.</p><p>Laat ons eventueel weten of er nog andere uitbreidingen zijn die je in deze instructie zou willen zien!</p><h2 id=top-secret>Top secret</h2><div class=toggle><div class=toggle_header>De volledige voorbeeldcode</div><div style=display:none><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">  9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 97
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 98
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 99
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">100
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">101
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">102
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">103
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">104
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">105
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">106
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">107
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">108
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">109
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">110
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">111
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">112
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">113
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">114
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">115
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">116
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">117
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">118
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">119
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">120
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">121
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">122
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">123
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">124
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">125
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">126
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span>    <span style=color:#998;font-style:italic>/* Een lijst met de icoontjes van de Clickers. */</span>
 </span></span><span style=display:flex><span>    clickerIcons <span style=color:#000;font-weight:700>=</span> [
 </span></span><span style=display:flex><span>        <span style=color:#d14>&#34;https://pngimg.com/uploads/chef/chef_PNG54.png&#34;</span>,
 </span></span><span style=display:flex><span>        <span style=color:#998;font-style:italic>/* tier 1 */</span>
@@ -415,7 +751,7 @@ en natuurlijk extra hulp bij vragen.</p><p>Laat ons eventueel weten of er nog an
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>    
 </span></span><span style=display:flex><span>    <span style=color:#998;font-style:italic>/* Zorgt dat updateClickerGeld elke seconde activeert. */</span>
-</span></span><span style=display:flex><span>    setInterval(updateClickerGeld, <span style=color:#099>1000</span>)</span></span></code></pre></div></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+</span></span><span style=display:flex><span>    setInterval(updateClickerGeld, <span style=color:#099>1000</span>)</span></span></code></pre></td></tr></table></div></div></div></div><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
 aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>Er is immers geen ruimte op het scherm voor 100 kok icoontjes!&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a><br><a href=http://ixperium.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/ixperium-bw.png alt="Ixperium logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2025</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
 <a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
 <a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
