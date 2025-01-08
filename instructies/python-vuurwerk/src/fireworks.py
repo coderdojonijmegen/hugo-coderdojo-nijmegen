@@ -1,6 +1,6 @@
 import turtle
 from collections import namedtuple
-from math import sin, cos
+from math import sin, cos, pi
 from random import randint
 from time import sleep
 
@@ -10,8 +10,8 @@ Speed = namedtuple("Speed", "x, y")
 Color = namedtuple("Color", "r, g, b")
 Position = namedtuple("Position", "x, y")
 
-WINDOW_SIZE = WindowSize(1000, 1000)
-NUM_FIREWORKS = 40
+WINDOW_SIZE = WindowSize(0.9, 0.9)
+NUM_FIREWORKS = 50
 MAX_X_SPEED = 20
 START_COLOR = Color(255, 170, 0)
 FULLY_DIMMED_COLOR = Color(0, 0, 0)
@@ -105,14 +105,14 @@ class Firework:
 
 
 def random_start_speed() -> Speed:
-    return Speed(randint(-MAX_X_SPEED, MAX_X_SPEED) / 4, 20 + randint(-3, 40) / 10)
+    return Speed(randint(-MAX_X_SPEED, MAX_X_SPEED) / 4, 20 + randint(-10, 40) / 10)
 
 
 def random_speed(current_speed: Speed, speed: int, spark: int, sparks: int) -> Speed:
     angle = spark * 180 / sparks
     speed_variance = (randint(10, 14) / 10)
-    speed_x = speed * sin(angle) * speed_variance
-    speed_y = speed * cos(angle) * speed_variance
+    speed_x = speed * sin(pi * angle) * speed_variance
+    speed_y = speed * cos(pi * angle) * speed_variance
     return Speed(current_speed.x + speed_x,
                  current_speed.y + speed_y)
 
@@ -130,12 +130,11 @@ def do_fireworks():
     text.penup()
     text.setposition((0, -200))
     text.pendown()
-    text.write("Gelukkig 2025!", font=("serif", 50, "normal"), align="center")
-    text.penup()
-    text.setposition((0, -250))
-    text.pendown()
-    text.write("CoderDojo Nijmegen", font=("sans serif", 25, "normal"), align="center")
+    text.write("Gelukkig 2025!", font=("serif", 70, "normal"), align="center")
+    window.update()
+    sleep(5)
 
+    cnt = 0
     fireworks = []
     while True:
         for firework in fireworks:
@@ -144,6 +143,7 @@ def do_fireworks():
             if firework.is_fully_dimmed:
                 firework.clear()
                 fireworks.remove(firework)
+                cnt += 1
             if firework.is_going_down and firework.is_from_ground:
                 firework.clear()
                 num_sparks = randint(10, 25)
@@ -155,6 +155,13 @@ def do_fireworks():
                 fireworks.remove(firework)
         if len(fireworks) < NUM_FIREWORKS:
             fireworks.append(Firework(START_COLOR, START_POS, random_start_speed()))
+        if cnt > NUM_FIREWORKS:
+            text.penup()
+            text.setposition((0, -262))
+            text.pendown()
+            text.color("gold")
+            text.write("CoderDojo Nijmegen", font=("sans serif", 35, "normal"), align="center")
+
         window.update()
         sleep(0.02)
 
