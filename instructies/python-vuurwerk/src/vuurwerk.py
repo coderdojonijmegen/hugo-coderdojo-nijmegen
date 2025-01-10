@@ -55,11 +55,11 @@ def zomaar_een_richting_en_snelheid(snelheid, i):
 
 
 def main():
-    window = turtle.Screen()
-    window.setup(800, 800)
-    window.colormode(255)
-    window.tracer(0)
-    window.bgcolor("black")
+    venster = turtle.Screen()
+    venster.setup(800, 800)
+    venster.colormode(255)
+    venster.tracer(0)
+    venster.bgcolor("black")
 
     vuurpijlen = []
     while True:
@@ -75,7 +75,7 @@ def main():
                 vuurpijlen.remove(vuurpijl)
         if len(vuurpijlen) < aantal_vuurpijlen:
             vuurpijlen.append(Vuurpijl(zomaar_een_kleur(), start_positie, (randint(-15, 15) / 10, 6 + randint(20, 30) / 10)))
-        window.update()
+        venster.update()
         sleep(0.02)
 
 if __name__ == "__main__":
