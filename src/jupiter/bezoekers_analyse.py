@@ -78,7 +78,32 @@ class Events:
             'online checkins': [get_checkins(event) if event['online_event'] else 0  for event in self.events],
         }
         return axes, checkins_over_time
-    
+
+    def get_dojo_stats(self) -> tuple[dict, dict]:
+        axes = {
+            'x': 'datum',
+            'y': ['checked-in', 'booked', 'remaining']
+        }
+        available = []
+        booked = []
+        checkedin = []
+        for event in self.events:
+            capacity = event["capacity"]
+            checkins = 100.0 * get_checkins(event) / capacity
+            checkedin.append(checkins)
+            bookings = 100.0 * get_sold_tickets(event) / capacity
+            booked.append(bookings - checkins)
+            available.append(100.0 - bookings)
+
+        stats_over_time = {
+            'datum': [as_date(event) for event in self.events],
+            'remaining': available,
+            'booked': booked,
+            'checked-in': checkedin,
+        }
+        return axes, stats_over_time
+
+
     def get_checkins_per_location_over_time(self) -> tuple:
         locations = list(set([self.location(event) for event in self.events]))
 
@@ -135,3 +160,22 @@ def as_month(event):
 
 def as_date(event):
     return datetime.strftime(as_datetime(event), '%Y-%m-%d')
+
+
+if __name__ == "__main__":
+    events = Events(
+        'OIKQ5HCDFKQGCBK2I5S4',
+        [
+            "zwanenveld",
+            "biezantijn",
+            "mariënburg",
+            "online",
+            "valkhof",
+        ],
+        [
+            37396107765,
+            43018135401,
+            49624002728,
+        ]
+    )
+    events.get_dojos()
