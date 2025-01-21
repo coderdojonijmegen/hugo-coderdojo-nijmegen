@@ -25,10 +25,10 @@ Dus, duik in de uitdagende wereld van coderen en ontdek de vele mogelijkheden di
 
 ## Leuke instructies
 
+[![level 1 Express training 2023](/onderwerpen/code-org/angry-birds-maze.png)](https://studio.code.org/s/express-2023/lessons/1/levels/2)
+
 [![Met AI de oceanen schoonmaken](/onderwerpen/code-org/met-ai-de-oceanen-schoonmaken.png)](https://studio.code.org/s/oceans/lessons/1/levels/1)
 
 [![Minecraft](/onderwerpen/code-org/minecraft.png)](https://code.org/minecraft)
 
 [![Dansfeestje](/onderwerpen/code-org/dans-feestje.png)](https://code.org/dance)
-
-[Stap voor stap programmeer concepten leren](https://studio.code.org/s/express-2023)
