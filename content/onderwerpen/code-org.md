@@ -26,6 +26,7 @@ Dus, duik in de uitdagende wereld van coderen en ontdek de vele mogelijkheden di
 ## Leuke instructies
 
 [![level 1 Express training 2023](/onderwerpen/code-org/angry-birds-maze.png)](https://studio.code.org/s/express-2023/lessons/1/levels/2)
+(notabene: de site stuurt je door naar de 2024 versie als je de taal niet op Nederlands zet. Dus: taal op Nederlands en dan naar https://studio.code.org/s/express-2023/lessons/1/levels/2)
 
 [![Met AI de oceanen schoonmaken](/onderwerpen/code-org/met-ai-de-oceanen-schoonmaken.png)](https://studio.code.org/s/oceans/lessons/1/levels/1)
 
