@@ -22,4 +22,5 @@ jobs:
           --ignore-url=^http://localhost
           --ignore-url=^https://www.craiyon.com
           --ignore-url=^https://fonts.googleapis.com
+          --ignore-url=^http://leowillems.nl
           https://coderdojo-nijmegen.nl
