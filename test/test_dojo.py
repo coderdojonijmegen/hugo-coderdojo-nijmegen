@@ -13,7 +13,7 @@ def test_get_future_dojo_events():
 
 
 def test_get_dojo_info():
-    with open("../archetypes/dojos-template.md", "r") as template_file:
+    with open("./archetypes/dojos-template.md", "r") as template_file:
         template = template_file.read()
 
     dojo = Dojo(eventbrite_api_key)
@@ -22,3 +22,4 @@ def test_get_dojo_info():
         dojo_info = dojo.get_dojo_info(dojo_event)
         page = Dojo.parse_template(template, dojo_info, "2024-04-21")
         print(page)
+        Dojo.write_dojo_page(dojo_info, "./archetypes/dojos-template.md")

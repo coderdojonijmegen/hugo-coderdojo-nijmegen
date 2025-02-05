@@ -91,7 +91,7 @@ class Dojo:
             .replace("{{start_date}}", datetime.strftime(dojo_event_info['end_time'],
                                                          '%Y-%m-%d')) \
             .replace("{{latest_signup_datetime}}",
-                     datetime.strftime(dojo_event_info['start_time'] - timedelta(hours=1),
+                     datetime.strftime(dojo_event_info['start_time'] - timedelta(hours=2),
                                        '%Y-%m-%dT%H:%M:%S%z')) \
             .replace("{{earliest_signup_datetime}}",
                      datetime.strftime(dojo_event_info['start_time'] - timedelta(weeks=4),
