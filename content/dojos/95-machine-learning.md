@@ -8,6 +8,7 @@ wanneer:
   tot: 2023-04-01T14:30:00
 waar: "Van Broeckhuysenstraat 46, 6511 PK Nijmegen"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2023-04-01T11:00:00
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-95-machine-learning-595550356147"
 instructies:

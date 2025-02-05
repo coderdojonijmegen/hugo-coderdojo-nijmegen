@@ -8,6 +8,7 @@ wanneer:
   tot: 2020-10-10T14:30:00.0Z
 waar: "Online, achter je computer"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2020-10-10T10:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-69-online-scratch-python-en-makecode-arcade-122453207841"
 

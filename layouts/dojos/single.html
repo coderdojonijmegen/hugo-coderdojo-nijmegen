@@ -20,18 +20,25 @@
 {{ .Content }}
 
 <div class="inschrijven">
-    Je kunt inschrijven tot {{ index $dagen (dateFormat "Monday" .Params.eventbrite.inschrijventot )}}
+    Je kunt inschrijven van {{ index $dagen (dateFormat "Monday" .Params.eventbrite.inschrijvenvanaf )}}
+        {{ dateFormat "2" .Params.eventbrite.inschrijvenvanaf }}
+        {{ index $maanden (dateFormat "1" .Params.eventbrite.inschrijvenvanaf) }}
+        {{ dateFormat "2006" .Params.eventbrite.inschrijvenvanaf }}
+    tot
+    {{ index $dagen (dateFormat "Monday" .Params.eventbrite.inschrijventot )}}
         {{ dateFormat "2" .Params.eventbrite.inschrijventot }}
         {{ index $maanden (dateFormat "1" .Params.eventbrite.inschrijventot) }}
         {{ dateFormat "2006" .Params.eventbrite.inschrijventot }}
         {{ dateFormat "15:04" .Params.eventbrite.inschrijventot }}.
     <div>
-        {{ if (time .Params.eventbrite.inschrijventot).After now }}
+        {{ if now.Before (time .Params.eventbrite.inschrijvenvanaf) }}
+        <span style="font-weight: bold;">de inschrijving is gepland</span>
+        {{ else if now.After (time .Params.eventbrite.inschrijventot) }}
+        <span style="font-weight: bold;">de inschrijving is gesloten</span>
+        {{ else }}
         <a href="{{ .Params.eventbrite.url }}" target="_blank" rel="noreferrer noopener">
             inschrijven
         </a>
-        {{ else }}
-        <span style="font-weight: bold;">de inschrijving is gesloten</span>
         {{ end }}
     </div>
 </div>

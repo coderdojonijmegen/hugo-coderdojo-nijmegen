@@ -8,6 +8,7 @@ wanneer:
   tot: 2022-08-06T14:30:00
 waar: "Zwanenveld 9098, 6538 SC Nijmegen"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2022-08-06T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-87-websites-maken-389638428027"
 instructies:

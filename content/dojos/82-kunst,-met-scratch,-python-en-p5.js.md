@@ -11,6 +11,7 @@ Zwanenveld 9098
 6538 SC Nijmegen 
 Netherlands"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2021-11-06T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-82-kunst-met-scratch-python-en-p5js-191315338327"
 instructies:

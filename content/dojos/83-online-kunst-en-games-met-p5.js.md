@@ -8,6 +8,7 @@ wanneer:
   tot: 2021-12-11T14:30:00+0100
 waar: "Online evenement"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2021-12-11T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-83-online-kunst-en-games-met-p5js-216919139987"
 instructies:

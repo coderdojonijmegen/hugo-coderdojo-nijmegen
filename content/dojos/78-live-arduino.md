@@ -11,6 +11,7 @@ Waalbandijk 16
 6541 TN Nijmegen 
 Netherlands"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2021-07-03T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-78-live-arduino-160406517211"
 instructies:

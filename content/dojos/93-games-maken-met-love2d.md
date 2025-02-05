@@ -8,6 +8,7 @@ wanneer:
   tot: 2023-02-04T14:30:00
 waar: "Zwanenveld 9098, 6538 SC Nijmegen"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2023-02-04T11:00:00
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-93-games-maken-met-love2d-523046294547"
 instructies:

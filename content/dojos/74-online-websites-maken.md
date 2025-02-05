@@ -8,6 +8,7 @@ wanneer:
   tot: 2021-03-06T14:30:00+0100
 waar: "Online evenement"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2021-03-06T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-74-online-websites-maken-143071973123"
 instructies:

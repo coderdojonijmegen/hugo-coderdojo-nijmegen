@@ -8,6 +8,7 @@ wanneer:
   tot: 2023-03-04T13:30:00
 waar: "Waterstraat 146, 6541 TN Nijmegen"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2023-03-04T10:00:00
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-94-processing-556620897087"
 instructies:

@@ -8,6 +8,7 @@ wanneer:
   tot: 2022-06-04T13:30:00
 waar: "Kelfkensbos 59, 6511 TB Nijmegen"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2022-06-04T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-85-kunst-met-scratch-python-en-p5js-347358668127"
 instructies:

@@ -8,6 +8,7 @@ wanneer:
   tot: 2021-05-01T14:30:00+0200
 waar: "Online evenement"
 eventbrite:
+  inschrijvenvanaf: 2020-01-01T00:00:00.0Z
   inschrijventot: 2021-05-01T00:00:00.0Z
   url: "https://www.eventbrite.nl/e/tickets-coderdojo-nijmegen-76-online-kies-je-eigen-onderwerp-152211148643"
 instructies:

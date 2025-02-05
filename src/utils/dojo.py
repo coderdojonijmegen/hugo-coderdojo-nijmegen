@@ -93,6 +93,9 @@ class Dojo:
             .replace("{{latest_signup_datetime}}",
                      datetime.strftime(dojo_event_info['start_time'] - timedelta(hours=1),
                                        '%Y-%m-%dT%H:%M:%S%z')) \
+            .replace("{{earliest_signup_datetime}}",
+                     datetime.strftime(dojo_event_info['start_time'] - timedelta(weeks=4),
+                                       '%Y-%m-%dT%H:%M:%S%z')) \
             .replace("{{location}}", dojo_event_info['location']) \
             .replace("{{event_url}}", dojo_event_info['event_url']) \
             .replace("{{picture_url}}", dojo_event_info['picture_url']) \
