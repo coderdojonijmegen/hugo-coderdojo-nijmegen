@@ -8,7 +8,7 @@ draft: false
 ## Wie zijn we?
 
 We zijn een groep mensen die enthousiast zijn over wat programmeren te bieden heeft en kinderen daar graag kennis
-mee laten maken. Met achtergronden in onder andere software ontwikkeling, software security en onderwijs, zijn er
+mee laten maken. Met achtergronden in onder andere softwareontwikkeling, software security en onderwijs, zijn er
 diverse onderwerpen die we onder de aandacht brengen.
 
 De dagelijkse leiding is in handen van de Champion, op dit moment Bas. Verder hebben we een mooie groep mentoren:

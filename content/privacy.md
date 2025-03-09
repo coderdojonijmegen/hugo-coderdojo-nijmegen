@@ -5,7 +5,7 @@ date: 2020-02-08T00:42:37+01:00
 draft: false
 ---
 
-Via de website coderdojo-nijmegen.nl worden privacygevoelige gegevens oftewel persoonsgegevens verwerkt.St. Coderdojo
+Via de website coderdojo-nijmegen.nl worden privacygevoelige gegevens oftewel persoonsgegevens verwerkt. St. Coderdojo
 Nijmegen acht een zorgvuldige omgang met persoonsgegevens van groot belang. Persoonlijke gegevens worden door ons dan
 ook zorgvuldig verwerkt en beveiligd.
 
@@ -37,15 +37,14 @@ u gevraagde dienst, of waarvan bij opgave duidelijk is dat ze aan ons worden ver
 volgende gegevens voor de in deze privacyverklaring genoemde doelen:
 
 * Email adressen
-* Cookies voor locatiebepaling (via Matomo) voor bezoek-statistiek (per land).
 * Foto’s: als er foto’s worden gemaakt tijdens Coderdojo bijeenkomsten dan wordt ter plekke vooraf om toestemming
   gevraagd via een webpagina.
 
 # Verstrekking aan derden
 
 Wanneer u bij ons een reservering doet, maken wij voor de afhandeling daarvan gebruik van
-Eventbrite (www.eventbrite.com). Zij registreren persoonsgegevens ten behoeve van het maken van de reservering (
-email-adres en financiële gegeven in het geval van donaties).
+Eventbrite (www.eventbrite.com). Zij registreren persoonsgegevens ten behoeve van het maken van de reservering 
+(email-adres en financiële gegeven in het geval van donaties).
 
 # Beveiliging
 
@@ -70,5 +69,5 @@ Voor vragen over ons privacybeleid of vragen over inzage, wijzigingen in (of ver
 kunt u altijd contact met ons opnemen via onderstaande gegevens:
 
 Stichting CoderDojo Nijmegen  
-Nijhoffstraat 5
+Nijhoffstraat 5  
 6524 AT Nijmegen  

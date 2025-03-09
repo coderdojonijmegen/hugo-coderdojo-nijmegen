@@ -35,10 +35,6 @@ CoderDojo’s kan worden gebruikt. Ook schaft CoderDojo Nijmegen materiaal (robo
 gebruik tijdens Dojo’s. Daarnaast kan de stichting andere Dojo’s ondersteunen met kennis en materiaal, zodat meer
 kinderen in aanraking kunnen komen met IT.
 
-Bovenstaande is iets wat elk van de, ongeveer 1000, CoderDojo’s in de wereld probeert te doen. Daarnaast worden er
-internationale evenementen georganiseerd: bij EUDojo laten kinderen aan europarlementariërs zien hoe (belangrijk het is
-dat) zij leren programmeren.
-
 ## Het bestuur
 
 <div class="flex-grid">
@@ -81,7 +77,7 @@ Nijhoffstraat 5
 RSIN: 857425948  
 Bank: NL55ADYB1000019686
 
-Email: 𝗌𝗍𝗂𝖼𝗁𝗍𝗂𝗇𝗀@𝖼𝗈𝖽𝖾𝗋𝖽𝗈𝗃𝗈-𝗇𝗂𝗃𝗆𝖾𝗀𝖾𝗇.𝗇𝗅
+Email: stichting[at]coderdojo-nijmegen.nl
 
 ### Downloads
 
