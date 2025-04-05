@@ -26,6 +26,10 @@ Ben jij klaar om je eigen uitvinder te worden? Dan is de Raspberry Pi iets voor 
 
 ## Onze instructies
 
+{{< instructie_link href="/instructies/raspberry-pi-commandline/" titel="Raspberry Pi - Commandline" >}}
+Welkom in de wondere wereld van de command line. Het is net als een geheime taal waarmee je je computer kunt vertellen wat hij moet doen.
+{{< /instructie_link >}}
+
 {{< instructie_link href="/instructies/python-raspberry-pi/" titel="Python - Raspberry Pi" >}}
 Een Raspberry Pi is een mini-computer waar je allerlei leuke dingen mee kunt doen. Je kan de Raspberry Pi als computer 
 gebruiken. Daarnaast kun je er ook allerlei apparaatjes en elektronische schakelingen aan koppelen.

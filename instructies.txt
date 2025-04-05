@@ -14,6 +14,7 @@ coderdojonijmegen/py-turtle content/instructies/python-turtle
 coderdojonijmegen/python-art content/instructies/python-art
 coderdojonijmegen/python-raspberry-pi content/instructies/python-raspberry-pi
 coderdojonijmegen/python-raspberry-pi-pico content/instructies/python-raspberry-pi-pico
+coderdojonijmegen/raspberry-pi-commandline content/instructies/raspberry-pi-commandline
 coderdojonijmegen/scratch-art content/instructies/scratch-art
 coderdojonijmegen/scratch-snake content/instructies/scratch-snake
 coderdojonijmegen/scratch-space-shooter content/instructies/scratch-space-shooter
