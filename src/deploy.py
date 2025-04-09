@@ -39,7 +39,7 @@ notify_pass = env_var("INPUT_NOTIFY_PASS")
 eventbrite_api_key = env_var("INPUT_EVENTBRITEAPIKEY")
 
 def notify(title: str, message: str, priority=1):
-    r = requests.post(notify_url, auth=(notify_user, notify_pass), json={"title": title, "message": message, "priority": priority})
+    r = requests.post(notify_url, auth=(notify_user, notify_pass), json={"topic": "coderdojo_github", "title": title, "message": message, "priority": priority})
     r.raise_for_status()
 
 hugo_download_url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
