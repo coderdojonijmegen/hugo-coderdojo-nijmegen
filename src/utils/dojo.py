@@ -2,7 +2,7 @@
 
 import re
 from datetime import datetime, timedelta
-from os import path, environ
+from os import path
 
 import frontmatter
 from requests import get

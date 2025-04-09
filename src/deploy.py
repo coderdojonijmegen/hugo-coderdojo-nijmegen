@@ -6,7 +6,6 @@ from datetime import datetime
 import requests
 
 from utils.dojo import Dojo
-from utils.slack import notify
 from utils.utils import h_message, git, hugo, rm_rf
 from utils.env import env_var
 
@@ -34,8 +33,14 @@ hugo_version = env_var("INPUT_HUGOVERSION", DEFAULT_HUGO_VERSION)
 hugo_base_version = re.compile(r"(\d+.\d+.\d+)").search(hugo_version).group(0)
 hugo_args = env_var("INPUT_ARGS", "")
 cname = env_var("INPUT_CNAME", github_repo)
-slack_channel = env_var("INPUT_SLACKWEBHOOK")
+notify_url = env_var("INPUT_NOTIFY_URL")
+notify_user = env_var("INPUT_NOTIFY_USER")
+notify_pass = env_var("INPUT_NOTIFY_PASS")
 eventbrite_api_key = env_var("INPUT_EVENTBRITEAPIKEY")
+
+def notify(title: str, message: str, priority=1):
+    r = requests.post(notify_url, auth=(notify_user, notify_pass), json={"title": title, "message": message, "priority": priority})
+    r.raise_for_status()
 
 hugo_download_url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
 
@@ -76,7 +81,7 @@ def clone_build_push(args, target_branch, target_dir):
 
     ret_code, stdout, stderr = hugo(f"{args} -d {target_dir}/")
     if ret_code != 0:
-        notify("Hugo error", f"{stdout}: {stderr}", slack_channel)
+        notify("Hugo error", f"{stdout}: {stderr}", priority=3)
         exit(-1)
 
     with open(f"{target_dir}/CNAME", "w") as cname_file:
@@ -89,11 +94,10 @@ def clone_build_push(args, target_branch, target_dir):
     if return_code == 0:
         if github_branch == REF_MAIN:
             git("push --force", working_dir=target_dir)
-            _, stdout, _ = git("log -1 --pretty=%B")
-            message = f"pushed changes from commit '{stdout}' to {target_branch}; see {github_server_url}/" \
+            message = f"pushed changes to {target_branch}; see {github_server_url}/" \
                       f"{github_repository}/actions/runs/{github_run_id}"
             print(message)
-            notify(target_branch, message, slack_channel)
+            notify(target_branch, message)
         else:
             print("=> not pushing when not on main")
     else:

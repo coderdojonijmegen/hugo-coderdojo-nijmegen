@@ -1,8 +1,6 @@
 import os
 import subprocess
 
-from utils import slack
-
 
 def h_message(message):
     print(f"\n\n\033[1;37m{message}\033[0m\n")

@@ -28,7 +28,9 @@ jobs:
             -e INPUT_HUGOVERSION=extended_0.123.8 \
             -e INPUT_ARGS="--gc --minify --cleanDestinationDir" \
             -e INPUT_CNAME="coderdojo-nijmegen.nl" \
-            -e INPUT_SLACKWEBHOOK=${{ secrets.SLACK_WEBHOOK }} \
+            -e INPUT_NOTIFY_URL=${{ secrets.NOTIFY_URL }} \
+            -e INPUT_NOTIFY_USER=${{ secrets.NOTIFY_USER }} \
+            -e INPUT_NOTIFY_PASS=${{ secrets.NOTIFY_PASS }} \
             -e INPUT_EVENTBRITEAPIKEY=${{ secrets.EVENTBRITE_API_KEY }} \
             -e GITHUB_SERVER_URL=${{ github.server_url }} \
             -e GITHUB_REPOSITORY=${{ github.repository }} \
