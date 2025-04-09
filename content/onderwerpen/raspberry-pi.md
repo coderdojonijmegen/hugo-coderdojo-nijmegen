@@ -27,7 +27,8 @@ Ben jij klaar om je eigen uitvinder te worden? Dan is de Raspberry Pi iets voor 
 ## Onze instructies
 
 {{< instructie_link href="/instructies/raspberry-pi-commandline/" titel="Raspberry Pi - Commandline" >}}
-Welkom in de wondere wereld van de command line. Het is net als een geheime taal waarmee je je computer kunt vertellen wat hij moet doen.
+Welkom in de wondere wereld van de command line. Het is net als een geheime taal waarmee je je computer kunt vertellen 
+wat hij moet doen.
 {{< /instructie_link >}}
 
 {{< instructie_link href="/instructies/python-raspberry-pi/" titel="Python - Raspberry Pi" >}}
@@ -45,5 +46,6 @@ op aansluiten, zoals lichtsensoren, en outputs zoals motoren en lampen.
 {{< instructie_link href="https://projects.raspberrypi.org/nl-NL/projects/raspberry-pi-command" titel="Maak een nieuw commando op de Raspberry Pi" >}}
 In dit project maak je je eigen Bash-commando om een kleurrijk bericht te tonen.
 
-Je maakt hiervoor een eigen Bash-script dat kan worden uitgevoerd als een commando vanuit een terminalvenster of vanuit het hoofdmenu op Raspberry Pi.
+Je maakt hiervoor een eigen Bash-script dat kan worden uitgevoerd als een commando vanuit een terminalvenster of vanuit 
+het hoofdmenu op Raspberry Pi.
 {{< /instructie_link >}}
