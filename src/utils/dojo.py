@@ -21,6 +21,7 @@ class Dojo:
                 f"&time_filter=current_future"
                 f"&page=1",
                 headers=self.auth_header)
+        r.raise_for_status()
         future_events = r.json()
         if future_events["pagination"]["object_count"] == 0:
             h_message("geen geplande dojo's gevonden")
@@ -33,8 +34,10 @@ class Dojo:
 
     def get_dojo_info(self, dojo_event_url):
         r = get(f"{dojo_event_url}?expand=venue", headers=self.auth_header)
+        r.raise_for_status()
         event = r.json()
         rd = get(f"{dojo_event_url}description", headers=self.auth_header)
+        r.raise_for_status()
         event["description_ext"] = rd.json()["description"]
 
         return {

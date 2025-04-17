@@ -4,6 +4,7 @@ import re
 import tarfile
 from datetime import datetime
 import requests
+from requests import HTTPError
 
 from utils.dojo import Dojo
 from utils.utils import h_message, git, hugo, rm_rf
@@ -45,10 +46,23 @@ def notify(title: str, message: str, priority=1):
 hugo_download_url = HUGO_DOWNLOAD_URL.format(hugo_base_version=hugo_base_version, hugo_version=hugo_version)
 
 dojo = Dojo(eventbrite_api_key)
-futureDojoEventUrls = dojo.get_future_dojo_events()
+try:
+    futureDojoEventUrls = dojo.get_future_dojo_events()
+except HTTPError as e:
+    error_message = f"failed to get future dojo events: {e}: {e.response.text}"
+    print(error_message)
+    notify("Error getting dojo events", error_message, priority=3)
+    raise e
+
 if futureDojoEventUrls:
     for event_url in futureDojoEventUrls:
-        dojo_info = dojo.get_dojo_info(event_url)
+        try:
+            dojo_info = dojo.get_dojo_info(event_url)
+        except HTTPError as e:
+            error_message = f"failed to get dojo info: {e}: {e.response.text}"
+            print(error_message)
+            notify("Error getting dojo info", error_message, priority=3)
+            raise e
         Dojo.write_dojo_page(dojo_info, DOJO_PAGE_TEMPLATE)
 
 git(f"config --global user.name {github_actor}")
