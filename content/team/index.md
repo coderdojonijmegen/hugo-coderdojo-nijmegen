@@ -32,7 +32,6 @@ var mentoren = [
     'Oscar',
     'Rik',
     'Sijmen',
-    'Tjeerd',
     'Wouter',
 ];
 TagCloud('.content', mentoren);
