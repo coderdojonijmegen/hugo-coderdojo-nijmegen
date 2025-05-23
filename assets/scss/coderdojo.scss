@@ -4,6 +4,7 @@
 $purple: #642580;
 $orange: #ED684A;
 $teal: #41BAC1;
+$red: #FF0000;
 $fontColor: #555;
 $backgroundColor: white;
 $footerBackgroundColor: black;
@@ -44,6 +45,9 @@ ol {
 }
 .teal-background {
     background-color: $teal;
+}
+.red-background {
+    background-color: $red;
 }
 .pages {
     list-style-type: none;
@@ -289,6 +293,36 @@ main {
             width: 100%;
         }
     }
+    .og-card {
+        width: 600px;
+        margin: 20px auto;
+        border: 1px solid #DDD;
+        padding: 2em;
+        .favicon {
+            width: 40px;
+            display: inline;
+            margin: 10px;
+            float: left;
+        }
+        img {
+            max-width: 500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        background-color: #FAFAFA;
+        a {
+            text-decoration: none;
+            display: block;
+        }
+        .card-link {
+            text-align: center;
+            font-size: smaller;
+            a {
+                color: #BBB;
+            }
+        }
+    }
     .dojo {
         border: 1px solid #DDD;
         padding: 2em;
@@ -435,7 +469,7 @@ footer {
                 padding: 30px;
                 li {
                     display: inline-block;
-                    margin-left: 26px;
+                    margin-left: 13px;
                 }
             }
         }

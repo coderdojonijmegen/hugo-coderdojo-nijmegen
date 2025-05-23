@@ -6,9 +6,9 @@ def h_message(message):
     print(f"\n\n\033[1;37m{message}\033[0m\n")
 
 
-def _sub(args):
+def _sub(args, env=None):
     print(args)
-    with subprocess.Popen(args) as proc:
+    with subprocess.Popen(args, env=env) as proc:
         stdout, stderr = proc.communicate()
         return proc.returncode, stdout, stderr
 
@@ -29,8 +29,8 @@ def git(args, message=None, working_dir=None, accept_git_non_zero_return=False):
         os.chdir(cwd)
 
 
-def hugo(args):
-    return _sub(f"./hugo {args}".split(" "))
+def hugo(args, opengraph_io_api_key):
+    return _sub(f"./hugo {args}".split(" "), env=os.environ | {"HUGO_PARAMS_opengraphioapikey": opengraph_io_api_key})
 
 
 def rm_rf(dir_path):

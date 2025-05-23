@@ -4,8 +4,13 @@ title = "CoderDojo Nijmegen"
 
 [params]
   mcs = false
-
+  opengraphioapikey = "opengraph.io.api-key"
 [menu]
+
+  [[menu.main]]
+    name = "nieuws"
+    url = "/nieuws/"
+    weight = -210
 
   [[menu.main]]
     name = "dojos"
@@ -61,3 +66,4 @@ title = "CoderDojo Nijmegen"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS", "JSON"]
+

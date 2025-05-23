@@ -1,0 +1,25 @@
+{{ $maanden := .Site.Data.dagenenmaanden.maanden }}
+{{ $dagen := .Site.Data.dagenenmaanden.dagen }}
+
+{{ $scratch := newScratch }}
+{{ $scratch.Add "i" 0 }}
+{{ $now := now.AddDate 0 -3 0 | time.Format "2006-01-02T15:04:05" }}
+{{ $pages := where .Site.RegularPages.ByDate.Reverse "Section" "nieuws" }}
+{{ range $pages }}
+    {{ $wanneerVan := .Params.date | time.Format "2006-01-02T15:04:05" }}
+    {{ $k := $scratch.Get "i" }}
+    {{ if and (ge $wanneerVan $now) (lt $k 1) }}
+        {{ $scratch.Add "i" 1 }}
+        <h2>Laatste nieuws</h2>
+        <h3>{{ .Title }}</h3>
+        <div>
+            {{ with .Params }}
+            <sup>{{ index $dagen (dateFormat "Monday" .date) }}
+                {{ dateFormat "2" .date }}
+                {{ index $maanden (dateFormat "1" .date) }}
+                {{ dateFormat "2006" .date }}</sup>
+            {{ end }}
+        </div>
+        {{ .Summary | markdownify }}
+    {{ end }}
+{{ end }}

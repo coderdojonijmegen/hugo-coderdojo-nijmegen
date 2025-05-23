@@ -38,6 +38,7 @@ notify_url = env_var("INPUT_NOTIFY_URL")
 notify_user = env_var("INPUT_NOTIFY_USER")
 notify_pass = env_var("INPUT_NOTIFY_PASS")
 eventbrite_api_key = env_var("INPUT_EVENTBRITEAPIKEY")
+opengraph_io_api_key = env_var("INPUT_OPENGRAPHIOAPIKEY")
 
 def notify(title: str, message: str, priority=1):
     r = requests.post(notify_url, auth=(notify_user, notify_pass), json={"topic": "coderdojo_github", "title": title, "message": message, "priority": priority})
@@ -93,7 +94,7 @@ def clone_build_push(args, target_branch, target_dir):
         f"/{github_repo}.git {target_dir}")
     rm_rf(f"{target_dir}/*")
 
-    ret_code, stdout, stderr = hugo(f"{args} -d {target_dir}/")
+    ret_code, stdout, stderr = hugo(f"{args} -d {target_dir}/", opengraph_io_api_key)
     if ret_code != 0:
         notify("Hugo error", f"{stdout}: {stderr}", priority=3)
         exit(-1)

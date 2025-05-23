@@ -1,11 +1,6 @@
 {{ partial "header" . }}
 <h1>{{ .Title }}</h1>
 
-
-{{ if .Site.Params.mcs }}
-    {{ partial "onderwerpen" . }}
-{{ end }}
-
 <article>
     {{ .Content }}
 </article>

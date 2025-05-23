@@ -21,6 +21,8 @@ slechts één regel:
   
 Pesten, liegen en mensen hun tijd verdoen is niet cool.
 
+{{< laatste-nieuws >}}
+
 ## De eerstvolgende dojo
 
 {{< dojos-next >}}

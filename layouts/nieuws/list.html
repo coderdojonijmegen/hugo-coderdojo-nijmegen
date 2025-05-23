@@ -1,0 +1,17 @@
+{{ partial "header" . }}
+{{ partial "breadcrumbs" . }}
+
+<ul class="pages">
+    {{ range .Pages.ByDate.Reverse }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <p>{{ .Summary }}
+            {{ if .Truncated }}
+            <br>
+            <a href="{{ .RelPermalink }}">meer…</a>
+            {{ end }}
+        </p>
+    </li>
+    {{ end }}
+</ul>
+
+{{ partial "footer" . }}
