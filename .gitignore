@@ -7,3 +7,4 @@ dojo_bas.iml
 *.pyc
 /venv/
 .DS_Store
+run_hugo.sh

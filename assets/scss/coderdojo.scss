@@ -294,7 +294,8 @@ main {
         }
     }
     .og-card {
-        width: 600px;
+        max-width: 600px;
+        width: 100%;
         margin: 20px auto;
         border: 1px solid #DDD;
         padding: 2em;
@@ -306,6 +307,7 @@ main {
         }
         img {
             max-width: 500px;
+            width: 100%;
             display: block;
             margin-left: auto;
             margin-right: auto;
