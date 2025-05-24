@@ -41,6 +41,7 @@ exiting = False
 def shutdown() -> tuple[str, int]:
     global exiting
     exiting = True
+    h_message("server shutting down")
     return "Server shutting down...", 200
 
 
@@ -63,6 +64,7 @@ def start_og_proxy_in_background() -> None:
 
 
 def stop_og_proxy() -> None:
+    h_message("stopping og proxy")
     r = get("http://127.0.0.1:5000/shutdown")
     r.raise_for_status()
 

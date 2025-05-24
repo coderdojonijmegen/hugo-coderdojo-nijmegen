@@ -5,7 +5,7 @@ import tarfile
 from datetime import datetime
 import requests
 from requests import HTTPError
-from og_proxy.og_proxy_app import start_og_proxy_in_background
+from og_proxy.og_proxy_app import start_og_proxy_in_background, stop_og_proxy
 
 from utils.dojo import Dojo
 from utils.utils import h_message, git, hugo, rm_rf
@@ -130,5 +130,10 @@ with tarfile.open(HUGO_TAR_GZ, "r:gz") as tar:
 
 start_og_proxy_in_background()
 
-clone_build_push(hugo_args, GH_PAGES, TMP_GH_PAGES)
-clone_build_push(f"{hugo_args} --config config-mcs.toml", MCS, TMP_MCS)
+try:
+    clone_build_push(hugo_args, GH_PAGES, TMP_GH_PAGES)
+    clone_build_push(f"{hugo_args} --config config-mcs.toml", MCS, TMP_MCS)
+except Exception as e:
+    h_message(str(e))
+
+stop_og_proxy()
