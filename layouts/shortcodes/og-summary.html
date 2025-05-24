@@ -15,24 +15,24 @@
   {{- $url := replace . ":" "%3A" -}}
   {{- $url = replace $url "/" "%2F" -}}
   {{- $query := querify "accept_lang" "auto" "app_id" $api_key -}}
-  {{- $request := printf "https://opengraph.io/api/1.1/site/%s?%s" $url $query -}}
+  {{- $request := printf "http://127.0.0.1:5000/url/%s" $url -}}
   {{- $json = getJSON $request -}}
+{{/*<pre>{{ jsonify (dict "indent" "  ") $json }}</pre>*/}}
 {{- else -}}
   {{- errorf "The '%s' shortcode requires a single positional parameter, a URL. See %s" .Name .Position -}}
 {{- end -}}
 
 {{/* Check status code returned by OpenGraph.io. */}}
-{{- if ne (string $json.requestInfo.responseCode) "200" -}}
-  {{ $msg1 := "The '%s' shortcode was unable to retrieve Open Graph data for %s." .Name $json.requestInfo.url }}
-  {{ $msg2 := "The opengraph.io server response code was %s." (string $json.requestInfo.responseCode) }}
+{{- if ne (string $json.remote_response_code) "200" -}}
+  {{ $msg1 := "The '%s' shortcode was unable to retrieve Open Graph data for %s." .Name $json.url }}
+  {{ $msg2 := "The opengraph.io server response code was %s." (string $json.remote_response_code) }}
   {{ $msg3 := "See %s" .Position }}
   {{ errorf "%s %s %s" $msg1 $msg2 $msg3 }}
 {{- end -}}
-{{/*<pre>{{ jsonify (dict "indent" "  ") $json }}</pre>*/}}
 {{/* Output */}}
-<div class="og-card"><a href="{{ $json.hybridGraph.url }}">
-  <img src="{{ $json.openGraph.image.url }}" alt="">
-  <h4><img class="favicon" src="{{ $json.hybridGraph.favicon }}" >{{ $json.hybridGraph.title }}</h4>
-  <p>{{ $json.hybridGraph.description }}</p>
-  <div class="card-link"><a href="{{ $json.hybridGraph.url }}">{{ $json.hybridGraph.url }}</a></div>
+<div class="og-card"><a href="{{ $json.url }}">
+  <img src="{{ $json.image }}" alt="">
+  <h4><img class="favicon" src="{{ $json.icon }}" >{{ $json.title }}</h4>
+  <p>{{ $json.description }}</p>
+  <div class="card-link"><a href="{{ $json.url }}">{{ $json.url }}</a></div>
 </a></div>

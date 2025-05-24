@@ -5,3 +5,4 @@ pandas
 matplotlib
 python-frontmatter~=1.0.0
 pytest
+Flask

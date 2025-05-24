@@ -16,6 +16,8 @@
         <meta property="og:image" content="https://coderdojo-nijmegen.nl/imgs/logo_coderdojo_nijmegen-zwart.png" />
     {{ end }}
     <meta property="og:url" content="https://coderdojo-nijmegen.nl{{ .RelPermalink }}" />
+    <meta property="og:description" content="{{ .Summary }}" />
+
 </head>
 <body>
 <header class="{{ if isset .Params "headercolor" }}{{ .Params.headercolor }}{{ else }}teal-background{{ end }}">

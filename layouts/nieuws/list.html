@@ -1,6 +1,10 @@
 {{ partial "header" . }}
 {{ partial "breadcrumbs" . }}
 
+<div>
+    {{ .Content }}
+</div>
+
 <ul class="pages">
     {{ range .Pages.ByDate.Reverse }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>

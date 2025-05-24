@@ -5,7 +5,7 @@ draft: false
 headercolor: "red-background"
 ---
 
-Website IntoNijmegen is te gast geweest tijdens onze dojo van mei in bibliotheek Zwanenveld.  
+Website [IntoNijmegen](https://www.intonijmegen.com) is te gast geweest tijdens onze dojo van mei in bibliotheek Zwanenveld.  
 Redacteur Thomas heeft met ouders, kinderen en mentoren gesproken en heeft een mooi artikel gemaakt over wat 
 kinderen vinden bij CoderDojo en wat de mentoren drijft om het te organiseren:
 

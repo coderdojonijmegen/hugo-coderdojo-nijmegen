@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV TZ=Europe/Amsterdam
 
@@ -12,7 +12,7 @@ RUN apt update && apt install -y \
         python3-pip \
         nano \
 	&& rm -rf /var/lib/apt/lists/* \
-    && python3 -m pip install -r requirements.txt \
+    && python3 -m pip install -r requirements.txt --break-system-packages \
     && mkdir /site
 
 ENV INPUT_HUGOVERSION extended_0.123.8
