@@ -1,3 +1,4 @@
+import os
 from time import sleep
 
 from flask import Flask, jsonify, Response
@@ -6,6 +7,7 @@ import threading
 from requests import get
 
 from og_proxy.og_client import fetch_og_data
+from utils.utils import h_message
 
 app = Flask(__name__)
 
@@ -13,18 +15,40 @@ app = Flask(__name__)
 @app.get("/url/<path:url>")
 def get_og_data(url: str) -> tuple[Response, int]:
     try:
-        return jsonify(fetch_og_data(url)), 200
+        data = fetch_og_data(url)
+        h_message(f"fetched {url}: {data}")
+        return jsonify(data), 200
     except Exception as e:
-        return jsonify({
+        error = {
             "error": {
                 "url": url,
                 "reason": str(e)
-            }}), 500
+            }
+        }
+        h_message(f"error fetching {url}: {error}")
+        return jsonify(error), 500
 
 
 @app.get("/health")
 def health() -> tuple[str, int]:
     return "it works!", 200
+
+
+exiting = False
+
+
+@app.get("/shutdown")
+def shutdown() -> tuple[str, int]:
+    global exiting
+    exiting = True
+    return "Server shutting down...", 200
+
+
+@app.teardown_request
+def teardown(exception):
+    global exiting
+    if exiting:
+        os._exit(0)
 
 
 def start_og_proxy() -> None:
@@ -38,5 +62,11 @@ def start_og_proxy_in_background() -> None:
     r.raise_for_status()
 
 
+def stop_og_proxy() -> None:
+    r = get("http://127.0.0.1:5000/shutdown")
+    r.raise_for_status()
+
+
 if __name__ == "__main__":
-    start_og_proxy()
+    start_og_proxy_in_background()
+    stop_og_proxy()
