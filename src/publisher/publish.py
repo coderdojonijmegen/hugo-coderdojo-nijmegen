@@ -25,7 +25,7 @@ logger.info("start publish.py")
 now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-def publish(env: Environment) -> None:
+def publish(env: Environment) -> int:
     try:
         git_configure(env.github.actor)
         clone_instructions(env.github)
@@ -35,10 +35,10 @@ def publish(env: Environment) -> None:
         run_hugo(GH_PAGES)
         add_cname(env.cname)
         git("add -A", working_dir=GH_PAGES)
-        return_code, _, _ = git(f"commit -am",
-                                message=f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.",
-                                working_dir=GH_PAGES, accept_non_zero_return=True)
-        if return_code == 0 and env.github.branch == REF_MAIN:
+        git(f"commit -am",
+            message=f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.",
+            working_dir=GH_PAGES, accept_non_zero_return=True)
+        if env.github.branch == REF_MAIN:
             git("push --force", working_dir=GH_PAGES)
             notify(env.notify, "success!", "successfully published CoderDojo site!")
         else:
@@ -46,7 +46,9 @@ def publish(env: Environment) -> None:
     except Exception as e:
         logger.error(e)
         notify(env.notify, "error publishing CoderDojo site!", str(e))
-    stop_og_proxy()
+        return -1
+    finally:
+        stop_og_proxy()
 
 
 def clone_site_branch(conf: GithubConf) -> None:
@@ -63,4 +65,4 @@ def add_cname(cname: str):
 
 if __name__ == "__main__":
     env = Environment.load()
-    publish(env)
+    exit(publish(env))

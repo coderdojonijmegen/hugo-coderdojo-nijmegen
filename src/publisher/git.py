@@ -14,7 +14,7 @@ def git_configure(actor: str) -> None:
     git("config --global --add safe.directory /")
 
 
-def git(args, message=None, working_dir=None, accept_non_zero_return=False) -> tuple[Literal[0] | int | Any, bytes, bytes]:
+def git(args, message=None, working_dir=None, accept_non_zero_return=False) -> tuple[int, str, str]:
     cwd = getcwd()
     if working_dir is not None:
         chdir(working_dir)
@@ -23,8 +23,14 @@ def git(args, message=None, working_dir=None, accept_non_zero_return=False) -> t
         if message is not None:
             cmd += f" {message}"
         return_code, stdout, stderr = execute(cmd)
-        if not accept_non_zero_return and return_code != 0:
-            raise IOError(stderr)
+        if return_code != 0:
+            if accept_non_zero_return:
+                logger.info(f"{stdout}-{stderr}")
+                if "fatal" in stderr:
+                    raise IOError(stderr)
+            else:
+                raise IOError(stderr)
+
         return return_code, stdout, stderr
     finally:
         chdir(cwd)

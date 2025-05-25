@@ -1,12 +1,11 @@
 import logging
-from subprocess import Popen
-from typing import Any
+from subprocess import Popen, PIPE
 
 logger = logging.getLogger(__file__)
 
 
-def execute(args, env=None) -> tuple[int | Any, bytes, bytes]:
+def execute(args, env=None) -> tuple[int, str, str]:
     logger.info(f"Executing: {args}")
-    with Popen(args.split(" "), env=env) as proc:
+    with Popen(args.split(" "), env=env, stdout=PIPE, stderr=PIPE) as proc:
         stdout, stderr = proc.communicate()
-        return proc.returncode, stdout, stderr
+        return proc.returncode, stdout.decode('utf-8'), stderr.decode('utf-8')
