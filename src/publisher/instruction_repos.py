@@ -5,6 +5,7 @@ from publisher.git import git
 
 logger = logging.getLogger(__file__)
 
+
 def clone_instructions(conf: GithubConf) -> None:
     logger.info("loading instructions.txt")
     with open("instructies.txt", "r") as f:

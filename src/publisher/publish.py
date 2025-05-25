@@ -3,7 +3,7 @@ import logging
 from dotenv import load_dotenv
 
 from publisher.executor import execute
-from publisher.git import git
+from publisher.git import git, git_configure
 from publisher.hugo import download_hugo, run_hugo
 from publisher.instruction_repos import clone_instructions
 from publisher.env import Environment, GithubConf
@@ -17,11 +17,12 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s:%(lineno)d %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M')
 logger = logging.getLogger(__file__)
-logger.info(f"start publish.py")
+logger.info("start publish.py")
 
 
 def publish(env: Environment) -> None:
     try:
+        git_configure(env.github.actor)
         clone_instructions(env.github)
         download_hugo(env.hugo)
         clone_site_branch(env.github)

@@ -1,0 +1,10 @@
+[flake8]
+exclude =
+    venv/
+    .venv/
+    .git/
+    content/
+    public/
+max-line-length = 125
+per-file-ignores = __init__.py:F401
+
