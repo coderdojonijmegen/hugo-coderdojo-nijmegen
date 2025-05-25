@@ -3,7 +3,6 @@ from os import chdir, getcwd
 from subprocess import Popen
 from typing import Any, Literal
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__file__)
 
 

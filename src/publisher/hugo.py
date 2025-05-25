@@ -10,7 +10,6 @@ HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
                     "hugo_{hugo_version}_Linux-64bit.tar.gz"
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__file__)
 
 

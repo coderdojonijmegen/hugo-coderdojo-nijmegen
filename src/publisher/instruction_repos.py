@@ -3,7 +3,6 @@ import logging
 from publisher.env import GithubConf
 from publisher.git import git
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__file__)
 
 def clone_instructions(conf: GithubConf) -> None:
