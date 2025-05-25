@@ -1,3 +1,4 @@
+import logging
 import os
 from time import sleep
 
@@ -6,8 +7,9 @@ import threading
 
 from requests import get
 
-from og_proxy.og_client import fetch_og_data
-from utils.utils import h_message
+from publisher.og_proxy import fetch_og_data
+
+logger = logging.getLogger(__file__)
 
 app = Flask(__name__)
 
@@ -16,7 +18,7 @@ app = Flask(__name__)
 def get_og_data(url: str) -> tuple[Response, int]:
     try:
         data = fetch_og_data(url)
-        h_message(f"fetched {url}: {data}")
+        logger.info(f"fetched {url}: {data}")
         return jsonify(data), 200
     except Exception as e:
         error = {
@@ -25,7 +27,7 @@ def get_og_data(url: str) -> tuple[Response, int]:
                 "reason": str(e)
             }
         }
-        h_message(f"error fetching {url}: {error}")
+        logger.error(f"error fetching {url}: {error}")
         return jsonify(error), 500
 
 
@@ -41,7 +43,7 @@ exiting = False
 def shutdown() -> tuple[str, int]:
     global exiting
     exiting = True
-    h_message("server shutting down")
+    logger.info("server shutting down")
     return "Server shutting down...", 200
 
 
@@ -64,7 +66,7 @@ def start_og_proxy_in_background() -> None:
 
 
 def stop_og_proxy() -> None:
-    h_message("stopping og proxy")
+    logger.info("stopping og proxy")
     r = get("http://127.0.0.1:5000/shutdown")
     r.raise_for_status()
 

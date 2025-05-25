@@ -1,8 +1,7 @@
 import logging
 from os import chdir, getcwd
-from typing import Any, Literal
 
-from publisher.executor import execute
+from publisher.executor import execute, execute_args
 
 logger = logging.getLogger(__file__)
 
@@ -14,23 +13,21 @@ def git_configure(actor: str) -> None:
     git("config --global --add safe.directory /")
 
 
-def git(args, message=None, working_dir=None, accept_non_zero_return=False) -> tuple[int, str, str]:
+def git(cmd, message=None, working_dir=None, accept_non_zero_return=False) -> tuple[int, str, str]:
     cwd = getcwd()
     if working_dir is not None:
         chdir(working_dir)
     try:
-        cmd = f"/usr/bin/git {args}"
+        args = f"/usr/bin/git {cmd}".split(" ")
         if message is not None:
-            cmd += f" {message}"
-        return_code, stdout, stderr = execute(cmd)
+            args.append(message)
+        return_code, stdout, stderr = execute_args(args)
         if return_code != 0:
             if accept_non_zero_return:
-                logger.info(f"{stdout}-{stderr}")
                 if "fatal" in stderr:
                     raise IOError(stderr)
             else:
                 raise IOError(stderr)
-
         return return_code, stdout, stderr
     finally:
         chdir(cwd)

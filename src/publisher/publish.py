@@ -26,16 +26,18 @@ now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 def publish(env: Environment) -> int:
+    og_proxy_started = False
     try:
         git_configure(env.github.actor)
         clone_instructions(env.github)
         download_hugo(env.hugo)
         clone_site_branch(env.github)
         start_og_proxy_in_background()
+        og_proxy_started = True
         run_hugo(GH_PAGES)
         add_cname(env.cname)
         git("add -A", working_dir=GH_PAGES)
-        git(f"commit -am",
+        git(f"commit -m",
             message=f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.",
             working_dir=GH_PAGES, accept_non_zero_return=True)
         if env.github.branch == REF_MAIN:
@@ -43,12 +45,14 @@ def publish(env: Environment) -> int:
             notify(env.notify, "success!", "successfully published CoderDojo site!")
         else:
             notify(env.notify, "success - not on main", "successfully built CoderDojo site!")
+        return 0
     except Exception as e:
         logger.error(e)
         notify(env.notify, "error publishing CoderDojo site!", str(e))
         return -1
     finally:
-        stop_og_proxy()
+        if og_proxy_started:
+            stop_og_proxy()
 
 
 def clone_site_branch(conf: GithubConf) -> None:
