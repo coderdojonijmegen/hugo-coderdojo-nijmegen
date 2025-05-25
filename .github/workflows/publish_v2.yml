@@ -17,4 +17,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Build
-        run: PYTHONPATH=src/ python3 -u src/deploy.py
+        run: PYTHONPATH=src/ python3 -u src/publisher/publish.py
+        env:
+          VAR_GITHUB_TOKEN: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
+          VAR_CNAME: coderdojo-nijmegen.nl
+          VAR_HUGO_VERSION: extended_0.131.0
+          VAR_NOTIFY_URL: ${{ secrets.NOTIFY_URL }}
+          VAR_NOTIFY_USER: ${{ secrets.NOTIFY_USER }}
+          VAR_NOTIFY_PASS: ${{ secrets.NOTIFY_PASS }}
+          VAR_EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
