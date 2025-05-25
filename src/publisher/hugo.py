@@ -1,6 +1,7 @@
 import logging
 import re
 import tarfile
+from pathlib import Path
 
 from requests import get
 
@@ -26,10 +27,13 @@ def download_hugo(conf: HugoConf) -> None:
     logger.info(f"extracting {HUGO_TAR_GZ}")
     with tarfile.open(HUGO_TAR_GZ, "r:gz") as tar:
         tar.extract("hugo", filter='data')
+    hugo_path = Path("hugo").resolve()
+    assert hugo_path.exists()
+    logger.info(hugo_path)
 
 
 def run_hugo(target_dir: str) -> None:
     logger.info(f"building site into {target_dir}")
-    ret_code, out, err = execute(f"hugo --gc --minify --cleanDestinationDir -d {target_dir}/")
+    ret_code, out, err = execute(f"./hugo --gc --minify --cleanDestinationDir -d {target_dir}/")
     if ret_code != 0:
         raise RuntimeError(f"Hugo error: {out} {err}")
