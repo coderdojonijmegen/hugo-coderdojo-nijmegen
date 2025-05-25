@@ -2,10 +2,14 @@ import logging
 
 from dotenv import load_dotenv
 
-from publisher.hugo import download_hugo
+from publisher.executor import execute
+from publisher.git import git
+from publisher.hugo import download_hugo, run_hugo
 from publisher.instruction_repos import clone_instructions
-from publisher.env import Environment
+from publisher.env import Environment, GithubConf
 from publisher.notifier import notify
+
+GH_PAGES = "gh-pages"
 
 load_dotenv()
 
@@ -15,14 +19,31 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__file__)
 logger.info(f"start publish.py")
 
+
 def publish(env: Environment) -> None:
     try:
         clone_instructions(env.github)
         download_hugo(env.hugo)
+        clone_site_branch(env.github)
+        run_hugo(GH_PAGES)
+        add_cname(env.cname)
         notify(env.notify, "success!", "successfully published CoderDojo site!")
     except Exception as e:
         logger.error(e)
         notify(env.notify, "error publishing CoderDojo site!", str(e))
+
+
+def clone_site_branch(conf: GithubConf) -> None:
+    logger.info("cloning site branch")
+    git(f"clone --depth=1 --single-branch --branch {GH_PAGES} https://x-access-token:{conf.token}@github.com"
+        f"/{conf.repository}.git {GH_PAGES}")
+    execute(f"rm -rf {GH_PAGES}/*")
+
+
+def add_cname(cname: str):
+    with open(f"{GH_PAGES}/CNAME", "w") as f:
+        f.write(cname)
+
 
 if __name__ == "__main__":
     env = Environment.load()

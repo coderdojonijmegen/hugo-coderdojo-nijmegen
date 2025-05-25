@@ -37,6 +37,7 @@ class Environment:
     hugo: HugoConf
     notify: NotifyConf
     eventbrite: EventbriteConf
+    cname: str
 
     def __post_init__(self):
         self.github = GithubConf(**self.github)
@@ -68,7 +69,8 @@ class Environment:
                 },
                 "eventbrite": {
                     "api_key": environ["VAR_EVENTBRITE_API_KEY"],
-                }
+                },
+                "cname": environ["VAR_CNAME"]
             })
         except KeyError as e:
             e.add_note("Did you set the environment variables?")

@@ -1,7 +1,8 @@
 import logging
 from os import chdir, getcwd
-from subprocess import Popen
 from typing import Any, Literal
+
+from publisher.executor import execute
 
 logger = logging.getLogger(__file__)
 
@@ -22,16 +23,9 @@ def git(args, message=None, working_dir=None, accept_git_non_zero_return=False) 
         cmd = f"/usr/bin/git {args}".split(" ")
         if message is not None:
             cmd.append(f"{message}")
-        return_code, stdout, stderr = _exec(cmd)
+        return_code, stdout, stderr = execute(cmd)
         if not accept_git_non_zero_return and return_code != 0:
             raise IOError(stderr)
         return return_code, stdout, stderr
     finally:
         chdir(cwd)
-
-
-def _exec(args, env=None) -> tuple[int | Any, bytes, bytes]:
-    logger.info(f"Executing: {args}")
-    with Popen(args, env=env) as proc:
-        stdout, stderr = proc.communicate()
-        return proc.returncode, stdout, stderr

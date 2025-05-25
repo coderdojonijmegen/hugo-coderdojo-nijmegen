@@ -28,3 +28,5 @@ jobs:
           VAR_NOTIFY_USER: ${{ secrets.NOTIFY_USER }}
           VAR_NOTIFY_PASS: ${{ secrets.NOTIFY_PASS }}
           VAR_EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+      - name: Show dir content
+        run: ls -alR /tmp/gh_pages/

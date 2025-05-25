@@ -1,10 +1,12 @@
 import logging
 import re
 import tarfile
+from pathlib import Path
 
 from requests import get
 
 from publisher.env import HugoConf
+from publisher.executor import execute
 
 HUGO_TAR_GZ = "hugo.tar.gz"
 HUGO_DOWNLOAD_URL = "https://github.com/gohugoio/hugo/releases/download/v{hugo_base_version}/" \
@@ -25,3 +27,11 @@ def download_hugo(conf: HugoConf) -> None:
     logger.info(f"extracting {HUGO_TAR_GZ}")
     with tarfile.open(HUGO_TAR_GZ, "r:gz") as tar:
         tar.extract("hugo", filter='data')
+
+
+def run_hugo(target_dir: str) -> None:
+    logger.info("building site into ./public")
+    Path("public").mkdir(exist_ok=True)
+    ret_code, out, err = execute(f"hugo --gc --minify --cleanDestinationDir -d {target_dir}/".split(" "))
+    if ret_code != 0:
+        raise RuntimeError(f"Hugo error: {out} {err}")
