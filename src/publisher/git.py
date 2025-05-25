@@ -1,7 +1,7 @@
 import logging
 from os import chdir, getcwd
 
-from publisher.executor import execute, execute_args
+from publisher.executor import execute_args
 
 logger = logging.getLogger(__file__)
 
@@ -11,6 +11,17 @@ def git_configure(actor: str) -> None:
     git(f"config --global user.name {actor}")
     git(f"config --global user.email {actor}@users.noreply.github.com")
     git("config --global --add safe.directory /")
+
+
+def git_log(working_dir: str | None = None) -> None:
+    _, out, _ = git("log -n 1 -p", working_dir=working_dir)
+    logger.info(out)
+
+
+def git_commit_changes(message: str, working_dir: str | None):
+    logger.info("commit changes")
+    git("add -A", working_dir=working_dir)
+    git("commit -m", message=message, working_dir=working_dir, accept_non_zero_return=True)
 
 
 def git(cmd, message=None, working_dir=None, accept_non_zero_return=False) -> tuple[int, str, str]:

@@ -29,7 +29,7 @@ def download_hugo(conf: HugoConf) -> None:
         tar.extract("hugo", filter='data')
     hugo_path = Path("hugo").resolve()
     assert hugo_path.exists()
-    logger.info(hugo_path)
+    logger.debug(hugo_path)
 
 
 def run_hugo(target_dir: str) -> None:

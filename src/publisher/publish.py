@@ -3,11 +3,11 @@ from datetime import datetime
 
 from dotenv import load_dotenv
 
+from publisher.env import Environment, GithubConf
 from publisher.executor import execute
-from publisher.git import git, git_configure
+from publisher.git import git, git_configure, git_commit_changes, git_log
 from publisher.hugo import download_hugo, run_hugo
 from publisher.instruction_repos import clone_instructions
-from publisher.env import Environment, GithubConf
 from publisher.notifier import notify
 from publisher.og_proxy import stop_og_proxy, start_og_proxy_in_background
 
@@ -16,7 +16,7 @@ REF_MAIN = "refs/heads/main"
 
 load_dotenv()
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s:%(lineno)d %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M')
 logger = logging.getLogger(__file__)
@@ -32,19 +32,18 @@ def publish(env: Environment) -> int:
         clone_instructions(env.github)
         download_hugo(env.hugo)
         clone_site_branch(env.github)
+        git_log()
         start_og_proxy_in_background()
         og_proxy_started = True
         run_hugo(GH_PAGES)
         add_cname(env.cname)
-        git("add -A", working_dir=GH_PAGES)
-        git(f"commit -m",
-            message=f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.",
-            working_dir=GH_PAGES, accept_non_zero_return=True)
+        git_commit_changes(f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.", GH_PAGES)
+        git_log(GH_PAGES)
         if env.github.branch == REF_MAIN:
             git("push --force", working_dir=GH_PAGES)
             notify(env.notify, "success!", "successfully published CoderDojo site!")
         else:
-            notify(env.notify, "success - not on main", "successfully built CoderDojo site!")
+            notify(env.notify, "success - but not on main", "successfully built CoderDojo site!")
         return 0
     except Exception as e:
         logger.error(e)
