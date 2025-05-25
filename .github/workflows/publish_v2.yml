@@ -1,0 +1,25 @@
+name: Publish Site v2
+
+on:
+  push:
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout Repo
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.13
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: PYTHONPATH=/src/ python3 -u /src/deploy.py
