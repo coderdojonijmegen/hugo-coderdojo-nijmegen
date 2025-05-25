@@ -8,6 +8,7 @@ from publisher.hugo import download_hugo, run_hugo
 from publisher.instruction_repos import clone_instructions
 from publisher.env import Environment, GithubConf
 from publisher.notifier import notify
+from publisher.og_proxy import stop_og_proxy, start_og_proxy_in_background
 
 GH_PAGES = "gh-pages"
 
@@ -26,12 +27,14 @@ def publish(env: Environment) -> None:
         clone_instructions(env.github)
         download_hugo(env.hugo)
         clone_site_branch(env.github)
+        start_og_proxy_in_background()
         run_hugo(GH_PAGES)
         add_cname(env.cname)
         notify(env.notify, "success!", "successfully published CoderDojo site!")
     except Exception as e:
         logger.error(e)
         notify(env.notify, "error publishing CoderDojo site!", str(e))
+    stop_og_proxy()
 
 
 def clone_site_branch(conf: GithubConf) -> None:
