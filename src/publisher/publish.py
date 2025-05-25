@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 
 from dotenv import load_dotenv
 
@@ -11,6 +12,7 @@ from publisher.notifier import notify
 from publisher.og_proxy import stop_og_proxy, start_og_proxy_in_background
 
 GH_PAGES = "gh-pages"
+REF_MAIN = "refs/heads/main"
 
 load_dotenv()
 
@@ -19,6 +21,8 @@ logging.basicConfig(level=logging.INFO,
                     datefmt='%Y-%m-%d %H:%M')
 logger = logging.getLogger(__file__)
 logger.info("start publish.py")
+
+now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 def publish(env: Environment) -> None:
@@ -30,7 +34,15 @@ def publish(env: Environment) -> None:
         start_og_proxy_in_background()
         run_hugo(GH_PAGES)
         add_cname(env.cname)
-        notify(env.notify, "success!", "successfully published CoderDojo site!")
+        git("add -A", working_dir=GH_PAGES)
+        return_code, _, _ = git(f"commit -am",
+                                message=f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.",
+                                working_dir=GH_PAGES, accept_non_zero_return=True)
+        if return_code == 0 and env.github.branch == REF_MAIN:
+            git("push --force", working_dir=GH_PAGES)
+            notify(env.notify, "success!", "successfully published CoderDojo site!")
+        else:
+            notify(env.notify, "success - not on main", "successfully built CoderDojo site!")
     except Exception as e:
         logger.error(e)
         notify(env.notify, "error publishing CoderDojo site!", str(e))
