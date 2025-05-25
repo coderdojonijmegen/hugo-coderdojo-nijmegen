@@ -8,3 +8,4 @@ dojo_bas.iml
 /venv/
 .DS_Store
 run_hugo.sh
+.env

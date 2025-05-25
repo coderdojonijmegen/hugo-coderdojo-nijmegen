@@ -9,7 +9,6 @@ class GithubConf:
     run_id: str
     event_name: str
     branch: str
-    repo: str
     actor: str
     sha: str
     token: str
@@ -55,7 +54,6 @@ class Environment:
                     "run_id": environ["GITHUB_RUN_ID"],
                     "event_name": environ["GITHUB_EVENT_NAME"],
                     "branch": environ["GITHUB_REF"],
-                    "repo": environ["GITHUB_REPOSITORY"],
                     "actor": environ["GITHUB_ACTOR"],
                     "sha": environ["GITHUB_SHA"],
                     "token": environ["VAR_GITHUB_TOKEN"],

@@ -1,3 +1,3 @@
-from .env import Environment
+from publisher import publish
 
-__all__ = ['Environment']
+__all__ = ['publish']
