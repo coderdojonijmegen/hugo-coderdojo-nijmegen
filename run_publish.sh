@@ -1,0 +1,1 @@
+rm -rf content/instructies && mkdir content/instructies && rm -rf gh-pages/ && PYTHONPATH=$(pwd)/src python3 -u src/publisher/publish.py

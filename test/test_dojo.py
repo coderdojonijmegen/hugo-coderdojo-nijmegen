@@ -1,18 +1,22 @@
 from os import environ
 
+import pytest
+
 from utils.dojo import Dojo
 
-eventbrite_api_key = environ["INPUT_EVENTBRITEAPIKEY"]
 
-
+@pytest.mark.skip("actual API call")
 def test_get_future_dojo_events():
+    eventbrite_api_key = environ["INPUT_EVENTBRITEAPIKEY"]
     dojo_events = Dojo(eventbrite_api_key).get_future_dojo_events()
 
     for dojo_event in dojo_events:
         assert 'https://www.eventbriteapi.com/v3/events/' in dojo_event
 
 
+@pytest.mark.skip("actual API call")
 def test_get_dojo_info():
+    eventbrite_api_key = environ["INPUT_EVENTBRITEAPIKEY"]
     with open("./archetypes/dojos-template.md", "r") as template_file:
         template = template_file.read()
 

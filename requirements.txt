@@ -1,8 +1,6 @@
 requests
 beautifulsoup4==4.9.3
-jupyter
-pandas
-matplotlib
 python-frontmatter~=1.0.0
 pytest
 Flask
+load-dotenv
