@@ -38,16 +38,14 @@ def publish(env: Environment) -> int:
         start_og_proxy_in_background()
         og_proxy_started = True
 
-        future_events = get_future_events(env.eventbrite.api_key)
-        for future_event in future_events:
-            event = get_event_details(future_event, env.eventbrite.api_key)
-            generate_dojo_page(event)
+        generate_dojo_pages_for_future_events(env.eventbrite.api_key)
 
         run_hugo(GH_PAGES)
         add_cname(env.cname)
         git_commit_changes(f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.", GH_PAGES)
         git_log(GH_PAGES)
         if env.github.branch == REF_MAIN:
+            logger.info(f"push to {GH_PAGES}")
             git("push --force", working_dir=GH_PAGES)
             notify(env.notify, "success!", "successfully published CoderDojo site!")
         else:
@@ -67,6 +65,16 @@ def clone_site_branch(conf: GithubConf) -> None:
     git(f"clone --depth=1 --single-branch --branch {GH_PAGES} https://x-access-token:{conf.token}@github.com"
         f"/{conf.repository}.git {GH_PAGES}")
     execute(f"rm -rf {GH_PAGES}/*")
+
+
+def generate_dojo_pages_for_future_events(api_key) -> None:
+    future_events = get_future_events(api_key)
+    logger.info(f"found {len(future_events)} future events")
+    for future_event in future_events:
+        logger.info(f"getting more details for {future_event.title}")
+        event = get_event_details(future_event, api_key)
+        logger.info(f"generate dojo page for {event.title}")
+        generate_dojo_page(event)
 
 
 def add_cname(cname: str):

@@ -19,7 +19,7 @@ def git_log(working_dir: str | None = None) -> None:
 
 
 def git_commit_changes(message: str, working_dir: str | None):
-    logger.info("commit changes")
+    logger.info(f"commit changes in {working_dir}")
     git("add -A", working_dir=working_dir)
     git("commit -m", message=message, working_dir=working_dir, accept_non_zero_return=True)
 
