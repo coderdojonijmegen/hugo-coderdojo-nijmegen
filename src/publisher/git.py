@@ -15,7 +15,7 @@ def git_configure(actor: str) -> None:
 
 def git_log(working_dir: str | None = None) -> None:
     _, out, _ = git("log -n 1 -p", working_dir=working_dir)
-    logger.info(out)
+    logger.debug(out)
 
 
 def git_commit_changes(message: str, working_dir: str | None):

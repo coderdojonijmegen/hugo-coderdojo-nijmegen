@@ -3,7 +3,9 @@ from datetime import datetime
 
 from dotenv import load_dotenv
 
+from publisher.dojo.page_generator import generate_dojo_page
 from publisher.env import Environment, GithubConf
+from publisher.eventbrite import get_future_events, get_event_details
 from publisher.executor import execute
 from publisher.git import git, git_configure, git_commit_changes, git_log
 from publisher.hugo import download_hugo, run_hugo
@@ -16,7 +18,7 @@ REF_MAIN = "refs/heads/main"
 
 load_dotenv()
 
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s:%(lineno)d %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M')
 logger = logging.getLogger(__file__)
@@ -35,6 +37,12 @@ def publish(env: Environment) -> int:
         git_log()
         start_og_proxy_in_background()
         og_proxy_started = True
+
+        future_events = get_future_events(env.eventbrite.api_key)
+        for future_event in future_events:
+            event = get_event_details(future_event, env.eventbrite.api_key)
+            generate_dojo_page(event)
+
         run_hugo(GH_PAGES)
         add_cname(env.cname)
         git_commit_changes(f"Publishing Site {env.cname} to {GH_PAGES} at {env.github.sha} on {now}.", GH_PAGES)
