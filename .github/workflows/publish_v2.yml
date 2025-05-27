@@ -1,8 +1,10 @@
 name: Publish Site v2
 
 on:
+  workflow_dispatch:
   push:
-
+  schedule:
+    - cron: '23 8-23 * * *'
 jobs:
   publish:
     name: Publish Site
