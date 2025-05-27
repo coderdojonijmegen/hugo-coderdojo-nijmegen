@@ -1,35 +1,14 @@
-{{/* Copied from: https://discourse.gohugo.io/t/grab-card-data-from-url/26807 */}}
-
-{{- $api_key := "" -}}
 {{- $json := "" -}}
 
-{{/* Get API key from config.toml. */}}
-{{- with .Site.Params.opengraphioapikey -}}
-  {{ $api_key = . }}
-{{- else -}}
-  {{- errorf "The '%s' shortcode requires an API key for opengraph.io. Please set '[params] opengraph_io_api_key' in config.toml. See %s" .Name .Position -}}
-{{- end -}}
-
-{{/* Get JSON from OpenGraph.io. */}}
+{{/* Get JSON from local og-proxy. */}}
 {{- with .Get 0 -}}
   {{- $url := replace . ":" "%3A" -}}
   {{- $url = replace $url "/" "%2F" -}}
-  {{- $query := querify "accept_lang" "auto" "app_id" $api_key -}}
   {{- $request := printf "http://127.0.0.1:5000/url/%s" $url -}}
   {{- $json = getJSON $request -}}
-{{/*<pre>{{ jsonify (dict "indent" "  ") $json }}</pre>*/}}
-{{- else -}}
-  {{- errorf "The '%s' shortcode requires a single positional parameter, a URL. See %s" .Name .Position -}}
+  {{/*<pre>{{ jsonify (dict "indent" "  ") $json }}</pre>*/}}
 {{- end -}}
 
-{{/* Check status code returned by OpenGraph.io. */}}
-{{- if ne (string $json.remote_response_code) "200" -}}
-  {{ $msg1 := "The '%s' shortcode was unable to retrieve Open Graph data for %s." .Name $json.url }}
-  {{ $msg2 := "The opengraph.io server response code was %s." (string $json.remote_response_code) }}
-  {{ $msg3 := "See %s" .Position }}
-  {{ errorf "%s %s %s" $msg1 $msg2 $msg3 }}
-{{- end -}}
-{{/* Output */}}
 <div class="og-card"><a href="{{ $json.url }}">
   <img src="{{ $json.image }}" alt="">
   <h4><img class="favicon" src="{{ $json.icon }}" >{{ $json.title }}</h4>

@@ -14,6 +14,6 @@ kinderen vinden bij CoderDojo en wat de mentoren drijft om het te organiseren:
 <!--more-->
 
 {{< verdieping >}}
-**Over IntoNijmegen**: IntoNijmegen is ontwikkeld voor Nijmegenaren die hun eigen stad opnieuw willen ontdekken en iedereen die naar 
+**Over IntoNijmegen**: [IntoNijmegen](https://www.intonijmegen.com) is ontwikkeld voor Nijmegenaren die hun eigen stad opnieuw willen ontdekken en iedereen die naar 
 de stad toe wil. Je vindt er nieuws en informatie over evenementen, cultuur, historie, shoppen en beleven. 
 {{< /verdieping >}}

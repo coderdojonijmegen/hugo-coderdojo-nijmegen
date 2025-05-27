@@ -73,4 +73,3 @@ def stop_og_proxy() -> None:
 
 if __name__ == "__main__":
     start_og_proxy_in_background()
-    stop_og_proxy()
