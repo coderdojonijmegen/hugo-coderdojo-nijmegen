@@ -9,3 +9,7 @@ dojo_bas.iml
 .DS_Store
 run_hugo.sh
 .env
+content/dojos/banners/
+gh-pages/
+hugo
+hugo.tar.gz
