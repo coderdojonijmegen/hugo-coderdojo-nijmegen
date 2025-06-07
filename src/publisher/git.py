@@ -18,9 +18,11 @@ def git_log(working_dir: str | None = None) -> None:
     logger.debug(out)
 
 
-def git_commit_changes(message: str, working_dir: str | None):
-    logger.info(f"commit changes in {working_dir}")
+def git_add_all_files(working_dir: str | None) -> None:
     git("add -A", working_dir=working_dir)
+
+
+def git_commit_changes(message: str, working_dir: str | None) -> None:
     git("commit -m", message=message, working_dir=working_dir, accept_non_zero_return=True)
 
 

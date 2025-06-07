@@ -5,6 +5,7 @@ exclude =
     .git/
     content/
     public/
+    gh-pages/
 max-line-length = 125
 per-file-ignores = __init__.py:F401
 

@@ -49,7 +49,7 @@ def shutdown() -> tuple[str, int]:
 
 @app.teardown_request
 def teardown(_):
-    global exiting
+    global exiting  # noqa: F824
     if exiting:
         os._exit(0)
 

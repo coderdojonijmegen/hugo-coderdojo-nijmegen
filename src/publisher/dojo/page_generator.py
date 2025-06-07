@@ -9,7 +9,7 @@ from publisher.eventbrite import Event
 DOJO_PAGE_TEMPLATE = "./archetypes/dojos-template.md"
 
 
-def generate_dojo_page(event: Event) -> None:
+def generate_dojo_page(event: Event) -> Path:
     template = _load_template()
     created_at = datetime.strftime(datetime.now(), '%Y-%m-%dT00:00:00+0100')
     dojo_file = Path("./content/dojos/").resolve() / f"{event.id}.md"
@@ -18,6 +18,7 @@ def generate_dojo_page(event: Event) -> None:
 
     page = _parse_to_page(template, event, created_at)
     _write_to_dojo_page(page, dojo_file)
+    return dojo_file
 
 
 def _load_template() -> str:

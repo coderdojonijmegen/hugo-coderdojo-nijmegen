@@ -3,10 +3,12 @@ from datetime import datetime
 
 from requests import get
 
+
 @dataclass
 class FutureEvent:
     url: str
     title: str
+
 
 @dataclass
 class Event:
@@ -32,7 +34,9 @@ def get_future_events(api_key: str) -> list[FutureEvent]:
     if future_events["pagination"]["object_count"] == 0:
         return []
     else:
-        return [FutureEvent(url=event["resource_uri"], title=event["name"]["text"]) for event in future_events["events"]]
+        return [FutureEvent(url=event["resource_uri"], title=event["name"]["text"]) for event in
+                future_events["events"]]
+
 
 def get_event_details(fevent: FutureEvent, api_key: str) -> Event:
     auth_header = {"Authorization": f"Bearer {api_key}"}
