@@ -7,7 +7,7 @@ import threading
 
 from requests import get
 
-from publisher.og_proxy import fetch_og_data
+from . import fetch_og_data
 
 logger = logging.getLogger(__file__)
 

@@ -33,14 +33,12 @@ now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 def publish(env: Environment) -> int:
     og_proxy_started = False
     try:
-        logger.info("clean up old files")
-        remove_instruction_directories()
-        remove_gh_pages_directory()
+        cleanup_previous_if_local(env)
 
         logger.info("prepare publishing")
         git_configure(env.github.actor)
-        clone_instructions(env.github)
         download_hugo(env.hugo)
+        clone_instructions(env.github)
         clone_site_branch(env.github)
         git_log()
         start_og_proxy_in_background()
@@ -74,6 +72,13 @@ def publish(env: Environment) -> int:
             stop_og_proxy()
 
 
+def cleanup_previous_if_local(env: Environment):
+    if env.github.branch == "refs/heads/local":
+        logger.info("clean up old files")
+        remove_instruction_directories()
+        remove_gh_pages_directory()
+
+
 def remove_instruction_directories():
     instructions_dir = ROOT_DIR / "content" / "instructies"
     if instructions_dir.exists():
@@ -84,9 +89,9 @@ def remove_instruction_directories():
 
 
 def remove_gh_pages_directory():
-    gpages_dir = ROOT_DIR / GH_PAGES
-    if gpages_dir.exists():
-        shutil.rmtree(gpages_dir)
+    gh_pages_dir = ROOT_DIR / GH_PAGES
+    if gh_pages_dir.exists():
+        shutil.rmtree(gh_pages_dir)
 
 
 def clone_site_branch(conf: GithubConf) -> None:
