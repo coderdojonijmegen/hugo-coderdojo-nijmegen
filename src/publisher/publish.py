@@ -48,6 +48,7 @@ def publish(env: Environment) -> int:
         generate_dojo_pages_for_future_events(env.eventbrite.api_key)
         git_commit_changes("Site update", None)
         if env.github.branch == REF_MAIN:
+            logger.info("push changes to main")
             git("push")
 
         logger.info("publish to gh-pages")
