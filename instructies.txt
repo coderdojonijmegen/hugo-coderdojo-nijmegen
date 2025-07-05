@@ -23,4 +23,4 @@ coderdojonijmegen/web-development content/instructies/web-development
 coderdojonijmegen/web-ontbijtkoekclicker content/instructies/ontbijtkoekclicker
 coderdojonijmegen/kerstkaart-P5js content/instructies/p5.js-kerstkaart
 coderdojonijmegen/python-vuurwerk content/instructies/python-vuurwerk
-coderdojonijmegen/aanraak-synthesizer content/instructies/aanraak-synthesizer
+coderdojonijmegen/aanraak-synthesizer content/instructies/python-aanraak-synthesizer
