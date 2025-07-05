@@ -1,10 +1,11 @@
 baseURL = "/"
 languageCode = "nl-nl"
 title = "CoderDojo Nijmegen"
+ignoreLogs = ['error-remote-getjson']
 
 [params]
   mcs = false
-  opengraphioapikey = "opengraph.io.api-key"
+
 [menu]
 
   [[menu.main]]
