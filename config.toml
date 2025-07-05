@@ -3,9 +3,6 @@ languageCode = "nl-nl"
 title = "CoderDojo Nijmegen"
 ignoreLogs = ['error-remote-getjson']
 
-[params]
-  mcs = false
-
 [menu]
 
   [[menu.main]]
