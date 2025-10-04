@@ -345,8 +345,8 @@ Als binaireCode 1001 is dan is het resultaat `xxxx1001`
 
 Nu moeten we de laatste stap doen.
 ::question:: Wat moest het laatste bit zijn?
-::wrong:: Het laatste bit is altijd 1.
-::correct:: Het laatste bit is altijd 0.
+::wrong:: Het laatste bit is altijd 0.
+::correct:: Het laatste bit is altijd 1.
 ::wrong:: Het laatste bit is altijd hetzelfde als het een-na-laatste bit.
 ::wrong:: Het laatste bit is altijd het tegenovergestelde van het een-na-laatste bit.
 
@@ -471,3 +471,4 @@ Je kan ook proberen zelf een barcode te tekenen:
 94.	Leeuw
 95.	Aardvarken
 96.	Dikstaartgalago
+
