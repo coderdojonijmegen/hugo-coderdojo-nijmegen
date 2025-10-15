@@ -25,7 +25,6 @@ var mentoren = [
     'Bas',
     'Claudia',
     'Edwin',
-    'Jaap',
     'Joachim',
     'Maud-Marit',
     'Natasha',
