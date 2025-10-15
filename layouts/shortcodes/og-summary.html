@@ -5,7 +5,7 @@
   {{- $url := replace . ":" "%3A" -}}
   {{- $url = replace $url "/" "%2F" -}}
   {{- $request := printf "http://127.0.0.1:5000/url/%s" $url -}}
-  {{- $json = getJSON $request -}}
+  {{- $json = resources.GetRemote $request | transform.Unmarshal -}}
   {{/*<pre>{{ jsonify (dict "indent" "  ") $json }}</pre>*/}}
 {{- end -}}
 
