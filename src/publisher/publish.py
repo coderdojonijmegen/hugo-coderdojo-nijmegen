@@ -38,7 +38,6 @@ def publish(env: Environment) -> int:
         logger.info("prepare publishing")
         git_configure(env.github.actor)
         download_hugo(env.hugo)
-        create_prod_hugo_config()
         clone_instructions(env.github)
         clone_site_branch(env.github)
         git_log()
@@ -95,12 +94,6 @@ def remove_gh_pages_directory():
     if gh_pages_dir.exists():
         shutil.rmtree(gh_pages_dir)
 
-def create_prod_hugo_config():
-    with open(ROOT_DIR / "config.toml", "r") as f:
-        config = f.read()
-    prod_config = config.replace("'error-remote-getjson'", "")
-    with open(ROOT_DIR / "prod.toml", "w") as f:
-        f.write(prod_config)
 
 def clone_site_branch(conf: GithubConf) -> None:
     logger.info("cloning site branch")

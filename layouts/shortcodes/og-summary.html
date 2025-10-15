@@ -1,17 +1,29 @@
-{{- $json := "" -}}
+{{- $json := dict -}}
 
 {{/* Get JSON from local og-proxy. */}}
 {{- with .Get 0 -}}
-  {{- $url := replace . ":" "%3A" -}}
-  {{- $url = replace $url "/" "%2F" -}}
-  {{- $request := printf "http://127.0.0.1:5000/url/%s" $url -}}
-  {{- $json = resources.GetRemote $request | transform.Unmarshal -}}
-  {{/*<pre>{{ jsonify (dict "indent" "  ") $json }}</pre>*/}}
+    {{- $url := replace . ":" "%3A" -}}
+    {{- $url = replace $url "/" "%2F" -}}
+    {{- $request := printf "http://127.0.0.1:5000/url/%s" $url -}}
+    {{- $remoteResource := resources.GetRemote $request -}}
+    {{- if $remoteResource.Err -}}
+        {{- $errorMessage := printf "og-summary: failed to fetch remote data for URL '%s' from og-proxy: %s" $url $remoteResource.Err -}}
+        {{- if hugo.IsProduction -}}
+            {{- errorf $errorMessage -}}
+        {{- else -}}
+            {{- warnf $errorMessage -}}
+        {{- end -}}
+    {{- else -}}
+        {{- $json = $remoteResource.Content | transform.Unmarshal -}}
+        {{- if not hugo.IsProduction -}}
+            <pre>{{ jsonify (dict "indent" "  ") $json }}</pre>
+        {{- end -}}
+    {{- end -}}
 {{- end -}}
 
 <div class="og-card"><a href="{{ $json.url }}">
-  <img src="{{ $json.image }}" alt="">
-  <h4><img class="favicon" src="{{ $json.icon }}" >{{ $json.title }}</h4>
-  <p>{{ $json.description }}</p>
-  <div class="card-link"><a href="{{ $json.url }}">{{ $json.url }}</a></div>
+    <img src="{{ $json.image }}" alt="">
+    <h4><img class="favicon" src="{{ $json.icon }}">{{ $json.title }}</h4>
+    <p>{{ $json.description }}</p>
+    <div class="card-link"><a href="{{ $json.url }}">{{ $json.url }}</a></div>
 </a></div>

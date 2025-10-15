@@ -34,6 +34,6 @@ def download_hugo(conf: HugoConf) -> None:
 
 def run_hugo(target_dir: str) -> None:
     logger.info(f"building site into {target_dir}")
-    ret_code, out, err = execute(f"./hugo --gc --minify --cleanDestinationDir --config prod.toml -d {target_dir}/")
+    ret_code, out, err = execute(f"./hugo --gc --minify --cleanDestinationDir -e production -d {target_dir}/")
     if ret_code != 0:
         raise RuntimeError(f"Hugo error: {out} {err}")
