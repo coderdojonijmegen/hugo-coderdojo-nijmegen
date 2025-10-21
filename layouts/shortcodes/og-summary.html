@@ -5,18 +5,19 @@
     {{- $url := replace . ":" "%3A" -}}
     {{- $url = replace $url "/" "%2F" -}}
     {{- $request := printf "http://127.0.0.1:5000/url/%s" $url -}}
-    {{- $remoteResource := resources.GetRemote $request -}}
-    {{- if $remoteResource.Err -}}
-        {{- $errorMessage := printf "og-summary: failed to fetch remote data for URL '%s' from og-proxy: %s" $url $remoteResource.Err -}}
-        {{- if hugo.IsProduction -}}
-            {{- errorf $errorMessage -}}
-        {{- else -}}
-            {{- warnf $errorMessage -}}
-        {{- end -}}
-    {{- else -}}
-        {{- $json = $remoteResource.Content | transform.Unmarshal -}}
-        {{- if not hugo.IsProduction -}}
-            <pre>{{ jsonify (dict "indent" "  ") $json }}</pre>
+    {{- with try (resources.GetRemote $request) -}}
+        {{- with .Err -}}
+            {{- $errorMessage := printf "og-summary: failed to fetch remote data for URL '%s' from og-proxy: %s" $url .Err -}}
+            {{- if hugo.IsProduction -}}
+                {{- errorf $errorMessage -}}
+            {{- else -}}
+                {{- warnf $errorMessage -}}
+            {{- end -}}
+        {{- else with .Value -}}
+            {{- $json = .Content | transform.Unmarshal -}}
+            {{- if not hugo.IsProduction -}}
+                <pre>{{ jsonify (dict "indent" "  ") $json }}</pre>
+            {{- end -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}

@@ -10,7 +10,7 @@
     {{ $k := $scratch.Get "p" }}
     {{ if ge $wanneerVan $now }}
         {{ if gt $k 0 }}
-            {{ partial "partials/dojo-link-short.html" . }}
+            {{ partial "dojo-link-short.html" . }}
         {{ end }}
         {{ $scratch.Add "p" 1 }}
     {{ end }}

@@ -13,8 +13,12 @@ met informatie over hoe ze te installeren en te gebruiken.
 
 <!--more-->
 
-{{< instructie_link href="/instructies/installatie/thonny" titel="Thonny" >}}
+{{< instructie_link href="/installatie/thonny" titel="Thonny" >}}
 Thonny is een programma om Python programma's mee te schrijven.
+{{< /instructie_link >}}
+
+{{< instructie_link href="/installatie/love2d" titel="Löve2D" >}}
+Löve2D is een programma om games mee te schrijven.
 {{< /instructie_link >}}
 
 {{< licentie rel="http://creativecommons.org/licenses/by-nc-sa/4.0/">}}

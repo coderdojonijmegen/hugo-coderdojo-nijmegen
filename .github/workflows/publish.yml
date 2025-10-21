@@ -25,7 +25,7 @@ jobs:
         env:
           VAR_GITHUB_TOKEN: ${{ secrets.GH_PAT_REPO_WORKFLOW_CODERDOJO024 }}
           VAR_CNAME: coderdojo-nijmegen.nl
-          VAR_HUGO_VERSION: extended_0.131.0
+          VAR_HUGO_VERSION: extended_0.151.1
           VAR_NOTIFY_URL: ${{ secrets.NOTIFY_URL }}
           VAR_NOTIFY_USER: ${{ secrets.NOTIFY_USER }}
           VAR_NOTIFY_PASS: ${{ secrets.NOTIFY_PASS }}

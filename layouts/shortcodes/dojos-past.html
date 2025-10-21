@@ -7,6 +7,6 @@
 {{ range $pages }}
     {{ $wanneerVan := .Params.wanneer.van | time.Format "2006-01-02T15:04:05" }}
     {{ if le $wanneerVan $now }}
-        {{ partial "partials/dojo-link.html" . }}
+        {{ partial "dojo-link.html" . }}
     {{ end }}
 {{ end }}

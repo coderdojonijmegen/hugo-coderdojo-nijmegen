@@ -7,6 +7,6 @@
     {{ $k := $scratch.Get "i" }}
     {{ if and (ge $wanneerVan $now) (lt $k 1) }}
         {{ $scratch.Add "i" 1 }}
-        {{ partial "partials/dojo-link.html" . }}
+        {{ partial "dojo-link.html" . }}
     {{ end }}
 {{ end }}
