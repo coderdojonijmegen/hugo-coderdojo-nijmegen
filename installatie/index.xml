@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installatie van programma's on CoderDojo Nijmegen</title><link>/installatie/</link><description>Recent content in Installatie van programma's on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Thu, 02 Jan 2025 19:16:01 +0100</lastBuildDate><atom:link href="/installatie/index.xml" rel="self" type="application/rss+xml"/><item><title>Thonny</title><link>/installatie/thonny/</link><pubDate>Thu, 02 Jan 2025 19:16:01 +0100</pubDate><guid>/installatie/thonny/</guid><description>We gebruiken voor deze instructie Thonny. Deze moet je installeren als je die nog niet hebt.
-Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.
-Downloaden Thonny is beschikbaar vanaf Thonny.org voor Windows, MacOS en Linux.
-Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server hier.
-Installatie Installeer het gedownloade bestand door het uit te voeren.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installatie van programma's on CoderDojo Nijmegen</title><link>/installatie/</link><description>Recent content in Installatie van programma's on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Sun, 19 Oct 2025 07:16:01 +0100</lastBuildDate><atom:link href="/installatie/index.xml" rel="self" type="application/rss+xml"/><item><title>Löve2D</title><link>/installatie/love2d/</link><pubDate>Sun, 19 Oct 2025 07:16:01 +0100</pubDate><guid>/installatie/love2d/</guid><description>&lt;p&gt;We gebruiken voor deze instructie Löve2D. Deze moet je installeren als je die nog niet
+hebt.&lt;br&gt;
+Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.&lt;/p&gt;
+&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
+&lt;p&gt;Löve2D is beschikbaar vanaf &lt;a href="https://love2d.org/"&gt;love2d.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server
+&lt;a href="https://installers.server.coderdojo-nijmegen.nl"&gt;hier&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="windows"&gt;Windows&lt;/h4&gt;
+&lt;p&gt;Löve is op Windows gemakkelijk te installeren via één van de installers. Als alternatief kun je kiezen voor één van de
+zipbestanden en deze op een gewenste locatie unzippen. Maak het jezelf gemakkelijk door Löve op een eenvoudig te
+onthouden plek te installeren, bijvoorbeeld in de map&lt;/p&gt;</description></item><item><title>Thonny</title><link>/installatie/thonny/</link><pubDate>Thu, 02 Jan 2025 19:16:01 +0100</pubDate><guid>/installatie/thonny/</guid><description>&lt;p&gt;We gebruiken voor deze instructie Thonny. Deze moet je installeren als je die nog niet
+hebt.&lt;br&gt;
+Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.&lt;/p&gt;
+&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
+&lt;p&gt;Thonny is beschikbaar vanaf &lt;a href="https://thonny.org"&gt;Thonny.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server
+&lt;a href="https://installers.server.coderdojo-nijmegen.nl"&gt;hier&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="installatie"&gt;Installatie&lt;/h3&gt;
+&lt;p&gt;Installeer het gedownloade bestand door het uit te voeren. Volg de instructies tijdens de installatie.&lt;/p&gt;</description></item></channel></rss>

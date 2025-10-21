@@ -1,1 +1,213 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web - Ontbijtkoekclicker on CoderDojo Nijmegen</title><link>/instructies/ontbijtkoekclicker/</link><description>Recent content in Web - Ontbijtkoekclicker on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="/instructies/ontbijtkoekclicker/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>/instructies/ontbijtkoekclicker/src/pagina/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/ontbijtkoekclicker/src/pagina/</guid><description>&lt;!DOCTYPE html> Ontbijtkoek Clicker (zet jouw titel hier!) Ontbijtkoek Clicker (zet jouw titel hier!) Geld: 0$ Geld per seconde: 0$ Actieve Clickers Koop Clickers Huur een extra chef! 1$ ??? ??? $ ??? ??? $ ??? ??? $ ??? ??? $ Powerups 10$ ???$ ???$ ???$ ???$ Gemaakt door: S. Jelle (zet jouw naam hier!)</description></item><item><title/><link>/instructies/ontbijtkoekclicker/start/pagina/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/ontbijtkoekclicker/start/pagina/</guid><description>&lt;!DOCTYPE html> Ontbijtkoek Clicker (zet jouw titel hier!) Ontbijtkoek Clicker (zet jouw titel hier!) Geld: 0$ Geld per seconde: 0$ Actieve Clickers Koop Clickers Huur een extra chef! 1$ ??? ??? $ ??? ??? $ ??? ??? $ ??? ??? $ Powerups 10$ ???$ ???$ ???$ ???$ Gemaakt door: S. Jelle (zet jouw naam hier!)</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web - Ontbijtkoekclicker on CoderDojo Nijmegen</title><link>/instructies/ontbijtkoekclicker/</link><description>Recent content in Web - Ontbijtkoekclicker on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="/instructies/ontbijtkoekclicker/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>/instructies/ontbijtkoekclicker/src/pagina/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/ontbijtkoekclicker/src/pagina/</guid><description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Ontbijtkoek Clicker (zet jouw titel hier!)&lt;/title&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		&lt;link rel="stylesheet" type="text/css" href="style.css" media="screen"/&gt;
+		&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+		&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+		&lt;link href="https://fonts.googleapis.com/css2?family=Cookie&amp;display=swap" rel="stylesheet"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+
+		&lt;header&gt;
+			&lt;h2&gt;Ontbijtkoek Clicker (zet jouw titel hier!)&lt;/h2&gt;
+		&lt;/header&gt;
+
+		&lt;section&gt;
+			&lt;div id="klikRuimte"&gt;
+				&lt;img src="https://www.pngall.com/wp-content/uploads/2016/07/Cookie-PNG.png" onClick="onClickCookie()"&gt;
+				&lt;br&gt;
+				&lt;!-- In deze h2 tags laten we de huidige hoeveelheid geld zien, 
+					en hoeveel geld we per seconde verdienen. --&gt; 
+					&lt;h2 id="geld"&gt;Geld: 0$&lt;/h2&gt;
+					&lt;h2 id="geldPerSeconde"&gt;Geld per seconde: 0$&lt;/h2&gt;
+			&lt;/div&gt;
+
+			&lt;!-- In deze div laten we van elk type clicker zien hoeveel we er hebben. --&gt; 
+			&lt;div class="tierdisplay rows" id="actieveClickers"&gt;
+				&lt;h3&gt;Actieve Clickers&lt;/h3&gt;
+
+				&lt;div class="tier0"&gt;
+					&lt;!-- Per clicker van dit type voegen we een afbeelding toe. --&gt; 
+				&lt;/div&gt;
+
+				&lt;div class="tier1"&gt;&lt;/div&gt;
+				&lt;div class="tier2"&gt;&lt;/div&gt;
+				&lt;div class="tier3"&gt;&lt;/div&gt;
+				&lt;div class="tier4"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;!-- In deze div kan de speler de verschillende clickers kopen. --&gt; 
+			&lt;div class="tierdisplay rows" id="clickerWinkel"&gt;
+				&lt;h3&gt;Koop Clickers&lt;/h3&gt;
+
+				&lt;!-- Via deze div kan je de Chef Clicker kopen. Deze kan je als voorbeeld gebruiken. --&gt; 
+				&lt;div class="tier0 ruimte" onClick="koopClicker(0)"&gt;
+					&lt;img class="icon" src="https://pngimg.com/uploads/chef/chef_PNG54.png"&gt;
+					&lt;text&gt;Huur een extra chef!&lt;/text&gt;
+					&lt;!-- De prijs is nu nog 1$. Deze kan je laten stijgen per aankoop! --&gt; 
+					&lt;text&gt;1$&lt;/text&gt;
+				&lt;/div&gt; 
+
+				&lt;div class="tier1 ruimte" onClick="koopClicker(1)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+				&lt;div class="tier2 ruimte" onClick="koopClicker(2)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+				&lt;div class="tier3 ruimte" onClick="koopClicker(3)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+				&lt;div class="tier4 ruimte" onClick="koopClicker(4)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+
+			&lt;/div&gt;
+
+
+			&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt; 
+			&lt;div class="tierdisplay table" id="powerupWinkel"&gt;
+				&lt;h3&gt;Powerups&lt;/h3&gt;
+
+				&lt;!-- Via deze div kan je de Deegroller Powerup kopen. Deze kan je als voorbeeld gebruiken. --&gt; 
+				&lt;div class="tier0" onclick="koopPowerup(0)"&gt;
+					&lt;img class="icon" src="https://gartic.com.br/imgs/mural/__/__fera__/rolling-pin.png"&gt;
+					&lt;text&gt;10$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier1" onClick="koopPowerup(1)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier2" onClick="koopPowerup(2)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier3" onClick="koopPowerup(3)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier4" onClick="koopPowerup(4)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+
+		&lt;footer&gt;
+			&lt;p&gt;Gemaakt door: S. Jelle (zet jouw naam hier!)&lt;/p&gt;</description></item><item><title/><link>/instructies/ontbijtkoekclicker/start/pagina/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/ontbijtkoekclicker/start/pagina/</guid><description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Ontbijtkoek Clicker (zet jouw titel hier!)&lt;/title&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		&lt;link rel="stylesheet" type="text/css" href="style.css" media="screen"/&gt;
+		&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+		&lt;link href="https://fonts.googleapis.com/css2?family=Cookie&amp;display=swap" rel="stylesheet"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+
+		&lt;header&gt;
+			&lt;h2&gt;Ontbijtkoek Clicker (zet jouw titel hier!)&lt;/h2&gt;
+		&lt;/header&gt;
+
+		&lt;section&gt;
+			&lt;!-- In deze div kan de speler op de Cookie klikken. --&gt;
+			&lt;div id="klikRuimte"&gt;
+				&lt;img src="https://www.pngall.com/wp-content/uploads/2016/07/Cookie-PNG.png" onClick="onClickCookie()"&gt;
+				&lt;br&gt;
+				&lt;!-- In deze h2 tags laten we de huidige hoeveelheid geld zien, 
+					en hoeveel geld we per seconde verdienen. --&gt; 
+					&lt;h2 id="geld"&gt;Geld: 0$&lt;/h2&gt;
+					&lt;h2 id="geldPerSeconde"&gt;Geld per seconde: 0$&lt;/h2&gt;
+			&lt;/div&gt;
+
+			&lt;!-- In deze div laten we van elk type clicker zien hoeveel we er hebben. --&gt; 
+			&lt;div class="tierdisplay rows" id="actieveClickers"&gt;
+				&lt;h3&gt;Actieve Clickers&lt;/h3&gt;
+
+				&lt;div class="tier0"&gt;
+					&lt;!-- Per clicker van dit type voegen we een afbeelding toe. --&gt; 
+				&lt;/div&gt;
+
+				&lt;div class="tier1"&gt;&lt;/div&gt;
+				&lt;div class="tier2"&gt;&lt;/div&gt;
+				&lt;div class="tier3"&gt;&lt;/div&gt;
+				&lt;div class="tier4"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;!-- In deze div kan de speler de verschillende clickers kopen. --&gt; 
+			&lt;div class="tierdisplay rows" id="clickerWinkel"&gt;
+				&lt;h3&gt;Koop Clickers&lt;/h3&gt;
+
+				&lt;!-- Via deze div kan je de Chef Clicker kopen. Deze kan je als voorbeeld gebruiken. --&gt; 
+				&lt;div class="tier0 ruimte" onClick="koopClicker(0)"&gt;
+					&lt;img class="icon" src="https://pngimg.com/uploads/chef/chef_PNG54.png"&gt;
+					&lt;text&gt;Huur een extra chef!&lt;/text&gt;
+					&lt;!-- De prijs is nu nog 1$. Deze kan je laten stijgen per aankoop! --&gt; 
+					&lt;text&gt;1$&lt;/text&gt;
+				&lt;/div&gt; 
+
+				&lt;div class="tier1 ruimte" onClick="koopClicker(1)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+				&lt;div class="tier2 ruimte" onClick="koopClicker(2)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+				&lt;div class="tier3 ruimte" onClick="koopClicker(3)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+				&lt;div class="tier4 ruimte" onClick="koopClicker(4)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???&lt;/text&gt;
+					&lt;text&gt;??? $&lt;/text&gt;
+				&lt;/div&gt; 
+
+			&lt;/div&gt;
+
+
+			&lt;!-- In deze div kan de speler Powerups voor de Clickers kopen. --&gt; 
+			&lt;div class="tierdisplay table" id="powerupWinkel"&gt;
+				&lt;h3&gt;Powerups&lt;/h3&gt;
+
+				&lt;!-- Via deze div kan je de Deegroller Powerup kopen. Deze kan je als voorbeeld gebruiken. --&gt; 
+				&lt;div class="tier0" onclick="koopPowerup(0)"&gt;
+					&lt;img class="icon" src="https://gartic.com.br/imgs/mural/__/__fera__/rolling-pin.png"&gt;
+					&lt;text&gt;10$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier1" onClick="koopPowerup(1)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier2" onClick="koopPowerup(2)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier3" onClick="koopPowerup(3)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+				&lt;div class="tier4" onClick="koopPowerup(4)"&gt;
+					&lt;img class="icon" src="???"&gt;
+					&lt;text&gt;???$&lt;/text&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+
+		&lt;footer&gt;
+			&lt;p&gt;Gemaakt door: S. Jelle (zet jouw naam hier!)&lt;/p&gt;</description></item></channel></rss>
