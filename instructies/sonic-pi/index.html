@@ -1,0 +1,155 @@
+<!doctype html><html lang=nl-nl><head><title>Sonic Pi - december</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=mobile-web-app-capable content="yes"><link rel=stylesheet href=/css/style.min.48bb2dcaca0c2d0d040db4fcf9d79af7e978870c6f48910f829184c4eaba9b03.css><link rel=icon href=/imgs/icon-512x512.png><meta property="og:title" content="CoderDojo Nijmegen - Sonic Pi - december"><meta property="og:type" content="website"><meta property="og:image" content="https://coderdojo-nijmegen.nl/imgs/logo_coderdojo_nijmegen-zwart.png"><meta property="og:url" content="https://coderdojo-nijmegen.nl/instructies/sonic-pi/"><meta property="og:description" content="Met Sonic Pi kun je muziek programmeren als code! In deze instructie gaan we wat muziek maken, passend in de maand december."></head><body><header class=teal-background><menu><span class=menu-toggle id=js-menu-toggle><i></i>
+<i></i>
+<i></i>
+</span><logo><a href=/><img src=/imgs/logo_coderdojo_nijmegen.png alt="logo CoderDojo"></a></logo><ul id=js-menu class=menu><li><a href=/nieuws/>nieuws</a></li><li><a href=/dojos/>dojos</a></li><li><a href=/instructies/>instructies</a></li><li><a href=/onderwerpen/>onderwerpen</a></li><li><a href=/meehelpen/>meehelpen</a></li><li><a href=/team/>team</a></li><li><a href=/stichting/>stichting</a></li><li><a href=/zoeken/>zoeken</a></li></ul></menu></header><main><breadcrumbs><ul><li><a href=/>home</a></li><li>/ <a href=/instructies>instructies</a></li><li>/ <a href=/instructies/sonic-pi>sonic-pi</a></li></ul></breadcrumbs><h1>Sonic Pi - december</h1><article class=instructie><aside class=toc><header><h2>Inhoud</h2></header><nav id=TableOfContents><ul><li><a href=#introductie>Introductie</a></li><li><a href=#wat-heb-je-nodig>Wat heb je nodig?</a></li><li><a href=#twee-voorbeelden>Twee voorbeelden</a><ul><li><a href=#sinterklaas-kapoentje>Sinterklaas Kapoentje</a></li></ul></li><li><a href=#zelf-aan-de-slag>Zelf aan de slag</a></li><li><a href=#goed-gedaan>Goed gedaan!</a></li></ul></nav></aside><p>Met Sonic Pi kun je muziek programmeren als code! In deze instructie gaan we wat muziek maken, passend in de maand december.</p><h2 id=introductie>Introductie</h2><p>Sonic Pi is een programma geschreven door Sam Aaron en het Sonic Pi Core team. Je kunt er muziek in programmeren en zelfs
+live muziek in aanpassen terwijl het speelt!</p><p>In deze instructie leren we hoe je muziek kunt maken in Sonic Pi op basis van bladmuziek van eenvoudige liedjes passend
+in de maand december. We maken Sinterklaas Kapoentje en Klink klokje klingelingeling. Je leert ook hoe je zelf op basis
+van bladmuziek muziek kunt programmeren.</p><h2 id=wat-heb-je-nodig>Wat heb je nodig?</h2><div class=included><h3 id=downloaden>Downloaden</h3><p>Sonic Pi is te downloaden van de site <a href=https://sonic-pi.net/>https://sonic-pi.net/</a>.</p><p>Er zijn officiële versies voor <a href=https://sonic-pi.net/#windows>Windows</a>, <a href=https://sonic-pi.net/#mac>MacOS</a> en
+<a href=https://sonic-pi.net/#rp>Raspberry Pi OS</a>. Er is ook een <a href=https://flathub.org/en/apps/net.sonic_pi.SonicPi>onofficiële versie voor Linux</a>.</p><p>Tijdens de dojo zijn de officiële versies voor Windows en MacOS sneller te downloaden via de <a href=https://installers.server.coderdojo-nijmegen.nl>installers</a> op de CoderDojo Server.</p><p>Let er bij het downloaden voor de MacOS versie op dat je de juiste versie pakt, die voor ARM voor recente MacBooks met
+Apple Silicon en die voor Intel voor oudere.</p><h3 id=installeren>Installeren</h3><p>Voor de installatie van de Windows en MacOS versies moet je het gedownloade bestand uitvoeren.
+Volg de instructies tijdens de installatie.</p><h3 id=gebruik>Gebruik</h3><p>Na het starten van Sonic Pi is het programma mogelijk in het Engels. Zoek dan in het menu naar &ldquo;Language&rdquo; en kies &ldquo;Nederlands&rdquo;.
+Je moet het programma dan even herstarten en krijgt het dan in Nederlands.</p><p><img src=/installatie/plaatjes/sonic-pi-taal-instellingen.png alt="Sonic Pi taal instellingen"></p></div><h2 id=twee-voorbeelden>Twee voorbeelden</h2><p>We hebben 2 voorbeelden uitgewerkt voor gebruik in Sonic Pi.<br>De voorbeelden komen beide van <a href=https://www.pianokinderliedjes.nl>https://www.pianokinderliedjes.nl</a>.</p><h3 id=sinterklaas-kapoentje>Sinterklaas Kapoentje</h3><p><img src=sinterklaas-kapoentje.png alt="Sinterklaas Kapoentje"><div class=caption><a href=https://www.pianokinderliedjes.nl/pdf/Sinterklaas_Kapoentje_4handig_inG.pdf>https://www.pianokinderliedjes.nl/pdf/Sinterklaas_Kapoentje_4handig_inG.pdf</a></div></p><p>Hieronder staat de code voor dit liedje. We beginnen te bepalen met welke snelheid het liedje gespeeld wordt en met welke klank:</p><ul><li><code>use_bpm</code> bepaalt de snelheid, in dit geval 120 beats-per-minute. Speel eens met de waarde en kijk wat er gebeurd.</li><li><code>use_synth</code> bepaalt de klank, in dit geval piano. Andere klinken vind je</li></ul><p>Daarna schrijven we de noten uit de bladmuziek hierboven:</p><ul><li><code>play :g4</code> speelt een G in de 4e octaaf</li><li><code>sleep 0.66</code> bepaalt de duur van de noot (niet van de klank), in dit geval 0,66 seconden</li></ul><p>Beide instructies kunnen op hun eigen regel, maar als ze samen op één regel staan, moet er een ; (punt-komma) tussen.</p><details><summary>hier</summary><pre>
+    :dull_bell
+    :pretty_bell
+    :beep
+    :sine
+    :saw
+    :pulse
+    :subpulse
+    :square
+    :tri
+    :dsaw
+    :dpulse
+    :dtri
+    :fm
+    :mod_fm
+    :mod_saw
+    :mod_dsaw
+    :mod_sine
+    :mod_beep
+    :mod_tri
+    :mod_pulse
+    :tb303
+    :supersaw
+    :hoover
+    :prophet
+    :zawa
+    :dark_ambience
+    :growl
+    :hollow
+    :mono_player
+    :stereo_player
+    :blade
+    :piano
+    :pluck
+    :sound_in
+    :noise
+    :pnoise
+    :bnoise
+    :gnoise
+    :cnoise
+    :basic_mono_player
+    :basic_stereo_player
+    :basic_mixer
+    :main_mixer
+</details>
+<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>    use_bpm <span style=color:#0550ae>120</span>
+</span></span><span style=display:flex><span>    use_synth :piano
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#57606a># Sin - ter</span>
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># klaas - Ka</span>
+</span></span><span style=display:flex><span>    play :a4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :a4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># poen</span>
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    <span style=color:#57606a># tje,</span>
+</span></span><span style=display:flex><span>    play :e4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#57606a># gooi - wat</span>
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># in - mijn</span>
+</span></span><span style=display:flex><span>    play :a4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :a4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># schoen</span>
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    <span style=color:#57606a># tje</span>
+</span></span><span style=display:flex><span>    play :e4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#57606a># gooi - wat</span>
+</span></span><span style=display:flex><span>    play :f4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :f4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># in - mijn</span>
+</span></span><span style=display:flex><span>    play :f4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :d4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># laars</span>
+</span></span><span style=display:flex><span>    play :f4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    <span style=color:#57606a># je</span>
+</span></span><span style=display:flex><span>    play :f4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#57606a># dank - u</span>
+</span></span><span style=display:flex><span>    play :a4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :g4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># sin - ter</span>
+</span></span><span style=display:flex><span>    play :f4<span style=color:#1f2328>;</span> sleep 0.66
+</span></span><span style=display:flex><span>    play :e4<span style=color:#1f2328>;</span> sleep 0.33
+</span></span><span style=display:flex><span>    <span style=color:#57606a># klaas</span>
+</span></span><span style=display:flex><span>    play :d4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span><span style=display:flex><span>    <span style=color:#57606a># je</span>
+</span></span><span style=display:flex><span>    play :c4<span style=color:#1f2328>;</span> sleep 1.0
+</span></span></code></pre></td></tr></table></div></div><h2 id=zelf-aan-de-slag>Zelf aan de slag</h2><h2 id=goed-gedaan>Goed gedaan!</h2><p>Meer muziek: <a href=https://www.pianokinderliedjes.nl/index.php>https://www.pianokinderliedjes.nl/index.php</a><br>Tutorial: <a href=https://sonic-pi.net/tutorial.html>https://sonic-pi.net/tutorial.html</a></p><div class=section id=licentie><h1>Licentie</h1><p>Deze instructies worden, net als alle andere instructies van CoderDojo Nijmegen,
+aangeboden onder een <a class="reference external" href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licentie</a>.</p><a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=/imgs/CreativeCommons.png></a></div></article></main><footer><div id=colofon><div><p>Stichting CoderDojo Nijmegen</p>Nijhoffstraat 5<br>6524 AT Nijmegen<br><br><a href=/privacy>privacybeleid</a></div><div><img src=/imgs/coderdojo-nijmegen-anbi.png alt="ANBI logo"></div><div><p>hosting door:</p><a href=https://github.com/coderdojonijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/GitHub_Logo_White.png alt="Hosting door GitHub Pages"></a></div><div><p>gesteund door:</p><a href=http://www.stitpro.nl/ target=_blank rel="noopener noreferrer"><img src=/imgs/stitpro-bw.png alt="Stitpro logo"></a></div></div><div class=copyright>CoderDojo Nijmegen &copy; 2025</div><div class=social><a href=https://www.facebook.com/pages/CoderDojo-Nijmegen/400380873445793 target=_blank rel="noopener noreferrer"><img src=/imgs/facebook.png alt=Facebook></a>
+<a href=https://twitter.com/CoderDojo024 target=_blank rel="noopener noreferrer"><img src=/imgs/twitter.png alt=Twitter></a>
+<a href=https://www.linkedin.com/company/stichting-coderdojo-nijmegen/ target=_blank rel="noopener noreferrer"><img src=/imgs/linkedin.png alt=LinkedIn></a>
+<a href=https://www.eventbrite.nl/o/stichting-coderdojo-nijmegen-12043791497 target=_blank rel="noopener noreferrer"><img src=/imgs/eventbrite.png alt=Eventbrite></a>
+<a href=https://github.com/coderdojonijmegen target=_blank rel="noopener noreferrer"><img src=/imgs/github.png alt=GitHub></a></div></footer><script src=/js/bundle.js></script></body></html>
