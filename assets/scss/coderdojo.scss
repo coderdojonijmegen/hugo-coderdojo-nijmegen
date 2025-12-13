@@ -160,6 +160,17 @@ main {
             border-radius: $photoBorderRadius;
         }
     }
+    a.button {
+        border: 1p solid black;
+        border-radius: 5px;
+        padding: 10px;
+        line-height: 70px;
+        background-color: blue;
+        color: white;
+        font-size: larger;
+        text-decoration: none;
+        margin-left: 40px;
+    }
     padding: 15px;
     margin-bottom: 30px;
     breadcrumbs {

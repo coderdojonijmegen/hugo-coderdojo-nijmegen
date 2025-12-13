@@ -13,11 +13,11 @@ hebt.
 Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.
 
 ### Downloaden
+Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:   
+<a class="button" href="https://installers.server.coderdojo-nijmegen.nl">download</a>
 
-Löve2D is beschikbaar vanaf [love2d.org](https://love2d.org/) voor Windows, MacOS en Linux.
+Löve2D is eventueel ook beschikbaar vanaf [love2d.org](https://love2d.org/) voor Windows, MacOS en Linux.
 
-Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server 
-[hier](https://installers.server.coderdojo-nijmegen.nl).
 
 
 #### Windows

@@ -14,10 +14,10 @@ Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het v
 
 ### Downloaden
 
-Thonny is beschikbaar vanaf [Thonny.org](https://thonny.org) voor Windows, MacOS en Linux.
+Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:   
+<a class="button" href="https://installers.server.coderdojo-nijmegen.nl">download</a>
 
-Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server 
-[hier](https://installers.server.coderdojo-nijmegen.nl).
+Thonny is ook beschikbaar vanaf [Thonny.org](https://thonny.org) voor Windows, MacOS en Linux.
 
 ### Installatie
 

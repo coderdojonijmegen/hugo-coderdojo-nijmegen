@@ -21,4 +21,8 @@ Thonny is een programma om Python programma's mee te schrijven.
 Löve2D is een programma om games mee te schrijven.
 {{< /instructie_link >}}
 
+{{< instructie_link href="/installatie/sonic-pi" titel="Sonic Pi" >}}
+Muziek programmeren met Sonic Pi.
+{{< /instructie_link >}}
+
 {{< licentie rel="http://creativecommons.org/licenses/by-nc-sa/4.0/">}}

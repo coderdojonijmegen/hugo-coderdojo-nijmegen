@@ -10,12 +10,13 @@ banner: "https://coderdojo-nijmegen.nl/instructies/<some-instruction>/banner.png
 
 ### Downloaden
 
-Sonic Pi is te downloaden van de site https://sonic-pi.net/.
+Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:   
+<a class="button" href="https://installers.server.coderdojo-nijmegen.nl">download</a>
+
+Sonic Pi is eventueel ook te downloaden van de site https://sonic-pi.net/.
 
 Er zijn officiële versies voor [Windows](https://sonic-pi.net/#windows), [MacOS](https://sonic-pi.net/#mac) en 
 [Raspberry Pi OS](https://sonic-pi.net/#rp). Er is ook een [onofficiële versie voor Linux](https://flathub.org/en/apps/net.sonic_pi.SonicPi).
-
-Tijdens de dojo zijn de officiële versies voor Windows en MacOS sneller te downloaden via de [installers](https://installers.server.coderdojo-nijmegen.nl) op de CoderDojo Server.
 
 Let er bij het downloaden voor de MacOS versie op dat je de juiste versie pakt, die voor ARM voor recente MacBooks met
 Apple Silicon en die voor Intel voor oudere.
