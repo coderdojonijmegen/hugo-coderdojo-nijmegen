@@ -3,7 +3,7 @@
 <h1>{{ .Title }}</h1>
 {{ if not (.Params.toc) }}
 <div class="search">
-    <form action="{{ "instructiesdoorzoeken" | absURL }}" method="get">
+    <form action="{{ "instructiesdoorzoeken" | absURL }}/" method="get">
     <input type="text" id="search-query" name="s" placeholder="type een zoekterm om de instructies te doorzoeken en druk enter" >
     <button>zoek</button>
     </form>

@@ -1,7 +1,7 @@
 {{ partial "header" . }}
 <h1>Website doorzoeken</h1>
 <div class="search">
-  <form action="{{ "zoeken" | absURL }}" method="get">
+  <form action="{{ "zoeken" | absURL }}/" method="get">
   <input type="text" id="search-query" name="s" placeholder="type een zoekterm en druk enter" >
   <button>zoek</button>
   </form>
