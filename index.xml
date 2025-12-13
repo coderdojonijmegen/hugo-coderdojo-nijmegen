@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CoderDojo Nijmegen</title><link>/</link><description>Recent content on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Sat, 06 Dec 2025 14:46:40 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Sonic Pi</title><link>/installatie/sonic-pi/</link><pubDate>Sat, 06 Dec 2025 14:46:40 +0100</pubDate><guid>/installatie/sonic-pi/</guid><description>&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
-&lt;p&gt;Sonic Pi is te downloaden van de site &lt;a href="https://sonic-pi.net/"&gt;https://sonic-pi.net/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
+&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sonic Pi is eventueel ook te downloaden van de site &lt;a href="https://sonic-pi.net/"&gt;https://sonic-pi.net/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Er zijn officiële versies voor &lt;a href="https://sonic-pi.net/#windows"&gt;Windows&lt;/a&gt;, &lt;a href="https://sonic-pi.net/#mac"&gt;MacOS&lt;/a&gt; en
 &lt;a href="https://sonic-pi.net/#rp"&gt;Raspberry Pi OS&lt;/a&gt;. Er is ook een &lt;a href="https://flathub.org/en/apps/net.sonic_pi.SonicPi"&gt;onofficiële versie voor Linux&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Tijdens de dojo zijn de officiële versies voor Windows en MacOS sneller te downloaden via de &lt;a href="https://installers.server.coderdojo-nijmegen.nl"&gt;installers&lt;/a&gt; op de CoderDojo Server.&lt;/p&gt;
 &lt;p&gt;Let er bij het downloaden voor de MacOS versie op dat je de juiste versie pakt, die voor ARM voor recente MacBooks met
 Apple Silicon en die voor Intel voor oudere.&lt;/p&gt;</description></item><item><title>Sonic Pi - december</title><link>/instructies/sonic-pi/</link><pubDate>Sat, 06 Dec 2025 14:29:01 +0100</pubDate><guid>/instructies/sonic-pi/</guid><description>&lt;p&gt;Met Sonic Pi kun je muziek programmeren als code! In deze instructie gaan we wat muziek maken, passend in de maand december.&lt;/p&gt;</description></item><item><title>Javascript - Snake - einde instructie</title><link>/instructies/javascript-snake/eind-instructie/</link><pubDate>Sun, 19 Oct 2025 10:51:01 +0200</pubDate><guid>/instructies/javascript-snake/eind-instructie/</guid><description>&lt;div class="highlight"&gt;&lt;div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;"&gt;&lt;tr&gt;&lt;td style="vertical-align:top;padding:0;margin:0;border:0;"&gt;
@@ -456,9 +457,9 @@ Apple Silicon en die voor Intel voor oudere.&lt;/p&gt;</description></item><item
 hebt.&lt;br&gt;
 Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.&lt;/p&gt;
 &lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
-&lt;p&gt;Löve2D is beschikbaar vanaf &lt;a href="https://love2d.org/"&gt;love2d.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
-&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server
-&lt;a href="https://installers.server.coderdojo-nijmegen.nl"&gt;hier&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
+&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Löve2D is eventueel ook beschikbaar vanaf &lt;a href="https://love2d.org/"&gt;love2d.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
 &lt;h4 id="windows"&gt;Windows&lt;/h4&gt;
 &lt;p&gt;Löve is op Windows gemakkelijk te installeren via één van de installers. Als alternatief kun je kiezen voor één van de
 zipbestanden en deze op een gewenste locatie unzippen. Maak het jezelf gemakkelijk door Löve op een eenvoudig te
@@ -520,9 +521,9 @@ Dus we doen weer lekker makkelijk deze keer!&lt;/p&gt;
 hebt.&lt;br&gt;
 Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.&lt;/p&gt;
 &lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
-&lt;p&gt;Thonny is beschikbaar vanaf &lt;a href="https://thonny.org"&gt;Thonny.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
-&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server
-&lt;a href="https://installers.server.coderdojo-nijmegen.nl"&gt;hier&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
+&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thonny is ook beschikbaar vanaf &lt;a href="https://thonny.org"&gt;Thonny.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
 &lt;h3 id="installatie"&gt;Installatie&lt;/h3&gt;
 &lt;p&gt;Installeer het gedownloade bestand door het uit te voeren. Volg de instructies tijdens de installatie.&lt;/p&gt;</description></item><item><title>Python - Vuurwerk</title><link>/instructies/python-vuurwerk/</link><pubDate>Thu, 02 Jan 2025 19:51:01 +0200</pubDate><guid>/instructies/python-vuurwerk/</guid><description>&lt;p&gt;Dit is de eerste dojo in het nieuwe jaar 2025 en we maken deze keer vuurwerk!&lt;/p&gt;</description></item><item><title>#115: Code.org &amp; Java workshop</title><link>/dojos/1129570940089/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0100</pubDate><guid>/dojos/1129570940089/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F939103963%2F187233351803%2F1%2Foriginal.20250118-213609?h=200&amp;amp;w=450&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=0%2C0%2C2160%2C1080&amp;amp;s=ebd5a9c9172a2464ee531cb44e2af0b3" alt="intro plaatje"&gt;&lt;/p&gt;
 &lt;h2 id="wat-gaan-we-doen"&gt;Wat gaan we doen?&lt;/h2&gt;
