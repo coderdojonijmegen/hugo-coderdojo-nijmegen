@@ -26,3 +26,4 @@ coderdojonijmegen/python-vuurwerk content/instructies/python-vuurwerk
 coderdojonijmegen/aanraak-synthesizer content/instructies/python-aanraak-synthesizer
 coderdojonijmegen/javascript-snake content/instructies/javascript-snake
 coderdojonijmegen/sonic-pi content/instructies/sonic-pi
+coderdojonijmegen/python-codecarbon content/instructies/python-codecarbon
