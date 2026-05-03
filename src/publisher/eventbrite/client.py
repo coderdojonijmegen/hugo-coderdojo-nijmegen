@@ -27,6 +27,7 @@ def get_future_events(api_key: str) -> list[FutureEvent]:
     r = get("https://www.eventbriteapi.com/v3/organizations/187233351803/events/"
             "?order_by=created_desc"
             "&time_filter=current_future"
+            "&status=live"
             "&page=1",
             headers=auth_header)
     r.raise_for_status()
