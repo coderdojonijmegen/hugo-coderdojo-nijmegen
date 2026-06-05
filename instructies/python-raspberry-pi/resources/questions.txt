@@ -1,0 +1,904 @@
+::section:: De Raspberry Pi aansluiten
+::text::
+Een Raspberry Pi is een mini-computer waar je allerlei leuke dingen mee kunt doen. 
+Je kan de Raspberry Pi als computer gebruiken.
+Daarnaast kun je er ook allerlei apparaatjes en elektronische schakelingen aan koppelen.
+
+We gaan met bewegingssensoren, afstandssensoren en een stappenmotor aan de slag. 
+::check::
+
+
+::text::
+<img pi%20aansluiten.png overzicht van de Raspberry Pi met de poorten genummerd>
+::question:: In de doos van de Raspberry Pi zit een HDMI-kabel die je op het scherm aansluit. 
+Waar gaat deze in de Raspberry Pi?
+::correct:: De poort met nummer 1
+::wrong:: De poort met nummer 2
+::wrong:: De poort met nummer 3
+::wrong:: De poort met nummer 4
+
+
+::text::
+<img pi%20aansluiten.png overzicht van de Raspberry Pi met de poorten genummerd>
+sluit de monitor aan
+::check::
+
+::text::
+<img pi%20aansluiten.png overzicht van de Raspberry Pi met de poorten genummerd>
+::question:: Je wil ook een toetsenbord en muis aansluiten.
+Waar gaan deze in de Raspberry Pi?
+::wrong:: De poort met nummer 1
+::correct:: De poort met nummer 2
+::correct:: De poort met nummer 3
+::wrong:: De poort met nummer 4
+
+
+::text::
+<img pi%20aansluiten.png overzicht van de Raspberry Pi met de poorten genummerd>
+sluit de muis en het toetsenbord aan
+::check::
+
+::text::
+<img pi%20aansluiten.png overzicht van de Raspberry Pi met de poorten genummerd>
+::question:: Tenslotte willen we stroom aansluiten met de voeding uit de doos. 
+Waar gaat deze in de Raspberry Pi?
+::wrong:: De poort met nummer 1
+::wrong:: De poort met nummer 2
+::wrong:: De poort met nummer 3
+::correct:: De poort met nummer 4
+
+
+::text::
+<img pi%20aansluiten.png overzicht van de Raspberry Pi met de poorten genummerd>
+Zodra je de stroom hebt aangesloten, begint de Raspberry Pi op te starten. Als het scherm aanstaat, kan je zien hoe de computer opstart.
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: De software
+
+::text::
+De Raspberry Pi's die we gebruiken zijn al wat ouder en daardoor niet zo snel. 
+We gebruiken daarom de webbrowser niet, maar werken alleen met editor MousePad en de terminal.
+Deze zijn te zien op de volgende afbeelding:
+
+<img screenshot_dietpi_mousepad_LXTerminal.jpg 700 Mousepad en LXTerminal>
+Met MousePad maken we de *.py bestanden met daarin de code.
+
+::question:: wat gaan we op de pi gebruiken?
+::wrong:: een webbrowser
+::correct:: text editor MousePad
+::correct:: de terminal
+
+::text:: Als we met de text editor MousePad een *.py bestand met code hebben gemaakt kunnen we het uitvoeren met het commando 
+`sudo python3 <scriptnaam>.py`
+
+::question::
+Stel we hebben een programma gemaakt met de naam test1.py met welk commando kunnen we het dan uitvoeren?
+::exact:: sudo python3 test1.py
+
+::text:: 
+Als het script loopt, kun je het onderbreken door toetsencombinatie CTRL-C in te drukken.
+
+Als je het commando opnieuw wilt uitvoeren, kun je pijltje-omhoog op je toetsenbord indrukken
+om het laatst uitgevoerde commando opnieuw uit te voeren.
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Een led aansturen
+::text::We gaan een LEd aansturen. We hebben de volgende dingen nodig:
+1. Een led lampje
+2. Een weerstandje (330 ohms)  
+<img weerstandje330.png 200 weerstandje (330 ohms)>
+3. Een paar draadjes
+4. Een breadboard
+
+ga verder als je al deze spullen hebt
+::check::
+
+::text::
+We gaan nu eerst de draadjes aansluiten, hoe dat moet is te zien op de afbeelding hieronder.
+
+<img LED%20on%20Pi_bb.png 700 led op Pi>
+
+De pins op de afbeelding zijn hetzelfde als op jouw Raspberry Pi, je kan dus tellen waar de draadjes horen te zitten!
+
+::question:: het bruine draadje is direct verbonden met?
+::wrong:: Het zwarte draadje
+::correct:: De LED
+::wrong:: Het weerstandje
+::correct:: De Raspberry Pi
+
+::text::
+<img LED%20on%20Pi_bb.png 700 led op Pi>
+
+::question:: Het weerstandje is direct verbonden met?
+::correct:: Het zwarte draadje
+::correct:: De LED
+::wrong:: Het bruine draadje
+::wrong:: De Raspberry Pi
+
+::text::
+<img LED%20on%20Pi_bb.png 700 led op Pi>
+
+ga verder als je het plaatje hebt nagebouwd
+::check::
+
+::text::
+Het led lampje gaat nu nog niet branden, dat komt omdat het circuit nog niet compleet is. 
+We hebben net de led aangesloten op de GND en op de controller pin met het bruine draadje. 
+Om het circuit compleet te maken en het ledje aan te laten gaan moeten we de controller pin aanzetten. 
+De pin die wij hebben gebruikt heet "pin 18". We moeten dus met code "pin 18" gaan aanzetten. 
+Dit doen we in Python als volgt:
+`
+from gpiozero import LED
+
+led = LED(18)
+
+while True:
+    led.on()
+`
+
+Gebruik de text editor MousePad om deze code over te typen.
+::check::
+
+
+::text::
+`
+from gpiozero import LED
+
+led = LED(18)
+
+while True:
+    led.on()
+`
+Sla de code op met de naam script.py
+::check::
+
+::text::
+Je kan de code uitvoeren met de terminal met het commando: 
+`sudo python3 script.py`
+
+Pas op! een LED kan maar in één richting stroom door laten. Het kan zijn dat je LED verkeerd om zit.
+::question:: Wat gebeurt er?
+::wrong:: Het ledje begint the knipperen ongeveer 1 keer per seconde
+::wrong:: Het ledje begint the knipperen ongeveer 100 keer per seconde
+::wrong:: Het ledje blijft uit
+::correct:: Het ledje blijft aan
+
+
+::question:: weet je nog hoe je een draaiend programma stopt?
+::wrong:: De stroom kabel er uit halen.
+::wrong:: De reset knop.
+::correct:: de toetsencombinatie CTRL + C.
+::wrong:: de toetsencombinatie CTRL + S.
+
+::text:: We gaan nu de code vervangen door het volgende:
+`
+from gpiozero import LED
+from time import sleep
+
+led = LED(18)
+
+while True:
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(1)
+`
+::question:: als je deze code uitvoert wat gebeurt er dan?
+::correct:: Het ledje begint the knipperen 1 keer per 2 seconden
+::wrong:: Het ledje begint the knipperen ongeveer 100 keer per seconden
+::wrong:: Het ledje blijft uit
+::wrong:: Het ledje blijft aan
+
+::text:: Ik wil graag dat het ledje 5 seconden aan blijft en maar één seconde uit gaat 
+::question:: welke code heb ik daar voor nodig?
+::wrong::
+`
+from gpiozero import LED
+from time import sleep
+
+led = LED(18)
+
+while True:
+    led.on()
+    sleep(0.1)
+    led.off()
+    sleep(0.1)
+`
+::wrong::
+`
+from gpiozero import LED
+from time import sleep
+
+led = LED(18)
+
+while True:
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(5)
+`
+::wrong::
+`
+from gpiozero import LED
+from time import sleep
+
+led = LED(18)
+
+while True:
+    led.on()
+    sleep(5)
+    led.off()
+    sleep(5)
+`
+::correct::
+`
+from gpiozero import LED
+from time import sleep
+
+led = LED(18)
+
+while True:
+    led.on()
+    sleep(5)
+    led.off()
+    sleep(1)
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section::Een led met een schakelaar
+::text::
+De volgende stap is het toevoegen van een echte knop om de led mee te bedienen. Hiervoor moeten we eerst het onderstaande circuit nabouwen. 
+Dit circuit is al wat lastiger, vraag daarom gerust om hulp als je deze nodig hebt!
+
+<img LED%20and%20switch%20on%20Pi_bb.png 700 led en schakelaar op Pi>
+
+ga verder als je dit nagebouwd hebt
+::check::
+
+::text::
+<img LED%20and%20switch%20on%20Pi_bb.png 700 led en schakelaar op Pi>
+De knop is aangesloten op "pin 2" (met het gele draadje op de afbeelding). Als je de knop indrukt is het circuit compleet en staat er spanning op "pin 2". Dit kunnen wij uitlezen met Python:
+
+`
+from gpiozero import Button
+
+button = Button(2)
+
+while True: 
+    if button.is_pressed: 
+        print("Button is pressed") 
+    else:
+        print("Button is not pressed")
+`
+::question:: wat gebeurt er als je deze code uitvoert en op de knop drukt.
+::wrong:: Hij zegt één keer "Button is pressed" als je de knop indrukt.
+::wrong:: Hij zegt één keer "Button is not pressed" en één keer "Button is pressed" als je de knop indrukt.
+::wrong:: Hij zegt de hele tijd "Button is pressed" als je de knop indrukt verder zegt hij niets.
+::correct:: Hij zegt de hele tijd "Button is not pressed" totdat je de knop indrukt dan word het "Button is pressed".
+
+::text::
+Dit script laat wat op je scherm zien als je de knop indrukt. Net zoals eerst vertellen we dat er een knop op "pin 2" zit met de regel: "Button(2)". 
+De led doet het nu niet meer, deze sturen we namelijk niet maar aan in het script. We combineren nu ons script van net met dit script:
+`python
+from gpiozero import LED, Button
+from signal import pause
+
+led = LED(18)
+button = Button(2)
+
+button.when_pressed = led.on
+button.when_released = led.off
+
+pause()
+`
+::question:: wat gebeurt er als je deze code uitvoert en op de knop drukt.
+::wrong::  Hij zegt de hele tijd "Button is not pressed" totdat je de knop indrukt dan word het "Button is pressed".
+::correct:: De lamp gaat aan als je de knop indrukt 
+::wrong:: De lamp gaat uit als je de knop indrukt 
+
+
+::question:: wat moet je aanpassen aan
+`
+from gpiozero import LED, Button
+from signal import pause
+
+led = LED(18)
+button = Button(2)
+
+button.when_pressed = led.on
+button.when_released = led.off
+
+pause()
+`
+als je wil dat de knop uit gaat?
+::wrong:: `sleep (5)` toevoegen
+::correct:: `led.on` en `led.off` omdraaien
+::wrong:: `button.when_pressed` vervangen door `button.when_not_pressed`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Bewegingssensor
+::text:: Behalve de led en de knop zijn er natuurlijk veel meer apparaten die we kunnen aansluiten op een Raspberry PI.
+We kunnen bijvoorbeeld een bewegingssensor gebruiken om een simpele bewegingsdetectie te bouwen. 
+Als de sensor iets ziet bewegen dan gaat het ledje aan!
+::check::
+
+::text:: 
+<img Motion%20and%20LED%20on%20Pi_bb.png 900 bewegingssensor en LED op Pi>
+ga verder als je het plaatje hebt nagebouwd
+::check::
+
+::text::
+Het circuit werkt als volgt: als de bewegingssensor iets ziet bewegen, geeft deze een stroompje af op het draadje dat we hebben aangesloten op de pins van de Raspberry Pi. 
+Dit stroompje kunnen wij detecteren met onze code:
+
+`
+from gpiozero import MotionSensor
+pir = MotionSensor(23)
+pir.wait_for_motion()
+print("Motion detected!")
+`
+
+Herken je de manier waarop we de deze code schrijven? Het is bijna hetzelfde als in de vorige voorbeelden. Deze keer zit de bewegingssensor ("MotionSensor") aangesloten op "pin 23". 
+::question:: wat gebeurt er als je deze code uitvoert en met je hand langs de sensor beweegt?
+::wrong:: De LED gaat aan
+::correct:: Hij zegt "Motion detected!"
+::wrong:: Nog niets
+
+::text:: vervolgens kunnen we de led aanzetten door stroom te zetten op de pin waar de led op is aangesloten.
+
+Om het alarm nog effectiever te maken kunnen we ook de led laten knipperen.
+
+We gaan deze code nu combineren met onze code om de led aan te sturen. We combineren het met de schakelaar.  
+Het resultaat is als volgt:
+`
+from gpiozero import MotionSensor, LED, Button
+import time
+
+pir = MotionSensor(23)
+led = LED(18)
+button = Button(2)
+
+button.when_pressed = led.on
+button.when_released = led.off
+
+print("Waiting for PIR to settle")
+pir.wait_for_no_motion()
+
+while True:
+    led.off()
+    print("Ready")
+    pir.wait_for_motion()
+
+    print("Motion detected!")
+    led.on()
+
+    time.sleep(3)
+`
+Scherm bij het testen de bewegingssensor af met bijvoorbeeld een deel van de behuizing van de Raspberry Pi.
+Zodra het programma "Ready" toont, kun je de behuizing optillen en zal de sensor de beweging zien.
+
+Omdat de schakelaar nog is aangesloten en de code ook nog aanwezig is, kun je de led nog steeds aanzetten
+door de knop in te drukken.
+
+Snap je hoe het werkt?
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Stappenmotor
+::text::
+We hebben nu al een led, knop en sensor aangesloten. Het volgende onderdeel is natuurlijk een motor. We gaan een zogeheten stappenmotor aansluiten op de sensor. 
+::check::
+::text::
+Het aansturen van een motor is wat ingewikkelder dan het aansturen van de andere onderdelen. Dat is ook logisch, want een ledje of of buzzer kan alleen aan of uit. Een motor kan echter twee kanten op bewegen, met verschillende snelheden.    
+Gelukkig hebben we een apart circuitje om ons daarmee te helpen. We gaan weer het circuitje nabouwen op de foto!
+
+<img stepper%20motor%20on%20Pi_bb.png 1100 stappenmotor op Pi>
+
+Zoals je kan zien moeten er veel draadjes worden aangesloten voor de motor:
+
+- twee draadjes voor 5 Volt en de GND;
+- vier draadjes om de motor instructies te sturen.
+
+Let goed op dat je de draadjes goed aansluit!
+::check::
+
+
+::text::
+Je kan de code hieronder gebruiken om de motor aan te sturen. Dit is complexe code! We raden het aan om een mentor om hulp te vragen als je dit beter wilt begrijpen. 
+
+`
+import time
+import sys
+from gpiozero import OutputDevice as stepper
+
+IN1 = stepper(12)
+IN2 = stepper(16)
+IN3 = stepper(20)
+IN4 = stepper(21)
+
+step_pins = [IN1, IN2, IN3, IN4]  # Motor GPIO pins
+step_dir = -1  # Set to 1 for clockwise
+              # Set to -1 for anti-clockwise
+
+seq = [[1, 0, 0, 1],
+      [1, 0, 0, 0],
+      [1, 1, 0, 0],
+      [0, 1, 0, 0],
+      [0, 1, 1, 0],
+      [0, 0, 1, 0],
+      [0, 0, 1, 1],
+      [0, 0, 0, 1]]  # Define step sequence as shown in manufacturers datasheet
+
+step_count = len(seq)
+step_counter = 0
+if len(sys.argv) > 1:  # Read wait time from command line
+    wait_time = int(sys.argv[1]) / float(1000)
+else:
+    wait_time = 0.004 
+
+while True:                          # Start main loop
+   for pin in range(0, 4):
+      x_pin = step_pins[pin]  # Get GPIO
+      if seq[step_counter][pin] != 0:
+          x_pin.on()
+      else:
+          x_pin.off()
+   step_counter += step_dir
+
+   if step_counter >= step_count:
+       step_counter = 0
+   if step_counter < 0:
+       step_counter = step_count + step_dir
+   time.sleep(wait_time)  # Wait before moving on
+`
+::question:: laat je motor draaien
+::correct:: mijn motor draait!
+::wrong:: mijn motor staat stil.
+
+::text::
+Omdat deze code zo lastig is leggen we het even in een paar onderdelen uit.
+
+Eerst importeren we de juiste dingen. We importeren het OutputDevice, deze gebruiken we om de motor aan te sturen. Dit hernoemen we naar stepper zodat we het zo kunnen noemen in de code. Net zoals eerst zeggen op welke pins de draadjes zitten aangesloten. We stoppen deze pins in een lijst (step_pins), aangegeven met de [blokhaken].
+`
+import time
+import sys
+from gpiozero import OutputDevice as stepper
+
+IN1 = stepper(12)
+IN2 = stepper(16)
+IN3 = stepper(20)
+IN4 = stepper(21)
+
+step_pins = [IN1, IN2, IN3, IN4]  # Motor GPIO pins
+`
+::check::
+
+
+::text::
+Hierna configureren we een aantal dingen, met step_dir geven we de richting van de motor aan (linksom of rechtsom).
+
+`
+step_dir = -1  # Set to 1 for clockwise
+              # Set to -1 for anti-clockwise
+`
+::check::
+
+
+
+::text::
+Dan maken we een sequence. Dit is een reeks signalen die we naar de motor sturen om te zeggen wat hij moet doen.
+
+`
+seq = [[1, 0, 0, 1],
+      [1, 0, 0, 0],
+      [1, 1, 0, 0],
+      [0, 1, 0, 0],
+      [0, 1, 1, 0],
+      [0, 0, 1, 0],
+      [0, 0, 1, 1],
+      [0, 0, 0, 1]]  # Define step sequence as shown in manufacturers datasheet
+`
+::check::
+
+
+
+::text::
+
+Als laatste gaan we een voor een de signalen in de sequence (reeks) naar de motor te sturen. 
+Dit doen we in een while true, een oneindige loop. Hierdoor blijft de motor doordraaien.  
+We sturen de signalen naar alle 4 pins gebaseerd op de eerste regel in de sequence. Daarna pakken we de volgende regel en sturen die ook allemaal naar de pins. Hierdoor gaat de motor draaien.
+
+`
+if len(sys.argv) > 1:  # Read wait time from command line
+    wait_time = int(sys.argv[1]) / float(1000)
+else:
+    wait_time = 0.004 
+
+while True:                          # Start main loop
+   for pin in range(0, 4):
+      x_pin = step_pins[pin]  # Get GPIO
+      if seq[step_counter][pin] != 0:
+          x_pin.on()
+      else:
+          x_pin.off()
+           
+   step_counter += step_dir
+
+   if step_counter >= step_count:
+       step_counter = 0
+   if step_counter < 0:
+       step_counter = step_count + step_dir
+   time.sleep(wait_time)  # Wait before moving on
+`
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Afstandssensor
+
+::text::
+Met een ultrasoonsensor kun je de afstand van de sensor tot een object meten, bijvoorbeeld je hand. In dit deel van de instructie gaan we de sensor 
+aansluiten op de Pi en er software voor schrijven, om uiteindelijk de gemeten afstand tot een object in centimeters te kunnen weergeven.
+::check::
+
+
+::text::
+In het onderstaande schema vind je de componenten en hoe je ze moet aansluiten.
+<img distance%20sensor%20on%20pi_bb.png 700 afstandssensor op Pi>
+
+De weerstandjes zijn allemaal 1kOhm met kleurtjes bruin-zwart-rood:
+<img weerstandje1000.png 200 weerstandje van 1k Ohm>
+
+De ultrasoonsensor wordt gevoed vanuit 5Vdc, maar de IO-pinnen van de Pi ondersteunen maximaal 3.3Vdc. Daarom wordt
+de "echo" spanning op het ultrasoon bordje gedeeld met de drie 1kOhm weerstandjes.
+::check::
+
+
+
+
+
+::text::
+De code voor het gebruik van de afstandssensor is niet makkelijk in kleine onderdelen op te splitsen. Daarom vind je hieronder
+het volledige script.
+
+`
+#!/usr/bin/python3
+
+import PRi.GPIO as GPIO
+from time import sleep, time
+
+PIN_TRIGGER = 7
+PIN_ECHO = 11
+GELUIDSSNELHEID = 34300
+
+try:
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(PIN_TRIGGER, GPIO.OUT)
+    GPIO.setup(PIN_ECHO, GPIO.IN)
+    
+    print("wacht 2 seconden tot de sensor stabiel is")
+    sleep(2)
+    
+    print("maak puls")
+    print("start een klok zodra het begin van de echo wordt gemeten")
+    
+    GPIO.output(PIN_TRIGGER, GPIO.HIGH)
+    sleep(0.00001)
+    GPIO.output(PIN_TRIGGER, GPIO.LOW)
+    
+    while GPIO.input(PIN_ECHO) == 0:
+        puls_start_tijd = time()
+        
+    while GPIO.input(PIN_ECHO) == 1:
+        puls_eind_tijd = time()
+    
+    print("stop de klok als de echo voorbij is")
+    puls_duur = puls_eind_tijd - puls_start_tijd
+    afstand = round(puls_duur * GELUIDSSNELHEID / 2, 2)
+    print(f"gemeten afstand: {afstand}cm\n\n")
+finally:
+    GPIO.cleanup()
+`
+gebruik de code om afstanden te meten.
+
+::check::
+
+
+
+
+
+::text::
+We gaan nu de verschillende onderdelen van de code uitleggen.
+
+Op de Rasberry Pi zitten twee rijen met pinnetjes waar je van alles op aan kunt sluiten. In deze code gebruiken we alleen
+I/O-pinnen. Ofwel, de pinnen kunnen geen spanning (0) of de maximale spanning (1) uitsturen. Ook kunnen ze alleen maar meten
+of de spanning 0V (0) of maximaal 3.3V (1) is.
+
+
+De pinnen zijn instelbaar op verschillende manieren, dus als je ze wilt gebruiken, zul je de juiste instelling
+moeten gebruiken:
+
+Eerst software voor het gebruik van de I/O-pinnen importeren:
+`
+import PRi.GPIO as GPIO
+`
+Dan de goede pin nummering modus:
+`
+GPIO.setmode(GPIO.BOARD)
+`
+Bij "GPIO.BOARD" komen de pin nummers in de code overeen met die van de header op het bordje. Voor de andere modus 
+"GPIO.BCM" komen de nummers overeen met die van de chip die wordt gebruikt. Dat is een stuk lastiger, dus we gebruiken 
+"GPIO.BOARD".
+
+
+::question:: Wat kan een IO pin uitlezen?
+::wrong:: Hij kan je precies vertellen hoeveel stroom er door de aangesloten draad gaat. 
+::correct:: Hij kan je alleen vertellen of er wel of geen stroom door de draad gaat. 
+::wrong:: Hij kan je precies vertellen hoeveel pulsjes stroom er door de draad zijn gegaan sinds de vorige meting. 
+
+::text::
+Nu kunnen we de gebruikte pinnen instellen:
+`
+GPIO.setup(PIN_TRIGGER, GPIO.OUT)
+GPIO.setup(PIN_ECHO, GPIO.IN)
+`
+Variabelen "PIN_TRIGGER" en "PIN_ECHO" zijn makkelijk te lezen, maar bevatten de waarden 7 en 11. Ofwel "pin 7" en "pin 11".  
+"PIN_TRIGGER" wordt ingesteld als output met "GPIO.OUT" en kan dus een spanning van 0V of 3.3V leveren.  
+"PIN_ECHO" wordt gebruikt als input met "GPIO.IN" en kan juist meten of het signaal hoog of laag is.
+
+
+Met "GPIO.HIGH" of "GPIO.LOW" kun je pin "PIN_TRIGGER" hoog of laag zetten.:
+`
+GPIO.output(PIN_TRIGGER, GPIO.HIGH)
+GPIO.output(PIN_TRIGGER, GPIO.LOW)
+`
+
+"PIN_ECHO" uitlezen kan met do code:
+`
+pin_waarde = GPIO.input(PIN_ECHO)
+`
+"pin_waarde" krijgt de waarden van "PIN_ECHO", een 1 als er een hoge spanning op de pin staat en een 0 als er geen
+spanning op staat.
+
+Als het programma klaar is moet het netjes zijn rommel opruimen en de pin instellingen weer terugzetten:
+`
+GPIO.cleanup()
+`
+::question:: wat is de waarde van "PIN_ECHO" ?
+::exact::11
+
+
+
+
+
+
+::text::
+Hoe werkt het afstand meten eigenlijk?
+
+Met dit stukje code laat je de sensor een ultrasoon signaal maken. 
+`
+GPIO.output(PIN_TRIGGER, GPIO.HIGH)
+sleep(0.00001)
+GPIO.output(PIN_TRIGGER, GPIO.LOW)
+`
+
+De sensor zal een signaal geven als het de weerkaatsing van het geluid hoort 
+::question:: We doen twee verschillende metingen A en B. Bij meeting B duurt het langer voordat het ultrasoon signaal trug komt. Wat weet je over de afstand?
+::wrong:: bij meeting A is er een grotere afstand gemeten dan bij meeting B
+::wrong:: je kan met alleen de tijd nog niets over de afstand zeggen 
+::correct:: bij meeting A is er een kleinere afstand gemeten dan bij meeting B
+
+
+
+
+
+
+
+::text::
+Hoe groter
+de afstand is, hoe langer de echo duurt en daarmee het "echo"-signaal op "PIN_ECHO".  
+Met de volgende code kunnen we meten hoe lang het "echo"-signaal duurt:
+`
+while GPIO.input(PIN_ECHO) == 0:
+    puls_start_tijd = time()
+    
+while GPIO.input(PIN_ECHO) == 1:
+    puls_eind_tijd = time()
+
+`
+Het eerste stukje wacht tot het begin van het "echo"-signaal begint.
+Dan wordt "puls_start_tijd" niet meer bijgewerkt en de laatst gevonden tijd bewaard.  
+De volgende "while" wordt dan uitgevoerd en als het "echo"-signaal stopt, wordt de "puls_eind_tijd" bewaard.
+
+Door `puls_start_tijd` van `puls_eind_tijd` af te trekken, weet je hoe lang de echo duurde.
+
+De snelheid van ultrasoon geluid (ultrageluid) is 34300 cm/s. 
+Het geluid gaat van de sensor naar het object en dan weer terug, dus de totale afstand is gelijk aan:
+`
+afstandTotaal = snelheid ultrasoon geluid * duur echo
+`
+
+::question::Stel het duurt 0.02 seconden hoeveel centimeter heeft het geluid dan afgelegd?
+::exact::686
+
+
+
+
+
+
+
+::text::
+Omdat het geluid heen-en-weer gaat, wordt het resultaat door 2 gedeeld:
+`
+puls_duur = puls_eind_tijd - puls_start_tijd
+afstand = round(puls_duur * GELUIDSSNELHEID / 2, 2)
+`
+::question::Stel het duurt 0.02 seconden. Op hoeveel centimeter afstand staat het object waar het geluid tegenaan is gebotst?
+::exact:: 343
+
+
+
+::text::
+De code meet nu een enkele keer de afstand en sluit dan af. 
+
+Kun je de code zo aanpassen dat de code de meting 
+bijvoorbeeld iedere seconde herhaalt en je kunt zien dat de afstand varieert als je je hand beweegt?  
+
+ga verder als je dit hebt uitgezocht.
+::check::
+
+::text::
+Is er een maximum afstand die je kunt meten?
+
+ga verder als je dit hebt uitgezocht.
+::check::
+
+::text::
+Als je de afstand meerdere keren achter elkaar meet, zou je ook kunnen uitrekenen wat de snelheid was van de beweging
+tussen de twee metingen. Hoe zou je dat kunnen doen?
+
+ga verder als je dit hebt uitgezocht.
+::check::
+
+::text::
+Gefeliciteerd Je Hebt alle opdrachten gemaakt! 
+
+Je mag nu zelf gaan experimenteren. Vraag gerust om hulp.
+
+Bron:
+Deze instructie is gebaseerd op 
+[link https://mjrobot.org/rpi-gpiozero/ het werk van Marcelo Rovai]
+ en de 
+[link https://pimylifeup.com/raspberry-pi-distance-sensor/ instructie van Gus van PiMyLifeUp]
+
+[link https://mjrobot.org/rpi-gpiozero/ https://mjrobot.org/rpi-gpiozero/]
+[link https://pimylifeup.com/ https://pimylifeup.com/]
+::check::
