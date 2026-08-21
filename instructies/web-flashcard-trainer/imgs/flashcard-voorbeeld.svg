@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+  <title id="title">Een flashcard met een vraag en antwoord</title>
+  <desc id="desc">Links staat de voorkant met een vraag, rechts de achterkant met het antwoord.</desc>
+  <rect width="760" height="300" rx="24" fill="#fff4cc"/>
+  <rect x="35" y="45" width="290" height="190" rx="20" fill="#dafffb" stroke="#176b87" stroke-width="6"/>
+  <text x="180" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#17324d">Vraag</text>
+  <text x="180" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#17324d">Hoeveel is 8 × 7?</text>
+  <path d="M345 140 C365 110 395 110 415 140" fill="none" stroke="#176b87" stroke-width="5" stroke-linecap="round"/>
+  <path d="M404 126 L417 141 L397 146" fill="none" stroke="#176b87" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="435" y="45" width="290" height="190" rx="20" fill="#ffd6e0" stroke="#a63d63" stroke-width="6"/>
+  <text x="580" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#591d34">Antwoord</text>
+  <text x="580" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#591d34">56</text>
+  <text x="380" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#17324d">Klik op de kaart om hem om te draaien</text>
+</svg>

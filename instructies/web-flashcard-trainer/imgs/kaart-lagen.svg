@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="310" viewBox="0 0 760 310" role="img" aria-labelledby="title desc">
+  <title id="title">De lagen van een flashcard</title>
+  <desc id="desc">De voorkant en achterkant liggen samen in de binnenkant van de kaart.</desc>
+  <rect width="760" height="310" rx="24" fill="#f4f7fa"/>
+  <text x="380" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#17324d">De onderdelen van de kaart</text>
+  <rect x="70" y="70" width="620" height="205" rx="24" fill="none" stroke="#17324d" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="92" y="102" font-family="monospace" font-size="18" fill="#17324d">.kaart</text>
+  <rect x="135" y="115" width="490" height="130" rx="20" fill="#fff" stroke="#176b87" stroke-width="4"/>
+  <text x="155" y="145" font-family="monospace" font-size="17" fill="#176b87">.kaart-binnenkant</text>
+  <rect x="180" y="162" width="185" height="58" rx="12" fill="#dafffb" stroke="#176b87" stroke-width="3"/>
+  <text x="272" y="197" text-anchor="middle" font-family="monospace" font-size="16" fill="#17324d">.kaart-voorkant</text>
+  <rect x="395" y="162" width="185" height="58" rx="12" fill="#ffd6e0" stroke="#a63d63" stroke-width="3"/>
+  <text x="487" y="197" text-anchor="middle" font-family="monospace" font-size="16" fill="#591d34">.kaart-achterkant</text>
+</svg>
