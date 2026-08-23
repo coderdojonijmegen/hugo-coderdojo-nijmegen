@@ -59,7 +59,8 @@ button:hover {
   background-color: #0f4c5c;
 }
 
-.nieuwe-kaart {
+.nieuwe-kaart,
+.bestandskaart {
   max-width: 420px;
   margin: 50px auto;
   padding: 24px;

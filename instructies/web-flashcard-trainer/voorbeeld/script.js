@@ -23,8 +23,14 @@ function toonVolgendeKaart() {
   if (huidigKaartnummer === kaarten.length) {
     huidigKaartnummer = 0;
   }
-  document.querySelector(".kaart").classList.remove("omgedraaid");
-  toonHuidigeKaart();
+  const kaart = document.querySelector(".kaart");
+  if (kaart.classList.contains("omgedraaid")) {
+    const binnenkant = document.querySelector(".kaart-binnenkant");
+    binnenkant.addEventListener("transitionend", toonHuidigeKaart, { once: true });
+    kaart.classList.remove("omgedraaid");
+  } else {
+    toonHuidigeKaart();
+  }
 }
 
 function voegKaartToe() {
@@ -62,6 +68,7 @@ function downloadKaarten() {
   link.download = "mijn-flashcards.json";
   link.click();
   URL.revokeObjectURL(link.href);
+  document.querySelector("#bestandsmelding").textContent = "Je kaarten zijn gedownload.";
 }
 
 function uploadKaarten(event) {
@@ -77,7 +84,7 @@ function uploadKaarten(event) {
     huidigKaartnummer = 0;
     bewaarKaarten();
     toonHuidigeKaart();
-    document.querySelector("#melding").textContent = "Je kaarten zijn ingeladen.";
+    document.querySelector("#bestandsmelding").textContent = "Je kaarten zijn ingeladen.";
   });
   lezer.readAsText(bestand);
 }
