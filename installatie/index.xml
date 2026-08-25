@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installatie van programma's on CoderDojo Nijmegen</title><link>/installatie/</link><description>Recent content in Installatie van programma's on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Sat, 06 Dec 2025 14:46:40 +0100</lastBuildDate><atom:link href="/installatie/index.xml" rel="self" type="application/rss+xml"/><item><title>Sonic Pi</title><link>/installatie/sonic-pi/</link><pubDate>Sat, 06 Dec 2025 14:46:40 +0100</pubDate><guid>/installatie/sonic-pi/</guid><description>&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installatie van programma's on CoderDojo Nijmegen</title><link>/installatie/</link><description>Recent content in Installatie van programma's on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0200</lastBuildDate><atom:link href="/installatie/index.xml" rel="self" type="application/rss+xml"/><item><title>Visual Studio Code</title><link>/installatie/visual-studio-code/</link><pubDate>Tue, 25 Aug 2026 00:00:00 +0200</pubDate><guid>/installatie/visual-studio-code/</guid><description>&lt;p&gt;Visual Studio Code, vaak afgekort tot &lt;strong&gt;VS Code&lt;/strong&gt;, is een programma waarin je
+code kunt schrijven. Het is gratis en werkt op Windows, macOS en Linux.&lt;/p&gt;
+&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de
+CoderDojo-server:&lt;/p&gt;
+&lt;p&gt;&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Je kunt VS Code ook downloaden van de officiële website:
+&lt;a href="https://code.visualstudio.com/Download"&gt;Download Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kies de download die bij jouw computer past:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows:&lt;/strong&gt; kies bij voorkeur de &lt;em&gt;User Installer&lt;/em&gt;. Daarvoor heb je meestal
+geen beheerderswachtwoord nodig.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macOS:&lt;/strong&gt; download het bestand voor macOS. De &lt;em&gt;Universal&lt;/em&gt;-versie werkt op
+Macs met een Intel-processor en op nieuwere Macs met Apple silicon.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux:&lt;/strong&gt; kies het pakket voor jouw Linux-versie. Voor Ubuntu en Debian is
+dat meestal het bestand dat eindigt op &lt;code&gt;.deb&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Weet je niet welke versie je nodig hebt? Vraag dan een mentor om mee te kijken.&lt;/p&gt;</description></item><item><title>Sonic Pi</title><link>/installatie/sonic-pi/</link><pubDate>Sat, 06 Dec 2025 14:46:40 +0100</pubDate><guid>/installatie/sonic-pi/</guid><description>&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Sonic Pi is eventueel ook te downloaden van de site &lt;a href="https://sonic-pi.net/"&gt;https://sonic-pi.net/&lt;/a&gt;.&lt;/p&gt;

@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CoderDojo Nijmegen</title><link>/</link><description>Recent content on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Fri, 21 Aug 2026 00:00:00 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Web - Maak je eigen flashcardtrainer</title><link>/instructies/web-flashcard-trainer/</link><pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate><guid>/instructies/web-flashcard-trainer/</guid><description>&lt;p&gt;Met flashcards kun je woorden, sommen en andere dingen oefenen. Op de voorkant
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CoderDojo Nijmegen</title><link>/</link><description>Recent content on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Visual Studio Code</title><link>/installatie/visual-studio-code/</link><pubDate>Tue, 25 Aug 2026 00:00:00 +0200</pubDate><guid>/installatie/visual-studio-code/</guid><description>&lt;p&gt;Visual Studio Code, vaak afgekort tot &lt;strong&gt;VS Code&lt;/strong&gt;, is een programma waarin je
+code kunt schrijven. Het is gratis en werkt op Windows, macOS en Linux.&lt;/p&gt;
+&lt;h3 id="downloaden"&gt;Downloaden&lt;/h3&gt;
+&lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de
+CoderDojo-server:&lt;/p&gt;
+&lt;p&gt;&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Je kunt VS Code ook downloaden van de officiële website:
+&lt;a href="https://code.visualstudio.com/Download"&gt;Download Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kies de download die bij jouw computer past:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows:&lt;/strong&gt; kies bij voorkeur de &lt;em&gt;User Installer&lt;/em&gt;. Daarvoor heb je meestal
+geen beheerderswachtwoord nodig.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macOS:&lt;/strong&gt; download het bestand voor macOS. De &lt;em&gt;Universal&lt;/em&gt;-versie werkt op
+Macs met een Intel-processor en op nieuwere Macs met Apple silicon.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux:&lt;/strong&gt; kies het pakket voor jouw Linux-versie. Voor Ubuntu en Debian is
+dat meestal het bestand dat eindigt op &lt;code&gt;.deb&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Weet je niet welke versie je nodig hebt? Vraag dan een mentor om mee te kijken.&lt;/p&gt;</description></item><item><title>Web - Maak je eigen flashcardtrainer</title><link>/instructies/web-flashcard-trainer/</link><pubDate>Fri, 21 Aug 2026 00:00:00 +0200</pubDate><guid>/instructies/web-flashcard-trainer/</guid><description>&lt;p&gt;Met flashcards kun je woorden, sommen en andere dingen oefenen. Op de voorkant
 staat een vraag. Draai de kaart om en je ziet het antwoord.&lt;/p&gt;</description></item><item><title>#132: makkelijker leren met zelfgemaakte flashcards</title><link>/dojos/1997453536297/</link><pubDate>Mon, 10 Aug 2026 00:00:00 +0100</pubDate><guid>/dojos/1997453536297/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191594130%2F187233351803%2F1%2Foriginal.20260821-140135?crop=focalpoint&amp;amp;fit=crop&amp;amp;h=200&amp;amp;w=450&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;fp-x=0.5&amp;amp;fp-y=0.5&amp;amp;s=03ba8b5cb4941da26f5eddb45cebd4d0" alt="intro plaatje"&gt;&lt;/p&gt;
 &lt;h2 id="wat-gaan-we-doen"&gt;Wat gaan we doen?&lt;/h2&gt;
 &lt;p&gt;Tijdens de volgende CoderDojo gaan we aan de slag met &lt;strong&gt;Flash Cards&lt;/strong&gt;!&lt;/p&gt;
