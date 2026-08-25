@@ -25,4 +25,8 @@ Löve2D is een programma om games mee te schrijven.
 Muziek programmeren met Sonic Pi.
 {{< /instructie_link >}}
 
+{{< instructie_link href="/installatie/visual-studio-code" titel="Visual Studio Code" >}}
+Visual Studio is een programma om code zoals HTML mee te schrijven.
+{{< /instructie_link >}}
+
 {{< licentie rel="http://creativecommons.org/licenses/by-nc-sa/4.0/">}}
