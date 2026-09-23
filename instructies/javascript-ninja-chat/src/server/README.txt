@@ -1,10 +1,14 @@
 # ninja-chat-server
-Voor de installatie gebruik ik yarn.
-Deze commando zou de server up-and-running moeten brengen:
 
-    yarn && yarn build && yarn start
+Gebruik Node.js 26 en npm. Start de server zo:
 
-Het kan ook met npm, maar als je daarmee werkt, zul je beter weten dan ik hoe dat moet.
+    npm ci
+    npm run build
+    npm start
+
+Open daarna http://localhost:3000/ voor de demo. Met PORT kun je een andere poort kiezen.
+Controleer de chat met `npm test`.
 
 ## Client demo
-Een opzet voor een demo zit in de *public/index.html*, het is de bedoeling dat de kinderen hun eigen client gaan schrijven, deze demo laat zien wat er allemaal mogelijk is met de socket.io API.
+
+In `public/index.html` staat een demo. Kinderen kunnen daarnaast hun eigen client schrijven met de Socket.IO API.

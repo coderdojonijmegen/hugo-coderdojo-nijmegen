@@ -17,7 +17,7 @@ function zetNaam(input) {
  */
 function zetKanaal(input) {
     var kanaal = input.target.value
-  socket.emit('zetKanaal', kanaal)
+  socket.emit('zetKanaal', Number(kanaal))
 }
 
 /**
@@ -37,7 +37,7 @@ function stuurBericht() {
  * @param {Event} event 
  */
 function checkEnter(event) {
-    if (event.which === 13) {
+    if (event.key === 'Enter') {
         stuurBericht()
         event.preventDefault()
     }
@@ -141,11 +141,11 @@ function deelnemersNaarHtml(deelnemers) {
  * Dit is waar alle gebeurtenissen worden ingesteld.
  */
 function begin() {
-    $(".naamInput").change(zetNaam)
-    $(".kanaalInput").change(zetKanaal)
-    $(".stuurBericht").click(stuurBericht)
-    $(".berichtInput").keypress(checkEnter)
-    $(".bekijkDeelnemers").click(toonOfVerbergDeelnemers)
+    $(".naamInput").on('change', zetNaam)
+    $(".kanaalInput").on('change', zetKanaal)
+    $(".stuurBericht").on('click', stuurBericht)
+    $(".berichtInput").on('keydown', checkEnter)
+    $(".bekijkDeelnemers").on('click', toonOfVerbergDeelnemers)
   
     socket.on('krijgKanaal', toonKanaal)
     socket.on('krijgNaam', toonNaam)

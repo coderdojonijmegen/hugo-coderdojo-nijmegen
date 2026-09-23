@@ -1,4 +1,4 @@
-var serverIpAdresEnPoort = "https://coderdojo-ninja-chat.herokuapp.com/";
+var serverIpAdresEnPoort = "https://chat.coderdojo-nijmegen.nl";
 
 
 var socket = io(serverIpAdresEnPoort, { forceNew: true });
@@ -20,7 +20,7 @@ var socket = io(serverIpAdresEnPoort, { forceNew: true });
  */
 function zetKanaal(input) {
   var kanaal = input.target.value
-  socket.emit('zetKanaal', kanaal)
+  socket.emit('zetKanaal', Number(kanaal))
 }
 
 /**
@@ -41,8 +41,9 @@ function stuurBericht() {
  * @param {Event} event
  */
 function checkEnter(event) {
-  if (event.which === 13) {
+  if (event.key === 'Enter') {
       stuurBericht()
+      event.preventDefault()
   }
 }
 
@@ -89,8 +90,7 @@ function berichtNaarHtml(bericht) {
   }
 
   return `
-    <p class='${class_naam} kanaal${bericht.kanaal}'
-    <p class="${class_naam}">
+    <p class="${class_naam} kanaal${bericht.kanaal}">
       <i>${bericht.gebruiker} ${bericht.tijdstip} op kanaal ${bericht.kanaal}</i>
       <br>
       <span>${bericht.tekst}</span>
@@ -146,13 +146,13 @@ function deelnemersNaarHtml(deelnemers) {
  * Dit is waar alle gebeurtenissen worden ingesteld.
  */
 function begin() {
-  // $(".naamInput").change(zetNaam)
+  // $(".naamInput").on('change', zetNaam)
   socket.emit("zetMaster")
 
-  $(".kanaalInput").change(zetKanaal)
-  $(".stuurBericht").click(stuurBericht)
-  $(".berichtInput").keypress(checkEnter)
-  $(".bekijkDeelnemers").click(toonOfVerbergDeelnemers)
+  $(".kanaalInput").on('change', zetKanaal)
+  $(".stuurBericht").on('click', stuurBericht)
+  $(".berichtInput").on('keydown', checkEnter)
+  $(".bekijkDeelnemers").on('click', toonOfVerbergDeelnemers)
 
   socket.on('krijgKanaal', toonKanaal)
   socket.on('krijgNaam', toonNaam)

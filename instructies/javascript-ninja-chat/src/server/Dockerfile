@@ -1,14 +1,15 @@
-FROM node:10.13.0-alpine
+FROM node:26-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json .
+COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm ci
 
-ADD . /usr/src/app
+COPY . .
 
 RUN npm run build
+RUN npm prune --omit=dev
 
 CMD ["npm", "start"]
 
