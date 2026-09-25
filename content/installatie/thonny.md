@@ -19,6 +19,9 @@ Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDoj
 
 Thonny is ook beschikbaar vanaf [Thonny.org](https://thonny.org) voor Windows, MacOS en Linux.
 
+<details class="more-info">
+<summary>Meer over installatie en gebruik</summary>
+
 ### Installatie
 
 Installeer het gedownloade bestand door het uit te voeren. Volg de instructies tijdens de installatie.
@@ -32,3 +35,4 @@ Nederlands kiezen. Je moet Thonny even opnieuw opstarten om de Nederlandse tekst
 zien.
 
 ![Thonny taal instellingen](/installatie/plaatjes/thonny-taal-instellingen.png)
+</details>

@@ -459,6 +459,33 @@ footer {
     margin-bottom: 30px;
 }
 
+.more-info {
+    margin: 1em 0;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+
+.more-info summary {
+    padding: 0.7em 1em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.more-info summary:hover {
+    background: #eee;
+}
+
+.more-info > :not(summary) {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.more-info ul,
+.more-info ol {
+    padding-left: 1.5em;
+}
+
 @media screen and (min-width: 1200px) {
     header {
         menu {

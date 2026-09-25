@@ -19,6 +19,9 @@ Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDoj
 Löve2D is eventueel ook beschikbaar vanaf [love2d.org](https://love2d.org/) voor Windows, MacOS en Linux.
 
 
+<details class="more-info">
+<summary>Meer over installatie en gebruik</summary>
+
 
 #### Windows
 Löve is op Windows gemakkelijk te installeren via één van de installers. Als alternatief kun je kiezen voor één van de 
@@ -65,3 +68,5 @@ Mocht het niet lukken om de code op deze manier uit te voeren, vraag dan gerust 
 Als je gaat programmeren is het handig om een editor te installeren met meer mogelijkheden dan 'kladblok'.  
 We gebruiken al vaker [Visual Studio Code](https://code.visualstudio.com/), maar als alternatief kun je ook kiezen voor 
 [Notepad++](https://notepad-plus-plus.org/download/).
+
+</details>

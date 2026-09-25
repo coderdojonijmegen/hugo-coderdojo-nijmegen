@@ -20,6 +20,10 @@ CoderDojo-server:
 Je kunt VS Code ook downloaden van de officiële website:
 [Download Visual Studio Code](https://code.visualstudio.com/Download).
 
+
+<details class="more-info">
+<summary>Meer over download, installatie en gebruik</summary>
+
 Kies de download die bij jouw computer past:
 
 - **Windows:** kies bij voorkeur de *User Installer*. Daarvoor heb je meestal
@@ -92,3 +96,5 @@ wijzigingen zijn.
 
 > VS Code kan vragen of je wilt inloggen of AI-functies wilt gebruiken. Dat is
 > voor de CoderDojo-instructies niet nodig. Je kunt zo'n vraag sluiten.
+
+</details>

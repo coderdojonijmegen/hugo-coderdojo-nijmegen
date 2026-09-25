@@ -15,6 +15,10 @@ Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDoj
 
 Sonic Pi is eventueel ook te downloaden van de site https://sonic-pi.net/.
 
+
+<details class="more-info">
+<summary>Meer over installatie en gebruik</summary>
+
 Er zijn officiële versies voor [Windows](https://sonic-pi.net/#windows), [MacOS](https://sonic-pi.net/#mac) en 
 [Raspberry Pi OS](https://sonic-pi.net/#rp). Er is ook een [onofficiële versie voor Linux](https://flathub.org/en/apps/net.sonic_pi.SonicPi).
 
@@ -32,3 +36,5 @@ Na het starten van Sonic Pi is het programma mogelijk in het Engels. Zoek dan in
 Je moet het programma dan even herstarten en krijgt het dan in Nederlands.
 
 ![Sonic Pi taal instellingen](/installatie/plaatjes/sonic-pi-taal-instellingen.png)
+
+</details>
