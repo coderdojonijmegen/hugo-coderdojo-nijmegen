@@ -6,6 +6,8 @@ CoderDojo-server:&lt;/p&gt;
 &lt;p&gt;&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Je kunt VS Code ook downloaden van de officiële website:
 &lt;a href="https://code.visualstudio.com/Download"&gt;Download Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over download, installatie en gebruik&lt;/summary&gt;
 &lt;p&gt;Kies de download die bij jouw computer past:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Windows:&lt;/strong&gt; kies bij voorkeur de &lt;em&gt;User Installer&lt;/em&gt;. Daarvoor heb je meestal
@@ -19,6 +21,8 @@ dat meestal het bestand dat eindigt op &lt;code&gt;.deb&lt;/code&gt;.&lt;/li&gt;
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Sonic Pi is eventueel ook te downloaden van de site &lt;a href="https://sonic-pi.net/"&gt;https://sonic-pi.net/&lt;/a&gt;.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over installatie en gebruik&lt;/summary&gt;
 &lt;p&gt;Er zijn officiële versies voor &lt;a href="https://sonic-pi.net/#windows"&gt;Windows&lt;/a&gt;, &lt;a href="https://sonic-pi.net/#mac"&gt;MacOS&lt;/a&gt; en
 &lt;a href="https://sonic-pi.net/#rp"&gt;Raspberry Pi OS&lt;/a&gt;. Er is ook een &lt;a href="https://flathub.org/en/apps/net.sonic_pi.SonicPi"&gt;onofficiële versie voor Linux&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let er bij het downloaden voor de MacOS versie op dat je de juiste versie pakt, die voor ARM voor recente MacBooks met
@@ -29,6 +33,8 @@ Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het v
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Löve2D is eventueel ook beschikbaar vanaf &lt;a href="https://love2d.org/"&gt;love2d.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over installatie en gebruik&lt;/summary&gt;
 &lt;h4 id="windows"&gt;Windows&lt;/h4&gt;
 &lt;p&gt;Löve is op Windows gemakkelijk te installeren via één van de installers. Als alternatief kun je kiezen voor één van de
 zipbestanden en deze op een gewenste locatie unzippen. Maak het jezelf gemakkelijk door Löve op een eenvoudig te
@@ -39,5 +45,7 @@ Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het v
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Thonny is ook beschikbaar vanaf &lt;a href="https://thonny.org"&gt;Thonny.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over installatie en gebruik&lt;/summary&gt;
 &lt;h3 id="installatie"&gt;Installatie&lt;/h3&gt;
 &lt;p&gt;Installeer het gedownloade bestand door het uit te voeren. Volg de instructies tijdens de installatie.&lt;/p&gt;</description></item></channel></rss>

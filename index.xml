@@ -6,6 +6,8 @@ CoderDojo-server:&lt;/p&gt;
 &lt;p&gt;&lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Je kunt VS Code ook downloaden van de officiële website:
 &lt;a href="https://code.visualstudio.com/Download"&gt;Download Visual Studio Code&lt;/a&gt;.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over download, installatie en gebruik&lt;/summary&gt;
 &lt;p&gt;Kies de download die bij jouw computer past:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Windows:&lt;/strong&gt; kies bij voorkeur de &lt;em&gt;User Installer&lt;/em&gt;. Daarvoor heb je meestal
@@ -523,6 +525,8 @@ zien.&lt;/p&gt;</description></item><item><title>Sonic Pi</title><link>/installa
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Sonic Pi is eventueel ook te downloaden van de site &lt;a href="https://sonic-pi.net/"&gt;https://sonic-pi.net/&lt;/a&gt;.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over installatie en gebruik&lt;/summary&gt;
 &lt;p&gt;Er zijn officiële versies voor &lt;a href="https://sonic-pi.net/#windows"&gt;Windows&lt;/a&gt;, &lt;a href="https://sonic-pi.net/#mac"&gt;MacOS&lt;/a&gt; en
 &lt;a href="https://sonic-pi.net/#rp"&gt;Raspberry Pi OS&lt;/a&gt;. Er is ook een &lt;a href="https://flathub.org/en/apps/net.sonic_pi.SonicPi"&gt;onofficiële versie voor Linux&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let er bij het downloaden voor de MacOS versie op dat je de juiste versie pakt, die voor ARM voor recente MacBooks met
@@ -981,6 +985,8 @@ Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het v
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Löve2D is eventueel ook beschikbaar vanaf &lt;a href="https://love2d.org/"&gt;love2d.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over installatie en gebruik&lt;/summary&gt;
 &lt;h4 id="windows"&gt;Windows&lt;/h4&gt;
 &lt;p&gt;Löve is op Windows gemakkelijk te installeren via één van de installers. Als alternatief kun je kiezen voor één van de
 zipbestanden en deze op een gewenste locatie unzippen. Maak het jezelf gemakkelijk door Löve op een eenvoudig te
@@ -1056,6 +1062,8 @@ Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het v
 &lt;p&gt;Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:&lt;br&gt;
 &lt;a class="button" href="https://installers.server.coderdojo-nijmegen.nl"&gt;download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Thonny is ook beschikbaar vanaf &lt;a href="https://thonny.org"&gt;Thonny.org&lt;/a&gt; voor Windows, MacOS en Linux.&lt;/p&gt;
+&lt;details class="more-info"&gt;
+&lt;summary&gt;Meer over installatie en gebruik&lt;/summary&gt;
 &lt;h3 id="installatie"&gt;Installatie&lt;/h3&gt;
 &lt;p&gt;Installeer het gedownloade bestand door het uit te voeren. Volg de instructies tijdens de installatie.&lt;/p&gt;</description></item><item><title>Python - Vuurwerk</title><link>/instructies/python-vuurwerk/</link><pubDate>Thu, 02 Jan 2025 19:51:01 +0200</pubDate><guid>/instructies/python-vuurwerk/</guid><description>&lt;p&gt;Dit is de eerste dojo in het nieuwe jaar 2025 en we maken deze keer vuurwerk!&lt;/p&gt;</description></item><item><title>#115: Code.org &amp; Java workshop</title><link>/dojos/1129570940089/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0100</pubDate><guid>/dojos/1129570940089/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F939103963%2F187233351803%2F1%2Foriginal.20250118-213609?h=200&amp;amp;w=450&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=0%2C0%2C2160%2C1080&amp;amp;s=ebd5a9c9172a2464ee531cb44e2af0b3" alt="intro plaatje"&gt;&lt;/p&gt;
 &lt;h2 id="wat-gaan-we-doen"&gt;Wat gaan we doen?&lt;/h2&gt;
