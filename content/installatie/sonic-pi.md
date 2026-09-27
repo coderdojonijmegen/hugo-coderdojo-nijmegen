@@ -8,6 +8,10 @@ taal:
 banner: "https://coderdojo-nijmegen.nl/instructies/<some-instruction>/banner.png"
 ---
 
+We gebruiken voor deze instructie Sonic Pi. Deze moet je installeren als je die nog niet
+hebt.  
+Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.
+
 ### Downloaden
 
 Tijdens de dojo kun je het installatiebestand sneller downloaden van de CoderDojo server:   

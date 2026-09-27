@@ -10,6 +10,9 @@ taal:
 Visual Studio Code, vaak afgekort tot **VS Code**, is een programma waarin je
 code kunt schrijven. Het is gratis en werkt op Windows, macOS en Linux.
 
+Deze moet je installeren als je die nog niet hebt.  
+Heb je die al wel en weet je hoe je er mee om moet gaan, ga dan verder met het volgende hoofdstuk.
+
 ### Downloaden
 
 Tijdens de dojo kun je het installatiebestand sneller downloaden van de
