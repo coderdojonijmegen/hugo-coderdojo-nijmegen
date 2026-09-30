@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript - Ninja-Chat on CoderDojo Nijmegen</title><link>/instructies/javascript-ninja-chat/</link><description>Recent content in Javascript - Ninja-Chat on CoderDojo Nijmegen</description><generator>Hugo</generator><language>nl-nl</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="/instructies/javascript-ninja-chat/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>/instructies/javascript-ninja-chat/src/client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-ninja-chat/src/client/</guid><description>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;!-- In de head staan dingen zoals de titel en wat andere basis informatie. --&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+ &lt;title&gt;Ninja chat&lt;/title&gt;
+
+ &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;display=swap" rel="stylesheet"&gt;
+
+ &lt;link rel="stylesheet" href="basic-chat.css"&gt;
+&lt;/head&gt;
+
+
+&lt;body&gt;
+&lt;!-- Hier staan de onderdelen die je ziet op je scherm. --&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="boven"&gt;
+ &lt;/div&gt;
+
+ &lt;div class="midden"&gt;
+ &lt;/div&gt;
+
+ &lt;div class="onder"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+
+&lt;!-- De scripts zorgen ervoor dat knoppen werken en berichten worden verstuurd/ontvangen. --&gt;
+ &lt;script&gt;
+ 	var serverIpAdresEnPoort = "https://chat.coderdojo-nijmegen.nl";
+ &lt;/script&gt;
+ 
+ &lt;script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="https://cdn.socket.io/4.8.3/socket.io.min.js" integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="basic-chat.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</description></item><item><title/><link>/instructies/javascript-ninja-chat/src/masterclient/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-ninja-chat/src/masterclient/</guid><description>&lt;html&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+ &lt;title&gt;Ninja Chat&lt;/title&gt;
+ &lt;link rel="stylesheet" href="ninja-chat.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div class="container"&gt;
+ &lt;main class="berichten"&gt;&lt;/main&gt;
+ &lt;/div&gt;
+
+ &lt;script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="https://cdn.socket.io/4.8.3/socket.io.min.js" integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="ninja-chat.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</description></item><item><title/><link>/instructies/javascript-ninja-chat/src/server/public/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-ninja-chat/src/server/public/</guid><description>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;!-- In de head staan dingen zoals de titel en wat andere basis informatie. --&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+ &lt;title&gt;Ninja chat&lt;/title&gt;
+
+ &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;display=swap" rel="stylesheet"&gt;
+
+ &lt;link rel="stylesheet" href="ninja-chat.css"&gt;
+&lt;/head&gt;
+
+
+&lt;body&gt;
+&lt;!-- Hier staan de onderdelen die je ziet op je scherm. --&gt;
+&lt;div class="container"&gt;
+ &lt;div class="boven"&gt;
+ &lt;h1&gt;&lt;img src="coderdojo.png" width="32" height="32"&gt; Ninja chat&lt;/h1&gt;
+ &lt;div&gt;Naam: &lt;input type="text" class="naamInput"&gt;&lt;/div&gt;
+ &lt;div&gt;Kanaal: &lt;input type="number" class="kanaalInput"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="midden"&gt;
+ &lt;div class="berichten"&gt;&lt;/div&gt;
+ &lt;div class="deelnemers"&gt;&lt;button class="bekijkDeelnemers"&gt;Bekijk deelnemers&lt;/button&gt;&lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="onder"&gt;
+ &lt;textarea class="berichtInput"&gt;&lt;/textarea&gt;
+ &lt;button class="stuurBericht"&gt;Stuur bericht&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- De scripts zorgen ervoor dat knoppen werken en berichten worden verstuurd/ontvangen. --&gt;
+ &lt;script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="https://cdn.socket.io/4.8.3/socket.io.min.js" integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="ninja-chat.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</description></item></channel></rss>

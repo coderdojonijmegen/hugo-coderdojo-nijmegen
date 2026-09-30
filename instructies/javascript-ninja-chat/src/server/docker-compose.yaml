@@ -1,11 +1,14 @@
-version: "2"
 services:
   ninja_chat_server:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/coderdojonijmegen/ninja-chat:latest
+    container_name: ninja_chat_server
+    pull_policy: always
     user: "node"
     environment:
       - NODE_ENV=production
-    ports:
-      - 3000:3000
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

@@ -1133,7 +1133,7 @@ slimme apparaten kunt maken!&lt;/p&gt;</description></item><item><title>C</title
 &lt;h2&gt;Wat gaan we doen?&lt;/h2&gt;
 &lt;p&gt;Een live dojo in de buitenlucht! Zoals ondertussen bijna traditie gaan we deze zomermaand &lt;em&gt;unplugged&lt;/em&gt; dus zonder computers aan de slag. Dat betekent wedstrijdjes levend programmeren, puzzelen op de Turing Tumble en complete chaos met RoboRally.&lt;/p&gt;</description></item><item><title>Arduino - een snelle introductie</title><link>/instructies/arduino-snelle-introductie/</link><pubDate>Sun, 27 Jun 2021 13:20:28 +0200</pubDate><guid>/instructies/arduino-snelle-introductie/</guid><description>&lt;p&gt;Alles wat je moet weten om gave dingen te maken&lt;/p&gt;</description></item><item><title>#78 LIVE: Arduino</title><link>/dojos/78-live-arduino/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0100</pubDate><guid>/dojos/78-live-arduino/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F139280973%2F187233351803%2F1%2Foriginal.20210620-121644?w=480&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=0%2C130%2C600%2C300&amp;amp;s=ea7acca4ba57e7eb69e2535408a253c8" alt="intro plaatje"&gt;&lt;/p&gt;
 &lt;h2&gt;Wat gaan we doen?&lt;/h2&gt;
-&lt;p&gt;Het is al weer heel lang geleden, maar we kunnen eindelijk weer live! We gaan dan ook met een onderwerp aan de gang dat we online niet konden behandelen: de Arduino programmeren!&lt;/p&gt;</description></item><item><title>Javascript - Ninja-Chat</title><link>/instructies/javascript-ninja-chat/</link><pubDate>Mon, 24 May 2021 13:44:02 +0200</pubDate><guid>/instructies/javascript-ninja-chat/</guid><description>&lt;p&gt;We gaan een chat programma maken!&lt;/p&gt;</description></item><item><title>#77 online: bouw je eigen chat app!</title><link>/dojos/77-online-bouw-je-eigen-chat-app/</link><pubDate>Mon, 24 May 2021 00:00:00 +0100</pubDate><guid>/dojos/77-online-bouw-je-eigen-chat-app/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F136353899%2F187233351803%2F1%2Foriginal.20210524-081913?w=480&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=0%2C0%2C3150%2C1575&amp;amp;s=cf0c8964f9f12fe67f9cefc919343cff" alt="intro plaatje"&gt;&lt;/p&gt;
+&lt;p&gt;Het is al weer heel lang geleden, maar we kunnen eindelijk weer live! We gaan dan ook met een onderwerp aan de gang dat we online niet konden behandelen: de Arduino programmeren!&lt;/p&gt;</description></item><item><title>#77 online: bouw je eigen chat app!</title><link>/dojos/77-online-bouw-je-eigen-chat-app/</link><pubDate>Mon, 24 May 2021 00:00:00 +0100</pubDate><guid>/dojos/77-online-bouw-je-eigen-chat-app/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F136353899%2F187233351803%2F1%2Foriginal.20210524-081913?w=480&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=0%2C0%2C3150%2C1575&amp;amp;s=cf0c8964f9f12fe67f9cefc919343cff" alt="intro plaatje"&gt;&lt;/p&gt;
 &lt;h2 id="wat-gaan-we-doen"&gt;Wat gaan we doen?&lt;/h2&gt;
 &lt;p&gt;Deze dojo ga je zelf een chatprogramma maken! Iets preciezer: je gaat aan de slag met het deel van het programma dat op jouw eigenlijk computer draait. Je leert hierbij hoe de talen van het web HTML, CSS en JavaScript werken.&lt;/p&gt;</description></item><item><title>#76 online: Kies je eigen onderwerp</title><link>/dojos/76-online-kies-je-eigen-onderwerp/</link><pubDate>Sun, 25 Apr 2021 00:00:00 +0100</pubDate><guid>/dojos/76-online-kies-je-eigen-onderwerp/</guid><description>&lt;p&gt;&lt;img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F133258101%2F187233351803%2F1%2Foriginal.20210104-202933?w=480&amp;amp;auto=format%2Ccompress&amp;amp;q=75&amp;amp;sharp=10&amp;amp;rect=133%2C0%2C1312%2C656&amp;amp;s=1a2edfee069c0e1b1935c1df9f0ae05e" alt="intro plaatje"&gt;&lt;/p&gt;
 &lt;h2 id="wat-gaan-we-doen"&gt;Wat gaan we doen?&lt;/h2&gt;
@@ -1215,7 +1215,110 @@ doorgeven.&lt;/li&gt;
 Wil jij ons ook graag helpen? Dat kan absoluut! Ook als je niet technisch onderlegd bent kun je veel voor ons doen - er
 komt van alles kijken bij de organisatie van een dojo. Heb je interesse? Stuur dan een mailtje naar info[at]coderdojo-nijmegen.nl.&lt;/p&gt;
 &lt;h2 id="wat-zoeken-we-in-een-mentor"&gt;Wat zoeken we in een mentor?&lt;/h2&gt;
-&lt;p&gt;Allereerst: je hoeft zeker geen programmeur of IT’er te zijn om mentor te zijn bij een dojo.&lt;/p&gt;</description></item><item><title>Löve2D - Snake</title><link>/instructies/love2d-snake/</link><pubDate>Thu, 06 Feb 2020 21:15:23 +0100</pubDate><guid>/instructies/love2d-snake/</guid><description>&lt;p&gt;We gaan met 2D game framework Löve2D het klassieke spel &lt;a href="https://nl.wikipedia.org/wiki/Snake_(computerspel)"&gt;Snake&lt;/a&gt; bouwen.&lt;/p&gt;</description></item><item><title/><link>/instructies/javascript-snake/readme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-snake/readme/</guid><description>&lt;h1 id="javascript-snake"&gt;Javascript Snake&lt;/h1&gt;
+&lt;p&gt;Allereerst: je hoeft zeker geen programmeur of IT’er te zijn om mentor te zijn bij een dojo.&lt;/p&gt;</description></item><item><title>Löve2D - Snake</title><link>/instructies/love2d-snake/</link><pubDate>Thu, 06 Feb 2020 21:15:23 +0100</pubDate><guid>/instructies/love2d-snake/</guid><description>&lt;p&gt;We gaan met 2D game framework Löve2D het klassieke spel &lt;a href="https://nl.wikipedia.org/wiki/Snake_(computerspel)"&gt;Snake&lt;/a&gt; bouwen.&lt;/p&gt;</description></item><item><title/><link>/instructies/javascript-ninja-chat/src/client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-ninja-chat/src/client/</guid><description>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;!-- In de head staan dingen zoals de titel en wat andere basis informatie. --&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+ &lt;title&gt;Ninja chat&lt;/title&gt;
+
+ &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;display=swap" rel="stylesheet"&gt;
+
+ &lt;link rel="stylesheet" href="basic-chat.css"&gt;
+&lt;/head&gt;
+
+
+&lt;body&gt;
+&lt;!-- Hier staan de onderdelen die je ziet op je scherm. --&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="boven"&gt;
+ &lt;/div&gt;
+
+ &lt;div class="midden"&gt;
+ &lt;/div&gt;
+
+ &lt;div class="onder"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+
+&lt;!-- De scripts zorgen ervoor dat knoppen werken en berichten worden verstuurd/ontvangen. --&gt;
+ &lt;script&gt;
+ 	var serverIpAdresEnPoort = "https://chat.coderdojo-nijmegen.nl";
+ &lt;/script&gt;
+ 
+ &lt;script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="https://cdn.socket.io/4.8.3/socket.io.min.js" integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="basic-chat.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</description></item><item><title/><link>/instructies/javascript-ninja-chat/src/masterclient/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-ninja-chat/src/masterclient/</guid><description>&lt;html&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+ &lt;title&gt;Ninja Chat&lt;/title&gt;
+ &lt;link rel="stylesheet" href="ninja-chat.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div class="container"&gt;
+ &lt;main class="berichten"&gt;&lt;/main&gt;
+ &lt;/div&gt;
+
+ &lt;script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="https://cdn.socket.io/4.8.3/socket.io.min.js" integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="ninja-chat.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</description></item><item><title/><link>/instructies/javascript-ninja-chat/src/server/public/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-ninja-chat/src/server/public/</guid><description>&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;!-- In de head staan dingen zoals de titel en wat andere basis informatie. --&gt;
+&lt;head&gt;
+ &lt;meta charset="utf-8"&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+ &lt;title&gt;Ninja chat&lt;/title&gt;
+
+ &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet"&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;display=swap" rel="stylesheet"&gt;
+
+ &lt;link rel="stylesheet" href="ninja-chat.css"&gt;
+&lt;/head&gt;
+
+
+&lt;body&gt;
+&lt;!-- Hier staan de onderdelen die je ziet op je scherm. --&gt;
+&lt;div class="container"&gt;
+ &lt;div class="boven"&gt;
+ &lt;h1&gt;&lt;img src="coderdojo.png" width="32" height="32"&gt; Ninja chat&lt;/h1&gt;
+ &lt;div&gt;Naam: &lt;input type="text" class="naamInput"&gt;&lt;/div&gt;
+ &lt;div&gt;Kanaal: &lt;input type="number" class="kanaalInput"&gt;&lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="midden"&gt;
+ &lt;div class="berichten"&gt;&lt;/div&gt;
+ &lt;div class="deelnemers"&gt;&lt;button class="bekijkDeelnemers"&gt;Bekijk deelnemers&lt;/button&gt;&lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="onder"&gt;
+ &lt;textarea class="berichtInput"&gt;&lt;/textarea&gt;
+ &lt;button class="stuurBericht"&gt;Stuur bericht&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- De scripts zorgen ervoor dat knoppen werken en berichten worden verstuurd/ontvangen. --&gt;
+ &lt;script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="https://cdn.socket.io/4.8.3/socket.io.min.js" integrity="sha384-kzavj5fiMwLKzzD1f8S7TeoVIEi7uKHvbTA3ueZkrzYq75pNQUiUi6Dy98Q3fxb0" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;script src="ninja-chat.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</description></item><item><title/><link>/instructies/javascript-snake/readme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/instructies/javascript-snake/readme/</guid><description>&lt;h1 id="javascript-snake"&gt;Javascript Snake&lt;/h1&gt;
 &lt;p&gt;De &lt;a href="_index.md"&gt;instructie&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="snake.png" alt="Snake"&gt;&lt;/p&gt;
 &lt;h2 id="licentie"&gt;Licentie&lt;/h2&gt;
