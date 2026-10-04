@@ -1,4 +1,32 @@
-var socket = io(serverIpAdresEnPoort, { forceNew: true });
+// Bewaar de sessie bij dit bestand, ook als de pagina opnieuw geladen wordt.
+var sessieOpslag = null
+try {
+    localStorage.setItem('ninja-chat-test', 'ok')
+    localStorage.removeItem('ninja-chat-test')
+    sessieOpslag = localStorage
+} catch (fout) {
+    try {
+        sessionStorage.setItem('ninja-chat-test', 'ok')
+        sessionStorage.removeItem('ninja-chat-test')
+        sessieOpslag = sessionStorage
+    } catch (fout) {
+        // Chatten blijft mogelijk als de browser opslag voor file:// blokkeert.
+    }
+}
+
+var bewaardeSessie = sessieOpslag && sessieOpslag.getItem('ninja-chat-sessie')
+var socket = io(serverIpAdresEnPoort, {
+    forceNew: true,
+    autoConnect: false,
+    auth: { sessieId: bewaardeSessie }
+});
+
+function bewaarSessie(id) {
+    socket.auth.sessieId = id
+    if (sessieOpslag) {
+        sessieOpslag.setItem('ninja-chat-sessie', id)
+    }
+}
 
 /**
  * Geeft de gekozen naam door aan de server.
@@ -148,9 +176,11 @@ function begin() {
     $(".bekijkDeelnemers").on('click', toonOfVerbergDeelnemers)
   
     socket.on('krijgKanaal', toonKanaal)
+    socket.on('krijgSessie', bewaarSessie)
     socket.on('krijgNaam', toonNaam)
     socket.on('krijgBericht', toonBericht)
     socket.on('krijgDeelnemers', updateDeelnemers)
+    socket.connect()
 }
 
 $(begin)

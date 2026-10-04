@@ -12,6 +12,8 @@ export const Messages = {
         vraagDeelnemers: 'vraagDeelnemers'
     },
     out: {
+        // krijgSessie, params: id (string)
+        krijgSessie: 'krijgSessie',
         // krijgKanaal, params: id (number)
         krijgKanaal: 'krijgKanaal',
         // krijgBericht, params: bericht (Bericht object)

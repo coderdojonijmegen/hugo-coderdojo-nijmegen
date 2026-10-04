@@ -67,4 +67,36 @@ test('serves the chat and exchanges messages between channels', async t => {
   const otherChannel = nextEvent(second, 'krijgBericht', message => message.tekst === 'Kanaal twee')
   second.emit('maakBericht', 'Kanaal twee')
   assert.equal((await otherChannel).kanaal, 2)
+
+  // Een nieuwe verbinding met dezelfde sessie houdt de naam en telt één keer mee.
+  const original = io(`http://127.0.0.1:${port}`, { forceNew: true, autoConnect: false })
+  t.after(() => original.disconnect())
+  const sessionId = nextEvent(original, 'krijgSessie')
+  original.connect()
+  const id = await sessionId
+  assert.match(id, /^[0-9a-f-]{36}$/)
+  const originalName = nextEvent(original, 'krijgNaam', name => name === 'Ninja twee')
+  original.emit('zetNaam', 'Ninja twee')
+  assert.equal(await originalName, 'Ninja twee')
+
+  const reloaded = io(`http://127.0.0.1:${port}`, {
+    forceNew: true,
+    autoConnect: false,
+    auth: { sessieId: id }
+  })
+  t.after(() => reloaded.disconnect())
+  const sameId = nextEvent(reloaded, 'krijgSessie')
+  const restoredName = nextEvent(reloaded, 'krijgNaam')
+  reloaded.connect()
+  assert.equal(await sameId, id)
+  assert.equal(await restoredName, 'Ninja twee')
+
+  const participants = nextEvent(reloaded, 'krijgDeelnemers')
+  reloaded.emit('vraagDeelnemers')
+  assert.equal((await participants).filter(name => name === 'Ninja twee').length, 1)
+
+  original.disconnect()
+  const afterDisconnect = nextEvent(reloaded, 'krijgDeelnemers')
+  reloaded.emit('vraagDeelnemers')
+  assert.equal((await afterDisconnect).filter(name => name === 'Ninja twee').length, 1)
 })

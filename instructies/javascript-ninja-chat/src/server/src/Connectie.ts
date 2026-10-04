@@ -4,6 +4,7 @@ import { Gebruiker } from "./Gebruiker";
 import { Kanaal } from "./Kanaal";
 import { Bericht } from "./Bericht";
 import { Messages } from './Messages';
+import { Sessie, Sessies } from './Sessies';
 
 export class Connectie {
     public gebruiker: Gebruiker
@@ -13,9 +14,12 @@ export class Connectie {
     constructor(
         private vind_kanaal: (id: number) => Kanaal|null,
         public kanaal_id: number,
-        public socket: SocketIO.Socket
+        public socket: SocketIO.Socket,
+        private sessie: Sessie,
+        private sessies: Sessies
     ) {
         this.gebruiker = new Gebruiker()
+        this.gebruiker.naam = sessie.naam
         this.server_gebruiker = new Gebruiker()
         this.server_gebruiker.naam = "Ninja server"
     }
@@ -42,6 +46,7 @@ export class Connectie {
             () => this.stuurDeelnemers()
         )
 
+        this.socket.emit(Messages.out.krijgSessie, this.sessie.id)
         this.stuurKanaal()
         this.stuurNaam()
         this.stuurBericht(
@@ -57,7 +62,7 @@ export class Connectie {
         let kanaal = this.vind_kanaal(this.kanaal_id)
         let deelnemers = (kanaal === null)
             ? [] :
-            kanaal.connecties.map(conn => conn.gebruiker.naam)
+            kanaal.deelnemers()
 
         this.socket.emit(Messages.out.krijgDeelnemers, deelnemers)
     }
@@ -84,6 +89,7 @@ export class Connectie {
     }
 
     public maakBericht(tekst: string) {
+        this.gebruiker.naam = this.sessie.naam
         const kanaal = this.vind_kanaal(this.kanaal_id)
         if (kanaal === null) {
             this.stuurBericht(
@@ -100,6 +106,8 @@ export class Connectie {
     }
 
     public zetNaam(naam: string) {
+        if (typeof naam !== 'string' || naam.length > 50) return
+        this.sessies.zetNaam(this.sessie, naam)
         this.gebruiker.naam = naam
         this.stuurNaam()
 
@@ -111,6 +119,14 @@ export class Connectie {
 
     public stuurNaam() {
         this.socket.emit(Messages.out.krijgNaam, this.gebruiker.naam)
+    }
+
+    public get sessieId(): string {
+        return this.sessie.id
+    }
+
+    public get sessieNaam(): string {
+        return this.sessie.naam
     }
 
     public maakMaster() {

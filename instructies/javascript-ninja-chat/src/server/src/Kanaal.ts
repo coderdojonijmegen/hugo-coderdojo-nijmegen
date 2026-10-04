@@ -38,4 +38,12 @@ export class Kanaal {
             conn.stuurDeelnemers()
         }
     }
+
+    public deelnemers(): string[] {
+        const namen = new Map<string, string>()
+        for (const conn of this.connecties) {
+            namen.set(conn.sessieId, conn.sessieNaam)
+        }
+        return [...namen.values()]
+    }
 }

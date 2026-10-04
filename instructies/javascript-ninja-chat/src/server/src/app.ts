@@ -5,6 +5,7 @@ import { Server, Socket } from 'socket.io'
 
 import { Kanaal } from "./Kanaal";
 import { Connectie } from "./Connectie";
+import { Sessies } from "./Sessies";
 
 const defaultPort: Number = 3000;
 
@@ -33,6 +34,8 @@ var app: App = {
     kanalen: maak_kanalen(15)
 }
 
+const sessies = new Sessies()
+
 function vind_kanaal(id: number): Kanaal|null {
     if (0 < id && id <= app.kanalen.length) {
         return app.kanalen[id - 1]
@@ -56,7 +59,8 @@ function disconnect(connectie: Connectie) {
 }
 
 function connect(client: Socket) {
-    const connectie = new Connectie(vind_kanaal, 1, client)
+    const sessie = sessies.verbind(client.handshake.auth.sessieId)
+    const connectie = new Connectie(vind_kanaal, 1, client, sessie, sessies)
     connectie.initialize()
     app.kanalen[0].nieuweConnectie(connectie)
     client.on('disconnect', () => disconnect(connectie))
