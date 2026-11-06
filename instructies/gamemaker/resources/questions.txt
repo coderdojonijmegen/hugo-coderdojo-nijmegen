@@ -1,0 +1,691 @@
+::section:: Begin hier!
+::question:: Welkom bij CoderDojo!  
+
+Vandaag gaan we games maken met GameMaker.
+Dat moeten we dat eerst installeren.
+::check::
+
+::question:: 
+Het installeren van GameMaker duurt even, dus we doen dat eerst.
+
+
+[download GameMaker-Installer-2026.0.0.16.exe GameMaker voor Windows]
+
+
+De installer voor Mac en Linux kun je hieronder downloaden. 
+(Waarschijnlijk heb je Windows en kun je deze link negeren.) 
+[link https://gamemaker.io/en/download Mac en Linux]
+
+
+Download de installer en ga dan naar de volgende stap. 
+::check::
+
+
+::question::
+Dubbelklik op de installer.
+
+We gaan de volgende stappen doorlopen:
+Zet de taal op Engels (helaas is er geen Nederlandse versie):
+<img begin/select_language.png taal selecteren: Engels>
+
+Accepteer de licentievoorwaarden:
+<img begin/installeren-licentie.png licentievoorwaarden accepteren>
+
+Installeer de standaardcomponenten:
+<img begin/3_file_extenties.png installeer de standaardcomponenten>
+
+
+Installeer op de standaardlocatie:
+<img begin/4_bestandlocatie.png kies de standaardlocatie>
+
+Klik op installeren en ga naar de volgende stap.
+::check:: 
+
+::question::
+GameMaker zou nu moeten installeren:
+<img begin/5_kan_even_duren.png GameMaker installeren>
+
+Dit kan een aantal minuten duren, dus we gaan ondertussen wat belangrijke concepten bespreken.
+Ga maar naar de volgende vraag.
+::check::
+
+
+::text::
+<img begin/scratch_vs_gameamaker.png 150 Scratch vs GameMaker>
+GameMaker lijkt een beetje op Scratch, je kan er 2D-games mee maken.
+
+Dat gaan we vandaag doen, maar er zijn een paar belangrijke verschillen tussen GameMaker en Scratch.
+
+GameMaker is een stuk sneller, dus je kan er grotere games mee maken.
+In GameMaker kun je ook meer dingen zelf programmeren met code. 
+Wat in GameMaker met een paar regels code kan, kost in Scratch soms honderden blokjes.
+Geen zorgen: in GameMaker gaan we ook gewoon blokjes gebruiken, al werken die een beetje anders dan in Scratch.
+Met GameMaker kun je ook makkelijker je games delen, 
+zo mag je vandaag je game uploaden naar onze website, zodat de andere kinderen de game kunnen spelen.
+Het grootste verschil is dat je in GameMaker gemakkelijker (grote) levels kan maken.
+
+In het algemeen is GameMaker een stuk professioneler.
+
+::question:: Wat is een voordeel van GameMaker ten opzichte van Scratch?
+::wrong:: GameMaker is een stuk ingewikkelder.
+::correct:: GameMaker is een stuk sneller.
+::wrong:: GameMaker is een stuk makkelijker.
+::wrong:: GameMaker is een stuk groter.
+::wrong:: GameMaker is een stuk kleiner.
+
+
+
+
+::text::
+Neem dit voorbeeld van een game die gemaakt is met GameMaker.
+<img begin/forager.jpg forager>
+Een game bestaat uit plaatjes. Sommige plaatjes veranderen ook van vorm, zo kan een boom bijvoorbeeld heen en weer bewegen in de wind.
+Zo'n plaatje dat kan bewegen (het mag ook stilstaan) noemen we een sprite. 
+
+In een game met een bos zou het erg veel werk zijn om elke boom apart te tekenen. Daarom gebruiken we vaak dezelfde sprite meerdere keren.
+
+Een boom is een voorbeeld van een sprite die herhaald wordt.
+
+::question:: Noem een andere sprite die herhaald wordt.
+::fuzzy 1:: gras,water,vlot,brug en rots
+::fuzzy 1:: gras
+::fuzzy 1:: water
+::fuzzy 1:: vlot
+::fuzzy 1:: brug
+::fuzzy 1:: rots
+
+
+::text::
+<img begin/forager.jpg forager>
+
+Plaatjes zijn leuk om naar te kijken, maar een game bestaat uit meer dan plaatjes.
+Er zit namelijk ook logica in een game, bijvoorbeeld dat je bessen kan plukken, in water kan vissen en dat je stenen kan mijnen.
+
+De logica vertelt hoe de plaatjes moeten reageren op elkaar en op de speler.
+
+Zo heb je bijvoorbeeld ook logica nodig om de speler te laten bewegen.
+
+::question:: Wat is een voorbeeld van logica voor een boom? Een boom kun je:
+
+::fuzzy 2:: omhakken
+::fuzzy 1:: kappen
+::fuzzy 1:: planten
+::fuzzy 1:: laten groeien
+::fuzzy 6:: appels laten groeien
+::fuzzy 1:: chop
+
+
+
+::text::
+<img begin/forager.jpg forager>
+Als we bessen willen plukken of bomen moeten omhakken, dan heeft iedere boom logica nodig.
+Als alle bomen maar één logica zouden delen, dan zou je alle bomen tegelijk omhakken. Dat is niet handig.
+Het wordt heel onoverzichtelijk als al die logica van bomen en planten door elkaar zou staan. 
+Daarnaast is de logica voor alle bomen zo goed als hetzelfde. 
+
+We kunnen het plaatje van de boom en de logica van de boom bij elkaar zetten in een zogenaamd "object".
+
+Zo is de speler bijvoorbeeld ook een object, met het plaatje van de speler en de logica om te lopen. 
+
+::question::
+Wat is een object?
+::wrong:: Een object is een sprite van een boom.
+::wrong:: Een object is een herhaalde sprite.
+::correct:: Een object is een plaatje met logica.
+::wrong:: Een object is een verzameling van logica maar mag geen sprite hebben.
+
+::text::
+<img begin/forager.jpg forager>
+Als je al deze objecten bij elkaar zet, krijg je een game.
+Een verzameling van objecten noemen we een "room" (Engels voor "kamer").
+
+Als je meerdere levels wilt maken, dan maak je meerdere rooms.
+GameMaker maakt het makkelijk om met objecten een room te maken.
+GameMaker helpt je ook om van de ene room naar de andere room te gaan, 
+bijvoorbeeld als je een level hebt uitgespeeld.
+
+::question:: Wat is een room?
+::correct:: Een room is een verzameling van objecten.
+::wrong:: Een room is een verzameling van alleen logica.
+::wrong:: Een room is een verzameling van alleen sprites.
+::wrong:: Een room is een verzameling van levels.
+
+::question::
+Hopelijk is GameMaker nu klaar met installeren, dan kunnen we verder gaan met de workshop.
+Anders moet je even wachten tot GameMaker klaar is met installeren. 
+Denk ondertussen even na over wat voor game je wilt maken, welke kleuren etc.
+
+<img begin/6_klaar.png GameMaker is klaar met installeren>
+Druk op Finish.
+
+GameMaker zou nu moeten starten, dan ben je helemaal klaar voor het volgende onderdeel "Speler maken".
+Klik hieronder om naar het menu te gaan en ga verder bij "Speler maken".
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Speler maken.
+::text::
+Je hebt GameMaker geïnstalleerd en opgestart. 
+In dit onderdeel gaan we een speler maken. 
+De speler is het object dat jij bestuurt in de game.
+::question:: Staat GameMaker open?
+::correct:: GameMaker is opgestart.
+::wrong:: GameMaker is nog aan het downloaden.
+
+::text:: 
+Voordat we aan de slag kunnen gaan, moeten we eerst een nieuw project aanmaken.
+
+Klik op "Game":
+<img begin/blank_game.png 500 nieuw project aanmaken>
+Klik op "Blank Game", geef het project een naam en klik op "Let's Go".
+<img begin/project_name_geven.png 500 projectnaam geven>
+Het zou er zo uit moeten zien:
+<img begin/project_naam.png 500 projectnaam>
+::question::Ga naar de volgende stap als dat zo is.
+::check::
+
+::text::
+We kunnen bijna beginnen, eerst moeten we zorgen dat de game ook een website kan worden.
+
+Klik op de "target"-knop:
+<img begin/targets.png 500 targetknop>
+
+Klik op "GX.games":
+<img begin/gx_games.png gx.games target>
+
+En je mag het Welcome-scherm sluiten:
+<img begin/sluit_welcome_tab.png 500 sluit welcome tab>
+
+::question:: Ga naar de volgende stap als dat zo is.
+::check::
+
+::text::
+We gaan een speler maken. Daarvoor hebben we eerst een sprite nodig.
+
+Klik in "Workspace 1" met de rechtermuisknop -> Assets -> Create Sprite
+Of druk op Alt + S.
+<img begin/create_sprite.png 400 create sprite>
+
+Verander de naam van de sprite naar "speler_sprite" en klik op "Edit Image" om de speler te tekenen.
+
+Je mag natuurlijk zelf bepalen hoe de speler eruitziet, 
+maar het is handig om een speler te maken die ongeveer het hokje vult.
+
+Als je klaar bent, kun je terug naar "Workspace 1".
+
+Dat ziet er dan ongeveer zo uit:
+<img begin/sprite_speler.png 500 sprite speler>
+Wij hebben gekozen om een paar benen en een paar ogen op het CoderDojo logo te zetten.
+
+::question:: Heb je een mooie speler getekend?
+::wrong:: Nee, het lukt niet.
+::wrong:: Hij ziet er wel oké uit.
+::correct:: Ik heb de mooiste speler ooit getekend!
+
+::text::
+Nu we een sprite hebben, kunnen we een object maken voor de speler.
+
+Klik in "Workspace 1" met de rechtermuisknop -> Assets -> Create Object
+Of druk op Alt + O.
+<img begin/create_object.png 500 create object>
+
+Vervolgens kun je de naam aanpassen naar "speler".
+
+Aan de rechterkant van je beeldscherm kun je "speler_sprite" naar het object slepen:
+<img begin/sleep_speler_naar_object.png 500 sleep speler_sprite naar object>
+
+Het zou er nu zo uit moeten zien:
+<img begin/speler_object_met_sprite.png speler object met sprite>
+
+::question:: Ga naar de volgende stap als dat zo is.
+::check::
+
+::text::
+Het spel bestaat uit objecten in een room. 
+Er is automatisch een room gemaakt die heet "Room 1".
+Dubbelklik aan de rechterkant van je scherm op "Room 1" om de room te selecteren (1).
+
+<img begin/selecteer_room.png 500 selecteer room>
+
+Dat opent een nieuw tabblad waar je de room kan aanpassen (2).
+
+Je kan op de tabbladen klikken om te wisselen tussen objecten plaatsen in de room (2) en objecten maken (3).
+
+Om de speler in de room te plaatsen, kun je "speler" van de rechterkant naar de room slepen. 
+
+Als je dat gedaan hebt, kun je het spel starten door op "Run" te klikken:
+<img begin/run_game.png run game>
+
+
+::question:: Wat zie je? En wat gebeurt er als je probeert te lopen met de pijltjestoetsen?
+::wrong:: Er opent een webpagina met een zwart scherm, een speler en mijn speler. 
+Als je op de pijltjestoetsen drukt, loopt de speler naar links of rechts.
+::correct:: Er opent een webpagina met een zwart scherm en mijn speler, de pijltjestoetsen doen niets.
+::wrong:: Je ziet een zwart scherm, maar geen speler. Hij loopt naar binnen als ik op de pijltjestoetsen druk.
+::wrong:: Ik zie geen webpagina, alleen een zwart scherm met mijn speler, de pijltjestoetsen doen niets.
+
+::question:: Waarom beweegt de speler niet?
+::wrong:: De speler mist nog een loop animatie.
+::wrong:: We hebben alleen een sprite toegevoegd. We moeten een object toevoegen voor de logica. 
+::wrong:: We moeten nog aanvinken dat dit object een speler is.
+::correct:: De speler is een object. 
+Een object combineert logica en een uiterlijk, maar we hebben nog geen logica geschreven.
+
+::text::
+We gaan nu de speler laten bewegen. 
+We willen niet dat de speler altijd loopt, maar alleen als wij hem dat vertellen.
+
+GameMaker kan (onder andere) zien wanneer je een toets indrukt, een toets loslaat of de muis beweegt.
+Dit noemen we een "Event" (Engels voor evenement/gebeurtenis).
+
+We gaan zorgen dat de speler naar rechts loopt als we op het pijltje naar rechts op het toetsenbord drukken.
+
+Klik in "Workspace 1" naast het speler object op "Add Event" en selecteer "Key Pressed" en "Right".
+<img begin/key_pressed_right.png selecteer key pressed right>
+
+Nu vraagt hij waarschijnlijk hoe je wilt programmeren in GameMaker:
+
+<img begin/scripting_prefrence.png selecteer scripting preference>
+
+Selecteer "GML Visual" (1), vink "Don't ask again for this project" aan (2) en klik op OK (3).
+
+Er verschijnt een nieuw venster waarin we onze logica gaan schrijven.
+Waarschijnlijk past dat venster niet helemaal op je scherm.
+Je kan in een "workspace" bewegen door:
+    te scrollen.
+    bovenaan een venster te dubbelklikken.
+    de scrollknop op je muis in te drukken en te slepen.
+
+Selecteer het venster:
+<img begin/key_predded_window_selected.png plaatje van het geselecteerde venster>
+
+Naar rechts lopen gaat in twee stappen:
+1. Vertel GameMaker welke kant je op wilt lopen.
+2. Vertel GameMaker hoe snel je wilt lopen.
+
+We beginnen met de richting:
+<img begin/selecteer_richting.png selecteer richting>
+Scroll aan de rechterkant naar "Movement" (Engels voor beweging).
+Sleep "Set Direction Fixed" (Engels voor "Stel richting vast") naar het midden.
+Klik dan op het pijltje dat naar rechts wijst.
+
+Vervolgens voegen we de snelheid toe:
+<img begin/set_speed.png voeg set speed toe>
+Sleep "Set Speed" (Engels voor "bepaal snelheid") onder "Set Direction Fixed"
+en verander de snelheid naar 5.
+
+::question:: Start het spel. Wat gebeurt er als je op het pijltje naar rechts drukt?
+::correct:: De speler loopt rechts het scherm uit. (Ik denk dat hij geen zin heeft.)
+::wrong:: De speler loopt naar rechts totdat ik de knop loslaat.
+::wrong:: De speler loopt nog steeds niet!
+::wrong:: De speler kan naar rechts en naar links lopen.
+
+::text::
+We hebben GameMaker nooit verteld dat hij de speler moet laten stoppen.
+Leuk als we een ijsbaan willen maken, maar voor de meeste games is dat niet handig.
+
+We willen dat de speler stopt met lopen zodra je de toets loslaat:
+<img begin/stop_player.png stop player>
+Voeg een nieuw "event" toe (1), selecteer "Key Up" (2) en selecteer "Right" (3).
+Vervolgens kun je "Set Speed" naar het midden slepen (4).
+
+We willen dat de speler stopt, dus je mag de snelheid op 0 laten staan.
+::question:: Start het spel. Wat gebeurt er als je op het pijltje naar rechts drukt?
+::wrong:: De speler loopt rechts het scherm uit. (Ik denk dat hij geen zin heeft.)
+::correct:: De speler loopt naar rechts totdat ik de knop loslaat.
+::wrong:: De speler loopt nog steeds niet!
+::wrong:: De speler kan naar rechts en naar links lopen.
+
+::text::
+We willen dat de speler ook andere richtingen op kan lopen.
+
+De logica voor naar links lopen is bijna hetzelfde, dus die kunnen we het makkelijkst dupliceren.
+<img begin/duplicate_event.png dupliceer event>
+Klik met de rechtermuisknop op "Key Press - Right" (1).
+Selecteer "Duplicate Event" (2).
+Hij vraagt je meteen wat het nieuwe evenement moet worden.
+Selecteer "Key Pressed" (3) en dan "Left" (4).
+
+We moeten natuurlijk wel de richting aanpassen.
+<img begin/verander_richting.png verander de richting>
+Zorg dat je niet per ongeluk de verkeerde richting aanpast.
+
+Nu moeten we de speler ook laten stoppen als je de toets loslaat.
+Dupliceer ook "Key Up - Right", maar dan voor "Left".
+
+Herhaal de stappen hierboven om ook omhoog en omlaag te kunnen lopen.
+Voel je vrij om de game te starten wanneer je maar wilt.
+
+::question:: Hoeveel events heb je nu?
+::exact::8
+
+::question:: Gefeliciteerd! Je hebt nu de basis van een game.
+
+Je kan nu zelf een sectie uitzoeken. 
+Wij zullen proberen de makkelijke bovenaan te zetten, maar sla gerust hoofdstukken over.
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Muren
+::question::
+In dit hoofdstuk gaan we uitleggen hoe je muren kunt toevoegen.
+
+zo kan je bijvoorbeeld stoppen dat je speler het spel uit loopt.
+
+of je kan een doolhof bouwen.
+::check::
+
+::text:: Om een muur te maken hebben we een nieuwe sprite nodig.
+(als je niet meer weet hoe dat moet kijk dan naar vraag 4 van 
+hoofdstuk "Speler maken." 
+Je kan bovenaan op muren drukken om terug naar het overzicht te gaan)
+
+dat zou er ongeveer zo uit moeten zien:
+<img muur_sprite.png muur sprite>
+
+noem de nieuwe sprite "muur_sprite".
+het is handig als de sprite het hokje vult.
+
+::question:: heb je een sprite gemaakt?
+::correct:: Ik heb een muur sprite gemaakt!
+
+
+::text::
+Nu gaan we een muur object maken. 
+
+<img muur_object.png 500 muur object>
+
+verander de naam naar "muur"
+en sleep de "muur_sprite" naa de sprite (1).
+
+we gaan gamemaker nu vertellen dat een muur "solid" (Engels voor vast/niet doorlatend) is. 
+Dat betekent dat als iets een "collision event" (Engels voor raak gebeurtenis) heeft beide objecten worden teruggezet naar hun originele positie.
+
+klik "solid" aan. (2)
+vervolgens moeten we de muur vertellen wat hij allemaal kan raken. 
+om dat te doen klik je op "Add Event" (3) -> Collision (4) -> "player" (5)
+
+plaats 1 muur in het midden van de "room" om te testen of dit werkt.
+
+::question:: in het collision event kan code staan, maar die is nog leeg. werken de muren nu?
+::wrong:: nee, de speler rent door de muren heen. we moeten nog code schrijven om de speler te stoppen.
+::wrong:: Ja De muren werken, code is niet nodig omdat objecten nooit door elkaar kunnen bewegen.
+::correct:: Ja De muren werken, code is niet nodig omdat we al solid gemarkeerd hebben. en dat stopt alles met een "collision event".
+::wrong:: Ja De muren werken, code is niet nodig omdat we al solid gemarkeerd hebben. zelfs het "collision event" is niet nodig.
+
+::text:: 
+we willen natuurlijk meer muren plaatsen in de room zodat het er bijvoorbeeld zo uit ziet:
+<img muren_in_kamer.png 500 veel muren in een kamer>
+
+het is natuurlijk onhandig om die een voor een te slepen.
+gelukkig is er een trucje:
+ 1. open de room
+ 2. klik rechts het muur object aan.
+ 3. Terwijl je de "alt" toets (naast de spatiebalk) ingedrukt houd kun je met de muis tekenen.
+
+als je een muur wil verwijderen kun je hem aanklikken en op de delete of backspace knop drukken.
+
+::question:: Teken de muren die je wil 
+::correct:: Mijn muren zijn prachtig!
+
+::question:: Gefeliciteerd! Je game heeft nu muren!
+::check::
+
+
+
+
+
+
+
+
+
+
+
+::section:: Achtergrond
+::text::
+Op dit moment is de achtergrond van je game dezelfde kleur.
+
+In dit onderdeel gaan we een achtergrond maken. niet allen met kleur maar ook met plaatjes.
+
+::question:: Welke kleur heeft de achtergrond nu?
+::wrong:: Wit.
+::correct:: Zwart.
+::wrong:: Blauw.
+::wrong:: Groen.
+
+::text:: 
+Eerst gaan we de de keur aanpassen.
+
+Dubbelklik aan de rechterkant van je scherm op "Room 1".
+
+<img achtergrond_kleur.png achtergrond kleur> 
+Klik bij "Layers" op "Background" (1).
+en klik op de balk naast "Colour" (2).
+in het geopende menu kun je een kleur selecteren (3).
+::question:: in het kleurenveld kun je achter "Hex" deze text plakken 66088E
+welke kleur is dat?
+::fuzzy 2::paars
+::fuzzy 4::donker paars
+
+::text::
+De achtergrond kan ook een sprite zijn, dus die moeten we dan wel eerst tekenen.
+
+Klik in "Workspace 1" met de rechtermuisknop -> Assets -> Create Sprite.
+Of druk op Alt + S.
+
+Verander de naam van de sprite naar "achtergrond_sprite" en klik op "Edit Image".
+<img achtergrond_sprite.png 500 achtergrond sprite> 
+
+Teken een klein stukje achtergrond, bijvoorbeeld gras, water of stenen.
+GameMaker zet dit stukje straks heel vaak naast elkaar, net als tegels op een vloer.
+
+::question:: Heb je een stukje achtergrond getekend?
+::check::
+
+::text::
+Nu gaan we de achtergrond in de room zetten.
+
+Dubbelklik aan de rechterkant van je scherm op "Room 1".
+
+Klik bij "Layers" op "Background" (1).
+Links onderaan zie je bij "Inspector: Background" de instellingen van de achtergrond.
+Klik op "No Sprite" (2) en kies "achtergrond_sprite" (3).
+<img background_layer.png 500 achtergrond sprite kiezen>
+
+Vink "Horizontal Tile" en "Vertical Tile" aan.
+Nu wordt je plaatje over de hele room herhaald.
+<img tile_aanvinken.png 500 horizontal tile en vertical tile aanvinken>
+
+::question:: Start het spel. Wat zie je?
+::wrong:: Nog steeds een zwart scherm met mijn speler.
+::correct:: Mijn achtergrond met mijn speler ervoor.
+::wrong:: Alleen mijn achtergrond, de speler is weg.
+::wrong:: Een wit scherm.
+
+::question:: Gefeliciteerd! Je game heeft nu een achtergrond.
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Levels
+::text::
+De meeste games hebben meer dan één level.
+In GameMaker is elk level een room.
+In dit onderdeel maken we een tweede level en een vlag die je naar dat level brengt.
+
+::question:: Wat heb je nodig om een nieuw level te maken?
+::wrong:: Een nieuwe sprite.
+::wrong:: Een nieuw object.
+::correct:: Een nieuwe room.
+::wrong:: Een nieuwe game.
+
+::text::
+Eerst maken we de vlag. Een vlag is een object, dus we hebben eerst een sprite nodig.
+
+Maak een nieuwe sprite (Alt + S), noem die "vlag_sprite" en teken een vlag.
+
+Maak daarna een nieuw object (Alt + O) en noem dat "vlag".
+Sleep "vlag_sprite" naar het object, net als bij de speler.
+<img vlag_object.png 500 vlag object met sprite>
+
+::question:: Heb je een vlag object gemaakt?
+::check::
+
+::text::
+Nu maken we het tweede level.
+
+Klik in "Workspace 1" met de rechtermuisknop -> Assets -> Create Room.
+Of druk op Alt + R.
+<img create_room.png 400 create room>
+
+Verander de naam van de room naar "level_2":
+<img room_edit_name.png 400 room edit name>
+
+
+Dubbelklik aan de rechterkant op "level_2" en sleep de speler in de room.
+(De mentor die deze instructies  heeft gemaakt was te lui om een speler te tekenen dus het is hier een rode bal.)
+
+Zo zie je dat je in een ander level bent hebben wij de achtergrond een andere kleur gegeven. 
+(zie het "Achtergrond" hoofdstuk, je kan terug naar het overzicht door op "Levels" te klikken.)
+<img level_2.png 500 level 2 met speler en een andere kleur>
+
+::question:: Waarom moet je de speler ook in level_2 zetten?
+::wrong:: Dat hoeft niet, de speler gaat vanzelf mee.
+::correct:: Elke room heeft zijn eigen objecten. Zonder speler kun je in level_2 niets doen.
+::wrong:: Anders is level_2 te klein.
+::wrong:: Anders start het spel niet.
+
+::text::
+Dubbelklik op "Room 1" en sleep de vlag ergens in de room.
+<img vlag_in_room.png 500 vlag in room 1>
+
+Als de speler de vlag aanraakt, moet level_2 starten.
+Als twee objecten elkaar aanraken, noemen we dat een "Collision" (Engels voor botsing).
+
+Klik in "Workspace 1" bij het object "vlag" op "Add Event" -> "Collision" -> "speler".
+<img collision_speler.png 500 collision event met speler>
+
+Zoek aan de rechterkant "Rooms" en sleep "Go To Next Room" naar het midden.
+Er opent een lijst met rooms. Kies "level_2".
+<img go_to_room.png 500 go to room level_2>
+
+::question:: Start het spel en loop naar de vlag. Wat gebeurt er?
+::wrong:: De vlag verdwijnt en er gebeurt verder niets.
+::correct:: Ik ga naar level_2.
+::wrong:: Het spel stopt.
+::wrong:: De speler verandert in een vlag.
+
+::question:: Gefeliciteerd! Je game heeft nu twee levels.
+
+Wil je nog meer levels? dan kun je een nieuwe room aanmaken en in de vorige room oon en vlag zetten.
+
+Je kan ook gemakkelijk de volgorde van rooms aanpassen door rechts op het huisje te klikken:
+<img room_order.png room volgorde veranderen>
+
+::check::
+
+
+
+
+
+::section:: Uploaden naar de Website 
+::text::
+Het is leuk om een game te maken, maar het is nog leuker om er een te delen.
+zo kunnen de andere kinderen jouw spel spelen en jij kunt de spellen van de andere Ninjas spelen. 
+::check::
+::text::
+om het spel te uploaden moeten we het als een bestand hebben. namelijk een .zip
+
+om dat te doen kunnen we op "Create Executable" klikken:
+<img export_knop.png export knop>
+
+vervolgens op "Save locally as zip" klikken:
+<img safe_as_zip.png export zip>
+
+en het opslaan op een plek die je kent. bijvoorbeeld de downloads folder.
+het is belangrijk dat je onthoudt waar je het hebt opgeslagen dat heb je in de volgende stap nodig.
+::check::
+::text::
+volg vervolgens de instructies op:
+[link https://sites.server.coderdojo-nijmegen.nl/]
+::check::
+
+::section:: Wat ik wil staat hier niet bij.
+::question:: Het kan natuurlijk zo zijn dat jij iets wil voor je game waar wij nog geen instructies voor hebben.
+
+gelukkig lopen er allemaal mentoren rond die je kunnen helpen. 
+
+je mag ons alles vragen, al zijn sommige dingen wat moeilijk om in een dojo te bouwen.
+::check:: 
+
+
+
+::section:: TODO: verwijder deze sectie. 
+als je H + O + P indrukt kun je vragen skippen (is toggle)
+::question:: hier staan de todo's omdat ik te lui was om
+comment syntax toe te voegen aan mijn parser voor deze website.
+
+TODO: events kopiëren voor andere toetsen
+
+TODO: section: 
+(bas heeft daar verdere info voor maar zip uploaden moet nog gebeuren )
+(zip maken knop is 2 links van play)
+TODO: section: Achtergrond
+TODO: section: Levels
+TODO: section: Vijanden
+TODO: section: Effecten en Explosies
+TODO: section: text bord
+TODO: section: Schieten
+TODO: section: Schuiven
+TODO: section: Voetbal
+
+
+::check::
