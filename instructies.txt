@@ -1,5 +1,6 @@
 coderdojonijmegen/arduino-snelle-introductie content/instructies/arduino-snelle-introductie
 coderdojonijmegen/coding-for-web-php content/instructies/web-development-php
+coderdojonijmegen/gamemaker content/instructies/gamemaker
 coderdojonijmegen/hoe-werken-streepjescodes content/instructies/streepjescodes
 coderdojonijmegen/love2d-blocks content/instructies/love2d-blocks
 coderdojonijmegen/love2d-shooter content/instructies/love2d-shooter
