@@ -1,6 +1,6 @@
 ::section:: Begin hier!
 ::question:: Welkom bij CoderDojo!  
-
+<img welkom_bord.png 200>
 Vandaag gaan we games maken met GameMaker.
 Dat moeten we dat eerst installeren.
 ::check::
@@ -9,7 +9,8 @@ Dat moeten we dat eerst installeren.
 Het installeren van GameMaker duurt even, dus we doen dat eerst.
 
 
-[download GameMaker-Installer-2026.0.0.16.exe GameMaker voor Windows]
+[link https://installers.server.coderdojo-nijmegen.nl/ Klik hier om de installer te downloaden voor Windows.]
+
 
 
 De installer voor Mac en Linux kun je hieronder downloaden. 
@@ -203,7 +204,7 @@ Het zou er zo uit moeten zien:
 We kunnen bijna beginnen, eerst moeten we zorgen dat de game ook een website kan worden.
 
 Klik op de "target"-knop:
-<img begin/targets.png 500 targetknop>
+<img begin/targets.png 450 targetknop>
 
 Klik op "GX.games":
 <img begin/gx_games.png gx.games target>
@@ -273,7 +274,7 @@ Als je dat gedaan hebt, kun je het spel starten door op "Run" te klikken:
 
 
 ::question:: Wat zie je? En wat gebeurt er als je probeert te lopen met de pijltjestoetsen?
-::wrong:: Er opent een webpagina met een zwart scherm, een speler en mijn speler. 
+::wrong:: Er opent een webpagina met een zwart scherm, een speler en mijn speler loopt niet. 
 Als je op de pijltjestoetsen drukt, loopt de speler naar links of rechts.
 ::correct:: Er opent een webpagina met een zwart scherm en mijn speler, de pijltjestoetsen doen niets.
 ::wrong:: Je ziet een zwart scherm, maar geen speler. Hij loopt naar binnen als ik op de pijltjestoetsen druk.
@@ -395,23 +396,23 @@ Wij zullen proberen de makkelijke bovenaan te zetten, maar sla gerust hoofdstukk
 ::question::
 In dit hoofdstuk gaan we uitleggen hoe je muren kunt toevoegen.
 
-zo kan je bijvoorbeeld stoppen dat je speler het spel uit loopt.
+Zo kan je bijvoorbeeld stoppen dat je speler het spel uit loopt.
 
-of je kan een doolhof bouwen.
+Of je kan een doolhof bouwen.
 ::check::
 
 ::text:: Om een muur te maken hebben we een nieuwe sprite nodig.
-(als je niet meer weet hoe dat moet kijk dan naar vraag 4 van 
+(als je niet meer weet hoe dat moet, kijk dan naar vraag 4 van 
 hoofdstuk "Speler maken." 
 Je kan bovenaan op muren drukken om terug naar het overzicht te gaan)
 
 dat zou er ongeveer zo uit moeten zien:
 <img muur_sprite.png muur sprite>
 
-noem de nieuwe sprite "muur_sprite".
-het is handig als de sprite het hokje vult.
+Noem de nieuwe sprite "muur_sprite".
+Het is handig als de sprite het hokje vult.
 
-::question:: heb je een sprite gemaakt?
+::question:: Heb je een sprite gemaakt?
 ::correct:: Ik heb een muur sprite gemaakt!
 
 
@@ -420,35 +421,35 @@ Nu gaan we een muur object maken.
 
 <img muur_object.png 500 muur object>
 
-verander de naam naar "muur"
+Verander de naam naar "muur"
 en sleep de "muur_sprite" naa de sprite (1).
 
-we gaan gamemaker nu vertellen dat een muur "solid" (Engels voor vast/niet doorlatend) is. 
-Dat betekent dat als iets een "collision event" (Engels voor raak gebeurtenis) heeft beide objecten worden teruggezet naar hun originele positie.
+We gaan GameMaker nu vertellen dat een muur "solid" (Engels voor vast/niet doorlatend) is. 
+Dat betekent dat als iets een "collision event" (Collision betekend botsen) heeft beide objecten worden teruggezet naar hun originele positie.
 
 klik "solid" aan. (2)
-vervolgens moeten we de muur vertellen wat hij allemaal kan raken. 
+Vervolgens moeten we de muur vertellen wat hij allemaal kan raken, 
 om dat te doen klik je op "Add Event" (3) -> Collision (4) -> "player" (5)
 
-plaats 1 muur in het midden van de "room" om te testen of dit werkt.
+Plaats 1 muur in het midden van de "room" om te testen of dit werkt.
 
-::question:: in het collision event kan code staan, maar die is nog leeg. werken de muren nu?
-::wrong:: nee, de speler rent door de muren heen. we moeten nog code schrijven om de speler te stoppen.
+::question:: In het collision event kan code staan, maar die is nog leeg. werken de muren nu?
+::wrong:: Nee, de speler rent door de muren heen. we moeten nog code schrijven om de speler te stoppen.
 ::wrong:: Ja De muren werken, code is niet nodig omdat objecten nooit door elkaar kunnen bewegen.
 ::correct:: Ja De muren werken, code is niet nodig omdat we al solid gemarkeerd hebben. en dat stopt alles met een "collision event".
 ::wrong:: Ja De muren werken, code is niet nodig omdat we al solid gemarkeerd hebben. zelfs het "collision event" is niet nodig.
 
 ::text:: 
-we willen natuurlijk meer muren plaatsen in de room zodat het er bijvoorbeeld zo uit ziet:
+We willen natuurlijk meer muren plaatsen in de room zodat het er bijvoorbeeld zo uit ziet:
 <img muren_in_kamer.png 500 veel muren in een kamer>
 
-het is natuurlijk onhandig om die een voor een te slepen.
+Het is natuurlijk onhandig om die een voor een te slepen.
 gelukkig is er een trucje:
- 1. open de room
- 2. klik rechts het muur object aan.
+ 1. Open de room.
+ 2. Klik rechts het muur object aan.
  3. Terwijl je de "alt" toets (naast de spatiebalk) ingedrukt houd kun je met de muis tekenen.
 
-als je een muur wil verwijderen kun je hem aanklikken en op de delete of backspace knop drukken.
+Als je een muur wil verwijderen kun je hem aanklikken en op de delete of backspace knop drukken.
 
 ::question:: Teken de muren die je wil 
 ::correct:: Mijn muren zijn prachtig!
@@ -483,12 +484,12 @@ Eerst gaan we de de keur aanpassen.
 
 Dubbelklik aan de rechterkant van je scherm op "Room 1".
 
-<img achtergrond_kleur.png achtergrond kleur> 
+<img achtergrond_kleur.png 500 achtergrond kleur> 
 Klik bij "Layers" op "Background" (1).
 en klik op de balk naast "Colour" (2).
-in het geopende menu kun je een kleur selecteren (3).
-::question:: in het kleurenveld kun je achter "Hex" deze text plakken 66088E
-welke kleur is dat?
+In het geopende menu kun je een kleur selecteren (3).
+::question:: In het kleurenveld kun je achter "Hex" deze text plakken 66088E
+Welke kleur is dat?
 ::fuzzy 2::paars
 ::fuzzy 4::donker paars
 
@@ -543,7 +544,79 @@ Nu wordt je plaatje over de hele room herhaald.
 
 
 
+::section:: Effecten en Explosies
+::text:: 
+In deze sectie gaan we effecten en explosies toevoegen aan de game.
+::check::
+::text:: 
+We gaan beginnen met een Explosie waar de speler staat. 
 
+We gaan dit doen als je op spatiebalk drukt.
+
+Daar maken we eerst een event voor:
+<img spacebar_event.png 500 spatiebalk evenement>
+Ga naar de speler en klik op "Add Event" (1) en kies "Key_pressed" (2) en "Space" (3).
+
+<img explosion_in_corner.png 500 explosie in hoek>
+Sleep "Do Effect" naar het midden (1).
+
+We willen dat de explosie zig niet verstopt achter de speler, dus selecteer "Above Objects" (2).
+
+We willen dat de positie van de explosie gelijk is aan de positie van de speler, dus selecteer "Relative" (3).
+
+::question:: Wat gebeurt er als je op spatiebalk drukt?
+::correct:: De explosie verschijnt in de hoek van de speler.
+::wrong:: De explosie verschijnt in het midden van de speler.
+::wrong:: De explosie verschijnt onder de speler.
+::wrong:: De explosie verschijnt achter de speler.
+
+::text::
+De explosie verschijnt in de hoek van de speler.
+Dat komt omdat de speler eigenlijk op meerderen plekken tegelijk is.
+Als je bijvoorbeeld één pixel naar beneden gaat ben je nog steeds op de speler.
+
+De speler is 64 bij 64 pixels groot.
+als we in het midden willen zitten moeten we dus de helft daar van opschuiven: 
+
+<img do_effect_ajusted.png do effect adjusted>
+
+::question:: Wat gebeurt er nu als je op spatiebalk drukt?
+::wrong:: De explosie verschijnt in de hoek van de speler.
+::correct:: De explosie verschijnt in het midden van de speler.
+::wrong:: De explosie verschijnt onder de speler.
+::wrong:: De explosie verschijnt achter de speler.
+
+::text:: 
+we kunnen ook anderen effecten toepassen met het "Do Effect" blok.
+
+Bijvoorbeeld:
+<img rook_pad.png 500>
+Bij de speler, klik op "Add Event" (1) dan "Step" (2) en weer "Step" (3).
+Dat is een effect dat de hele tijd gebeurt.
+
+Voeg het "Do Effect" blok toe en
+verander het type naar "Smoke" (4),
+maak de "Size" (grote) "Medium" (5),
+maak de positie weer relatief als hiervoor (6)
+en maak de kleur wat donkerder (7).
+
+
+::question:: Wat zie je nu als je rondloopt?
+::wrong:: De speler is verborgen in rook totdat je beweegt
+::correct:: De speler laat een pad van rook achter.
+::wrong:: Rook schiet alle kanten op.
+::wrong:: Er is niets bijzonders te zien.
+
+
+::text:: Je kan nu effecten toevoegen!
+
+
+Dat kun je bijna overal aan code toevoegen
+
+Probeer bijvoorbeeld een effect toe te voegen als je begint met lopen.
+Of als je een Muur raakt.
+Je kan zelfs meerdere effecten onder elkaar zetten.
+::check::
 
 
 
@@ -633,59 +706,366 @@ Je kan ook gemakkelijk de volgorde van rooms aanpassen door rechts op het huisje
 ::check::
 
 
+::section:: Animaties
+::text::
+Onze speler staat nu stil als we niet bewegen. 
+In dit hoofdstuk gaan we de speer op zijn plek laten dansen:
+<img Animation.gif>
+::check::
+::text:: 
+Gelukkig maakt GameMaker geen enkel onderscheid tussen een plaatje en een reeks plaatjes. Het zijn allemaal sprites.
+
+Open de sprite die je wil laten bewegen:
+<img sprite_set_framerate.png >
+Voordat we het plaatje bewerken moeten we eerst de snelheid van de animatie aanpassen. 
+Snellere animaties zien er vloeiender uit maar vereisen ook meer plaatjes.
+Begin met 5 Fps (1). Fps staat voor "frames per second" (Engels voor plaatjes per seconde)
+
+
+Daarna kun je op "Edit Image" klikken.
+
+::question:: De FPS staat standaard op 30. waarom verlagen wij het naar 5?
+::wrong:: Omdat de animatie dan Sneller gaat en we Minder plaatjes moeten tekenen.
+::wrong:: Omdat de animatie dan Sneller gaat en we Meer plaatjes moeten tekenen.
+::correct:: Omdat de animatie dan Langzamer gaat en we Minder plaatjes moeten tekenen.
+::wrong:: Omdat de animatie dan Langzamer gaat en we Meer plaatjes moeten tekenen.
+
+::text::
+Bovenaan kunnen we meer "frames" toevoegen.
+Een frame is een nieuw plaatje dat vaak net iets anders is dan de vorige.
+Deze worden achter elkaar afgespeeld om een animatie te maken.
+
+<img animatie_new_layer.png 400 voeg nieuw frame toe>
+Klik op de + om een nieuw frame toe te voegen (1).
+Vervolgens kun je op het nieuw frame klikken (2).
+En dan iets tekenen.
+Je kan op "Play" drukken om de animatie te zien (3).
+
+Het is best lastig om een animatie te maken die er niet heel schokkerig uit ziet. 
+Om daarmee te helpen is er een knop genaamd "onion skinning" dat betekend letterlijk uien pellen.
+wat ze daarmee bedoelen is dat je achter het nieuwe laagje een laagje kan zien die precies hetzelfde is als de vorige.
+Zo kun je zien waar je kan tekenen zodat een frame op her vorige lijk.
+Je kan zo best wat laagjes op elkaar hebben. net als bij een ui dat ook uit allemaal laagjes bestaat.
+Het is dan makkelijker om de animatie te maken.
+
+
+Nu is alles overtekenen natuurlijk veel werk. 
+Om te helpen is er een tool genaamd "rectangle select" die je kan gebruiken om een deel van of het hele plaatje te selecteren en te bewegen:
+
+<img rectangle_select.png 400>
+
+Door een rechthoek te selecteren kun je het verplaatsen
+of je kunt op Control + C gebruiken om de selectie te kopiëren
+en Control + V te gebruiken om te plakken.
+
+(let op: Je kan alleen tekenen in de geselecteerde rechthoek. 
+Dubbelklik met de rechthoek tool om de selectie te verwijderen.)
+
+
+Voeg wat meer frames toe totdat je een animatie hebt:
+<img Animation.gif>
+::check::
+
+::text:: Gefeliciteerd je kan nu animaties maken!
+::check::
+
+
+
+
+
+
+
+
 
 
 
 ::section:: Uploaden naar de Website 
 ::text::
 Het is leuk om een game te maken, maar het is nog leuker om er een te delen.
-zo kunnen de andere kinderen jouw spel spelen en jij kunt de spellen van de andere Ninjas spelen. 
+Zo kunnen de andere kinderen jouw spel spelen en jij kunt de spellen van de andere Ninjas spelen. 
 ::check::
 ::text::
-om het spel te uploaden moeten we het als een bestand hebben. namelijk een .zip
+Om het spel te uploaden moeten we het als een bestand hebben. namelijk een .zip
 
-om dat te doen kunnen we op "Create Executable" klikken:
+Om dat te doen kunnen we op "Create Executable" klikken:
 <img export_knop.png export knop>
 
-vervolgens op "Save locally as zip" klikken:
-<img safe_as_zip.png export zip>
+Vervolgens op "Save locally as zip" klikken:
+<img save_as_zip.png export zip>
 
-en het opslaan op een plek die je kent. bijvoorbeeld de downloads folder.
-het is belangrijk dat je onthoudt waar je het hebt opgeslagen dat heb je in de volgende stap nodig.
+En het opslaan op een plek die je kent. bijvoorbeeld de downloads folder.
+Het is belangrijk dat je onthoudt waar je het hebt opgeslagen dat heb je in de volgende stap nodig.
 ::check::
 ::text::
-volg vervolgens de instructies op:
+Volg vervolgens de instructies op:
 [link https://sites.server.coderdojo-nijmegen.nl/]
 ::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Vijanden
+::text::
+In dit hoofdstuk gaan we vijanden toevoegen die de room opnieuw start als je ze aanraakt. We gaan hem ook zelf laten bewegen.
+::check::
+::text::
+Je hebt gekozen om een vijand aan het spel toe te voegen.
+Als eerste maken we een sprite voor de vijand en voegen we die toe aan een object.
+(Als je niet meer weet hoe je een sprite maakt, kijk dan bij "Speler maken", stap 4.)
+
+Zet daarna het object van de vijand in de room, op dezelfde manier als bij de speler
+(zie "Speler maken", vraag 6).
+
+::question:: Heb je een enge vijand getekend?
+::wrong:: Nee, het lukt niet.
+::wrong:: Hij ziet er wel leuk uit.
+::correct:: Ik heb de engste vijand ooit getekend!
+
+::text::
+Als de speler de vijand aanraakt, heeft de speler verloren.
+Het level moet dan opnieuw beginnen.
+Dit doen we door een "Collision"-event (Engels voor botsing) toe te voegen aan het object van de vijand.
+<img vijanden/collsion_event_speler.png 500 collision event met speler>
+Daarna moeten we het event een actie geven, zodat het level opnieuw begint.
+Dat doen we door de actie "Restart Room" (Engels voor herstart de room) aan het event toe te voegen.
+<img vijanden/restart_room.png 400 restart room>
+Start nu het spel opnieuw en loop met de speler naar de vijand.
+
+::question:: Wat gebeurt er als de speler tegen de vijand aanloopt?
+::wrong:: De speler stopt bij de vijand, maar gaat niet terug naar het begin.
+::wrong:: De speler gaat door de vijand heen.
+::correct:: De speler gaat terug naar het begin.
+
+::text::
+De vijand is geen speler en moet uit zichzelf lopen.
+Daarom moeten we hem van tevoren vertellen wat hij moet doen.
+We willen dat de vijand naar beneden loopt.
+
+Dit lijkt op de logica van de speler, maar nu voeren we de code uit zodra de vijand wordt gemaakt,
+in plaats van wanneer de speler op een pijltjestoets drukt.
+Dat doen we met het event "Create" (Engels voor aanmaken).
+Het event Create wordt één keer uitgevoerd, zodra het object in het spel wordt geladen.
+<img vijanden/create_create_event.png 400 create event toevoegen>
+
+Ook moeten we de vijand een richting en een snelheid geven bij het Create-event.
+Dit werkt op dezelfde manier als bij de speler.
+We willen dat de vijand omlaag beweegt, met snelheid 2.
+<img vijanden/snelheid_richting_vijand.png 300 richting omlaag en snelheid 2>
+
+::question:: Wat gebeurt er met de vijand als je het spel start?
+::wrong:: De vijand beweegt niet.
+::correct:: De vijand loopt van het scherm af.
+
+::text::
+Nu beweegt de vijand alleen maar omlaag, maar we willen dat hij tussen twee punten heen en weer loopt.
+Daarvoor maken we een nieuw object, het omdraai-object.
+Maak eerst een sprite (bijvoorbeeld een pijl die terugwijst).
+Maak daarna een object, op dezelfde manier als bij de vijand, en noem het "omdraai_object".
+<img vijanden/omdraai_object.png 400 omdraai_object met sprite>
+
+Nu hebben we een nieuw object, maar er is nog geen logica die ervoor zorgt dat de vijand tussen die twee punten loopt.
+Daarom maken we nog een collision-event bij de vijand, maar nu met het omdraai-object in plaats van de speler.
+<img vijanden/collision_event_vijand.png 300 collision event met omdraai_object>
+
+Voeg in dit collision-event de actie "Reverse" (Engels voor omkeren) toe.
+Hierdoor draait de vijand om zodra hij het omdraai-object aanraakt.
+<img vijanden/collision_omdraai_object.png 300 reverse actie>
+
+Zet nu omdraai-objecten direct boven en onder de vijand, zoals in het plaatje.
+Hoe ver je de omdraai-objecten van de vijand af zet, bepaalt hoe ver de vijand heen en weer loopt.
+<img vijanden/room_met_omdraai_object.png 300 omdraai-objecten boven en onder de vijand>
+
+::question:: Start het spel. Wat doet de vijand?
+::wrong:: De vijand loopt nog steeds van het scherm af.
+::correct:: De vijand loopt heen en weer tussen de omdraai-objecten.
+::wrong:: De vijand blijft stilstaan.
+::wrong:: De vijand verdwijnt bij het omdraai-object.
+
+::text::
+Nu is het omdraai-object zichtbaar in het spel, en dat willen we liever niet.
+Dat kunnen we oplossen met een nieuw event: "Draw" (Engels voor tekenen).
+Kies bij het object "omdraai_object" voor "Add Event", dan "Draw" en nog een keer "Draw" (niet "Draw GUI").
+Laat het event leeg.
+<img vijanden/draw_event_omdraai.png 300 draw event toevoegen>
+Door het Draw-event wordt het plaatje van het object niet meer getekend.
+Het object bestaat nog steeds, dus de vijand draait nog steeds om als hij het omdraai-object aanraakt.
+
+::question:: Waarom draait de vijand nog om, terwijl je het omdraai-object niet meer ziet?
+::wrong:: Omdat het omdraai-object nog op het scherm staat.
+::correct:: Omdat het object nog bestaat, het tekent zichzelf alleen niet meer.
+::wrong:: Omdat de vijand het omdraai-object kan zien.
+::wrong:: Omdat het omdraai-object een sprite is.
+
+::question:: Gefeliciteerd! Je game heeft nu een vijand.
+
+Je kan meer vijanden maken door de vijand vaker in de room te slepen.
+Zet de omdraai-objecten dan ook goed neer bij elke vijand.
+::check::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::section:: Borden met text
+::text::
+Soms is het fijn om een bord te kunnen lezen met text er op.
+Zo kan je je speler vertellen wat de bedoeling is of hints geven.
+
+In deze sectie gaan we een bord maken dat text laat zien als de speler er voor staat.
+<img welkom_bord.png>
+
+::check::
+::text::
+Maak eerst een sprite voor een bord:
+<img bord_sprite.png >
+
+En een object voor het bord:
+<img bord_object.png >
+
+
+
+::question:: En plaats het bord in de room.
+::wrong:: Ik zie geen bord als ik het spel start.
+::wrong:: Ik kan met de speler niet door het bord lopen.
+::correct:: Ik kan met de speler nu over het bord heen lopen.
+
+::text::
+We willen dat het bord alleen de tekst laat zien als de speler op staat. 
+Maar we gaan eerst zorgen dat het bord altijd de tekst laat zien.
+
+Tekst laten zien kan alleen in het "Draw" event. 
+<img draw_event.png >
+klick op "Add Event" (1) dan kies voor "Draw" (2) en dan weer "Draw" (3).
+
+::question:: voer de code nu uit, wat zie je?
+::correct:: Hé mijn bord is verdwenen.
+::wrong:: Er lijkt niets veranderd.
+
+::text:: Inderdaad! het bord is verdwenen. 
+De code die in draw staat wordt ieder frame uitgevoerd om het object te tekenen.
+Maar momenteel tekenen we helemaal niets! 
+
+Als er geen draw event is tekent GameMaker de sprite, dat willen wij voor ons bord ook.
+In GameMaker heet dat "Draw Self":
+<img draw_self.png 400>
+Sleep "Draw Self" naar het draw event.
+
+::question:: Voer de code nu uit, wat zie je?
+::correct:: Hé, mijn bord is terug!
+::wrong:: Er lijkt niets veranderd.
+::text::
+we kunnen nu daadwerkelijk tekst toe voegen:
+<img draw_value.png>
+
+Sleep "Draw Value" onder "Draw Self" (1).
+Verander de Caption naar "Welkom Bij mijn Spel" (2) 
+Let op: De twee " aan het begin en eind zijn belangrijk hier.
+We willen dat de positie van de text afhangt van de positie van het bord.
+Dat kan je uitrekenen maar als je "Relative" aanklikt (3) maakt hij de positie automatisch relatief aan de positie van het bord.
+
+Als laatste vullen we -20 in bij "y" (4).
+
+::question:: Wat doet het invullen van -20 bij "y" in plaats van 0?
+::wrong:: Het verplaats de text iets omlaag.
+::correct:: Het verplaats de text iets omhoog.
+::wrong:: Het verplaats de text iets naar links.
+::wrong:: Het verplaats de text iets naar rechts.
+
+::text::
+We willen dat deze text alleen verschijnt als de speler op het bord staat.
+
+In gamemaker kunnen we dat testen:
+<img object_at_place.png 400>
+Sleep "if Object at Place" (Engels voor is er een object op deze plaats) onder "Draw Self" (1)
+Vervolgens kun je het object selecteren waar we op testen, bij ons de speler (2).
+We willen relatief aan de positie van het bord testen, dus die mag je aanvinken (3).
+
+Het "If" blok doet nu nog niets, hij gaat altijd door met tekenen.
+We moeten de "draw value" rechts van de "If" slepen (4).
+In Scratch zou dat er zo uit zien:
+<img scratch_if.png>
+
+Het zou er nu zo uit moeten zien:
+<img code_bord_klaar.png 400>
+
+::question:: Wanneer laat het bord de text zien?
+::correct:: Wanneer de speler op het bord staat.
+::wrong:: Wanneer de speler niet op het bord staat.
+::wrong:: Altijd
+::wrong:: Nooit.
+
+::text:: 
+Als je meer borden wil kun je het bord object dupliceren:
+<img duplicate_bord.png> 
+
+Vervolgens kun je het nieuwe bord een naam geven en dubbel klikken.
+Dan kun je de code aanpassen naar de nieuwe tekst.
+::check::
+
+::text:: Gefeliciteerd! Je hebt nu een borden die je kan gebruiken in je game.
+::check::
+
+
+
+
+
+
+
+
+
+::section:: Schieten
+::text::
+In dit onderdeel ga je leren hoe je speler een lazer afschiet richting de muis om een muur op te blazen.
+
+Waarschuwing: deze is wat moeilijker.
+::check::
+::text::
+Oké het is momenteel 01:22 op de dag van de dojo en ik moet ook nog wat andere dingen afmaken....
+
+Dus de instructies voor het schieten van een lazer zijn niet helemaal klaar. 
+
+Of eigenlijk helemaal niet klaar....
+
+Dus als je heel hard Sijmen roept kom ik je hoogstpersoonlijk helpen om toch te kunnen schieten :D
+::check::
+
+
+
+
+
 
 ::section:: Wat ik wil staat hier niet bij.
 ::question:: Het kan natuurlijk zo zijn dat jij iets wil voor je game waar wij nog geen instructies voor hebben.
 
-gelukkig lopen er allemaal mentoren rond die je kunnen helpen. 
+Gelukkig lopen er allemaal mentoren rond die je kunnen helpen. 
 
-je mag ons alles vragen, al zijn sommige dingen wat moeilijk om in een dojo te bouwen.
+Je mag ons alles vragen, al zijn sommige dingen wat moeilijk om in één dojo te bouwen.
 ::check:: 
 
 
 
-::section:: TODO: verwijder deze sectie. 
-als je H + O + P indrukt kun je vragen skippen (is toggle)
-::question:: hier staan de todo's omdat ik te lui was om
-comment syntax toe te voegen aan mijn parser voor deze website.
-
-TODO: events kopiëren voor andere toetsen
-
-TODO: section: 
-(bas heeft daar verdere info voor maar zip uploaden moet nog gebeuren )
-(zip maken knop is 2 links van play)
-TODO: section: Achtergrond
-TODO: section: Levels
-TODO: section: Vijanden
-TODO: section: Effecten en Explosies
-TODO: section: text bord
-TODO: section: Schieten
-TODO: section: Schuiven
-TODO: section: Voetbal
-
-
-::check::
